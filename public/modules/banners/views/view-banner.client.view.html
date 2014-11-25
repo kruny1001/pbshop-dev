@@ -1,0 +1,48 @@
+<section class="container container-top" data-ng-controller="BannersController" data-ng-init="findProductUnderBanner(); ">
+
+    <br><br>
+    <div class="core-title" data-ng-bind="banner.name"></div>
+
+    <em class="text-muted">
+        {{banner.bannerTag}}
+    </em>
+    <input type="button" value="Add New Product" data-ng-click="toCreateProduct()">
+    <input type="button" ng-if="products!==null" value="Edit Product" data-ng-click="toEditPoduct()">
+
+    <div class="pull-right" data-ng-show="authentication.user._id == banner.user._id">
+        <a class="btn btn-primary" href="/#!/banners/{{banner._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+            <i class="glyphicon glyphicon-trash"></i>
+        </a>
+    </div>
+
+    <div class="well row">
+        <div class="core-subtitle">Products List</div>
+        <div class="row">
+
+            <div style="padding:2px 2px 2px 2px" class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+                 ng-repeat="product in products">
+
+                <img ng-src={{product.mainimg}} class="img-responsive">
+
+                <h2
+                        style="font-family: 'Hanna', serif;
+                                      margin: 0;
+                                      position: absolute;
+                                      bottom: 0;
+                                      width: 99%;
+                                      font-size: 18px;
+                                      text-align: center;
+                                      padding: 20px;
+                                      opacity: 0.8;
+                                      background: #7dd32a;">
+                    {{product.name}}
+                    <input type="button" value="Order">
+                </h2>
+            </div>
+        </div>
+    </div>
+
+</section>
