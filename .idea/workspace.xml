@@ -2,10 +2,679 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-animate\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-animate\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-animate\angular-animate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-animate\angular-animate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-animate\angular-animate.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-animate\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-animate\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-aria\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-aria\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-aria\angular-aria.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-aria\angular-aria.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-aria\angular-aria.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-aria\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-aria\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-bootstrap\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-bootstrap\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-bootstrap\ui-bootstrap-tpls.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-bootstrap\ui-bootstrap-tpls.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-bootstrap\ui-bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-bootstrap\ui-bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-cookies\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-cookies\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-cookies\angular-cookies.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-cookies\angular-cookies.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-cookies\angular-cookies.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-cookies\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-cookies\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\angular-material.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\angular-material.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\angular-material.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\angular-material.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\amber-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\blue-grey-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\blue-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\brown-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\cyan-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\deep-orange-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\deep-purple-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\default-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\green-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\grey-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\indigo-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\light-blue-dark-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\light-green-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\lime-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\orange-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\pink-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\purple-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\red-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\teal-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-material\themes\yellow-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-mocks\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-mocks\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-mocks\angular-mocks.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-mocks\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-mocks\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-resource\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-resource\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-resource\angular-resource.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-resource\angular-resource.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-resource\angular-resource.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-resource\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-resource\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-sanitize\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-sanitize\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-sanitize\angular-sanitize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-sanitize\angular-sanitize.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-sanitize\angular-sanitize.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-sanitize\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-sanitize\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\changeLog.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\dist\smart-table.debug.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\dist\smart-table.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\gulpFile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\readme.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\src\bottom.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\src\smart-table.module.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\src\stPagination.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\src\stPipe.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\src\stSearch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\src\stSelectRow.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\src\stSort.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\src\stTable.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-smart-table\src\top.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-touch\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-touch\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-touch\angular-touch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-touch\angular-touch.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-touch\angular-touch.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-touch\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-touch\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\api\angular-ui-router.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\release\angular-ui-router.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\release\angular-ui-router.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\src\common.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\src\resolve.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\src\state.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\src\stateDirectives.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\src\stateFilters.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\src\templateFactory.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\src\urlMatcherFactory.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\src\urlRouter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\src\view.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\src\viewDirective.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-router\src\viewScroll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-tinymce\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-tinymce\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-tinymce\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-tinymce\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-tinymce\src\tinymce.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-utils\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-utils\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-utils\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-utils\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-utils\ui-utils-ieshiv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-utils\ui-utils-ieshiv.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-utils\ui-utils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular-ui-utils\ui-utils.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular\angular-csp.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular\angular.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular\angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular\angular.min.js.gzip" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular\angular.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\angular\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\fonts\bootstrap\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\fonts\bootstrap\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\fonts\bootstrap\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\fonts\bootstrap\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap-sprockets.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap\affix.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap\alert.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap\button.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap\carousel.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap\collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap\dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap\modal.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap\popover.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap\scrollspy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap\tab.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap\tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\javascripts\bootstrap\transition.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\_bootstrap-compass.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\_bootstrap-mincer.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\_bootstrap-sprockets.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\_bootstrap.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_alerts.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_badges.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_breadcrumbs.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_button-groups.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_carousel.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_close.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_code.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_component-animations.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_dropdowns.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_glyphicons.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_grid.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_input-groups.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_jumbotron.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_labels.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_list-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_media.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_modals.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_navbar.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_navs.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_normalize.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_pager.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_pagination.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_panels.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_popovers.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_print.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_progress-bars.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_responsive-embed.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_responsive-utilities.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_scaffolding.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_tables.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_theme.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_thumbnails.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_tooltip.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_type.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_utilities.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\_wells.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_alerts.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_background-variant.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_border-radius.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_center-block.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_clearfix.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_gradients.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_grid-framework.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_grid.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_hide-text.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_image.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_labels.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_list-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_nav-divider.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_nav-vertical-align.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_opacity.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_pagination.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_panels.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_progress-bar.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_reset-filter.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_resize.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_responsive-visibility.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_size.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_tab-focus.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_table-row.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_text-emphasis.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_text-overflow.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\assets\stylesheets\bootstrap\mixins\_vendor-prefixes.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\composer.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap-sass-official\sache.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\css\bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\css\bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\css\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\css\bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\dist\js\npm.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\grunt\.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\grunt\bs-commonjs-generator.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\grunt\bs-lessdoc-parser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\grunt\bs-raw-files-generator.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\grunt\configBridge.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\grunt\sauce_browsers.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\.jscsrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\affix.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\alert.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\button.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\carousel.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\modal.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\popover.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\scrollspy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\tab.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\js\transition.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\.csscomb.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\.csslintrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\alerts.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\badges.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\bootstrap.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\breadcrumbs.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\button-groups.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\buttons.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\carousel.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\close.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\code.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\component-animations.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\dropdowns.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\forms.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\glyphicons.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\grid.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\input-groups.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\jumbotron.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\labels.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\list-group.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\media.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\alerts.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\background-variant.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\border-radius.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\buttons.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\center-block.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\clearfix.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\forms.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\gradients.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\grid-framework.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\grid.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\hide-text.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\image.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\labels.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\list-group.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\nav-divider.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\nav-vertical-align.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\opacity.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\pagination.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\panels.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\progress-bar.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\reset-filter.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\resize.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\responsive-visibility.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\size.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\tab-focus.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\table-row.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\text-emphasis.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\text-overflow.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\mixins\vendor-prefixes.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\modals.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\navbar.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\navs.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\normalize.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\pager.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\pagination.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\panels.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\popovers.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\print.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\progress-bars.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\responsive-embed.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\responsive-utilities.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\scaffolding.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\tables.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\theme.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\thumbnails.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\tooltip.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\type.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\utilities.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\variables.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\less\wells.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\bootstrap\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\Makefile" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\component.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\composer.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\css\font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\css\font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\fonts\FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\fonts\fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\fonts\fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\fonts\fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\fonts\fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\core.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\icons.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\larger.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\list.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\path.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\spinning.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\less\variables.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\_spinning.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\components-font-awesome\scss\font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\firebase\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\firebase\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\firebase\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\firebase\firebase-debug.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\firebase\firebase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\TimelineLite.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\TimelineMax.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\TweenLite.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\TweenMax.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\easing\EasePack.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\jquery.gsap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\AttrPlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\BezierPlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\CSSPlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\CSSRulePlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\ColorPropsPlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\DirectionalRotationPlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\EaselPlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\EndArrayPlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\KineticPlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\RaphaelPlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\RoundPropsPlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\ScrollToPlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\plugins\TextPlugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\minified\utils\Draggable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\TimelineLite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\TimelineMax.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\TweenLite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\TweenMax.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\easing\EasePack.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\jquery.gsap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\AttrPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\BezierPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\CSSPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\CSSRulePlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\ColorPropsPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\DirectionalRotationPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\EaselPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\EndArrayPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\KineticPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\RaphaelPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\RoundPropsPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\ScrollToPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\TEMPLATE_Plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\plugins\TextPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\gsap\src\uncompressed\utils\Draggable.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\.bowerrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\.jscsrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\Gruntfile.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\component.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\hammer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\hammer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\hammer.min.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\hammerjs\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\MIT-LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\dist\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\dist\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\dist\jquery.min.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\ajax.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\ajax\jsonp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\ajax\load.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\ajax\parseJSON.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\ajax\parseXML.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\ajax\script.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\ajax\var\nonce.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\ajax\var\rquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\ajax\xhr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\attributes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\attributes\attr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\attributes\classes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\attributes\prop.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\attributes\support.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\attributes\val.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\callbacks.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\core.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\core\access.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\core\init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\core\parseHTML.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\core\ready.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\core\var\rsingleTag.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\css.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\css\addGetHookIf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\css\curCSS.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\css\defaultDisplay.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\css\hiddenVisibleSelectors.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\css\support.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\css\swap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\css\var\cssExpand.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\css\var\getStyles.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\css\var\isHidden.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\css\var\rmargin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\css\var\rnumnonpx.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\data.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\data\Data.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\data\accepts.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\data\var\data_priv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\data\var\data_user.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\deferred.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\deprecated.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\dimensions.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\effects.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\effects\Tween.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\effects\animatedSelector.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\event.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\event\alias.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\event\support.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\exports\amd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\exports\global.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\intro.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\manipulation.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\manipulation\_evalUrl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\manipulation\support.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\manipulation\var\rcheckableType.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\offset.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\outro.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\queue.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\queue\delay.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\selector-native.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\selector-sizzle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\selector.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\serialize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\sizzle\dist\sizzle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\sizzle\dist\sizzle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\sizzle\dist\sizzle.min.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\traversing.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\traversing\findFilter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\traversing\var\rneedsContext.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\var\arr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\var\class2type.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\var\concat.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\var\hasOwn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\var\indexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\var\pnum.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\var\push.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\var\rnotwhite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\var\slice.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\var\strundefined.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\var\support.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\var\toString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\jquery\src\wrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\lodash\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\lodash\LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\lodash\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\lodash\dist\lodash.compat.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\lodash\dist\lodash.compat.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\lodash\dist\lodash.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\lodash\dist\lodash.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\lodash\dist\lodash.underscore.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\lodash\dist\lodash.underscore.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\ng-context-menu\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\ng-context-menu\CHANGES.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\ng-context-menu\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\ng-context-menu\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\ng-context-menu\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\ng-context-menu\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\ng-context-menu\dist\ng-context-menu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\ng-context-menu\dist\ng-context-menu.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\ng-context-menu\protractor.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\LICENSE.TXT" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\langs\readme.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\advlist\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\anchor\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\autolink\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\autoresize\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\autosave\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\bbcode\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\charmap\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\code\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\compat3x\editable_selects.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\compat3x\form_utils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\compat3x\mctabs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\compat3x\tiny_mce_popup.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\compat3x\validate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\contextmenu\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\directionality\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-cool.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-cry.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-embarassed.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-frown.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-innocent.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-kiss.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-laughing.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-sealed.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-smile.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-surprised.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-undecided.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-wink.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\img\smiley-yell.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\emoticons\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\example\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\example_dependency\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\fullpage\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\fullscreen\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\hr\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\image\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\insertdatetime\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\layer\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\legacyoutput\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\link\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\lists\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\media\moxieplayer.swf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\media\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\nonbreaking\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\noneditable\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\pagebreak\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\paste\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\preview\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\print\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\save\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\searchreplace\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\spellchecker\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\tabfocus\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\table\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\template\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\textcolor\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\visualblocks\css\visualblocks.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\visualblocks\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\visualchars\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\plugins\wordcount\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\content.inline.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\content.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\fonts\icomoon-small.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\fonts\icomoon-small.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\fonts\icomoon-small.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\fonts\icomoon-small.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\fonts\icomoon.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\fonts\icomoon.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\fonts\icomoon.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\fonts\icomoon.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\fonts\readme.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\img\anchor.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\img\loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\img\object.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\img\trans.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\img\wline.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\skin.ie7.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\skins\lightgray\skin.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\themes\modern\theme.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\tinymce\tinymce.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\underscore\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\underscore\.eslintrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\underscore\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\underscore\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\underscore\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\underscore\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\underscore\component.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\underscore\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\underscore\underscore-min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\underscore\underscore-min.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Kevin\Documents\GitHub\pbshop-dev\public\lib\underscore\underscore.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.css" afterPath="$PROJECT_DIR$/public/dist/application.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/css/listing-product.css" afterPath="$PROJECT_DIR$/public/modules/user-interface/css/listing-product.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/production.js" afterPath="$PROJECT_DIR$/config/env/production.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -30,31 +699,46 @@
     <favorites_list name="pbshop-dev" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79044116" vertical-offset="463" max-vertical-offset="1064">
-              <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6333333" vertical-offset="0" max-vertical-offset="171">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/config.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.2275449" vertical-offset="0" max-vertical-offset="551">
+                  <caret line="6" column="188" selection-start-line="6" selection-start-column="188" selection-end-line="6" selection-end-column="188" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="production.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/env/production.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1596">
+                  <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="all.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/config/env/all.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.70233464" vertical-offset="456" max-vertical-offset="1330">
+                  <caret line="43" column="32" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,12 +748,106 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/public/modules/user-interface/css/listing-product.css" />
+        <option value="$PROJECT_DIR$/config/env/production.js" />
+        <option value="$PROJECT_DIR$/public/config.js" />
       </list>
     </option>
   </component>
   <component name="JsGruntFileManager">
     <gruntfiles>
       <GruntfileState>
+        <alias-tasks>
+          <alias-task value="build" />
+          <alias-task value="debug" />
+          <alias-task value="default" />
+          <alias-task value="lint" />
+          <alias-task value="secure" />
+          <alias-task value="test" />
+        </alias-tasks>
+        <multi-tasks>
+          <GruntMultiTaskState>
+            <name>concurrent</name>
+            <targets>
+              <target value="default" />
+              <target value="debug" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>csslint</name>
+            <targets>
+              <target value="all" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>cssmin</name>
+            <targets>
+              <target value="combine" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>env</name>
+            <targets>
+              <target value="test" />
+              <target value="secure" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>jshint</name>
+            <targets>
+              <target value="all" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>karma</name>
+            <targets>
+              <target value="unit" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>loadConfig</name>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>mochaTest</name>
+            <targets>
+              <target value="src" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>ngAnnotate</name>
+            <targets>
+              <target value="production" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>node-inspector</name>
+            <targets>
+              <target value="custom" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>nodemon</name>
+            <targets>
+              <target value="dev" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>uglify</name>
+            <targets>
+              <target value="production" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>watch</name>
+            <targets>
+              <target value="serverViews" />
+              <target value="serverJS" />
+              <target value="clientViews" />
+              <target value="clientJS" />
+              <target value="clientCSS" />
+            </targets>
+          </GruntMultiTaskState>
+        </multi-tasks>
         <gruntfile-path>$PROJECT_DIR$/gruntfile.js</gruntfile-path>
       </GruntfileState>
     </gruntfiles>
@@ -79,10 +857,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="83" />
-    <option name="y" value="12" />
-    <option name="width" value="719" />
-    <option name="height" value="1040" />
+    <option name="x" value="54" />
+    <option name="y" value="-8" />
+    <option name="width" value="1874" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -207,21 +985,27 @@
       <option name="project" value="LOCAL" />
       <updated>1416900802050</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first commit">
+      <created>1416901548818</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1416901548818</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="83" y="12" width="719" height="1040" extended-state="0" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6084599" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38137472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33673468" sideWeight="0.4992658" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42217484" sideWeight="0.4992658" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4478708" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.166122" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33673468" sideWeight="0.5007342" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -288,21 +1072,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/css/listing-product.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6333333" vertical-offset="0" max-vertical-offset="171">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.22891566" vertical-offset="0" max-vertical-offset="498">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79044116" vertical-offset="463" max-vertical-offset="1064">
-          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.8634538" vertical-offset="463" max-vertical-offset="1064">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.041758243" vertical-offset="0" max-vertical-offset="455">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/secure.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1216">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70233464" vertical-offset="456" max-vertical-offset="1330">
+          <caret line="43" column="32" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/production.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1596">
+          <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2275449" vertical-offset="0" max-vertical-offset="551">
+          <caret line="6" column="188" selection-start-line="6" selection-start-column="188" selection-end-line="6" selection-end-column="188" />
           <folding />
         </state>
       </provider>

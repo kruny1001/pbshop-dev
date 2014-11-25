@@ -7,6 +7,12 @@ module.exports = {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.min.css',
 				'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
+				'public/lib/angular-material/angular-material.css',
+				'public/lib/angular-material/themes/amber-theme.css',
+				'public/lib/angular-material/themes/blue-grey-theme.css',
+				'public/lib/angular-material/themes/brown-theme.css',
+				'public/lib/angular-material/themes/cyan-theme.css',
+				'public/lib/angular-material/themes/indigo-theme.css',
 			],
 			js: [
 				'public/lib/angular/angular.min.js',
@@ -17,7 +23,18 @@ module.exports = {
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.min.js',
 				'public/lib/angular-ui-utils/ui-utils.min.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js'
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
+
+				'public/lib/angular-aria/angular-aria.min.js',
+				'public/lib/hammerjs/hammer.min.js',
+				'public/lib/angular-material/angular-material.min.js',
+
+				'public/lib/gsap/src/minified/TimelineMax.min.js',
+				'public/lib/gsap/src/minified/TweenMax.min.js',
+				'public/lib/gsap/src/minified/utils/Draggable.min.js',
+
+				'public/lib/ng-context-menu/dist/ng-context-menu.min.js',
+
 			]
 		},
 		css: 'public/dist/application.min.css',

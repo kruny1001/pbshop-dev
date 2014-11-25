@@ -45,6 +45,6 @@ Temporary Items
 .node_modules
 .public/lib
 
-public/dist
+
 node_modules
 public/lib
