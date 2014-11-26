@@ -88,6 +88,11 @@ ApplicationConfiguration.registerModule('user-interface');
 ApplicationConfiguration.registerModule('users');
 'use strict';
 
+// Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('utility');
+
+'use strict';
+
 // Configuring the Articles module
 angular.module('articles').run(['Menus',
 	function(Menus) {
@@ -2890,6 +2895,10 @@ angular.module('user-interface').config(['$stateProvider',
 	function($stateProvider) {
 		// Seller interface state routing
 		$stateProvider.
+		state('front-1', {
+			url: '/front-1',
+			templateUrl: 'modules/user-interface/views/front-1.client.view.html'
+		}).
 		state('experimental-interface', {
 			url: '/experimental-interface',
 			templateUrl: 'modules/user-interface/views/experimental-interface.client.view.html'
@@ -3097,6 +3106,38 @@ angular.module('user-interface').controller('DetailProductController', ['$scope'
 angular.module('user-interface').controller('ExperimentalinterfaceController', ['$scope',
 	function($scope) {
 
+	}
+]);
+
+'use strict';
+
+angular.module('user-interface').controller('Front1Controller', ['$scope',
+	function($scope) {
+		var svg = $("#svg1"), kiwi = $(".kiwi"), blurNode = $("feGaussianBlur");
+
+		TweenMax.set([svg, kiwi], {rotationX:0});
+		var tl = new TimelineMax({delay:0.5});
+
+		tl.to(kiwi, 1, {autoAlpha:1})
+			.to(svg, 0.5, {scale:0.5, ease:Back.easeOut})
+			.to(kiwi, 0.5, {fill:"red"})
+			.to(kiwi, 0.2, {stroke:"white", strokeWidth:"10"})
+			.to(kiwi, 0.2, {strokeWidth:"0"})
+			.to(blurNode, 0.5, {attr:{stdDeviation:20}}, "blur")
+			.to($("h1"), 0.4, {text:"이야~ 기분 딱 존노!", ease:Linear.easeNone}, "blur")
+			.to(blurNode, 0.3, {attr:{stdDeviation:0}}, "blur+=2")
+			.to($("h1"), 0.3, {autoAlpha:0, left:200}, "+=0.6")
+			.to(svg, 1, {rotation:360, ease:Back.easeOut})
+			.to(svg, 0.2, {x:"+=20"})
+			.to(kiwi, 0.2, {fill:"white"})
+			.add(TweenMax.to(svg, 0.2, {rotation:"6_cw", x:"+=20", repeat:5}), "-=0.2")
+			.set(kiwi, {fill:"yellow"})
+			.to(svg, 3, {rotationY:360, ease:Elastic.easeOut})
+			.to(svg, 0.2, {skewX:40, x:"-=100"}, "-=1")
+			.add("fly", "-=0.8")
+			.to(svg, 0.5, {x:1000, y:-100, ease:Power1.esaseIn}, "fly")
+			.to(svg, 0.2, {skewX:-60, scaleY:0.2}, "fly");
+		tl.timeScale(1) // try 4 for super speed!
 	}
 ]);
 
@@ -3488,5 +3529,74 @@ angular.module('users').factory('Users', ['$resource',
 				method: 'PUT'
 			}
 		});
+	}
+]);
+'use strict';
+
+//Setting up route
+angular.module('utility').config(['$stateProvider',
+	function($stateProvider) {
+		// Utility state routing
+		$stateProvider.
+		state('test-page-generator', {
+			url: '/test-page-generator',
+			templateUrl: 'modules/utility/views/test-page-generator.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+angular.module('utility').controller('TestpageGeneratorController', ['$scope',
+	function($scope) {
+		$scope.pageSrc = '<h1>Hello World2</h1>';
+		// Test page generator controller logic
+		// ...
+	}
+]);
+
+'use strict';
+
+angular.module('utility').directive('pageFormatCreation', [
+	function() {
+		return {
+			templateUrl: 'modules/utility/directives/template/default-format.html',
+			restrict: 'E',
+			link: function postLink(scope, element, attrs) {
+			}
+		};
+	}
+]);
+
+'use strict';
+
+angular.module('utility').directive('pageGenerator', [
+	function() {
+		return {
+			template: '<div ng-bind-html="view"></div>',
+			restrict: 'E',
+			scope:{
+				pageInfo: '='
+			},
+			link: function postLink(scope, element, attrs) {
+				var generateView = function() {
+					return '<h2>Hello World</h2><img src="http://www.ilbe.com/mylogo/ilbe.png">'
+				};
+
+				if(scope.pageInfo != null){
+					console.log(scope.pageInfo);
+					scope.view = scope.pageInfo;
+				}
+				else{
+					scope.pageInfo = {
+						frame: ['r1c1'],
+						name: 'test',
+						appliedDirective: {
+							Article:['r1c1']
+						}
+					};
+					scope.view ='<h2>There is no Page Content</h2>';
+				}
+			}
+		};
 	}
 ]);

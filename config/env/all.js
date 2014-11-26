@@ -41,7 +41,8 @@ module.exports = {
 				'public/lib/gsap/src/uncompressed/TweenMax.js',
 
 				'public/lib/ng-context-menu/dist/ng-context-menu.js',
-				'public/lib/gsap/src/uncompressed/utils/Draggable.js'
+				'public/lib/gsap/src/uncompressed/utils/Draggable.js',
+				'public/lib/gsap/src/uncompressed/plugins/TextPlugin.js'
 			]
 		},
 		css: [

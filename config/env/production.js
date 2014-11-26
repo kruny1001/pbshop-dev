@@ -32,6 +32,7 @@ module.exports = {
 				'public/lib/gsap/src/minified/TimelineMax.min.js',
 				'public/lib/gsap/src/minified/TweenMax.min.js',
 				'public/lib/gsap/src/minified/utils/Draggable.min.js',
+				'public/lib/gsap/src/minified/plugins/TextPlugin.js',
 
 				'public/lib/ng-context-menu/dist/ng-context-menu.min.js',
 

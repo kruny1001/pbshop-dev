@@ -5,6 +5,10 @@ angular.module('user-interface').config(['$stateProvider',
 	function($stateProvider) {
 		// Seller interface state routing
 		$stateProvider.
+		state('front-1', {
+			url: '/front-1',
+			templateUrl: 'modules/user-interface/views/front-1.client.view.html'
+		}).
 		state('experimental-interface', {
 			url: '/experimental-interface',
 			templateUrl: 'modules/user-interface/views/experimental-interface.client.view.html'
