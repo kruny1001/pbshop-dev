@@ -1,9 +1,10 @@
 'use strict';
 
 //Setting up route
-angular.module('user-interface').config(['$stateProvider',
-	function($stateProvider) {
+angular.module('user-interface').config(['$stateProvider','$disqusProvider',
+	function($stateProvider,$disqusProvider) {
 		// Seller interface state routing
+		$disqusProvider.setShortname('urimium');
 		$stateProvider.
 		state('front-1', {
 			url: '/front-1',

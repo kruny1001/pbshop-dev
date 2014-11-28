@@ -75,3 +75,7 @@ h1 {
     filter: url(#pictureFilter);
     fill: #896d3d;
 }
+
+.testFont {
+    font-family: "bebas-neue",sans-serif;
+}
