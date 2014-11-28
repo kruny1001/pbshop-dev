@@ -3,7 +3,37 @@
 angular.module('user-interface').controller('Front1Controller', ['$scope',
 	function($scope) {
 		$scope.id = 'frint-1';
+		var boxGraphic = Snap('#boxSvg');
+		var headBox = boxGraphic.select('#box-lead');
+		var upperBox = boxGraphic.select('#box-lead-target');
+		var open = 0;
+		var closedBox;
 
+			var headBoxOpenPath = headBox.attr("d");
+			var headBoxClosedPath = boxGraphic.select('#box-lead-target').attr("d");
+			headBox.click(function () {
+				var path,
+					ease;
+				if (closedBox) {
+					path = headBoxOpenPath;
+					ease = mina.easein;
+					closedBox = 0;
+					console.log('open Box');
+				} else {
+					path = headBoxClosedPath;
+					ease = mina.bounce;
+					closedBox = 1;
+					console.log('close box');
+				}
+				headBox.stop().animate({
+					d: path
+				}, 1000, ease);
+			});
+
+			upperBox.click(function () {
+				console.log('upperBox')
+			});
+/*
 		var g = Snap('#map');
 		g.attr({
 			viewBox: [0, 0, 800, 600]
@@ -177,10 +207,11 @@ angular.module('user-interface').controller('Front1Controller', ['$scope',
 
 
 
+*/
 
 
-
-		////////////////////////////////////////////////
+		///////////////////////////////////////////////
+		/* Coffee Maker
 		var s = Snap(1000, 800),
 			p = 100 / 30,
 			h = 250,
@@ -258,6 +289,7 @@ angular.module('user-interface').controller('Front1Controller', ['$scope',
 					d: path
 				}, 1000, ease);
 			});
+
 			knob.attr({
 				fill: "#000",
 				opacity: 0
@@ -509,6 +541,6 @@ angular.module('user-interface').controller('Front1Controller', ['$scope',
 				filter: s.filter(Snap.filter.blur(10))
 			}).animate({cy: y - 30, opacity: 0}, 1000, callback);
 		}
-
+		*/
 	}
 ]);
