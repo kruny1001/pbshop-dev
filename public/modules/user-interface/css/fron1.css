@@ -73,3 +73,152 @@
 #gridSvg {
     z-index: -1;
 }
+
+.front-menu{
+    background-color:#BBBBBB;
+}
+
+.show-case{
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    background-repeat:no-repeat;
+    background-size:cover;
+    color: #f2e086;
+    font-family: "Voltaire", helvetica, sans-serif;
+    background: rgb(120,114,114); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(248,161,170,1) 0%, rgba(239,107,114,1) 41%, rgba(241,116,124,1) 50%, rgba(241,116,124,1) 50%, rgba(255,151,142,1) 50%, rgba(255,151,142,1) 50%, rgba(142,132,133,1) 69%, rgba(120,114,114,1) 100%), rgba(120,114,114,1); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(248,161,170,1)), color-stop(41%,rgba(239,107,114,1)), color-stop(50%,rgba(241,116,124,1)), color-stop(50%,rgba(241,116,124,1)), color-stop(50%,rgba(255,151,142,1)), color-stop(50%,rgba(255,151,142,1)), color-stop(69%,rgba(142,132,133,1)), color-stop(100%,rgba(120,114,114,1))), rgba(120,114,114,1); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(248,161,170,1) 0%,rgba(239,107,114,1) 41%,rgba(241,116,124,1) 50%,rgba(241,116,124,1) 50%,rgba(255,151,142,1) 50%,rgba(255,151,142,1) 50%,rgba(142,132,133,1) 69%,rgba(120,114,114,1) 100%), rgba(120,114,114,1); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(248,161,170,1) 0%,rgba(239,107,114,1) 41%,rgba(241,116,124,1) 50%,rgba(241,116,124,1) 50%,rgba(255,151,142,1) 50%,rgba(255,151,142,1) 50%,rgba(142,132,133,1) 69%,rgba(120,114,114,1) 100%), rgba(120,114,114,1); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(248,161,170,1) 0%,rgba(239,107,114,1) 41%,rgba(241,116,124,1) 50%,rgba(241,116,124,1) 50%,rgba(255,151,142,1) 50%,rgba(255,151,142,1) 50%,rgba(142,132,133,1) 69%,rgba(120,114,114,1) 100%), rgba(120,114,114,1); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(248,161,170,1) 0%,rgba(239,107,114,1) 41%,rgba(241,116,124,1) 50%,rgba(241,116,124,1) 50%,rgba(255,151,142,1) 50%,rgba(255,151,142,1) 50%,rgba(142,132,133,1) 69%,rgba(120,114,114,1) 100%), rgba(120,114,114,1); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8a1aa', endColorstr='#787272',GradientType=0 );
+}
+
+.lone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.landscape {
+    margin: 150px auto;
+    display: table;
+    transform: translateZ(0);
+}
+
+.person {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    z-index: 100;
+    position: absolute;
+    left: 68%;
+    top: 350px;
+    margin-left: -150px;
+    transform: translateZ(0);
+}
+
+.head {
+    position: absolute;
+    width: 72px;
+}
+
+.neck {
+    position: absolute;
+    width: 72px;
+}
+
+.torso {
+    position: absolute;
+    width: 72px;
+}
+
+.inside {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: 150;
+    left: 10%;
+    top: 100px;
+    margin-left: -100px;
+    visibility: hidden;
+}
+
+.around {
+    background: $darkest;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 170;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+/*.turn {
+  background: $darkest;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  left: 0;
+}*/
+
+p {
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0.17em;
+    width: 700px;
+    height: 190px;
+    position: absolute;
+    z-index:1000;
+    left: 50%;
+    top: 48%;
+    margin-left: -350px;
+    margin-top: -95px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 46px;
+    visibility:hidden;
+}
+
+.starfield {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    margin-left: -400px;
+    margin-top: -300px;
+    visibility: hidden;
+    z-index: 170;
+    transform: translateZ(0);
+}
+
+.stars {
+    transform: scale(1.4);
+    transform: translateZ(0);
+}
+
+.flare {
+    opacity: 0.7;
+    transform: translateZ(0);
+}
+
+.cons, .cons2 {
+    width: 590px;
+    height: 486px;
+    visibility: hidden;
+    position: absolute;
+    z-index: 400;
+    top: 300px;
+    left: 30px;
+    transform: translateZ(0);
+}
