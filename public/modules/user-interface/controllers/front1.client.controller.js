@@ -21,7 +21,9 @@ angular.module('user-interface').controller('Front1Controller', ['$scope','$log'
 
 		var headBoxOpenPath = headBox.attr("d");
 		var headBoxClosedPath = boxGraphic.select('#box-lead-target').attr("d");
-		headBox.click(function () {
+		headBox.click(openCloseBox);
+
+		var openCloseBox = function(){
 			var path,
 				ease;
 			if (closedBox) {
@@ -35,12 +37,9 @@ angular.module('user-interface').controller('Front1Controller', ['$scope','$log'
 				closedBox = 1;
 				console.log('close box');
 			}
-			headBox.stop().animate({d: path}, 1000, ease, checkDone);
-		});
-
-		var checkDone = function(){
-
-		}
+			headBox.stop().animate({d: path}, 1000, ease);
+		};
+		openCloseBox();
 
 		upperBox.click(function () {
 			console.log('upperBox')
@@ -67,16 +66,42 @@ angular.module('user-interface').controller('Front1Controller', ['$scope','$log'
 
 
 		/////////////////////////////////////////////////
-
+		//http://codepen.io/sdras/pen/RNWaMX
 		TweenMax.ticker.fps(60);
 		var box = $('.boxSvg');
 		$(document).ready(master)
 		function master() {
 			var takeOne = new TimelineLite();
 			takeOne.to(box, 2, {scale:0.5, ease:Expo.easeOut})
-				.to(box, 2, {y:-100, x:-170}, "scaleIn")
-				.to(box, 3, {scale:1.2, y:0, transformOrigin:"50% 50%", force3D:true, ease:Expo.easeOut})
+				.to(box, 3, {scale:0.8, y:-120, ease:Expo.easeOut})
+				.to(box, 3, {rotation:180, transformOrigin:"50% 50%", ease:Expo.easeOut, onComplete:openCloseBox})
 		}
+
+		var data = Snap.path.toCubic($('.boxSvg2 path').attr('d')),
+			dataLength = data.length,
+			points = [], //holds our series of x/y values for anchors and control points,
+			pointsString = data.toString();
+
+// convert cubic data to GSAP bezier
+		for (var i = 0; i < dataLength; i++) {
+			var seg = data[i];
+			if (seg[0] === "M") { // move (starts the path)
+				var point = {};
+				point.x = seg[1];
+				point.y = seg[2];
+				points.push(point);
+			} else { // seg[0] === "C" (Snap.path.toCubic should return only curves after first point)
+				for (var j = 1; j < 6; j+=2) {
+					var point = {};
+					point.x = seg[j];
+					point.y = seg[j+1];
+					points.push(point);
+				}
+			}
+		}
+
+//make the tween
+		var tween = TweenMax.to("#circleTarget", 3, {bezier:{type:"cubic", values:points}, force3D:true, ease:Power0.easeNone});
 
 
 

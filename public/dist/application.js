@@ -3150,6 +3150,10 @@ angular.module('user-interface').config(['$stateProvider','$disqusProvider',
 		// Seller interface state routing
 		$disqusProvider.setShortname('urimium');
 		$stateProvider.
+		state('mcmu', {
+			url: '/mcmu',
+			templateUrl: 'modules/user-interface/views/mcmu.client.view.html'
+		}).
 		state('front-1', {
 			url: '/front-1',
 			templateUrl: 'modules/user-interface/views/front-1.client.view.html'
@@ -3387,7 +3391,9 @@ angular.module('user-interface').controller('Front1Controller', ['$scope','$log'
 
 		var headBoxOpenPath = headBox.attr("d");
 		var headBoxClosedPath = boxGraphic.select('#box-lead-target').attr("d");
-		headBox.click(function () {
+		headBox.click(openCloseBox);
+
+		var openCloseBox = function(){
 			var path,
 				ease;
 			if (closedBox) {
@@ -3401,12 +3407,9 @@ angular.module('user-interface').controller('Front1Controller', ['$scope','$log'
 				closedBox = 1;
 				console.log('close box');
 			}
-			headBox.stop().animate({d: path}, 1000, ease, checkDone);
-		});
-
-		var checkDone = function(){
-
-		}
+			headBox.stop().animate({d: path}, 1000, ease);
+		};
+		openCloseBox();
 
 		upperBox.click(function () {
 			console.log('upperBox')
@@ -3433,16 +3436,42 @@ angular.module('user-interface').controller('Front1Controller', ['$scope','$log'
 
 
 		/////////////////////////////////////////////////
-
+		//http://codepen.io/sdras/pen/RNWaMX
 		TweenMax.ticker.fps(60);
 		var box = $('.boxSvg');
 		$(document).ready(master)
 		function master() {
 			var takeOne = new TimelineLite();
 			takeOne.to(box, 2, {scale:0.5, ease:Expo.easeOut})
-				.to(box, 2, {y:-100, x:-170}, "scaleIn")
-				.to(box, 3, {scale:1.2, y:0, transformOrigin:"50% 50%", force3D:true, ease:Expo.easeOut})
+				.to(box, 3, {scale:0.8, y:-120, ease:Expo.easeOut})
+				.to(box, 3, {rotation:180, transformOrigin:"50% 50%", ease:Expo.easeOut, onComplete:openCloseBox})
 		}
+
+		var data = Snap.path.toCubic($('.boxSvg2 path').attr('d')),
+			dataLength = data.length,
+			points = [], //holds our series of x/y values for anchors and control points,
+			pointsString = data.toString();
+
+// convert cubic data to GSAP bezier
+		for (var i = 0; i < dataLength; i++) {
+			var seg = data[i];
+			if (seg[0] === "M") { // move (starts the path)
+				var point = {};
+				point.x = seg[1];
+				point.y = seg[2];
+				points.push(point);
+			} else { // seg[0] === "C" (Snap.path.toCubic should return only curves after first point)
+				for (var j = 1; j < 6; j+=2) {
+					var point = {};
+					point.x = seg[j];
+					point.y = seg[j+1];
+					points.push(point);
+				}
+			}
+		}
+
+//make the tween
+		var tween = TweenMax.to("#circleTarget", 3, {bezier:{type:"cubic", values:points}, force3D:true, ease:Power0.easeNone});
 
 
 
@@ -3635,6 +3664,101 @@ angular.module('user-interface').controller('ListingProductController', ['$scope
 			return newArr;
 		};
 
+	}
+]);
+
+'use strict';
+
+angular.module('user-interface').controller('McmuController', ['$scope', '$timeout',
+	function($scope, $timeout) {
+
+		var svgMVMU = Snap('#faceSvg');
+		Snap.load("modules/user-interface/img/mcmu/mcmu.svg", function(data){
+			svgMVMU.append(data);
+
+			var lylics_small = $('#song_small');
+			var lylics_ah = $('#song_ah');
+			var lylics_hak = $('#song_hak');
+			var lylics_haak = $('#song_haak');
+
+			var master = function(){
+				var mcmu = $('#faceSvg svg');
+				var eyeBro = $('#eyebro path');
+				var mouth1 = $('#mouth1');
+				var mouth2 = $('#mouth2');
+				var leftBro = eyeBro[0];
+				var rightBro = eyeBro[2];
+				var audio = document.getElementById("audioTag");
+
+				//audio.stop();
+				console.log(leftBro);
+				console.log(rightBro);
+
+
+				var closeMouth = $('#mouth1');
+				var openMouth = $('#mouth2');
+
+				var mouth_timeLine = new TimelineMax({repeat:3})
+				mouth_timeLine.set(closeMouth, {opacity:0})
+					.to(openMouth, 0.5,{opacity:1})
+					.set(openMouth, {opacity:0})
+					.set(closeMouth, {opacity:1});
+
+				var screamSmell = new TimelineMax();
+				screamSmell.from(lylics_small, 0.5, {scale:0.5, autoAlpha:0,  ease:Back.easeOut})
+					.to(lylics_small, 0.1, {scale:0.5, autoAlpha:1, ease:Back.easeOut})
+					.set(lylics_small,{autoAlpha:0});
+
+				var screamAh = new TimelineMax({repeat:8});
+				screamAh
+					.add(mouth_timeLine)
+					.from(lylics_ah, 0.5, {scale:0.5, autoAlpha:0, ease:Back.easeOut})//1
+					.to(lylics_ah, 0.5, {scale:1, autoAlpha:1, ease:Back.easeOut})
+					.from(lylics_ah, 0.1, {scale:0.5, autoAlpha:0, ease:Back.easeOut})//2
+					.to(lylics_ah, 0.5, {scale:1, autoAlpha:1, ease:Back.easeOut})
+					.from(lylics_ah, 0.5, {scale:0.5, autoAlpha:0, ease:Back.easeOut})//3
+					.to(lylics_ah, 0.1, {scale:1, autoAlpha:1, ease:Back.easeOut})
+					.from(lylics_ah, 0.5, {scale:0.5, autoAlpha:0, ease:Back.easeOut})//4
+					.to(lylics_ah, 0.5, {scale:1, autoAlpha:1, ease:Back.easeOut})
+					.from(lylics_ah, 0.5, {scale:0.5, autoAlpha:0, ease:Back.easeOut})//5
+					.to(lylics_ah, 0.5, {scale:1, autoAlpha:1, ease:Back.easeOut})
+					.set(lylics_ah,{scale:1, autoAlpha:0, ease:Back.easeOut});
+
+				var screamhak = new TimelineMax();
+					screamhak.from(lylics_hak, 1.5, {scale:0.5, autoAlpha:0, ease:Back.easeOut})
+					.to(lylics_hak, 1.5, {scale:0.5, autoAlpha:0, ease:Back.easeOut})
+					.from(lylics_haak, 1.5, {scale:0.5, autoAlpha:0, ease:Back.easeOut})
+					.to(lylics_haak, 1.5, {scale:0.5, autoAlpha:0, ease:Back.easeOut})
+
+				var timeLine = new TimelineMax({paused:true, delay:.2, onComplete:printComplete})
+				timeLine
+					.to(mcmu, 3.3, {scale:0.5, opacity:1})
+					.to([leftBro, rightBro], 1, {rotation: 360, scale:1.2, fill:"red", opacity:1, transformOrigin:"50% 50%"})
+					.add(screamSmell, 3.7)
+					.add(screamAh,4.5)
+					.add(mouth_timeLine, 4.5)
+					.add(screamhak,8);
+
+				timeLine.stop();
+
+				$scope.totalTime = timeLine.totalDuration().toFixed(2);
+
+				$timeout(function() {
+					audio.play();
+					timeLine.play();
+					console.log('time out is done');
+				}, 5000);
+
+			}
+			master();
+
+
+
+		});
+
+		var printComplete = function(){
+			console.log('complete');
+		};
 	}
 ]);
 

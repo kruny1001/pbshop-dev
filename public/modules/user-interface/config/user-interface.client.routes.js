@@ -6,6 +6,10 @@ angular.module('user-interface').config(['$stateProvider','$disqusProvider',
 		// Seller interface state routing
 		$disqusProvider.setShortname('urimium');
 		$stateProvider.
+		state('mcmu', {
+			url: '/mcmu',
+			templateUrl: 'modules/user-interface/views/mcmu.client.view.html'
+		}).
 		state('front-1', {
 			url: '/front-1',
 			templateUrl: 'modules/user-interface/views/front-1.client.view.html'

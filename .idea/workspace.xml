@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/all.js" afterPath="$PROJECT_DIR$/config/env/all.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/user-interface/audio/ungiLetMeGo.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/user-interface/ref/gsap_ref.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/user-interface/tests/mcmu.client.controller.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/user-interface/views/mcmu.client.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/user-interface/img/mcmu/mcmu.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.css" afterPath="$PROJECT_DIR$/public/dist/application.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/css/fron1.css" afterPath="$PROJECT_DIR$/public/modules/user-interface/css/fron1.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/views/front-1.client.view.html" afterPath="$PROJECT_DIR$/public/modules/user-interface/views/front-1.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/controllers/front1.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/controllers/front1.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout.server.view.html" afterPath="$PROJECT_DIR$/app/views/layout.server.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/production.js" afterPath="$PROJECT_DIR$/config/env/production.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/config/user-interface.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/config/user-interface.client.routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -36,16 +40,15 @@
     <favorites_list name="pbshop-dev" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.71473354">
+    <splitter split-orientation="horizontal" split-proportion="0.4454054">
       <split-first>
         <leaf>
           <file leaf-file-name="front-1.client.view.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/modules/user-interface/views/front-1.client.view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-12.214286" vertical-offset="228" max-vertical-offset="3344">
-                  <caret line="66" column="22" selection-start-line="54" selection-start-column="16" selection-end-line="66" selection-end-column="22" />
+                <state vertical-scroll-proportion="-4.75" vertical-offset="912" max-vertical-offset="5757">
+                  <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
                   <folding>
-                    <element signature="n#style#0;n#section#0;n#!!top" expanded="false" />
                     <element signature="n#style#0;n#div#2;n#section#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#3;n#section#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
@@ -66,21 +69,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="fron1.css" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/modules/user-interface/css/fron1.css">
+          <file leaf-file-name="mcmu.client.view.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/modules/user-interface/views/mcmu.client.view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.8865132" vertical-offset="2515" max-vertical-offset="4370">
-                  <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
+                <state vertical-scroll-proportion="0.76121795" vertical-offset="0" max-vertical-offset="646">
+                  <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="front1.client.controller.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/modules/user-interface/controllers/front1.client.controller.js">
+          <file leaf-file-name="fron1.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/modules/user-interface/css/fron1.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="4351">
-                  <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="4246" max-vertical-offset="4883">
+                  <caret line="241" column="23" selection-start-line="241" selection-start-column="23" selection-end-line="241" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -100,43 +103,31 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="front1.client.controller.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="mcmu.client.controller.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.648773" vertical-offset="1002" max-vertical-offset="1900">
+                  <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="mcmu.svg" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/modules/user-interface/img/mcmu/mcmu.svg">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-10.642858" vertical-offset="4927" max-vertical-offset="10849">
+                  <caret line="275" column="90" selection-start-line="275" selection-start-column="90" selection-end-line="275" selection-end-column="90" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="front1.client.controller.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/modules/user-interface/controllers/front1.client.controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6103448" vertical-offset="1166" max-vertical-offset="4351">
-                  <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SplitText.min.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/lib/3rd/SplitText.min.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
-                  <caret line="12" column="7019" selection-start-line="12" selection-start-column="7019" selection-end-line="12" selection-end-column="7019" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="all.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config/env/all.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1368">
-                  <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="production.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config/env/production.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1634">
-                  <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+                <state vertical-scroll-proportion="-6.321429" vertical-offset="1267" max-vertical-offset="4826">
+                  <caret line="76" column="68" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="68" />
                   <folding />
                 </state>
               </provider>
@@ -176,7 +167,6 @@
         <option value="$PROJECT_DIR$/public/modules/user-interface/img/kiwi.svg" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/snapPlugin.js" />
         <option value="$USER_HOME$/Desktop/box.svg" />
-        <option value="$USER_HOME$/Desktop/box2.svg" />
         <option value="$PROJECT_DIR$/public/modules/core/css/core.css" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/img/backSvg.svg" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/css/backSvg.svg" />
@@ -184,12 +174,18 @@
         <option value="$USER_HOME$/AppData/Local/Temp/stylesheet.css" />
         <option value="$USER_HOME$/Desktop/11/font1-demo.html" />
         <option value="$PROJECT_DIR$/app/views/layout.server.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/user-interface/css/fron1.css" />
         <option value="$PROJECT_DIR$/public/lib/3rd/SplitText.min.js" />
         <option value="$PROJECT_DIR$/config/env/production.js" />
         <option value="$PROJECT_DIR$/config/env/all.js" />
-        <option value="$PROJECT_DIR$/public/modules/user-interface/views/front-1.client.view.html" />
+        <option value="$USER_HOME$/Desktop/hal.svg" />
+        <option value="$USER_HOME$/Desktop/box2.svg" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/controllers/front1.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/user-interface/ref/gsap_ref.txt" />
+        <option value="$PROJECT_DIR$/public/modules/user-interface/css/fron1.css" />
+        <option value="$PROJECT_DIR$/public/modules/user-interface/views/front-1.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/user-interface/img/mcmu/mcmu.svg" />
+        <option value="$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/user-interface/views/mcmu.client.view.html" />
       </list>
     </option>
   </component>
@@ -296,9 +292,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="62" />
-    <option name="width" value="951" />
-    <option name="height" value="1080" />
+    <option name="x" value="54" />
+    <option name="y" value="-8" />
+    <option name="width" value="1874" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -357,12 +354,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\img\mcmu" />
+      <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\audio" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\css" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\lib\gsap\src\uncompressed\plugins" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\img" />
-      <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\dist" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\img\mcmu" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\lib" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\img" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\css" />
@@ -498,20 +497,26 @@
       <option name="project" value="LOCAL" />
       <updated>1417333366095</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="SVG GSAP">
+      <created>1417426356530</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1417426356530</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="0" width="951" height="1080" extended-state="0" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29685807" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3631523" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38137472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32212582" sideWeight="0.4992658" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26198083" sideWeight="0.4992658" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2935378" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2603486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -572,7 +577,8 @@
     <MESSAGE value="SNAP Coffe" />
     <MESSAGE value="SNAP Box ani" />
     <MESSAGE value="SVG Integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="SVG Integration" />
+    <MESSAGE value="SVG GSAP" />
+    <option name="LAST_COMMIT_MESSAGE" value="SVG GSAP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -581,45 +587,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/controllers/front1.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="1349">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041758243" vertical-offset="0" max-vertical-offset="455">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/secure.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1216">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31685394" vertical-offset="106" max-vertical-offset="551">
-          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="305" max-vertical-offset="722">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="209">
@@ -645,7 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20524691" vertical-offset="0" max-vertical-offset="4731">
           <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,13 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.77136755" vertical-offset="0" max-vertical-offset="475">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/box2.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="9" selection-end-column="108" />
         </state>
       </provider>
     </entry>
@@ -900,9 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
           <caret line="12" column="7019" selection-start-line="12" selection-start-column="7019" selection-end-line="12" selection-end-column="7019" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,6 +865,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1634">
           <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33268481" vertical-offset="10431" max-vertical-offset="10963">
+          <caret line="558" column="23" selection-start-line="558" selection-start-column="23" selection-end-line="558" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/hal.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9914966" vertical-offset="4091" max-vertical-offset="4788">
+          <caret line="246" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/box2.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
+          <caret line="0" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="24" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -922,20 +899,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/ref/gsap_ref.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="133">
+          <caret line="0" column="124" selection-start-line="0" selection-start-column="124" selection-end-line="0" selection-end-column="124" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/user-interface/controllers/front1.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="4351">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state vertical-scroll-proportion="-6.321429" vertical-offset="1267" max-vertical-offset="4826">
+          <caret line="76" column="68" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/img/mcmu/mcmu.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.642858" vertical-offset="4927" max-vertical-offset="10849">
+          <caret line="275" column="90" selection-start-line="275" selection-start-column="90" selection-end-line="275" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/css/fron1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4246" max-vertical-offset="4883">
+          <caret line="241" column="23" selection-start-line="241" selection-start-column="23" selection-end-line="241" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/user-interface/views/front-1.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.214286" vertical-offset="228" max-vertical-offset="3344">
-          <caret line="66" column="22" selection-start-line="54" selection-start-column="16" selection-end-line="66" selection-end-column="22" />
+        <state vertical-scroll-proportion="-4.75" vertical-offset="912" max-vertical-offset="5757">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
           <folding>
-            <element signature="n#style#0;n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#2;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
@@ -955,10 +955,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/css/fron1.css">
+    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8865132" vertical-offset="2515" max-vertical-offset="4370">
-          <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.648773" vertical-offset="1002" max-vertical-offset="1900">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/views/mcmu.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76121795" vertical-offset="0" max-vertical-offset="646">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding />
         </state>
       </provider>
