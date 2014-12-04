@@ -44,6 +44,12 @@ module.exports = {
 				'public/lib/gsap/src/uncompressed/utils/Draggable.js',
 				'public/lib/gsap/src/uncompressed/plugins/TextPlugin.js',
 				//'public/lib/3rd/SplitText.min.js'
+
+				//'public/lib/threejs/build/three.min.js',
+
+				'public/lib/tremulajs/libs/hammer.js',
+				'public/lib/tremulajs/libs/jsBezier-0.6.js',
+				'public/lib/tremulajs/dist/Tremula.js',
 			]
 		},
 		css: [

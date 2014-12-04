@@ -75,8 +75,8 @@ angular.module('user-interface').controller('McmuController', ['$scope', '$timeo
 				$scope.totalTime = timeLine.totalDuration().toFixed(2);
 
 				$timeout(function() {
-					audio.play();
-					timeLine.play();
+					//audio.play();
+					//timeLine.play();
 					console.log('time out is done');
 				}, 5000);
 
@@ -90,5 +90,16 @@ angular.module('user-interface').controller('McmuController', ['$scope', '$timeo
 		var printComplete = function(){
 			console.log('complete');
 		};
+
+		//transform origin
+		var boxes = $(".box"),
+			stage = $(".stage");
+
+
+		TweenLite.set(stage, {css:{perspective:400, transformStyle:"preserve-3d"}});
+		boxes.each(function (index, element){
+			TweenLite.set(element, {css:{rotationY:index*20, transformOrigin:"left 50% -200"}});
+			TweenMax.to(element, 20, {css:{rotationY:"+=180"}, repeat:1, ease:Linear.easeNone});
+		});
 	}
 ]);

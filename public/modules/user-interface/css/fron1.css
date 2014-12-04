@@ -105,61 +105,6 @@
     display: block;
 }
 
-.landscape {
-    margin: 150px auto;
-    display: table;
-    transform: translateZ(0);
-}
-
-.person {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    z-index: 100;
-    position: absolute;
-    left: 68%;
-    top: 350px;
-    margin-left: -150px;
-    transform: translateZ(0);
-}
-
-.head {
-    position: absolute;
-    width: 72px;
-}
-
-.neck {
-    position: absolute;
-    width: 72px;
-}
-
-.torso {
-    position: absolute;
-    width: 72px;
-}
-
-.inside {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    z-index: 150;
-    left: 10%;
-    top: 100px;
-    margin-left: -100px;
-    visibility: hidden;
-}
-
-.around {
-    background: $darkest;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 170;
-    left: 0;
-    top: 0;
-    visibility: hidden;
-}
-
 /*.turn {
   background: $darkest;
   width: 100%;
@@ -169,8 +114,8 @@
   top: 0;
   left: 0;
 }*/
-
-p {
+/*
+p .lyrics-p{
     text-transform: uppercase;
     font-size: 40px;
     text-align: center;
@@ -188,7 +133,7 @@ p {
     line-height: 46px;
     visibility:hidden;
 }
-
+*/
 .starfield {
     width: 800px;
     height: 600px;
@@ -248,4 +193,35 @@ p {
     font-size: 40px;
     text-align: center;
     line-height: 46px;
+}
+
+.demoWrapper
+{
+    width:550px;
+    height:400px;
+    background-color:#000;
+    -webkit-font-smoothing:antialiased;
+    margin:-1px -1px 30px 10px;
+    padding:1px;
+}
+.stage
+{
+
+    height:325px;
+    margin-top:15px;
+    margin-left:15px;
+    color:#ddd;
+    margin-right:10px;
+    font-family:Arial, Helvetica, Verdana;
+}
+
+.box
+{
+    position:absolute;
+    width:50px;
+    height:50px;
+    background-color:#06f;
+    display:inline-block;
+    margin:10px 20px 20px 235px;
+    display:inline-block;
 }

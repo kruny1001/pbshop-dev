@@ -2,19 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/user-interface/audio/ungiLetMeGo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/user-interface/ref/gsap_ref.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/user-interface/tests/mcmu.client.controller.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/user-interface/views/mcmu.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/user-interface/img/mcmu/mcmu.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/animation/css/Demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/animation/css/Tremula.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/animation/animation.client.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/animation/config/animation.client.routes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/animation/controllers/three.client.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/animation/tests/three.client.controller.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/animation/views/three.client.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tt.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/all.js" afterPath="$PROJECT_DIR$/config/env/all.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.css" afterPath="$PROJECT_DIR$/public/dist/application.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/css/fron1.css" afterPath="$PROJECT_DIR$/public/modules/user-interface/css/fron1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/views/front-1.client.view.html" afterPath="$PROJECT_DIR$/public/modules/user-interface/views/front-1.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/controllers/front1.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/controllers/front1.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/config/user-interface.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/config/user-interface.client.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/views/mcmu.client.view.html" afterPath="$PROJECT_DIR$/public/modules/user-interface/views/mcmu.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/img/mcmu/mcmu.svg" afterPath="$PROJECT_DIR$/public/modules/user-interface/img/mcmu/mcmu.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/production.js" afterPath="$PROJECT_DIR$/config/env/production.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -40,60 +45,26 @@
     <favorites_list name="pbshop-dev" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4454054">
+    <splitter split-orientation="horizontal" split-proportion="0.40944883">
       <split-first>
         <leaf>
-          <file leaf-file-name="front-1.client.view.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/modules/user-interface/views/front-1.client.view.html">
+          <file leaf-file-name="three.client.view.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/modules/animation/views/three.client.view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-4.75" vertical-offset="912" max-vertical-offset="5757">
-                  <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+                <state vertical-scroll-proportion="0.1875" vertical-offset="0" max-vertical-offset="1653">
+                  <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
                   <folding>
-                    <element signature="n#style#0;n#div#2;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#rect#0;n#svg#0;n#div#0;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#rect#1;n#svg#0;n#div#0;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#rect#0;n#svg#0;n#div#1;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#rect#1;n#svg#0;n#div#1;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#2;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#rect#0;n#svg#0;n#div#2;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#rect#1;n#svg#0;n#div#2;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#rect#0;n#svg#0;n#div#3;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#rect#1;n#svg#0;n#div#3;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#div#0;n#section#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="mcmu.client.view.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/modules/user-interface/views/mcmu.client.view.html">
+          <file leaf-file-name="Tremula.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/modules/animation/css/Tremula.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.76121795" vertical-offset="0" max-vertical-offset="646">
-                  <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="fron1.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/modules/user-interface/css/fron1.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="4246" max-vertical-offset="4883">
-                  <caret line="241" column="23" selection-start-line="241" selection-start-column="23" selection-end-line="241" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="layout.server.view.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/layout.server.view.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="930" max-vertical-offset="1938">
-                  <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="114">
+                  <caret line="0" column="62" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
                   <folding />
                 </state>
               </provider>
@@ -103,31 +74,103 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="mcmu.client.controller.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js">
+          <file leaf-file-name="three.client.controller.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/modules/animation/controllers/three.client.controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.648773" vertical-offset="1002" max-vertical-offset="1900">
-                  <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+                <state vertical-scroll-proportion="-6.285714" vertical-offset="8697" max-vertical-offset="22781">
+                  <caret line="467" column="20" selection-start-line="467" selection-start-column="16" selection-end-line="467" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="mcmu.svg" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/modules/user-interface/img/mcmu/mcmu.svg">
+          <file leaf-file-name="Demo.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/modules/animation/css/Demo.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-10.642858" vertical-offset="4927" max-vertical-offset="10849">
-                  <caret line="275" column="90" selection-start-line="275" selection-start-column="90" selection-end-line="275" selection-end-column="90" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="3176" max-vertical-offset="5377">
+                  <caret line="172" column="12" selection-start-line="172" selection-start-column="12" selection-end-line="172" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="front1.client.controller.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/modules/user-interface/controllers/front1.client.controller.js">
+          <file leaf-file-name="tremulaProjections.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/gh-pages-demo/tremulaProjections.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-6.321429" vertical-offset="1267" max-vertical-offset="4826">
-                  <caret line="76" column="68" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="68" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8417">
+                  <caret line="15" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Projections.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/src/Projections.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-6.285714" vertical-offset="9210" max-vertical-offset="11856">
+                  <caret line="494" column="22" selection-start-line="494" selection-start-column="13" selection-end-line="494" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-2.375" vertical-offset="0" max-vertical-offset="4123">
+                  <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+                  <folding>
+                    <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tremulaConfig.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/gh-pages-demo/tremulaConfig.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="703">
+                  <caret line="31" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="21" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tremulaControls.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/gh-pages-demo/tremulaControls.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="10146">
+                  <caret line="60" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="528" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="all.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/env/all.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-7.464286" vertical-offset="684" max-vertical-offset="1482">
+                  <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="bower.json" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/bower.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.81972265" vertical-offset="0" max-vertical-offset="779">
+                  <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="production.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/env/production.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1729">
+                  <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
@@ -143,7 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/css/listing-product.css" />
         <option value="$PROJECT_DIR$/public/config.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -175,17 +217,26 @@
         <option value="$USER_HOME$/Desktop/11/font1-demo.html" />
         <option value="$PROJECT_DIR$/app/views/layout.server.view.html" />
         <option value="$PROJECT_DIR$/public/lib/3rd/SplitText.min.js" />
-        <option value="$PROJECT_DIR$/config/env/production.js" />
-        <option value="$PROJECT_DIR$/config/env/all.js" />
         <option value="$USER_HOME$/Desktop/hal.svg" />
         <option value="$USER_HOME$/Desktop/box2.svg" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/controllers/front1.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/ref/gsap_ref.txt" />
-        <option value="$PROJECT_DIR$/public/modules/user-interface/css/fron1.css" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/views/front-1.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/img/mcmu/mcmu.svg" />
-        <option value="$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js" />
+        <option value="$PROJECT_DIR$/tt.html" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/views/mcmu.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/animation/lib/Projector.js" />
+        <option value="$PROJECT_DIR$/public/modules/animation/lib/CanvasRenderer.js" />
+        <option value="$PROJECT_DIR$/public/modules/animation/obj/WaltHeadLo.js" />
+        <option value="$PROJECT_DIR$/public/modules/user-interface/css/fron1.css" />
+        <option value="$PROJECT_DIR$/public/lib/tremulajs/boilerplate/index_dev.html" />
+        <option value="$PROJECT_DIR$/public/lib/tremulajs/gh-pages-demo/tremulaControls.js" />
+        <option value="$PROJECT_DIR$/public/modules/animation/controllers/three.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/animation/views/three.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/animation/css/Demo.css" />
+        <option value="$PROJECT_DIR$/config/env/production.js" />
+        <option value="$PROJECT_DIR$/config/env/all.js" />
       </list>
     </option>
   </component>
@@ -292,9 +343,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1874" />
+    <option name="width" value="1857" />
     <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -354,11 +405,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\animation\css" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\img\mcmu" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\audio" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\css" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\lib\gsap\src\uncompressed\plugins" />
-      <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\img\mcmu" />
@@ -503,20 +554,26 @@
       <option name="project" value="LOCAL" />
       <updated>1417426356530</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="NoJJang">
+      <created>1417580749353</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1417580749353</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1857" height="1096" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3631523" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6400426" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38137472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26198083" sideWeight="0.4992658" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24920128" sideWeight="0.4992658" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2603486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25068718" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -525,7 +582,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28753993" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -534,21 +591,21 @@
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38137472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42795232" sideWeight="0.4992658" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.64463705" sideWeight="0.4992658" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33673468" sideWeight="0.5007342" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29385474" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3629469" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24203466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -578,176 +635,16 @@
     <MESSAGE value="SNAP Box ani" />
     <MESSAGE value="SVG Integration" />
     <MESSAGE value="SVG GSAP" />
-    <option name="LAST_COMMIT_MESSAGE" value="SVG GSAP" />
+    <MESSAGE value="NoJJang" />
+    <option name="LAST_COMMIT_MESSAGE" value="NoJJang" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="209">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/utility/controllers/test-page-generator.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/utility/directives/page-generator.client.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="741">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/utility/directives/page-format-creation.client.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/box1.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="418">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="1030" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/utility/directives/template/default-format.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1786">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Untitled-1.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35266823" vertical-offset="0" max-vertical-offset="431">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/utility/views/test-page-generator.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="361">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/directives/templates/main-interface.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.471464" vertical-offset="0" max-vertical-offset="1805">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/lib/gsap/src/minified/plugins/TextPlugin.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="418">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/ilbewarm.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/views/experimental-interface.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="228">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/LogoUrimium.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17124394" vertical-offset="46" max-vertical-offset="665">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/g-drive/g-drive.client.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="190">
-          <caret line="4" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/disqus/config/disqus.client.setting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="632">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/disqus/disqus.client.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15031646" vertical-offset="0" max-vertical-offset="632">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/disqus/config/disqus.client.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20524691" vertical-offset="0" max-vertical-offset="4731">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/config/user-interface.client.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/views/detail-product.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.571428" vertical-offset="1083" max-vertical-offset="3059">
-          <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/history path.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5738">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="295" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/views/listing-product.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5929054" vertical-offset="352" max-vertical-offset="1235">
-          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Snap.svg-0.3.0/Snap.svg-0.3.0/demos/animated-map/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.214286" vertical-offset="0" max-vertical-offset="2147">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="22" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/box.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77136755" vertical-offset="0" max-vertical-offset="475">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/12.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
@@ -846,26 +743,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layout.server.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="930" max-vertical-offset="1938">
-          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/lib/3rd/SplitText.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
           <caret line="12" column="7019" selection-start-line="12" selection-start-column="7019" selection-end-line="12" selection-end-column="7019" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/production.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1634">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -887,15 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
           <caret line="0" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="24" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1368">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -903,70 +775,254 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="133">
           <caret line="0" column="124" selection-start-line="0" selection-start-column="124" selection-end-line="0" selection-end-column="124" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/user-interface/controllers/front1.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.321429" vertical-offset="1267" max-vertical-offset="4826">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1267" max-vertical-offset="4826">
           <caret line="76" column="68" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/user-interface/img/mcmu/mcmu.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.642858" vertical-offset="4927" max-vertical-offset="10849">
-          <caret line="275" column="90" selection-start-line="275" selection-start-column="90" selection-end-line="275" selection-end-column="90" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="10849">
+          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/css/fron1.css">
+    <entry file="file://$PROJECT_DIR$/tt.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4246" max-vertical-offset="4883">
-          <caret line="241" column="23" selection-start-line="241" selection-start-column="23" selection-end-line="241" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/views/front-1.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.75" vertical-offset="912" max-vertical-offset="5757">
-          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#rect#0;n#svg#0;n#div#0;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#rect#1;n#svg#0;n#div#0;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#rect#0;n#svg#0;n#div#1;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#rect#1;n#svg#0;n#div#1;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#rect#0;n#svg#0;n#div#2;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#rect#1;n#svg#0;n#div#2;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#rect#0;n#svg#0;n#div#3;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#rect#1;n#svg#0;n#div#3;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="1501">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.648773" vertical-offset="1002" max-vertical-offset="1900">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1214" max-vertical-offset="2109">
+          <caret line="99" column="45" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/views/front-1.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51252407" vertical-offset="912" max-vertical-offset="5757">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layout.server.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.477842" vertical-offset="930" max-vertical-offset="1938">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/test/flickr_6.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="628">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/test/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="641">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/src/Layouts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1884" max-vertical-offset="3344">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/src/Box.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.200637" vertical-offset="6117" max-vertical-offset="7657">
+          <caret line="117" column="10" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/test/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6422">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1078" max-vertical-offset="1691">
+          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/gh-pages-demo/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4977" max-vertical-offset="5358">
+          <caret line="271" column="32" selection-start-line="271" selection-start-column="14" selection-end-line="271" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/user-interface/views/mcmu.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76121795" vertical-offset="0" max-vertical-offset="646">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        <state vertical-scroll-proportion="-1.1546961" vertical-offset="741" max-vertical-offset="2014">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/animation/css/Tremula.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
+          <caret line="0" column="62" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/libs/require.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/src/Tremula.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="4180">
+          <caret line="43" column="20" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/src/Projections.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.285714" vertical-offset="9210" max-vertical-offset="11856">
+          <caret line="494" column="22" selection-start-line="494" selection-start-column="13" selection-end-line="494" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/boilerplate/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.256972" vertical-offset="4856" max-vertical-offset="6726">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/boilerplate/index_dev.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.750996" vertical-offset="1277" max-vertical-offset="6954">
+          <caret line="272" column="24" selection-start-line="272" selection-start-column="24" selection-end-line="272" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/user-interface/css/fron1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6344086" vertical-offset="3584" max-vertical-offset="4427">
+          <caret line="170" column="16" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/gh-pages-demo/tremulaAdapters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1475" max-vertical-offset="2033">
+          <caret line="96" column="5" selection-start-line="2" selection-start-column="4" selection-end-line="96" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/gh-pages-demo/tremulaConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="703">
+          <caret line="31" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/gh-pages-demo/tremulaControls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="10146">
+          <caret line="60" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="528" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/gh-pages-demo/tremulaProjections.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8417">
+          <caret line="15" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/animation/views/three.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1875" vertical-offset="0" max-vertical-offset="1653">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.375" vertical-offset="0" max-vertical-offset="4123">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/animation/css/Demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3176" max-vertical-offset="5377">
+          <caret line="172" column="12" selection-start-line="172" selection-start-column="12" selection-end-line="172" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/animation/controllers/three.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.285714" vertical-offset="8697" max-vertical-offset="22781">
+          <caret line="467" column="20" selection-start-line="467" selection-start-column="16" selection-end-line="467" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/production.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1729">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.464286" vertical-offset="684" max-vertical-offset="1482">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81972265" vertical-offset="0" max-vertical-offset="779">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
           <folding />
         </state>
       </provider>

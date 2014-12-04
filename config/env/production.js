@@ -36,6 +36,11 @@ module.exports = {
 				//'public/lib/3rd/SplitText.min.js',
 
 				'public/lib/ng-context-menu/dist/ng-context-menu.min.js',
+				//'public/lib/threejs/build/three.min.js',
+
+				'public/lib/tremulajs/libs/hammer.js',
+				'public/lib/tremulajs/libs/jsBezier-0.6.js',
+				'public/lib/tremulajs/dist/Tremula.js',
 
 			]
 		},
