@@ -112,6 +112,10 @@ angular.module('animation').config(['$stateProvider',
 	function($stateProvider) {
 		// Animation state routing
 		$stateProvider.
+		state('ryuhm12', {
+			url: '/ryuhm12',
+			templateUrl: 'modules/animation/views/ryuhm12.client.view.html'
+		}).
 		state('j1', {
 			url: '/j1',
 			templateUrl: 'modules/animation/views/j1.client.view.html'
@@ -126,10 +130,10 @@ angular.module('animation').config(['$stateProvider',
 
 angular.module('animation').controller('J1Controller', ['$scope', '$timeout',
 	function($scope, $timeout) {
+
 		var svgMVMU = Snap('#j1Svg');
 		Snap.load("modules/animation/img/svg/j1.svg", function(data) {
 			svgMVMU.append(data);
-
 
 			var wholeSvg = $('#j1Svg svg').children();
 			TweenMax.set(wholeSvg,{opacity: 0});
@@ -139,7 +143,6 @@ angular.module('animation').controller('J1Controller', ['$scope', '$timeout',
 			var s1 = $('#S1');
 			var s1TimeLine = new TimelineMax();
 			s1TimeLine.to(s1, 1.5, {opacity:1});
-
 
 			var s2 = $('#S2');
 			var s2TimeLine = new TimelineMax();
@@ -225,10 +228,21 @@ angular.module('animation').controller('J1Controller', ['$scope', '$timeout',
 			}, 1000);
 		});
 
-
+		var logoSvg = Snap('#logoUrimium');
+		Snap.load("modules/animation/img/svg/logo1.svg", function(data) {
+			logoSvg.append(data);
+		});
 	}
 ]);
 
+'use strict';
+
+angular.module('animation').controller('Ryuhm12Controller', ['$scope',
+	function($scope) {
+		// Ryuhm12 controller logic
+		// ...
+	}
+]);
 'use strict';
 
 angular.module('animation').controller('ThreeController', ['$scope',
