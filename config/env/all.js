@@ -43,6 +43,7 @@ module.exports = {
 				'public/lib/ng-context-menu/dist/ng-context-menu.js',
 				'public/lib/gsap/src/uncompressed/utils/Draggable.js',
 				'public/lib/gsap/src/uncompressed/plugins/TextPlugin.js',
+				'public/lib/gsap/src/uncompressed/plugins/ScrollToPlugin.js',
 				//'public/lib/3rd/SplitText.min.js'
 
 				//'public/lib/threejs/build/three.min.js',
