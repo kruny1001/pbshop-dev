@@ -1,0 +1,43 @@
+<section style="font-family: font1;" data-ng-controller="SpecHomeController">
+	<md-toolbar md-theme="indigo">
+		<div class="md-toolbar-tools">
+			<span class="md-flex"><b>Spectacular</b></span>
+		</div>
+		<md-button style="position:absolute; top: 12px; right:5px" class="md-raised md-warn" ng-click="replay()">
+			Create
+		</md-button>
+	</md-toolbar>
+	<md-content class="md-padding" style="height: 100%; overflow:hidden">
+
+		<div style="font-size:45px; line-height: 120px; font-family: font1; text-align: center">
+			스펙 저장소<span style="font-size:15px">beta</span>
+		</div>
+
+		<div style="font-size:25px; line-height: 35px; font-family: font1; text-align: center">
+			항상 궁금해 왔던 나의 스펙에 대해서<br>
+			평가 해보고 발전을 위해 어떠한 <br/>
+			스펙을 만들어야 할까? <br/>
+			나만의 포트폴리오를 만들어 보자.
+		</div>
+
+		<div class="svg1-logo"></div>
+
+
+			<div><b>스펙 분류하기</b></div>
+			<div style="visibility:hidden" class="inst" on-finish-render ng-repeat="inst in insts">
+				<div class="inst_desc">{{inst.desc}}</div>
+			</div>
+			<hr/>
+			<div class="skinTypeFont">
+				<b>자신의 Spec Type 고르기</b>
+				<p>나의 피부타입: <span class="radioValue">{{ data.group1 }}</span> </p>
+			</div>
+			<md-radio-group ng-model="data.group1" class="radioFont">
+				<md-radio-button value="자연계" aria-label="Label 1">자연계</md-radio-button>
+				<md-radio-button value="인문계"> 인문계 </md-radio-button>
+				<md-radio-button value="예체능계" aria-label="Label 3">예체능계</md-radio-button>
+			</md-radio-group>
+			<hr/>
+	</md-content>
+
+</section>

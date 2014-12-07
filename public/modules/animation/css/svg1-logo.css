@@ -1,0 +1,13 @@
+.svg1-logo{
+    max-height: 500px;
+}
+
+.inst_desc{
+    font-family: "Nanum Pen Script";
+    font-size: 11px;
+}
+
+.radioFont, .inst_desc,  .skinTypeFont{
+    font-family: "Nanum Pen Script";
+    font-size: 11px;
+}

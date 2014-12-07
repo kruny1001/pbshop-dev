@@ -1,0 +1,37 @@
+<section data-ng-controller="Svg1Controller">
+
+	<md-toolbar md-theme="indigo">
+		<div class="md-toolbar-tools">
+			<span class="md-flex"><b>피부 타입 설정하기</b></span>
+		</div>
+		<md-button style="position:absolute; top: 12px; right:5px" class="md-raised md-warn" ng-click="replay()">
+			Replay
+		</md-button>
+	</md-toolbar>
+	<md-content class="md-padding" style="height: 100%;">
+
+		<div style="font-size:45px; line-height: 120px; font-family: font1; text-align: center">
+			피부왕<span style="font-size:15px">beta</span>
+		</div>
+
+		<div><b>피부 타입 테스트</b></div>
+		<div style="visibility:hidden" class="inst" on-finish-render ng-repeat="inst in insts">
+			<div class="inst_desc">{{inst.desc}}</div>
+		</div>
+		<hr/>
+		<div class="skinTypeFont">
+			<b>자신의 피부 타입 고르기</b>
+			<p>나의 피부타입: <span class="radioValue">{{ data.group1 }}</span> </p>
+		</div>
+
+		<md-radio-group ng-model="data.group1" class="radioFont">
+			<md-radio-button value="악지성" aria-label="Label 1">악지성</md-radio-button>
+			<md-radio-button value="지성"> 지성 </md-radio-button>
+			<md-radio-button value="악건성" aria-label="Label 3">악건성</md-radio-button>
+			<md-radio-button value="건성" aria-label="Label 4">건성</md-radio-button>
+		</md-radio-group>
+		<hr/>
+		<div class="svg1-logo"></div>
+	</md-content>
+
+</section>

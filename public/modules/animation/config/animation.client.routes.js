@@ -5,6 +5,10 @@ angular.module('animation').config(['$stateProvider',
 	function($stateProvider) {
 		// Animation state routing
 		$stateProvider.
+		state('svg1', {
+			url: '/svg1',
+			templateUrl: 'modules/animation/views/svg1.client.view.html'
+		}).
 		state('ryuhm12', {
 			url: '/ryuhm12',
 			templateUrl: 'modules/animation/views/ryuhm12.client.view.html'
