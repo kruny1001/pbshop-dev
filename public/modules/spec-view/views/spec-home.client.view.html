@@ -1,16 +1,26 @@
-<section style="font-family: font1;" data-ng-controller="SpecHomeController">
+<section data-ng-controller="SpecHomeController">
 	<md-toolbar md-theme="indigo">
 		<div class="md-toolbar-tools">
-			<span class="md-flex"><b>Spectacular</b></span>
+			<span class="md-flex"><b>Kevin S</b></span>
+			<span flex></span>
+			<md-button class="md-raised md-warn" ng-click="replay()">
+				Resume
+			</md-button>
+			<md-button class="md-raised md-warn" ng-click="replay()">
+				Resume
+			</md-button>
+			<md-button class="md-raised md-warn" ng-click="replay()">
+				Resume
+			</md-button>
+			<md-button class="md-raised md-warn" ng-click="replay()">
+				Resume
+			</md-button>
 		</div>
-		<md-button style="position:absolute; top: 12px; right:5px" class="md-raised md-warn" ng-click="replay()">
-			Create
-		</md-button>
 	</md-toolbar>
-	<md-content class="md-padding" style="height: 100%; overflow:hidden">
+	<md-content class="md-padding " style="height: 100%; overflow:hidden">
 
 		<div style="font-size:45px; line-height: 120px; font-family: font1; text-align: center">
-			스펙 저장소<span style="font-size:15px">beta</span>
+			Kevin S<span style="font-size:15px">beta</span>
 		</div>
 
 		<div style="font-size:25px; line-height: 35px; font-family: font1; text-align: center">
@@ -20,24 +30,66 @@
 			나만의 포트폴리오를 만들어 보자.
 		</div>
 
-		<div class="svg1-logo"></div>
+		<div layout="row" layout-margin>
+			<div  style="background-color: thistle" flex="5" flex-order="3"></div>
+			<div  flex="76" flex-order="2">
+				<div class="wrapper">
+					<div class="main">
+					</div>
+					<md-button class="md-fab md-warn" aria-label="Time" ng-click="replay()">
+						<md-icon icon="modules/spec-view/img/ic_undo_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+					</md-button>
+				</div>
+			</div>
+			<div  style="background-color: goldenrod"flex="5" flex-order="1"></div>
+		</div>
+		<hr/>
+
+		<div class="work_subtitle">Literature</div>
 
 
-			<div><b>스펙 분류하기</b></div>
-			<div style="visibility:hidden" class="inst" on-finish-render ng-repeat="inst in insts">
-				<div class="inst_desc">{{inst.desc}}</div>
-			</div>
-			<hr/>
-			<div class="skinTypeFont">
-				<b>자신의 Spec Type 고르기</b>
-				<p>나의 피부타입: <span class="radioValue">{{ data.group1 }}</span> </p>
-			</div>
-			<md-radio-group ng-model="data.group1" class="radioFont">
-				<md-radio-button value="자연계" aria-label="Label 1">자연계</md-radio-button>
-				<md-radio-button value="인문계"> 인문계 </md-radio-button>
-				<md-radio-button value="예체능계" aria-label="Label 3">예체능계</md-radio-button>
-			</md-radio-group>
-			<hr/>
+		<div class="work_subtitle">Tech Scope</div>
+		<div layout="row" layout-sm="column">
+			<md-whiteframe flex class="md-whiteframe-z2 work_card" layout layout-align="center center">
+				<span>SVG Animation</span>
+			</md-whiteframe>
+			<md-whiteframe flex class="md-whiteframe-z2 work_card" layout layout-align="center center">
+				<span>GSAP</span>
+			</md-whiteframe>
+			<md-whiteframe flex class="md-whiteframe-z2 work_card" layout layout-align="center center">
+				<span>SNAP</span>
+			</md-whiteframe>
+		</div>
+
+		<div layout="row" layout-sm="column">
+			<md-whiteframe flex class="md-whiteframe-z2 work_card" layout layout-align="center center">
+				<span>AngularJS</span>
+			</md-whiteframe>
+			<md-whiteframe flex class="md-whiteframe-z2 work_card" layout layout-align="center center">
+				<span>MongoDB</span>
+			</md-whiteframe>
+			<md-whiteframe flex class="md-whiteframe-z2 work_card" layout layout-align="center center">
+				<span>Mongoose</span>
+			</md-whiteframe>
+		</div>
+		<div layout="row" layout-sm="column">
+			<md-whiteframe flex class="md-whiteframe-z2 work_card" layout layout-align="center center">
+				<span>Express</span>
+			</md-whiteframe>
+			<md-whiteframe flex class="md-whiteframe-z2 work_card" layout layout-align="center center">
+				<span>NodeJS</span>
+			</md-whiteframe>
+			<md-whiteframe flex class="md-whiteframe-z2 work_card" layout layout-align="center center">
+				<span>Modular Based Development</span>
+			</md-whiteframe>
+		</div>
+
+		<hr/>
+		<div style="visibility:hidden"
+			 class="inst" on-finish-render ng-repeat="inst in insts">
+			<div class="inst_desc">{{inst.desc}}</div>
+		</div>
+		<hr/>
 	</md-content>
 
 </section>

@@ -1,3 +1,12 @@
+.svgC{
+    margin: 0 auto;
+    width: 100%;
+    max-height:450px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
 .content-spec{
     top:120px;
     position: relative;
@@ -6,4 +15,86 @@
 .inst_desc{
     font-family: font1;
     font-size: 16px
+}
+
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 70px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 48px;
+    }
+
+}
+
+@media only screen and (max-width: 568px) {
+    .intro {
+        padding: 0 10px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    h1 {
+        font-size: 28px;
+    }
+    h1::after {
+        height: 4px;
+    }
+}
+
+
+
+
+
+.wrapper {
+    width: 100%;
+    max-height:450px;
+    /* whatever width you want */
+    display: inline-block;
+    position: relative;
+}
+.wrapper:after {
+    text-align: center;
+    padding-top: 56.25%;
+    /* 16:9 ratio */
+    display: block;
+    content: '';
+}
+.main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* fill parent */
+    background: rgba(255, 48, 11, 0.10);
+    margin: 0 auto;
+
+    height: 100%;
+    padding: 10px 0;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 10px;
+    /* let's see it! */
+}
+
+.work_subtitle{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.work_card{
+    margin: 10px;
+    height:150px;
+    background-color: #2196f3;
 }

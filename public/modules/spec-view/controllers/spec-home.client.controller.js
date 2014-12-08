@@ -40,7 +40,7 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 		};
 
 
-		var logoSvg = Snap('.svg1-logo');
+		var logoSvg = Snap('.main');
 		Snap.load("modules/animation/img/svg/Urimium-Logo1.svg", function(data) {
 			logoSvg.append(data);
 			logoSvg.attr({
@@ -49,10 +49,9 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 			});
 
 			var afterLogo = function(){
-				console.log('dddd');
 				$scope.afterLogo = true;
 			}
-			var wholeSvg=$('.svg1-logo');
+			var wholeSvg=$('.main');
 			var logo_r = $('#logo-r');
 			var logo_u = $('#logo-u');
 			var logoTimeLine = new TimelineMax({paused:true, onComplete: afterLogo});
