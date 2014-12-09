@@ -89,7 +89,8 @@
 }
 
 .work_subtitle{
-    font-size: 35px;
+    line-height: 45px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -97,4 +98,8 @@
     margin: 10px;
     height:150px;
     background-color: #2196f3;
+}
+
+.work_detail{
+    margin-left:20px;
 }

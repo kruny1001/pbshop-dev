@@ -6,21 +6,12 @@
 			<md-button class="md-raised md-warn" ng-click="replay()">
 				Resume
 			</md-button>
-			<md-button class="md-raised md-warn" ng-click="replay()">
-				Resume
-			</md-button>
-			<md-button class="md-raised md-warn" ng-click="replay()">
-				Resume
-			</md-button>
-			<md-button class="md-raised md-warn" ng-click="replay()">
-				Resume
-			</md-button>
 		</div>
 	</md-toolbar>
 	<md-content class="md-padding " style="height: 100%; overflow:hidden">
 
 		<div style="font-size:45px; line-height: 120px; font-family: font1; text-align: center">
-			Kevin S<span style="font-size:15px">beta</span>
+			Kevin S<span style="font-size:15px"> beta</span>
 		</div>
 
 		<div style="font-size:25px; line-height: 35px; font-family: font1; text-align: center">
@@ -45,10 +36,44 @@
 		</div>
 		<hr/>
 
+		<div layout="row" layout-sm="column" layout-margin>
+			<md-button flex class="md-raised md-warn" ng-click="replay()">
+				Education Timeline
+			</md-button>
+			<md-button flex class="md-raised md-warn" ng-click="replay()">
+				Carrier Timeline
+			</md-button>
+			<md-button flex class="md-raised md-warn" ng-click="replay()">
+				Personal Project
+			</md-button>
+		</div>
 		<div class="work_subtitle">Literature</div>
+			<div class="work_detail"> JavaScript </div>
+			<div class="work_detail"> C </div>
 
+		<div class="work_subtitle">Education Timeline</div>
+			<div class="work_detail"> Bachelor of Engineering Computer Science </div>
+			<div class="work_detail"> Master of Engineering Computer Science </div>
+
+		<div class="work_subtitle">Carrier Timeline</div>
+			<div class="work_detail"> Web Developer Intern </div>
+			<div class="work_detail"> Research Assistant </div>
+			<div class="work_detail"> Teaching Assistant </div>
+			<div class="work_detail"> Software Engineer </div>
+
+		<div class="work_subtitle"> Project Timeline</div>
+			<div class="work_detail">CMS-Drupal</div>
+			<div class="work_detail">MEAN Stack Project</div>
+			<div class="work_detail">Smart Grid Web Application</div>
 
 		<div class="work_subtitle">Tech Scope</div>
+			<div class="work_detail">JavaScript</div>
+			<div class="work_detail">CSS</div>
+			<div class="work_detail">NodeJS</div>
+			<div class="work_detail">Express</div>
+			<div class="work_detail">AngularJS</div>
+			<div class="work_detail">MongoDB</div>
+
 		<div layout="row" layout-sm="column">
 			<md-whiteframe flex class="md-whiteframe-z2 work_card" layout layout-align="center center">
 				<span>SVG Animation</span>
@@ -90,6 +115,9 @@
 			<div class="inst_desc">{{inst.desc}}</div>
 		</div>
 		<hr/>
+
+
+
 	</md-content>
 
 </section>

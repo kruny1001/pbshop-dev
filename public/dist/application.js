@@ -4597,9 +4597,9 @@ angular.module('spec-view').config(['$stateProvider',
 angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout',
 	function($scope, $timeout) {
 		$scope.insts = [
-			{desc:'1. 최대한 얼굴을 깨끗이 씻는다' },
-			{desc:'2. 세안 후, 보습제를 바르지 않은 채로 두 시간을 보낸다' },
-			{desc:'3. 두 시간 후 기름종이로 얼굴을 3~4초 동안 10회 이상 꾹 눌러준다' }]
+			{desc:'1. SVG Animation provides more efficient presenting information' },
+			{desc:'2. Like AngularJS framework, it makes possible to build an wep app with Modular based development' },
+			{desc:'3. Cloud virtual service gives unlimited scalability' }]
 
 		var timeLineInst = new TimelineMax({delay:0.75});
 
@@ -4651,9 +4651,7 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 			var logoTimeLine = new TimelineMax({paused:true, onComplete: afterLogo});
 			logoTimeLine.set([logo_r, logo_u],{opacity:0})
 				.fromTo([logo_r, logo_u], 2.5, {x:0, scale:0.5, opacity:0},{scale:1, opacity:1})
-				.to(logo_r, 1.5, {rotation: 360, transformOrigin: "50% 50%", ease:Circ.easeOut})
-			//.to(wholeSvg, 1.5, {top: 20, scale: 0.2})
-			//.to(wholeSvg, 1.5, {top: 20, scale: 0.2, display: 'none', ease:Circ.easeOut });
+				.fromTo(logo_r, 1.5, {scale:0.7, ease:Circ.easeOut},{scale:1, rotation: 360, transformOrigin: "50% 50%"});
 
 			$scope.replay = function(){
 				logoTimeLine.restart();
@@ -4662,8 +4660,8 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 			$timeout(function(){
 				logoTimeLine.play();
 			},1000);
-
 		});
+
 	}
 ]);
 
