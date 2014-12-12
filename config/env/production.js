@@ -42,6 +42,8 @@ module.exports = {
 				'public/lib/tremulajs/libs/jsBezier-0.6.js',
 				'public/lib/tremulajs/dist/Tremula.js',
 
+				'public/lib/Snap.svg/dist/snap.svg-min.js',
+
 			]
 		},
 		css: 'public/dist/application.min.css',
