@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/spec-view/data/d1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/spec-view/services/project1.client.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/spec-view/directives/src.client.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gsap.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/spec-view/img/ironman.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/all.js" afterPath="$PROJECT_DIR$/config/env/all.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pbshop-dev.iml" afterPath="$PROJECT_DIR$/.idea/pbshop-dev.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/production.js" afterPath="$PROJECT_DIR$/config/env/production.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/spec-view/services/project1.client.service.js" afterPath="$PROJECT_DIR$/public/modules/spec-view/services/project1.client.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/spec-view/controllers/spec-home.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/spec-view/controllers/spec-home.client.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/spec-view/views/spec-home.client.view.html" afterPath="$PROJECT_DIR$/public/modules/spec-view/views/spec-home.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -37,21 +38,20 @@
     <favorites_list name="pbshop-dev" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6887805">
+    <splitter split-orientation="horizontal" split-proportion="0.55474937">
       <split-first>
         <leaf>
           <file leaf-file-name="spec-home.client.view.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/modules/spec-view/views/spec-home.client.view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="47.392857" vertical-offset="1707" max-vertical-offset="2356">
-                  <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+                <state vertical-scroll-proportion="-6.107143" vertical-offset="323" max-vertical-offset="2394">
+                  <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
                   <folding>
                     <element signature="n#style#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#span#0;n#div#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#1;n#md-content#0;n#section#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#2;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#md-icon#0;n#md-button#0;n#div#0;n#div#1;n#div#2;n#md-content#0;n#section#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#2;n#div#2;n#md-content#0;n#section#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#29;n#md-content#0;n#section#0;n#!!top" expanded="true" />
                   </folding>
@@ -62,8 +62,48 @@
           <file leaf-file-name="project1.client.service.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/modules/spec-view/services/project1.client.service.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.87738854" vertical-offset="684" max-vertical-offset="1596">
-                  <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+                <state vertical-scroll-proportion="0.74622357" vertical-offset="437" max-vertical-offset="1615">
+                  <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="all.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/env/all.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1577">
+                  <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="72" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="development.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/env/development.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="production.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/env/production.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1805">
+                  <caret line="35" column="67" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ironman.svg" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/modules/spec-view/img/ironman.svg">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1634">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -76,11 +116,21 @@
           <file leaf-file-name="spec-home.client.controller.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/modules/spec-view/controllers/spec-home.client.controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.21178344" vertical-offset="1710" max-vertical-offset="3325">
-                  <caret line="101" column="59" selection-start-line="99" selection-start-column="20" selection-end-line="101" selection-end-column="59" />
+                <state vertical-scroll-proportion="2.410876" vertical-offset="2793" max-vertical-offset="3800">
+                  <caret line="193" column="70" selection-start-line="193" selection-start-column="70" selection-end-line="193" selection-end-column="70" />
                   <folding>
                     <element signature="e#3135#3238#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/config.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -89,7 +139,7 @@
             <entry file="file://$PROJECT_DIR$/public/modules/spec-view/img/e-timeline1.svg">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3610">
-                  <caret line="2" column="33" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="33" />
+                  <caret line="2" column="33" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -105,7 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/modules/user-interface/snapPlugin.js" />
         <option value="$USER_HOME$/Desktop/box.svg" />
         <option value="$PROJECT_DIR$/public/modules/core/css/core.css" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/img/backSvg.svg" />
@@ -148,12 +197,13 @@
         <option value="$PROJECT_DIR$/public/modules/spec-view/img/j1.svg" />
         <option value="$PROJECT_DIR$/public/modules/spec-view/img/e-timeline1.svg" />
         <option value="$PROJECT_DIR$/app/views/layout.server.view.html" />
-        <option value="$PROJECT_DIR$/config/env/all.js" />
-        <option value="$PROJECT_DIR$/config/env/production.js" />
         <option value="$PROJECT_DIR$/public/modules/spec-view/directives/src.client.directive.js" />
         <option value="$PROJECT_DIR$/public/modules/spec-view/data/d1.json" />
-        <option value="$PROJECT_DIR$/public/modules/spec-view/views/spec-home.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/animation/controllers/j1.client.controller.js" />
+        <option value="$USER_HOME$/Desktop/화장품/timeline/ironman.svg" />
+        <option value="$PROJECT_DIR$/public/modules/spec-view/views/spec-home.client.view.html" />
+        <option value="$PROJECT_DIR$/config/env/all.js" />
+        <option value="$PROJECT_DIR$/config/env/production.js" />
         <option value="$PROJECT_DIR$/public/modules/spec-view/controllers/spec-home.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/spec-view/services/project1.client.service.js" />
       </list>
@@ -262,9 +312,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="6" />
-    <option name="width" value="1548" />
+    <option name="x" value="393" />
+    <option name="width" value="1453" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -309,112 +358,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec-view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec-view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec-view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -427,6 +370,9 @@
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="options.lastSelected" value="JavaScript.Libraries" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -437,11 +383,11 @@
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\audio" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\spec-view\img" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\animation\img\svg" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\img\mcmu" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\lib" />
       <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\img" />
-      <recent name="C:\Users\Kevin\Documents\GitHub\pbshop-exp\pbshop-dev\public\modules\user-interface\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -634,20 +580,27 @@
       <option name="project" value="LOCAL" />
       <updated>1418378021417</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="SVG Interface Improvement">
+      <created>1418524937853</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1418524937853</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="6" width="1548" height="1080" extended-state="0" />
+    <frame x="393" y="0" width="1453" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2751896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5965293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3217768" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20043337" sideWeight="0.4992658" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3231788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1844523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -657,7 +610,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28221512" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -725,27 +677,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/modules/animation/css/Tremula.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-          <caret line="0" column="62" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/libs/require.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/src/Tremula.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="4180">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/lib/tremulajs/src/Projections.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.285714" vertical-offset="9210" max-vertical-offset="11856">
@@ -1021,20 +952,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/production.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1786">
-          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0579065" vertical-offset="570" max-vertical-offset="1558">
-          <caret line="55" column="55" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/spec-view/data/d1.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5122549" vertical-offset="0" max-vertical-offset="418">
@@ -1058,35 +975,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/spec-view/img/ironman.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1634">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/spec-view/img/e-timeline1.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3610">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="33" />
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="643">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/spec-view/views/spec-home.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="47.392857" vertical-offset="1707" max-vertical-offset="2356">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        <state vertical-scroll-proportion="-6.107143" vertical-offset="323" max-vertical-offset="2394">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-icon#0;n#md-button#0;n#div#0;n#div#1;n#div#2;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#2;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#29;n#md-content#0;n#section#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1577">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/development.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/production.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1805">
+          <caret line="35" column="67" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/spec-view/controllers/spec-home.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21178344" vertical-offset="1710" max-vertical-offset="3325">
-          <caret line="101" column="59" selection-start-line="99" selection-start-column="20" selection-end-line="101" selection-end-column="59" />
+        <state vertical-scroll-proportion="2.410876" vertical-offset="2793" max-vertical-offset="3800">
+          <caret line="193" column="70" selection-start-line="193" selection-start-column="70" selection-end-line="193" selection-end-column="70" />
           <folding>
             <element signature="e#3135#3238#0" expanded="false" />
           </folding>
@@ -1095,8 +1051,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/spec-view/services/project1.client.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87738854" vertical-offset="684" max-vertical-offset="1596">
-          <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.74622357" vertical-offset="437" max-vertical-offset="1615">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>

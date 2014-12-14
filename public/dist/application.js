@@ -4695,12 +4695,8 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 					var d2 = educationSvg.select('#time2');
 					var d3 = educationSvg.select('#desc3');
 
-					// Mark Center of Element Object
-					Snap('#e-timeline').rect(d1.getBBox().cx, d1.getBBox().cy, 3, 3);
-					Snap('#e-timeline').rect(d2.getBBox().cx, d2.getBBox().cy, 3, 3);
-					Snap('#e-timeline').rect(d3.getBBox().cx, d3.getBBox().cy, 3, 3);
-
 					Project1.getTransfromOrigin(d1, 'e-timeline');
+
 					/*
 					var transFromResult1 = Project1.getTransfromOrigin(d1, 'e-timeline');
 					var transFromResult2 = Project1.getTransfromOrigin(d2, 'e-timeline');
@@ -4747,6 +4743,35 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 						.to('#entireGroup', 1, {scale:1, delay:3});
 					*/
 					$timeout(function(){
+						var educationSvg = Snap('#e-timeline');
+						Snap.load("modules/spec-view/img/ironman.svg", function(data){
+							var group = data.select('#IornMan');
+
+
+							//group.attr({transform:'top, right'});
+							if($("#IornMan").length == 0)
+								group.appendTo(educationSvg);
+
+							var transformString = "t" + (Snap('#e-timeline').getBBox().width - Snap('#IornMan').getBBox().width).toString() +","+ (Snap('#e-timeline').getBBox().height - Snap('#IornMan').getBBox().height).toString();
+							/*
+							console.log(Snap('#e-timeline').getBBox().width);
+							console.log(Snap('#IornMan').getBBox().width);
+							console.log(Snap('#e-timeline').getBBox().height);
+							console.log(Snap('#IornMan').getBBox().height);
+							console.log(transformString);
+							*/
+
+							/*
+							group.attr({
+								transform: transformString
+							})
+							*/
+
+
+							TweenLite.to("#IornMan", .5, {css:{transform:"translateX("+ (Snap('#e-timeline').getBBox().width - Snap('#IornMan').getBBox().width).toString() +"px)"+
+							" translateY("+ (Snap('#e-timeline').getBBox().height - Snap('#IornMan').getBBox().height).toString()+"px)"}, ease:Power2.easeOut});
+						});
+
 						Snap('#d1t').attr({'ng-bind':'schoolInfo[0].name'});
 						$compile(angular.element('#d1t'))($scope);
 
@@ -4760,7 +4785,7 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 		};
 
 		$scope.clickCarrierTimeLine = function(){
-			console.log('Carrier Time Line');
+			TweenLite.to("#IornMan", .5, {css:{transform:"translateX(-5px) translateY(10px)"}, ease:Power2.easeOut});
 		};
 
 	}
@@ -4826,8 +4851,9 @@ angular.module('spec-view').factory('Project1', [
 
 				var next = function() {
 					console.log('next');
-					TweenMax.from('#time1', 2, {rotation: 360, transformOrigin: "50% 50%"});
+					TweenMax.from('#time1', 2, {rotation: 360, transformOrigin: "50% 50%", repeat:-1});
 
+					console.log(getTxTy(d2,2).toTransformString());
 					Snap('#entireGroup').animate({
 						//transform: new Snap.Matrix().scale(s).translate(tx, ty).toTransformString();
 						transform: getTxTy(d2,2).toTransformString()
@@ -4836,7 +4862,7 @@ angular.module('spec-view').factory('Project1', [
 
 				var next2 = function() {
 					console.log('next');
-					TweenMax.from('#time1', 2, {rotation: 360, transformOrigin: "50% 50%"});
+					TweenMax.from('#time2', 2, {rotation: 360, transformOrigin: "50% 50%", repeat:-1});
 
 					Snap('#entireGroup').animate({
 						//transform: new Snap.Matrix().scale(s).translate(tx, ty).toTransformString();
@@ -4846,7 +4872,7 @@ angular.module('spec-view').factory('Project1', [
 
 				var next3 = function() {
 					console.log('next');
-					TweenMax.from('#time1', 2, {rotation: 360, transformOrigin: "50% 50%"});
+					TweenMax.from('#time3', 2, {rotation: 360, transformOrigin: "50% 50%", repeat:-1});
 
 
 					Snap('#entireGroup').animate({
