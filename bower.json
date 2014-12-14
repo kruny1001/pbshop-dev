@@ -17,7 +17,7 @@
     "underscore": "latest",
     "gsap": "latest",
     "bootstrap-sass-official": "latest",
-    "lodash": "latest",
+    "lodash": "~2.4.1",
     "angular-smart-table": "*",
     "firebase": "latest",
     "angular-material": "latest",

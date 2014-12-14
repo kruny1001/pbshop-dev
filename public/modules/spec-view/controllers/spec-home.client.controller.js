@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout','$compile',
-	function($scope, $timeout, $compile) {
+angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout','$compile','Project1',
+	function($scope, $timeout, $compile, Project1) {
 		$scope.schoolInfo = [
 			{name: "SDSU", year:"2008-2010", major:"Computer Science", position:'Undergrad'},
 			{name: "TTU", year:"2011-2012", major:"Computer Science", position:'Researcher'},
@@ -83,46 +83,75 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 				console.log('Education Time Line');
 				var educationSvg = Snap('.main');
 				Snap.load("modules/spec-view/img/e-timeline1.svg", function(data){
+
 					var previousSvg = logoSvg.select('#logo-ur');
 					previousSvg.attr({display:"none"});
 
-					//$("#e-timeline").attr("class", "svgC");
-
-					if($("#e-timeline").length == 0){
-
+					if($("#e-timeline").length == 0)
 						educationSvg.append(data);
-					}
 
 					educationSvg.attr({
 						width: window.innerWidth,
 						height: window.innerHeight,
 						viewBox: "0 0 960 560"
 					});
+
 					//var educationSvg = Snap('.main');
 					var d1 = educationSvg.select('#desc1');
-					var d2 = educationSvg.select('#desc2');
+					var d2 = educationSvg.select('#time2');
 					var d3 = educationSvg.select('#desc3');
 
-					console.log(d2.getBBox().cx + " " +d2.getBBox().cy);
-					/*
 					// Mark Center of Element Object
 					Snap('#e-timeline').rect(d1.getBBox().cx, d1.getBBox().cy, 3, 3);
 					Snap('#e-timeline').rect(d2.getBBox().cx, d2.getBBox().cy, 3, 3);
 					Snap('#e-timeline').rect(d3.getBBox().cx, d3.getBBox().cy, 3, 3);
+
+					Project1.getTransfromOrigin(d1, 'e-timeline');
+					/*
+					var transFromResult1 = Project1.getTransfromOrigin(d1, 'e-timeline');
+					var transFromResult2 = Project1.getTransfromOrigin(d2, 'e-timeline');
+					var transFromResult3 = Project1.getTransfromOrigin(d3, 'e-timeline');
+
+					Snap('#e-timeline').rect(transFromResult1.x, transFromResult1.y, 5, 5).attr({fill:'blue'});
+					Snap('#e-timeline').rect(transFromResult2.x, transFromResult2.y, 5, 5);
+					Snap('#e-timeline').rect(transFromResult3.x, transFromResult3.y, 5, 5);
+
+					console.log('new TransformOrigin')
+					console.log(transFromResult1.x +' '+transFromResult1.y);
+					console.log(transFromResult2.x +' '+transFromResult2.y);
+					console.log(transFromResult3.x +' '+transFromResult3.y);
+
+					var d1Transfrom1 = d1.getBBox().cx + " " +d1.getBBox().cy;
+					var d1Transfrom2 = d2.getBBox().cx + " " +d2.getBBox().cy;
+					var d1Transfrom3 = d3.getBBox().cx + " " +d3.getBBox().cy;
+					console.log('old TransformOrigin')
+					console.log(d1Transfrom1);
+					console.log(d1Transfrom2);
+					console.log(d1Transfrom3);
 					*/
 
-					var d1Transfrom1 = d1.getBBox().x + " " +d1.getBBox().y;
-					var d1Transfrom2 = d2.getBBox().x + " " +d2.getBBox().y;
-					var d1Transfrom3 = d3.getBBox().x + " " +d3.getBBox().y;
-					var effectTimeLine = new TimelineMax();
-					effectTimeLine
-						.to('#entireGroup', 1, {scale:1.5, transformOrigin:d1Transfrom1})
-						.to('#entireGroup', 1, {scale:1, delay:3})
-						.to('#entireGroup', 1, {scale:1.5, transformOrigin:d1Transfrom2})
-						.to('#entireGroup', 1, {scale:1, delay:3})
-						.to('#entireGroup', 1, {scale:1.5, transformOrigin:d1Transfrom3})
-						.to('#entireGroup', 1, {scale:1, delay:3});
+					/*
+					var newTransform = new Snap.Matrix().translate(transFromResult2.x,transFromResult2.y);
+					newTransform.scale(1.3,1.3,transFromResult2.containerW / 2 -transFromResult2.x,transFromResult2.containerH / 2 -transFromResult2.y);
 
+					Snap('#entireGroup').animate({
+						//transform: new Snap.Matrix().scale(s).translate(tx, ty).toTransformString();
+						transform: newTransform.toTransformString()
+					}, 1400, mina.backout);
+					*/
+					/*
+					var effectTimeLine = new TimelineMax();
+
+					effectTimeLine
+						.to('#entireGroup', 1, {scale:1.9, transformOrigin:transFromResult1.x +' '+transFromResult1})
+						.to('#entireGroup', 1, {scale:1, delay:3})
+						.to('#entireGroup', 1, {scale:1.9, transformOrigin:transFromResult2.x +' '+transFromResult2.y})
+						.to('#entireGroup', 1, {scale:1, delay:3})
+						.to('#entireGroup', 1, {scale:1.9, transformOrigin:transFromResult3.x +' '+transFromResult3.y})
+						.to('#entireGroup', 1, {scale:1, delay:3})
+						.to('#entireGroup', 1, {scale:1.9, transformOrigin:"bottom left"})
+						.to('#entireGroup', 1, {scale:1, delay:3});
+					*/
 					$timeout(function(){
 						Snap('#d1t').attr({'ng-bind':'schoolInfo[0].name'});
 						$compile(angular.element('#d1t'))($scope);

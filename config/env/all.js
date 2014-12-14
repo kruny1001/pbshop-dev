@@ -53,6 +53,7 @@ module.exports = {
 				'public/lib/tremulajs/dist/Tremula.js',
 
 				'public/lib/Snap.svg/dist/snap.svg-min.js',
+				'public/lib/lodash/dist/lodash.min.js',
 			]
 		},
 		css: [
