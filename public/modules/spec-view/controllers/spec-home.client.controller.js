@@ -101,7 +101,7 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 					var d2 = educationSvg.select('#time2');
 					var d3 = educationSvg.select('#desc3');
 
-					Project1.getTransfromOrigin(d1, 'e-timeline');
+					Project1.getTransfromOrigin('e-timeline');
 
 					/*
 					var transFromResult1 = Project1.getTransfromOrigin(d1, 'e-timeline');
@@ -149,34 +149,7 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 						.to('#entireGroup', 1, {scale:1, delay:3});
 					*/
 					$timeout(function(){
-						var educationSvg = Snap('#e-timeline');
-						Snap.load("modules/spec-view/img/ironman.svg", function(data){
-							var group = data.select('#IornMan');
 
-
-							//group.attr({transform:'top, right'});
-							if($("#IornMan").length == 0)
-								group.appendTo(educationSvg);
-
-							var transformString = "t" + (Snap('#e-timeline').getBBox().width - Snap('#IornMan').getBBox().width).toString() +","+ (Snap('#e-timeline').getBBox().height - Snap('#IornMan').getBBox().height).toString();
-							/*
-							console.log(Snap('#e-timeline').getBBox().width);
-							console.log(Snap('#IornMan').getBBox().width);
-							console.log(Snap('#e-timeline').getBBox().height);
-							console.log(Snap('#IornMan').getBBox().height);
-							console.log(transformString);
-							*/
-
-							/*
-							group.attr({
-								transform: transformString
-							})
-							*/
-
-
-							TweenLite.to("#IornMan", .5, {css:{transform:"translateX("+ (Snap('#e-timeline').getBBox().width - Snap('#IornMan').getBBox().width).toString() +"px)"+
-							" translateY("+ (Snap('#e-timeline').getBBox().height - Snap('#IornMan').getBBox().height).toString()+"px)"}, ease:Power2.easeOut});
-						});
 
 						Snap('#d1t').attr({'ng-bind':'schoolInfo[0].name'});
 						$compile(angular.element('#d1t'))($scope);
@@ -186,12 +159,39 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 
 						Snap('#d3t').attr({'ng-bind':'schoolInfo[2].name'});
 						$compile(angular.element('#d3t'))($scope);
-					},10);
+					},100);
 			})
 		};
 
 		$scope.clickCarrierTimeLine = function(){
-			TweenLite.to("#IornMan", .5, {css:{transform:"translateX(-5px) translateY(10px)"}, ease:Power2.easeOut});
+			//TweenLite.to("#IornMan", .5, {css:{transform:"translateX(-5px) translateY(10px)"}, ease:Power2.easeOut});
+			var educationSvg = Snap('#e-timeline');
+			Snap.load("modules/spec-view/img/ironman.svg", function(data){
+				var group = data.select('#IornMan');
+
+
+
+				//group.attr({transform:'top, right'});
+				if($("#IornMan").length == 0)
+					group.appendTo(educationSvg);
+
+				//var transformString = "t" + (Snap('#e-timeline').getBBox().width - Snap('#IornMan').getBBox().width).toString() +","+ (Snap('#e-timeline').getBBox().height - Snap('#IornMan').getBBox().height).toString();
+				/*
+				 console.log(Snap('#e-timeline').getBBox().width);
+				 console.log(Snap('#IornMan').getBBox().width);
+				 console.log(Snap('#e-timeline').getBBox().height);
+				 console.log(Snap('#IornMan').getBBox().height);
+				 console.log(transformString);
+				 */
+
+				/*
+				 group.attr({
+				 transform: transformString
+				 })
+				 */
+				TweenLite.to("#IornMan", .5, {css:{transform:"translateX("+ (Snap('#e-timeline').getBBox().width - Snap('#IornMan').getBBox().width).toString() +"px)"+
+				" translateY("+ (Snap('#e-timeline').getBBox().height - Snap('#IornMan').getBBox().height).toString()+"px)"}, ease:Power2.easeOut});
+			});
 		};
 
 	}

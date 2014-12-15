@@ -3,7 +3,7 @@
 angular.module('spec-view').factory('Project1', [
 	function() {
 		return {
-			getTransfromOrigin: function(SnapElem, container) {
+			getTransfromOrigin: function(container) {
 				var d1 = Snap('#desc1');
 				var d2 = Snap('#desc2');
 				var d3 = Snap('#desc3');
@@ -38,7 +38,8 @@ angular.module('spec-view').factory('Project1', [
 
 				var next = function() {
 					console.log('next');
-					TweenMax.from('#time1', 2, {rotation: 360, transformOrigin: "50% 50%", repeat:-1});
+
+
 
 					console.log(getTxTy(d2,2).toTransformString());
 					Snap('#entireGroup').animate({
@@ -49,7 +50,7 @@ angular.module('spec-view').factory('Project1', [
 
 				var next2 = function() {
 					console.log('next');
-					TweenMax.from('#time2', 2, {rotation: 360, transformOrigin: "50% 50%", repeat:-1});
+					//TweenMax.from('#time2', 2, {rotation: 360, transformOrigin: "50% 50%", repeat:-1});
 
 					Snap('#entireGroup').animate({
 						//transform: new Snap.Matrix().scale(s).translate(tx, ty).toTransformString();
@@ -59,7 +60,9 @@ angular.module('spec-view').factory('Project1', [
 
 				var next3 = function() {
 					console.log('next');
-					TweenMax.from('#time3', 2, {rotation: 360, transformOrigin: "50% 50%", repeat:-1});
+					//TweenMax.from('#time3', 2, {rotation: 360, transformOrigin: "50% 50%", repeat:-1});
+
+
 
 
 					Snap('#entireGroup').animate({
@@ -67,6 +70,8 @@ angular.module('spec-view').factory('Project1', [
 						transform: 'S1'
 					}, 1400, mina.backout);
 				};
+
+
 
 
 				Snap('#entireGroup').animate({
