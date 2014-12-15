@@ -33,6 +33,7 @@ module.exports = {
 				'public/lib/gsap/src/minified/TweenMax.min.js',
 				'public/lib/gsap/src/minified/utils/Draggable.min.js',
 				'public/lib/gsap/src/minified/plugins/TextPlugin.min.js',
+				'public/lib/gsap/src/minified/plugins/ScrollToPlugin.min.js',
 				'public/lib/gsap/src/minified/plugins/CSSPlugin.min.js',
 				//'public/lib/3rd/SplitText.min.js',
 
