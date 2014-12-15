@@ -1,5 +1,23 @@
 <section data-ng-controller="SpecHomeController">
-	<md-toolbar md-theme="indigo">
+	<div id='frontLogo' ng-style="style()" style="background-color: palevioletred" resize>
+		<div style="position: absolute; top:23px; right: 10px;">
+		window.height: {{windowHeight}}<br />
+		window.width: {{windowWidth}}<br />
+		</div>
+
+		<div id="buttonsTool" style="width: 100%; text-align: center; visibility:hidden">
+			<div>
+			<md-button id="controlButton1" class="md-fab md-warn utilButton"   aria-label="Time" ng-click="clickEducationTimeLine()">
+				<md-icon icon="modules/spec-view/img/ic_undo_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+			</md-button>
+			<md-button id="controlButton1" class="md-fab md-warn utilButton"   aria-label="Time" ng-click="toMain()">
+				<md-icon icon="modules/spec-view/img/ic_undo_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+			</md-button>
+			</div>
+		</div>
+	</div>
+
+	<md-toolbar id="specToolbar" md-theme="indigo">
 		<div class="md-toolbar-tools">
 			<span class="md-flex"><b>Kevin S</b></span>
 			<span flex></span>

@@ -7,6 +7,14 @@
     -webkit-box-sizing:border-box;
 }
 
+.svgLogoFront{
+    position: absolute;
+}
+
+.utilButton{
+    position: relative;
+}
+
 .content-spec{
     top:120px;
     position: relative;

@@ -30,17 +30,10 @@ angular.module('spec-view').factory('Project1', [
 
 					var newTransform = new Snap.Matrix().translate(tx,ty);
 					newTransform.scale(s,s,containerW / 2 -tx, containerH / 2 -ty);
-
 					return newTransform;
 				}
-
-
-
 				var next = function() {
 					console.log('next');
-
-
-
 					console.log(getTxTy(d2,2).toTransformString());
 					Snap('#entireGroup').animate({
 						//transform: new Snap.Matrix().scale(s).translate(tx, ty).toTransformString();
@@ -60,20 +53,11 @@ angular.module('spec-view').factory('Project1', [
 
 				var next3 = function() {
 					console.log('next');
-					//TweenMax.from('#time3', 2, {rotation: 360, transformOrigin: "50% 50%", repeat:-1});
-
-
-
-
 					Snap('#entireGroup').animate({
 						//transform: new Snap.Matrix().scale(s).translate(tx, ty).toTransformString();
 						transform: 'S1'
 					}, 1400, mina.backout);
 				};
-
-
-
-
 				Snap('#entireGroup').animate({
 					//transform: new Snap.Matrix().scale(s).translate(tx, ty).toTransformString();
 					transform: getTxTy(d1, 2).toTransformString()

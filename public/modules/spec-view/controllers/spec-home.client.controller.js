@@ -1,7 +1,28 @@
 'use strict';
 
-angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout','$compile','Project1',
+angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout','$compile','Project1',//'eduTimeline',
 	function($scope, $timeout, $compile, Project1) {
+
+		angular.element(document).ready(function () {
+			$timeout(function(){
+				console.log('ready and + 1');
+				TweenLite.to(window, 0.1, {scrollTo:{y:0, ease:Power2.easeInOut}});
+				TweenMax.fromTo('#buttonsTool', 1, {y:-50,autoAlpha:0},{y:10,autoAlpha:1});
+			},1500)
+		});
+
+		var removefrontLogo = function(){
+			console.log('dd');
+			TweenLite.set("#frontLogo", {autoAlpha: 0, display:'none'});
+			TweenLite.set(window,{scrollTo:{y:0, x:0}});
+			//TweenLite.to($('#mydiv') , 0.3, {autoAlpha: 1, display:'block'});
+		}
+
+		$scope.toMain = function(){
+			//specToolbar
+			TweenLite.to(window, 1.5, {scrollTo:{y:$('#specToolbar').position().top, ease:Power2.easeInOut}, onComplete:removefrontLogo});
+		}
+
 		$scope.schoolInfo = [
 			{name: "SDSU", year:"2008-2010", major:"Computer Science", position:'Undergrad'},
 			{name: "TTU", year:"2011-2012", major:"Computer Science", position:'Researcher'},
@@ -52,6 +73,7 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 		};
 
 		var logoSvg = Snap('.main');
+		//var logoSvg = Snap('#frontLogo');
 			Snap.load("modules/animation/img/svg/Urimium-Logo1.svg", function(data) {
 				logoSvg.append(data);
 				logoSvg.attr({
@@ -81,7 +103,8 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 
 			$scope.clickEducationTimeLine = function(){
 				console.log('Education Time Line');
-				var educationSvg = Snap('.main');
+				//var educationSvg = Snap('.main');
+				var educationSvg = Snap('#frontLogo');
 				Snap.load("modules/spec-view/img/e-timeline1.svg", function(data){
 
 					var previousSvg = logoSvg.select('#logo-ur');
@@ -149,8 +172,6 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 						.to('#entireGroup', 1, {scale:1, delay:3});
 					*/
 					$timeout(function(){
-
-
 						Snap('#d1t').attr({'ng-bind':'schoolInfo[0].name'});
 						$compile(angular.element('#d1t'))($scope);
 
@@ -159,6 +180,8 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 
 						Snap('#d3t').attr({'ng-bind':'schoolInfo[2].name'});
 						$compile(angular.element('#d3t'))($scope);
+
+						Snap()
 					},100);
 			})
 		};
