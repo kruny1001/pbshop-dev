@@ -4586,6 +4586,10 @@ angular.module('spec-view').config(['$stateProvider',
 	function($stateProvider) {
 		// Spec view state routing
 		$stateProvider.
+		state('jarvis', {
+			url: '/jarvis',
+			templateUrl: 'modules/spec-view/views/jarvis.client.view.html'
+		}).
 		state('spec-home', {
 			url: '/spec-home',
 			templateUrl: 'modules/spec-view/views/spec-home.client.view.html'
@@ -4594,14 +4598,54 @@ angular.module('spec-view').config(['$stateProvider',
 ]);
 'use strict';
 
+angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
+	function($scope, $timeout) {
+		// Jarvis controller logic
+		// ...
+		$scope.selectN = false;
+		TweenMax.staggerFrom(".frontNavBtn", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
+
+
+		$(".frontNavBtn").click(function(){
+			var navClickEvent = new TimelineMax();
+			navClickEvent.staggerTo(".frontNavBtn", 0.5, {opacity:0, y:-100, ease:Back.easeIn}, 0.1)
+				.staggerTo(".frontNav", 0.5, {opacity:0, y:-100, ease:Back.easeIn}, 0.1);
+		});
+
+		var logoSvg = Snap('#testC');
+		Snap.load("modules/spec-view/img/ja1.svg", function(data) {
+		//Snap.load("http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/500px-NewTux.svg.png", function(data) {
+
+			//logoSvg.append(data);
+
+			logoSvg.attr({ "viewBox": "0 0 300 300", fill:"white"});
+
+			var group = data.select('g');
+			logoSvg.append(group);
+
+			//group.attr({transform:'top, right'});
+			//if($("#jarvisMain").length == 0)
+			//	group.appendTo(logoSvg);
+
+			$timeout(function(){
+				TweenMax.to('#OutterArc', 20, {rotation:360, repeat:-1, transformOrigin :"50% 50%"});
+			},1500);
+		});
+	}
+]);
+
+'use strict';
+
 angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout','$compile','Project1',//'eduTimeline',
 	function($scope, $timeout, $compile, Project1) {
 
+		// when page is load
 		angular.element(document).ready(function () {
 			$timeout(function(){
 				console.log('ready and + 1');
 				TweenLite.to(window, 0.1, {scrollTo:{y:0, ease:Power2.easeInOut}});
 				TweenMax.fromTo('#buttonsTool', 1, {y:-50,autoAlpha:0},{y:10,autoAlpha:1});
+				TweenMax.fromTo('#frontLogo_Title', 1, {x:-300},{x:0, display:'block'});
 			},1500)
 		});
 
@@ -4785,9 +4829,6 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 			var educationSvg = Snap('#e-timeline');
 			Snap.load("modules/spec-view/img/ironman.svg", function(data){
 				var group = data.select('#IornMan');
-
-
-
 				//group.attr({transform:'top, right'});
 				if($("#IornMan").length == 0)
 					group.appendTo(educationSvg);

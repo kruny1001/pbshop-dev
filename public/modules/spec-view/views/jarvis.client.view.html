@@ -1,0 +1,39 @@
+<section data-ng-controller="JarvisController">
+	<div id='frontLogo' ng-style="style()" style="background-color: palevioletred" resize>
+		<div style="position: absolute; top:23px; right: 10px;">
+			window.height: {{windowHeight}}<br />
+			window.width: {{windowWidth}}<br />
+		</div>
+
+		<div id="buttonsTool" style="width: 100%; text-align: center; visibility:hidden">
+			<div>
+				<md-button id="controlButton1" class="md-fab md-warn utilButton"   aria-label="Time" ng-click="clickEducationTimeLine()">
+					<md-icon icon="modules/spec-view/img/ic_undo_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+				</md-button>
+				<md-button id="controlButton1" class="md-fab md-warn utilButton"   aria-label="Time" ng-click="toMain()">
+					<md-icon icon="modules/spec-view/img/ic_undo_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+				</md-button>
+			</div>
+		</div>
+
+		<div id="nSelect" class="frontNav">
+			<div class="jarvis_title">Select Your Gender</div>
+			<div class="frontNavBtn">Woman</div>
+			<div class="frontNavBtn">Man</div>
+		</div>
+
+		<div></div>
+
+		<div id="nSelect2" class="frontNav">
+			<div class="jarvis_title">Jarvis</div>
+			<svg id="testC"></svg>
+		</div>
+
+
+	</div>
+	<div style="background-color: #00bcd4">
+
+	</div>
+
+
+</section>

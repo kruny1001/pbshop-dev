@@ -3,11 +3,13 @@
 angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout','$compile','Project1',//'eduTimeline',
 	function($scope, $timeout, $compile, Project1) {
 
+		// when page is load
 		angular.element(document).ready(function () {
 			$timeout(function(){
 				console.log('ready and + 1');
 				TweenLite.to(window, 0.1, {scrollTo:{y:0, ease:Power2.easeInOut}});
 				TweenMax.fromTo('#buttonsTool', 1, {y:-50,autoAlpha:0},{y:10,autoAlpha:1});
+				TweenMax.fromTo('#frontLogo_Title', 1, {x:-300},{x:0, display:'block'});
 			},1500)
 		});
 
@@ -191,9 +193,6 @@ angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout
 			var educationSvg = Snap('#e-timeline');
 			Snap.load("modules/spec-view/img/ironman.svg", function(data){
 				var group = data.select('#IornMan');
-
-
-
 				//group.attr({transform:'top, right'});
 				if($("#IornMan").length == 0)
 					group.appendTo(educationSvg);

@@ -1,0 +1,54 @@
+.frontLogo_title{
+    display:none;
+    position: fixed;
+    top: 50%;
+    left: 5%;
+}
+
+.frontLogo_Title_Main{
+    font-family: "bebas-neue", sans-serif;
+    font-size:45px;
+    color: #ffffff;
+}
+
+.frontLogo_Title_Sub{
+    font-family: "bebas-neue", sans-serif;
+    font-size:25px;
+    color: #ffffff;
+}
+
+.frontWide_view{
+    position: absolute;
+    height:100%;
+    width:3500px;
+}
+
+.frontNav{
+    position:relative;
+    max-width:350px;
+    margin:auto;
+    overflow:hidden;
+    background-color: #db4e54;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.frontNavBtn{
+    color:white;
+    border: none;
+    text-align:center;
+    cursor: pointer;
+    padding: 25px 80px;
+    margin: 25px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    background-color: rgb(64, 169, 245);
+    border: solid 1px transparent;
+    border-radius:10px;
+    -webkit-font-smoothing: antialiased;
+}
+
+

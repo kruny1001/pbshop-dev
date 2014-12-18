@@ -44,6 +44,7 @@ module.exports = {
 				'public/lib/gsap/src/uncompressed/utils/Draggable.js',
 				'public/lib/gsap/src/uncompressed/plugins/TextPlugin.js',
 				'public/lib/gsap/src/uncompressed/plugins/ScrollToPlugin.js',
+				'public/lib/gsap/src/uncompressed/plugins/ColorPropsPlugin.js',
 				'public/lib/gsap/src/uncompressed/plugins/CSSPlugin.js',
 				//'public/lib/3rd/SplitText.min.js'
 
