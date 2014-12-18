@@ -2,6 +2,58 @@
 
 angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 	function($scope, $timeout) {
+
+		$scope.stories = [
+			{
+				num: '#1',
+				name: '부산 -> 시모노세키'
+			},
+			{
+				num: '#2',
+				name: '시모노세키 -> 호후'
+			},
+			{
+				num: '#3',
+				name: '부산 -> 시모노세키'
+			},
+			{
+				num: '#4',
+				name: '시모노세키 -> 호후'
+			},
+			{
+				num: '#5',
+				name: '부산 -> 시모노세키'
+			},
+			{
+				num: '#6',
+				name: '시모노세키 -> 호후'
+			},
+			{
+				num: '#7',
+				name: '부산 -> 시모노세키'
+			},
+			{
+				num: '#8',
+				name: '시모노세키 -> 호후'
+			},
+			{
+				num: '#9',
+				name: '부산 -> 시모노세키'
+			},
+			{
+				num: '#10',
+				name: '시모노세키 -> 호후'
+			},
+			{
+				num: '#11',
+				name: '부산 -> 시모노세키'
+			},
+			{
+				num: '#12',
+				name: '시모노세키 -> 호후'
+			}
+		]
+
 		// Jarvis controller logic
 		// ...
 		$scope.selectN = false;
@@ -11,7 +63,12 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 		$(".frontNavBtn").click(function(){
 			var navClickEvent = new TimelineMax();
 			navClickEvent.staggerTo(".frontNavBtn", 0.5, {opacity:0, y:-100, ease:Back.easeIn}, 0.1)
-				.staggerTo(".frontNav", 0.5, {opacity:0, y:-100, ease:Back.easeIn}, 0.1);
+				.staggerTo("#nSelect", 0.5, {opacity:0, y:-100, display:'none', ease:Back.easeIn}, 0.1)
+				.to("#nSelect", 1, {display:'none'},0.1)
+				.to("#nSelect2", 1, {width:'90%', height:'90%', maxWidth:'100%', ease:Back.easeIn}, 0.1)
+				.to("#testC", 3, {width:'0%', height:'0%'})
+				.to("#storyMenu", 3, {display:'-webkit-inline-box'});
+
 		});
 
 		var logoSvg = Snap('#testC');
