@@ -1,11 +1,36 @@
 .jarvis_title{
     text-align: center;
-    font-family: "bebas-neue", sans-serif;
+    font-family: "font1";
     font-size:25px;
     color: #ffffff;
 }
 
 .storyBtn{
+    color:white;
+    border: none;
+    text-align:center;
+    cursor: pointer;
+    padding: 15px 20px;
+    margin: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    background-color: rgb(64, 169, 245);
+    border: solid 1px transparent;
+    border-radius:10px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.storyDescription{
+    color:white;
+    font-family: font1;
+    font-size: 25px;
+    bottom:90%;
+}
+
+.storyStart{
     color:white;
     border: none;
     text-align:center;

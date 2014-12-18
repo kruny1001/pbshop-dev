@@ -52,7 +52,9 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 				num: '#12',
 				name: '시모노세키 -> 호후'
 			}
-		]
+		];
+
+		$scope.targetDescription = $scope.stories[0];
 
 		// Jarvis controller logic
 		// ...
@@ -90,5 +92,25 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 				TweenMax.to('#OutterArc', 20, {rotation:360, repeat:-1, transformOrigin :"50% 50%"});
 			},1500);
 		});
+
+		$scope.mapLoad = function(){
+			var mapSvg = Snap('#progressStory');
+			Snap.load("modules/spec-view/img/japanmap.svg", function(data){
+				mapSvg.attr({ "viewBox": "0 0 300 300", fill:"white"});
+				var group = data.select('g');
+				mapSvg.append(group);
+
+				$timeout(function(){
+					TweenMax.to('#progressStory', 0.5, {display:'block'});
+					TweenMax.to('#progressStoryName', 0.5, {display:'block'});
+
+				},1500);
+			})
+		}
+
+		$scope.startStory = function(){
+
+		}
+
 	}
 ]);
