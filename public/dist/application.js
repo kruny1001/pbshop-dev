@@ -4614,7 +4614,9 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 			backSvg.append(data);
 
 			$timeout(function() {
-				TweenMax.to('#backGroundSvg', 25, {scrollTo: {y: 0, x: 2000}, ease: Power2.easeInOut})
+				TweenMax.to('#backGroundSvg', 25, {scrollTo: {y: 0, x: 2000}, ease: Power2.easeInOut});
+				$scope.selectN = false;
+				TweenMax.staggerFrom(".frontNavBtn", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
 			},1500);
 		});
 
@@ -4683,8 +4685,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 		$scope.crntPage = 1;
 		// Jarvis controller logic
 		// ...
-		$scope.selectN = false;
-		TweenMax.staggerFrom(".frontNavBtn", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
+
 
 
 		$(".frontNavBtn").click(function(){
