@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="2562px" height="500px" viewBox="0 0 2562 500" enable-background="new 0 0 2562 500" xml:space="preserve">
+<rect id="sky" x="-0.3" fill="#3FA9F5" width="2562.3" height="421"/>
+<circle id="sun" fill="#FBB03B" cx="154.5" cy="185.5" r="64.5"/>
+<path id="mountine" fill="#8CC63F" stroke="#7AC943" stroke-miterlimit="10" d="M-0.3,346.3c70-60,196.1-212.1,310.1-178.1
+	s157.1,150.9,277.1,159.9s336-16,428-86s260-141,335-138s248,382,332,272s233-313,341-205s400.8,272,468.8,225s69.8-122,69.8-122
+	v226.5H0L-0.3,346.3z"/>
+<rect x="2436" y="369" fill="none" width="110" height="74"/>
+<text transform="matrix(1 0 0 1 2436 377.5195)" font-family="'MyriadPro-Regular'" font-size="12">End</text>
+<rect x="1199.8" y="354.8" fill="none" width="141" height="54"/>
+<text transform="matrix(1 0 0 1 1199.811 363.3486)" font-family="'MyriadPro-Regular'" font-size="12">Middle</text>
+</svg>

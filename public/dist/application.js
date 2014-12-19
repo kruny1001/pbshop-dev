@@ -4601,59 +4601,86 @@ angular.module('spec-view').config(['$stateProvider',
 angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 	function($scope, $timeout) {
 
+
+
+
+		var backSvg = Snap('#backGroundSvg');
+		Snap.load("modules/spec-view/img/traval/background.svg", function(data) {
+			//Snap.load("http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/500px-NewTux.svg.png", function(data) {
+
+			//logoSvg.append(data);
+
+			//backSvg.attr({"viewBox": "0 0 300 300", fill: "white"});
+			backSvg.append(data);
+
+			$timeout(function() {
+				TweenMax.to('#backGroundSvg', 25, {scrollTo: {y: 0, x: 2000}, ease: Power2.easeInOut})
+			},1500);
+		});
+
+
 		$scope.stories = [
 			{
-				num: '#1',
-				name: '부산 -> 시모노세키'
+				num: '1',
+				name: '부산 -> 시모노세키',
+				totalNum: 3
 			},
 			{
-				num: '#2',
+				num: '2',
 				name: '시모노세키 -> 호후'
 			},
 			{
-				num: '#3',
+				num: '3',
 				name: '부산 -> 시모노세키'
 			},
 			{
-				num: '#4',
+				num: '4',
 				name: '시모노세키 -> 호후'
 			},
 			{
-				num: '#5',
+				num: '5',
 				name: '부산 -> 시모노세키'
 			},
 			{
-				num: '#6',
+				num: '6',
 				name: '시모노세키 -> 호후'
 			},
 			{
-				num: '#7',
+				num: '7',
 				name: '부산 -> 시모노세키'
 			},
 			{
-				num: '#8',
+				num: '8',
 				name: '시모노세키 -> 호후'
 			},
 			{
-				num: '#9',
+				num: '9',
 				name: '부산 -> 시모노세키'
 			},
 			{
-				num: '#10',
+				num: '10',
 				name: '시모노세키 -> 호후'
 			},
 			{
-				num: '#11',
+				num: '11',
 				name: '부산 -> 시모노세키'
 			},
 			{
-				num: '#12',
+				num: '12',
+				name: '시모노세키 -> 호후'
+			},
+			{
+				num: '13',
+				name: '부산 -> 시모노세키'
+			},
+			{
+				num: '14',
 				name: '시모노세키 -> 호후'
 			}
 		];
 
 		$scope.targetDescription = $scope.stories[0];
-
+		$scope.crntPage = 1;
 		// Jarvis controller logic
 		// ...
 		$scope.selectN = false;
@@ -4706,7 +4733,54 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 			})
 		}
 
-		$scope.startStory = function(){
+		$scope.startStory = function(storyNum){
+			//display:none MapSVG
+
+			TweenLite.to('#progressStory', 0.5, {opacity:0, display:'none'});
+
+			var startSvg = 's'+storyNum;
+
+			var mainSvg = Snap('#mainStory');
+			Snap.load("modules/spec-view/img/traval/"+startSvg+"s1.svg", function(data){
+				mainSvg.attr({ "viewBox": "0 0 300 300", fill:"white"});
+				var group = data.select('g');
+				mainSvg.append(group);
+
+				$timeout(function(){
+
+					TweenLite.set('#mainStory', {display:'block'});
+					TweenLite.set('#progressStoryName',{display:'none'});
+					TweenLite.to('#storyController', 0.5, {display:'block'});
+
+				},1500);
+			})
+
+			console.log(storyNum);
+		}
+
+		$scope.nextStory = function(current, totalNum){
+
+			var next = $scope.crntPage++;
+
+
+			if(next <= totalNum) {
+				console.log(next + 'is executed');
+				var mainSvg = Snap('#mainStory');
+				Snap.load("modules/spec-view/img/traval/s1s"+next+".svg", function(data){
+					mainSvg.select('g').remove();
+					mainSvg.attr({ "viewBox": "0 0 300 300", fill:"white"});
+					var group = data.select('g');
+					mainSvg.append(group);
+
+					$timeout(function(){
+						TweenLite.to('#progressStory', 0.5, {opacity:0, display:'none'});
+						TweenLite.to('#mainStory', 0.5, {display:'block'});
+						TweenLite.set('#progressStoryName',{display:'none'});
+					},1500);
+				})
+			} else{
+				//finish Season
+			}
 
 		}
 
