@@ -4688,17 +4688,18 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 
 
 
-		$(".frontNavBtn").click(function(){
+		$scope.start = function(){
 			var navClickEvent = new TimelineMax();
 			navClickEvent.staggerTo(".frontNavBtn", 0.5, {opacity:0, y:-100, ease:Back.easeIn}, 0.1)
 				.staggerTo("#nSelect", 0.5, {opacity:0, y:-100, display:'none', ease:Back.easeIn}, 0.1)
-				.to("#nSelect", 1, {display:'none'},0.1)
-				.to("#nSelect2", 1, {width:'90%', height:'90%', maxWidth:'100%', ease:Back.easeIn}, 0.1)
-				.to("#testC", 3, {width:'0%', height:'0%'})
+				.to("#nSelect", 1, {display:'none'},1)
+				.to("#nSelect2", 1, {width:'90%', maxWidth:'900px', display:'block', ease:Back.easeIn}, 0.1)
+				//.to("#testC", 3, {width:'0%', height:'0%'})
 				.to("#storyMenu", 3, {display:'-webkit-inline-box'});
 
-		});
+		};
 
+		/*
 		var logoSvg = Snap('#testC');
 		Snap.load("modules/spec-view/img/ja1.svg", function(data) {
 		//Snap.load("http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/500px-NewTux.svg.png", function(data) {
@@ -4718,6 +4719,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 				TweenMax.to('#OutterArc', 20, {rotation:360, repeat:-1, transformOrigin :"50% 50%"});
 			},1500);
 		});
+		*/
 
 		$scope.mapLoad = function(){
 			var mapSvg = Snap('#progressStory');
@@ -4762,7 +4764,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 		$scope.nextStory = function(current, totalNum){
 
 			var next = $scope.crntPage++;
-
+			console.log(next);
 
 			if(next <= totalNum) {
 				console.log(next + 'is executed');
