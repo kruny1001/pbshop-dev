@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+    path { fill:none; stroke:white; }
+
+    .bg { fill: #446;}
+    .inner {
+        stroke-width: 38px;
+        stroke: #ffc;
+        opacity: .1;}
+    #inner2 {
+        stroke-width:20px;
+    }
+    .mid {
+        stroke-width: 3px;
+        stroke: #ccf;
+        opacity: .2;}
+    .outer {
+        stroke-width: 1.5px;
+        stroke: #fff;
+        stroke-linecap: round;
+        opacity:.3;}
+</style>
+<body>
+
+<svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="650px" height="650px" viewBox="0 0 650 650" enable-background="new 0 0 650 650" xml:space="preserve">
+  <rect class="bg" id="bg" x="0" y="0" width="650" height="650"/>
+  <path class="inner" id="inner1" d="M425,260v165c0,110-90,200-200,200l0,0c-110,0-200-90-200-200l0,0c0-110,90-200,200-200h300c55,0,100-45,100-100l0,0c0-55-45-100-100-100l0,0c-55,0-100,45-100,100v65"/>
+  <path class="inner" id="inner2" d="M425,260v165c0,110-90,200-200,200l0,0c-110,0-200-90-200-200l0,0c0-110,90-200,200-200h300c55,0,100-45,100-100l0,0c0-55-45-100-100-100l0,0c-55,0-100,45-100,100v65"/>
+  <path class="mid" id="mid1" d="M435,260v165c0,55.872-21.904,108.547-61.679,148.321S280.872,635,225,635s-108.547-21.904-148.321-61.679C36.905,533.547,15,480.872,15,425s21.905-108.547,61.679-148.321C116.453,236.905,169.128,215,225,215h300c49.626,0,90-40.374,90-90s-40.374-90-90-90s-90,40.374-90,90v65"/>
+  <path class="mid" id="mid2" d="M415,190v-65c0-60.654,49.346-110,110-110s110,49.346,110,110s-49.346,110-110,110H225c-104.766,0-190,85.234-190,190c0,104.767,85.234,190,190,190c104.767,0,190-85.233,190-190V260"/>
+  <path class="outer" id="outer2" d="M405,190v-65C405,58.832,458.832,5,525,5s120,53.832,120,120s-53.832,120-120,120H225c-99.252,0-180,80.748-180,180c0,99.252,80.748,180,180,180c99.252,0,180-80.748,180-180V260"/>
+  <path class="outer" id="outer1" d="M445,260v165c0,58.543-22.944,113.729-64.607,155.393S283.543,645,225,645s-113.729-22.944-155.392-64.607S5,483.543,5,425s22.945-113.729,64.608-155.392S166.457,205,225,205h300c44.112,0,80-35.888,80-80s-35.888-80-80-80s-80,35.888-80,80v65"/>
+</svg>
+
+<script src="http://snapsvg.io/assets/js/snap.svg-min.js"></script>
+<script>
+
+    var paper = Snap('#svg');
+
+    var f = paper.filter(Snap.filter.blur(3, 3));
+
+    var inner = paper.selectAll(".inner"),
+            mid   = paper.selectAll('.mid')
+    outer = paper.selectAll(".outer");
+
+    inner.forEach(function(el,i) {
+        el
+                .attr('stroke-dasharray', Math.random()*30+',50,'+Math.random()*20+',10,5')
+
+        if (!i) el.attr({ filter: f })
+
+        conveyor(el,Math.random()*1);
+    });
+
+    mid.forEach(function(el,i) {
+        el.attr('stroke-dasharray', 20+','+Math.random()*50+',20,10,5,5,5');
+
+        // -i is just to reverse one of the paths
+        // bc illustrator exported one of the stroke paths flip-flopped from the other
+        // in terms of direction
+
+        conveyor(el,Math.random()*4,-i);
+    })
+
+    outer.forEach(function(el,i) {
+        el.attr('stroke-dasharray', '.1 , 5')
+        conveyor(el,Math.random()*1,-i);
+    })
+
+
+    //speed in path-lengths per minute
+    function conveyor(el,speed,reversed) {
+        var speed    = speed    || 1,
+                reversed = reversed || 0;
+
+        var len = reversed ? -el.getTotalLength() : el.getTotalLength(),
+                dur = 60000/speed;
+
+        el.attr('stroke-dashoffset',0);
+
+        el.animate({ 'stroke-dashoffset': len }, dur );
+
+        setTimeout(function() { conveyor(el, reversed); }, dur);
+    }
+
+
+</script>

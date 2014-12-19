@@ -6,8 +6,10 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 
 
 
+
+
 		var backSvg = Snap('#backGroundSvg');
-		Snap.load("modules/spec-view/img/traval/background.svg", function(data) {
+		Snap.load("modules/spec-view/img/traval/background2.svg", function(data) {
 			//Snap.load("http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/500px-NewTux.svg.png", function(data) {
 
 			//logoSvg.append(data);
@@ -16,7 +18,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 			backSvg.append(data);
 
 			$timeout(function() {
-				TweenMax.to('#backGroundSvg', 25, {scrollTo: {y: 0, x: 2000}, ease: Power2.easeInOut});
+				//TweenMax.to('#backGroundSvg', 25, {scrollTo: {y: 0, x: 2000}, ease: Power2.easeInOut});
 				$scope.selectN = false;
 				TweenMax.staggerFrom(".frontNavBtn", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
 			},1500);
