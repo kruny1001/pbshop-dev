@@ -18,7 +18,30 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 			backSvg.append(data);
 
 			$timeout(function() {
-				//TweenMax.to('#backGroundSvg', 25, {scrollTo: {y: 0, x: 2000}, ease: Power2.easeInOut});
+				TweenMax.to('#backGroundSvg', 55, {scrollTo: {y: 0, x: 2000}, ease: Power2.easeInOut});
+
+
+				var path = Snap('#bikePath');
+				var bike = Snap('#bike');
+				var len = path.getTotalLength();
+
+				/*
+				var bikeg = backSvg.group(bike);
+				bikeg.attr( {
+					id: "bikeG",
+					fill: "red",
+					transform:"t100 100"
+				});
+				*/
+				Snap.animate(0, len, function( value ) {
+					var movePoint = path.getPointAtLength( value );
+					var feetTrans = 't' + parseInt(movePoint.x) + ',' + parseInt( movePoint.y-365) + 'r' + (movePoint.alpha-180);
+					//feetTrans2 = 't' + parseInt(movePoint.x - 270) + ',' + parseInt( movePoint.y - 1770) + 'r' + (movePoint.alpha - 90);
+					bike.transform(feetTrans);
+					//feetG.transform(feetTrans2);
+					//console.log(movePoint.alpha);
+				}, 55000,mina.easeinout);
+
 				$scope.selectN = false;
 				TweenMax.staggerFrom(".frontNavBtn", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
 			},1500);
