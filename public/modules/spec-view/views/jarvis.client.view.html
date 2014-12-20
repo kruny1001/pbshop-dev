@@ -1,62 +1,27 @@
 <section data-ng-controller="JarvisController">
 	<div id='frontLogo' ng-style="style()" style="background-color: palevioletred" resize>
 
-		<div style="position: absolute; top:23px; right: 10px;">
+		<div style="position: absolute; top:23px; right: 10px; z-index:999;">
 			window.height: {{windowHeight}}<br />
 			window.width: {{windowWidth}}<br />
 		</div>
 
-		<!--
-		<div id="buttonsTool" style="width: 100%; text-align: center; visibility:hidden">
-			<div>
-				<md-button id="controlButton1" class="md-fab md-warn utilButton"   aria-label="Time" ng-click="clickEducationTimeLine()">
-					<md-icon icon="modules/spec-view/img/ic_undo_24px.svg" style="width: 24px; height: 24px;"></md-icon>
-				</md-button>
-				<md-button id="controlButton1" class="md-fab md-warn utilButton"   aria-label="Time" ng-click="toMain()">
-					<md-icon icon="modules/spec-view/img/ic_undo_24px.svg" style="width: 24px; height: 24px;"></md-icon>
-				</md-button>
-			</div>
-		</div>
-		-->
+		<div style="color:white">SVG Animation Portfolio</div>
 
 		<div id="nSelect" class="frontNav">
 			<div class="jarvis_title">오타쿠의 1155km 일본 자전거 여행기</div>
 			<div class="frontNavBtn" ng-click="start()">START</div>
 		</div>
 
-		<div id="backGroundSvg" style="position:relative; overflow-x:hidden;">
-
-		</div>
-
-		<div id="nSelect2" class="frontNav" style="display:none">
-			<div class="jarvis_title">Jarvis</div>
-
-			<div id="storyMenu" style="display:none;">
-				<div  ng-repeat="story in stories">
-					<div class="storyBtn"  ng-click="mapLoad()">{{story.num}}</div>
-				</div>
-			</div>
-
-			<svg id="progressStory" style="display:none; max-width:620px;"></svg>
-			<svg id="mainStory" style="display:none; max-width:620px;"></svg>
-			<div id="progressStoryName" style="display:none;" class="storyDescription">
-				{{targetDescription.name}}
-				<div class="storyStart" ng-click="startStory(targetDescription.num)">시작하기</div>
-			</div>
-			<div id="storyController" style="display:none;">
-				<div class="storyStart" ng-click="nextStory(crntPage, targetDescription.totalNum)">Next</div>
-			</div>
-		</div>
+		<div id="backGroundSvg" style="position:relative; overflow-x:hidden;"></div>
 
 		<!--
-		<div id="nSelect2" class="frontNav">
-			<div class="jarvis_title">Jarvis</div>
-			<svg id="testC"></svg>
+		<div id="nSelect2" class="frontNav" style="display:none">
+			<div class="storyCloseBtn">X</div>
+			<div class="jarvis_title">여행기 날짜별</div>
 
-			<div id="storyMenu" style="display:none;">
-				<div  ng-repeat="story in stories">
-					<div class="storyBtn"  ng-click="mapLoad()">{{story.num}}</div>
-				</div>
+			<div id="storyMenu" class="storyMenu" style="display:none;">
+				<span ng-repeat="story in stories" class="storyBtn"  ng-click="mapLoad()">{{story.num}}</span>
 			</div>
 
 			<svg id="progressStory" style="display:none; max-width:620px;"></svg>
@@ -65,11 +30,17 @@
 				{{targetDescription.name}}
 				<div class="storyStart" ng-click="startStory(targetDescription.num)">시작하기</div>
 			</div>
+
 			<div id="storyController" style="display:none;">
 				<div class="storyStart" ng-click="nextStory(crntPage, targetDescription.totalNum)">Next</div>
 			</div>
 		</div>
 		-->
+
+		<div id="smallMap" style="width:280px; height:62px; margin-left:20px">
+			<div class="jarvis_title">오타쿠의 1155km 일본 자전거 여행기</div>
+			<svg id="smallMapSvg" width="100%" height="100%"  viewBox="0 0 2562 500" preserveAspectRatio="xMaxYmax"></svg>
+		</div>
 
 	</div>
 </section>

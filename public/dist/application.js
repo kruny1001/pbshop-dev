@@ -4600,13 +4600,27 @@ angular.module('spec-view').config(['$stateProvider',
 
 angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 	function($scope, $timeout) {
-
-
-
-
-
-
+		//Load Background SVG
 		var backSvg = Snap('#backGroundSvg');
+		var s = Snap("#smallMapSvg");
+		var g = s.group();
+		var l = Snap.load("modules/spec-view/img/traval/background2.svg", onSVGLoaded ) ;
+		var customPart = Snap.load("modules/spec-view/img/traval/customPart.svg", onSVGLoaded2 )
+
+		function onSVGLoaded2(data){
+			var group = data.select("g");
+			group.drag();
+			g.append(group);
+
+		}
+
+		function onSVGLoaded( data ){
+			//s.attr({id:'smallMap'});
+			//s.append( data );
+			g.append(data);
+			//TweenLite.set('#smallMapSvg', {scale:'0.5'});
+		}
+
 		Snap.load("modules/spec-view/img/traval/background2.svg", function(data) {
 			//Snap.load("http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/500px-NewTux.svg.png", function(data) {
 
@@ -4618,19 +4632,10 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 			$timeout(function() {
 				TweenMax.to('#backGroundSvg', 55, {scrollTo: {y: 0, x: 2000}, ease: Power2.easeInOut});
 
-
 				var path = Snap('#bikePath');
 				var bike = Snap('#bike');
 				var len = path.getTotalLength();
 
-				/*
-				var bikeg = backSvg.group(bike);
-				bikeg.attr( {
-					id: "bikeG",
-					fill: "red",
-					transform:"t100 100"
-				});
-				*/
 				Snap.animate(0, len, function( value ) {
 					var movePoint = path.getPointAtLength( value );
 					var feetTrans = 't' + parseInt(movePoint.x) + ',' + parseInt( movePoint.y-365) + 'r' + (movePoint.alpha-180);
@@ -4708,43 +4713,17 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 
 		$scope.targetDescription = $scope.stories[0];
 		$scope.crntPage = 1;
-		// Jarvis controller logic
-		// ...
-
-
 
 		$scope.start = function(){
 			var navClickEvent = new TimelineMax();
-			navClickEvent.staggerTo(".frontNavBtn", 0.5, {opacity:0, y:-100, ease:Back.easeIn}, 0.1)
-				.staggerTo("#nSelect", 0.5, {opacity:0, y:-100, display:'none', ease:Back.easeIn}, 0.1)
-				.to("#nSelect", 1, {display:'none'},1)
-				.to("#nSelect2", 1, {width:'90%', maxWidth:'900px', display:'block', ease:Back.easeIn}, 0.1)
+			navClickEvent
+				.staggerTo(".frontNavBtn", 0.5, {opacity:0, y:-100, ease:Back.easeIn})
+				.staggerTo("#nSelect", 0.5, {opacity:0, y:-100, display:'none', ease:Back.easeIn}, "+=0.5")
+				.to("#nSelect", 1, {display:'none'},1, "+=1")
+				.to("#nSelect2", 1, {width:'90%', maxWidth:'900px', height:'90%', display:'block'}, "+=0.5")
 				//.to("#testC", 3, {width:'0%', height:'0%'})
-				.to("#storyMenu", 3, {display:'-webkit-inline-box'});
-
+				.to("#storyMenu", 1, {display:'-webkit-inline-box'});
 		};
-
-		/*
-		var logoSvg = Snap('#testC');
-		Snap.load("modules/spec-view/img/ja1.svg", function(data) {
-		//Snap.load("http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/500px-NewTux.svg.png", function(data) {
-
-			//logoSvg.append(data);
-
-			logoSvg.attr({ "viewBox": "0 0 300 300", fill:"white"});
-
-			var group = data.select('g');
-			logoSvg.append(group);
-
-			//group.attr({transform:'top, right'});
-			//if($("#jarvisMain").length == 0)
-			//	group.appendTo(logoSvg);
-
-			$timeout(function(){
-				TweenMax.to('#OutterArc', 20, {rotation:360, repeat:-1, transformOrigin :"50% 50%"});
-			},1500);
-		});
-		*/
 
 		$scope.mapLoad = function(){
 			var mapSvg = Snap('#progressStory');
@@ -4754,6 +4733,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 				mapSvg.append(group);
 
 				$timeout(function(){
+
 					TweenMax.to('#progressStory', 0.5, {display:'block'});
 					TweenMax.to('#progressStoryName', 0.5, {display:'block'});
 
@@ -4764,7 +4744,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 		$scope.startStory = function(storyNum){
 			//display:none MapSVG
 
-			TweenLite.to('#progressStory', 0.5, {opacity:0, display:'none'});
+			TweenLite.to('#progressStory', 0.5, {scale:0.5, x:'80%', position:'absolute'});
 
 			var startSvg = 's'+storyNum;
 
@@ -4775,7 +4755,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 				mainSvg.append(group);
 
 				$timeout(function(){
-
+					//$scope.crntPage++;
 					TweenLite.set('#mainStory', {display:'block'});
 					TweenLite.set('#progressStoryName',{display:'none'});
 					TweenLite.to('#storyController', 0.5, {display:'block'});
@@ -4788,7 +4768,8 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 
 		$scope.nextStory = function(current, totalNum){
 
-			var next = $scope.crntPage++;
+			var next = $scope.crntPage+1;
+
 			console.log(next);
 
 			if(next <= totalNum) {
@@ -4801,6 +4782,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 					mainSvg.append(group);
 
 					$timeout(function(){
+						$scope.crntPage++;
 						TweenLite.to('#progressStory', 0.5, {opacity:0, display:'none'});
 						TweenLite.to('#mainStory', 0.5, {display:'block'});
 						TweenLite.set('#progressStoryName',{display:'none'});
