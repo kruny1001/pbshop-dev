@@ -9,6 +9,10 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 		var l = Snap.load("modules/spec-view/img/traval/background2.svg", onSVGLoaded ) ;
 		var customPart = Snap.load("modules/spec-view/img/traval/customPart.svg", onSVGLoaded2 )
 
+		$scope.position = {};
+
+		$scope.addedObject = [];
+
 		function onSVGLoaded2(data){
 			var group = data.select("g");
 			group.drag();
@@ -23,16 +27,70 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 			//TweenLite.set('#smallMapSvg', {scale:'0.5'});
 		}
 
+		$scope.addPin = function(parentID, position){
+			var parentSvg = Snap('#'+parentID);
+			var pin = Snap.load("modules/spec-view/img/traval/pin.svg", function(data){
+				var group = data.select("g");
+
+				var t = new Snap.Matrix();
+				t.translate(position.x-150, position.y-150);
+				group.transform(t);
+				group.attr({id:position.id, cursor: 'pointer'});
+				var move = function(dx,dy) {
+					this.attr({
+						transform: this.data('origTransform') + (this.data('origTransform') ? "T" : "t") + [dx, dy]
+					});
+				}
+				var start = function() {
+					this.data('origTransform', this.transform().local );
+				}
+				var stop = function() {
+					console.log('finished dragging');
+					console.log(this);
+				}
+				group.drag(move, start, stop);
+				parentSvg.group().append(group);
+				$scope.addedObject.push(group.node.id);
+				$scope.$apply();
+			});
+		}
+
+		$scope.addCirclePin = function(parentID, position){
+			var parentSvg = Snap('#'+parentID);
+			var pin = Snap.load("modules/spec-view/img/traval/circlePin.svg", function(data){
+				var group = data.select("g");
+				var t = new Snap.Matrix();
+				t.translate(position.x-150, position.y-150);
+				group.transform(t);
+				group.attr({id:position.id, cursor: 'pointer'});
+				var move = function(dx,dy) {
+					this.attr({
+						transform: this.data('origTransform') + (this.data('origTransform') ? "T" : "t") + [dx, dy]
+					});
+				}
+				var start = function() {
+					this.data('origTransform', this.transform().local );
+				}
+				var stop = function() {
+					console.log('finished dragging');
+					console.log(this);
+				}
+				group.drag(move, start, stop);
+				parentSvg.group().append(group);
+				$scope.addedObject.push(group.node.id);
+				$scope.$apply();
+			});
+		}
+
 		Snap.load("modules/spec-view/img/traval/background2.svg", function(data) {
-			//Snap.load("http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/500px-NewTux.svg.png", function(data) {
-
-			//logoSvg.append(data);
-
-			//backSvg.attr({"viewBox": "0 0 300 300", fill: "white"});
 			backSvg.append(data);
 
 			$timeout(function() {
 				TweenMax.to('#backGroundSvg', 55, {scrollTo: {y: 0, x: 2000}, ease: Power2.easeInOut});
+				var circlePinPosition = {x:98 , y:350, id:'circlePin1'};
+				var pinPosition = {x:98 , y:350, id:'pin1'};
+				$scope.addCirclePin('backGroundSvg', circlePinPosition);
+				$scope.addPin('backGroundSvg', pinPosition);
 
 				var path = Snap('#bikePath');
 				var bike = Snap('#bike');

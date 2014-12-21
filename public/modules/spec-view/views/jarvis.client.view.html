@@ -13,7 +13,9 @@
 			<div class="frontNavBtn" ng-click="start()">START</div>
 		</div>
 
-		<div id="backGroundSvg" style="position:relative; overflow-x:hidden;"></div>
+		<div id="backGroundSvgDiv" style="position:relative; overflow-x:hidden;">
+			<svg id="backGroundSvg" height="500px" viewBox="0 0 2562 500" preserveAspectRatio="xMaxYmax"></svg>
+		</div>
 
 		<!--
 		<div id="nSelect2" class="frontNav" style="display:none">
@@ -41,6 +43,36 @@
 			<div class="jarvis_title">오타쿠의 1155km 일본 자전거 여행기</div>
 			<svg id="smallMapSvg" width="100%" height="100%"  viewBox="0 0 2562 500" preserveAspectRatio="xMaxYmax"></svg>
 		</div>
+		<hr/>
 
+		<div class="jarvis_title">Object Controller</div>
+		<div style="display:block">
+			<div style="margin-left:10px; padding:10px; background-color:#faf2cc; border-radius: 10px; display:inline-block;">
+				<div class="jarvis_title" style="color:#ec971f">Circle Pin Object</div>
+				<div style="margin-left:10px; ">
+					<md-text-float label="ID" ng-model="position.id"> </md-text-float>
+					<md-text-float label="X" ng-model="position.x"> </md-text-float>
+					<md-text-float label="Y" ng-model="position.y" class="long"> </md-text-float>
+				</div>
+				<md-button class="md-raised md-primary" ng-click="addCirclePin('backGroundSvg', position)">Add Circle Pin</md-button>
+			</div>
+			<div style="margin-left:10px; padding:10px; background-color:#faf2cc; border-radius: 10px; display:inline-block;">
+				<div class="jarvis_title" style="color:#ec971f">Pin Object</div>
+				<div style="margin-left:10px; ">
+					<md-text-float label="ID" ng-model="position.id"> </md-text-float>
+					<md-text-float label="X" ng-model="position.x"> </md-text-float>
+					<md-text-float label="Y" ng-model="position.y" class="long"> </md-text-float>
+				</div>
+				<md-button class="md-raised md-primary" ng-click="addPin('backGroundSvg', position)">Add Pin</md-button>
+			</div>
+			<div style="margin-left:10px; padding:10px; background-color:#faf2cc; border-radius: 10px; display:inline-block;">
+				<div class="jarvis_title" style="color:#ec971f">Added Object</div>
+				<div style="margin-left:10px; ">
+					<div ng-repeat="a1 in addedObject">
+						{{a1}}
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
