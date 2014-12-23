@@ -34,6 +34,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 
 				var t = new Snap.Matrix();
 				t.translate(position.x-150, position.y-150);
+				t.scale(0.4);
 				group.transform(t);
 				group.attr({id:position.id, cursor: 'pointer'});
 				var move = function(dx,dy) {
@@ -61,6 +62,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 				var group = data.select("g");
 				var t = new Snap.Matrix();
 				t.translate(position.x-150, position.y-150);
+				t.scale(0.4);
 				group.transform(t);
 				group.attr({id:position.id, cursor: 'pointer'});
 				var move = function(dx,dy) {

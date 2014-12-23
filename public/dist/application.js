@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'mean';
-	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.bootstrap', 'ui.utils', 'ngMaterial', 'ng-context-menu'];
+	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.bootstrap', 'ui.utils', 'ngMaterial', 'ng-context-menu', 'uiGmapgoogle-maps'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
@@ -86,6 +86,11 @@ ApplicationConfiguration.registerModule('payments');
 
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('products');
+'use strict';
+
+// Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('sdsumap');
+
 'use strict';
 
 // Use application configuration module to register a new module
@@ -3255,6 +3260,40 @@ angular.module('products').factory('Products', ['$resource', function($resource)
 'use strict';
 
 //Setting up route
+angular.module('sdsumap').config(['$stateProvider','uiGmapGoogleMapApiProvider',
+	function($stateProvider,uiGmapGoogleMapApiProvider) {
+		// Sdsumap state routing
+		$stateProvider.
+		state('sdsumap-main', {
+			url: '/sdsumap-main',
+			templateUrl: 'modules/sdsumap/views/sdsumap-main.client.view.html'
+		});
+
+		uiGmapGoogleMapApiProvider.configure({
+			key: 'AIzaSyBEGA9BOSoo0DF69RNRh9MsMKDxaVlnT_U',
+			v: '3.17',
+			libraries: 'weather,geometry,visualization'
+		});
+	}
+]);
+
+'use strict';
+
+angular.module('sdsumap').controller('SdsumapmainController', ['$scope','uiGmapGoogleMapApi',
+	function($scope, uiGmapGoogleMapApi) {
+		// Sdsumap main controller logic
+		// ...
+		uiGmapGoogleMapApi.then(function(maps) {
+			console.log('Google Map is ready');
+		});
+		//44.3101729,-96.7831942,15z
+		$scope.map = { center: { latitude: 44.3101729, longitude: -96.7831942 }, zoom: 15 };
+	}
+]);
+
+'use strict';
+
+//Setting up route
 angular.module('seller-interface').config(['$stateProvider',
 	function($stateProvider) {
 		// Gdriveapps state routing
@@ -4632,6 +4671,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 
 				var t = new Snap.Matrix();
 				t.translate(position.x-150, position.y-150);
+				t.scale(0.4);
 				group.transform(t);
 				group.attr({id:position.id, cursor: 'pointer'});
 				var move = function(dx,dy) {
@@ -4659,6 +4699,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 				var group = data.select("g");
 				var t = new Snap.Matrix();
 				t.translate(position.x-150, position.y-150);
+				t.scale(0.4);
 				group.transform(t);
 				group.attr({id:position.id, cursor: 'pointer'});
 				var move = function(dx,dy) {
