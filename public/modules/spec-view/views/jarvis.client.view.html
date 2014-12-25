@@ -66,6 +66,15 @@
 				<md-button class="md-raised md-primary" ng-click="addPin('backGroundSvg', position)">Add Pin</md-button>
 			</div>
 			<div style="margin-left:10px; padding:10px; background-color:#faf2cc; border-radius: 10px; display:inline-block;">
+				<div class="jarvis_title" style="color:#ec971f">Pin Object</div>
+				<div style="margin-left:10px; ">
+					<md-text-float label="ID" ng-model="position.id"> </md-text-float>
+					<md-text-float label="X" ng-model="position.x"> </md-text-float>
+					<md-text-float label="Y" ng-model="position.y" class="long"> </md-text-float>
+				</div>
+				<md-button class="md-raised md-primary" ng-click="addAvatar('backGroundSvg', position)">Add Avatar</md-button>
+			</div>
+			<div style="margin-left:10px; padding:10px; background-color:#faf2cc; border-radius: 10px; display:inline-block;">
 				<div class="jarvis_title" style="color:#ec971f">Added Object</div>
 				<div style="margin-left:10px; ">
 					<div ng-repeat="a1 in addedObject">

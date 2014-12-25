@@ -1,0 +1,104 @@
+.tjHeader{
+    background-color:#3DB3B9;
+    color:white;
+
+}
+
+.tjHeader .tjBrand {
+
+}
+
+.tjHeader div{
+    margin: auto;
+    display:inline;
+    margin-right:10px;
+    margin-left:10px;
+}
+
+.tjTopSection{
+    position: relative;
+    padding-top: 160px;
+    /*padding-bottom: 160px;*/
+    background-color:#3DB3B9;
+    color:white
+}
+
+.tjTopSection h1{
+    font-size:5.2em;
+    line-height: 0.8;
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:0.5rem;
+}
+
+.tjTopSection p{
+    font-size:1.4em;
+    text-align:center;
+}
+
+.tjAbout{
+    padding: 15px 0px 100px 0px;
+    background-color:white;
+    color:#8C8C8C;
+}
+
+.tjAbout h1{
+    font-size:3.5em;
+    line-height: 0.8;
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:0.5rem;
+
+}
+
+.tjAbout p{
+    font-size:1.4em;
+    text-align:center;
+
+}
+
+.tjPrice{
+    padding: 15px 0px 100px 0px;
+    background-color:#DB6464;
+    color:white;
+}
+
+.tjPrice h1{
+    display:block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end:0px;
+    font-size:3.5em;
+    line-height: 0.8;
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:0.5rem;
+
+}
+
+.tjPrice p{
+    font-size:1.4em;
+    text-align:center;
+
+}
+
+.tjMap{
+    padding: 15px 0px 100px 0px;
+    background-color:#1F2B39;
+    color:white;
+}
+
+.tjMap h1{
+    display:block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end:0px;
+    font-size:3.5em;
+    line-height: 0.8;
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:0.5rem;
+}
+
+.tjMap p{
+    font-size:1.4em;
+    text-align:center;
+}

@@ -8,6 +8,7 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 		var g = s.group();
 		var l = Snap.load("modules/spec-view/img/traval/background2.svg", onSVGLoaded ) ;
 		var customPart = Snap.load("modules/spec-view/img/traval/customPart.svg", onSVGLoaded2 )
+		var avatar = Snap.load("modules/spec-view/img/traval/avatar1.svg", onSVGLoaded2 )
 
 		$scope.position = {};
 
@@ -26,6 +27,36 @@ angular.module('spec-view').controller('JarvisController', ['$scope','$timeout',
 			g.append(data);
 			//TweenLite.set('#smallMapSvg', {scale:'0.5'});
 		}
+
+		$scope.addAvatar = function(parentID, position){
+			var parentSvg = Snap('#'+parentID);
+			var pin = Snap.load("modules/spec-view/img/traval/avata1.svg", function(data){
+				var group = data.select("g");
+
+				var t = new Snap.Matrix();
+				t.translate(position.x-150, position.y-150);
+				t.scale(0.4);
+				group.transform(t);
+				group.attr({id:position.id, cursor: 'pointer'});
+				var move = function(dx,dy) {
+					this.attr({
+						transform: this.data('origTransform') + (this.data('origTransform') ? "T" : "t") + [dx, dy]
+					});
+				}
+				var start = function() {
+					this.data('origTransform', this.transform().local );
+				}
+				var stop = function() {
+					console.log('finished dragging');
+					console.log(this);
+				}
+				group.drag(move, start, stop);
+				parentSvg.group().append(group);
+				$scope.addedObject.push(group.node.id);
+				$scope.$apply();
+			});
+		}
+
 
 		$scope.addPin = function(parentID, position){
 			var parentSvg = Snap('#'+parentID);
