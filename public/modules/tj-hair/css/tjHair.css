@@ -36,6 +36,19 @@
     text-align:center;
 }
 
+
+@media (max-width: 380px) {
+    .tjTopSection{
+        padding-top: 1px;
+    }
+    .tjTopSection h1{
+        font-size:3.2em;
+    }
+    .tjTopSection p{
+        font-size:1.2em;
+    }
+}
+
 .tjAbout{
     padding: 15px 0px 100px 0px;
     background-color:white;
@@ -54,7 +67,18 @@
 .tjAbout p{
     font-size:1.4em;
     text-align:center;
+}
 
+@media (max-width: 380px) {
+    .tjAbout{
+        padding-top: 1px;
+    }
+    .tjAbout h1{
+        font-size:3.2em;
+    }
+    .tjAbout p{
+        font-size:1.2em;
+    }
 }
 
 .tjPrice{
@@ -81,6 +105,18 @@
 
 }
 
+@media (max-width: 380px) {
+    .tjPrice{
+        padding-top: 1px;
+    }
+    .tjPrice h1{
+        font-size:3.2em;
+    }
+    .tjPrice p{
+        font-size:1.2em;
+    }
+}
+
 .tjMap{
     padding: 15px 0px 100px 0px;
     background-color:#1F2B39;
@@ -101,4 +137,16 @@
 .tjMap p{
     font-size:1.4em;
     text-align:center;
+}
+
+@media (max-width: 380px) {
+    .tjMap{
+        padding-top: 1px;
+    }
+    .tjMap h1{
+        font-size:3.2em;
+    }
+    .tjMap p{
+        font-size:1.2em;
+    }
 }
