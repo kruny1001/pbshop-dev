@@ -18,7 +18,7 @@
 	</section>
 	<section class="tjPrice">
 
-		<h1>Menu</h1>
+		<h1>Service Menu</h1>
 		<div class="tjMenu" layout="row" layout-sm="column" layout-align="space-around start">
 			<div>
 
@@ -55,7 +55,19 @@
 
 	<section class="tjMap">
 		<h1>Contact & Location</h1>
-		<p>612-111-1111</p>
+		<p>(763) 544-1700</p>
+		<p>
+			2550 Hillsboro Avenue North, Golden Valley, MN 55427<br/>
+		</p>
+		<div class="mapContainer">
+				<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+					<ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+					</ui-gmap-marker>
+				</ui-gmap-google-map>
+		</div>
 	</section>
 
+	<section class="tjFooter">
+		<p>Designed By </p>
+	</section>
 </section>
