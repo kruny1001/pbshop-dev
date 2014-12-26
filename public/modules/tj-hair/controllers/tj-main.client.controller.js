@@ -70,5 +70,22 @@ angular.module('tj-hair').controller('TjMainController', ['$scope','$timeout',
 				*/
 			},1500);
 		});
+
+		var cutSvg = Snap('#cut');
+		Snap.load("modules/tj-hair/img/scissors.svg", function(data){
+			cutSvg.append(data);
+		});
+		var permSvg = Snap('#perm');
+		Snap.load("modules/tj-hair/img/dryer.svg", function(data){
+			permSvg.append(data);
+		});
+		var colorSvg = Snap('#color');
+		Snap.load("modules/tj-hair/img/dye1.svg", function(data){
+			colorSvg.append(data);
+		});
+		var treatmentSvg = Snap("#treatment");
+		Snap.load("modules/tj-hair/img/dryer.svg", function(data){
+			treatmentSvg.append(data);
+		});
 	}
 ]);

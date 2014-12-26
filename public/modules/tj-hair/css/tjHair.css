@@ -87,7 +87,26 @@
     color:white;
 }
 
+.tjMenu{
+    margin-top:20px;
+}
+
+.menuTitle{
+    border-color:white;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    text-align: center;
+    font-size:1.6em;
+}
+
+.menuItem{
+    text-align: center;
+    font-size:1.2em;
+}
+
 .tjPrice h1{
+    text-align:center;
     display:block;
     -webkit-margin-start: 0px;
     -webkit-margin-end:0px;
