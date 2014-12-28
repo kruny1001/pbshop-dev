@@ -3,7 +3,7 @@
 		<md-button class="md-raised md-warn" ng-click="scrollTo('tjAbout')">About</md-button>
 		<md-button class="md-raised md-warn" ng-click="scrollTo('tjPrice')">Price</md-button>
 		<md-button class="md-raised md-warn" ng-click="scrollTo('tjMap')">Map</md-button>
-		<md-button class="md-raised md-warn" ng-click="scrollTo('tjAbout')">Review</md-button>
+		<md-button class="md-raised md-warn" ng-click="scrollTo('tjReview')">Review</md-button>
 		<div> Facebook </div>
 	</section>
 	<section id="topSection" class="tjTopSection">
@@ -106,6 +106,31 @@
 				</ui-gmap-marker>
 			</ui-gmap-google-map>
 		</div>
+	</section>
+
+	<section class="tjReview">
+		<h1>Yelp Reviews</h1>
+		<p style="text-align:center;">http://www.yelp.com/biz/tjs-hair-studio-golden-valley-2</p>
+		<md-content style="margin-left:10px; margin-right:10px;">
+			<md-list>
+				<md-item ng-repeat="item in todos">
+					<md-item-content>
+						<div class="md-tile-left">
+							<img ng-src="{{item.face}}" class="tjReviewFace" alt="{{item.who}}">
+							<div>{{item.who}}</div>
+							<div>{{item.where}}</div>
+							<div>{{item.when}}</div>
+						</div>
+						<div class="md-tile-content">
+
+							<p>
+								{{item.notes}}
+							</p>
+						</div>
+					</md-item-content>
+				</md-item>
+			</md-list>
+		</md-content>
 	</section>
 
 	<section class="tjFooter">

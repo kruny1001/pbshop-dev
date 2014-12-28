@@ -191,6 +191,10 @@
     color:white;
 }
 
+
+
+
+
 .tjFooter h1{
     display:block;
     -webkit-margin-start: 0px;
@@ -213,3 +217,57 @@
     padding:auto;
 
 }
+
+
+
+.tjReviewFace {
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    width: 48px;
+    margin: 16px; }
+
+
+.tjReview{
+    padding: 15px 0px 100px 0px;
+    background-color:#B90B03;
+    color:white;
+}
+
+.tjReview h1{
+    font-size:3.5em;
+    line-height: 0.8;
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:0.5rem;
+
+}
+
+.tjReview p{
+    font-size:1em;
+    color:#8C8C8C;
+}
+
+.tjReview .md-tile-left{
+    color:#8C8C8C;
+    width:104px;
+    margin-right:13px;
+}
+
+@media (max-width: 380px) {
+    .tjReview{
+        padding-top: 1px;
+    }
+    .tjReview h1{
+        font-size:3.2em;
+    }
+    .tjReview p{
+        font-size:0.4em;
+    }
+
+    .tjReview .md-tile-left{
+        width:67px;
+        font-size:0.4em;
+        margin-right:5px;
+    }
+}
+
