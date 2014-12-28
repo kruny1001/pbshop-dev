@@ -1,11 +1,11 @@
 <section data-ng-controller="TjMainController">
 	<section class="tjHeader">
-		<div>About</div>
-		<div>Price</div>
-		<div>Map</div>
-		<div>Review</div>
+		<md-button class="md-raised md-warn" ng-click="scrollTo('tjAbout')">About</md-button>
+		<md-button class="md-raised md-warn" ng-click="scrollTo('tjPrice')">Price</md-button>
+		<md-button class="md-raised md-warn" ng-click="scrollTo('tjMap')">Map</md-button>
+		<md-button class="md-raised md-warn" ng-click="scrollTo('tjAbout')">Review</md-button>
+		<div> Facebook </div>
 	</section>
-
 	<section id="topSection" class="tjTopSection">
 		<h1>TJ Hair Salon</h1>
 		<p>Korean Hair Designer</p>
@@ -17,40 +17,81 @@
 			My work is focused principally on the Hair Deign.</p>
 	</section>
 	<section class="tjPrice">
-
 		<h1>Service Menu</h1>
-		<div class="tjMenu" layout="row" layout-sm="column" layout-align="space-around start">
-			<div>
+		<p>We offer those services</p>
+		<div layout="row" layout-md="column" layout-sm="column" layout-align="center center">
+				<md-card  style="background-color: #ec971f"class="md-whiteframe-z2">
+					<div>
+						<svg class="menuItemSvg" id="cut"></svg>
+						<div class="menuTitle" >Cut</div>
+						<div class="menuItem" >Men(+11yr): $20</div>
+						<div class="menuItem" >Women(+11yr): $25</div>
+						<div class="menuItem" >kid(<11yr): $20</div>
+					</div>
+				</md-card>
+				<md-card style="background-color: #ec971f" class="md-whiteframe-z2">
+					<div>
+						<svg class="menuItemSvg" id="perm"></svg>
+						<div class="menuTitle" >Perm</div>
+						<div class="menuItem">Men(+11yr): $20</div>
+						<div class="menuItem">Women(+11yr): $25</div>
+						<div class="menuItem">kid(<11yr): $20</div>
+					</div>
+				</md-card>
+				<md-card style="background-color: #ec971f" class="md-whiteframe-z2">
+					<div>
+						<svg class="menuItemSvg"id="color"></svg>
+						<div class="menuTitle">Color</div>
+						<div class="menuItem">Men(+11yr): $20</div>
+						<div class="menuItem">Women(+11yr): $25</div>
+						<div class="menuItem">kid(<11yr): $20</div>
+					</div>
+				</md-card>
+				<md-card style="background-color: #ec971f" class="md-whiteframe-z2">
+					<div>
+						<svg class="menuItemSvg" id="treatment"></svg>
+						<div class="menuTitle">Treatment</div>
+						<div class="menuItem">Men(+11yr): $20</div>
+						<div class="menuItem">Women(+11yr): $25</div>
+						<div class="menuItem">kid(<11yr): $20</div>
+					</div>
+				</md-card>
+		</div>
 
-				<svg id="cut"></svg>
-				<div class="menuTitle">Cut</div>
+		<!--
+
+		<div class="tjMenu" layout="row" layout-md="column" layout-align="space-around start"
+			 layout-margin>
+			<div flex>
+				<svg class="menuItemSvg" id="cut"></svg>
+				<div class="menuTitle" >Cut</div>
+				<div class="menuItem" >Men(+11yr): $20</div>
+				<div class="menuItem" >Women(+11yr): $25</div>
+				<div class="menuItem" >kid(<11yr): $20</div>
+			</div>
+			<div flex>
+				<svg class="menuItemSvg" id="perm"></svg>
+				<div class="menuTitle" >Perm</div>
 				<div class="menuItem">Men(+11yr): $20</div>
 				<div class="menuItem">Women(+11yr): $25</div>
 				<div class="menuItem">kid(<11yr): $20</div>
 			</div>
-			<div>
-
-				<svg id="perm"></svg>
-				<div class="menuTitle">Perm</div>
-				<div class="menuItem">Men(+11yr): $20</div>
-				<div class="menuItem">Women(+11yr): $25</div>
-				<div class="menuItem">kid(<11yr): $20</div>
-			</div>
-			<div>
-				<svg id="color"></svg>
+			<div flex>
+				<svg class="menuItemSvg"id="color"></svg>
 				<div class="menuTitle">Color</div>
 				<div class="menuItem">Men(+11yr): $20</div>
 				<div class="menuItem">Women(+11yr): $25</div>
 				<div class="menuItem">kid(<11yr): $20</div>
 			</div>
-			<div>
-				<svg id="treatment"></svg>
+			<div flex>
+				<svg class="menuItemSvg" id="treatment"></svg>
 				<div class="menuTitle">Treatment</div>
 				<div class="menuItem">Men(+11yr): $20</div>
 				<div class="menuItem">Women(+11yr): $25</div>
 				<div class="menuItem">kid(<11yr): $20</div>
 			</div>
 		</div>
+		-->
 	</section>
 
 	<section class="tjMap">
@@ -60,14 +101,14 @@
 			2550 Hillsboro Avenue North, Golden Valley, MN 55427<br/>
 		</p>
 		<div class="mapContainer">
-				<ui-gmap-google-map center='map.center' zoom='map.zoom'>
-					<ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
-					</ui-gmap-marker>
-				</ui-gmap-google-map>
+			<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+				<ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+				</ui-gmap-marker>
+			</ui-gmap-google-map>
 		</div>
 	</section>
 
 	<section class="tjFooter">
-		<p>Designed By </p>
+		<p>Designed By Kevin S.</p>
 	</section>
 </section>

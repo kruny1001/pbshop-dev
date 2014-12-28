@@ -5298,6 +5298,9 @@ angular.module('tj-hair').controller('TjMainController', ['$scope','$timeout',
 		// Tj main controller logic
 		// ...
 
+		$scope.scrollTo = function (target){
+			TweenLite.to(window, 1.5, {scrollTo:{y:$('.'+target).position().top, ease:Power2.easeInOut}});
+		}
 		$scope.map = { center: { latitude: 44.970697, longitude: -93.2614785 }, zoom:11 };
 		$scope.marker = {
 			id: 0,

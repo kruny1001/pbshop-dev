@@ -4,9 +4,12 @@
 }
 
 .tjHeader{
-    background-color:#3DB3B9;
     color:white;
-
+    z-index:999;
+    width:100%;
+    position: fixed;
+    margin-top:5px;
+    margin-left:5px;
 }
 
 .tjHeader .tjBrand {
@@ -202,4 +205,11 @@
 .tjFooter p{
     font-size:1.4em;
     text-align:center;
+}
+
+.menuItemSvg{
+    display: block;
+    margin: auto;
+    padding:auto;
+
 }
