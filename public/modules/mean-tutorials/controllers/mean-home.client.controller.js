@@ -87,7 +87,7 @@ angular.module('mean-tutorials').controller('MeanHomeController', ['$scope',
 				// $("h2:contains('Dogs at work')").parent("section").parent("div").css({"display":"none"});
 				// $("h2:contains('Dogs at work') + table").css({"width":"630px"});
 				$(".outerwrapper span.timeline-heading").text('AngularJS');
-				$(".outerwrapper p.timeline-standfirst").text('This project is focus on the frontend development');
+				$(".outerwrapper p.timeline-standfirst").text('Angular Front End Project');
 				// $(".outerwrapper").css({"display":"block"});
 
 
