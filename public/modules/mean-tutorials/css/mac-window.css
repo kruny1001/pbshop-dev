@@ -53,3 +53,19 @@
     top: 10px;
     right: 10px;
 }
+
+.contents-mac {
+    margin-left:5px;
+}
+
+.contents-mac .title {
+    font-size:20px;
+}
+
+.contents-mac .body {
+    font-size:12px;
+}
+
+.contents-mac .date {
+    font-size:7px;
+}
