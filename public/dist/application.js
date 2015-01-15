@@ -80,6 +80,10 @@ ApplicationConfiguration.registerModule('img-utility');
 
 'use strict';
 
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('mean-events');
+'use strict';
+
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('mean-tutorials');
 
@@ -2974,6 +2978,121 @@ angular.module('img-utility').directive(
 
 'use strict';
 
+// Configuring the Articles module
+angular.module('mean-events').run(['Menus',
+	function(Menus) {
+		// Set top bar menu items
+		Menus.addMenuItem('topbar', 'Mean events', 'mean-events', 'dropdown', '/mean-events(/create)?');
+		Menus.addSubMenuItem('topbar', 'mean-events', 'List Mean events', 'mean-events');
+		Menus.addSubMenuItem('topbar', 'mean-events', 'New Mean event', 'mean-events/create');
+	}
+]);
+'use strict';
+
+//Setting up route
+angular.module('mean-events').config(['$stateProvider',
+	function($stateProvider) {
+		// Mean events state routing
+		$stateProvider.
+		state('listMeanEvents', {
+			url: '/mean-events',
+			templateUrl: 'modules/mean-events/views/list-mean-events.client.view.html'
+		}).
+		state('createMeanEvent', {
+			url: '/mean-events/create',
+			templateUrl: 'modules/mean-events/views/create-mean-event.client.view.html'
+		}).
+		state('viewMeanEvent', {
+			url: '/mean-events/:meanEventId',
+			templateUrl: 'modules/mean-events/views/view-mean-event.client.view.html'
+		}).
+		state('editMeanEvent', {
+			url: '/mean-events/:meanEventId/edit',
+			templateUrl: 'modules/mean-events/views/edit-mean-event.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+// Mean events controller
+angular.module('mean-events').controller('MeanEventsController', ['$scope', '$stateParams', '$location', 'Authentication', 'MeanEvents',
+	function($scope, $stateParams, $location, Authentication, MeanEvents) {
+		$scope.authentication = Authentication;
+
+		// Create new Mean event
+		$scope.create = function() {
+			// Create new Mean event object
+			var meanEvent = new MeanEvents ({
+				name: this.name
+			});
+
+			// Redirect after save
+			meanEvent.$save(function(response) {
+				$location.path('mean-events/' + response._id);
+
+				// Clear form fields
+				$scope.name = '';
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Remove existing Mean event
+		$scope.remove = function(meanEvent) {
+			if ( meanEvent ) { 
+				meanEvent.$remove();
+
+				for (var i in $scope.meanEvents) {
+					if ($scope.meanEvents [i] === meanEvent) {
+						$scope.meanEvents.splice(i, 1);
+					}
+				}
+			} else {
+				$scope.meanEvent.$remove(function() {
+					$location.path('mean-events');
+				});
+			}
+		};
+
+		// Update existing Mean event
+		$scope.update = function() {
+			var meanEvent = $scope.meanEvent;
+
+			meanEvent.$update(function() {
+				$location.path('mean-events/' + meanEvent._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Find a list of Mean events
+		$scope.find = function() {
+			$scope.meanEvents = MeanEvents.query();
+		};
+
+		// Find existing Mean event
+		$scope.findOne = function() {
+			$scope.meanEvent = MeanEvents.get({ 
+				meanEventId: $stateParams.meanEventId
+			});
+		};
+	}
+]);
+'use strict';
+
+//Mean events service used to communicate Mean events REST endpoints
+angular.module('mean-events').factory('MeanEvents', ['$resource',
+	function($resource) {
+		return $resource('mean-events/:meanEventId', { meanEventId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);
+'use strict';
+
 //Setting up route
 angular.module('mean-tutorials').config(['$stateProvider',
 	function($stateProvider) {
@@ -3716,8 +3835,250 @@ angular.module('mean-tutorials').controller('MeanHomeController', ['$scope',
 			}
 		}); /* End of Ajax success function */
 
+
+
+		////calendar////
+		/*
+		var CalendarException = function CalendarException(message) {
+			this.message = message;
+			this.toString = function() {
+				return this.constructor.name + ": " + this.message
+			};
+		}
+
+		var Calendar = function Calendar(firstWeekDay) {
+			//properties
+			this.firstWeekDay = firstWeekDay || 0; // 0 = Sunday
+		};
+
+		Calendar.prototype = {
+			constructor : Calendar,
+			weekStartDate : function weekStartDate(date) {
+				var startDate = new Date(date.getTime());
+				while (startDate.getDay() !== this.firstWeekDay) {
+					startDate.setDate(startDate.getDate() - 1);
+				}
+				return startDate;
+			},
+			monthDates : function monthDates(year, month, dayFormatter, weekFormatter) {
+				if ((typeof year !== "number") || (year < 1970)) {
+					throw new CalendarException('year must be a number >= 1970');
+				};
+				if ((typeof month !== "number") || (month < 0) || (month > 11)) {
+					throw new CalendarException('month must be a number (Jan is 0)');
+				};
+				var weeks = [],
+					week = [],
+					i = 0,
+					date = this.weekStartDate(new Date(year, month, 1));
+				do {
+					for (i=0; i<7; i++) {
+						week.push(dayFormatter ? dayFormatter(date) : date);
+						date = new Date(date.getTime());
+						date.setDate(date.getDate() + 1);
+					}
+					weeks.push(weekFormatter ? weekFormatter(week) : week);
+					week = [];
+				} while ((date.getMonth()<=month) && (date.getFullYear()===year));
+				return weeks;
+			},
+			monthDays : function monthDays(year, month) {
+				var getDayOrZero = function getDayOrZero(date) {
+					return date.getMonth() === month ? date.getDate() : 0;
+				};
+				return this.monthDates(year, month, getDayOrZero);
+			},
+			monthText : function monthText(year, month) {
+				if (typeof year === "undefined") {
+					var now = new Date();
+					year = now.getFullYear();
+					month = now.getMonth();
+				};
+				var getDayOrBlank = function getDayOrBlank(date) {
+					var s = date.getMonth() === month ? date.getDate().toString() : "  ";
+					while (s.length < 2) s = " "+s;
+					return s;
+				};
+				var weeks = this.monthDates(year, month, getDayOrBlank,
+					function (week) { return week.join(" ") });
+				return weeks.join("\n");
+			}
+		};
+		var months = "JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC".split(" ");
+		for (var i=0; i<months.length; i++)
+			Calendar[months[i]] = i;
+
+		window.Calendar = Calendar;
+		window.consts = {
+			monthNames: [
+				'January',
+				'February',
+				'March',
+				'April',
+				'May',
+				'June',
+				'July',
+				'August',
+				'September',
+				'October',
+				'November',
+				'December'
+			],
+			dayNames: [
+				'Sunday',
+				'Monday',
+				'Tuesday',
+				'Wednesday',
+				'Thursday',
+				'Friday',
+				'Saturday'
+			]
+		};
+		*/
+		////
+		var cal = new Calendar();
+
+		var month = 0;
+		var year = 2015;
+		var weeks = cal.monthDays(year, month);
+
+		var table = d3.select('#calendar');
+		var header = table.append('thead');
+		var body = table.append('tbody');
+
+		header
+			.append('tr')
+			.append('td')
+			.attr('colspan', 7)
+			.style('text-align', 'center')
+			.style('font-size', '16px')
+			.text(consts.monthNames[month]);
+
+		header
+			.append('tr')
+			.selectAll('td')
+			.data(consts.dayNames)
+			.enter()
+			.append('td')
+			.style('text-align', 'center')
+			.text(function (d) {
+				return d;
+			});
+
+		weeks.forEach(function (week) {
+			body
+				.append('tr')
+				.selectAll('td')
+				.data(week)
+				.enter()
+				.append('td')
+				.attr('class', function (d) {
+					return d > 0 ? '' : 'empty';
+				})
+				.text(function (d) {
+					return d > 0 ? d : '';
+				});
+		});
+		////END calendar////
+
 	}
 ]);
+
+var CalendarException = function CalendarException(message) {
+    this.message = message;
+    this.toString = function() {
+        return this.constructor.name + ": " + this.message
+    };
+}
+
+var Calendar = function Calendar(firstWeekDay) {
+    //properties
+    this.firstWeekDay = firstWeekDay || 0; // 0 = Sunday
+};
+
+Calendar.prototype = {
+    constructor : Calendar,
+    weekStartDate : function weekStartDate(date) {
+        var startDate = new Date(date.getTime());
+        while (startDate.getDay() !== this.firstWeekDay) {
+            startDate.setDate(startDate.getDate() - 1);
+        }
+        return startDate;
+    },
+    monthDates : function monthDates(year, month, dayFormatter, weekFormatter) {
+        if ((typeof year !== "number") || (year < 1970)) {
+            throw new CalendarException('year must be a number >= 1970');
+        };
+        if ((typeof month !== "number") || (month < 0) || (month > 11)) {
+            throw new CalendarException('month must be a number (Jan is 0)');
+        };
+        var weeks = [],
+            week = [],
+            i = 0,
+            date = this.weekStartDate(new Date(year, month, 1));
+        do {
+            for (i=0; i<7; i++) {
+                week.push(dayFormatter ? dayFormatter(date) : date);
+                date = new Date(date.getTime());
+                date.setDate(date.getDate() + 1);
+            }
+            weeks.push(weekFormatter ? weekFormatter(week) : week);
+            week = [];
+        } while ((date.getMonth()<=month) && (date.getFullYear()===year));
+        return weeks;
+    },
+    monthDays : function monthDays(year, month) {
+        var getDayOrZero = function getDayOrZero(date) {
+            return date.getMonth() === month ? date.getDate() : 0;
+        };
+        return this.monthDates(year, month, getDayOrZero);
+    },
+    monthText : function monthText(year, month) {
+        if (typeof year === "undefined") {
+            var now = new Date();
+            year = now.getFullYear();
+            month = now.getMonth();
+        };
+        var getDayOrBlank = function getDayOrBlank(date) {
+            var s = date.getMonth() === month ? date.getDate().toString() : "  ";
+            while (s.length < 2) s = " "+s;
+            return s;
+        };
+        var weeks = this.monthDates(year, month, getDayOrBlank,
+            function (week) { return week.join(" ") });
+        return weeks.join("\n");
+    }
+};
+var months = "JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC".split(" ");
+for (var i=0; i<months.length; i++)
+    Calendar[months[i]] = i;
+
+window.Calendar = Calendar;
+window.consts = {
+    monthNames: [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+    ],
+    dayNames: [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+    ]
+};
 
 'use strict';
 
