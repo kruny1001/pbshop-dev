@@ -2989,6 +2989,19 @@ angular.module('mean-tutorials').config(['$stateProvider',
 
 angular.module('mean-tutorials').controller('MeanHomeController', ['$scope',
 	function($scope) {
+		$scope.projects = [
+			{ name: 'Project1', date:'Jan 20th', body: 'Create Calculator' },
+			{ name: 'Project2', date:'Jan 24th', body: 'Create Calculator Directive Version' },
+			{ name: 'Project3', date:'Jan 29th', body: 'Create' },
+			{ name: 'Project4', date:'Feb 1st', body: 'Create' },
+		];
+
+		$scope.announcements = [
+			{name:'New Member', date:'Jan 14th', body:'Shin Charlie became our team member! email:present1011 at gmail dot com'},
+			{name:'Upcoming Conference', date:'Jan 17th', body:'We are going to talk about the first project. Each team member represents a project.'}
+		];
+
+
 
 		$scope.dataIn = [
 			{
@@ -3703,6 +3716,23 @@ angular.module('mean-tutorials').controller('MeanHomeController', ['$scope',
 			}
 		}); /* End of Ajax success function */
 
+	}
+]);
+
+'use strict';
+
+angular.module('mean-tutorials').directive('macWindow', [
+	function() {
+		return {
+			scope: {
+				projectInfos: '=info'
+			},
+			templateUrl: 'modules/mean-tutorials/directives/templates/mac-window.html',
+			restrict: 'E',
+			link: function postLink(scope, element, attrs) {
+				scope.description = 'hello';
+			}
+		};
 	}
 ]);
 
