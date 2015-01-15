@@ -1,14 +1,39 @@
 <section data-ng-controller="MeanHomeController">
-	<div style="background-color: #c6c8c8"> Version: 0.0.1</div>
+	<div class="meanT-headToolBar"> Version: 0.0.1
+		<div class="meanT-headButtonGroup">
+			<button>Sign-in</button> <button>Sign-up</button>
+		</div>
+	</div>
 	<div class="meanT-headTitle">
 		<strong>Welcome to MEAN Tutorials</strong>
 	</div>
 	<div class="meanT-headSubTitle">
 		<strong>Mean Tutorials</strong> is a team for scripted, high-performance HTML5 technologies that works
 		in all major browsers. No other delivers such advanced.
+		<br/>
+		<br/>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<g:hangout render="createhangout"></g:hangout>
 	</div>
+
 	<hr/>
 
+	<div>
+		<div class="meanT-contentTitle"><strong>What We Are Doing</strong></div>
+		<div class="meanT-contentAnimation"></div>
+	</div>
+
+	<hr/>
+	<div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
+
+	<div class="meanT-headSubTitle">
+		You can check out our current project.
+	</div>
+	<div class="container" style="margin-top:20px">
+		<table id="calendar" class="meanT-calendar"></table>
+	</div>
+
+	<hr/>
 	<!-- Create mac-window-->
 
 	<mac-window info="projects"></mac-window>
@@ -19,13 +44,12 @@
 
 	<hr/>
 
+	<!--
 	<div class="window mac">
 		<div class="title-bar">
 			<div class="close"></div>
 			<div class="minimize"></div>
-			<!--
-			<div class="maximize"></div>
-			-->
+
 			<div class="zoom"></div>
 		</div>
 		<div class="page">
@@ -40,16 +64,17 @@
 					<div class="tooltip">
 						<p></p>
 					</div>
-				</div> <!-- timeline -->
+				</div>
 
 				<div class="info-box">
 					<div class="panel">
 					</div>
 				</div>
 
-			</div> <!-- outerwrapper -->
+			</div>
 		</div>
 	</div>
+	-->
 
 	<div class="row">
 		<div class="widget">
