@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/directives/calendar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-events/views/create-mean-event.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-events/views/edit-mean-event.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-events/views/list-mean-events.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/mean-event.server.model.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/mean-event.server.model.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/mean-event.server.routes.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-events/controllers/mean-events.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-events/tests/mean-events.client.controller.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-events/mean-events.client.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.routes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-events/services/mean-events.client.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/mean-events.server.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/routes/mean-events.server.routes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-events/css/meanT-event.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-events/views/view-mean-event.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/all.js" afterPath="$PROJECT_DIR$/config/env/all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.css" afterPath="$PROJECT_DIR$/public/dist/application.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanTutorials.css" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanTutorials.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -54,8 +35,8 @@
       <file leaf-file-name="mean-home.client.view.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47330096" vertical-offset="0" max-vertical-offset="2355">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.7804878" vertical-offset="1915" max-vertical-offset="2370">
+              <caret line="149" column="11" selection-start-line="149" selection-start-column="11" selection-end-line="149" selection-end-column="11" />
               <folding>
                 <element signature="n#style#0;n#div#6;n#section#0;n#!!top" expanded="true" />
               </folding>
@@ -66,8 +47,8 @@
       <file leaf-file-name="meanTutorials.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/meanTutorials.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="600">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="570">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -97,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="21" />
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -177,10 +158,10 @@
         <option value="$PROJECT_DIR$/config/env/all.js" />
         <option value="$PROJECT_DIR$/public/modules/mean-events/views/list-mean-events.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/mean-events/css/meanT-event.css" />
-        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/directives/calendar.js" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanTutorials.css" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html" />
       </list>
     </option>
@@ -292,9 +273,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="445" />
+    <option name="x" value="54" />
     <option name="y" value="23" />
-    <option name="width" value="982" />
+    <option name="width" value="1373" />
     <option name="height" value="875" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -461,18 +442,6 @@
       <created>1416897923119</created>
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
-    </task>
-    <task id="LOCAL-00007" summary="first commit">
-      <created>1416907228622</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1416907228622</updated>
-    </task>
-    <task id="LOCAL-00008" summary="front-1 page">
-      <created>1416961128407</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1416961128407</updated>
     </task>
     <task id="LOCAL-00009" summary="front-1 page">
       <created>1416962517716</created>
@@ -756,20 +725,33 @@
       <option name="project" value="LOCAL" />
       <updated>1421339796227</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="decorate mean-home">
+      <created>1421365394847</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1421365394847</updated>
+    </task>
+    <task id="LOCAL-00057" summary="decorate mean-home">
+      <created>1421365418713</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1421365418713</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="445" y="23" width="982" height="875" extended-state="0" />
+    <frame x="54" y="23" width="1373" height="875" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3886693" sideWeight="0.8410088" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38969618" sideWeight="0.8410088" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3217768" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34914362" sideWeight="0.49759614" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27783558" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19748521" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48400852" sideWeight="0.15844299" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -778,7 +760,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5975877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50639385" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -802,7 +783,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="first commit" />
     <MESSAGE value="front-1 page" />
     <MESSAGE value="SNAP" />
     <MESSAGE value="SNAP Coffe" />
@@ -827,7 +807,8 @@
     <MESSAGE value="fix mean tutorial page" />
     <MESSAGE value="fix2 mean tutorial page" />
     <MESSAGE value="mean tutorial add mac window" />
-    <option name="LAST_COMMIT_MESSAGE" value="mean tutorial add mac window" />
+    <MESSAGE value="decorate mean-home" />
+    <option name="LAST_COMMIT_MESSAGE" value="decorate mean-home" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1192,26 +1173,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css">
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/meanTutorials.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="570">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/meanTutorials.css">
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="600">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47330096" vertical-offset="0" max-vertical-offset="2355">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.7804878" vertical-offset="1915" max-vertical-offset="2370">
+          <caret line="149" column="11" selection-start-line="149" selection-start-column="11" selection-end-line="149" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#div#6;n#section#0;n#!!top" expanded="true" />
           </folding>

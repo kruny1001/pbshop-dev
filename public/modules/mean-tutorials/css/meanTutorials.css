@@ -21,10 +21,8 @@
 .meanT-contentAnimation {
     margin:10px auto;
     background-color: black;
-    width:600px;
+    width:90%;
     height:400px;
-    min-width:400px;
-    min-height:300px;
 }
 
 .meanT-headButtonGroup{
