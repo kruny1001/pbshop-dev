@@ -3,16 +3,33 @@
 angular.module('mean-tutorials').controller('MeanHomeController', ['$scope',
 	function($scope) {
 		$scope.projects = [
-			{ name: 'Project1', date:'Jan 20th', body: 'Create Calculator' },
+			{ name: 'Project1', date:'Jan 17th', body: 'Create Calculator' },
 			{ name: 'Project2', date:'Jan 24th', body: 'Create Calculator Directive Version' },
 			{ name: 'Project3', date:'Jan 29th', body: 'Create' },
 			{ name: 'Project4', date:'Feb 1st', body: 'Create' },
 		];
 
 		$scope.announcements = [
+			{name:'2nd Conference', date:'Jan 17th', body:'동훈님과 누자베스님께서 angularJS 코드 설명을 해주시겠습니다.'},
 			{name:'New Member', date:'Jan 14th', body:'Shin Charlie became our team member! email:present1011 at gmail dot com'},
-			{name:'Upcoming Conference', date:'Jan 17th', body:'We are going to talk about the first project. Each team member represents a project.'}
+			{name:'Upcoming Conference', date:'Jan 17th', body:'We are going to talk about the first project. Each team member represents a project.'},
+			{name:'1st Conference', date:'Jan 9th', body:'간단한 튜토리얼과 함께 Mean Stack의 전반적인 부분을 이야기 하겠습니다.'},
 		];
+
+		$scope.techs = [
+			{name:'AngularJS', body:''},
+			{name:'MongoDB', body:''},
+			{name:'Express', body:''},
+			{name:'NodeJS', body:''},
+			{name:'GSAP', body:''},
+			{name:'SVG', body:''},
+			{name:'SnapSVG', body:''},
+			{name:'Animation', body:''},
+			{name:'D3', body:''},
+			{name:'CSS3', body:''},
+			{name:'SCSS', body:''},
+			{name:'LESS', body:''},
+		]
 
 
 
@@ -874,6 +891,27 @@ angular.module('mean-tutorials').controller('MeanHomeController', ['$scope',
 				});
 		});
 		////END calendar////
+
+		// Animation //
+		var title = $('.ani-title');
+		var youtubePlayBtn = $('#youtubePlayButton');
+		var techIcons = $('.ani-techs');
+		var meanTotem = $('#meanTotem');
+		var meanTotemDesc = $('#meanTotem-desc');
+		$scope.clickPlayBtn = function() {
+			TweenMax.fromTo(youtubePlayBtn, 1.5, {scale:2}, {scale:0.8, opacity:0});
+			TweenMax.to(title, 2.5, {x:-1200});
+			TweenMax.to('.ani-techs', 0.1, {opacity:1});
+			TweenMax.to([meanTotem,meanTotemDesc], 1.3, {display:'block', height: '100%', opacity:1});
+		}
+
+		$scope.resetPlayBtn = function() {
+			TweenMax.to(youtubePlayBtn, 0.5, {scale:1, opacity:1});
+			TweenMax.to(title, 0.5, {x:0});
+			TweenMax.to([meanTotem, meanTotemDesc], 1.3, {display:'none', height: '0%', opacity:0});
+		}
+
+		// End Animation //
 
 	}
 ]);

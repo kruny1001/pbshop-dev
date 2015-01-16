@@ -60,7 +60,6 @@ module.exports = {
 
 				'public/lib/d3/d3.min.js',
 				'public/lib/d3-timeline/src/d3-timeline.js',
-				'node_modules/calendar/lib/calendar.js',
 			]
 		},
 		css: [

@@ -1,9 +1,20 @@
 <section data-ng-controller="MeanHomeController">
-	<div class="meanT-headToolBar"> Version: 0.0.1
-		<div class="meanT-headButtonGroup">
-			<button>Sign-in</button> <button>Sign-up</button>
+
+	<div class="meanT-headToolBar">
+		<div class="meanT-brandName">
+			Version: 0.0.1
 		</div>
+
+
 	</div>
+
+	<div class="meanT-headButtonGroup">
+		<button>Sign-in</button>
+		<button>Sign-up</button>
+	</div>
+
+
+
 	<div class="meanT-headTitle">
 		<strong>Welcome to MEAN Tutorials</strong>
 	</div>
@@ -12,16 +23,48 @@
 		in all major browsers. No other delivers such advanced.
 		<br/>
 		<br/>
+
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
-		<g:hangout render="createhangout"></g:hangout>
+		<g:hangout title="Google Hangouts" render="createhangout"></g:hangout>
+		<a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">
+			<img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">
+		</a>
+
 	</div>
 
 	<hr/>
 
-	<div>
-		<div class="meanT-contentTitle"><strong>What We Are Doing</strong></div>
-		<div class="meanT-contentAnimation"></div>
-	</div>
+
+		<div class="meanT-contentTitle">
+			<strong>What We Are Doing</strong></div>
+		<figure>
+			<div class="stretchy-wrapper">
+
+				<div id="ani-title" class="ani-title">Click Play Button</div>
+				<img id='youtubePlayButton'
+					 class="meanT-imgCenter"
+					 ng-src="modules/mean-tutorials/img/youtubePlay.png"
+					 ng-click="clickPlayBtn()" />
+				<div id="ani-techs" class="ani-techs">
+					<img id='meanTotem'
+						 class="meanT-hide"
+						 ng-src="modules/mean-tutorials/img/mean_totem.png"
+						 ng-click="clickPlayBtn()" />
+					<div id="meanTotem-desc" class="meanT-hide ani-rightSideDesc">
+						Description 1
+						<hr/>
+						Description 2
+						<hr/>
+						Description 3
+						<hr/>
+						Description 4
+					</div>
+				</div>
+			</div>
+		</figure>
+		<button ng-click="clickPlayBtn()">Click Youtube Btn</button>
+		<button ng-click="resetPlayBtn()">Reset Youtube Btn</button>
+
 
 	<hr/>
 	<div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
@@ -36,13 +79,18 @@
 	<hr/>
 	<!-- Create mac-window-->
 
+	<mac-window info="announcements"></mac-window>
+
+	<hr/>
+
 	<mac-window info="projects"></mac-window>
 
 	<hr/>
 
-	<mac-window info="announcements"></mac-window>
+	<mac-window info="techs"></mac-window>
 
 	<hr/>
+
 
 	<!--
 	<div class="window mac">
@@ -148,5 +196,6 @@
 			<h3>Bristol, S. Korea</h3>
 		</div>
 		-->
+
 	</div>
 </section>

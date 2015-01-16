@@ -1,6 +1,5 @@
 .meanT-headToolBar {
     background-color: #c6c8c8;
-    height:30px;
 }
 
 .meanT-headTitle {
@@ -26,7 +25,62 @@
 }
 
 .meanT-headButtonGroup{
+    position:relative;
+    top:10%;
+    bottom:10%;
     float: right;
-    margin-right:20px;
-    display:inline-block;
+    margin-right:2px;
+    display:inline-flex;
+}
+
+.meanT-headButtonGroup button{
+    margin-top:2px;
+    margin-left:2px;
+}
+
+.meanT-brandName {
+    position:relative;
+    top:20%;
+    bottom:20%;
+}
+
+.meanT-imgCenter {
+    z-index:999;
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+
+figure {
+    width: 85%;
+    max-width:700px;
+    margin: 8px auto;
+}
+
+div.stretchy-wrapper {
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    position: relative;
+    background: black;
+}
+
+div.stretchy-wrapper > div {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+.meanT-hide{
+    display:none;
+}
+
+.meanT-googleDocImg {
+    width:30px;
+    vertical-align: baseline;
 }

@@ -84,12 +84,12 @@ window.consts = {
         'December'
     ],
     dayNames: [
-        'Sunday',
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday'
+        '일',
+        '월',
+        '화',
+        '수',
+        '목',
+        '금',
+        'S'
     ]
 };
