@@ -1844,6 +1844,7 @@ angular.module('calculator')
 		var calService = this;
 		calService.history=[];
 	})
+
 	// End Cal Service
 
 	// Directive Calculator
@@ -1851,7 +1852,7 @@ angular.module('calculator')
 		function() {
 			return {
 				templateUrl: 'modules/calculator/directives/template/interface.html',
-				restrict: 'E',
+				restrict: 'AE',
 				bindToController: true,
 				controller: "AppCalCtrl as appCal"
 			};
