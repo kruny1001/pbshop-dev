@@ -57,6 +57,11 @@ ApplicationConfiguration.registerModule('articles');
 ApplicationConfiguration.registerModule('banners');
 'use strict';
 
+// Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('calculator');
+
+'use strict';
+
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');
 /**
@@ -1833,6 +1838,78 @@ angular.module('banners').factory('BannerByUserId', ['$resource', function($reso
 }]);
 'use strict';
 
+angular.module('calculator')
+	// Cal Service
+	.service("calService", function AppCalHistoryCtrl(){
+		var calService = this;
+		calService.history=[];
+	})
+	// End Cal Service
+
+	// Directive Calculator
+	.directive('calculator', [
+		function() {
+			return {
+				templateUrl: 'modules/calculator/directives/template/interface.html',
+				restrict: 'E',
+				bindToController: true,
+				controller: "AppCalCtrl as appCal"
+			};
+		}
+	])
+	.controller("AppCalCtrl", ["calService", function AppCalCtrl(calService){
+		var appCal = this;
+		appCal.input = '';
+		var operators = ['+', '-', 'x', '÷'];
+
+		appCal.clear = function(){
+			appCal.input = '';
+		}
+		appCal.execution = function() {
+			var equation = appCal.input;
+
+			var lastChar = equation[equation.length - 1];
+
+			// Replace all instances of x and ÷ with * and / respectively. This can be done easily using regex and the 'g' tag which will replace all instances of the matched character/substring
+			equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
+
+			// Final thing left to do is checking the last character of the equation. If it's an operator or a decimal, remove it
+			if(operators.indexOf(lastChar) > -1 || lastChar == '.')
+				equation = equation.replace(/.$/, '');
+
+
+			if(equation){
+				calService.history.push({equation:appCal.input, result:eval(equation)});
+				appCal.input = eval(equation);
+			}
+		}
+		appCal.dataIn = function(event) {
+			var input = event.target.innerText;
+			appCal.input += input;
+		}
+	}])
+
+	// History Directive
+	.directive('calHistory', [
+		function() {
+			return {
+				template: '<div id="calHistory" ng-repeat="history in appCalHistory.histories"><h4>h{{$index + 1}}: {{history.equation}} = {{history.result}}</h4></div>',
+				restrict: 'E',
+				bindToController: true,
+				controller: "AppCalHistoryCtrl as appCalHistory"
+			};
+		}
+	])
+	.controller("AppCalHistoryCtrl", ["calService", function AppCalHistory(calService){
+		var appCalHistory = this;
+		appCalHistory.histories = calService.history;
+	}])
+	// End History Directive
+
+
+
+'use strict';
+
 // Setting up route
 angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 	function($stateProvider, $urlRouterProvider) {
@@ -3098,6 +3175,10 @@ angular.module('mean-tutorials').config(['$stateProvider',
 	function($stateProvider) {
 		// Mean tutorials state routing
 		$stateProvider.
+		state('project1', {
+			url: '/project1',
+			templateUrl: 'modules/mean-tutorials/views/project1.client.view.html'
+		}).
 		state('mean-home', {
 			url: '/mean-home',
 			templateUrl: 'modules/mean-tutorials/views/mean-home.client.view.html'
@@ -3109,7 +3190,7 @@ angular.module('mean-tutorials').config(['$stateProvider',
 angular.module('mean-tutorials').controller('MeanHomeController', ['$scope',
 	function($scope) {
 		$scope.projects = [
-			{ name: 'Project1', date:'Jan 17th', body: 'Create Calculator' },
+			{ name: 'Project1', date:'Jan 17th', body: 'Create Calculator <a href="/#!/project1" target="_blank">Sample Solution</a>' },
 			{ name: 'Project2', date:'Jan 24th', body: 'Create Calculator Directive Version' },
 			{ name: 'Project3', date:'Jan 29th', body: 'Create' },
 			{ name: 'Project4', date:'Feb 1st', body: 'Create' },
@@ -4022,6 +4103,14 @@ angular.module('mean-tutorials').controller('MeanHomeController', ['$scope',
 	}
 ]);
 
+'use strict';
+
+angular.module('mean-tutorials').controller('Project1Controller', ['$scope',
+	function($scope) {
+		// Project1 controller logic
+		// ...
+	}
+]);
 var CalendarException = function CalendarException(message) {
     this.message = message;
     this.toString = function() {

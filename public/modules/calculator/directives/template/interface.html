@@ -1,0 +1,28 @@
+<div id="calculator">
+    <!-- Screen and clear key -->
+    <div class="top">
+        <span class="clear" data-value="C" ng-click="appCal.clear()">C</span>
+        <div class="input">{{appCal.input}}</div>
+        <div class="result"></div>
+    </div>
+
+    <div class="keys">
+        <!-- operators and other keys -->
+        <span ng-click="appCal.dataIn($event)">7</span>
+        <span ng-click="appCal.dataIn($event)">8</span>
+        <span ng-click="appCal.dataIn($event)">9</span>
+        <span class="operator" data-value="/" ng-click="appCal.dataIn($event)">/</span>
+        <span ng-click="appCal.dataIn($event)">4</span>
+        <span ng-click="appCal.dataIn($event)">5</span>
+        <span ng-click="appCal.dataIn($event)">6</span>
+        <span class="operator" data-value="*" ng-click="appCal.dataIn($event)">x</span>
+        <span ng-click="appCal.dataIn($event)">1</span>
+        <span ng-click="appCal.dataIn($event)">2</span>
+        <span ng-click="appCal.dataIn($event)">3</span>
+        <span class="operator" data-value="-" ng-click="appCal.dataIn($event)">-</span>
+        <span ng-click="appCal.dataIn($event)">0</span>
+        <span ng-click="appCal.dataIn($event)">.</span>
+        <span class="equals" ng-click="appCal.execution()">=</span>
+        <span class="operator" ng-click="appCal.dataIn($event)">+</span>
+    </div>
+</div>

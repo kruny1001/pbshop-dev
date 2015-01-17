@@ -3,7 +3,7 @@
 angular.module('mean-tutorials').controller('MeanHomeController', ['$scope',
 	function($scope) {
 		$scope.projects = [
-			{ name: 'Project1', date:'Jan 17th', body: 'Create Calculator' },
+			{ name: 'Project1', date:'Jan 17th', body: 'Create Calculator <a href="/#!/project1" target="_blank">Sample Solution</a>' },
 			{ name: 'Project2', date:'Jan 24th', body: 'Create Calculator Directive Version' },
 			{ name: 'Project3', date:'Jan 29th', body: 'Create' },
 			{ name: 'Project4', date:'Feb 1st', body: 'Create' },
