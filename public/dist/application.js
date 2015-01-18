@@ -118,11 +118,6 @@ ApplicationConfiguration.registerModule('spec-view');
 'use strict';
 
 // Use application configuration module to register a new module
-ApplicationConfiguration.registerModule('test123');
-
-'use strict';
-
-// Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('tj-hair');
 
 'use strict';
@@ -1844,6 +1839,23 @@ angular.module('calculator')
 		var calService = this;
 		calService.history=[];
 	})
+	// Cal Factory
+	.factory('calFactory', function(){
+		var histories = [];
+		return {
+			addHistory: function(history){
+				histories.push(history);
+				console.log('factory is executed');
+				console.log(histories);
+			},
+
+			getHistory: function(){
+				return histories;
+			}
+		}
+	})
+
+
 
 	// End Cal Service
 
@@ -1858,7 +1870,7 @@ angular.module('calculator')
 			};
 		}
 	])
-	.controller("AppCalCtrl", ["calService", function AppCalCtrl(calService){
+	.controller("AppCalCtrl", ["calService", "calFactory", function AppCalCtrl(calService, calFactory){
 		var appCal = this;
 		appCal.input = '';
 		var operators = ['+', '-', 'x', '÷'];
@@ -1880,7 +1892,10 @@ angular.module('calculator')
 
 
 			if(equation){
-				calService.history.push({equation:appCal.input, result:eval(equation)});
+				// Service
+				//calService.history.push({equation:appCal.input, result:eval(equation)});
+				// Factory
+				calFactory.addHistory({equation:appCal.input, result:eval(equation)});
 				appCal.input = eval(equation);
 			}
 		}
@@ -1894,16 +1909,29 @@ angular.module('calculator')
 	.directive('calHistory', [
 		function() {
 			return {
-				template: '<div id="calHistory" ng-repeat="history in appCalHistory.histories"><h4>h{{$index + 1}}: {{history.equation}} = {{history.result}}</h4></div>',
+				template: '<div id="calHistory" ng-repeat="history in appCalHistory.histories"><h4>h{{$index + 1}}: {{history.equation}} = {{history.result}}</h4></div><button ng-click="appCalHistory.refresh()">Refresh</button>',
 				restrict: 'E',
 				bindToController: true,
 				controller: "AppCalHistoryCtrl as appCalHistory"
 			};
 		}
 	])
-	.controller("AppCalHistoryCtrl", ["calService", function AppCalHistory(calService){
+	.controller("AppCalHistoryCtrl", ["calService", "calFactory", function AppCalHistory(calService, calFactory){
 		var appCalHistory = this;
-		appCalHistory.histories = calService.history;
+
+		//Service Way
+		//appCalHistory.histories = calService.history;
+
+		//Factory Way
+		appCalHistory.histories = calFactory.getHistory();
+
+		/*
+		Singleton Factory
+		appCalHistory.refresh = function(){
+			appCalHistory.histories = calFactory.getHistory();
+		}
+		*/
+
 	}])
 	// End History Directive
 
@@ -1918,6 +1946,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		$urlRouterProvider.otherwise('/');
 		// Home state routing
 		$stateProvider.
+		state('link-list', {
+			url: '/link-list',
+			templateUrl: 'modules/core/views/link-list.client.view.html'
+		}).
 		state('home', {
 			url: '/dev',
 			templateUrl: 'modules/core/views/home.client.view.html'
@@ -2036,6 +2068,76 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 		var texts = angular.element(document.querySelector('.core-text-anni'));
 		var tl = new TimelineMax({repeat:6, repeatDelay:1, yoyo:true});
 		tl.staggerTo(texts, 0.2, {className:'+=superShadow', top:'-=10px', ease:Power1.easeIn}, '0.3', 'start');
+	}
+]);
+
+'use strict';
+
+angular.module('core').controller('LinklistController', ['$scope',
+	function($scope) {
+		// Link list controller logic
+		// ...
+		$scope.modules = [
+			{
+				name:'Animation',
+				links:[
+					{linkName: 'svg1', linkHref:'/#!/svg1'},
+					{linkName: 'ryuhm12', linkHref:'/#!/ryuhm12'},
+					{linkName: 'j1', linkHref:'/#!/j1'},
+					{linkName: 'three', linkHref:'/#!/three'}
+				]
+			},
+			{
+				name:'Banners',
+				links:[
+					{linkName: 'List', linkHref:'/#!/banners'},
+					{linkName: 'Create', linkHref:'/#!/banners/create'},
+					{linkName: 'Banner', linkHref:'/#!/banners/:bannerId'},
+					{linkName: 'Edit', linkHref:'/#!/banners/:bannerId/edit'}
+				]
+			},
+			{
+				name:'Core',
+				links:[
+					{linkName: 'Dev', linkHref:'/#!/dev'}
+				]
+			},
+			{
+				name:'SDSUMAP',
+				links:[
+					{linkName: 'SDSU Map', linkHref:'/#!/sdsumap-main'}
+				]
+			},
+			{
+				name:'Spec-view',
+				links:[
+					{linkName: 'Jarvis', linkHref:'/#!/jarvis'},
+					{linkName: 'Spec Home', linkHref:'/#!/spec-home'}
+				]
+			},
+			{
+				name:'Tj-main',
+				links:[
+					{linkName: 'tj-main', linkHref:'/#!/tj-main'}
+				]
+			},
+			{
+				name:'User-interface',
+				links:[
+					{linkName: 'MCMU', linkHref:'/#!/mcmu'},
+					{linkName: 'Front -1 ', linkHref:'/#!/front-1'},
+					{linkName: 'Experimental Interface', linkHref:'/#!/experimental-interface'},
+					{linkName: 'Product List', linkHref:'/#!/'},
+					{linkName: 'detail-product', linkHref:'/#!/detail-product/:productId'}
+				]
+			},
+			{
+				name:'Utility',
+				links:[
+					{linkName: 'test-page-generator', linkHref:'/#!/test-page-generator'}
+				]
+			}
+		]
 	}
 ]);
 
@@ -3188,8 +3290,37 @@ angular.module('mean-tutorials').config(['$stateProvider',
 ]);
 'use strict';
 
-angular.module('mean-tutorials').controller('MeanHomeController', ['$scope',
-	function($scope) {
+angular.module('mean-tutorials').controller('MeanHomeController', ['$scope','$state','$mdDialog',
+	function($scope,$state,$mdDialog) {
+
+		$scope.signUp = function(ev) {
+			$mdDialog.show(
+				$mdDialog.alert()
+					.title('Sign-in')
+					.content('Please Sign Up if you want to become our member')
+					.ariaLabel('Password notification')
+					.ok('Got it!')
+					.targetEvent(ev)
+			);
+		};
+
+		$scope.logIn = function(ev) {
+			$mdDialog.show(
+				$mdDialog.alert()
+					.title('Log-in')
+					.content('Please Login if you want to check current work')
+					.ariaLabel('Password notification')
+					.ok('Got it!')
+					.targetEvent(ev)
+			);
+		};
+
+		$scope.login = function(){
+			$state.go('signin');
+		};
+		$scope.signup = function(){
+			$state.go('signup');
+		};
 		$scope.projects = [
 			{ name: 'Project1', date:'Jan 17th', body: 'Create Calculator <a href="/#!/project1" target="_blank">Sample Solution</a>' },
 			{ name: 'Project2', date:'Jan 24th', body: 'Create Calculator Directive Version' },
@@ -4108,10 +4239,81 @@ angular.module('mean-tutorials').controller('MeanHomeController', ['$scope',
 
 angular.module('mean-tutorials').controller('Project1Controller', ['$scope',
 	function($scope) {
+
+
 		// Project1 controller logic
 		// ...
+		var width = 960,
+			height = 500,
+			centered;
+
+		var projection = d3.geo.albersUsa()
+			.scale(1070)
+			.translate([width / 2, height / 2]);
+
+		var path = d3.geo.path()
+			.projection(projection);
+
+		var svg = d3.select("#geo").append("svg")
+			.attr("width", width)
+			.attr("height", height);
+
+		svg.append("rect")
+			.attr("class", "background")
+			.attr("width", width)
+			.attr("height", height)
+			.on("click", clicked);
+
+		var g = svg.append("g");
+
+
+
+		d3.json("/modules/mean-tutorials/img/us.json"
+			, function(error, us){
+				g.append("g")
+					.attr("id", "states")
+					.selectAll("path")
+					.data(topojson.feature(us, us.objects.states).features)
+					.enter().append("path")
+					.attr("d", path)
+					.on("click", clicked);
+
+				g.append("path")
+					.datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+					.attr("id", "state-borders")
+					.attr("d", path);
+			}
+		);
+
+		function clicked(d) {
+			var x, y, k;
+
+			if (d && centered !== d) {
+				var centroid = path.centroid(d);
+				x = centroid[0];
+				y = centroid[1];
+				k = 4;
+				centered = d;
+			} else {
+				x = width / 2;
+				y = height / 2;
+				k = 1;
+				centered = null;
+			}
+
+			g.selectAll("path")
+				.classed("active", centered && function (d) {
+					return d === centered;
+				});
+
+			g.transition()
+				.duration(750)
+				.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+				.style("stroke-width", 1.5 / k + "px");
+		}
 	}
 ]);
+
 var CalendarException = function CalendarException(message) {
     this.message = message;
     this.toString = function() {
@@ -7546,7 +7748,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 		$scope.authentication = Authentication;
 
 		// If user is signed in then redirect back home
-		if ($scope.authentication.user) $location.path('/');
+		if ($scope.authentication.user) $location.path('/mean-home');
 
 		$scope.signup = function() {
 			$http.post('/auth/signup', $scope.credentials).success(function(response) {
@@ -7554,7 +7756,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.authentication.user = response;
 
 				// And redirect to the index page
-				$location.path('/');
+				$location.path('/mean-home');
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
@@ -7566,13 +7768,14 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.authentication.user = response;
 
 				// And redirect to the index page
-				$location.path('/');
+				$location.path('/mean-home');
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
 		};
 	}
 ]);
+
 'use strict';
 
 angular.module('users').controller('PasswordController', ['$scope', '$stateParams', '$http', '$location', 'Authentication',

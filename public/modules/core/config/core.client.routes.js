@@ -7,6 +7,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		$urlRouterProvider.otherwise('/');
 		// Home state routing
 		$stateProvider.
+		state('link-list', {
+			url: '/link-list',
+			templateUrl: 'modules/core/views/link-list.client.view.html'
+		}).
 		state('home', {
 			url: '/dev',
 			templateUrl: 'modules/core/views/home.client.view.html'

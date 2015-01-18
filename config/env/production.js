@@ -50,7 +50,10 @@ module.exports = {
 				'public/lib/angular-google-maps/dist/angular-google-maps.min.js',
 
 				'public/lib/d3/d3.min.js',
-				'public/lib/d3-timeline/src/d3-timeline.js'
+				'public/lib/d3-timeline/src/d3-timeline.js',
+
+				'public/lib/topojson/topojson.js'
+
 
 			]
 		},

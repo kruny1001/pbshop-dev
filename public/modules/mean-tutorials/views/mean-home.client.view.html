@@ -8,9 +8,16 @@
 
 	</div>
 
+	<div layout="row" layout-align="end">
+		<md-button class="md-primary" ng-click="logIn($event)">
+			Log In
+		</md-button>
+		<md-button class="md-primary" ng-click="signUp($event)">
+			Sign Up
+		</md-button>
+	</div>
+
 	<div class="meanT-headButtonGroup">
-		<button>Sign-in</button>
-		<button>Sign-up</button>
 	</div>
 
 
@@ -62,10 +69,15 @@
 				</div>
 			</div>
 		</figure>
-		<button ng-click="clickPlayBtn()">Click Youtube Btn</button>
-		<button ng-click="resetPlayBtn()">Reset Youtube Btn</button>
 
-
+	<div layout="row" layout-align="center">
+		<md-button class="md-primary" ng-click="clickPlayBtn()">
+			Click Youtube Btn
+		</md-button>
+		<md-button class="md-primary" ng-click="resetPlayBtn()">
+			Reset Youtube Btn
+		</md-button>
+	</div>
 	<hr/>
 	<div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
 
@@ -90,7 +102,13 @@
 	<mac-window info="techs"></mac-window>
 
 	<hr/>
+	<br/>
+	<a href="https://docs.google.com/forms/d/1HvDi8CBJrPE2m47JEO_jW3-moxjrVzX0nDCTczvvzDo/viewanalytics?usp=form_confirm" target="_blank">결과 보기</a>
+	<div class="meanT-googleForm">
 
+		<br/>
+		<iframe src="https://docs.google.com/forms/d/1HvDi8CBJrPE2m47JEO_jW3-moxjrVzX0nDCTczvvzDo/viewform?embedded=true" width="760" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+	</div>
 	<!--
 	<div class="window mac">
 		<div class="title-bar">

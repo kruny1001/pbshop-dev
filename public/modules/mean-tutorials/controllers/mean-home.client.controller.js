@@ -1,7 +1,36 @@
 'use strict';
 
-angular.module('mean-tutorials').controller('MeanHomeController', ['$scope',
-	function($scope) {
+angular.module('mean-tutorials').controller('MeanHomeController', ['$scope','$state','$mdDialog',
+	function($scope,$state,$mdDialog) {
+
+		$scope.signUp = function(ev) {
+			$mdDialog.show(
+				$mdDialog.alert()
+					.title('Sign-in')
+					.content('Please Sign Up if you want to become our member')
+					.ariaLabel('Password notification')
+					.ok('Got it!')
+					.targetEvent(ev)
+			);
+		};
+
+		$scope.logIn = function(ev) {
+			$mdDialog.show(
+				$mdDialog.alert()
+					.title('Log-in')
+					.content('Please Login if you want to check current work')
+					.ariaLabel('Password notification')
+					.ok('Got it!')
+					.targetEvent(ev)
+			);
+		};
+
+		$scope.login = function(){
+			$state.go('signin');
+		};
+		$scope.signup = function(){
+			$state.go('signup');
+		};
 		$scope.projects = [
 			{ name: 'Project1', date:'Jan 17th', body: 'Create Calculator <a href="/#!/project1" target="_blank">Sample Solution</a>' },
 			{ name: 'Project2', date:'Jan 24th', body: 'Create Calculator Directive Version' },

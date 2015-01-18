@@ -6,6 +6,23 @@ angular.module('calculator')
 		var calService = this;
 		calService.history=[];
 	})
+	// Cal Factory
+	.factory('calFactory', function(){
+		var histories = [];
+		return {
+			addHistory: function(history){
+				histories.push(history);
+				console.log('factory is executed');
+				console.log(histories);
+			},
+
+			getHistory: function(){
+				return histories;
+			}
+		}
+	})
+
+
 
 	// End Cal Service
 
@@ -20,7 +37,7 @@ angular.module('calculator')
 			};
 		}
 	])
-	.controller("AppCalCtrl", function AppCalCtrl(calService){
+	.controller("AppCalCtrl", function AppCalCtrl(calService, calFactory){
 		var appCal = this;
 		appCal.input = '';
 		var operators = ['+', '-', 'x', '÷'];
@@ -42,7 +59,10 @@ angular.module('calculator')
 
 
 			if(equation){
-				calService.history.push({equation:appCal.input, result:eval(equation)});
+				// Service
+				//calService.history.push({equation:appCal.input, result:eval(equation)});
+				// Factory
+				calFactory.addHistory({equation:appCal.input, result:eval(equation)});
 				appCal.input = eval(equation);
 			}
 		}
@@ -56,16 +76,29 @@ angular.module('calculator')
 	.directive('calHistory', [
 		function() {
 			return {
-				template: '<div id="calHistory" ng-repeat="history in appCalHistory.histories"><h4>h{{$index + 1}}: {{history.equation}} = {{history.result}}</h4></div>',
+				template: '<div id="calHistory" ng-repeat="history in appCalHistory.histories"><h4>h{{$index + 1}}: {{history.equation}} = {{history.result}}</h4></div><button ng-click="appCalHistory.refresh()">Refresh</button>',
 				restrict: 'E',
 				bindToController: true,
 				controller: "AppCalHistoryCtrl as appCalHistory"
 			};
 		}
 	])
-	.controller("AppCalHistoryCtrl", function AppCalHistory(calService){
+	.controller("AppCalHistoryCtrl", function AppCalHistory(calService, calFactory){
 		var appCalHistory = this;
-		appCalHistory.histories = calService.history;
+
+		//Service Way
+		//appCalHistory.histories = calService.history;
+
+		//Factory Way
+		appCalHistory.histories = calFactory.getHistory();
+
+		/*
+		Singleton Factory
+		appCalHistory.refresh = function(){
+			appCalHistory.histories = calFactory.getHistory();
+		}
+		*/
+
 	})
 	// End History Directive
 
