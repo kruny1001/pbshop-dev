@@ -1,0 +1,7 @@
+.cz-navbar {
+    display:inline-flex;
+}
+
+.cz-navbar .menuItem {
+    margin-left: 20px;
+}

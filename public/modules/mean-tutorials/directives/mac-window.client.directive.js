@@ -13,12 +13,12 @@ angular.module('mean-tutorials').directive('macWindow', [
 				scope.minimizeMacWindow = function(event){
 					console.log('Click minimize');
 					var pageElement = event.target.parentElement.parentElement.getElementsByClassName('page');
-					TweenMax.to(pageElement, 0.2, {display:'none'});
+					TweenMax.to(pageElement, 1.2, {display:'none', height:'0%'});
 				}
 				scope.maximizeMacWindow = function(event){
 					console.log('Click maximize');
 					var pageElement = event.target.parentElement.parentElement.getElementsByClassName('page');
-					TweenMax.to(pageElement, 0.2, {display:'block'});
+					TweenMax.to(pageElement, 1.2, {display:'block',height:'100%'});
 				}
 			}
 		};

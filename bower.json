@@ -18,7 +18,7 @@
     "gsap": "latest",
     "bootstrap-sass-official": "latest",
     "lodash": "~2.4.1",
-    "angular-smart-table": "*",
+    "angular-smart-table": "~1.4.7",
     "firebase": "latest",
     "angular-material": "latest",
     "hammerjs": "~2.0.2",

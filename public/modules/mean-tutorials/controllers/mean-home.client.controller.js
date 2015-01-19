@@ -1,6 +1,10 @@
 'use strict';
 
 angular.module('mean-tutorials')
+	.controller('MeanLoginCtrl', function($scope, Authentication){
+		$scope.Auth = Authentication;
+		console.log($scope.Auth);
+	})
 	.controller('LeftCtrl', function($scope, $timeout, $mdSidenav, $log) {
 		$scope.close = function() {
 			$mdSidenav('left').close()
@@ -43,10 +47,10 @@ angular.module('mean-tutorials')
 			);
 		};
 
-		$scope.login = function(){
+		$scope.loginBtn = function(){
 			$state.go('signin');
 		};
-		$scope.signup = function(){
+		$scope.signupBtn = function(){
 			$state.go('signup');
 		};
 		$scope.projects = [
@@ -77,9 +81,7 @@ angular.module('mean-tutorials')
 			{name:'CSS3', body:''},
 			{name:'SCSS', body:''},
 			{name:'LESS', body:''},
-		]
-
-
+		];
 
 		$scope.dataIn = [
 			{

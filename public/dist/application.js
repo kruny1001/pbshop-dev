@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'mean';
-	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.bootstrap', 'ui.utils', 'ngMaterial', 'ng-context-menu', 'uiGmapgoogle-maps'];
+	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.bootstrap', 'ui.utils', 'ngMaterial', 'ng-context-menu', 'uiGmapgoogle-maps','smart-table'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
@@ -60,6 +60,10 @@ ApplicationConfiguration.registerModule('banners');
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('calculator');
 
+'use strict';
+
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('carzen-devs');
 'use strict';
 
 // Use Applicaion configuration module to register a new module
@@ -1939,11 +1943,195 @@ angular.module('calculator')
 
 'use strict';
 
+// Configuring the Articles module
+angular.module('carzen-devs').run(['Menus',
+	function(Menus) {
+		// Set top bar menu items
+		Menus.addMenuItem('topbar', 'Carzen devs', 'carzen-devs', 'dropdown', '/carzen-devs(/create)?');
+		Menus.addSubMenuItem('topbar', 'carzen-devs', 'List Carzen devs', 'carzen-devs');
+		Menus.addSubMenuItem('topbar', 'carzen-devs', 'New Carzen dev', 'carzen-devs/create');
+	}
+]);
+'use strict';
+
+//Setting up route
+angular.module('carzen-devs').config(['$stateProvider',
+	function($stateProvider) {
+		// Carzen devs state routing
+		$stateProvider.
+		state('carzen-home', {
+			url: '/carzen-home',
+			templateUrl: 'modules/carzen-devs/views/carzen-home.client.view.html'
+		}).
+		state('listCarzenDevs', {
+			url: '/carzen-devs',
+			templateUrl: 'modules/carzen-devs/views/list-carzen-devs.client.view.html'
+		}).
+		state('createCarzenDev', {
+			url: '/carzen-devs/create',
+			templateUrl: 'modules/carzen-devs/views/create-carzen-dev.client.view.html'
+		}).
+		state('viewCarzenDev', {
+			url: '/carzen-devs/:carzenDevId',
+			templateUrl: 'modules/carzen-devs/views/view-carzen-dev.client.view.html'
+		}).
+		state('editCarzenDev', {
+			url: '/carzen-devs/:carzenDevId/edit',
+			templateUrl: 'modules/carzen-devs/views/edit-carzen-dev.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+// Carzen devs controller
+angular.module('carzen-devs').controller('CarzenDevsController', ['$scope', '$stateParams', '$location', 'Authentication', 'CarzenDevs',
+	function($scope, $stateParams, $location, Authentication, CarzenDevs) {
+		$scope.authentication = Authentication;
+
+		// Create new Carzen dev
+		$scope.create = function() {
+			// Create new Carzen dev object
+			var carzenDev = new CarzenDevs ({
+				name: this.name
+			});
+
+			// Redirect after save
+			carzenDev.$save(function(response) {
+				$location.path('carzen-devs/' + response._id);
+
+				// Clear form fields
+				$scope.name = '';
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Remove existing Carzen dev
+		$scope.remove = function(carzenDev) {
+			if ( carzenDev ) { 
+				carzenDev.$remove();
+
+				for (var i in $scope.carzenDevs) {
+					if ($scope.carzenDevs [i] === carzenDev) {
+						$scope.carzenDevs.splice(i, 1);
+					}
+				}
+			} else {
+				$scope.carzenDev.$remove(function() {
+					$location.path('carzen-devs');
+				});
+			}
+		};
+
+		// Update existing Carzen dev
+		$scope.update = function() {
+			var carzenDev = $scope.carzenDev;
+
+			carzenDev.$update(function() {
+				$location.path('carzen-devs/' + carzenDev._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Find a list of Carzen devs
+		$scope.find = function() {
+			$scope.carzenDevs = CarzenDevs.query();
+		};
+
+		// Find existing Carzen dev
+		$scope.findOne = function() {
+			$scope.carzenDev = CarzenDevs.get({ 
+				carzenDevId: $stateParams.carzenDevId
+			});
+		};
+	}
+]);
+'use strict';
+
+angular.module('carzen-devs').controller('CarzenHomeController', ['$scope',
+	function($scope) {
+		// Carzen home controller logic
+		// ...
+		/*
+		 정비이력조회
+		 정산관리
+		 차량관리
+		 사전점검관리
+		 매장찾기
+		 관리자메뉴
+		*/
+		$scope.tmenus = [
+			{name: '정비이력조회'},
+			{name: '정산관리'},
+			{name: '차량관리'},
+			{name: '사전점검관리'},
+			{name: '매장찾기'},
+			{name: '관리자메뉴'}
+		];
+
+		$scope.rowCollection1 = [
+			{outDate: '2015-01-02', carNum: '94마2012', carName: '5톤 집게차', miles: '186,771', price1: '33,000', price2:'39,600', branchName:'시화대형점', status: '승인완료'}
+		];
+
+		$scope.rowCollection = [
+			{branchName: '도봉1급정비', represents: '김창호', bizNum: '210-81-70209', phone: '02-902-4040', address: '서울시 도봉구 방학동 711', pto:'', emergency: '', map:''},
+			{branchName: '양평1급점', represents: '장인대', bizNum: '210-81-70209', phone: '02-902-4040', address: '서울시 영등포구 양평동6가 1번지',pto:'',emergency: '',map:''},
+			{branchName: '카젠', represents: '김태진', bizNum: '210-81-70209', phone: '02-902-4040', address: '경기도 성남시 중원구 상대원동 442-2 한라시그마밸리 405호,406호', pto:'',emergency: '',map:''}
+		];
+
+
+		var tabs = [
+			{ title: '정비이력조회', content: "Tabs will become paginated if there isn't enough room for them."},
+			{ title: '정산관리', content: "You can swipe left and right on a mobile device to change tabs."},
+			{ title: '차량관리', content: "You can bind the selected tab via the selected attribute on the md-tabs element."},
+			{ title: '사전점검관리', content: "If you set the selected tab binding to -1, it will leave no tab selected."},
+			{ title: '매장찾기', content: "If you remove a tab, it will try to select a new one."},
+			{ title: '관리자메뉴', content: "There's an ink bar that follows the selected tab, you can turn it off if you want."},
+
+		];
+		$scope.tabs = tabs;
+		$scope.selectedIndex = 2;
+		$scope.$watch('selectedIndex', function(current, old){
+			if ( old && (old != current)) $log.debug('Goodbye ' + tabs[old].title + '!');
+			if ( current )                $log.debug('Hello ' + tabs[current].title + '!');
+		});
+		$scope.addTab = function (title, view) {
+			view = view || title + " Content View";
+			tabs.push({ title: title, content: view, disabled: false});
+		};
+		$scope.removeTab = function (tab) {
+			for (var j = 0; j < tabs.length; j++) {
+				if (tab.title == tabs[j].title) {
+					$scope.tabs.splice(j, 1);
+					break;
+				}
+			}
+		};
+
+	}
+]);
+
+'use strict';
+
+//Carzen devs service used to communicate Carzen devs REST endpoints
+angular.module('carzen-devs').factory('CarzenDevs', ['$resource',
+	function($resource) {
+		return $resource('carzen-devs/:carzenDevId', { carzenDevId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);
+'use strict';
+
 // Setting up route
 angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 	function($stateProvider, $urlRouterProvider) {
 		// Redirect to home view when route not found
-		$urlRouterProvider.otherwise('/mean-home');
+		$urlRouterProvider.otherwise('/');
 		// Home state routing
 		$stateProvider.
 		state('link-list', {
@@ -3288,9 +3476,14 @@ angular.module('mean-tutorials').config(['$stateProvider',
 		});
 	}
 ]);
+
 'use strict';
 
 angular.module('mean-tutorials')
+	.controller('MeanLoginCtrl', ["$scope", "Authentication", function($scope, Authentication){
+		$scope.Auth = Authentication;
+		console.log($scope.Auth);
+	}])
 	.controller('LeftCtrl', ["$scope", "$timeout", "$mdSidenav", "$log", function($scope, $timeout, $mdSidenav, $log) {
 		$scope.close = function() {
 			$mdSidenav('left').close()
@@ -3333,10 +3526,10 @@ angular.module('mean-tutorials')
 			);
 		};
 
-		$scope.login = function(){
+		$scope.loginBtn = function(){
 			$state.go('signin');
 		};
-		$scope.signup = function(){
+		$scope.signupBtn = function(){
 			$state.go('signup');
 		};
 		$scope.projects = [
@@ -3367,9 +3560,7 @@ angular.module('mean-tutorials')
 			{name:'CSS3', body:''},
 			{name:'SCSS', body:''},
 			{name:'LESS', body:''},
-		]
-
-
+		];
 
 		$scope.dataIn = [
 			{
@@ -4444,12 +4635,12 @@ angular.module('mean-tutorials').directive('macWindow', [
 				scope.minimizeMacWindow = function(event){
 					console.log('Click minimize');
 					var pageElement = event.target.parentElement.parentElement.getElementsByClassName('page');
-					TweenMax.to(pageElement, 0.2, {display:'none'});
+					TweenMax.to(pageElement, 1.2, {display:'none', height:'0%'});
 				}
 				scope.maximizeMacWindow = function(event){
 					console.log('Click maximize');
 					var pageElement = event.target.parentElement.parentElement.getElementsByClassName('page');
-					TweenMax.to(pageElement, 0.2, {display:'block'});
+					TweenMax.to(pageElement, 1.2, {display:'block',height:'100%'});
 				}
 			}
 		};
