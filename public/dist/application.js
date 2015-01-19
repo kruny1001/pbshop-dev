@@ -1943,7 +1943,7 @@ angular.module('calculator')
 angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 	function($stateProvider, $urlRouterProvider) {
 		// Redirect to home view when route not found
-		$urlRouterProvider.otherwise('/');
+		$urlRouterProvider.otherwise('/mean-home');
 		// Home state routing
 		$stateProvider.
 		state('link-list', {
@@ -3290,8 +3290,26 @@ angular.module('mean-tutorials').config(['$stateProvider',
 ]);
 'use strict';
 
-angular.module('mean-tutorials').controller('MeanHomeController', ['$scope','$state','$mdDialog',
-	function($scope,$state,$mdDialog) {
+angular.module('mean-tutorials')
+	.controller('LeftCtrl', ["$scope", "$timeout", "$mdSidenav", "$log", function($scope, $timeout, $mdSidenav, $log) {
+		$scope.close = function() {
+			$mdSidenav('left').close()
+		};
+	}])
+	.controller('RightCtrl', ["$scope", "$timeout", "$mdSidenav", "$log", function($scope, $timeout, $mdSidenav, $log) {
+		$scope.close = function() {
+			$mdSidenav('right').close()
+		};
+	}])
+	.controller('MeanHomeController', ['$scope','$state','$mdDialog','$timeout', '$mdSidenav', '$log',
+	function($scope,$state,$mdDialog,$timeout, $mdSidenav, $log) {
+
+		$scope.toggleLeft = function() {
+			$mdSidenav('left').toggle()
+		};
+		$scope.toggleRight = function() {
+			$mdSidenav('right').toggle()
+		};
 
 		$scope.signUp = function(ev) {
 			$mdDialog.show(
@@ -3324,8 +3342,9 @@ angular.module('mean-tutorials').controller('MeanHomeController', ['$scope','$st
 		$scope.projects = [
 			{ name: 'Project1', date:'Jan 17th', body: 'Create Calculator <a href="/#!/project1" target="_blank">Sample Solution</a>' },
 			{ name: 'Project2', date:'Jan 24th', body: 'Create Calculator Directive Version' },
-			{ name: 'Project3', date:'Jan 29th', body: 'Create' },
-			{ name: 'Project4', date:'Feb 1st', body: 'Create' },
+			{ name: 'Project3', date:'Jan 29th', body: 'Testing - Simple Unit test' },
+			{ name: 'Project4', date:'Feb 1st', body: 'Dev - Learning JSON Object' },
+			{ name: 'Project5', date:'Feb 8st', body: 'Create Simple API Method' },
 		];
 
 		$scope.announcements = [
@@ -4422,6 +4441,16 @@ angular.module('mean-tutorials').directive('macWindow', [
 			restrict: 'E',
 			link: function postLink(scope, element, attrs) {
 				scope.description = 'hello';
+				scope.minimizeMacWindow = function(event){
+					console.log('Click minimize');
+					var pageElement = event.target.parentElement.parentElement.getElementsByClassName('page');
+					TweenMax.to(pageElement, 0.2, {display:'none'});
+				}
+				scope.maximizeMacWindow = function(event){
+					console.log('Click maximize');
+					var pageElement = event.target.parentElement.parentElement.getElementsByClassName('page');
+					TweenMax.to(pageElement, 0.2, {display:'block'});
+				}
 			}
 		};
 	}
