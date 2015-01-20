@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('carzen-devs').controller('CarzenHomeController', ['$scope',
-	function($scope) {
+angular.module('carzen-devs').controller('CarzenHomeController', ['$scope','$log',
+	function($scope,$log) {
 		// Carzen home controller logic
 		// ...
 		/*
@@ -42,23 +42,6 @@ angular.module('carzen-devs').controller('CarzenHomeController', ['$scope',
 
 		];
 		$scope.tabs = tabs;
-		$scope.selectedIndex = 2;
-		$scope.$watch('selectedIndex', function(current, old){
-			if ( old && (old != current)) $log.debug('Goodbye ' + tabs[old].title + '!');
-			if ( current )                $log.debug('Hello ' + tabs[current].title + '!');
-		});
-		$scope.addTab = function (title, view) {
-			view = view || title + " Content View";
-			tabs.push({ title: title, content: view, disabled: false});
-		};
-		$scope.removeTab = function (tab) {
-			for (var j = 0; j < tabs.length; j++) {
-				if (tab.title == tabs[j].title) {
-					$scope.tabs.splice(j, 1);
-					break;
-				}
-			}
-		};
-
+		$scope.selectedIndex = 0;
 	}
 ]);

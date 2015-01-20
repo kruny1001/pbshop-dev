@@ -1,17 +1,94 @@
 <section data-ng-controller="CarzenHomeController">
 
 	<md-tabs md-selected="selectedIndex">
-		<md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}">
-			<div class="demo-tab tab{{$index%4}}" layout="column" layout-fill layout-align="space-around center">
-				<div ng-bind="tab.content"></div>
-				<md-button class="md-warn" ng-click="removeTab( tab )">
-					Remove Tab
-				</md-button>
+		<md-tab label="정비이력조회">
+			<div style="margin-left:10px; margin-top:10px;">
+				<md-button class="md-raised md-primary">수정</md-button>
+				<md-button class="md-raised md-primary">작업내역엑셀저장</md-button>
+				<md-button class="md-raised md-primary">인쇄</md-button>
+				<md-button class="md-raised md-primary">승인완</md-button>
 			</div>
+			<table st-table="rowCollection1" class="table table-striped tabTable">
+				<thead>
+				<tr>
+					<th>출고일자</th>
+					<th>차량번호</th>
+					<th>차량명</th>
+					<th>주행거리(KM)</th>
+					<th>정비금액</th>
+					<th>청구금액</th>
+					<th>대리점</th>
+					<th>상태</th>
+				</tr>
+				</thead>
+				<tbody>
+				<!--
+                 {outDate: '도봉1급정비', carNum: '김창호', canName: '210-81-70209', miles: '02-902-4040', price: '서울시 도봉구 방학동 711', branchName:'', status: ''}
+                -->
+				<tr ng-repeat="row in rowCollection1">
+					<td>{{row.outDate}}</td>
+					<td>{{row.carNum}}</td>
+					<td>{{row.carName}}</td>
+					<td>{{row.miles}}</td>
+					<td>{{row.price1}}</td>
+					<td>{{row.price2}}</td>
+					<td>{{row.branchName}}</td>
+					<td>{{row.status}}</td>
+				</tr>
+				</tbody>
+			</table>
+
+			<div>
+				작업건수:   1<br/>
+				총 정비금액: 33,000<br/>
+				총 청구금액: 39,600<br/>
+			</div>
+
+			<div style="width:90%; margin:auto;">
+			<md-tabs md-selected="selectedIndex">
+				<md-tab label="작업내역"></md-tab>
+				<md-tab label="사진조회"></md-tab>
+				<md-tab label="전체수리이력조"></md-tab>
+			</md-tabs>
+			</div>
+		</md-tab>
+		<md-tab label="매장찾기">
+			<table st-table="rowCollection" class="table table-striped tabTable">
+				<thead>
+				<!--
+                    {branchName: 'Laurent', represents: 'Renard', bizNum: new Date('1987-05-21'), phone: 102, address: 'whatever@gmail.com', pto:'', emergency: '', map:''},
+                -->
+				<tr>
+					<th>매장명</th>
+					<th>대표자</th>
+					<th>사업자번호</th>
+					<th>전화번호</th>
+					<th>주소</th>
+					<th>휴일</th>
+					<th>긴급</th>
+					<th>약도</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr ng-repeat="row in rowCollection">
+					<td>{{row.branchName}}</td>
+					<td>{{row.represents}}</td>
+					<td>{{row.bizNum}}</td>
+					<td>{{row.phone}}</td>
+					<td>{{row.address}}</td>
+					<td>{{row.pto}}</td>
+					<td>{{row.emergency}}</td>
+					<td>{{row.map}}</td>
+				</tr>
+				</tbody>
+			</table>
 		</md-tab>
 	</md-tabs>
 
-	<!-- Top Menu -->
+
+
+
+	<!-- Top Menu
 	<div class="cz-navbar">
 		<div class='menuItem' ng-repeat="tmenu in tmenus">{{tmenu.name}}</div>
 	</div>
@@ -20,9 +97,7 @@
 	수정 작업내역엑셀저장 인쇄 승인완료
 	<table st-table="rowCollection1" class="table table-striped">
 		<thead>
-		<!--
-			{branchName: 'Laurent', represents: 'Renard', bizNum: new Date('1987-05-21'), phone: 102, address: 'whatever@gmail.com', pto:'', emergency: '', map:''},
-		-->
+
 		<tr>
 			<th>출고일자</th>
 			<th>차량번호</th>
@@ -35,9 +110,7 @@
 		</tr>
 		</thead>
 		<tbody>
-		<!--
-		 {outDate: '도봉1급정비', carNum: '김창호', canName: '210-81-70209', miles: '02-902-4040', price: '서울시 도봉구 방학동 711', branchName:'', status: ''}
-		-->
+
 		<tr ng-repeat="row in rowCollection1">
 			<td>{{row.outDate}}</td>
 			<td>{{row.carNum}}</td>
@@ -58,9 +131,6 @@
 	<h3>매장찾기</h3>
 	<table st-table="rowCollection" class="table table-striped">
 		<thead>
-		<!--
-			{branchName: 'Laurent', represents: 'Renard', bizNum: new Date('1987-05-21'), phone: 102, address: 'whatever@gmail.com', pto:'', emergency: '', map:''},
-		-->
 		<tr>
 			<th>매장명</th>
 			<th>대표자</th>
@@ -86,5 +156,6 @@
 		</tbody>
 	</table>
 	<h3>관리자메뉴</h3>
+	-->
 
 </section>
