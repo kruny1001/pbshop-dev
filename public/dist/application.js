@@ -2049,8 +2049,8 @@ angular.module('carzen-devs').controller('CarzenDevsController', ['$scope', '$st
 ]);
 'use strict';
 
-angular.module('carzen-devs').controller('CarzenHomeController', ['$scope',
-	function($scope) {
+angular.module('carzen-devs').controller('CarzenHomeController', ['$scope','$log',
+	function($scope,$log) {
 		// Carzen home controller logic
 		// ...
 		/*
@@ -2091,24 +2091,7 @@ angular.module('carzen-devs').controller('CarzenHomeController', ['$scope',
 
 		];
 		$scope.tabs = tabs;
-		$scope.selectedIndex = 2;
-		$scope.$watch('selectedIndex', function(current, old){
-			if ( old && (old != current)) $log.debug('Goodbye ' + tabs[old].title + '!');
-			if ( current )                $log.debug('Hello ' + tabs[current].title + '!');
-		});
-		$scope.addTab = function (title, view) {
-			view = view || title + " Content View";
-			tabs.push({ title: title, content: view, disabled: false});
-		};
-		$scope.removeTab = function (tab) {
-			for (var j = 0; j < tabs.length; j++) {
-				if (tab.title == tabs[j].title) {
-					$scope.tabs.splice(j, 1);
-					break;
-				}
-			}
-		};
-
+		$scope.selectedIndex = 0;
 	}
 ]);
 
@@ -4447,12 +4430,103 @@ angular.module('mean-tutorials')
 
 'use strict';
 
-angular.module('mean-tutorials').controller('Project1Controller', ['$scope',
-	function($scope) {
+angular.module('mean-tutorials').controller('Project1Controller', ['$scope','$document','$timeout',
+	function($scope, $document, $timeout) {
+
+
+
+			var win, productSearch,
+				productInput, siteSearch, siteInput,
+				productButton, siteButton, megaSearch,
+				searchField, transX;
+
+			function onDocumentReady() {
+				win = $(window);
+				megaSearch = $(document.getElementById('mega-search'));
+				productSearch = $(document.getElementById('mega-productsearch'));
+				productInput = $(document.getElementById('mega-p-s'));
+				productButton = $(document.getElementById('product-submit'));
+				siteSearch = $(document.getElementById('mega-sitesearch'));
+				siteInput = $(document.getElementById('mega-s'));
+				siteButton = $(document.getElementById('full-site-submit'));
+				searchField = megaSearch.find('.search-form-field');
+
+				if (win.width() < 568) {
+					transX = '-38px';
+				} else {
+					transX = '-62px';
+				}
+
+				if (megaSearch.length > 0) {
+					searchFormInit();
+					searchField.on('focus', onInactiveFocus);
+				}
+			}
+
+			function searchFormInit() {
+				siteSearch.stop(true, false).velocity({
+					opacity: 0.39,
+					translateX: transX,
+					translateY: '51px',
+					translateZ: '-200px'
+				}, 0);
+
+				productSearch.stop(true, false).velocity({
+					opacity: 1,
+					translateX: 0,
+					translateY: 0,
+					translateZ: 0
+				}, 0);
+
+				productButton.on('click', function() {
+					return false;
+				});
+				siteButton.on('click', function() {
+					return false;
+				});
+			}
+
+			function onInactiveFocus(e) {
+				var focused = $(e.currentTarget),
+					focusedParent = focused.closest('.search-form'),
+					sibling = focusedParent.siblings('.search-form');
+
+
+				if (focusedParent.hasClass('inactive')) {
+
+					focusedParent.removeClass('inactive').addClass('active')
+						.stop(true, false).velocity({
+							translateX: 0,
+							translateZ: 0
+						}, 300)
+						.stop(true, false).velocity({
+							opacity:1,
+							translateY: 0
+						}, {delay:200}, 300)
+						.find('.button').stop(true, false).velocity('fadeIn', {delay: 600}, {duration:300}, "ease");
+
+					sibling.removeClass('active').addClass('inactive')
+						.stop(true, false).velocity({
+							translateX: transX,
+							translateZ: '-200px'
+						}, 300)
+						.stop(true, false).velocity({
+							opacity: 0.39,
+							translateY: '51px'
+						}, {delay:200}, 300)
+						.find('.button').stop(true, false).velocity('fadeOut', {duration:10});
+				}
+			}
+			$document.ready(function(){
+				$(onDocumentReady);
+			});
+
 
 
 		// Project1 controller logic
 		// ...
+
+		/*
 		var width = 960,
 			height = 500,
 			centered;
@@ -4521,6 +4595,7 @@ angular.module('mean-tutorials').controller('Project1Controller', ['$scope',
 				.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
 				.style("stroke-width", 1.5 / k + "px");
 		}
+		*/
 	}
 ]);
 
