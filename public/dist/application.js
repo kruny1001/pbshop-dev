@@ -58,6 +58,11 @@ ApplicationConfiguration.registerModule('banners');
 'use strict';
 
 // Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('bioinfo');
+
+'use strict';
+
+// Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('calculator');
 
 'use strict';
@@ -1837,6 +1842,33 @@ angular.module('banners').factory('BannerByUserId', ['$resource', function($reso
 }]);
 'use strict';
 
+//Setting up route
+angular.module('bioinfo').config(['$stateProvider',
+	function($stateProvider) {
+		// Bioinfo state routing
+		$stateProvider.
+		state('bioinfo-home', {
+			url: '/bioinfo-home',
+			templateUrl: 'modules/bioinfo/views/bioinfo-home.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+angular.module('bioinfo').controller('BioinfohomeController', ['$scope','$http',
+	function($scope,$http) {
+		$scope.gsbks = [];
+		$scope.updateGsbks = function(){
+			$http.get('gskbs').success(function(data){
+				$scope.gsbks = data;
+			});
+		}
+
+	}
+]);
+
+'use strict';
+
 angular.module('calculator')
 	// Cal Service
 	.service("calService", function AppCalHistoryCtrl(){
@@ -3449,6 +3481,10 @@ angular.module('mean-tutorials').config(['$stateProvider',
 	function($stateProvider) {
 		// Mean tutorials state routing
 		$stateProvider.
+		state('project2', {
+			url: '/project2',
+			templateUrl: 'modules/mean-tutorials/views/project2.client.view.html'
+		}).
 		state('project1', {
 			url: '/project1',
 			templateUrl: 'modules/mean-tutorials/views/project1.client.view.html'
@@ -4433,100 +4469,7 @@ angular.module('mean-tutorials')
 angular.module('mean-tutorials').controller('Project1Controller', ['$scope','$document','$timeout',
 	function($scope, $document, $timeout) {
 
-
-
-			var win, productSearch,
-				productInput, siteSearch, siteInput,
-				productButton, siteButton, megaSearch,
-				searchField, transX;
-
-			function onDocumentReady() {
-				win = $(window);
-				megaSearch = $(document.getElementById('mega-search'));
-				productSearch = $(document.getElementById('mega-productsearch'));
-				productInput = $(document.getElementById('mega-p-s'));
-				productButton = $(document.getElementById('product-submit'));
-				siteSearch = $(document.getElementById('mega-sitesearch'));
-				siteInput = $(document.getElementById('mega-s'));
-				siteButton = $(document.getElementById('full-site-submit'));
-				searchField = megaSearch.find('.search-form-field');
-
-				if (win.width() < 568) {
-					transX = '-38px';
-				} else {
-					transX = '-62px';
-				}
-
-				if (megaSearch.length > 0) {
-					searchFormInit();
-					searchField.on('focus', onInactiveFocus);
-				}
-			}
-
-			function searchFormInit() {
-				siteSearch.stop(true, false).velocity({
-					opacity: 0.39,
-					translateX: transX,
-					translateY: '51px',
-					translateZ: '-200px'
-				}, 0);
-
-				productSearch.stop(true, false).velocity({
-					opacity: 1,
-					translateX: 0,
-					translateY: 0,
-					translateZ: 0
-				}, 0);
-
-				productButton.on('click', function() {
-					return false;
-				});
-				siteButton.on('click', function() {
-					return false;
-				});
-			}
-
-			function onInactiveFocus(e) {
-				var focused = $(e.currentTarget),
-					focusedParent = focused.closest('.search-form'),
-					sibling = focusedParent.siblings('.search-form');
-
-
-				if (focusedParent.hasClass('inactive')) {
-
-					focusedParent.removeClass('inactive').addClass('active')
-						.stop(true, false).velocity({
-							translateX: 0,
-							translateZ: 0
-						}, 300)
-						.stop(true, false).velocity({
-							opacity:1,
-							translateY: 0
-						}, {delay:200}, 300)
-						.find('.button').stop(true, false).velocity('fadeIn', {delay: 600}, {duration:300}, "ease");
-
-					sibling.removeClass('active').addClass('inactive')
-						.stop(true, false).velocity({
-							translateX: transX,
-							translateZ: '-200px'
-						}, 300)
-						.stop(true, false).velocity({
-							opacity: 0.39,
-							translateY: '51px'
-						}, {delay:200}, 300)
-						.find('.button').stop(true, false).velocity('fadeOut', {duration:10});
-				}
-			}
-			$document.ready(function(){
-				$(onDocumentReady);
-			});
-
-
-
-		// Project1 controller logic
-		// ...
-
-		/*
+		$scope.id='meanT-project1';
 		var width = 960,
 			height = 500,
 			centered;
@@ -4538,9 +4481,11 @@ angular.module('mean-tutorials').controller('Project1Controller', ['$scope','$do
 		var path = d3.geo.path()
 			.projection(projection);
 
+		var aspect = 500 / 950;
+
 		var svg = d3.select("#geo").append("svg")
-			.attr("width", width)
-			.attr("height", height);
+			.attr("viewBox", "0 0 960 500")
+			.attr("preserveAspectRatio", "xMidMid")
 
 		svg.append("rect")
 			.attr("class", "background")
@@ -4549,8 +4494,6 @@ angular.module('mean-tutorials').controller('Project1Controller', ['$scope','$do
 			.on("click", clicked);
 
 		var g = svg.append("g");
-
-
 
 		d3.json("/modules/mean-tutorials/img/us.json"
 			, function(error, us){
@@ -4595,7 +4538,18 @@ angular.module('mean-tutorials').controller('Project1Controller', ['$scope','$do
 				.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
 				.style("stroke-width", 1.5 / k + "px");
 		}
-		*/
+
+	}
+]);
+
+'use strict';
+
+angular.module('mean-tutorials').controller('Project2Controller', ['$scope',
+	function($scope) {
+
+		$scope.id='meanT-project2';
+		// Project2 controller logic
+		// ...
 	}
 ]);
 

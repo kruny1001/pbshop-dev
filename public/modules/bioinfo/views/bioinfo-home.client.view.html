@@ -1,0 +1,32 @@
+<section data-ng-controller="BioinfohomeController">
+	<h3>GSBK Table</h3>
+	<a href="http://erictheise.github.io/mctad.js/" target="_blank"> Statistics Method Javascript</a><br/>
+	<a href="http://www.math.ucla.edu/~tom/distributions/chisq.html" target="_blank">Chi Square</a>
+	<a href="http://www.math.ucla.edu/~tom/distributions/CONTENTS.html" target="_blank">Useful Contents</a>
+	<div>Total # of Info: {{gsbks.length}}</div>
+	<hr/>
+
+	<h3>Progress</h3>
+	<ul>
+		<li>OpenCPU using R packages</li>
+		<li>Simulate</li>
+	</ul>
+	<button ng-click="updateGsbks()">UPDATE</button>
+	<!--
+	<div class="bio-gsbkInfo" ng-repeat="row in gsbks">
+		<div><strong>Species: </strong> {{row.species}}</div>
+		<div><strong>Source: </strong> {{row.source}}</div>
+		<div><strong>Reg Type: </strong> {{row.regType}}</div>
+		<div><strong>Year: </strong> {{row.year}}</div>
+		<div class="container">
+			<strong>Genes</strong><br/>
+			{{row.genes.trim()}}
+		</div>
+		<div class="container">
+			<strong>genesSym</strong><br/>
+			{{row.genesSym.trim()}}
+		</div>
+		<hr/>
+	</div>
+	-->
+</section>
