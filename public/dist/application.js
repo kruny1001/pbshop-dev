@@ -3481,6 +3481,10 @@ angular.module('mean-tutorials').config(['$stateProvider',
 	function($stateProvider) {
 		// Mean tutorials state routing
 		$stateProvider.
+		state('versioning', {
+			url: '/versioning',
+			templateUrl: 'modules/mean-tutorials/views/versioning.client.view.html'
+		}).
 		state('project2', {
 			url: '/project2',
 			templateUrl: 'modules/mean-tutorials/views/project2.client.view.html'
