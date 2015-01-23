@@ -1,10 +1,13 @@
 'use strict';
 
 angular.module('mean-tutorials').controller('Project2Controller', ['$scope',
-	function($scope) {
-
+	function($scope,$rootScope) {
+        // Disqus ID
 		$scope.id='meanT-project2';
-		// Project2 controller logic
-		// ...
+
+        // Listen event
+        $scope.$on('handleEmit', function(event, args) {
+            $scope.$broadcast('handleBroadcast', args);
+        });
 	}
 ]);

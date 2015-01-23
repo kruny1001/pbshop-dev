@@ -1965,10 +1965,12 @@ angular.module('calculator')
 				console.log('factory is executed');
 				console.log(histories);
 			},
-
 			getHistory: function(){
 				return histories;
-			}
+			},
+            getHistoryByIndex: function(index){
+                return histories[index];
+            }
 		}
 	})
 
@@ -1987,7 +1989,7 @@ angular.module('calculator')
 			};
 		}
 	])
-	.controller("AppCalCtrl", ["calService", "calFactory", function AppCalCtrl(calService, calFactory){
+	.controller("AppCalCtrl", ["$scope", "calService", "calFactory", function AppCalCtrl($scope, calService, calFactory){
 		var appCal = this;
 		appCal.input = '';
 		var operators = ['+', '-', 'x', '÷'];
@@ -2020,20 +2022,24 @@ angular.module('calculator')
 			var input = event.target.innerText;
 			appCal.input += input;
 		}
-	}])
+
+        $scope.$on('handleBroadcast', function(event, args) {
+            appCal.input = calFactory.getHistoryByIndex(args.message).equation//'ONE: ' + args.message;
+        });
+    }])
 
 	// History Directive
 	.directive('calHistory', [
 		function() {
 			return {
-				template: '<div id="calHistory" ng-repeat="history in appCalHistory.histories"><h4>h{{$index + 1}}: {{history.equation}} = {{history.result}}</h4></div><button ng-click="appCalHistory.refresh()">Refresh</button>',
+				templateUrl: 'modules/calculator/directives/template/history.html',
 				restrict: 'E',
 				bindToController: true,
 				controller: "AppCalHistoryCtrl as appCalHistory"
 			};
 		}
 	])
-	.controller("AppCalHistoryCtrl", ["calService", "calFactory", function AppCalHistory(calService, calFactory){
+	.controller("AppCalHistoryCtrl", ["$scope", "calService", "calFactory", function AppCalHistory($scope, calService, calFactory){
 		var appCalHistory = this;
 
 		//Service Way
@@ -2042,6 +2048,11 @@ angular.module('calculator')
 		//Factory Way
 		appCalHistory.histories = calFactory.getHistory();
 
+        // emit
+        appCalHistory.clickHistory = function(input){
+            console.log(input + "index is ");
+            $scope.$emit('handleEmit', {message: input});
+        }
 		/*
 		Singleton Factory
 		appCalHistory.refresh = function(){
@@ -4630,11 +4641,14 @@ angular.module('mean-tutorials').controller('Project1Controller', ['$scope','$do
 'use strict';
 
 angular.module('mean-tutorials').controller('Project2Controller', ['$scope',
-	function($scope) {
-
+	function($scope,$rootScope) {
+        // Disqus ID
 		$scope.id='meanT-project2';
-		// Project2 controller logic
-		// ...
+
+        // Listen event
+        $scope.$on('handleEmit', function(event, args) {
+            $scope.$broadcast('handleBroadcast', args);
+        });
 	}
 ]);
 

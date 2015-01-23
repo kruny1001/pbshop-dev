@@ -1,0 +1,15 @@
+<div id="calHistory" class="container">
+    <h3>Calculation Histories</h3>
+    <h4>You can set previous calculation history by clicking a history button</h4>
+    <div ng-repeat="history in appCalHistory.histories"
+         ng-click="appCalHistory.clickHistory($index)"
+            style="display:inline-block">
+
+        <button type="button" class="btn btn-default" style="margin-top:5px; margin-right: 5px;
+            display:block">{{history.equation}} = {{history.result}}</button>
+    </div>
+
+</div>
+<!--
+    <button ng-click="appCalHistory.refresh()">Refresh</button>
+-->
