@@ -6,3 +6,94 @@
     width: 90%;
     height: 200px;
 }
+
+.leftPane {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    height: 100%;
+    width: 72px;
+    z-index: 1020;
+    background: #939393;
+
+    -webkit-animation: slideInLeft 0.5s; /* Safari and Chrome */
+    -moz-animation: slideInLeft 0.5s; /* Firefox */
+    -ms-animation: slideInLeft 0.5s; /* Internet Explorer */
+    -o-animation: slideInLeft 0.5s; /* Opera */
+    animation: slideInLeft 0.5s;
+}
+
+.rightPane {
+    z-index:1;
+    overflow:visible;
+    position: absolute;
+    margin-left: 20px;
+    top:0;
+    left:72px !important
+}
+
+.paneContent {
+
+}
+
+.visualization-control {
+    display:block;
+    cursor: pointer;
+}
+
+.control-button {
+    display:block;
+    color: #fff;
+    outline-style: none;
+}
+
+.control-dark {
+    display:block;
+    height:54px;
+    width:72px;
+    text-align:center;
+    zoom:1;
+}
+
+.control-button .text {
+    margin:0 auto;
+    padding-top: 0;
+    text-align: center;
+    font-size:12px;
+}
+
+.menuIcon {
+    text-align:center;
+    font-size:22px;
+    padding: 6px 0px 4px 0px;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    color: white;
+    line-height:22px;
+}
+
+
+
+.bar {
+    fill: steelblue;
+}
+
+.bar:hover {
+    fill: brown;
+}
+
+.axis {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}

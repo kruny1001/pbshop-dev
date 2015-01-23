@@ -8,10 +8,12 @@ module.exports = function(app) {
     //var users = require('../../app/controllers/users.server.controller');
     var gskb = require('../../app/controllers/gskb.server.controller');
 
-
     // gskbs Routes
     app.route('/gskbs')
         .get(gskb.list);
+
+    app.route('/gskbs/totalIndex')
+        .get(gskb.getTotalbyKeyword);
 
     /*
     app.route('/products/list/:bannerId')

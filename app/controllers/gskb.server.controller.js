@@ -35,20 +35,50 @@ var getErrorMessage = function(err) {
  * List of Products
  */
 exports.list = function(req, res) {
-
     gskb.find({}, {genes:1, genesSym:1})
         .exec(function(err, gskbs) {
-    if (err) {
-        return res.send(400, {
-            message: getErrorMessage(err)
-        });
-    } else {
-        res.jsonp(gskbs);
-    }
-
-    });
-
+            if (err) {
+                return res.send(400, {
+                    message: getErrorMessage(err)
+                });
+            } else {
+                res.jsonp(gskbs);
+            }
+        }
+    );
 };
+
+exports.getTotalbyKeyword = function(req, res){
+    var o ={};
+    o.map = function() {
+        emit(this.year, 1)
+    }
+    o.reduce = function(k, vals){
+        //console.log(vals);
+        return Array.sum(vals);
+    }
+    o.verbose = true;
+    o.out = { replace: 'createdCollectionNameForResults' }
+    // promise version of mapreduce
+
+    var promise = gskb.mapReduce(o);
+    promise.then(function (model, stats) {
+        console.log('map reduce took %d ms', stats.processtime);
+        return model.find().where('value').gt(1).exec();
+    }).then(function (docs) {
+        /*
+        var count = 0;
+        docs.forEach(function(result){
+            count += result.value;
+        });
+        */
+        res.jsonp(docs);
+        //console.log(docs);
+        //console.log('total docs are: ', count);
+    }).then(null, handleError).end();
+
+    function handleError(){console.log("error")}
+}
 
 /**
  * Product middleware
