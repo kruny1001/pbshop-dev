@@ -6,6 +6,7 @@ angular.module('calculator')
 		var calService = this;
 		calService.history=[];
 	})
+
 	// Cal Factory
 	.factory('calFactory', function(){
 		var histories = [];
@@ -23,8 +24,6 @@ angular.module('calculator')
             }
 		}
 	})
-
-
 
 	// End Cal Service
 
@@ -59,7 +58,6 @@ angular.module('calculator')
 			if(operators.indexOf(lastChar) > -1 || lastChar == '.')
 				equation = equation.replace(/.$/, '');
 
-
 			if(equation){
 				// Service
 				//calService.history.push({equation:appCal.input, result:eval(equation)});
@@ -72,6 +70,7 @@ angular.module('calculator')
 			var input = event.target.innerText;
 			appCal.input += input;
 		}
+
 
         $scope.$on('handleBroadcast', function(event, args) {
             appCal.input = calFactory.getHistoryByIndex(args.message).equation//'ONE: ' + args.message;

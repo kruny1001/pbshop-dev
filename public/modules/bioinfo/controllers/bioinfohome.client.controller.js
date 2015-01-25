@@ -4,11 +4,11 @@ angular.module('bioinfo').controller('BioinfohomeController', ['$scope','$http',
 	function($scope,$http) {
 		$scope.gsbks = [];
 
-            $http.get('gskbs/totalIndex').success(function(data){
-                $scope.gsbksIndex = data;
-
-                x.domain(data.map(function(d) { return d._id; }));
-                y.domain([0, d3.max(data, function(d) { return d.value; })]);
+            $http.get('gskbs-analysis/year').success(function(data){
+                $scope.gsbksIndex = data[0].result;
+                //console.log(data);
+                x.domain(data[0].result.map(function(d) { return d._id; }));
+                y.domain([0, d3.max(data[0].result, function(d) { return d.value; })]);
 
                 svg.append("g")
                     .attr("class", "x axis")
@@ -26,7 +26,7 @@ angular.module('bioinfo').controller('BioinfohomeController', ['$scope','$http',
                     .text("Total Indexs");
 
                 svg.selectAll(".bar")
-                    .data(data)
+                    .data(data[0].result)
                     .enter().append("rect")
                     .attr("class", "bar")
                     .attr("x", function(d) { return x(d._id); })

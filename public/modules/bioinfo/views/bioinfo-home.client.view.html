@@ -23,6 +23,36 @@
     </div>
     <div class="rightPane">
         <h3>GSBK Table</h3>
+
+        <style>
+            path {
+                stroke: steelblue;
+                stroke-width: 3;
+                fill: none;
+            }
+            line {
+                stroke: black;
+            }
+            .xLabel {
+                text-anchor: middle;
+            }
+            .yLabel {
+                text-anchor: end;
+            }
+            .xGrids {
+                stroke: lightgray;
+            }
+            .yGrids {
+                stroke: lightgray;
+            }
+            text {
+                font-family: Verdana;
+                font-size: 9pt;
+            }
+        </style>
+        <div id='barG' data-ng-controller="BioD31Controller">D3</div>
+
+
         <a href="http://erictheise.github.io/mctad.js/" target="_blank"> Statistics Method Javascript</a><br/>
         <a href="http://www.math.ucla.edu/~tom/distributions/chisq.html" target="_blank">Chi Square</a>
         <a href="http://www.math.ucla.edu/~tom/distributions/CONTENTS.html" target="_blank">Useful Contents</a>
@@ -31,6 +61,7 @@
         <ul>
             <li>Draw Total number of Index by year</li>
         </ul>
+
         <div id="graph"></div>
 
         <!--
@@ -51,5 +82,4 @@
         </div>
         -->
     </div>
-
 </section>

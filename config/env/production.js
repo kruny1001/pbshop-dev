@@ -22,8 +22,11 @@ module.exports = {
 				'public/lib/angular-touch/angular-touch.js', 
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.min.js',
-				'public/lib/angular-ui-utils/ui-utils.min.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
+				//'public/lib/angular-ui-utils/ui-utils.min.js',
+				//'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
+
+                'public/lib/jquery/dist/jquery.min.js',
+                'public/lib/oclazyload/dist/ocLazyLoad.min.js',
 
 				'public/lib/angular-aria/angular-aria.min.js',
 				'public/lib/hammerjs/hammer.min.js',
@@ -31,8 +34,9 @@ module.exports = {
 
 				'public/lib/gsap/src/minified/TimelineMax.min.js',
 				'public/lib/gsap/src/minified/TweenMax.min.js',
-				'public/lib/gsap/src/minified/utils/Draggable.min.js',
-				'public/lib/gsap/src/minified/plugins/TextPlugin.min.js',
+
+                'public/lib/gsap/src/minified/utils/Draggable.min.js',
+				//'public/lib/gsap/src/minified/plugins/TextPlugin.min.js',
 				'public/lib/gsap/src/minified/plugins/ScrollToPlugin.min.js',
 				'public/lib/gsap/src/minified/plugins/ColorPropsPlugin.min.js',
 				'public/lib/gsap/src/minified/plugins/CSSPlugin.min.js',
@@ -41,18 +45,20 @@ module.exports = {
 				'public/lib/ng-context-menu/dist/ng-context-menu.min.js',
 				//'public/lib/threejs/build/three.min.js',
 
+                /*
 				'public/lib/tremulajs/libs/hammer.js',
 				'public/lib/tremulajs/libs/jsBezier-0.6.js',
 				'public/lib/tremulajs/dist/Tremula.js',
+                */
 
 				'public/lib/Snap.svg/dist/snap.svg-min.js',
 				'public/lib/lodash/dist/lodash.min.js',
-				'public/lib/angular-google-maps/dist/angular-google-maps.min.js',
+				//'public/lib/angular-google-maps/dist/angular-google-maps.min.js',
 
 				'public/lib/d3/d3.min.js',
 				'public/lib/d3-timeline/src/d3-timeline.js',
 
-				'public/lib/topojson/topojson.js',
+				//'public/lib/topojson/topojson.js',
 
 				'public/lib/angular-smart-table/dist/smart-table.min.js'
 
