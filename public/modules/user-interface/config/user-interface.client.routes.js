@@ -19,7 +19,7 @@ angular.module('user-interface').config(['$stateProvider','$disqusProvider',
 			templateUrl: 'modules/user-interface/views/experimental-interface.client.view.html'
 		}).
 		state('listing-product', {
-			url: '/',
+			url: '/urimium',
 			templateUrl: 'modules/user-interface/views/listing-product.client.view.html'
 		})
 		.state('detail-product', {

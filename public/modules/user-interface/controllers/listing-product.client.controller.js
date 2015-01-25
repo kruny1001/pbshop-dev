@@ -1,8 +1,11 @@
 'use strict';
 
-angular.module('user-interface').controller('ListingProductController', ['$scope', '$log', 'Products',
-	function($scope, $log, Products) {
+angular.module('user-interface').controller('ListingProductController', ['$scope', '$log',
+	function($scope, $log) {
 
+        //product has been removed
+
+        
 		$scope.find = function() {
 			$scope.products = Products.query()
 			$scope.products.$promise.then(function (result) {

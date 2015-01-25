@@ -2760,7 +2760,7 @@ angular.module('mean-tutorials').config(['$stateProvider',
 			templateUrl: 'modules/mean-tutorials/views/project1.client.view.html'
 		}).
 		state('mean-home', {
-			url: '/mean-home',
+			url: '/',
 			templateUrl: 'modules/mean-tutorials/views/mean-home.client.view.html'
 		});
 	}
@@ -2779,7 +2779,7 @@ angular.module('mean-tutorials').controller('CalTestController', ['$scope',
 angular.module('mean-tutorials')
 	.controller('MeanLoginCtrl', ["$scope", "Authentication", function($scope, Authentication){
 		$scope.Auth = Authentication;
-		console.log($scope.Auth);
+		//console.log($scope.Auth);
 	}])
 	.controller('LeftCtrl', ["$scope", "$timeout", "$mdSidenav", "$log", function($scope, $timeout, $mdSidenav, $log) {
 		$scope.close = function() {
@@ -2949,7 +2949,7 @@ angular.module('mean-tutorials')
 
 				/*	Push an object into the items array for each table row/point on the timeline*/
 
-				console.log($(table).length);
+				//console.log($(table).length);
 
 				for (var i = 0; i < $(table).length; i++) {
 					var newObject = {};
@@ -2992,12 +2992,12 @@ angular.module('mean-tutorials')
 						items[i].credit = $(table).eq(i).children('td').eq(6).html();
 					}
 				};
-				console.log(items[0]);
+				//console.log(items[0]);
 				items = $scope.dataIn;
-				console.log(items);
+				//console.log(items);
 
 				items.forEach(function(value){
-					console.log(value);
+					//console.log(value);
 					value.date1 = getDate(value.dateStart);
 					value.date2 = getDate(value.dateEnd);
 				});
@@ -3736,9 +3736,7 @@ angular.module('mean-tutorials')
 			TweenMax.to(title, 0.5, {x:0});
 			TweenMax.to([meanTotem, meanTotemDesc], 1.3, {display:'none', height: '0%', opacity:0});
 		}
-
 		// End Animation //
-
 	}
 ]);
 
@@ -3989,7 +3987,7 @@ angular.module('user-interface').config(['$stateProvider','$disqusProvider',
 			templateUrl: 'modules/user-interface/views/experimental-interface.client.view.html'
 		}).
 		state('listing-product', {
-			url: '/',
+			url: '/urimium',
 			templateUrl: 'modules/user-interface/views/listing-product.client.view.html'
 		})
 		.state('detail-product', {
@@ -4445,9 +4443,12 @@ angular.module('user-interface').controller('Front1Controller', ['$scope','$log'
 
 'use strict';
 
-angular.module('user-interface').controller('ListingProductController', ['$scope', '$log', 'Products',
-	function($scope, $log, Products) {
+angular.module('user-interface').controller('ListingProductController', ['$scope', '$log',
+	function($scope, $log) {
 
+        //product has been removed
+
+        
 		$scope.find = function() {
 			$scope.products = Products.query()
 			$scope.products.$promise.then(function (result) {

@@ -3,7 +3,7 @@
 angular.module('mean-tutorials')
 	.controller('MeanLoginCtrl', function($scope, Authentication){
 		$scope.Auth = Authentication;
-		console.log($scope.Auth);
+		//console.log($scope.Auth);
 	})
 	.controller('LeftCtrl', function($scope, $timeout, $mdSidenav, $log) {
 		$scope.close = function() {
@@ -173,7 +173,7 @@ angular.module('mean-tutorials')
 
 				/*	Push an object into the items array for each table row/point on the timeline*/
 
-				console.log($(table).length);
+				//console.log($(table).length);
 
 				for (var i = 0; i < $(table).length; i++) {
 					var newObject = {};
@@ -216,12 +216,12 @@ angular.module('mean-tutorials')
 						items[i].credit = $(table).eq(i).children('td').eq(6).html();
 					}
 				};
-				console.log(items[0]);
+				//console.log(items[0]);
 				items = $scope.dataIn;
-				console.log(items);
+				//console.log(items);
 
 				items.forEach(function(value){
-					console.log(value);
+					//console.log(value);
 					value.date1 = getDate(value.dateStart);
 					value.date2 = getDate(value.dateEnd);
 				});
@@ -960,8 +960,6 @@ angular.module('mean-tutorials')
 			TweenMax.to(title, 0.5, {x:0});
 			TweenMax.to([meanTotem, meanTotemDesc], 1.3, {display:'none', height: '0%', opacity:0});
 		}
-
 		// End Animation //
-
 	}
 ]);
