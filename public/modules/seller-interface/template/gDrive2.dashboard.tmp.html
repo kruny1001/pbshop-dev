@@ -1,0 +1,82 @@
+<div style="margin:10px;" layout="column">
+    <md-toolbar class="md-theme-light">
+        <h1 class="md-toolbar-tools">
+            <span>Admin Dashboard </span>
+        </h1>
+    </md-toolbar>
+    <md-content class="md-padding">
+        </input>
+        업데이트 News<hr>
+        판매현황<hr>
+    </md-content>
+
+    <md-toolbar class="md-theme-light" md-theme="light-blue-dark">
+        <h1 class="md-toolbar-tools">
+                <span class="md-flex">
+                    Product Info ({{products.length}})
+                </span>
+            <span flex></span>
+            <md-button class="md-raised md-primary"
+                       noink
+                       style="background-color: #009688; font-weight: bold"
+                       aria-label="새로운 상품"
+                       ng-click="openNewProductDialog($event)">
+                새로운 상품
+            </md-button>
+        </h1>
+    </md-toolbar>
+    <md-content class="md-padding" style="overflow-y:hidden;">
+        <!--
+        <md-list>
+            <md-item ng-repeat="product in products">
+                <md-item-content>
+                    <div class="md-tile-left">
+                        <img ng-src="{{product.mainimg}}" class="face">
+                    </div>
+                    <div class="md-tile-content">
+                        <h5>{{product.name}} </h5>
+                        <h6>가격: {{product.price}}</h6>
+                    </div>
+                </md-item-content>
+            </md-item>
+        </md-list>
+        -->
+
+        <div layout="row" layout-padding>
+            <md-card ng-repeat="product in products" style="max-width:210px; max-height:250px; min-width:120px">
+                <img ng-src="{{product.mainimg}}"
+                     class="md-card-image">
+
+                <h6>{{product.name}}</h6>
+                <h6>(가격: {{product.price}})</h6>
+                <!--
+                <md-button class="md-raised md-primary" ng-click="redirect('gDrive2.editProduct', product._id)">
+                    <h6>Edit</h6>
+                </md-button>
+                -->
+            </md-card>
+        </div>
+    </md-content>
+
+    <md-toolbar class="md-theme-light">
+        <h1 class="md-toolbar-tools"><span class="md-flex">Reviews</span></h1>
+    </md-toolbar>
+    <md-content class="md-padding">
+        <md-list>
+            <md-item ng-repeat="item in todos">
+                <md-item-content>
+                    <div class="md-tile-left">
+                        <img ng-src="{{item.product_uri}}" class="face" alt="{{item.who}}">
+                    </div>
+                    <div class="md-tile-content">
+                        <h3>{{item.name}}</h3>
+                        <h4>{{item.when}}</h4>
+                        <p>
+                            {{item.notes}}
+                        </p>
+                    </div>
+                </md-item-content>
+            </md-item>
+        </md-list>
+    </md-content>
+</div>

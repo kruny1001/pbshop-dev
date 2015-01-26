@@ -81,12 +81,30 @@ ApplicationConfiguration.registerModule('disqus');
 
 'use strict';
 
+// Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('g-drive');
+
+'use strict';
+
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('mean-events');
 'use strict';
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('mean-tutorials');
+
+'use strict';
+
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('payments');
+'use strict';
+
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('products');
+'use strict';
+
+// Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('seller-interface');
 
 'use strict';
 
@@ -2638,6 +2656,231 @@ angular.module('core').service('Menus', [
 
 'use strict';
 
+var CONFIG = {
+	clientId: '574563539488-n0vrevgjp3606l20hfk4rqfk1dc8j3qb.apps.googleusercontent.com',
+	developerKey: 'AIzaSyBEGA9BOSoo0DF69RNRh9MsMKDxaVlnT_U',
+	scopes: [
+		'https://www.googleapis.com/auth/drive',
+		'https://www.googleapis.com/auth/drive.appdata',
+		'https://www.googleapis.com/auth/plus.me',
+		'https://www.googleapis.com/auth/paymentssandbox.make_payments'
+	]
+};
+angular.module('g-drive').value('configGdrive', CONFIG);
+
+//Setting up route
+angular.module('g-drive').config(['$stateProvider',
+	function($stateProvider) {
+	}
+]);
+
+"use strict";
+function GDocs(selector) {
+    var SCOPE_ = 'https://www.googleapis.com/drive/v2/';
+    this.lastResponse = null;
+    this.__defineGetter__('SCOPE', function() {
+        return SCOPE_;
+    });
+    this.__defineGetter__('DOCLIST_FEED', function() {
+        return SCOPE_ + 'files/';
+    });
+    this.__defineGetter__('CREATE_SESSION_URI', function() {
+        return 'https://www.googleapis.com/upload/drive/v2/files?uploadType=resumable';
+    });
+    this.__defineGetter__('DEFAULT_CHUNK_SIZE', function() {
+        return 1024 * 1024 * 5; // 5MB;
+    });
+};
+GDocs.prototype.auth = function(interactive, opt_callback) {
+    try {
+        chrome.identity.getAuthToken({interactive: interactive}, function(token) {
+            if (token) {
+                this.accessToken = token;
+                opt_callback && opt_callback();
+            }
+        }.bind(this));
+    } catch(e) {
+        console.log(e);
+    }
+};
+GDocs.prototype.removeCachedAuthToken = function(opt_callback) {
+    if (this.accessToken) {
+        var accessToken = this.accessToken;
+        this.accessToken = null;
+        // Remove token from the token cache.
+        chrome.identity.removeCachedAuthToken({
+            token: accessToken
+        }, function() {
+            opt_callback && opt_callback();
+        });
+    } else {
+        opt_callback && opt_callback();
+    }
+};
+GDocs.prototype.revokeAuthToken = function(opt_callback) {
+    if (this.accessToken) {
+        // Make a request to revoke token
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://accounts.google.com/o/oauth2/revoke?token=' +
+        this.accessToken);
+        xhr.send();
+        this.removeCachedAuthToken(opt_callback);
+    }
+}
+GDocs.prototype.makeRequest = function(method, url, callback, opt_data, opt_headers) {
+    var data = opt_data || null;
+    var headers = opt_headers || {};
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url, true);
+    // Include common headers (auth and version) and add rest.
+    xhr.setRequestHeader('Authorization', 'Bearer ' + this.accessToken);
+    for (var key in headers) {
+        xhr.setRequestHeader(key, headers[key]);
+    }
+    xhr.onload = function(e) {
+        this.lastResponse = this.response;
+        callback(this.lastResponse, this);
+    }.bind(this);
+    xhr.onerror = function(e) {
+        console.log(this, this.status, this.response,
+            this.getAllResponseHeaders());
+    };
+    xhr.send(data);
+};
+GDocs.prototype.upload = function(blob, callback, retry) {
+    var onComplete = function(response) {
+        document.getElementById('main').classList.remove('uploading');
+        var entry = JSON.parse(response).entry;
+        callback.apply(this, [entry]);
+    }.bind(this);
+    var onError = function(response) {
+        if (retry) {
+            this.removeCachedAuthToken(
+                this.auth.bind(this, true,
+                    this.upload.bind(this, blob, callback, false)));
+        } else {
+            document.getElementById('main').classList.remove('uploading');
+            throw new Error('Error: '+response);
+        }
+    }.bind(this);
+    var uploader = new MediaUploader({
+        token: this.accessToken,
+        file: blob,
+        onComplete: onComplete,
+        onError: onError
+    });
+    document.getElementById('main').classList.add('uploading');
+    uploader.upload();
+};
+
+/*
+ * Created by Kevin on 2014-10-29.
+* */
+
+'use strict';
+
+angular.module('g-drive').factory('Googledrive', ['configGdrive',
+	function(configGdrive) {
+		return {
+			createFolder: createFolder,
+			findFolder: findFolder,
+			getGoogleDriveInfo: getGoogleDriveInfo,
+			setupPicker: setupPicker,
+			listFolder: listFolder
+		};
+
+		function createFolder(FolderName, accessToken){
+			var request = gapi.client.request({
+				'path': '/drive/v2/files/',
+				'method': 'POST',
+				'headers': {
+					'Content-Type': 'application/json',
+					'Authorization': 'Bearer ' + accessToken
+				},
+				'body':{
+					"title" : FolderName,
+					"mimeType" : "application/vnd.google-apps.folder"
+				}
+			});
+			request.execute(function(resp) {
+				console.log(resp);
+			});
+		}
+
+		// Search Folder
+		function findFolder(callback){
+			gapi.client.load('drive', 'v2').then(function(){
+				var request = gapi.client.drive.files.list({
+					q: "title contains 'URI-'",
+					fields: 'items(id\,title)'
+				});
+				request.then(function(resp){
+					callback(resp);
+				});
+			});
+		}
+
+		function getGoogleDriveInfo(){
+			gapi.client.load('drive', 'v2').then(function() {
+				var request = gapi.client.drive.about.get();
+				request.execute(function (resp) {
+					console.log('Current user name: ' + resp.name);
+					console.log('Root folder ID: ' + resp.rootFolderId);
+					console.log('Total quota (bytes): ' + resp.quotaBytesTotal);
+					console.log('Used quota (bytes): ' + resp.quotaBytesUsed);
+				});
+			});
+		}
+
+		//Google File Picker Platform
+		function setupPicker(accessToken, callback){
+			var callbackAfterFindFolder = function(resp){
+				var folderID = resp.result.items[0].id;
+				var picker = new google.picker.PickerBuilder()
+					.setOAuthToken(accessToken)
+					.setDeveloperKey(configGdrive.developerKey)
+					.addView(new google.picker.DocsUploadView().setParent(folderID))
+					.addView(new google.picker.DocsView().setParent(folderID))
+					.enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
+					.setLocale('ko')
+					//.enableFeature(google.picker.Feature.NAV_HIDDEN)
+					.setCallback(callback)
+					.build();
+				picker.setVisible(true);
+			}
+			findFolder(callbackAfterFindFolder);
+
+
+		}
+
+		function listFolder(){
+			gapi.client.load('drive', 'v2').then(function() {
+
+				var request = gapi.client.drive.files.list({
+					maxResults:10,
+					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
+				});
+				request.then(function(resp){
+					console.log('result File list');
+					console.log(resp)
+				});
+
+				var request = gapi.client.drive.files.list({
+					maxResults:10,
+					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
+				});
+				request.then(function(resp){
+					console.log('result File list');
+					console.log(resp)
+				});
+
+			});
+		}
+	}
+]);
+
+'use strict';
+
 // Configuring the Articles module
 angular.module('mean-events').run(['Menus',
 	function(Menus) {
@@ -3893,6 +4136,299 @@ angular.module('mean-tutorials').controller('ProjectViewController', ['$scope', 
 	}
 ]);
 
+'use strict';
+
+angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['$scope', '$state', '$http', '$q', '$mdDialog', '$mdSidenav', 'configGdrive', 'Googledrive', 'GooglePlus', 'Products', 'Authentication', 'ProductByUserId',
+    function ($scope, $state, $http, $q, $mdDialog, $mdSidenav, configGdrive, Googledrive, GooglePlus, Products, Authentication, ProductByUserId) {
+        $scope.authentication = Authentication;
+
+        $scope.testCreateFolder = function(){
+            //console.log(accessToken);
+            Googledrive.createFolder('chulwoo Fuck', accessToken);
+        };
+
+        $scope.testGetGoogleDriveInfo = function() {
+            Googledrive.getGoogleDriveInfo();
+        }
+
+
+        /*
+        $scope.goChildView = function(stateName){
+            $state.go(stateName);
+            $mdSidenav('left').close();
+        }
+
+        $scope.redirect = function(stateName, param){
+            $state.go(stateName, {productId: param});
+            $mdSidenav('left').close();
+        }
+        */
+        //$scope.queriedProduct = ProductByUserId.query({userId:$scope.authentication.user._id });
+
+        /*
+         google.load('visualization', '1', {
+         packages: ['corechart']
+         });
+
+
+         var data = google.visualization.arrayToDataTable([
+         ['Year', 'Sales', 'Expenses'],
+         ['명이나물', 1000, 400],
+         ['더덕나물', 1170, 460],
+         ['문어젖갈', 660, 1120],
+         ['오징어젖갈', 1030, 540]
+         ]);
+         var options = {
+         title: 'Company Performance'
+         };
+         var chart = new google.visualization.LineChart(document.getElementById('chartdiv'));
+
+         chart.draw(data, options);
+         /**/
+
+        var accessToken;
+        $scope.permalLink = 'http://drive.google.com/uc?export=view&id=';
+        $scope.arrive = false;
+        $scope.authName = 'Authorize';
+        $scope.isAuth = false;
+        $scope.init = function init(){
+            window.gapi.load('auth', $scope.authenticateWithGoogle);
+            window.gapi.load('picker');
+            gapi.client.load('urlshortener', 'v1');
+        }
+        $scope.authenticateWithGoogle =function authenticateWithGoogle(){
+            window.gapi.auth.authorize({
+                'client_id': configGdrive.clientId,
+                'scope':configGdrive.scopes,
+                'immediate': false
+            }, handleAuthentication);
+        }
+        function handleAuthentication(result){
+            if(result && !result.error){
+                $scope.isAuth = true;
+                $scope.authName = 'Deauthorize';
+                accessToken = result.access_token;
+                //console.log(accessToken);
+
+                /*
+                 callGooglePlus();
+                 setFilePicker();
+                 listFolder();
+                 getGoogleDriveInfo();
+                 createFolder();
+                 */
+                createNewAccountFolder();
+                setFilePicker(); // singleFile
+                //findTargetUriFolder();
+            }else{
+                console.log(result);
+                console.log(result.error);
+                console.log('fail to authentication')
+            }
+            $scope.$digest();
+        }
+
+        function listFolder() {
+            Googledrive.listFolder()
+        }
+        /*
+         function createFolder(){
+         var folderName;
+         Googledrive.createFolder(folderName, accessToken);
+         }
+         */
+        function getGoogleDriveInfo(){
+            Googledrive.getGoogleDriveInfo();
+        }
+
+        /// Custom file Picker Start ----------------------------------------------------------
+        /*
+         function setFilePicker() {
+         var filePicker = document.getElementById('filePicker');
+
+         filePicker.style.display = 'none';
+
+         // Access token has been successfully retrieved, requests can be sent to the API.
+         filePicker.style.display = 'block';
+         filePicker.onchange = uploadFile;
+         }
+
+         function uploadFile(evt) {
+         var callback = function(file) {
+         console.log('!!File!!');
+         console.log(file);
+         }
+         gapi.client.load('drive', 'v2', function() {
+         var file = evt.target.files[0];
+         insertFile(file, callback);
+         });
+         }
+
+         function insertFile(fileData, callback) {
+         var boundary = '-------314159265358979323846';
+         var delimiter = "\r\n--" + boundary + "\r\n";
+         var close_delim = "\r\n--" + boundary + "--";
+
+         var reader = new FileReader();
+         reader.readAsBinaryString(fileData);
+         reader.onload = function(e) {
+         var contentType = fileData.type || 'application/octet-stream';
+         var metadata = {
+         'title': fileData.name,
+         'mimeType': contentType,
+         'writersCanShare':true,
+         'parents': [{
+         'kind': "drive#fileLink",
+         'id': "0B8FisuvAYPTfN1o1Q0d4T2JLTk0"
+         }]
+
+         };
+
+         var base64Data = btoa(reader.result);
+         var multipartRequestBody =
+         delimiter +
+         'Content-Type: application/json\r\n\r\n' +
+         JSON.stringify(metadata) +
+         delimiter +
+         'Content-Type: ' + contentType + '\r\n' +
+         'Content-Transfer-Encoding: base64\r\n' +
+         '\r\n' +
+         base64Data +
+         close_delim;
+         console.log(multipartRequestBody);
+
+         var request = gapi.client.request({
+         'path': '/upload/drive/v2/files',
+         'method': 'POST',
+         'params': {'uploadType': 'multipart'},
+         'headers': {
+         'Content-Type': 'multipart/mixed; boundary="' + boundary + '"'
+         },
+         'body': multipartRequestBody});
+         if (!callback) {
+         callback = function(file) {
+         console.log(file)
+         };
+         }
+         request.execute(callback);
+         }
+         }
+         */
+        /// Custom file Picker End ----------------------------------------------------------
+
+        function callGooglePlus(){
+            function callback(resp) {
+                console.log(resp);
+                var heading = document.createElement('h4');
+                var image = document.createElement('img');
+                image.src = resp.result.image.url;
+                heading.appendChild(image);
+                heading.appendChild(document.createTextNode(resp.result.displayName));
+
+                document.getElementById('content').appendChild(heading);
+            }
+            GooglePlus.callGooglePlus(callback);
+        }
+
+        // Google PlatForm Service
+        $scope.setupPicker = function() {
+            function pickerCallback(data) {
+                if(data.action == google.picker.Action.PICKED){
+                    //do something
+                    $scope.files = data.docs;
+                    $scope.arrive = true;
+
+                    // make shorten URL
+                    var request = gapi.client.urlshortener.url.get({
+                        'shortUrl': 'http://goo.gl/fbsS'
+                    });
+                    request.then(function(response) {
+                        appendResults(response.result.longUrl);
+                    }, function(reason) {
+                        console.log('Error: ' + reason.result.error.message);
+                    });
+
+                    //alert('URL: ' + data.docs[0].url);
+                    $scope.$digest()
+                }else if(data.action ==google.picker.Action.CANCEL){
+                    //alert('goodbye');
+                }
+            }
+            Googledrive.setupPicker(accessToken, pickerCallback);
+        }
+
+        function createNewAccountFolder(){
+            //Pre. Get User Information
+            //check if there exists an
+            // API /users/me (only allow to have)
+
+            var callback = function(resp){
+                console.log(resp.result.items.length);
+                if(resp.result.items.length == 0){
+                    $http.get('users/me')
+                        .success(function(response) {
+                            console.log(response);
+                            var folderName = 'URI-'+response._id;
+                            //1. Create A New Folder
+                            Googledrive.createFolder(folderName, accessToken);
+                            //2. Update User Information
+                            //$http.get()
+                        });
+                }
+                else{
+                    console.log('there is already exist')
+                    $scope.rootGdriveFolderID = resp.result.items[0].id
+                    $scope.$digest();
+                }
+            }
+            Googledrive.findFolder(callback);
+        }
+
+        $scope.find = function() {
+            $scope.products = ProductByUserId.query({userId:$scope.authentication.user._id });
+        };
+
+        $scope.onChangeStatus = function(){
+            console.log('sdfsf');
+            $scope.$digest();
+        };
+
+        $scope.openNewProductDialog = function(ev) {
+            //Open Dialog
+            $mdDialog.show({
+                templateUrl: 'modules/seller-interface/template/newProductTemplate.html',
+                targetEvent: ev,
+                controller: newProductDialog,
+                clickOutsideToClose  : false
+            }).then(function() {
+                $scope.alert = 'You said "Okay".';
+            }, function() {
+                $scope.alert = 'You cancelled the dialog.';
+            });
+        };
+
+        function newProductDialog($scope, $mdDialog){
+            $scope.hide = function() {
+                $mdDialog.hide();
+            };
+            $scope.cancel = function() {
+                $mdDialog.cancel();
+            };
+            $scope.answer = function(answer) {
+                $mdDialog.hide(answer);
+            };
+        }
+
+        $scope.toggleLeft = function() {
+            $mdSidenav('left').open();
+        };
+
+        $scope.getPaymentHistory = function() {
+            $scope.payments = Payments.query();
+        }
+	}
+]);
+
 var CalendarException = function CalendarException(message) {
     this.message = message;
     this.toString = function() {
@@ -4013,6 +4549,1633 @@ angular.module('mean-tutorials').directive('macWindow', [
 				}
 			}
 		};
+	}
+]);
+
+'use strict';
+
+// Configuring the Articles module
+angular.module('payments').run(['Menus',
+	function(Menus) {
+		// Set top bar menu items
+		//Menus.addMenuItem('topbar', 'Payments', 'payments', 'dropdown', '/payments(/create)?');
+		//Menus.addSubMenuItem('topbar', 'payments', 'List Payments', 'payments');
+		//Menus.addSubMenuItem('topbar', 'payments', 'New Payment', 'payments/create');
+	}
+]);
+'use strict';
+
+//Setting up route
+angular.module('payments').config(['$stateProvider',
+	function($stateProvider) {
+		// Payments state routing
+		$stateProvider.
+		state('listPayments', {
+			url: '/payments',
+			templateUrl: 'modules/payments/views/list-payments.client.view.html'
+		}).
+		state('createPayment', {
+			url: '/payments/create',
+			templateUrl: 'modules/payments/views/create-payment.client.view.html'
+		}).
+		state('viewPayment', {
+			url: '/payments/:paymentId',
+			templateUrl: 'modules/payments/views/view-payment.client.view.html'
+		}).
+		state('editPayment', {
+			url: '/payments/:paymentId/edit',
+			templateUrl: 'modules/payments/views/edit-payment.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+// Payments controller
+angular.module('payments').controller('PaymentsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Payments',
+	function($scope, $stateParams, $location, Authentication, Payments ) {
+		$scope.authentication = Authentication;
+
+		// Create new Payment
+		$scope.create = function() {
+			// Create new Payment object
+			var payment = new Payments ({
+				name: this.name
+			});
+
+			// Redirect after save
+			payment.$save(function(response) {
+				$location.path('payments/' + response._id);
+
+				// Clear form fields
+				$scope.name = '';
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Remove existing Payment
+		$scope.remove = function( payment ) {
+			if ( payment ) { payment.$remove();
+
+				for (var i in $scope.payments ) {
+					if ($scope.payments [i] === payment ) {
+						$scope.payments.splice(i, 1);
+					}
+				}
+			} else {
+				$scope.payment.$remove(function() {
+					$location.path('payments');
+				});
+			}
+		};
+
+		// Update existing Payment
+		$scope.update = function() {
+			var payment = $scope.payment ;
+
+			payment.$update(function() {
+				$location.path('payments/' + payment._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Find a list of Payments
+		$scope.find = function() {
+			$scope.payments = Payments.query();
+		};
+
+		// Find existing Payment
+		$scope.findOne = function() {
+			$scope.payment = Payments.get({ 
+				paymentId: $stateParams.paymentId
+			});
+		};
+	}
+]);
+'use strict';
+
+angular.module('payments').factory('GetPurchaseJWT', ['$resource',
+	function($resource) {
+		return $resource('purchase/gw_test/:productID/:qty/:optdesc',
+			{
+				productID: '@_id',
+				qty:'@qty',
+				optdesc:'@optdesc'
+			}, {query: {method:'get', isArray:true}}
+		);
+	}
+]);
+
+'use strict';
+
+//Payments service used to communicate Payments REST endpoints
+angular.module('payments').factory('Payments', ['$resource',
+	function($resource) {
+		return $resource('payments/:paymentId', {
+			paymentId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);
+
+angular.module('payments').factory('PaymentsBySellerData', ['$resource',
+	function($resource) {
+		return $resource('payments/:sellerData', {
+			sellerData: '@sellerData'
+		}, {
+		});
+	}
+]);
+'use strict';
+
+//Setting up route
+angular.module('products').config(['$stateProvider',
+    function($stateProvider) {
+        // Products state routing
+        $stateProvider.
+            state('listProducts', {
+                url: '/products',
+                templateUrl: 'modules/products/views/list-products.client.view.html'
+            }).
+            state('listProductsUnderBanner', {
+                url: '/products/list/:bannerId',
+                templateUrl: 'modules/products/views/list-products-banner.client.view.html'
+            }).
+            state('createProduct', {
+                url: '/products/create/:bannerId',
+                templateUrl: 'modules/products/views/create-product.client.view.html'
+            }).
+            state('viewProduct', {
+                url: '/products/:productId',
+                templateUrl: 'modules/products/views/view-product.client.view.html'
+            }).
+            state('editProduct', {
+                url: '/products/:productId/edit',
+                templateUrl: 'modules/products/views/edit-product.client.view.html'
+            });
+    }
+]);
+'use strict';
+
+// Products controller
+angular.module('products').controller('ProductsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Products', 'Banners', 'ProductsBanner',
+    function($scope, $stateParams, $location, Authentication, Products, Banners, ProductsBanner) {
+        $scope.authentication = Authentication;
+        $scope.parentId=$stateParams.bannerId;
+
+        // Create new Product
+        $scope.create = function() {
+        	// Create new Product object
+            var product = new Products({
+                name: this.name,
+                mainimg: this.mainimg,
+                imgs: this.imgs,
+                price: this.price,
+                description: this.description,
+                parentId: $scope.parentId // Product record is under banner content
+            });
+
+            // Redirect after save
+            product.$save(function(response) {
+                $location.path('products/' + response._id);
+            }, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+
+            // Clear form fields
+            this.name = '';
+            this.mainimg ='';
+            this.imgs='';
+            this.price=0;
+            this.description = '';
+        };
+
+        // Remove existing Product
+        $scope.remove = function(product) {
+            if (product) {
+                product.$remove();
+
+                for (var i in $scope.products) {
+                    if ($scope.products[i] === product) {
+                        $scope.products.splice(i, 1);
+                    }
+                }
+            } else {
+                $scope.product.$remove(function() {
+                    $location.path('products');
+                });
+            }
+        };
+
+        // Update existing Product
+        $scope.update = function() {
+            var product = $scope.product;
+
+            product.$update(function() {
+                $location.path('products/' + product._id);
+            }, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+        };
+
+        // Find a list of Products
+        $scope.find = function() {
+            $scope.products = Products.query();
+        };
+
+        $scope.findBanners = function() {
+            $scope.banners = Banners.query();
+        };
+
+        // Find existing Product
+        $scope.findOne = function() {
+            $scope.product = Products.get({
+                productId: $stateParams.productId
+            });
+        };
+
+        $scope.findProductUnderBanner = function() {
+            console.log('banner id is '+ $scope.parentId);
+            $scope.products = ProductsBanner.query({},{bannerId:$scope.parentId});
+        }
+    }
+]);
+/**
+ * Created by KevinSo on 9/24/2014.
+ */
+
+'use strict';
+
+//Products service used to communicate Products REST endpoints
+angular.module('products').factory('ProductsBanner', ['$resource', function($resource) {
+    return $resource('products/list/:bannerId', {
+        bannerId: '@bannerId'
+    }, {
+        update: {
+            method: 'PUT'
+        },
+        query: {
+            method: 'GET',
+            isArray: true
+        }
+    });
+}]);
+
+angular.module('products').factory('ProductByUserId', ['$resource', function($resource) {
+    return $resource('products/find/:userId', {
+        userId: '@userId'
+    }, {
+        update: {
+            method: 'PUT'
+        },
+        query: {
+            method: 'GET',
+            isArray: true
+        }
+    });
+}]);
+'use strict';
+
+//Products service used to communicate Products REST endpoints
+angular.module('products').factory('Products', ['$resource', function($resource) {
+    return $resource('products/:productId', {
+        productId: '@_id'
+    }, {
+        update: {
+            query: 'GET',
+            method: 'PUT'
+        }
+    });
+}]);
+
+'use strict';
+
+//Setting up route
+angular.module('seller-interface').config(['$stateProvider',
+	function($stateProvider) {
+		// Gdriveapps state routing
+		$stateProvider.
+			state('weather', {
+				url: '/weather',
+				templateUrl: 'modules/seller-interface/views/weather.client.view.html'
+			}).
+			state('listGdriveapps', {
+				url: '/gdriveapps',
+				templateUrl: 'modules/seller-interface/views/list-gdriveapps.client.view.html'
+			}).
+			state('createGdriveapp', {
+				url: '/gdriveapps/create',
+				templateUrl: 'modules/seller-interface/views/create-gdriveapp.client.view.html'
+			}).
+			state('viewGdriveapp', {
+				url: '/gdriveapps/:gdriveappId',
+				templateUrl: 'modules/seller-interface/views/view-gdriveapp.client.view.html'
+			}).
+			state('editGdriveapp', {
+				url: '/gdriveapps/:gdriveappId/edit',
+				templateUrl: 'modules/seller-interface/views/edit-gdriveapp.client.view.html'
+			}).
+			state('gDrive', {
+				url: '/gDrive',
+				templateUrl: 'modules/seller-interface/views/gdrive.html'
+			}).
+			state('gDrive2', {
+				abstract: true,
+				url: '/gDrive2',
+				templateUrl: 'modules/seller-interface/views/storage.html'
+			}).
+			state('gDrive2.dashboard', {
+				url: '/dashboard',
+				templateUrl: 'modules/seller-interface/template/gDrive2.dashboard.tmp.html'
+			}).
+			state('gDrive2.addNewProduct', {
+				url: '/addNewProduct',
+				templateUrl: 'modules/seller-interface/template/gDrive2.addNewProduct.tmp.html'
+			}).
+			state('gDrive2.editProduct', {
+				url: '/editProduct/:productId',
+				templateUrl: 'modules/seller-interface/template/gDrive2.editProduct.tmp.html'
+			}).
+			state('gDrive2.historyPayment', {
+				url: '/historyPayment',
+				templateUrl: 'modules/seller-interface/template/gDrive2.historyPayment.tmp.html'
+			})
+			/*.
+
+			 state('createFile', {
+			 url: '/create',
+			 templateUrl:'modules/gdriveapps/views/create-doc.client.view.html',
+			 controller: 'CreateDocController'
+			 }).
+			 state('installTodo', {
+			 url: '/install',
+			 templateUrl:'modules/gdriveapps/views/install-todo.client.view.html',
+			 controller: 'InstallTodoController'
+			 }).
+			 state('todoState',{
+			 url:'/todos/:fileId/:filter',
+			 templateUrl:'modules/gdriveapps/views/install-todo.client.view.html',
+			 controller:'todoController',
+			 resolve: {
+			 //realtimeDocument: app.loadFile
+			 }
+			 })*/;
+	}
+]);
+
+'use strict';
+
+angular.module('seller-interface').controller('DocsController', ['$scope', '$http', 'gdocs',
+	function($scope, $http, gdocs) {
+		$scope.test = 'test_123';
+		$scope.docs = [];
+
+		// Response handler that caches file icons in the filesystem API.
+		function successCallbackWithFsCaching(resp, status, headers, config) {
+			var docs = [];
+			var totalEntries = resp.items.length;
+			console.log(totalEntries);
+			resp.items.forEach(function(entry, i) {
+				var doc = {
+					title: entry.title,
+					updatedDate: Util.formatDate(entry.modifiedDate),
+					updatedDateFull: entry.modifiedDate,
+					icon: entry.iconLink,
+					alternateLink: entry.alternateLink,
+					size: entry.fileSize ? '( ' + entry.fileSize + ' bytes)' : null
+				};
+
+				// 'http://gstatic.google.com/doc_icon_128.png' -> 'doc_icon_128.png'
+				doc.iconFilename = doc.icon.substring(doc.icon.lastIndexOf('/') + 1);
+				console.log(doc.icon);
+				// If file exists, it we'll get back a FileEntry for the filesystem URL.
+				// Otherwise, the error callback will fire and we need to XHR it in and
+				// write it to the FS.
+				var fsURL = fs.root.toURL() + FOLDERNAME + '/' + doc.iconFilename;
+				window.webkitResolveLocalFileSystemURL(fsURL, function(entry) {
+					console.log('Fetched icon from the FS cache');
+
+					doc.icon = entry.toURL(); // should be === to fsURL, but whatevs.
+
+					$scope.docs.push(doc);
+
+					// Only want to sort and call $apply() when we have all entries.
+					if (totalEntries - 1 == i) {
+						$scope.docs.sort(Util.sortByDate);
+						$scope.$apply(function($scope) {}); // Inform angular we made changes.
+					}
+				}, function(e) {
+
+					$http.get(doc.icon, {responseType: 'blob'}).success(function(blob) {
+						console.log('Fetched icon via XHR');
+
+						blob.name = doc.iconFilename; // Add icon filename to blob.
+
+						writeFile(blob); // Write is async, but that's ok.
+
+						doc.icon = window.URL.createObjectURL(blob);
+
+						$scope.docs.push(doc);
+						if (totalEntries - 1 == i) {
+							$scope.docs.sort(Util.sortByDate);
+						}
+					});
+
+				});
+			});
+		}
+
+		$scope.clearDocs = function() {
+			$scope.docs = []; // Clear out old results.
+		};
+
+		$scope.fetchDocs = function(retry) {
+			this.clearDocs();
+
+			if (gdocs.accessToken) {
+				var config = {
+					params: {'alt': 'json'},
+					headers: {
+						'Authorization': 'Bearer ' + gdocs.accessToken
+
+					}
+				};
+
+				//https://drive.google.com/open?id=0B8FisuvAYPTfampGWFhXQUs5dVU&authuser=0
+				$http.get(gdocs.DOCLIST_FEED, config).
+					success(successCallbackWithFsCaching).
+					error(function(data, status, headers, config) {
+						if (status == 401 && retry) {
+							gdocs.removeCachedAuthToken(
+								gdocs.auth.bind(gdocs, true,
+									$scope.fetchDocs.bind($scope, false)));
+						}
+					});
+			}
+		};
+
+		// Toggles the authorization state.
+		$scope.toggleAuth = function(interactive) {
+			if (!gdocs.accessToken) {
+				gdocs.auth(interactive, function() {
+					$scope.fetchDocs(false);
+				});
+			} else {
+				gdocs.revokeAuthToken(function() {});
+				this.clearDocs();
+			}
+		}
+
+		// Controls the label of the authorize/deauthorize button.
+		$scope.authButtonLabel = function() {
+			if (gdocs.accessToken)
+				return 'Deauthorize';
+			else
+				return 'Authorize';
+		};
+
+		$scope.toggleAuth(false);
+	}
+]);
+
+/**
+ * Created by Kevin on 2014-11-11.
+ */
+
+angular.module('seller-interface').controller('AddNewProductController', ['$scope','$stateParams','Authentication', 'Products', 'BannerByUserId',
+    function($scope, $stateParams, Authentication, Products, BannerByUserId) {
+        $scope.authentication = Authentication;
+        $scope.parentId=$stateParams.bannerId;
+        // Create new Product
+        $scope.create = function() {
+            // Create new Product object
+            var product = new Products({
+                name: this.name,
+                mainimg: this.mainimg,
+                imgs: this.imgs,
+                price: this.price,
+                description: this.description,
+                parentId: $scope.selectedBanner._id, // Product record is under banner content
+                detailDesc: $scope.detailDesc
+            });
+
+            // Redirect after save
+            product.$save(function(response) {
+                alert('Successfully Added');
+                $scope.error = '';
+            }, function(errorResponse) {
+                $scope.error = errorResponse.data.message;
+            });
+
+            // Clear form fields
+            this.name = '';
+            this.mainimg ='';
+            this.imgs='';
+            this.price=0;
+            this.description = '';
+        };
+
+        // Update existing Product
+        $scope.update = function() {
+            var product = $scope.product;
+
+            product.$update(function() {
+                //$location.path('products/' + product._id);
+                alert('updated successfully')
+            }, function(errorResponse) {
+                $scope.error = errorResponse.data.message;
+            });
+        };
+
+        // Find a list of Products
+        $scope.find = function() {
+            $scope.products = Products.query();
+        };
+
+        $scope.findBanners = function() {
+            $scope.banners = Banners.query();
+        };
+
+        // Find existing Product
+        $scope.findOne = function() {
+            Products.get({
+                productId: $stateParams.productId
+            }).$promise.then(function(result){
+                $scope.product = result;
+                $scope.selectOption();
+            });
+        };
+
+        $scope.findProductUnderBanner = function() {
+            console.log('banner id is '+ $scope.parentId);
+            $scope.products = ProductsBanner.query({},{bannerId:$scope.parentId});
+        };
+
+        $scope.getBanners = function() {
+            $scope.banners = BannerByUserId.query({userId: Authentication.user._id});
+        };
+
+        $scope.selectOption = function(){
+            $scope.selectedBanner = $scope.product.parentId;//$scope.product.parentId;
+        };
+    }
+]);
+
+
+angular.module('seller-interface')
+    .controller('gdrive', ['$scope','$state','$http','$q', '$mdDialog', '$mdSidenav','configGdrive', 'Googledrive', 'GooglePlus', 'Products','Authentication','ProductByUserId',
+        function ($scope, $state, $http, $q, $mdDialog, $mdSidenav, configGdrive, Googledrive, GooglePlus, Products, Authentication, ProductByUserId) {
+            $scope.authentication = Authentication;
+            $scope.goChildView = function(stateName){
+                $state.go(stateName);
+                $mdSidenav('left').close();
+            }
+
+            $scope.redirect = function(stateName, param){
+                $state.go(stateName, {productId: param});
+                $mdSidenav('left').close();
+            }
+
+            //$scope.queriedProduct = ProductByUserId.query({userId:$scope.authentication.user._id });
+
+        /*
+        google.load('visualization', '1', {
+            packages: ['corechart']
+        });
+
+
+         var data = google.visualization.arrayToDataTable([
+         ['Year', 'Sales', 'Expenses'],
+         ['명이나물', 1000, 400],
+         ['더덕나물', 1170, 460],
+         ['문어젖갈', 660, 1120],
+         ['오징어젖갈', 1030, 540]
+         ]);
+         var options = {
+         title: 'Company Performance'
+         };
+         var chart = new google.visualization.LineChart(document.getElementById('chartdiv'));
+
+         chart.draw(data, options);
+         /**/
+
+        $http({'url': 'http://drive.google.com/uc?export=view&id=0B8FisuvAYPTfZl9VUnEwcGdFdHc', method:"GET", headers: {
+            "Content-Type": "image/jpeg"
+        }})
+            .success(function(data) {
+                console.log(data);
+            })
+        $scope.data = {};
+        $scope.data.cb1 = true;
+        $scope.data.cb2 = false;
+
+        $scope.user = {
+            title:     "Technical Program Manager",
+            email:     "ipsum@lorem.com",
+            firstName: "Naomi",
+            lastName:  "" ,
+            company:   "Google" ,
+            address:   "1600 Amphitheatre Pkwy" ,
+            city:      "Mountain View" ,
+            state:     "CA" ,
+            country:   "USA" ,
+            postalCode : "94043"
+        };
+
+        $scope.todos = [
+            {
+                product_uri : 'http://drive.google.com/uc?export=view&id=0B8FisuvAYPTfaTJnaHRWWmozRUU',
+                name: '명이나물',
+                who: '명이게이',
+                when: '3:08PM',
+                notes: "아나니 아나니 아나니리요 아나니 아나니 아나니리요 아나니 아나니 아나니리요 아나니 아나니 아나니리요 아나니 아나니 아나니리요 아나니 아나니 아나니리요아나니 아나니 아나니리요 아나니 아나니 아나니리요 아나니 아나니 아나니리요 아나니 아나니 아나니리요 아나니 아나니 아나니리요 아나니 아나니 아나니리요"
+            },
+            {
+                product_uri : 'http://drive.google.com/uc?export=view&id=0B8FisuvAYPTfcDVGYVc3NEtaSEU',
+                name: '더덕나물',
+                who: '명이게이',
+                when: '3:08PM',
+                notes: " I'll be in your neighborhood doing errands"
+            },
+        ]
+
+        /*
+         * */
+        var accessToken;
+        $scope.permalLink = 'http://drive.google.com/uc?export=view&id=';
+        $scope.arrive = false;
+        $scope.authName = 'Authorize';
+        $scope.isAuth = false;
+        $scope.init = function init(){
+            window.gapi.load('auth', $scope.authenticateWithGoogle);
+            window.gapi.load('picker');
+            gapi.client.load('urlshortener', 'v1');
+        }
+        $scope.authenticateWithGoogle =function authenticateWithGoogle(){
+            window.gapi.auth.authorize({
+                'client_id': configGdrive.clientId,
+                'scope':configGdrive.scopes,
+                'immediate': false
+            }, handleAuthentication);
+        }
+        function handleAuthentication(result){
+            if(result && !result.error){
+                $scope.isAuth = true;
+                $scope.authName = 'Deauthorize';
+                accessToken = result.access_token;
+                //console.log(accessToken);
+
+                /*
+                 callGooglePlus();
+                 setFilePicker();
+                 listFolder();
+                 getGoogleDriveInfo();
+                 createFolder();
+                 */
+                createNewAccountFolder();
+                setFilePicker(); // singleFile
+                //findTargetUriFolder();
+            }else{
+                console.log(result);
+                console.log(result.error);
+                console.log('fail to authentication')
+            }
+            $scope.$digest();
+        }
+
+        function listFolder() {
+            Googledrive.listFolder()
+        }
+        /*
+         function createFolder(){
+         var folderName;
+         Googledrive.createFolder(folderName, accessToken);
+         }
+         */
+        function getGoogleDriveInfo(){
+            Googledrive.getGoogleDriveInfo();
+        }
+
+        /// Custom file Picker Start ----------------------------------------------------------
+        /*
+         function setFilePicker() {
+         var filePicker = document.getElementById('filePicker');
+
+         filePicker.style.display = 'none';
+
+         // Access token has been successfully retrieved, requests can be sent to the API.
+         filePicker.style.display = 'block';
+         filePicker.onchange = uploadFile;
+         }
+
+         function uploadFile(evt) {
+         var callback = function(file) {
+         console.log('!!File!!');
+         console.log(file);
+         }
+         gapi.client.load('drive', 'v2', function() {
+         var file = evt.target.files[0];
+         insertFile(file, callback);
+         });
+         }
+
+         function insertFile(fileData, callback) {
+         var boundary = '-------314159265358979323846';
+         var delimiter = "\r\n--" + boundary + "\r\n";
+         var close_delim = "\r\n--" + boundary + "--";
+
+         var reader = new FileReader();
+         reader.readAsBinaryString(fileData);
+         reader.onload = function(e) {
+         var contentType = fileData.type || 'application/octet-stream';
+         var metadata = {
+         'title': fileData.name,
+         'mimeType': contentType,
+         'writersCanShare':true,
+         'parents': [{
+         'kind': "drive#fileLink",
+         'id': "0B8FisuvAYPTfN1o1Q0d4T2JLTk0"
+         }]
+
+         };
+
+         var base64Data = btoa(reader.result);
+         var multipartRequestBody =
+         delimiter +
+         'Content-Type: application/json\r\n\r\n' +
+         JSON.stringify(metadata) +
+         delimiter +
+         'Content-Type: ' + contentType + '\r\n' +
+         'Content-Transfer-Encoding: base64\r\n' +
+         '\r\n' +
+         base64Data +
+         close_delim;
+         console.log(multipartRequestBody);
+
+         var request = gapi.client.request({
+         'path': '/upload/drive/v2/files',
+         'method': 'POST',
+         'params': {'uploadType': 'multipart'},
+         'headers': {
+         'Content-Type': 'multipart/mixed; boundary="' + boundary + '"'
+         },
+         'body': multipartRequestBody});
+         if (!callback) {
+         callback = function(file) {
+         console.log(file)
+         };
+         }
+         request.execute(callback);
+         }
+         }
+         */
+        /// Custom file Picker End ----------------------------------------------------------
+
+        function callGooglePlus(){
+            function callback(resp) {
+                console.log(resp);
+                var heading = document.createElement('h4');
+                var image = document.createElement('img');
+                image.src = resp.result.image.url;
+                heading.appendChild(image);
+                heading.appendChild(document.createTextNode(resp.result.displayName));
+
+                document.getElementById('content').appendChild(heading);
+            }
+            GooglePlus.callGooglePlus(callback);
+        }
+
+        // Google PlatForm Service
+        $scope.setupPicker = function() {
+            function pickerCallback(data) {
+                if(data.action == google.picker.Action.PICKED){
+                    //do something
+                    $scope.files = data.docs;
+                    $scope.arrive = true;
+
+                    // make shorten URL
+                    var request = gapi.client.urlshortener.url.get({
+                        'shortUrl': 'http://goo.gl/fbsS'
+                    });
+                    request.then(function(response) {
+                        appendResults(response.result.longUrl);
+                    }, function(reason) {
+                        console.log('Error: ' + reason.result.error.message);
+                    });
+
+                    //alert('URL: ' + data.docs[0].url);
+                    $scope.$digest()
+                }else if(data.action ==google.picker.Action.CANCEL){
+                    //alert('goodbye');
+                }
+            }
+            Googledrive.setupPicker(accessToken, pickerCallback);
+        }
+
+        function createNewAccountFolder(){
+            //Pre. Get User Information
+            //check if there exists an
+            // API /users/me (only allow to have)
+
+            var callback = function(resp){
+                console.log(resp.result.items.length);
+                if(resp.result.items.length == 0){
+                    $http.get('users/me')
+                        .success(function(response) {
+                            console.log(response);
+                            var folderName = 'URI-'+response._id;
+                            //1. Create A New Folder
+                            Googledrive.createFolder(folderName, accessToken);
+                            //2. Update User Information
+                            //$http.get()
+                        });
+                }
+                else{
+                    console.log('there is already exist')
+                    $scope.rootGdriveFolderID = resp.result.items[0].id
+                    $scope.$digest();
+                }
+            }
+            Googledrive.findFolder(callback);
+        }
+
+        $scope.find = function() {
+            $scope.products = ProductByUserId.query({userId:$scope.authentication.user._id });
+        };
+
+        $scope.onChangeStatus = function(){
+            console.log('sdfsf');
+            $scope.$digest();
+        };
+
+        $scope.openNewProductDialog = function(ev) {
+            //Open Dialog
+            $mdDialog.show({
+                templateUrl: 'modules/seller-interface/template/newProductTemplate.html',
+                targetEvent: ev,
+                controller: newProductDialog,
+                clickOutsideToClose  : false
+            }).then(function() {
+                $scope.alert = 'You said "Okay".';
+            }, function() {
+                $scope.alert = 'You cancelled the dialog.';
+            });
+        };
+
+        function newProductDialog($scope, $mdDialog){
+            $scope.hide = function() {
+                $mdDialog.hide();
+            };
+            $scope.cancel = function() {
+                $mdDialog.cancel();
+            };
+            $scope.answer = function(answer) {
+                $mdDialog.hide(answer);
+            };
+        }
+
+        $scope.toggleLeft = function() {
+            $mdSidenav('left').open();
+        };
+
+        $scope.getPaymentHistory = function() {
+            $scope.payments = Payments.query();
+        }
+    }]
+);
+
+angular.module('seller-interface').controller('BottomSheetExample', ["$scope", "$timeout", "$mdBottomSheet", function($scope, $timeout, $mdBottomSheet) {
+    $scope.alert = '';
+
+    $scope.showListBottomSheet = function($event) {
+        $mdBottomSheet.show({
+            templateUrl: 'modules/seller-interface/views/bottom-sheet-list-template.html',
+            controller: 'ListBottomSheetCtrl',
+            targetEvent: $event
+        }).then(function(clickedItem) {
+            $scope.alert = clickedItem.name + ' clicked!';
+        });
+    };
+
+    $scope.showGridBottomSheet = function($event) {
+        $mdBottomSheet.show({
+            templateUrl: 'modules/seller-interface/views/bottom-sheet-grid-template.html',
+            controller: 'GridBottomSheetCtrl',
+            targetEvent: $event
+        }).then(function(clickedItem) {
+            $scope.alert = clickedItem.name + ' clicked!';
+        });
+    };
+}])
+    .controller('LeftCtrl', ["$scope", "$timeout", "$mdSidenav", function($scope, $timeout, $mdSidenav) {
+        $scope.close = function() {
+            $mdSidenav('left').close();
+        };
+    }]);
+
+angular.module('seller-interface').controller('ListBottomSheetCtrl', ["$scope", "$mdBottomSheet", function($scope, $mdBottomSheet) {
+
+    $scope.items = [
+        { name: 'Upload New Image (Google Drive)', icon: 'share' },
+        { name: 'Select Existing Image (Google Drive)', icon: 'upload' },
+        { name: 'Product History (Google Sheets)', icon: 'copy' },
+        { name: 'Print this page (PDF Printer)', icon: 'print' },
+    ];
+
+    $scope.listItemClick = function($index) {
+        var clickedItem = $scope.items[$index];
+        $mdBottomSheet.hide(clickedItem);
+    };
+}]);
+
+angular.module('seller-interface').controller('GridBottomSheetCtrl', ["$scope", "$mdBottomSheet", function($scope, $mdBottomSheet) {
+
+    $scope.items = [
+        { name: 'Hangout', icon: 'hangout' },
+        { name: 'Mail', icon: 'mail' },
+        { name: 'Message', icon: 'message' },
+        { name: 'Copy', icon: 'copy' },
+        { name: 'Facebook', icon: 'facebook' },
+        { name: 'Twitter', icon: 'twitter' },
+    ];
+
+    $scope.listItemClick = function($index) {
+        var clickedItem = $scope.items[$index];
+        $mdBottomSheet.hide(clickedItem);
+    };
+}]);
+
+/*
+ Copyright 2012 Google Inc.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+ Author: Eric Bidelman (ericbidelman@chromium.org)
+ */
+/*
+function onError(e) {
+    console.log(e);
+}
+
+// FILESYSTEM SUPPORT ----------------------------------------------------------
+var fs = null;
+var FOLDERNAME = 'test';
+
+function writeFile(blob) {
+    if (!fs) {
+        return;
+    }
+
+    fs.root.getDirectory(FOLDERNAME, {create: true}, function(dirEntry) {
+        dirEntry.getFile(blob.name, {create: true, exclusive: false}, function(fileEntry) {
+            // Create a FileWriter object for our FileEntry, and write out blob.
+            fileEntry.createWriter(function(fileWriter) {
+                fileWriter.onerror = onError;
+                fileWriter.onwriteend = function(e) {
+                    console.log('Write completed.');
+                };
+                fileWriter.write(blob);
+            }, onError);
+        }, onError);
+    }, onError);
+}
+// -----------------------------------------------------------------------------
+
+var gDriveApp = angular.module('gDriveApp', []);
+
+gDriveApp.factory('gdocs', function() {
+    var gdocs = new GDocs();
+
+    var dnd = new DnDFileController('body', function(files) {
+        var $scope = angular.element(this).scope();
+        Util.toArray(files).forEach(function(file, i) {
+            gdocs.upload(file, function() {
+                //$scope.fetchDocs(true);
+            }, true);
+        });
+    });
+
+    return gdocs;
+});
+//gDriveApp.service('gdocs', GDocs);
+//gDriveApp.controller('DocsController', ['$scope', '$http', DocsController]);
+
+// Main Angular controller for app.
+function DocsController($scope, $http, gdocs) {
+    $scope.docs = [];
+
+    // Response handler that caches file icons in the filesystem API.
+    function successCallbackWithFsCaching(resp, status, headers, config) {
+        var docs = [];
+        var totalEntries = resp.items.length;
+        console.log(totalEntries);
+        resp.items.forEach(function(entry, i) {
+            var doc = {
+                title: entry.title,
+                updatedDate: Util.formatDate(entry.modifiedDate),
+                updatedDateFull: entry.modifiedDate,
+                icon: entry.iconLink,
+                alternateLink: entry.alternateLink,
+                size: entry.fileSize ? '( ' + entry.fileSize + ' bytes)' : null
+            };
+
+            // 'http://gstatic.google.com/doc_icon_128.png' -> 'doc_icon_128.png'
+            doc.iconFilename = doc.icon.substring(doc.icon.lastIndexOf('/') + 1);
+            console.log(doc.icon);
+            // If file exists, it we'll get back a FileEntry for the filesystem URL.
+            // Otherwise, the error callback will fire and we need to XHR it in and
+            // write it to the FS.
+            var fsURL = fs.root.toURL() + FOLDERNAME + '/' + doc.iconFilename;
+            window.webkitResolveLocalFileSystemURL(fsURL, function(entry) {
+                console.log('Fetched icon from the FS cache');
+
+                doc.icon = entry.toURL(); // should be === to fsURL, but whatevs.
+
+                $scope.docs.push(doc);
+
+                // Only want to sort and call $apply() when we have all entries.
+                if (totalEntries - 1 == i) {
+                    $scope.docs.sort(Util.sortByDate);
+                    $scope.$apply(function($scope) {}); // Inform angular we made changes.
+                }
+            }, function(e) {
+
+                $http.get(doc.icon, {responseType: 'blob'}).success(function(blob) {
+                    console.log('Fetched icon via XHR');
+
+                    blob.name = doc.iconFilename; // Add icon filename to blob.
+
+                    writeFile(blob); // Write is async, but that's ok.
+
+                    doc.icon = window.URL.createObjectURL(blob);
+
+                    $scope.docs.push(doc);
+                    if (totalEntries - 1 == i) {
+                        $scope.docs.sort(Util.sortByDate);
+                    }
+                });
+
+            });
+        });
+    }
+
+    $scope.clearDocs = function() {
+        $scope.docs = []; // Clear out old results.
+    };
+
+    $scope.fetchDocs = function(retry) {
+        this.clearDocs();
+
+        if (gdocs.accessToken) {
+            var config = {
+                params: {'alt': 'json'},
+                headers: {
+                    'Authorization': 'Bearer ' + gdocs.accessToken
+
+                }
+            };
+
+            //https://drive.google.com/open?id=0B8FisuvAYPTfampGWFhXQUs5dVU&authuser=0
+            $http.get(gdocs.DOCLIST_FEED, config).
+                success(successCallbackWithFsCaching).
+                error(function(data, status, headers, config) {
+                    if (status == 401 && retry) {
+                        gdocs.removeCachedAuthToken(
+                            gdocs.auth.bind(gdocs, true,
+                                $scope.fetchDocs.bind($scope, false)));
+                    }
+                });
+        }
+    };
+
+    // Toggles the authorization state.
+    $scope.toggleAuth = function(interactive) {
+        if (!gdocs.accessToken) {
+            gdocs.auth(interactive, function() {
+                $scope.fetchDocs(false);
+            });
+        } else {
+            gdocs.revokeAuthToken(function() {});
+            this.clearDocs();
+        }
+    }
+
+    // Controls the label of the authorize/deauthorize button.
+    $scope.authButtonLabel = function() {
+        if (gdocs.accessToken)
+            return 'Deauthorize';
+        else
+            return 'Authorize';
+    };
+
+    $scope.toggleAuth(false);
+}
+
+DocsController.$inject = ['$scope', '$http', 'gdocs']; // For code minifiers.
+
+// Init setup and attach event listeners.
+document.addEventListener('DOMContentLoaded', function(e) {
+
+    // FILESYSTEM SUPPORT --------------------------------------------------------
+    window.webkitRequestFileSystem(TEMPORARY, 1024 * 1024, function(localFs) {
+        fs = localFs;
+    }, onError);
+    // ---------------------------------------------------------------------------
+});
+*/
+'use strict';
+
+// Gdriveapps controller
+
+angular.module('seller-interface').constant('CONFIG', {
+    clientId: '574563539488-pctm7fr21vcetcfpdf9hhaje9q5vepee.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAFtN5UMzS3aYUfCgd6JoixOVZRORkM1zw',
+    scopes: [
+        'https://www.googleapis.com/auth/drive.file',
+        'https://www.googleapis.com/auth/drive.install'
+    ]
+});
+
+angular.module('seller-interface').value('config', {
+    clientId: '574563539488-pctm7fr21vcetcfpdf9hhaje9q5vepee.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAFtN5UMzS3aYUfCgd6JoixOVZRORkM1zw',
+    scopes: [
+        'https://www.googleapis.com/auth/drive.file',
+        'https://www.googleapis.com/auth/drive.install'
+    ]});
+
+angular.module('seller-interface').controller('GdriveappsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Gdriveapps',
+	function($scope, $stateParams, $location, Authentication, Gdriveapps ) {
+		console.log($scope.authentication);
+		// Create new Gdriveapp
+		$scope.create = function() {
+			// Create new Gdriveapp object
+			var gdriveapp = new Gdriveapps ({
+				name: this.name
+			});
+
+			// Redirect after save
+			gdriveapp.$save(function(response) {
+				$location.path('gdriveapps/' + response._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+
+			// Clear form fields
+			this.name = '';
+		};
+
+		// Remove existing Gdriveapp
+		$scope.remove = function( gdriveapp ) {
+			if ( gdriveapp ) { gdriveapp.$remove();
+
+				for (var i in $scope.gdriveapps ) {
+					if ($scope.gdriveapps [i] === gdriveapp ) {
+						$scope.gdriveapps.splice(i, 1);
+					}
+				}
+			} else {
+				$scope.gdriveapp.$remove(function() {
+					$location.path('gdriveapps');
+				});
+			}
+		};
+
+		// Update existing Gdriveapp
+		$scope.update = function() {
+			var gdriveapp = $scope.gdriveapp ;
+
+			gdriveapp.$update(function() {
+				$location.path('gdriveapps/' + gdriveapp._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Find a list of Gdriveapps
+		$scope.find = function() {
+			$scope.gdriveapps = Gdriveapps.query();
+		};
+
+		// Find existing Gdriveapp
+		$scope.findOne = function() {
+			$scope.gdriveapp = Gdriveapps.get({ 
+				gdriveappId: $stateParams.gdriveappId
+			});
+		};
+	}
+]);
+
+'use strict';
+
+angular.module('seller-interface').controller('HistoryPaymentController', ['$scope','Authentication','Payments','PaymentsBySellerData',
+	function($scope, Authentication, Payments, PaymentsBySellerData) {
+		$scope.authentication = Authentication;
+		console.log($scope.authentication);
+
+		$scope.getPaymentHistory = function() {
+			$scope.payments = PaymentsBySellerData.query({sellerData: Authentication.user._id});
+		}
+	}
+]);
+
+/**
+ * Created by KevinSo on 10/2/2014.
+ */
+
+'use strict';
+
+var googlePlusUserLoader = (function() {
+
+    var STATE_START=1;
+    var STATE_ACQUIRING_AUTHTOKEN=2;
+    var STATE_AUTHTOKEN_ACQUIRED=3;
+
+    var state = STATE_START;
+
+    var signin_button, xhr_button, revoke_button, user_info_div;
+
+    function disableButton(button) {
+        button.setAttribute('disabled', 'disabled');
+    }
+
+    function enableButton(button) {
+        button.removeAttribute('disabled');
+    }
+
+    function changeState(newState) {
+        state = newState;
+        switch (state) {
+            case STATE_START:
+                enableButton(signin_button);
+                disableButton(xhr_button);
+                disableButton(revoke_button);
+                break;
+            case STATE_ACQUIRING_AUTHTOKEN:
+                sampleSupport.log('Acquiring token...');
+                disableButton(signin_button);
+                disableButton(xhr_button);
+                disableButton(revoke_button);
+                break;
+            case STATE_AUTHTOKEN_ACQUIRED:
+                disableButton(signin_button);
+                enableButton(xhr_button);
+                enableButton(revoke_button);
+                break;
+        }
+    }
+
+    // @corecode_begin getProtectedData
+    function xhrWithAuth(method, url, interactive, callback) {
+        var access_token;
+
+        var retry = true;
+
+        getToken();
+
+        function getToken() {
+            chrome.identity.getAuthToken({ interactive: interactive }, function(token) {
+                if (chrome.runtime.lastError) {
+                    callback(chrome.runtime.lastError);
+                    return;
+                }
+
+                access_token = token;
+                requestStart();
+            });
+        }
+
+        function requestStart() {
+            var xhr = new XMLHttpRequest();
+            xhr.open(method, url);
+            xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
+            xhr.onload = requestComplete;
+            xhr.send();
+        }
+
+        function requestComplete() {
+            if (this.status == 401 && retry) {
+                retry = false;
+                chrome.identity.removeCachedAuthToken({ token: access_token },
+                    getToken);
+            } else {
+                callback(null, this.status, this.response);
+            }
+        }
+    }
+
+    function getUserInfo(interactive) {
+        xhrWithAuth('GET',
+            'https://www.googleapis.com/plus/v1/people/me',
+            interactive,
+            onUserInfoFetched);
+    }
+    // @corecode_end getProtectedData
+
+
+    // Code updating the user interface, when the user information has been
+    // fetched or displaying the error.
+    function onUserInfoFetched(error, status, response) {
+        if (!error && status == 200) {
+            changeState(STATE_AUTHTOKEN_ACQUIRED);
+            sampleSupport.log(response);
+            var user_info = JSON.parse(response);
+            populateUserInfo(user_info);
+        } else {
+            changeState(STATE_START);
+        }
+    }
+
+    function populateUserInfo(user_info) {
+        user_info_div.innerHTML = "Hello " + user_info.displayName;
+        fetchImageBytes(user_info);
+    }
+
+    function fetchImageBytes(user_info) {
+        if (!user_info || !user_info.image || !user_info.image.url) return;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', user_info.image.url, true);
+        xhr.responseType = 'blob';
+        xhr.onload = onImageFetched;
+        xhr.send();
+    }
+
+    function onImageFetched(e) {
+        if (this.status != 200) return;
+        var imgElem = document.createElement('img');
+        var objUrl = window.webkitURL.createObjectURL(this.response);
+        imgElem.src = objUrl;
+        imgElem.onload = function() {
+            window.webkitURL.revokeObjectURL(objUrl);
+        }
+        user_info_div.insertAdjacentElement("afterbegin", imgElem);
+    }
+
+    // OnClick event handlers for the buttons.
+
+    /**
+     Retrieves a valid token. Since this is initiated by the user
+     clicking in the Sign In button, we want it to be interactive -
+     ie, when no token is found, the auth window is presented to the user.
+
+     Observe that the token does not need to be cached by the app.
+     Chrome caches tokens and takes care of renewing when it is expired.
+     In that sense, getAuthToken only goes to the server if there is
+     no cached token or if it is expired. If you want to force a new
+     token (for example when user changes the password on the service)
+     you need to call removeCachedAuthToken()
+     **/
+    function interactiveSignIn() {
+        changeState(STATE_ACQUIRING_AUTHTOKEN);
+
+        // @corecode_begin getAuthToken
+        // @description This is the normal flow for authentication/authorization
+        // on Google properties. You need to add the oauth2 client_id and scopes
+        // to the app manifest. The interactive param indicates if a new window
+        // will be opened when the user is not yet authenticated or not.
+        // @see http://developer.chrome.com/apps/app_identity.html
+        // @see http://developer.chrome.com/apps/identity.html#method-getAuthToken
+        chrome.identity.getAuthToken({ 'interactive': true }, function(token) {
+            if (chrome.runtime.lastError) {
+                sampleSupport.log(chrome.runtime.lastError);
+                changeState(STATE_START);
+            } else {
+                sampleSupport.log('Token acquired:'+token+
+                    '. See chrome://identity-internals for details.');
+                changeState(STATE_AUTHTOKEN_ACQUIRED);
+            }
+        });
+        // @corecode_end getAuthToken
+    }
+
+    function revokeToken() {
+        user_info_div.innerHTML="";
+        chrome.identity.getAuthToken({ 'interactive': false },
+            function(current_token) {
+                if (!chrome.runtime.lastError) {
+
+                    // @corecode_begin removeAndRevokeAuthToken
+                    // @corecode_begin removeCachedAuthToken
+                    // Remove the local cached token
+                    chrome.identity.removeCachedAuthToken({ token: current_token },
+                        function() {});
+                    // @corecode_end removeCachedAuthToken
+
+                    // Make a request to revoke token in the server
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'https://accounts.google.com/o/oauth2/revoke?token=' +
+                        current_token);
+                    xhr.send();
+                    // @corecode_end removeAndRevokeAuthToken
+
+                    // Update the user interface accordingly
+                    changeState(STATE_START);
+                    sampleSupport.log('Token revoked and removed from cache. '+
+                        'Check chrome://identity-internals to confirm.');
+                }
+            });
+    }
+
+    return {
+        onload: function () {
+            signin_button = document.querySelector('#signin');
+            signin_button.addEventListener('click', interactiveSignIn);
+
+            xhr_button = document.querySelector('#getxhr');
+            xhr_button.addEventListener('click', getUserInfo.bind(xhr_button, true));
+
+            revoke_button = document.querySelector('#revoke');
+            revoke_button.addEventListener('click', revokeToken);
+
+            user_info_div = document.querySelector('#user_info');
+
+            // Trying to get user's info without signing in, it will work if the
+            // application was previously authorized by the user.
+            getUserInfo(false);
+        }
+    };
+
+})();
+
+
+
+
+'use strict';
+
+angular.module('seller-interface').factory('gdocs', [
+	function() {
+		var gdocs = new GDocs();
+
+		/*
+		var dnd = new DnDFileController('body', function(files) {
+			var $scope = angular.element(this).scope();
+			Util.toArray(files).forEach(function(file, i) {
+				gdocs.upload(file, function() {
+					//$scope.fetchDocs(true);
+				}, true);
+			});
+		});
+		*/
+		return gdocs;
+	}
+]);
+
+'use strict';
+
+//Gdriveapps service used to communicate Gdriveapps REST endpoints
+angular.module('seller-interface').factory('Gdriveapps', ['$resource',
+	function($resource) {
+		return $resource('gdriveapps/:gdriveappId', { gdriveappId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);
+
+/*
+ * Created by Kevin on 2014-10-29.
+* */
+
+'use strict';
+
+angular.module('seller-interface').factory('Googledrive', ['configGdrive',
+	function(configGdrive) {
+		return {
+			createFolder: createFolder,
+			findFolder: findFolder,
+			getGoogleDriveInfo: getGoogleDriveInfo,
+			setupPicker: setupPicker,
+			listFolder: listFolder
+		};
+
+		function createFolder(FolderName, accessToken){
+			var request = gapi.client.request({
+				'path': '/drive/v2/files/',
+				'method': 'POST',
+				'headers': {
+					'Content-Type': 'application/json',
+					'Authorization': 'Bearer ' + accessToken
+				},
+				'body':{
+					"title" : FolderName,
+					"mimeType" : "application/vnd.google-apps.folder"
+				}
+			});
+			request.execute(function(resp) {
+				console.log(resp);
+			});
+		}
+
+		// Search Folder
+		function findFolder(callback){
+			gapi.client.load('drive', 'v2').then(function(){
+				var request = gapi.client.drive.files.list({
+					q: "title contains 'URI-'",
+					fields: 'items(id\,title)'
+				});
+				request.then(function(resp){
+					//console.log('result File list');
+					//console.log(resp);
+					callback(resp);
+				});
+			});
+		}
+
+		function getGoogleDriveInfo(){
+			gapi.client.load('drive', 'v2').then(function() {
+				var request = gapi.client.drive.about.get();
+				request.execute(function (resp) {
+					console.log('Current user name: ' + resp.name);
+					console.log('Root folder ID: ' + resp.rootFolderId);
+					console.log('Total quota (bytes): ' + resp.quotaBytesTotal);
+					console.log('Used quota (bytes): ' + resp.quotaBytesUsed);
+				});
+			});
+		}
+
+		//Google File Picker Platform
+		function setupPicker(accessToken, callback){
+			var callbackAfterFindFolder = function(resp){
+				var folderID = resp.result.items[0].id;
+				var picker = new google.picker.PickerBuilder()
+					.setOAuthToken(accessToken)
+					.setDeveloperKey(configGdrive.developerKey)
+					.addView(new google.picker.DocsUploadView().setParent(folderID))
+					.addView(new google.picker.DocsView().setParent(folderID))
+					.enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
+					.setLocale('ko')
+					//.enableFeature(google.picker.Feature.NAV_HIDDEN)
+					.setCallback(callback)
+					.build();
+				picker.setVisible(true);
+			}
+			findFolder(callbackAfterFindFolder);
+
+
+		}
+
+		function listFolder(){
+			gapi.client.load('drive', 'v2').then(function() {
+
+				var request = gapi.client.drive.files.list({
+					maxResults:10,
+					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
+				});
+				request.then(function(resp){
+					console.log('result File list');
+					console.log(resp)
+				});
+
+				var request = gapi.client.drive.files.list({
+					maxResults:10,
+					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
+				});
+				request.then(function(resp){
+					console.log('result File list');
+					console.log(resp)
+				});
+
+			});
+		}
+	}
+]);
+
+'use strict';
+
+angular.module('seller-interface').factory('GooglePlus', [
+	function() {
+		return {
+			callGooglePlus: callGooglePlus
+		};
+
+		function callGooglePlus(callback) {
+			gapi.client.load('plus', 'v1').then(function() {
+				// Step 5: Assemble the API request
+				var request = gapi.client.plus.people.get({
+					'userId': 'me'
+				});
+				// Step 6: Execute the API request
+				request.then(callback, function(reason) {
+					console.log('Error: ' + reason.result.error.message);
+				});
+			});
+		}
 	}
 ]);
 

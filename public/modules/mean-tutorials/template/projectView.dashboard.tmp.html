@@ -1,1 +1,104 @@
-<h1>Dashboard</h1>
+<div ng-controller="ProjectviewdashboardController">
+    <h1>Dashboard</h1>
+    <md-toolbar
+        style="font-size:large;
+        border-radius:15px 15px 0px 0px;">
+        <h2 class="md-toolbar-tools" layout="row" layout-margin>
+
+            <span flex flex-order="1" >Toolbar</span>
+            <span flex flex-order="2"></span>
+            <span flex flex-order="3"></span>
+            <md-button flex flex-order="4"
+                        class="md-raised md-primary"
+                       noink
+                       style="background-color: #009688; font-size:medium; margin-right:10px;"
+
+                       aria-label="{{authName}}"
+                       ng-click="init()">
+                {{authName}}
+            </md-button>
+            <md-button flex flex-order="5"
+                    class="md-raised md-primary"
+                       noink
+                       style="background-color: #009688; font-size:medium;"
+                       aria-label="{{authName}}"
+                       ng-click="setupPicker()"
+                       ng-disabled="!isAuth">
+                File Picker
+            </md-button>
+        </h2>
+    </md-toolbar>
+    <md-content class="md-padding" style="border-radius:0px 0px 15px 15px">
+        <!-- <input id="filePicker" ng-disabled="isAuth == false" type="button" value="upload to GDrive" ng-click="setupPicker()"> -->
+        You can upload and select from Google Drive
+        <pre>Your FolderID: {{rootGdriveFolderID}}</pre>
+        <!-- <input type="file" id="filePicker" style="display: none" /> -->
+        <p>
+        <div class="well" >
+            <!-- <pre >{{file}}</pre> -->
+            <img ng-repeat="file in files" style="margin-left:15px; margin-bottom: 15px"  select-img my-slider="file" index={{$index}} on-change-status="onChangeStatus()" class="sellerInterfaceItemImg" ng-src="{{ arrive && permalLink + file.id || ''}}">
+        </div>
+        </p>
+    </md-content>
+
+    <h1>Create Doc</h1>
+    <md-toolbar
+            style="font-size:large;
+        border-radius:15px 15px 0px 0px;">
+        <h2 class="md-toolbar-tools" layout="row" layout-margin>
+
+            <span flex flex-order="1" >Create Doc</span>
+            <span flex flex-order="2"></span>
+            <span flex flex-order="3"></span>
+            <md-button flex flex-order="4"
+                       class="md-raised md-primary"
+                       noink
+                       style="background-color: #009688; font-size:medium; margin-right:10px;"
+
+                       aria-label="{{authName}}"
+                       ng-click="init()">
+                {{authName}}
+            </md-button>
+            <md-button flex flex-order="5"
+                       class="md-raised md-primary"
+                       noink
+                       style="background-color: #009688; font-size:medium;"
+                       aria-label="{{authName}}"
+                       ng-click="setupPicker()"
+                       ng-disabled="!isAuth">
+                File Picker
+            </md-button>
+        </h2>
+    </md-toolbar>
+    <md-content class="md-padding" style="border-radius:0px 0px 15px 15px">
+        <!-- <input id="filePicker" ng-disabled="isAuth == false" type="button" value="upload to GDrive" ng-click="setupPicker()"> -->
+        You can upload and select from Google Drive
+        <pre>Your FolderID: {{rootGdriveFolderID}}</pre>
+        <!-- <input type="file" id="filePicker" style="display: none" /> -->
+        <p>
+        <div class="well" >
+            <!-- <pre >{{file}}</pre> -->
+            <img ng-repeat="file in files" style="margin-left:15px; margin-bottom: 15px"  select-img my-slider="file" index={{$index}} on-change-status="onChangeStatus()" class="sellerInterfaceItemImg" ng-src="{{ arrive && permalLink + file.id || ''}}">
+        </div>
+        </p>
+        <md-button flex flex-order="4"
+                   class="md-raised md-primary"
+                   noink
+                   style="background-color: #009688; font-size:medium; margin-right:10px;"
+
+                   aria-label="{{authName}}"
+                   ng-click="testCreateFolder()">
+            test-create folder
+        </md-button>
+        <md-button flex flex-order="4"
+                   class="md-raised md-primary"
+                   noink
+                   style="background-color: #009688; font-size:medium; margin-right:10px;"
+
+                   aria-label="{{authName}}"
+                   ng-click="testGetGoogleDriveInfo()">
+            test-getGoogleDriveInfo
+        </md-button>
+    </md-content>
+</div>
+
