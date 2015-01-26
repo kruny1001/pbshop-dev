@@ -91,6 +91,11 @@ ApplicationConfiguration.registerModule('mean-tutorials');
 'use strict';
 
 // Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('tinymce');
+
+'use strict';
+
+// Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('user-interface');
 
 'use strict';
@@ -1566,15 +1571,26 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 	function($scope, $stateParams, $location, Authentication, Articles) {
 		$scope.authentication = Authentication;
 
+        $scope.docTypes = [{name: 'Project'}, {name: 'Article'}, {name: 'Information'}];
+
+        $scope.docType = 2;
+
+        $scope.radioData = [
+            { label: 'Information', value: 1 },
+            { label: 'Article', value: 2 },
+            { label: 'Project', value: 3}
+        ];
+
 		$scope.create = function() {
 			var article = new Articles({
-				title: this.title,
-				content: this.content
+				title: $scope.title,
+                docType: $scope.docType,
+				content: $scope.content
 			});
 			article.$save(function(response) {
 				$location.path('articles/' + response._id);
-
 				$scope.title = '';
+                $scope.type='';
 				$scope.content = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
@@ -1618,6 +1634,7 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 		};
 	}
 ]);
+
 'use strict';
 
 //Articles service used for communicating with the articles REST endpoints
@@ -1830,13 +1847,11 @@ angular.module('bioinfo').directive('menuiconHover', [
 			link: function postLink(scope, element, attrs) {
 
                 element.on('mouseover', function(){
-                   console.log(this);
-                    TweenLite.to(this, 0.5, {backgroundColor:'gray', scale:1.3});
+                    TweenLite.to(this, 0.5, {backgroundColor:'gray'});
                 });
 
                 element.on('mouseleave', function(){
-                    console.log(this);
-                    TweenLite.to(this, 0.5, {backgroundColor:'#939393', scale:1});
+                    TweenLite.to(this, 0.5, {backgroundColor:'#939393'});
                 });
 			}
 		};
@@ -2740,30 +2755,44 @@ angular.module('mean-events').factory('MeanEvents', ['$resource',
 
 //Setting up route
 angular.module('mean-tutorials').config(['$stateProvider',
-	function($stateProvider) {
-		// Mean tutorials state routing
-		$stateProvider.
-		state('project3', {
-			url: '/project3',
-			templateUrl: 'modules/mean-tutorials/views/project3.client.view.html'
-		}).
-		state('versioning', {
-			url: '/versioning',
-			templateUrl: 'modules/mean-tutorials/views/versioning.client.view.html'
-		}).
-		state('project2', {
-			url: '/project2',
-			templateUrl: 'modules/mean-tutorials/views/project2.client.view.html',
-		}).
-		state('project1', {
-			url: '/project1',
-			templateUrl: 'modules/mean-tutorials/views/project1.client.view.html'
-		}).
-		state('mean-home', {
-			url: '/',
-			templateUrl: 'modules/mean-tutorials/views/mean-home.client.view.html'
-		});
-	}
+    function($stateProvider) {
+        // Mean tutorials state routing
+        $stateProvider.
+            state('projectview', {
+                abstract: true,
+                url: '/projects',
+                templateUrl: 'modules/mean-tutorials/views/projectView.client.view.html'
+            }).
+                state('projectview.dashboard', {
+                    url: '/dashboard',
+                    templateUrl: 'modules/mean-tutorials/template/projectView.dashboard.tmp.html'
+                }).
+                state('projectview.projects', {
+                    url: '/projectlist',
+                    templateUrl: 'modules/mean-tutorials/template/projectView.projects.tmp.html'
+                }).
+                state('projectview.articles', {
+                    url: '/articleslist',
+                    templateUrl: 'modules/mean-tutorials/template/projectView.articles.tmp.html'
+                }).
+
+            state('versioning', {
+                url: '/versioning',
+                templateUrl: 'modules/mean-tutorials/views/versioning.client.view.html'
+            }).
+            state('project2', {
+                url: '/project2',
+                templateUrl: 'modules/mean-tutorials/views/project2.client.view.html'
+            }).
+            state('project1', {
+                url: '/project1',
+                templateUrl: 'modules/mean-tutorials/views/project1.client.view.html'
+            }).
+            state('mean-home', {
+                url: '/',
+                templateUrl: 'modules/mean-tutorials/views/mean-home.client.view.html'
+            });
+    }
 ]);
 
 'use strict';
@@ -3837,12 +3866,33 @@ angular.module('mean-tutorials').controller('Project2Controller', ['$scope',
 
 'use strict';
 
-angular.module('mean-tutorials').controller('Project3Controller', ['$scope',
-	function($scope) {
-		// Project3 controller logic
-		// ...
+angular.module('mean-tutorials').controller('ProjectViewController', ['$scope', '$stateParams', '$state', 'Articles',
+	function($scope, $stateParams, $state, Articles) {
+		$scope.title= 'Project3';
+        $scope.body= '';
+        $scope.menus = [
+            {icon:'', name:'Projects'},
+            {icon:'', name:'Articles'},
+            {icon:'', name:'Comments'},
+            {icon:'', name:'Survey'},
+        ];
+
+        $scope.goChildView = function(stateName){
+            $state.go(stateName);
+        }
+
+        $scope.find = function() {
+            $scope.articles = Articles.query();
+        };
+
+        $scope.findOne = function() {
+            $scope.article = Articles.get({
+                articleId: $stateParams.articleId
+            });
+        };
 	}
 ]);
+
 var CalendarException = function CalendarException(message) {
     this.message = message;
     this.toString = function() {
@@ -3965,6 +4015,91 @@ angular.module('mean-tutorials').directive('macWindow', [
 		};
 	}
 ]);
+
+'use strict';
+
+// Tinymce module config
+angular.module('tinymce').run(['Menus',
+	function(Menus) {
+		// Config logic
+		// ...
+	}
+]).value('uiTinymceConfig', {
+        plugins: "image, link, fullscreen, code, table, contextmenu, media",
+        contextmenu: "link media image inserttable | cell row column deletetable",
+        image_advtab: true,
+        image_class_list: [
+            {title: 'Responsive Size', value: 'img-responsive'}
+
+        ],
+        fullscreen_new_window : true,
+        fullscreen_settings : {
+            theme_advanced_path_location : "top"
+        }
+    });
+
+'use strict';
+
+angular.module('tinymce').directive('uiTinymce', ['uiTinymceConfig', function(uiTinymceConfig) {
+    uiTinymceConfig = uiTinymceConfig || {};
+    var generatedIds = 0;
+    return {
+        require: 'ngModel',
+        link: function(scope, elm, attrs, ngModel) {
+            var expression, options, tinyInstance;
+            // generate an ID if not present
+            if (!attrs.id) {
+                attrs.$set('id', 'uiTinymce' + generatedIds++);
+            }
+            options = {
+                // Update model when calling setContent (such as from the source editor popup)
+                setup: function(ed) {
+                    ed.on('init', function(args) {
+                        ngModel.$render();
+                    });
+                    // Update model on button click
+                    ed.on('ExecCommand', function(e) {
+                        ed.save();
+                        ngModel.$setViewValue(elm.val());
+                        if (!scope.$$phase) {
+                            scope.$apply();
+                        }
+                    });
+                    // Update model on keypress
+                    ed.on('KeyUp', function(e) {
+                        console.log(ed.isDirty());
+                        ed.save();
+                        ngModel.$setViewValue(elm.val());
+                        if (!scope.$$phase) {
+                            scope.$apply();
+                        }
+                    });
+                },
+                mode: 'exact',
+                elements: attrs.id
+            };
+            if (attrs.uiTinymce) {
+                expression = scope.$eval(attrs.uiTinymce);
+            } else {
+                expression = {};
+            }
+            angular.extend(options, uiTinymceConfig, expression);
+            setTimeout(function() {
+                tinymce.init(options);
+            });
+
+
+            ngModel.$render = function() {
+                if (!tinyInstance) {
+                    tinyInstance = tinymce.get(attrs.id);
+                }
+                if (tinyInstance) {
+                    tinyInstance.setContent(ngModel.$viewValue || '');
+                }
+            };
+        }
+    };
+}]);
 
 'use strict';
 

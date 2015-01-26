@@ -7,13 +7,11 @@ angular.module('bioinfo').directive('menuiconHover', [
 			link: function postLink(scope, element, attrs) {
 
                 element.on('mouseover', function(){
-                   console.log(this);
-                    TweenLite.to(this, 0.5, {backgroundColor:'gray', scale:1.3});
+                    TweenLite.to(this, 0.5, {backgroundColor:'gray'});
                 });
 
                 element.on('mouseleave', function(){
-                    console.log(this);
-                    TweenLite.to(this, 0.5, {backgroundColor:'#939393', scale:1});
+                    TweenLite.to(this, 0.5, {backgroundColor:'#939393'});
                 });
 			}
 		};

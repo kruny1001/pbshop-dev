@@ -4,15 +4,26 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 	function($scope, $stateParams, $location, Authentication, Articles) {
 		$scope.authentication = Authentication;
 
+        $scope.docTypes = [{name: 'Project'}, {name: 'Article'}, {name: 'Information'}];
+
+        $scope.docType = 2;
+
+        $scope.radioData = [
+            { label: 'Information', value: 1 },
+            { label: 'Article', value: 2 },
+            { label: 'Project', value: 3}
+        ];
+
 		$scope.create = function() {
 			var article = new Articles({
-				title: this.title,
-				content: this.content
+				title: $scope.title,
+                docType: $scope.docType,
+				content: $scope.content
 			});
 			article.$save(function(response) {
 				$location.path('articles/' + response._id);
-
 				$scope.title = '';
+                $scope.type='';
 				$scope.content = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;

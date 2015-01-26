@@ -32,6 +32,9 @@ module.exports = {
 				'public/lib/hammerjs/hammer.min.js',
 				'public/lib/angular-material/angular-material.min.js',
 
+                'public/lib/tinymce/tinymce.min.js',
+                'public/lib/angular-ui-tinymce/src/tinymce.js',
+
 				'public/lib/gsap/src/minified/TimelineMax.min.js',
 				'public/lib/gsap/src/minified/TweenMax.min.js',
 
@@ -58,7 +61,7 @@ module.exports = {
 				'public/lib/d3/d3.min.js',
 				'public/lib/d3-timeline/src/d3-timeline.js',
 
-				//'public/lib/topojson/topojson.js',
+				'public/lib/topojson/topojson.js',
 
 				'public/lib/angular-smart-table/dist/smart-table.min.js'
 
