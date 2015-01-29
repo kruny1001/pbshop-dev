@@ -2,160 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/css/dashboard.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/css/projects.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectview-projects-controller.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/tests/projectview-projects-controller.client.controller.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/directives/ut-calendar.client.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/services/ut-calendar.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/all.js" afterPath="$PROJECT_DIR$/config/env/all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/payments/services/allproducts.client.service.js" afterPath="$PROJECT_DIR$/public/modules/payments/services/allproducts.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/services/allproducts.client.service.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/services/allproducts.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/animation/config/animation.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/animation/config/animation.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.css" afterPath="$PROJECT_DIR$/public/dist/application.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/directives/article.client.directive.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/directives/article.client.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/article.server.model.js" afterPath="$PROJECT_DIR$/app/models/article.server.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/article.server.model.test.js" afterPath="$PROJECT_DIR$/app/tests/article.server.model.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/article.server.routes.test.js" afterPath="$PROJECT_DIR$/app/tests/article.server.routes.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/articles/controllers/articles.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/articles/controllers/articles.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/articles/tests/articles.client.controller.test.js" afterPath="$PROJECT_DIR$/public/modules/articles/tests/articles.client.controller.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/articles/articles.client.module.js" afterPath="$PROJECT_DIR$/public/modules/articles/articles.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/articles.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/articles.server.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/articles.server.routes.js" afterPath="$PROJECT_DIR$/app/routes/articles.server.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/tests/authentication.client.controller.test.js" afterPath="$PROJECT_DIR$/public/modules/users/tests/authentication.client.controller.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/services/authentication.client.service.js" afterPath="$PROJECT_DIR$/public/modules/users/services/authentication.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/banners/config/banners.client.config.js" afterPath="$PROJECT_DIR$/backup_module/banners/config/banners.client.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/banners/controllers/banners.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/banners/controllers/banners.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/banners/config/banners.client.routes.js" afterPath="$PROJECT_DIR$/backup_module/banners/config/banners.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/banners.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/banners.server.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/banners.server.routes.js" afterPath="$PROJECT_DIR$/app/routes/banners.server.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/bioinfo/css/bio.css" afterPath="$PROJECT_DIR$/public/modules/bioinfo/css/bio.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/bioinfo/bioinfo.client.module.js" afterPath="$PROJECT_DIR$/public/modules/bioinfo/bioinfo.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/bioinfo/controllers/bioinfohome.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/bioinfo/controllers/bioinfohome.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/calculator/controllers/cal-test.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/calculator/controllers/cal-test.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/cal-test.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/cal-test.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/tests/cal-test.client.controller.test.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/tests/cal-test.client.controller.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/calculator/calculator.client.module.js" afterPath="$PROJECT_DIR$/public/modules/calculator/calculator.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/carzen-devs/controllers/carzen-devs.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/carzen-devs/controllers/carzen-devs.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/carzen-devs/carzen-devs.client.module.js" afterPath="$PROJECT_DIR$/backup_module/carzen-devs/carzen-devs.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/carzen-devs/config/carzen-devs.client.routes.js" afterPath="$PROJECT_DIR$/backup_module/carzen-devs/config/carzen-devs.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/carzen-devs/services/carzen-devs.client.service.js" afterPath="$PROJECT_DIR$/backup_module/carzen-devs/services/carzen-devs.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/carzen-devs.server.routes.js" afterPath="$PROJECT_DIR$/app/routes/carzen-devs.server.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/carzen-devs/controllers/carzen-home.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/carzen-devs/controllers/carzen-home.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/carzen-devs/tests/carzen-home.client.controller.test.js" afterPath="$PROJECT_DIR$/backup_module/carzen-devs/tests/carzen-home.client.controller.test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.js" afterPath="$PROJECT_DIR$/config/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/config.js" afterPath="$PROJECT_DIR$/public/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/core.client.module.js" afterPath="$PROJECT_DIR$/public/modules/core/core.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/core.server.routes.js" afterPath="$PROJECT_DIR$/app/routes/core.server.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/user-interface/controllers/detail-product.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/user-interface/controllers/detail-product.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/controllers/detail-product.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/controllers/detail-product.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/disqus/config/disqus.client.config.js" afterPath="$PROJECT_DIR$/public/modules/disqus/config/disqus.client.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/controllers/experimental-interface.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/controllers/experimental-interface.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/strategies/facebook.js" afterPath="$PROJECT_DIR$/config/strategies/facebook.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/spec-view/directives/front-logo-resize.client.directive.js" afterPath="$PROJECT_DIR$/backup_module/spec-view/directives/front-logo-resize.client.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/user-interface/controllers/front1.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/user-interface/controllers/front1.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/g-drive/g-drive.client.module.js" afterPath="$PROJECT_DIR$/backup_module/g-drive/g-drive.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/g-drive/g-drive.client.module.js" afterPath="$PROJECT_DIR$/public/modules/g-drive/g-drive.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/g-drive/config/g-drive.client.routes.js" afterPath="$PROJECT_DIR$/backup_module/g-drive/config/g-drive.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/g-drive/config/g-drive.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/g-drive/config/g-drive.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/services/gdocs.client.service.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/services/gdocs.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/seller-interface/services/gdocs.client.service.js" afterPath="$PROJECT_DIR$/public/modules/seller-interface/services/gdocs.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/controllers/gdriveapps.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/controllers/gdriveapps.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/seller-interface/controllers/gdriveapps.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/seller-interface/controllers/gdriveapps.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/services/gdriveapps.client.service.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/services/gdriveapps.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/seller-interface/services/gdriveapps.client.service.js" afterPath="$PROJECT_DIR$/public/modules/seller-interface/services/gdriveapps.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/services/getplans.client.service.js" afterPath="$PROJECT_DIR$/public/modules/core/services/getplans.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/strategies/github.js" afterPath="$PROJECT_DIR$/config/strategies/github.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/strategies/google.js" afterPath="$PROJECT_DIR$/config/strategies/google.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/g-drive/services/googledrive.client.service.js" afterPath="$PROJECT_DIR$/backup_module/g-drive/services/googledrive.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js" afterPath="$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/services/googleplus.client.service.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/services/googleplus.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/seller-interface/services/googleplus.client.service.js" afterPath="$PROJECT_DIR$/public/modules/seller-interface/services/googleplus.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gruntfile.js" afterPath="$PROJECT_DIR$/gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/controllers/header.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/core/controllers/header.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/tests/header.client.controller.test.js" afterPath="$PROJECT_DIR$/public/modules/core/tests/header.client.controller.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/seller-interface/controllers/history-payment.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/seller-interface/controllers/history-payment.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/controllers/home.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/core/controllers/home.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/tests/home.client.controller.test.js" afterPath="$PROJECT_DIR$/public/modules/core/tests/home.client.controller.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/controllers/identity.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/controllers/identity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/init.js" afterPath="$PROJECT_DIR$/config/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="$PROJECT_DIR$/karma.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/controllers/link-list.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/core/controllers/link-list.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/strategies/local.js" afterPath="$PROJECT_DIR$/config/strategies/local.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/directives/mac-window.client.directive.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/directives/mac-window.client.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/user-interface/directives/main-interface.client.directive.js" afterPath="$PROJECT_DIR$/backup_module/user-interface/directives/main-interface.client.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mean-event.server.model.js" afterPath="$PROJECT_DIR$/app/models/mean-event.server.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/mean-event.server.model.test.js" afterPath="$PROJECT_DIR$/app/tests/mean-event.server.model.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/mean-event.server.routes.test.js" afterPath="$PROJECT_DIR$/app/tests/mean-event.server.routes.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js" afterPath="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-events/controllers/mean-events.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-events/controllers/mean-events.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-events/mean-events.client.module.js" afterPath="$PROJECT_DIR$/public/modules/mean-events/mean-events.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/mean-events.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/mean-events.server.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/mean-events.server.routes.js" afterPath="$PROJECT_DIR$/app/routes/mean-events.server.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/mean-tutorials.client.module.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/mean-tutorials.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/bioinfo/directives/menuicon-hover.client.directive.js" afterPath="$PROJECT_DIR$/public/modules/bioinfo/directives/menuicon-hover.client.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/services/menus.client.service.js" afterPath="$PROJECT_DIR$/public/modules/core/services/menus.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/utility/directives/page-format-creation.client.directive.js" afterPath="$PROJECT_DIR$/backup_module/utility/directives/page-format-creation.client.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/controllers/password.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/users/controllers/password.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/payments/config/payments.client.config.js" afterPath="$PROJECT_DIR$/backup_module/payments/config/payments.client.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/payments/controllers/payments.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/payments/controllers/payments.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/payments/tests/payments.client.controller.test.js" afterPath="$PROJECT_DIR$/backup_module/payments/tests/payments.client.controller.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/payments/payments.client.module.js" afterPath="$PROJECT_DIR$/backup_module/payments/payments.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/payments/config/payments.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/payments/config/payments.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/payments/services/payments.client.service.js" afterPath="$PROJECT_DIR$/backup_module/payments/services/payments.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/payments/services/payments.client.service.js" afterPath="$PROJECT_DIR$/public/modules/payments/services/payments.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.server.model.js" afterPath="$PROJECT_DIR$/app/models/product.server.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/production.js" afterPath="$PROJECT_DIR$/config/env/production.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/products/tests/products-banner.client.controller.test.js" afterPath="$PROJECT_DIR$/public/modules/products/tests/products-banner.client.controller.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/products/services/products-banner.client.service.js" afterPath="$PROJECT_DIR$/backup_module/products/services/products-banner.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/products/controllers/products.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/products/controllers/products.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/products/tests/products.client.controller.test.js" afterPath="$PROJECT_DIR$/backup_module/products/tests/products.client.controller.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/products/products.client.module.js" afterPath="$PROJECT_DIR$/backup_module/products/products.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/products/services/products.client.service.js" afterPath="$PROJECT_DIR$/public/modules/products/services/products.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/products.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/products.server.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project1.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project1.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/spec-view/services/project1.client.service.js" afterPath="$PROJECT_DIR$/backup_module/spec-view/services/project1.client.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project2.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project2.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.articles.tmp.html" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.articles.tmp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectView.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectView.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/views/projectView.client.view.html" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/views/projectView.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.dashboard.tmp.html" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.dashboard.tmp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.projects.tmp.html" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.projects.tmp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectviewdashboard.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectviewdashboard.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/sdsumap/controllers/sdsumap-main.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/sdsumap/controllers/sdsumap-main.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/sdsumap/sdsumap.client.module.js" afterPath="$PROJECT_DIR$/backup_module/sdsumap/sdsumap.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/sdsumap/config/sdsumap.client.routes.js" afterPath="$PROJECT_DIR$/backup_module/sdsumap/config/sdsumap.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/secure.js" afterPath="$PROJECT_DIR$/config/env/secure.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/seller-interface.client.module.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/seller-interface.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/seller-interface/seller-interface.client.module.js" afterPath="$PROJECT_DIR$/public/modules/seller-interface/seller-interface.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/controllers/settings.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/users/controllers/settings.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/spec-view/controllers/spec-home.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/spec-view/controllers/spec-home.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/spec-view/spec-view.client.module.js" afterPath="$PROJECT_DIR$/backup_module/spec-view/spec-view.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/spec-view/directives/src.client.directive.js" afterPath="$PROJECT_DIR$/backup_module/spec-view/directives/src.client.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/animation/controllers/svg1.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/animation/controllers/svg1.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/utility/controllers/test-page-generator.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/utility/controllers/test-page-generator.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/test.js" afterPath="$PROJECT_DIR$/config/env/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/animation/controllers/three.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/animation/controllers/three.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/tinymce/tinymce.client.module.js" afterPath="$PROJECT_DIR$/public/modules/tinymce/tinymce.client.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/strategies/twitter.js" afterPath="$PROJECT_DIR$/config/strategies/twitter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/user-interface/config/user-interface.client.routes.js" afterPath="$PROJECT_DIR$/backup_module/user-interface/config/user-interface.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/config/user-interface.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/config/user-interface.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/user.server.model.test.js" afterPath="$PROJECT_DIR$/app/tests/user.server.model.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/users.authentication.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/users/users.authentication.server.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/users.authorization.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/users/users.authorization.server.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/config/users.client.config.js" afterPath="$PROJECT_DIR$/public/modules/users/config/users.client.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/users.profile.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/users/users.profile.server.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/utility/config/utility.client.routes.js" afterPath="$PROJECT_DIR$/backup_module/utility/config/utility.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/views/versioning.client.view.html" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/views/versioning.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -185,11 +32,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="projectview-projects-controller.client.controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="projectview-projects-controller.client.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectview-projects-controller.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39823008" vertical-offset="0" max-vertical-offset="420">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
               <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/env/all.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="development.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/env/development.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/env/production.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6231454" vertical-offset="0" max-vertical-offset="1245">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -283,7 +170,6 @@
         <option value="$PROJECT_DIR$/docs/googleApi" />
         <option value="$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectView.client.controller.js" />
-        <option value="$PROJECT_DIR$/config/config.js" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project2.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/tests/cal-test.client.controller.test.js" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/template/dashboard.css" />
@@ -304,6 +190,7 @@
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.articles.tmp.html" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectview-projects-controller.client.controller.js" />
         <option value="$PROJECT_DIR$/app/controllers/articles.server.controller.js" />
+        <option value="$PROJECT_DIR$/config/config.js" />
       </list>
     </option>
   </component>
@@ -464,6 +351,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="env" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -771,12 +690,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00026" summary="SVG Interface IronMan">
-      <created>1418550990305</created>
-      <option name="number" value="00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1418550990305</updated>
-    </task>
     <task id="LOCAL-00027" summary="SVG Interface IronMan">
       <created>1418585142359</created>
       <option name="number" value="00027" />
@@ -1065,30 +978,36 @@
       <option name="project" value="LOCAL" />
       <updated>1422303034093</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="projects dashboard with API">
+      <created>1422569590436</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1422569590437</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="361" y="23" width="1061" height="868" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49468085" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32133332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44680852" sideWeight="0.85024154" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22706766" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19676946" sideWeight="0.16016015" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.496" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27596155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22706766" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4055851" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19676946" sideWeight="0.16016015" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44281915" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14516129" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4249668" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1137,7 +1056,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="spec-view: add contents" />
     <MESSAGE value="SVG Interface Improvement" />
     <MESSAGE value="SVG Interface IronMan" />
     <MESSAGE value="FrontLogo View  Added" />
@@ -1162,7 +1080,8 @@
     <MESSAGE value="optimized modules" />
     <MESSAGE value="add CRUD Article functionality for Project Article" />
     <MESSAGE value="Google API Factory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Google API Factory" />
+    <MESSAGE value="projects dashboard with API" />
+    <option name="LAST_COMMIT_MESSAGE" value="projects dashboard with API" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1171,20 +1090,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backup_module/g-drive/services/googledrive.client.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1695">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backup_module/seller-interface/controllers/gdrive.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5835">
-          <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backup_module/seller-interface/controllers/gdrive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2670">
@@ -1328,20 +1233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2625">
           <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.063655" vertical-offset="758" max-vertical-offset="1245">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1500">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1549,8 +1440,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectview-projects-controller.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39823008" vertical-offset="0" max-vertical-offset="420">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/development.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/production.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6231454" vertical-offset="0" max-vertical-offset="1245">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding />
         </state>
       </provider>
