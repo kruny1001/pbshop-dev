@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Module dependencies.
@@ -83,6 +83,23 @@ exports.list = function(req, res) {
 		}
 	});
 };
+
+/**
+ * Article middleware
+ */
+exports.articleByDocType = function(req, res) {
+    Article.find({docType:req.params.docType}).populate('user', 'displayName').exec(function(err, article) {
+        if (err) {
+            return res.send(400, {
+                message: getErrorMessage(err)
+            });
+        } else {
+            console.log('dd');
+            res.jsonp(article);
+        }
+    });
+};
+
 
 /**
  * Article middleware

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 angular.module('core').factory('Getplans', ['$resource',
 	function($resource) {

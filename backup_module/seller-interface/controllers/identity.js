@@ -2,7 +2,7 @@
  * Created by KevinSo on 10/2/2014.
  */
 
-'use strict';
+"use strict";
 
 var googlePlusUserLoader = (function() {
 

@@ -5,10 +5,11 @@ angular.module('mean-tutorials').controller('ProjectViewController', ['$scope', 
 		$scope.title= 'Project3';
         $scope.body= '';
         $scope.menus = [
-            {icon:'', name:'Projects'},
-            {icon:'', name:'Articles'},
-            {icon:'', name:'Comments'},
-            {icon:'', name:'Survey'},
+            {icon:'', name:'Dashboard', state:'projectview.dashboard'},
+            {icon:'', name:'Project', state:'projectview.projects'},
+            {icon:'', name:'Article', state:'projectview.articles'},
+            {icon:'', name:'Comments', state:'projectview.dashboard'},
+            {icon:'', name:'Survey', state:'projectview.dashboard'},
         ];
 
         $scope.goChildView = function(stateName){
@@ -24,5 +25,13 @@ angular.module('mean-tutorials').controller('ProjectViewController', ['$scope', 
                 articleId: $stateParams.articleId
             });
         };
+
+
+        $scope.shrinkleftPane = function(){
+            TweenLite.to('.leftPane', 1, {x:'-75px'});
+            TweenLite.to('.rightPane', 1, {x:'-75px'});
+            TweenLite.to('.svgBtnLeftPane', 1, {x:'75px'});
+
+        }
 	}
 ]);

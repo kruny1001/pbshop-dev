@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 //Carzen devs service used to communicate Carzen devs REST endpoints
 angular.module('carzen-devs').factory('CarzenDevs', ['$resource',

@@ -2,71 +2,160 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/testImg/t1.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/payments/services/allproducts.client.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/views/bottom-sheet-grid-template.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/views/bottom-sheet-list-template.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/views/create-gdriveapp.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/payments/views/create-payment.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/views/create-product.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/controllers/docs.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/views/edit-gdriveapp.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/payments/views/edit-payment.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/views/edit-product.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/g-drive/g-drive.client.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/g-drive/config/g-drive.client.routes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/controllers/gDrive2.addNewProduct.tmp.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/template/gDrive2.addNewProduct.tmp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/template/gDrive2.dashboard.tmp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/template/gDrive2.editProduct.tmp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/template/gDrive2.historyPayment.tmp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/services/gdocs.client.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/g-drive/config/gdocs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/controllers/gdrive.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/views/gdrive.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/controllers/gdrive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/controllers/gdriveapps.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/config/gdriveapps.client.routes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/services/gdriveapps.client.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/services/googledrive.client.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/services/googleplus.client.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/controllers/history-payment.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/controllers/identity.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/views/list-gdriveapps.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/payments/views/list-payments.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/views/list-products-banner.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/views/list-products.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/template/newProductTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/payments/config/payments.client.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/payments/controllers/payments.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/payments/tests/payments.client.controller.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/payments/payments.client.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/payments/config/payments.client.routes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/payments/services/payments.client.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/tests/products-banner.client.controller.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/services/products-banner.client.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/controllers/products.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/tests/products.client.controller.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/products.client.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/config/products.client.routes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/services/products.client.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectviewdashboard.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/tests/projectviewdashboard.client.controller.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/seller-interface.client.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/css/seller.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/views/storage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/views/view-gdriveapp.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/payments/views/view-payment.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/products/views/view-product.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/seller-interface/views/weather.client.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/css/dashboard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/css/projects.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectview-projects-controller.client.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/tests/projectview-projects-controller.client.controller.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/directives/ut-calendar.client.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/services/ut-calendar.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/all.js" afterPath="$PROJECT_DIR$/config/env/all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/payments/services/allproducts.client.service.js" afterPath="$PROJECT_DIR$/public/modules/payments/services/allproducts.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/services/allproducts.client.service.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/services/allproducts.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/animation/config/animation.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/animation/config/animation.client.routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.css" afterPath="$PROJECT_DIR$/public/dist/application.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/controllers/gdrive.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/controllers/gdrive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout.server.view.html" afterPath="$PROJECT_DIR$/app/views/layout.server.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/directives/article.client.directive.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/directives/article.client.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/article.server.model.js" afterPath="$PROJECT_DIR$/app/models/article.server.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/article.server.model.test.js" afterPath="$PROJECT_DIR$/app/tests/article.server.model.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/article.server.routes.test.js" afterPath="$PROJECT_DIR$/app/tests/article.server.routes.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/articles/controllers/articles.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/articles/controllers/articles.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/articles/tests/articles.client.controller.test.js" afterPath="$PROJECT_DIR$/public/modules/articles/tests/articles.client.controller.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/articles/articles.client.module.js" afterPath="$PROJECT_DIR$/public/modules/articles/articles.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/articles.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/articles.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/articles.server.routes.js" afterPath="$PROJECT_DIR$/app/routes/articles.server.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/tests/authentication.client.controller.test.js" afterPath="$PROJECT_DIR$/public/modules/users/tests/authentication.client.controller.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/services/authentication.client.service.js" afterPath="$PROJECT_DIR$/public/modules/users/services/authentication.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/banners/config/banners.client.config.js" afterPath="$PROJECT_DIR$/backup_module/banners/config/banners.client.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/banners/controllers/banners.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/banners/controllers/banners.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/banners/config/banners.client.routes.js" afterPath="$PROJECT_DIR$/backup_module/banners/config/banners.client.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/banners.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/banners.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/banners.server.routes.js" afterPath="$PROJECT_DIR$/app/routes/banners.server.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/bioinfo/css/bio.css" afterPath="$PROJECT_DIR$/public/modules/bioinfo/css/bio.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/bioinfo/bioinfo.client.module.js" afterPath="$PROJECT_DIR$/public/modules/bioinfo/bioinfo.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/bioinfo/controllers/bioinfohome.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/bioinfo/controllers/bioinfohome.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/calculator/controllers/cal-test.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/calculator/controllers/cal-test.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/cal-test.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/cal-test.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/tests/cal-test.client.controller.test.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/tests/cal-test.client.controller.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/calculator/calculator.client.module.js" afterPath="$PROJECT_DIR$/public/modules/calculator/calculator.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/carzen-devs/controllers/carzen-devs.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/carzen-devs/controllers/carzen-devs.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/carzen-devs/carzen-devs.client.module.js" afterPath="$PROJECT_DIR$/backup_module/carzen-devs/carzen-devs.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/carzen-devs/config/carzen-devs.client.routes.js" afterPath="$PROJECT_DIR$/backup_module/carzen-devs/config/carzen-devs.client.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/carzen-devs/services/carzen-devs.client.service.js" afterPath="$PROJECT_DIR$/backup_module/carzen-devs/services/carzen-devs.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/carzen-devs.server.routes.js" afterPath="$PROJECT_DIR$/app/routes/carzen-devs.server.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/carzen-devs/controllers/carzen-home.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/carzen-devs/controllers/carzen-home.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/carzen-devs/tests/carzen-home.client.controller.test.js" afterPath="$PROJECT_DIR$/backup_module/carzen-devs/tests/carzen-home.client.controller.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.js" afterPath="$PROJECT_DIR$/config/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/config.js" afterPath="$PROJECT_DIR$/public/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/core.client.module.js" afterPath="$PROJECT_DIR$/public/modules/core/core.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/core.server.routes.js" afterPath="$PROJECT_DIR$/app/routes/core.server.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/user-interface/controllers/detail-product.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/user-interface/controllers/detail-product.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/controllers/detail-product.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/controllers/detail-product.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/disqus/config/disqus.client.config.js" afterPath="$PROJECT_DIR$/public/modules/disqus/config/disqus.client.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/controllers/experimental-interface.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/controllers/experimental-interface.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/strategies/facebook.js" afterPath="$PROJECT_DIR$/config/strategies/facebook.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/spec-view/directives/front-logo-resize.client.directive.js" afterPath="$PROJECT_DIR$/backup_module/spec-view/directives/front-logo-resize.client.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/user-interface/controllers/front1.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/user-interface/controllers/front1.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/g-drive/g-drive.client.module.js" afterPath="$PROJECT_DIR$/backup_module/g-drive/g-drive.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/g-drive/g-drive.client.module.js" afterPath="$PROJECT_DIR$/public/modules/g-drive/g-drive.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/g-drive/config/g-drive.client.routes.js" afterPath="$PROJECT_DIR$/backup_module/g-drive/config/g-drive.client.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/g-drive/config/g-drive.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/g-drive/config/g-drive.client.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/services/gdocs.client.service.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/services/gdocs.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/seller-interface/services/gdocs.client.service.js" afterPath="$PROJECT_DIR$/public/modules/seller-interface/services/gdocs.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/controllers/gdriveapps.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/controllers/gdriveapps.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/seller-interface/controllers/gdriveapps.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/seller-interface/controllers/gdriveapps.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/services/gdriveapps.client.service.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/services/gdriveapps.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/seller-interface/services/gdriveapps.client.service.js" afterPath="$PROJECT_DIR$/public/modules/seller-interface/services/gdriveapps.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/services/getplans.client.service.js" afterPath="$PROJECT_DIR$/public/modules/core/services/getplans.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/strategies/github.js" afterPath="$PROJECT_DIR$/config/strategies/github.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/strategies/google.js" afterPath="$PROJECT_DIR$/config/strategies/google.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/g-drive/services/googledrive.client.service.js" afterPath="$PROJECT_DIR$/backup_module/g-drive/services/googledrive.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js" afterPath="$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/services/googleplus.client.service.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/services/googleplus.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/seller-interface/services/googleplus.client.service.js" afterPath="$PROJECT_DIR$/public/modules/seller-interface/services/googleplus.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gruntfile.js" afterPath="$PROJECT_DIR$/gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/controllers/header.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/core/controllers/header.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/tests/header.client.controller.test.js" afterPath="$PROJECT_DIR$/public/modules/core/tests/header.client.controller.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/seller-interface/controllers/history-payment.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/seller-interface/controllers/history-payment.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/controllers/home.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/core/controllers/home.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/tests/home.client.controller.test.js" afterPath="$PROJECT_DIR$/public/modules/core/tests/home.client.controller.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/controllers/identity.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/controllers/identity.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/init.js" afterPath="$PROJECT_DIR$/config/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="$PROJECT_DIR$/karma.conf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/controllers/link-list.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/core/controllers/link-list.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/strategies/local.js" afterPath="$PROJECT_DIR$/config/strategies/local.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/directives/mac-window.client.directive.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/directives/mac-window.client.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/user-interface/directives/main-interface.client.directive.js" afterPath="$PROJECT_DIR$/backup_module/user-interface/directives/main-interface.client.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/controllers/mcmu.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mean-event.server.model.js" afterPath="$PROJECT_DIR$/app/models/mean-event.server.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/mean-event.server.model.test.js" afterPath="$PROJECT_DIR$/app/tests/mean-event.server.model.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/mean-event.server.routes.test.js" afterPath="$PROJECT_DIR$/app/tests/mean-event.server.routes.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js" afterPath="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-events/controllers/mean-events.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-events/controllers/mean-events.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-events/mean-events.client.module.js" afterPath="$PROJECT_DIR$/public/modules/mean-events/mean-events.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/mean-events.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/mean-events.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/mean-events.server.routes.js" afterPath="$PROJECT_DIR$/app/routes/mean-events.server.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/mean-tutorials.client.module.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/mean-tutorials.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/bioinfo/directives/menuicon-hover.client.directive.js" afterPath="$PROJECT_DIR$/public/modules/bioinfo/directives/menuicon-hover.client.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/services/menus.client.service.js" afterPath="$PROJECT_DIR$/public/modules/core/services/menus.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/utility/directives/page-format-creation.client.directive.js" afterPath="$PROJECT_DIR$/backup_module/utility/directives/page-format-creation.client.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/controllers/password.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/users/controllers/password.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/payments/config/payments.client.config.js" afterPath="$PROJECT_DIR$/backup_module/payments/config/payments.client.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/payments/controllers/payments.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/payments/controllers/payments.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/payments/tests/payments.client.controller.test.js" afterPath="$PROJECT_DIR$/backup_module/payments/tests/payments.client.controller.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/payments/payments.client.module.js" afterPath="$PROJECT_DIR$/backup_module/payments/payments.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/payments/config/payments.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/payments/config/payments.client.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/payments/services/payments.client.service.js" afterPath="$PROJECT_DIR$/backup_module/payments/services/payments.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/payments/services/payments.client.service.js" afterPath="$PROJECT_DIR$/public/modules/payments/services/payments.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.server.model.js" afterPath="$PROJECT_DIR$/app/models/product.server.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/production.js" afterPath="$PROJECT_DIR$/config/env/production.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/products/tests/products-banner.client.controller.test.js" afterPath="$PROJECT_DIR$/public/modules/products/tests/products-banner.client.controller.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/products/services/products-banner.client.service.js" afterPath="$PROJECT_DIR$/backup_module/products/services/products-banner.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/products/controllers/products.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/products/controllers/products.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/products/tests/products.client.controller.test.js" afterPath="$PROJECT_DIR$/backup_module/products/tests/products.client.controller.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/products/products.client.module.js" afterPath="$PROJECT_DIR$/backup_module/products/products.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/products/services/products.client.service.js" afterPath="$PROJECT_DIR$/public/modules/products/services/products.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/products.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/products.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project1.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project1.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/spec-view/services/project1.client.service.js" afterPath="$PROJECT_DIR$/backup_module/spec-view/services/project1.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project2.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project2.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.articles.tmp.html" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.articles.tmp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectView.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectView.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/views/projectView.client.view.html" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/views/projectView.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.dashboard.tmp.html" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.dashboard.tmp.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.projects.tmp.html" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.projects.tmp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectviewdashboard.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectviewdashboard.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/sdsumap/controllers/sdsumap-main.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/sdsumap/controllers/sdsumap-main.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/sdsumap/sdsumap.client.module.js" afterPath="$PROJECT_DIR$/backup_module/sdsumap/sdsumap.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/sdsumap/config/sdsumap.client.routes.js" afterPath="$PROJECT_DIR$/backup_module/sdsumap/config/sdsumap.client.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/secure.js" afterPath="$PROJECT_DIR$/config/env/secure.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/seller-interface/seller-interface.client.module.js" afterPath="$PROJECT_DIR$/backup_module/seller-interface/seller-interface.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/seller-interface/seller-interface.client.module.js" afterPath="$PROJECT_DIR$/public/modules/seller-interface/seller-interface.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/controllers/settings.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/users/controllers/settings.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/spec-view/controllers/spec-home.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/spec-view/controllers/spec-home.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/spec-view/spec-view.client.module.js" afterPath="$PROJECT_DIR$/backup_module/spec-view/spec-view.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/spec-view/directives/src.client.directive.js" afterPath="$PROJECT_DIR$/backup_module/spec-view/directives/src.client.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/animation/controllers/svg1.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/animation/controllers/svg1.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/utility/controllers/test-page-generator.client.controller.js" afterPath="$PROJECT_DIR$/backup_module/utility/controllers/test-page-generator.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/test.js" afterPath="$PROJECT_DIR$/config/env/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/animation/controllers/three.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/animation/controllers/three.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/tinymce/tinymce.client.module.js" afterPath="$PROJECT_DIR$/public/modules/tinymce/tinymce.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/strategies/twitter.js" afterPath="$PROJECT_DIR$/config/strategies/twitter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/user-interface/config/user-interface.client.routes.js" afterPath="$PROJECT_DIR$/backup_module/user-interface/config/user-interface.client.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/user-interface/config/user-interface.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/user-interface/config/user-interface.client.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/user.server.model.test.js" afterPath="$PROJECT_DIR$/app/tests/user.server.model.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/users.authentication.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/users/users.authentication.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/users.authorization.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/users/users.authorization.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/config/users.client.config.js" afterPath="$PROJECT_DIR$/public/modules/users/config/users.client.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/users.profile.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/users/users.profile.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup_module/utility/config/utility.client.routes.js" afterPath="$PROJECT_DIR$/backup_module/utility/config/utility.client.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/views/versioning.client.view.html" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/views/versioning.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -96,113 +185,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="googleApi" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/googleApi">
+      <file leaf-file-name="projectview-projects-controller.client.controller.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectview-projects-controller.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30066815" vertical-offset="0" max-vertical-offset="449">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projectviewdashboard.client.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectviewdashboard.client.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4470">
-              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.39823008" vertical-offset="0" max-vertical-offset="420">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="googledrive.client.service.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js">
+      <file leaf-file-name="projectView.projects.tmp.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.projects.tmp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1635">
-              <caret line="13" column="34" selection-start-line="9" selection-start-column="12" selection-end-line="13" selection-end-column="34" />
+            <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="630">
+              <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projectView.dashboard.tmp.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.dashboard.tmp.html">
+      <file leaf-file-name="projectView.articles.tmp.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.articles.tmp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.791667" vertical-offset="1163" max-vertical-offset="1650">
-              <caret line="98" column="51" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="51" />
-              <folding>
-                <element signature="n#style#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#0;n#h2#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#1;n#h2#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-content#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#md-content#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-toolbar#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#0;n#h2#0;n#md-toolbar#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#1;n#h2#0;n#md-toolbar#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-content#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#md-content#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#0;n#md-content#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#1;n#md-content#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projectView.client.view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/projectView.client.view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="435">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            <state vertical-scroll-proportion="-11.166667" vertical-offset="92" max-vertical-offset="570">
+              <caret line="24" column="47" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gDrive2.addNewProduct.tmp.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/modules/seller-interface/template/gDrive2.addNewProduct.tmp.html">
+      <file leaf-file-name="articles.client.service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/articles/services/articles.client.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25" vertical-offset="345" max-vertical-offset="3405">
-              <caret line="41" column="21" selection-start-line="30" selection-start-column="8" selection-end-line="41" selection-end-column="21" />
-              <folding>
-                <element signature="n#style#0;n#md-toolbar#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seller.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/modules/seller-interface/css/seller.css">
+      <file leaf-file-name="articles.client.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/articles/controllers/articles.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <marker date="1422298522000" expanded="true" signature="6:97" placeholder="{...}" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="599" max-vertical-offset="1125">
+              <caret line="65" column="15" selection-start-line="63" selection-start-column="12" selection-end-line="65" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="storage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/modules/seller-interface/views/storage.html">
+      <file leaf-file-name="products.server.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/products.server.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="495">
-              <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
-              <folding>
-                <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="payments.client.controller.test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/modules/payments/tests/payments.client.controller.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="2520">
-              <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1964" max-vertical-offset="2490">
+              <caret line="145" column="7" selection-start-line="145" selection-start-column="7" selection-end-line="145" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -216,25 +253,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project2.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/users/tests/authentication.client.controller.test.js" />
-        <option value="$PROJECT_DIR$/karma.conf.js" />
-        <option value="$PROJECT_DIR$/public/modules/calculator/tests/cal-test.client.controller.test.js" />
-        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/tests/cal-test.client.controller.test.js" />
-        <option value="$PROJECT_DIR$/app/models/gskbAnalysis.server.model.js" />
-        <option value="$PROJECT_DIR$/app/controllers/gskbAnalysis.server.controller.js" />
-        <option value="$PROJECT_DIR$/app/routes/gskbAnalysis.server.routes.js" />
-        <option value="$PROJECT_DIR$/public/modules/bioinfo/controllers/bioinfohome.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/bioinfo/controllers/bio-d3-1.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/bioinfo/css/bio-d3-example.css" />
-        <option value="$PROJECT_DIR$/public/modules/bioinfo/views/bioinfo-home.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/calculator/calculator.client.module.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/controllers/listing-product.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/user-interface/config/user-interface.client.routes.js" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html" />
-        <option value="$PROJECT_DIR$/config/config.js" />
         <option value="$PROJECT_DIR$/public/dist/application.js" />
         <option value="$PROJECT_DIR$/public/modules/bioinfo/directives/menuicon-hover.client.directive.js" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-project.css" />
@@ -249,12 +271,8 @@
         <option value="$PROJECT_DIR$/public/modules/articles/views/edit-article.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/views/project3.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project3.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/bioinfo/css/bio.css" />
-        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectView.client.controller.js" />
         <option value="$PROJECT_DIR$/config/env/all.js" />
-        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.articles.tmp.html" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/config/mean-tutorials.client.routes.js" />
-        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.projects.tmp.html" />
         <option value="$PROJECT_DIR$/backup_module/seller-interface/controllers/gdrive.js" />
         <option value="$PROJECT_DIR$/app/views/layout.server.view.html" />
         <option value="$PROJECT_DIR$/public/modules/g-drive/config/gdocs.js" />
@@ -262,11 +280,30 @@
         <option value="$PROJECT_DIR$/public/modules/seller-interface/template/gDrive2.dashboard.tmp.html" />
         <option value="$PROJECT_DIR$/public/modules/seller-interface/css/seller.css" />
         <option value="$PROJECT_DIR$/public/modules/seller-interface/template/gDrive2.addNewProduct.tmp.html" />
-        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/views/projectView.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js" />
-        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.dashboard.tmp.html" />
-        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectviewdashboard.client.controller.js" />
         <option value="$PROJECT_DIR$/docs/googleApi" />
+        <option value="$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectView.client.controller.js" />
+        <option value="$PROJECT_DIR$/config/config.js" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project2.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/tests/cal-test.client.controller.test.js" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/template/dashboard.css" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/services/ut-calendar.client.service.js" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/directives/ut-calendar.client.directive.js" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css" />
+        <option value="$PROJECT_DIR$/public/modules/bioinfo/css/bio.css" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectviewdashboard.client.controller.js" />
+        <option value="$PROJECT_DIR$/gruntfile.js" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/views/projectView.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/views/versioning.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.dashboard.tmp.html" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/css/dashboard.css" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/css/projects.css" />
+        <option value="$PROJECT_DIR$/public/modules/articles/services/articles.client.service.js" />
+        <option value="$PROJECT_DIR$/app/routes/articles.server.routes.js" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.projects.tmp.html" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.articles.tmp.html" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectview-projects-controller.client.controller.js" />
+        <option value="$PROJECT_DIR$/app/controllers/articles.server.controller.js" />
       </list>
     </option>
   </component>
@@ -304,6 +341,9 @@
             <targets>
               <target value="combine" />
             </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>dgeni</name>
           </GruntMultiTaskState>
           <GruntMultiTaskState>
             <name>env</name>
@@ -380,9 +420,9 @@
     <data>$PROJECT_DIR$/node_modules/karma</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="176" />
+    <option name="x" value="361" />
     <option name="y" value="23" />
-    <option name="width" value="1217" />
+    <option name="width" value="1061" />
     <option name="height" value="868" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -432,7 +472,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/dgeni-example-master" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editorconfig.notification" value="Applied .editorconfig settings" />
@@ -455,11 +495,11 @@
       <recent name="$PROJECT_DIR$/public/modules/mean-tutorials/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/modules/mean-tutorials/css" />
       <recent name="$PROJECT_DIR$/public/modules/mean-tutorials/template" />
       <recent name="$PROJECT_DIR$/public/modules/mean-tutorials/views" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/testNodeModule" />
-      <recent name="$PROJECT_DIR$/public/modules/mean-tutorials/img" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -730,12 +770,6 @@
       <created>1416897923119</created>
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
-    </task>
-    <task id="LOCAL-00025" summary="SVG Interface IronMan">
-      <created>1418550267725</created>
-      <option name="number" value="00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1418550267725</updated>
     </task>
     <task id="LOCAL-00026" summary="SVG Interface IronMan">
       <created>1418550990305</created>
@@ -1025,35 +1059,41 @@
       <option name="project" value="LOCAL" />
       <updated>1422253299524</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Google API Factory">
+      <created>1422303034093</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1422303034093</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="176" y="23" width="1217" height="868" extended-state="0" />
+    <frame x="361" y="23" width="1061" height="868" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3217768" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46276596" sideWeight="0.85024154" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44281915" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22706766" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19676946" sideWeight="0.16016015" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3257979" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49468085" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32133332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44680852" sideWeight="0.85024154" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22993311" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4063745" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27596155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22706766" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4055851" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19676946" sideWeight="0.16016015" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44281915" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14516129" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4249668" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1097,7 +1137,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="spec-view" />
     <MESSAGE value="spec-view: add contents" />
     <MESSAGE value="SVG Interface Improvement" />
     <MESSAGE value="SVG Interface IronMan" />
@@ -1122,7 +1161,8 @@
     <MESSAGE value="edit project2" />
     <MESSAGE value="optimized modules" />
     <MESSAGE value="add CRUD Article functionality for Project Article" />
-    <option name="LAST_COMMIT_MESSAGE" value="add CRUD Article functionality for Project Article" />
+    <MESSAGE value="Google API Factory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Google API Factory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1131,211 +1171,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backup_module/seller-interface/template/gDrive2.addNewProduct.tmp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.583333" vertical-offset="1201" max-vertical-offset="3375">
-          <caret line="99" column="36" selection-start-line="99" selection-start-column="36" selection-end-line="102" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.7083335" vertical-offset="82" max-vertical-offset="690">
-          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/production.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42265195" vertical-offset="792" max-vertical-offset="1725">
-          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/lib/angular-ui-tinymce/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8333333" vertical-offset="13" max-vertical-offset="465">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/link-list.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1125">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/plan.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="452">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/home.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.546697" vertical-offset="0" max-vertical-offset="439">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/lib/tinymce/.bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.072289154" vertical-offset="0" max-vertical-offset="415">
-          <caret line="2" column="50" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/header.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="452">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dist/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2551253" vertical-offset="22909" max-vertical-offset="74205">
-          <caret line="1564" column="38" selection-start-line="1564" selection-start-column="38" selection-end-line="1564" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/config/core.client.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7676991" vertical-offset="1108" max-vertical-offset="1560">
-          <caret line="97" column="8" selection-start-line="24" selection-start-column="0" selection-end-line="97" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/articles.server.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31601125" vertical-offset="0" max-vertical-offset="1710">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/article.server.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45517242" vertical-offset="0" max-vertical-offset="725">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/articles/services/articles.client.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="725">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/bioinfo/css/bio.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1590">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/articles/views/create-article.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.686747" vertical-offset="0" max-vertical-offset="750">
-          <caret line="19" column="88" selection-start-line="19" selection-start-column="88" selection-end-line="19" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/tinymce/config/tinymceconfig.client.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43448275" vertical-offset="0" max-vertical-offset="725">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/tinymce/directives/ui-tinymce.client.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10344828" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/articles/controllers/articles.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8216292" vertical-offset="405" max-vertical-offset="1125">
-          <caret line="66" column="10" selection-start-line="58" selection-start-column="8" selection-end-line="66" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="9" column="77" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/lib/angular-ui-router/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="435">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectView.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3930131" vertical-offset="0" max-vertical-offset="510">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.222222" vertical-offset="0" max-vertical-offset="1500">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/articles/views/edit-article.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7647059" vertical-offset="0" max-vertical-offset="825">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.articles.tmp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="105">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/config/mean-tutorials.client.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.projects.tmp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="135">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/g-drive/config/g-drive.client.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backup_module/g-drive/services/googledrive.client.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1695">
@@ -1361,7 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="2655">
           <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,7 +1203,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1377,7 +1210,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1385,7 +1217,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="590" max-vertical-offset="1740">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1393,7 +1224,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1401,7 +1231,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
           <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1409,7 +1238,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2520">
           <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1417,17 +1245,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/seller-interface/views/storage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="495">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="495">
           <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1435,9 +1259,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <marker date="1422298522000" expanded="true" signature="6:97" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1445,7 +1266,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1200">
           <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1453,17 +1273,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31120333" vertical-offset="0" max-vertical-offset="5835">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/seller-interface/template/gDrive2.addNewProduct.tmp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25" vertical-offset="345" max-vertical-offset="3405">
+        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="3405">
           <caret line="41" column="21" selection-start-line="30" selection-start-column="8" selection-end-line="41" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#md-toolbar#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1471,67 +1287,272 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.04408353" vertical-offset="889" max-vertical-offset="1320">
           <caret line="58" column="17" selection-start-line="27" selection-start-column="4" selection-end-line="58" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-content#1;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/projectView.client.view.html">
+    <entry file="file://$PROJECT_DIR$/docs/d3project.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="435">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="447">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/googleApi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5" vertical-offset="0" max-vertical-offset="330">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="804" max-vertical-offset="1170">
+          <caret line="65" column="18" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.dashboard.tmp.html">
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/tests/bio-d3-1.client.controller.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.791667" vertical-offset="1163" max-vertical-offset="1650">
-          <caret line="98" column="51" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#0;n#h2#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#1;n#h2#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-content#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#md-content#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-toolbar#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#0;n#h2#0;n#md-toolbar#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#1;n#h2#0;n#md-toolbar#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-content#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#md-content#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#0;n#md-content#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#1;n#md-content#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/articles/tests/articles.client.controller.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2625">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.063655" vertical-offset="758" max-vertical-offset="1245">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1500">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project2.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36960986" vertical-offset="0" max-vertical-offset="487">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/tests/cal-test.client.controller.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.368" vertical-offset="326" max-vertical-offset="2310">
+          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dist/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="61938" max-vertical-offset="108690">
+          <caret line="4140" column="44" selection-start-line="4140" selection-start-column="44" selection-end-line="4140" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65869564" vertical-offset="13812" max-vertical-offset="14565">
+          <caret line="941" column="11" selection-start-line="899" selection-start-column="8" selection-end-line="941" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1635">
-          <caret line="13" column="34" selection-start-line="9" selection-start-column="12" selection-end-line="13" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.16528925" vertical-offset="45" max-vertical-offset="1845">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/services/ut-calendar.client.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+          <caret line="2" column="52" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/directives/ut-calendar.client.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/bioinfo/css/bio.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1680">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2865">
+          <caret line="146" column="21" selection-start-line="146" selection-start-column="21" selection-end-line="146" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/projectView.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55585104" vertical-offset="106" max-vertical-offset="495">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/versioning.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7712082" vertical-offset="0" max-vertical-offset="450">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectviewdashboard.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4470">
-          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="3570">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/googleApi">
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/projects.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30066815" vertical-offset="0" max-vertical-offset="449">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/articles/views/list-articles.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5952381" vertical-offset="0" max-vertical-offset="378">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.dashboard.tmp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1965">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04109589" vertical-offset="0" max-vertical-offset="4470">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="4" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectView.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48507464" vertical-offset="0" max-vertical-offset="645">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/products.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1964" max-vertical-offset="2490">
+          <caret line="145" column="7" selection-start-line="145" selection-start-column="7" selection-end-line="145" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/articles/controllers/articles.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="599" max-vertical-offset="1125">
+          <caret line="65" column="15" selection-start-line="63" selection-start-column="12" selection-end-line="65" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/articles/services/articles.client.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.articles.tmp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.166667" vertical-offset="92" max-vertical-offset="570">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.projects.tmp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="630">
+          <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/articles.server.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80965906" vertical-offset="0" max-vertical-offset="465">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/articles.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.2357955" vertical-offset="31" max-vertical-offset="1980">
+          <caret line="78" column="58" selection-start-line="78" selection-start-column="58" selection-end-line="78" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectview-projects-controller.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39823008" vertical-offset="0" max-vertical-offset="420">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

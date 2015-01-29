@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 angular.module('user-interface').controller('Front1Controller', ['$scope','$log',
 	function($scope, $log) {
 		$scope.id = 'frint-1';

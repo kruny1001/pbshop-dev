@@ -1,5 +1,28 @@
 <div ng-controller="ProjectviewdashboardController">
     <h1>Dashboard</h1>
+    <div style="color:red; position: absolute; top:10px; right:20px;">{{width}}</div>
+
+
+    <div class="meanT-dashboard-main">
+        <div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
+
+        <div class="meanT-headSubTitle">
+            You can check out our current project.
+        </div>
+        <ut-calendar></ut-calendar>
+    </div>
+
+    <div class="meanT-dashboard-upEvent">
+        <div> Upcoming Events </div>
+        <div> 1. Weekly Meeting</div>
+        <div> 2. Weekly Meeting</div>
+        <div> 3. Weekly Meeting</div>
+    </div>
+
+    <div class="meanT-dashboard-users">
+        <div>Topics</div>
+    </div>
+    <!--
     <md-toolbar
         style="font-size:large;
         border-radius:15px 15px 0px 0px;">
@@ -29,13 +52,13 @@
         </h2>
     </md-toolbar>
     <md-content class="md-padding" style="border-radius:0px 0px 15px 15px">
-        <!-- <input id="filePicker" ng-disabled="isAuth == false" type="button" value="upload to GDrive" ng-click="setupPicker()"> -->
+
         You can upload and select from Google Drive
         <pre>Your FolderID: {{rootGdriveFolderID}}</pre>
-        <!-- <input type="file" id="filePicker" style="display: none" /> -->
+
         <p>
         <div class="well" >
-            <!-- <pre >{{file}}</pre> -->
+
             <img ng-repeat="file in files" style="margin-left:15px; margin-bottom: 15px"  select-img my-slider="file" index={{$index}} on-change-status="onChangeStatus()" class="sellerInterfaceItemImg" ng-src="{{ arrive && permalLink + file.id || ''}}">
         </div>
         </p>
@@ -71,13 +94,10 @@
         </h2>
     </md-toolbar>
     <md-content class="md-padding" style="border-radius:0px 0px 15px 15px">
-        <!-- <input id="filePicker" ng-disabled="isAuth == false" type="button" value="upload to GDrive" ng-click="setupPicker()"> -->
         You can upload and select from Google Drive
         <pre>Your FolderID: {{rootGdriveFolderID}}</pre>
-        <!-- <input type="file" id="filePicker" style="display: none" /> -->
         <p>
         <div class="well" >
-            <!-- <pre >{{file}}</pre> -->
             <img ng-repeat="file in files" style="margin-left:15px; margin-bottom: 15px"  select-img my-slider="file" index={{$index}} on-change-status="onChangeStatus()" class="sellerInterfaceItemImg" ng-src="{{ arrive && permalLink + file.id || ''}}">
         </div>
         </p>
@@ -92,7 +112,7 @@
         </md-button>
         <md-button flex flex-order="4"
                    class="md-raised md-primary"
-                   noink
+
                    style="background-color: #009688; font-size:medium; margin-right:10px;"
 
                    aria-label="{{authName}}"
@@ -100,5 +120,6 @@
             test-getGoogleDriveInfo
         </md-button>
     </md-content>
+    -->
 </div>
 

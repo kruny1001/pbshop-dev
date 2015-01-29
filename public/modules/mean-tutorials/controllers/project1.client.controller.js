@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 angular.module('mean-tutorials').controller('Project1Controller', ['$scope','$document','$timeout',
 	function($scope, $document, $timeout) {

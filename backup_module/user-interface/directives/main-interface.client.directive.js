@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 //http://css-tricks.com/draggable-elements-push-others-way/
 angular.module('user-interface').directive('mainInterface', ['$compile',
 	function($compile) {

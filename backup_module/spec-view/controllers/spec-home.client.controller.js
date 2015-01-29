@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 angular.module('spec-view').controller('SpecHomeController', ['$scope','$timeout','$compile','Project1',//'eduTimeline',
 	function($scope, $timeout, $compile, Project1) {

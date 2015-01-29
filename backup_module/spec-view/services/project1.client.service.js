@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 angular.module('spec-view').factory('Project1', [
 	function() {

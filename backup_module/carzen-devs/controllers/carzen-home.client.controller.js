@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 angular.module('carzen-devs').controller('CarzenHomeController', ['$scope','$log',
 	function($scope,$log) {

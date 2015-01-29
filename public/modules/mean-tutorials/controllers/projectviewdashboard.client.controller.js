@@ -1,53 +1,35 @@
-'use strict';
+"use strict";
 
-angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['$scope', '$state', '$http', '$q', '$mdDialog', '$mdSidenav', 'configGdrive', 'Googledrive', 'GooglePlus', 'Products', 'Authentication', 'ProductByUserId',
-    function ($scope, $state, $http, $q, $mdDialog, $mdSidenav, configGdrive, Googledrive, GooglePlus, Products, Authentication, ProductByUserId) {
+angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['$scope', '$window', '$state', '$http', '$q', '$mdDialog', '$mdSidenav', 'configGdrive', 'Googledrive', 'GooglePlus', 'Products', 'Authentication', 'ProductByUserId','UtCalendar',
+    function ($scope, $window, $state, $http, $q, $mdDialog, $mdSidenav, configGdrive, Googledrive, GooglePlus, Products, Authentication, ProductByUserId,UtCalendar) {
         $scope.authentication = Authentication;
+
+        $scope.width = window.innerWidth;
+        $('.rightPane').width(window.innerWidth - 74);
+        $(window).on("resize.doResize", function (){
+            $scope.width = window.innerWidth;
+            $('.rightPane').width(window.innerWidth - 74);
+            $scope.$apply(function(){
+
+                //do something to update current scope based on the new innerWidth and let angular update the view.
+            });
+        });
+
+        $scope.$on("$destroy",function (){
+            $(window).off("resize.doResize"); //remove the handler added earlier
+        });
+
 
         $scope.testCreateFolder = function(){
             //console.log(accessToken);
-            Googledrive.createFolder('chulwoo Fuck', accessToken);
+            Googledrive.createFolder('chulwoo Fuck1', accessToken);
         };
 
         $scope.testGetGoogleDriveInfo = function() {
             Googledrive.getGoogleDriveInfo();
         }
 
-
-        /*
-        $scope.goChildView = function(stateName){
-            $state.go(stateName);
-            $mdSidenav('left').close();
-        }
-
-        $scope.redirect = function(stateName, param){
-            $state.go(stateName, {productId: param});
-            $mdSidenav('left').close();
-        }
-        */
-        //$scope.queriedProduct = ProductByUserId.query({userId:$scope.authentication.user._id });
-
-        /*
-         google.load('visualization', '1', {
-         packages: ['corechart']
-         });
-
-
-         var data = google.visualization.arrayToDataTable([
-         ['Year', 'Sales', 'Expenses'],
-         ['명이나물', 1000, 400],
-         ['더덕나물', 1170, 460],
-         ['문어젖갈', 660, 1120],
-         ['오징어젖갈', 1030, 540]
-         ]);
-         var options = {
-         title: 'Company Performance'
-         };
-         var chart = new google.visualization.LineChart(document.getElementById('chartdiv'));
-
-         chart.draw(data, options);
-         /**/
-
+        //
         var accessToken;
         $scope.permalLink = 'http://drive.google.com/uc?export=view&id=';
         $scope.arrive = false;
@@ -230,7 +212,7 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
                     $http.get('users/me')
                         .success(function(response) {
                             console.log(response);
-                            var folderName = 'URI-'+response._id;
+                            var folderName = 'D2l-'+response._id;
                             //1. Create A New Folder
                             Googledrive.createFolder(folderName, accessToken);
                             //2. Update User Information
@@ -246,47 +228,5 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             Googledrive.findFolder(callback);
         }
 
-        $scope.find = function() {
-            $scope.products = ProductByUserId.query({userId:$scope.authentication.user._id });
-        };
-
-        $scope.onChangeStatus = function(){
-            console.log('sdfsf');
-            $scope.$digest();
-        };
-
-        $scope.openNewProductDialog = function(ev) {
-            //Open Dialog
-            $mdDialog.show({
-                templateUrl: 'modules/seller-interface/template/newProductTemplate.html',
-                targetEvent: ev,
-                controller: newProductDialog,
-                clickOutsideToClose  : false
-            }).then(function() {
-                $scope.alert = 'You said "Okay".';
-            }, function() {
-                $scope.alert = 'You cancelled the dialog.';
-            });
-        };
-
-        function newProductDialog($scope, $mdDialog){
-            $scope.hide = function() {
-                $mdDialog.hide();
-            };
-            $scope.cancel = function() {
-                $mdDialog.cancel();
-            };
-            $scope.answer = function(answer) {
-                $mdDialog.hide(answer);
-            };
-        }
-
-        $scope.toggleLeft = function() {
-            $mdSidenav('left').open();
-        };
-
-        $scope.getPaymentHistory = function() {
-            $scope.payments = Payments.query();
-        }
-	}
+    }
 ]);

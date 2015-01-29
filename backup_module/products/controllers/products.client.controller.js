@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Products controller
 angular.module('products').controller('ProductsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Products', 'Banners', 'ProductsBanner',

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 angular.module('sdsumap').controller('SdsumapmainController', ['$scope','uiGmapGoogleMapApi',
 	function($scope, uiGmapGoogleMapApi) {

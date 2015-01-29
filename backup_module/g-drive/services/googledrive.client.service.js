@@ -2,7 +2,7 @@
  * Created by Kevin on 2014-10-29.
 * */
 
-'use strict';
+"use strict";
 
 angular.module('g-drive').factory('Googledrive', ['configGdrive',
 	function(configGdrive) {

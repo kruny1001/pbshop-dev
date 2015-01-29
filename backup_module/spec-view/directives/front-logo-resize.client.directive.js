@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 angular.module('spec-view').directive('resize', ['$window',
 	function($window) {

@@ -3,7 +3,7 @@
  */
 
 (function (angular, window) {
-    'use strict';
+    "use strict";
 
     var disqusModule = angular.module('disqus', [ ]);
 

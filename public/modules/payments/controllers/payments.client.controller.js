@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Payments controller
 angular.module('payments').controller('PaymentsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Payments',

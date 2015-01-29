@@ -11,7 +11,8 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 			findFolder: findFolder,
 			getGoogleDriveInfo: getGoogleDriveInfo,
 			setupPicker: setupPicker,
-			listFolder: listFolder
+			listFolder: listFolder,
+            createFile: createFile
 		};
 
 		function createFolder(FolderName, accessToken){
@@ -44,6 +45,19 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 				});
 			});
 		}
+
+        // create File
+        function createFile(callback){
+            gapi.client.load('drive', 'v2').then(function(){
+                var request = gapi.client.drive.files.list({
+                    q: "title contains 'URI-'",
+                    fields: 'items(id\,title)'
+                });
+                request.then(function(resp){
+                    callback(resp);
+                });
+            });
+        }
 
 		function getGoogleDriveInfo(){
 			gapi.client.load('drive', 'v2').then(function() {

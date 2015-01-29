@@ -1,5 +1,7 @@
 'use strict';
 
+var Dgeni = require('dgeni');
+
 module.exports = function(grunt) {
 	// Unified Watch Object
 	var watchFiles = {
@@ -7,7 +9,7 @@ module.exports = function(grunt) {
 		serverJS: ['gruntfile.js', 'server.js', 'config/**/*.js', 'app/**/*.js'],
 		clientViews: ['public/modules/**/views/**/*.html'],
 		clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
-		clientCSS: ['public/modules/**/*.css'],
+		clientCSS: ['public/modules/**/*.css', 'public/modules/**/template/*.css'],
 		mochaTests: ['app/tests/**/*.js']
 	};
 
@@ -174,4 +176,10 @@ module.exports = function(grunt) {
 
 	// Test task.
 	grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
+
+    grunt.registerTask('dgeni', 'Generate docs via dgeni.', function() {
+        var done = this.async();
+        var dgeni = new Dgeni([require('./docs/dgeni-example')]);
+        dgeni.generate().then(done);
+    });
 };

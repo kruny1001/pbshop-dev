@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 //Gdriveapps service used to communicate Gdriveapps REST endpoints
 angular.module('seller-interface').factory('Gdriveapps', ['$resource',

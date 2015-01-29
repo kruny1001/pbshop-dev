@@ -1,0 +1,16 @@
+.meanT-dashboard-main{
+    background-color: #1abc9c;
+    height: 100%;
+    position: relative;
+    padding: 10px 10px 10px 10px;
+}
+
+.meanT-dashboard-upEvent {
+    background-color: #f1c40f;
+    padding: 10px 10px 10px 10px;
+}
+
+.meanT-dashboard-users {
+    background-color: #e67e22;
+    padding: 10px 10px 10px 10px;
+}

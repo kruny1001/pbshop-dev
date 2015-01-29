@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Carzen devs controller
 angular.module('carzen-devs').controller('CarzenDevsController', ['$scope', '$stateParams', '$location', 'Authentication', 'CarzenDevs',

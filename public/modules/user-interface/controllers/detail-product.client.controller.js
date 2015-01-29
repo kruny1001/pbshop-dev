@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 angular.module('user-interface').controller('DetailProductController', ['$scope','$stateParams','$sce','Products', 'GetPurchaseJWT','Payments','configGdrive',
 	function($scope, $stateParams, $sce, Products, GetPurchaseJWT, Payments, configGdrive) {

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 angular.module('mean-tutorials')
 	.controller('MeanLoginCtrl', function($scope, Authentication){

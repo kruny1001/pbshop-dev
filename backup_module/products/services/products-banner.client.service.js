@@ -2,7 +2,7 @@
  * Created by KevinSo on 9/24/2014.
  */
 
-'use strict';
+"use strict";
 
 //Products service used to communicate Products REST endpoints
 angular.module('products').factory('ProductsBanner', ['$resource', function($resource) {

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 angular.module('user-interface').directive('article', ['Articles',
 	function(Articles) {

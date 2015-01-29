@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Init the application configuration module for AngularJS application
 var ApplicationConfiguration = (function() {
@@ -52,24 +52,26 @@ angular.element(document).ready(function() {
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('animation');
 
-'use strict';
+"use strict";
 
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('articles');
-'use strict';
+
+"use strict";
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('bioinfo');
 
-'use strict';
+"use strict";
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('calculator');
 
-'use strict';
+"use strict";
 
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');
+
 /**
  * Created by Kevin on 2014-11-26.
  */
@@ -79,16 +81,17 @@ ApplicationConfiguration.registerModule('core');
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('disqus');
 
-'use strict';
+"use strict";
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('g-drive');
 
-'use strict';
+"use strict";
 
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('mean-events');
-'use strict';
+
+"use strict";
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('mean-tutorials');
@@ -101,12 +104,12 @@ ApplicationConfiguration.registerModule('payments');
 
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('products');
-'use strict';
+"use strict";
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('seller-interface');
 
-'use strict';
+"use strict";
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('tinymce');
@@ -120,7 +123,7 @@ ApplicationConfiguration.registerModule('user-interface');
 
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('users');
-'use strict';
+"use strict";
 
 //Setting up route
 angular.module('animation').config(['$stateProvider',
@@ -145,6 +148,7 @@ angular.module('animation').config(['$stateProvider',
 		});
 	}
 ]);
+
 'use strict';
 
 angular.module('animation').controller('J1Controller', ['$scope', '$timeout',
@@ -262,7 +266,7 @@ angular.module('animation').controller('Ryuhm12Controller', ['$scope',
 		// ...
 	}
 ]);
-'use strict';
+"use strict";
 
 angular.module('animation').directive('onFinishRender', ["$timeout", function ($timeout) {
 	return {
@@ -353,7 +357,7 @@ angular.module('animation').controller('Svg1Controller', ['$scope','$timeout',
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('animation').controller('ThreeController', ['$scope',
 	function($scope) {
@@ -1583,7 +1587,7 @@ angular.module('articles').config(['$stateProvider',
 		});
 	}
 ]);
-'use strict';
+"use strict";
 
 angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles',
 	function($scope, $stateParams, $location, Authentication, Articles) {
@@ -1783,7 +1787,7 @@ angular.module('mean-tutorials').controller('BioD31Controller', ['$scope',
     }
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('bioinfo').controller('BioinfohomeController', ['$scope','$http',
 	function($scope,$http) {
@@ -1856,7 +1860,7 @@ angular.module('bioinfo').controller('BioinfohomeController', ['$scope','$http',
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('bioinfo').directive('menuiconHover', [
 	function() {
@@ -1876,7 +1880,7 @@ angular.module('bioinfo').directive('menuiconHover', [
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('calculator').controller('CalTestController', ['$scope',
 	function($scope) {
@@ -1884,6 +1888,7 @@ angular.module('calculator').controller('CalTestController', ['$scope',
 		// ...
 	}
 ]);
+
 'use strict';
 
 angular.module('calculator')
@@ -2099,7 +2104,7 @@ angular.module('ui.tinymce', [])
 		};
 	}]);
 
-'use strict';
+"use strict";
 
 angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus',
 	function($scope, Authentication, Menus) {
@@ -2117,7 +2122,8 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 		});
 	}
 ]);
-'use strict';
+
+"use strict";
 
 
 angular.module('core').controller('HomeController', ['$scope', 'Authentication',
@@ -2134,7 +2140,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('core').controller('LinklistController', ['$scope',
 	function($scope) {
@@ -2226,7 +2232,7 @@ angular.module('core').controller('PlanController', ['$scope', '$element', 'Auth
 ]);
 
 
-'use strict';
+"use strict";
 
 angular.module('core').factory('Getplans', ['$resource',
 	function($resource) {
@@ -2243,7 +2249,8 @@ angular.module('core').factory('Getplans', ['$resource',
         });
 	}
 ]);
-'use strict';
+
+"use strict";
 
 //Menu service used for managing  menus
 angular.module('core').service('Menus', [
@@ -2409,12 +2416,13 @@ angular.module('core').service('Menus', [
 		this.addMenu('topbar');
 	}
 ]);
+
 /**
  * Created by Kevin on 2014-11-26.
  */
 
 (function (angular, window) {
-    'use strict';
+    "use strict";
 
     var disqusModule = angular.module('disqus', [ ]);
 
@@ -2654,7 +2662,7 @@ angular.module('core').service('Menus', [
 })(angular, this);
 
 
-'use strict';
+"use strict";
 
 var CONFIG = {
 	clientId: '574563539488-n0vrevgjp3606l20hfk4rqfk1dc8j3qb.apps.googleusercontent.com',
@@ -2786,7 +2794,8 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 			findFolder: findFolder,
 			getGoogleDriveInfo: getGoogleDriveInfo,
 			setupPicker: setupPicker,
-			listFolder: listFolder
+			listFolder: listFolder,
+            createFile: createFile
 		};
 
 		function createFolder(FolderName, accessToken){
@@ -2819,6 +2828,19 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 				});
 			});
 		}
+
+        // create File
+        function createFile(callback){
+            gapi.client.load('drive', 'v2').then(function(){
+                var request = gapi.client.drive.files.list({
+                    q: "title contains 'URI-'",
+                    fields: 'items(id\,title)'
+                });
+                request.then(function(resp){
+                    callback(resp);
+                });
+            });
+        }
 
 		function getGoogleDriveInfo(){
 			gapi.client.load('drive', 'v2').then(function() {
@@ -2879,7 +2901,7 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 	}
 ]);
 
-'use strict';
+"use strict";
 
 // Configuring the Articles module
 angular.module('mean-events').run(['Menus',
@@ -2890,7 +2912,8 @@ angular.module('mean-events').run(['Menus',
 		Menus.addSubMenuItem('topbar', 'mean-events', 'New Mean event', 'mean-events/create');
 	}
 ]);
-'use strict';
+
+"use strict";
 
 //Setting up route
 angular.module('mean-events').config(['$stateProvider',
@@ -2915,7 +2938,8 @@ angular.module('mean-events').config(['$stateProvider',
 		});
 	}
 ]);
-'use strict';
+
+"use strict";
 
 // Mean events controller
 angular.module('mean-events').controller('MeanEventsController', ['$scope', '$stateParams', '$location', 'Authentication', 'MeanEvents',
@@ -2981,6 +3005,7 @@ angular.module('mean-events').controller('MeanEventsController', ['$scope', '$st
 		};
 	}
 ]);
+
 'use strict';
 
 //Mean events service used to communicate Mean events REST endpoints
@@ -3038,7 +3063,7 @@ angular.module('mean-tutorials').config(['$stateProvider',
     }
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('mean-tutorials').controller('CalTestController', ['$scope',
 	function($scope) {
@@ -3046,7 +3071,8 @@ angular.module('mean-tutorials').controller('CalTestController', ['$scope',
 		// ...
 	}
 ]);
-'use strict';
+
+"use strict";
 
 angular.module('mean-tutorials')
 	.controller('MeanLoginCtrl', ["$scope", "Authentication", function($scope, Authentication){
@@ -4012,7 +4038,7 @@ angular.module('mean-tutorials')
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('mean-tutorials').controller('Project1Controller', ['$scope','$document','$timeout',
 	function($scope, $document, $timeout) {
@@ -4090,20 +4116,29 @@ angular.module('mean-tutorials').controller('Project1Controller', ['$scope','$do
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('mean-tutorials').controller('Project2Controller', ['$scope',
 	function($scope,$rootScope) {
         // Disqus ID
 		$scope.id='meanT-project2';
 
-        // Google Map
-        $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
-
         // Listen event
         $scope.$on('handleEmit', function(event, args) {
             $scope.$broadcast('handleBroadcast', args);
         });
+
+        $scope.password = '';
+        $scope.grade = function(){
+            var size = $scope.password.length;
+            if (size > 8) {
+                $scope.strength = 'strong';
+            } else if (size > 3) {
+                $scope.strength = 'medium';
+            } else {
+                $scope.strength = 'weak';
+            }
+        }
 	}
 ]);
 
@@ -4114,10 +4149,11 @@ angular.module('mean-tutorials').controller('ProjectViewController', ['$scope', 
 		$scope.title= 'Project3';
         $scope.body= '';
         $scope.menus = [
-            {icon:'', name:'Projects'},
-            {icon:'', name:'Articles'},
-            {icon:'', name:'Comments'},
-            {icon:'', name:'Survey'},
+            {icon:'', name:'Dashboard', state:'projectview.dashboard'},
+            {icon:'', name:'Project', state:'projectview.projects'},
+            {icon:'', name:'Article', state:'projectview.articles'},
+            {icon:'', name:'Comments', state:'projectview.dashboard'},
+            {icon:'', name:'Survey', state:'projectview.dashboard'},
         ];
 
         $scope.goChildView = function(stateName){
@@ -4133,59 +4169,72 @@ angular.module('mean-tutorials').controller('ProjectViewController', ['$scope', 
                 articleId: $stateParams.articleId
             });
         };
+
+
+        $scope.shrinkleftPane = function(){
+            TweenLite.to('.leftPane', 1, {x:'-75px'});
+            TweenLite.to('.rightPane', 1, {x:'-75px'});
+            TweenLite.to('.svgBtnLeftPane', 1, {x:'75px'});
+
+        }
 	}
 ]);
 
 'use strict';
 
-angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['$scope', '$state', '$http', '$q', '$mdDialog', '$mdSidenav', 'configGdrive', 'Googledrive', 'GooglePlus', 'Products', 'Authentication', 'ProductByUserId',
-    function ($scope, $state, $http, $q, $mdDialog, $mdSidenav, configGdrive, Googledrive, GooglePlus, Products, Authentication, ProductByUserId) {
+angular.module('mean-tutorials').controller('ProjectviewProjectsController', ['$scope', '$resource', 'Articles',
+	function($scope, $resource, Articles) {
+        var Projects = $resource('/articles/projects/:docType',
+            {docType: '@docType'},
+            {
+                getProjects: {
+                    method: 'GET', isArray: true
+                }
+            });
+
+        $scope.findProjects = function(type) {
+            $scope.resultProjects = Projects.getProjects({docType:type});
+            //console.log($scope.result);
+        }
+        $scope.selectProject = function(index) {
+            TweenLite.set('.rightPane', {'margin-left':'72px', position: 'inherit'});
+            $scope.selectedProject = $scope.resultProjects[index];
+        }
+	}
+]);
+
+"use strict";
+
+angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['$scope', '$window', '$state', '$http', '$q', '$mdDialog', '$mdSidenav', 'configGdrive', 'Googledrive', 'GooglePlus', 'Products', 'Authentication', 'ProductByUserId','UtCalendar',
+    function ($scope, $window, $state, $http, $q, $mdDialog, $mdSidenav, configGdrive, Googledrive, GooglePlus, Products, Authentication, ProductByUserId,UtCalendar) {
         $scope.authentication = Authentication;
+
+        $scope.width = window.innerWidth;
+        $('.rightPane').width(window.innerWidth - 74);
+        $(window).on("resize.doResize", function (){
+            $scope.width = window.innerWidth;
+            $('.rightPane').width(window.innerWidth - 74);
+            $scope.$apply(function(){
+
+                //do something to update current scope based on the new innerWidth and let angular update the view.
+            });
+        });
+
+        $scope.$on("$destroy",function (){
+            $(window).off("resize.doResize"); //remove the handler added earlier
+        });
+
 
         $scope.testCreateFolder = function(){
             //console.log(accessToken);
-            Googledrive.createFolder('chulwoo Fuck', accessToken);
+            Googledrive.createFolder('chulwoo Fuck1', accessToken);
         };
 
         $scope.testGetGoogleDriveInfo = function() {
             Googledrive.getGoogleDriveInfo();
         }
 
-
-        /*
-        $scope.goChildView = function(stateName){
-            $state.go(stateName);
-            $mdSidenav('left').close();
-        }
-
-        $scope.redirect = function(stateName, param){
-            $state.go(stateName, {productId: param});
-            $mdSidenav('left').close();
-        }
-        */
-        //$scope.queriedProduct = ProductByUserId.query({userId:$scope.authentication.user._id });
-
-        /*
-         google.load('visualization', '1', {
-         packages: ['corechart']
-         });
-
-
-         var data = google.visualization.arrayToDataTable([
-         ['Year', 'Sales', 'Expenses'],
-         ['명이나물', 1000, 400],
-         ['더덕나물', 1170, 460],
-         ['문어젖갈', 660, 1120],
-         ['오징어젖갈', 1030, 540]
-         ]);
-         var options = {
-         title: 'Company Performance'
-         };
-         var chart = new google.visualization.LineChart(document.getElementById('chartdiv'));
-
-         chart.draw(data, options);
-         /**/
-
+        //
         var accessToken;
         $scope.permalLink = 'http://drive.google.com/uc?export=view&id=';
         $scope.arrive = false;
@@ -4368,7 +4417,7 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
                     $http.get('users/me')
                         .success(function(response) {
                             console.log(response);
-                            var folderName = 'URI-'+response._id;
+                            var folderName = 'D2l-'+response._id;
                             //1. Create A New Folder
                             Googledrive.createFolder(folderName, accessToken);
                             //2. Update User Information
@@ -4384,49 +4433,7 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             Googledrive.findFolder(callback);
         }
 
-        $scope.find = function() {
-            $scope.products = ProductByUserId.query({userId:$scope.authentication.user._id });
-        };
-
-        $scope.onChangeStatus = function(){
-            console.log('sdfsf');
-            $scope.$digest();
-        };
-
-        $scope.openNewProductDialog = function(ev) {
-            //Open Dialog
-            $mdDialog.show({
-                templateUrl: 'modules/seller-interface/template/newProductTemplate.html',
-                targetEvent: ev,
-                controller: newProductDialog,
-                clickOutsideToClose  : false
-            }).then(function() {
-                $scope.alert = 'You said "Okay".';
-            }, function() {
-                $scope.alert = 'You cancelled the dialog.';
-            });
-        };
-
-        function newProductDialog($scope, $mdDialog){
-            $scope.hide = function() {
-                $mdDialog.hide();
-            };
-            $scope.cancel = function() {
-                $mdDialog.cancel();
-            };
-            $scope.answer = function(answer) {
-                $mdDialog.hide(answer);
-            };
-        }
-
-        $scope.toggleLeft = function() {
-            $mdSidenav('left').open();
-        };
-
-        $scope.getPaymentHistory = function() {
-            $scope.payments = Payments.query();
-        }
-	}
+    }
 ]);
 
 var CalendarException = function CalendarException(message) {
@@ -4525,7 +4532,7 @@ window.consts = {
     ]
 };
 
-'use strict';
+"use strict";
 
 angular.module('mean-tutorials').directive('macWindow', [
 	function() {
@@ -4552,6 +4559,83 @@ angular.module('mean-tutorials').directive('macWindow', [
 	}
 ]);
 
+"use strict";
+
+angular.module('mean-tutorials').directive('utCalendar', ['UtCalendar',
+	function(UtCalendar) {
+		return {
+			template: '<div class="container" style="margin-top:20px">'+
+                        '<table id="calendar" class="meanT-calendar"></table>'+
+                      '</div>',
+			restrict: 'E',
+			link: function postLink(scope, element, attrs) {
+                UtCalendar.calendar();
+			}
+		};
+	}
+]);
+
+'use strict';
+
+angular.module('mean-tutorials').factory('UtCalendar', [
+	function() {
+		// Ut calendar service logic
+		// ...
+
+		// Public API
+		return {
+			calendar: calendar
+		};
+
+        function calendar() {
+            //Start Calendar
+            var cal = new Calendar();
+
+            var month = 0;
+            var year = 2015;
+            var weeks = cal.monthDays(year, month);
+
+            var table = d3.select('#calendar');
+            var header = table.append('thead');
+            var body = table.append('tbody');
+
+            header
+                .append('tr')
+                .append('td')
+                .attr('colspan', 7)
+                .style('text-align', 'center')
+                .style('font-size', '16px')
+                .text(consts.monthNames[month]);
+
+            header
+                .append('tr')
+                .selectAll('td')
+                .data(consts.dayNames)
+                .enter()
+                .append('td')
+                .style('text-align', 'center')
+                .text(function (d) {
+                    return d;
+                });
+
+            weeks.forEach(function (week) {
+                body
+                    .append('tr')
+                    .selectAll('td')
+                    .data(week)
+                    .enter()
+                    .append('td')
+                    .attr('class', function (d) {
+                        return d > 0 ? '' : 'empty';
+                    })
+                    .text(function (d) {
+                        return d > 0 ? d : '';
+                    });
+            });
+        }
+	}
+]);
+
 'use strict';
 
 // Configuring the Articles module
@@ -4563,7 +4647,7 @@ angular.module('payments').run(['Menus',
 		//Menus.addSubMenuItem('topbar', 'payments', 'New Payment', 'payments/create');
 	}
 ]);
-'use strict';
+"use strict";
 
 //Setting up route
 angular.module('payments').config(['$stateProvider',
@@ -4588,7 +4672,8 @@ angular.module('payments').config(['$stateProvider',
 		});
 	}
 ]);
-'use strict';
+
+"use strict";
 
 // Payments controller
 angular.module('payments').controller('PaymentsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Payments',
@@ -4653,7 +4738,8 @@ angular.module('payments').controller('PaymentsController', ['$scope', '$statePa
 		};
 	}
 ]);
-'use strict';
+
+"use strict";
 
 angular.module('payments').factory('GetPurchaseJWT', ['$resource',
 	function($resource) {
@@ -4667,7 +4753,7 @@ angular.module('payments').factory('GetPurchaseJWT', ['$resource',
 	}
 ]);
 
-'use strict';
+"use strict";
 
 //Payments service used to communicate Payments REST endpoints
 angular.module('payments').factory('Payments', ['$resource',
@@ -4690,6 +4776,7 @@ angular.module('payments').factory('PaymentsBySellerData', ['$resource',
 		});
 	}
 ]);
+
 'use strict';
 
 //Setting up route
@@ -4838,7 +4925,7 @@ angular.module('products').factory('ProductByUserId', ['$resource', function($re
         }
     });
 }]);
-'use strict';
+"use strict";
 
 //Products service used to communicate Products REST endpoints
 angular.module('products').factory('Products', ['$resource', function($resource) {
@@ -5697,7 +5784,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     // ---------------------------------------------------------------------------
 });
 */
-'use strict';
+"use strict";
 
 // Gdriveapps controller
 
@@ -5780,7 +5867,7 @@ angular.module('seller-interface').controller('GdriveappsController', ['$scope',
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('seller-interface').controller('HistoryPaymentController', ['$scope','Authentication','Payments','PaymentsBySellerData',
 	function($scope, Authentication, Payments, PaymentsBySellerData) {
@@ -6014,7 +6101,7 @@ var googlePlusUserLoader = (function() {
 
 
 
-'use strict';
+"use strict";
 
 angular.module('seller-interface').factory('gdocs', [
 	function() {
@@ -6034,7 +6121,7 @@ angular.module('seller-interface').factory('gdocs', [
 	}
 ]);
 
-'use strict';
+"use strict";
 
 //Gdriveapps service used to communicate Gdriveapps REST endpoints
 angular.module('seller-interface').factory('Gdriveapps', ['$resource',
@@ -6156,7 +6243,7 @@ angular.module('seller-interface').factory('Googledrive', ['configGdrive',
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('seller-interface').factory('GooglePlus', [
 	function() {
@@ -6264,7 +6351,7 @@ angular.module('tinymce').directive('uiTinymce', ['uiTinymceConfig', function(ui
     };
 }]);
 
-'use strict';
+"use strict";
 
 //Setting up route
 angular.module('user-interface').config(['$stateProvider','$disqusProvider',
@@ -6295,7 +6382,7 @@ angular.module('user-interface').config(['$stateProvider','$disqusProvider',
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('user-interface').controller('DetailProductController', ['$scope','$stateParams','$sce','Products', 'GetPurchaseJWT','Payments','configGdrive',
 	function($scope, $stateParams, $sce, Products, GetPurchaseJWT, Payments, configGdrive) {
@@ -6482,7 +6569,7 @@ angular.module('user-interface').controller('DetailProductController', ['$scope'
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('user-interface').controller('ExperimentalinterfaceController', ['$scope',
 	function($scope) {
@@ -6792,7 +6879,7 @@ angular.module('user-interface').controller('ListingProductController', ['$scope
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('user-interface').controller('McmuController', ['$scope', '$timeout',
 	function($scope, $timeout) {
@@ -6898,7 +6985,7 @@ angular.module('user-interface').controller('McmuController', ['$scope', '$timeo
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('user-interface').directive('article', ['Articles',
 	function(Articles) {
@@ -6974,7 +7061,7 @@ angular.module('user-interface').directive('mainInterface', ['$compile',
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('user-interface').factory('Allproducts', ['$resource',
 	function($resource) {
@@ -6988,7 +7075,7 @@ angular.module('user-interface').factory('AllBanners', ['$resource',
 	}
 ]);
 
-'use strict';
+"use strict";
 
 // Config HTTP Error Handling
 angular.module('users').config(['$httpProvider',
@@ -7018,6 +7105,7 @@ angular.module('users').config(['$httpProvider',
 		]);
 	}
 ]);
+
 'use strict';
 
 // Setting up route
@@ -7063,7 +7151,7 @@ angular.module('users').config(['$stateProvider',
 		});
 	}
 ]);
-'use strict';
+"use strict";
 
 angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication',
 	function($scope, $http, $location, Authentication) {
@@ -7098,7 +7186,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 	}
 ]);
 
-'use strict';
+"use strict";
 
 angular.module('users').controller('PasswordController', ['$scope', '$stateParams', '$http', '$location', 'Authentication',
 	function($scope, $stateParams, $http, $location, Authentication) {
@@ -7142,7 +7230,8 @@ angular.module('users').controller('PasswordController', ['$scope', '$stateParam
 		};
 	}
 ]);
-'use strict';
+
+"use strict";
 
 angular.module('users').controller('SettingsController', ['$scope', '$http', '$location', 'Users', 'Authentication',
 	function($scope, $http, $location, Users, Authentication) {
@@ -7213,7 +7302,8 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 		};
 	}
 ]);
-'use strict';
+
+"use strict";
 
 // Authentication service for user variables
 angular.module('users').factory('Authentication', [
@@ -7227,6 +7317,7 @@ angular.module('users').factory('Authentication', [
 		return _this._data;
 	}
 ]);
+
 'use strict';
 
 // Users service used for communicating with the users REST endpoint
