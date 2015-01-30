@@ -63,7 +63,16 @@ module.exports = {
 
 				'public/lib/topojson/topojson.js',
 
-				'public/lib/angular-smart-table/dist/smart-table.min.js'
+				'public/lib/angular-smart-table/dist/smart-table.min.js',
+
+                'public/lib/tinymce/tinymce.min.js',
+                'public/lib/tinymce/plugins/image/plugin.min.js',
+                'public/lib/tinymce/plugins/link/plugin.min.js',
+                'public/lib/tinymce/plugins/fullscreen/plugin.min.js',
+                'public/lib/tinymce/plugins/code/plugin.min.js',
+                'public/lib/tinymce/plugins/table/plugin.min.js',
+                'public/lib/tinymce/plugins/contextmenu/plugin.min.js',
+                'public/lib/tinymce/plugins/media/plugin.min.js',
 
 
 			]

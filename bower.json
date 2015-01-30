@@ -23,7 +23,7 @@
     "angular-material": "latest",
     "hammerjs": "~2.0.2",
     "components-font-awesome": "~4.2.0",
-    "angular-ui-tinymce": "latest",
+    "tinymce":"4.1.7",
     "ng-context-menu": "~1.0.1",
     "d3": "~3.4.13",
     "threejs": "*",
