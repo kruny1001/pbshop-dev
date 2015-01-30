@@ -18,6 +18,14 @@ angular.module('mean-tutorials')
 	.controller('MeanHomeController', ['$scope','$state','$mdDialog','$timeout', '$mdSidenav', '$log',
 	function($scope,$state,$mdDialog,$timeout, $mdSidenav, $log) {
 
+        $scope.close = function() {
+            $mdSidenav('left').close();
+        };
+
+        $scope.gotoState = function(state) {
+            $state.go(state);
+        }
+
 		$scope.toggleLeft = function() {
 			$mdSidenav('left').toggle()
 		};

@@ -1,292 +1,188 @@
-<section data-ng-controller="MeanHomeController">
+<section data-ng-controller="MeanHomeController" layout="column" layout-fill>
+    <div class="meanT-headToolBar">
+        <div class="meanT-brandName">
+            <a href="/#!/versioning" target="_blank">Version: 0.0.2</a>
+        </div>
+    </div>
+    <section layout="row" flex>
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
+            <md-toolbar MeanHomeControllerclass="md-theme-indigo">
+                <h1 class="md-toolbar-tools">MENU</h1>
+            </md-toolbar>
+            <md-content class="md-padding" layout="column" layout-align="center start">
+                <md-button ng-click="close()" class="md-primary" hide-gt-md>
+                    Close MENU
+                </md-button>
+                <md-button ng-click="close()" class="md-primary">
+                    Articles
+                </md-button>
+                <md-button ng-click="close()" class="md-primary">
+                    Activities
+                </md-button>
+                <md-button ng-click="close()" class="md-primary">
+                    Projects
+                </md-button>
+                <md-button ng-click="close()" class="md-primary">
+                    Comments
+                </md-button>
+                <md-button ng-click="close()" class="md-primary">
+                    Inbox
+                </md-button>
+                <p hide-md show-gt-md>
+                    This sidenav is locked open on your device. To go back to the default behavior,
+                    narrow your display.
+                </p>
+            </md-content>
+        </md-sidenav>
 
-	<div class="meanT-headToolBar">
-		<div class="meanT-brandName">
-			<a href="/#!/versioning" target="_blank">Version: 0.0.2</a>
-		</div>
-	</div>
-	<div ng-controller="MeanLoginCtrl"></div>
-	<button ng-click="loginBtn()">Login Btn</button>
-	<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
-		<md-toolbar class="md-theme-indigo">
-			<h1 class="md-toolbar-tools">MENU</h1>
-		</md-toolbar>
-		<md-content class="md-padding" ng-controller="LeftCtrl" layout="column" layout-align="center start">
-			<md-button ng-click="close()" class="md-primary" hide-gt-md>
-				Close MENU
-			</md-button>
-			<md-button ng-click="close()" class="md-primary">
-				Articles
-			</md-button>
-			<md-button ng-click="close()" class="md-primary">
-				Activities
-			</md-button>
-			<md-button ng-click="close()" class="md-primary">
-				Projects
-			</md-button>
-			<md-button ng-click="close()" class="md-primary">
-				Comments
-			</md-button>
-			<md-button ng-click="close()" class="md-primary">
-				Inbox
-			</md-button>
-			<p hide-md show-gt-md>
-				This sidenav is locked open on your device. To go back to the default behavior,
-				narrow your display.
-			</p>
-		</md-content>
-	</md-sidenav>
-
-	<md-content flex class="md-padding">
-		<md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
-			Menu
-		</md-button>
-		<md-button ng-click="toggleRight()" class="md-primary">
-			My Page
-		</md-button>
-	</md-content>
-
-	<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
-		<md-toolbar class="md-tall md-warn md-hue-5">
-			<div class="sidebar-header header-cover" style="background-image: url(http://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);">
-				<h1 class="md-toolbar-tools">My Page</h1>
-				<span flex></span>
-				<h2 class="md-toolbar-tools md-toolbar-tools-bottom">
-					<span class="md-flex">Profile</span>
-				</h2>
-			</div>
-		</md-toolbar>
-		<md-content ng-controller="RightCtrl" class="md-padding" layout="column" layout-align="center start">
-			<md-button ng-click="close()" class="md-primary">
-				Articles
-			</md-button>
-			<md-button ng-click="close()" class="md-primary">
-				Activities
-			</md-button>
-			<md-button ng-click="close()" class="md-primary">
-				Projects
-			</md-button>
-			<md-button ng-click="close()" class="md-primary">
-				Comments
-			</md-button>
-			<md-button ng-click="close()" class="md-primary">
-				Inbox
-			</md-button>
-		</md-content>
-	</md-sidenav>
-
-
-	<div layout="row" layout-align="end">
-		<md-button class="md-primary" ng-click="logIn($event)">
-			Log In
-		</md-button>
-		<md-button class="md-primary" ng-click="signUp($event)">
-			Sign Up
-		</md-button>
-	</div>
-
-	<div class="meanT-headButtonGroup">
-	</div>
+        <md-content flex class="md-padding">
+            <!--
+            <button ng-click="loginBtn()">Login Btn</button>
+            -->
+            <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
+                Menu
+            </md-button>
+            <md-button ng-click="toggleRight()" class="md-primary">
+                My Page
+            </md-button>
 
 
 
-	<div class="meanT-headTitle">
-		<strong>Welcome to MEAN Tutorials</strong>
-	</div>
-	<div class="meanT-headSubTitle">
-		<strong>Mean Tutorials</strong> is a team for scripted, high-performance HTML5 technologies that works
-		in all major browsers. No other delivers such advanced.
-		<br/>
-		<br/>
-
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
-		<g:hangout title="Google Hangouts" render="createhangout"></g:hangout>
-		<a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">
-			<img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">
-		</a>
-
-	</div>
-
-	<hr/>
+            <div class="meanT-headButtonGroup">
+            </div>
 
 
-	<div class="meanT-contentTitle">
-		<strong>What We Are Doing</strong>
-	</div>
 
-	<figure>
-		<div class="stretchy-wrapper">
-			<div id="ani-title" class="ani-title">Click Play Button</div>
-			<img id='youtubePlayButton'
-				 class="meanT-imgCenter"
-				 ng-src="modules/mean-tutorials/img/youtubePlay.png"
-				 ng-click="clickPlayBtn()" />
-			<div id="ani-techs" class="ani-techs">
-				<img id='meanTotem'
-					 class="meanT-hide"
-					 ng-src="modules/mean-tutorials/img/mean_totem.png"
-					 ng-click="clickPlayBtn()" />
-				<div id="meanTotem-desc" class="meanT-hide ani-rightSideDesc">
-					<br/>
-					<strong>M</strong>ongoDB
-					<br/>
-					<strong>E</strong>xpress
-					<br/>
-					<strong>A</strong>ngularJS
-					<br/>
-					<strong>N</strong>odeJS
-					<br/>
-				</div>
-			</div>
-		</div>
-	</figure>
+            <div class="meanT-headTitle">
+                <strong>Welcome to MEAN Tutorials</strong>
+            </div>
+            <div class="meanT-headSubTitle">
+                <strong>Mean Tutorials</strong> is a team for scripted, high-performance HTML5 technologies that works
+                in all major browsers. No other delivers such advanced.
+                <br/>
+                <br/>
 
-	<div layout="row" layout-align="center">
-		<md-button class="md-primary" ng-click="clickPlayBtn()">
-			Click Youtube Btn
-		</md-button>
-		<md-button class="md-primary" ng-click="resetPlayBtn()">
-			Reset Youtube Btn
-		</md-button>
-	</div>
-	<hr/>
-	<div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
+                <a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">
+                    <img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">
+                </a>
 
-	<div class="meanT-headSubTitle">
-		You can check out our current project.
-	</div>
-	<div class="container" style="margin-top:20px">
-		<table id="calendar" class="meanT-calendar"></table>
-	</div>
+            </div>
 
-	<hr/>
-	<!-- Create mac-window-->
+            <hr/>
 
-	<mac-window info="announcements"></mac-window>
 
-	<hr/>
+            <div class="meanT-contentTitle">
+                <strong>What We Are Doing</strong>
+            </div>
 
-	<mac-window info="projects"></mac-window>
+            <figure>
+                <div class="stretchy-wrapper">
+                    <div id="ani-title" class="ani-title">Click Play Button</div>
+                    <img id='youtubePlayButton'
+                         class="meanT-imgCenter"
+                         ng-src="modules/mean-tutorials/img/youtubePlay.png"
+                         ng-click="clickPlayBtn()" />
+                    <div id="ani-techs" class="ani-techs">
+                        <img id='meanTotem'
+                             class="meanT-hide"
+                             ng-src="modules/mean-tutorials/img/mean_totem.png"
+                             ng-click="clickPlayBtn()" />
+                        <div id="meanTotem-desc" class="meanT-hide ani-rightSideDesc">
+                            <br/>
+                            <strong>M</strong>ongoDB
+                            <br/>
+                            <strong>E</strong>xpress
+                            <br/>
+                            <strong>A</strong>ngularJS
+                            <br/>
+                            <strong>N</strong>odeJS
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </figure>
 
-	<hr/>
+            <div layout="row" layout-align="center">
+                <md-button class="md-primary" ng-click="clickPlayBtn()">
+                    Click Youtube Btn
+                </md-button>
+                <md-button class="md-primary" ng-click="resetPlayBtn()">
+                    Reset Youtube Btn
+                </md-button>
+            </div>
+            <hr/>
+            <div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
 
-	<mac-window info="techs"></mac-window>
-<!--
-	<hr/>
+            <div class="meanT-headSubTitle">
+                You can check out our current project.
+            </div>
+            <div class="container" style="margin-top:20px">
+                <table id="calendar" class="meanT-calendar"></table>
+            </div>
 
-    <br/>
-	<a href="https://docs.google.com/forms/d/1HvDi8CBJrPE2m47JEO_jW3-moxjrVzX0nDCTczvvzDo/viewanalytics?usp=form_confirm" target="_blank">결과 보기</a>
-	<div class="meanT-googleForm">
+            <hr/>
 
-		<br/>
-		<iframe src="https://docs.google.com/forms/d/1HvDi8CBJrPE2m47JEO_jW3-moxjrVzX0nDCTczvvzDo/viewform?embedded=true" width="760" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-	</div>
--->
+            <mac-window info="announcements"></mac-window>
 
-	<!--
-	<div class="window mac">
-		<div class="title-bar">
-			<div class="close"></div>
-			<div class="minimize"></div>
+            <hr/>
 
-			<div class="zoom"></div>
-		</div>
-		<div class="page">
-			<h2>Timeline of project</h2>
-			<div class="outerwrapper">
-				<div class="timeline">
-					<div class="timeline-header">
-						<h3>Projects:</h3>
-						<h2><span class="timeline-heading"></span></h2>
-						<p class="timeline-standfirst"></p>
-					</div>
-					<div class="tooltip">
-						<p></p>
-					</div>
-				</div>
+            <mac-window info="projects"></mac-window>
 
-				<div class="info-box">
-					<div class="panel">
-					</div>
-				</div>
+            <hr/>
 
-			</div>
-		</div>
-	</div>
-	-->
+            <mac-window info="techs"></mac-window>
 
-	<!--
-	<div class="row">
-		<div class="widget">
-			<div class="cover">
-				<img src="http://www.minneapolis.org/sites/default/files/Tours-Attractions-Suggested-Itineraries-Minneapolis.jpg" />
-			</div>
-			<img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" class="photo" />
-			<h1>Kevin Son</h1>
-			<h2>Web Developer</h2>
-			<h3>Minneapolis, US</h3>
-		</div>
+        </md-content>
 
-		<div class="widget">
-			<div class="cover">
-				<img src="http://www.skyscanner.net/sites/default/files/imagecache/news_article/news-images/seoul_0.jpg" />
-			</div>
-			<img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" class="photo" />
-			<h1>Lechuck Roh</h1>
-			<h2>Web Developer</h2>
-			<h3>Seoul, S. Korea</h3>
-		</div>
+        <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+            <md-toolbar class="md-tall md-warn md-hue-5">
+                <div class="sidebar-header header-cover" style="background-image: url(http://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);">
+                    <h1 class="md-toolbar-tools">My Page</h1>
+                </div>
+            </md-toolbar>
+            <!-- Authentication Needed -->
+            <md-content class="md-padding" layout="column" layout-align="center start">
+                <div layout="row" layout-align="end">
+                    <md-button class="md-primary" ng-click="logIn($event)">
+                        Log In
+                    </md-button>
+                    <md-button class="md-primary" ng-click="signUp($event)">
+                        Sign Up
+                    </md-button>
+                </div>
 
-		<div class="widget">
-			<div class="cover">
-				<img src="http://holacoreano.com/data/file/B20/1091230468_khix6BVO_EB8C80ECA084_EC9791EC8AA4ED8FAC.jpg" />
-			</div>
-			<img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" class="photo" />
-			<h1>장주영</h1>
-			<h2>Web Developer</h2>
-			<h3>Dae-Jeon, S. Korea</h3>
-		</div>
+                <md-button ng-click="gotoState('projectview.dashboard')" class="md-primary">
+                    Dashboard
+                </md-button>
 
-		<div class="widget">
-			<div class="cover">
-				<img src="http://25.media.tumblr.com/d55a509993790027240311c9f611aaf8/tumblr_n0hpzpKEfE1st5lhmo1_1280.jpg" />
-			</div>
-			<img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" class="photo" />
-			<h1>누자베스</h1>
-			<h2>Web Developer</h2>
-			<h3>Bristol, S. Korea</h3>
-		</div>
+                <md-button ng-disabled="true" ng-click="close()" class="md-primary">
+                    Activities
+                </md-button>
+                <md-button ng-disabled="true" ng-click="close()" class="md-primary">
+                    Projects
+                </md-button>
+                <md-button ng-disabled="true" ng-click="close()" class="md-primary">
+                    Comments
+                </md-button>
+                <md-button ng-disabled="true" ng-click="close()" class="md-primary">
+                    Inbox
+                </md-button>
+            </md-content>
+        </md-sidenav>
 
-		<div class="widget">
-			<div class="cover">
-				<img src="http://25.media.tumblr.com/d55a509993790027240311c9f611aaf8/tumblr_n0hpzpKEfE1st5lhmo1_1280.jpg" />
-			</div>
-			<img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" class="photo" />
-			<h1>Daniel Park</h1>
-			<h2>Web Developer</h2>
-			<h3>Bristol, S. Korea</h3>
-		</div>
+        <!-- Google Form
+            <hr/>
 
-		<div class="widget">
-			<div class="cover">
-				<img src="http://25.media.tumblr.com/d55a509993790027240311c9f611aaf8/tumblr_n0hpzpKEfE1st5lhmo1_1280.jpg" />
-			</div>
-			<img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" class="photo" />
-			<h1>한성욱</h1>
-			<h2>Web Developer</h2>
-			<h3>Bristol, S. Korea</h3>
-		</div>
+            <br/>
+            <a href="https://docs.google.com/forms/d/1HvDi8CBJrPE2m47JEO_jW3-moxjrVzX0nDCTczvvzDo/viewanalytics?usp=form_confirm" target="_blank">결과 보기</a>
+            <div class="meanT-googleForm">
 
-		<div class="widget">
-			<div class="cover">
-				<img src="http://25.media.tumblr.com/d55a509993790027240311c9f611aaf8/tumblr_n0hpzpKEfE1st5lhmo1_280.jpg" />
-			</div>
-			<img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" class="photo" />
-			<h1>김동훈</h1>
-			<h2>Web Developer</h2>
-			<h3>Bristol, S. Korea</h3>
-		</div>
-		-->
+                <br/>
+                <iframe src="https://docs.google.com/forms/d/1HvDi8CBJrPE2m47JEO_jW3-moxjrVzX0nDCTczvvzDo/viewform?embedded=true" width="760" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            </div>
+        -->
 
-	</div>
+        </div>
+    </section>
+
 </section>
