@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('mean-tutorials').controller('ProjectViewController', ['$scope', '$stateParams', '$state', 'Articles',
-	function($scope, $stateParams, $state, Articles) {
+angular.module('mean-tutorials').controller('ProjectViewController', ['$scope', '$stateParams', '$state', '$timeout', 'Articles',
+	function($scope, $stateParams, $state, $timeout, Articles) {
 		$scope.title= 'Project3';
         $scope.body= '';
         $scope.menus = [
@@ -25,7 +25,6 @@ angular.module('mean-tutorials').controller('ProjectViewController', ['$scope', 
                 articleId: $stateParams.articleId
             });
         };
-
 
         $scope.shrinkleftPane = function(){
             TweenLite.to('.leftPane', 1, {x:'-75px'});

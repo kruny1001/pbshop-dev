@@ -1553,6 +1553,26 @@ angular.module('animation').controller('ThreeController', ['$scope',
 
 'use strict';
 
+angular.module('animation').directive('fadeUp', ['$timeout',
+	function($timeout) {
+		return {
+			restrict: 'A',
+			link: function postLink(scope, element, attrs) {
+                var tl = new TimelineLite();
+                tl.add("scene1", 2)
+                    .to(element, 4, {}, "scene1")
+                    //add tween 3 seconds after scene1 label
+                    .to(element, 1, {opacity:0}, "scene1+=3");
+                $timeout(function(element) {
+                    console.log('fade-up directive');
+                }, 3000);
+			}
+		};
+	}
+]);
+
+'use strict';
+
 // Configuring the Articles module
 angular.module('articles').run(['Menus',
 	function(Menus) {
@@ -4152,8 +4172,8 @@ angular.module('mean-tutorials').controller('Project2Controller', ['$scope',
 
 'use strict';
 
-angular.module('mean-tutorials').controller('ProjectViewController', ['$scope', '$stateParams', '$state', 'Articles',
-	function($scope, $stateParams, $state, Articles) {
+angular.module('mean-tutorials').controller('ProjectViewController', ['$scope', '$stateParams', '$state', '$timeout', 'Articles',
+	function($scope, $stateParams, $state, $timeout, Articles) {
 		$scope.title= 'Project3';
         $scope.body= '';
         $scope.menus = [
@@ -4177,7 +4197,6 @@ angular.module('mean-tutorials').controller('ProjectViewController', ['$scope', 
                 articleId: $stateParams.articleId
             });
         };
-
 
         $scope.shrinkleftPane = function(){
             TweenLite.to('.leftPane', 1, {x:'-75px'});
@@ -4213,8 +4232,15 @@ angular.module('mean-tutorials').controller('ProjectviewProjectsController', ['$
 
 "use strict";
 
-angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['$scope', '$window', '$state', '$http', '$q', '$mdDialog', '$mdSidenav', 'configGdrive', 'Googledrive', 'GooglePlus', 'Products', 'Authentication', 'ProductByUserId','UtCalendar',
-    function ($scope, $window, $state, $http, $q, $mdDialog, $mdSidenav, configGdrive, Googledrive, GooglePlus, Products, Authentication, ProductByUserId,UtCalendar) {
+angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['$scope',
+    '$window', '$state', '$http', '$q', '$mdDialog', '$mdSidenav', 'configGdrive',
+    'Googledrive', 'GooglePlus', 'Products', 'Authentication', 'ProductByUserId','UtCalendar',
+    '$timeout', '$mdBottomSheet', //Material Design
+    function ($scope,
+              $window, $state, $http, $q, $mdDialog, $mdSidenav, configGdrive,
+              Googledrive, GooglePlus, Products, Authentication, ProductByUserId,UtCalendar,
+              $timeout, $mdBottomSheet //material Design
+             ) {
         $scope.authentication = Authentication;
 
         $scope.width = window.innerWidth;
@@ -4222,6 +4248,20 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
         $(window).on("resize.doResize", function (){
             $scope.width = window.innerWidth;
             $('.rightPane').width(window.innerWidth - 74);
+            $scope.$apply(function(){
+
+                //do something to update current scope based on the new innerWidth and let angular update the view.
+            });
+        });
+
+        $scope.$on("$destroy",function (){
+            $(window).off("resize.doResize"); //remove the handler added earlier
+        });
+
+        $('.bottom-sheet-dashboard').width(window.innerWidth - 74);
+        $(window).on("resize.doResize", function (){
+            $scope.width = window.innerWidth;
+            $('.bottom-sheet-dashboard').width(window.innerWidth - 74);
             $scope.$apply(function(){
 
                 //do something to update current scope based on the new innerWidth and let angular update the view.
@@ -4441,8 +4481,61 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             Googledrive.findFolder(callback);
         }
 
+        ////////marterial Design //////////
+        $scope.alert = '';
+        $scope.showListBottomSheet = function($event) {
+            $scope.alert = '';
+            $mdBottomSheet.show({
+                templateUrl: 'modules/mean-tutorials/template/bottom-sheet-list-template.html',
+                controller: 'ListBottomSheetCtrl',
+                targetEvent: $event
+            }).then(function(clickedItem) {
+                $scope.alert = clickedItem.name + ' clicked!';
+            });
+        };
+        $scope.showGridBottomSheet = function($event) {
+            $scope.alert = '';
+            $mdBottomSheet.show({
+                templateUrl: 'modules/mean-tutorials/template/bottom-sheet-grid-template.html',
+                controller: 'GridBottomSheetCtrl',
+                targetEvent: $event
+            }).then(function(clickedItem) {
+                $scope.alert = clickedItem.name + ' clicked!';
+            });
+        };
+        ////////End Material Design
+
     }
-]);
+])
+
+
+    .controller('ListBottomSheetCtrl', ["$scope", "$mdBottomSheet", function($scope, $mdBottomSheet) {
+        $scope.items = [
+            { name: 'Upload New Image (Google Drive)', icon: 'share' },
+            { name: 'Select Existing Image (Google Drive)', icon: 'upload' },
+            { name: 'Product History (Google Sheets)', icon: 'copy' },
+            { name: 'Print this page (PDF Printer)', icon: 'print' },
+        ];
+
+        $scope.listItemClick = function($index) {
+            var clickedItem = $scope.items[$index];
+            $mdBottomSheet.hide(clickedItem);
+        }
+    }])
+    .controller('GridBottomSheetCtrl', ["$scope", "$mdBottomSheet", function($scope, $mdBottomSheet) {
+        $scope.items = [
+            { name: 'Hangout', icon: 'hangout' },
+            { name: 'Mail', icon: 'mail' },
+            { name: 'Message', icon: 'message' },
+            { name: 'Copy', icon: 'copy' },
+            { name: 'Facebook', icon: 'facebook' },
+            { name: 'Twitter', icon: 'twitter' },
+        ];
+        $scope.listItemClick = function($index) {
+            var clickedItem = $scope.items[$index];
+            $mdBottomSheet.hide(clickedItem);
+        };
+    }]);
 
 var CalendarException = function CalendarException(message) {
     this.message = message;

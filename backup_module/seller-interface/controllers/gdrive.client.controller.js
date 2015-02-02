@@ -349,35 +349,3 @@ angular.module('seller-interface').controller('BottomSheetExample', function($sc
             $mdSidenav('left').close();
         };
     });
-
-angular.module('seller-interface').controller('ListBottomSheetCtrl', function($scope, $mdBottomSheet) {
-
-    $scope.items = [
-        { name: 'Upload New Image (Google Drive)', icon: 'share' },
-        { name: 'Select Existing Image (Google Drive)', icon: 'upload' },
-        { name: 'Product History (Google Sheets)', icon: 'copy' },
-        { name: 'Print this page (PDF Printer)', icon: 'print' },
-    ];
-
-    $scope.listItemClick = function($index) {
-        var clickedItem = $scope.items[$index];
-        $mdBottomSheet.hide(clickedItem);
-    };
-});
-
-angular.module('seller-interface').controller('GridBottomSheetCtrl', function($scope, $mdBottomSheet) {
-
-    $scope.items = [
-        { name: 'Hangout', icon: 'hangout' },
-        { name: 'Mail', icon: 'mail' },
-        { name: 'Message', icon: 'message' },
-        { name: 'Copy', icon: 'copy' },
-        { name: 'Facebook', icon: 'facebook' },
-        { name: 'Twitter', icon: 'twitter' },
-    ];
-
-    $scope.listItemClick = function($index) {
-        var clickedItem = $scope.items[$index];
-        $mdBottomSheet.hide(clickedItem);
-    };
-});
