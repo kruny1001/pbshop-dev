@@ -63,7 +63,10 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 		$scope.findOne = function() {
 			$scope.article = Articles.get({
 				articleId: $stateParams.articleId
-			});
+			})
+            //    .then(function(){
+            //    $scope.id=$scope.article._id;
+            //});
 		};
 	}
 ]);

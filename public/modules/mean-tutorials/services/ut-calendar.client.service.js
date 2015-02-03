@@ -49,7 +49,7 @@ angular.module('mean-tutorials').factory('UtCalendar', [
                     .enter()
                     .append('td')
                     .attr('class', function (d) {
-                        return d > 0 ? '' : 'empty';
+                        return d > 0 ? 'date' : 'empty';
                     })
                     .text(function (d) {
                         return d > 0 ? d : '';

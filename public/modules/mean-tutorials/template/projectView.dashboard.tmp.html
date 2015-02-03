@@ -1,8 +1,6 @@
-<div class="meanT-dashboard" ng-controller="ProjectviewdashboardController">
-
+<div class="meanT-dashboard" ng-controller="ProjectviewdashboardController" ng-init="findEvents()">
     <div style="color:red; position: absolute; top:10px; right:20px;">{{width}}</div>
-    <h1>Dashboard</h1>
-
+    <div class="meanT-brandName">Dashboard</div>
     <div class="meanT-dashboard-main">
         <div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
 
@@ -12,11 +10,22 @@
         <ut-calendar></ut-calendar>
     </div>
 
+    <div id="testR" cover-resize>asdfasdf</div>
+    <h4>Popup</h4>
+    <div class="row">
+        <div class="col-md-6" >
+            <p class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+    </div>
+
     <div class="meanT-dashboard-upEvent">
         <div> Upcoming Events </div>
-        <div> 1. Weekly Meeting</div>
-        <div> 2. Weekly Meeting</div>
-        <div> 3. Weekly Meeting</div>
+        <div ng-repeat="event in meanEvents"> {{event.name}}</div>
     </div>
 
     <div class="meanT-dashboard-users">
@@ -24,9 +33,6 @@
     </div>
 
     <!---- Material Design ------>
-    <p style="padding-left: 20px;">
-        Bottom sheet can be dismissed with the service or a swipe down.
-    </p>
     <div class="bottom-sheet-demo inset" layout="column" layout-sm="row" layout-align="center">
         <md-button class="md-primary" ng-click="showListBottomSheet($event)">
             Show as List

@@ -21,6 +21,7 @@ module.exports = {
 				//'public/lib/angular-material/themes/brown-theme.css',
 				//'public/lib/angular-material/themes/cyan-theme.css',
 				'public/lib/angular-material/themes/indigo-theme.css',
+                'public/lib/components-font-awesome/css/font-awesome.min.css',
 			],
 			js: [
 				'public/lib/angular/angular.js',
@@ -31,7 +32,7 @@ module.exports = {
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				//'public/lib/angular-ui-utils/ui-utils.js',
-				//'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 
                 'public/lib/jquery/dist/jquery.js',
                 'public/lib/oclazyload/dist/ocLazyLoad.js',
@@ -81,6 +82,8 @@ module.exports = {
                 'public/lib/tinymce/plugins/table/plugin.min.js',
                 'public/lib/tinymce/plugins/contextmenu/plugin.min.js',
                 'public/lib/tinymce/plugins/media/plugin.min.js',
+                
+                'public/lib/moment/min/moment-with-locales.min.js',
 
 
 			]

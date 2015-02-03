@@ -4,12 +4,21 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
     '$window', '$state', '$http', '$q', '$mdDialog', '$mdSidenav', 'configGdrive',
     'Googledrive', 'GooglePlus', 'Products', 'Authentication', 'ProductByUserId','UtCalendar',
     '$timeout', '$mdBottomSheet', //Material Design
+    'MeanEvents',
     function ($scope,
               $window, $state, $http, $q, $mdDialog, $mdSidenav, configGdrive,
               Googledrive, GooglePlus, Products, Authentication, ProductByUserId,UtCalendar,
-              $timeout, $mdBottomSheet //material Design
+              $timeout, $mdBottomSheet, //material Design
+              MeanEvents // mean-events
              ) {
         $scope.authentication = Authentication;
+
+        $scope.foo = 'tbody';
+
+        // Find a list of Mean events
+        $scope.findEvents = function() {
+            $scope.meanEvents = MeanEvents.query();
+        };
 
         $scope.width = window.innerWidth;
         $('.rightPane').width(window.innerWidth - 74);
@@ -255,7 +264,7 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             $scope.alert = '';
             $mdBottomSheet.show({
                 templateUrl: 'modules/mean-tutorials/template/bottom-sheet-list-template.html',
-                controller: 'ListBottomSheetCtrl',
+                controller: 'BottomSheetListCtrl',
                 targetEvent: $event
             }).then(function(clickedItem) {
                 $scope.alert = clickedItem.name + ' clicked!';
@@ -265,7 +274,7 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             $scope.alert = '';
             $mdBottomSheet.show({
                 templateUrl: 'modules/mean-tutorials/template/bottom-sheet-grid-template.html',
-                controller: 'GridBottomSheetCtrl',
+                controller: 'BottomSheetGridCtrl',
                 targetEvent: $event
             }).then(function(clickedItem) {
                 $scope.alert = clickedItem.name + ' clicked!';
@@ -273,11 +282,49 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
         };
         ////////End Material Design
 
+
+
+        //////////DATEPicker/////////////
+        $scope.today = function() {
+            $scope.dt = new Date();
+        };
+        $scope.today();
+
+        $scope.clear = function () {
+            $scope.dt = null;
+        };
+
+        // Disable weekend selection
+        $scope.disabled = function(date, mode) {
+            return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
+        };
+
+        $scope.toggleMin = function() {
+            $scope.minDate = $scope.minDate ? null : new Date();
+        };
+        $scope.toggleMin();
+
+        $scope.open = function($event) {
+            $event.preventDefault();
+            $event.stopPropagation();
+
+            $scope.opened = true;
+        };
+
+        $scope.dateOptions = {
+            formatYear: 'yy',
+            startingDay: 1
+        };
+
+        $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+        $scope.format = $scope.formats[0];
+        ///////////END//////////////////
+
     }
 ])
 
 
-    .controller('ListBottomSheetCtrl', function($scope, $mdBottomSheet) {
+    .controller('BottomSheetListCtrl', function($scope, $mdBottomSheet) {
         $scope.items = [
             { name: 'Upload New Image (Google Drive)', icon: 'share' },
             { name: 'Select Existing Image (Google Drive)', icon: 'upload' },
@@ -290,14 +337,12 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             $mdBottomSheet.hide(clickedItem);
         }
     })
-    .controller('GridBottomSheetCtrl', function($scope, $mdBottomSheet) {
+    .controller('BottomSheetGridCtrl', function($scope, $mdBottomSheet) {
         $scope.items = [
             { name: 'Hangout', icon: 'hangout' },
             { name: 'Mail', icon: 'mail' },
             { name: 'Message', icon: 'message' },
             { name: 'Copy', icon: 'copy' },
-            { name: 'Facebook', icon: 'facebook' },
-            { name: 'Twitter', icon: 'twitter' },
         ];
         $scope.listItemClick = function($index) {
             var clickedItem = $scope.items[$index];

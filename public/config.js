@@ -8,8 +8,11 @@ var ApplicationConfiguration = (function() {
         [
             'ngResource',
             'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router',
-            //'ui.bootstrap', 'ui.utils',
-            'ngMaterial', /*'ng-context-menu', 'uiGmapgoogle-maps',*/'smart-table','oc.lazyLoad'];
+            'ui.bootstrap', //'ui.utils',
+            'ngMaterial', /*'ng-context-menu', 'uiGmapgoogle-maps',*/
+            'smart-table'
+            //'oc.lazyLoad'
+        ];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {

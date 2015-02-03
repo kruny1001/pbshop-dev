@@ -8,8 +8,11 @@ var ApplicationConfiguration = (function() {
         [
             'ngResource',
             'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router',
-            //'ui.bootstrap', 'ui.utils',
-            'ngMaterial', /*'ng-context-menu', 'uiGmapgoogle-maps',*/'smart-table','oc.lazyLoad'];
+            'ui.bootstrap', //'ui.utils',
+            'ngMaterial', /*'ng-context-menu', 'uiGmapgoogle-maps',*/
+            'smart-table'
+            //'oc.lazyLoad'
+        ];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
@@ -108,6 +111,11 @@ ApplicationConfiguration.registerModule('products');
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('seller-interface');
+
+'use strict';
+
+// Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('size-util');
 
 "use strict";
 
@@ -1672,7 +1680,10 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 		$scope.findOne = function() {
 			$scope.article = Articles.get({
 				articleId: $stateParams.articleId
-			});
+			})
+            //    .then(function(){
+            //    $scope.id=$scope.article._id;
+            //});
 		};
 	}
 ]);
@@ -4236,12 +4247,21 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
     '$window', '$state', '$http', '$q', '$mdDialog', '$mdSidenav', 'configGdrive',
     'Googledrive', 'GooglePlus', 'Products', 'Authentication', 'ProductByUserId','UtCalendar',
     '$timeout', '$mdBottomSheet', //Material Design
+    'MeanEvents',
     function ($scope,
               $window, $state, $http, $q, $mdDialog, $mdSidenav, configGdrive,
               Googledrive, GooglePlus, Products, Authentication, ProductByUserId,UtCalendar,
-              $timeout, $mdBottomSheet //material Design
+              $timeout, $mdBottomSheet, //material Design
+              MeanEvents // mean-events
              ) {
         $scope.authentication = Authentication;
+
+        $scope.foo = 'tbody';
+
+        // Find a list of Mean events
+        $scope.findEvents = function() {
+            $scope.meanEvents = MeanEvents.query();
+        };
 
         $scope.width = window.innerWidth;
         $('.rightPane').width(window.innerWidth - 74);
@@ -4487,7 +4507,7 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             $scope.alert = '';
             $mdBottomSheet.show({
                 templateUrl: 'modules/mean-tutorials/template/bottom-sheet-list-template.html',
-                controller: 'ListBottomSheetCtrl',
+                controller: 'BottomSheetListCtrl',
                 targetEvent: $event
             }).then(function(clickedItem) {
                 $scope.alert = clickedItem.name + ' clicked!';
@@ -4497,7 +4517,7 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             $scope.alert = '';
             $mdBottomSheet.show({
                 templateUrl: 'modules/mean-tutorials/template/bottom-sheet-grid-template.html',
-                controller: 'GridBottomSheetCtrl',
+                controller: 'BottomSheetGridCtrl',
                 targetEvent: $event
             }).then(function(clickedItem) {
                 $scope.alert = clickedItem.name + ' clicked!';
@@ -4505,11 +4525,49 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
         };
         ////////End Material Design
 
+
+
+        //////////DATEPicker/////////////
+        $scope.today = function() {
+            $scope.dt = new Date();
+        };
+        $scope.today();
+
+        $scope.clear = function () {
+            $scope.dt = null;
+        };
+
+        // Disable weekend selection
+        $scope.disabled = function(date, mode) {
+            return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
+        };
+
+        $scope.toggleMin = function() {
+            $scope.minDate = $scope.minDate ? null : new Date();
+        };
+        $scope.toggleMin();
+
+        $scope.open = function($event) {
+            $event.preventDefault();
+            $event.stopPropagation();
+
+            $scope.opened = true;
+        };
+
+        $scope.dateOptions = {
+            formatYear: 'yy',
+            startingDay: 1
+        };
+
+        $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+        $scope.format = $scope.formats[0];
+        ///////////END//////////////////
+
     }
 ])
 
 
-    .controller('ListBottomSheetCtrl', ["$scope", "$mdBottomSheet", function($scope, $mdBottomSheet) {
+    .controller('BottomSheetListCtrl', ["$scope", "$mdBottomSheet", function($scope, $mdBottomSheet) {
         $scope.items = [
             { name: 'Upload New Image (Google Drive)', icon: 'share' },
             { name: 'Select Existing Image (Google Drive)', icon: 'upload' },
@@ -4522,14 +4580,12 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             $mdBottomSheet.hide(clickedItem);
         }
     }])
-    .controller('GridBottomSheetCtrl', ["$scope", "$mdBottomSheet", function($scope, $mdBottomSheet) {
+    .controller('BottomSheetGridCtrl', ["$scope", "$mdBottomSheet", function($scope, $mdBottomSheet) {
         $scope.items = [
             { name: 'Hangout', icon: 'hangout' },
             { name: 'Mail', icon: 'mail' },
             { name: 'Message', icon: 'message' },
             { name: 'Copy', icon: 'copy' },
-            { name: 'Facebook', icon: 'facebook' },
-            { name: 'Twitter', icon: 'twitter' },
         ];
         $scope.listItemClick = function($index) {
             var clickedItem = $scope.items[$index];
@@ -4666,11 +4722,77 @@ angular.module('mean-tutorials').directive('utCalendar', ['UtCalendar',
 	function(UtCalendar) {
 		return {
 			template: '<div class="container" style="margin-top:20px">'+
-                        '<table id="calendar" class="meanT-calendar"></table>'+
+                        '<div>{{calendarSize}}</div>'+
+                        '<table id="calendar" class="meanT-calendar" ng-size="calendarSize"></table>'+
                       '</div>',
+            scope:{
+
+            },
 			restrict: 'E',
 			link: function postLink(scope, element, attrs) {
                 UtCalendar.calendar();
+
+                element.bind('click', function(val){
+
+                    if($('#calSvg').length === 0){
+                        var position = $(val.target.parentElement.parentElement).position({of:$(window)})
+
+                        //TweenLite.to(val.target, 1, {x: position.top, y: position.left, transformOrigin:"50% 50%", transformPerspective:500, backgroundColor:'red', scale:2});
+                        var width = $(val.target.parentElement.parentElement).width()
+                        var height = $(val.target.parentElement.parentElement).height()
+                        //var center = $(val.target.parentElement.parentElement).height()
+
+                        var margin = {top: -5, right: -5, bottom: -5, left: -5},
+                            width = width - margin.left - margin.right,
+                            height = height - margin.top - margin.bottom;
+
+                        var zoom = d3.behavior.zoom()
+                            .center([width / 2, height / 2])
+                            .scaleExtent([1, 10])
+                            .on("zoom", zoomed);
+
+                        scope.svg = d3.select("#calendar").append("svg")
+                            .attr("id", 'calSvg')
+                            .attr("width", width + margin.left + margin.right)
+                            .attr("height", height + margin.top + margin.bottom)
+                            .style("position","absolute")
+                            .style("top", position.top)
+                            .append("g")
+                            .attr("transform", "translate(" + margin.left + "," + margin.right + ")")
+                            .call(zoom);
+
+                        var container = scope.svg.append("g");
+
+                        container.append("g")
+                            .attr("class", "axis")
+                            .selectAll("circle")
+                            .data(d3.range(10, width, 10))
+                            .enter().append("circle")
+                            .attr("cx", width / 2)
+                            .attr("cy", height / 2)
+                            .attr("r", function(d) { return d; });
+
+                        var center = scope.svg.append("circle")
+                            .style("fill", "red")
+                            .attr("cx", width / 2)
+                            .attr("cy", height / 2)
+                            .attr("r", 10);
+
+                        var zoomed = function zoomed() {
+                            container.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+                        }
+                    }
+                })
+
+                scope.$watchCollection('calendarSize', function(newNames, oldNames) {
+                    var margin = {top: -5, right: -5, bottom: -5, left: -5};
+                    console.log('dddddd changed');
+                    scope.$apply(
+                        scope.svg.attr("width", newNames.width + margin.left + margin.right)
+                            .attr("height", newNames.height + margin.top + margin.bottom)
+                    );
+
+                });
 			}
 		};
 	}
@@ -4727,7 +4849,7 @@ angular.module('mean-tutorials').factory('UtCalendar', [
                     .enter()
                     .append('td')
                     .attr('class', function (d) {
-                        return d > 0 ? '' : 'empty';
+                        return d > 0 ? 'date' : 'empty';
                     })
                     .text(function (d) {
                         return d > 0 ? d : '';
@@ -6366,6 +6488,118 @@ angular.module('seller-interface').factory('GooglePlus', [
 		}
 	}
 ]);
+
+'use strict';
+
+angular.module('size-util').directive('coverResize', ['$window',
+	function($window) {
+		return {
+			restrict: 'A',
+            scope:{
+                targetElem: "=bindingFoo"
+            },
+			link: function postLink(scope, element, attrs) {
+                //function targetElement() {
+                //    console.log(scope.targetElem);
+                //    return scope.targetElem;
+                //}
+                //var targetElem = scope.targetElem;
+
+
+                var w = angular.element($window);
+                w.on('reszie', function(){
+                    console.log('resize');
+                })
+                //console.log(w);
+                //scope.$watch(function () {
+                //    return {
+                //        'h': w.height(),
+                //        'w': w.width()
+                //    };
+                //}, function (newValue, oldValue) {
+                //    scope.windowHeight = newValue.h;
+                //    scope.windowWidth = newValue.w;
+                //
+                //    scope.resizeWithOffset = function (offsetH) {
+                //
+                //        scope.$eval(attr.notifier);
+                //
+                //        return {
+                //            'height': (newValue.h - offsetH) + 'px'
+                //            //,'width': (newValue.w - 100) + 'px'
+                //        };
+                //    };
+                //
+                //}, true);
+                console.log(element);
+                element.on("resize", function () {
+                    console.log("resized.- element On");
+                });
+                element.bind('resize', function () {
+                    console.log('resize');
+                    scope.$apply();
+                });
+                element.bind('click', function () {
+                    console.log('resize');
+                    scope.$apply();
+                });
+			}
+		};
+	}
+])
+    .directive('ngSize', ['$rootScope', function($root) {
+        return {
+            scope: {
+                size: '=ngSize'
+            },
+            link: function($scope, element, attrs) {
+
+                $root.ngSizeDimensions  = (angular.isArray($root.ngSizeDimensions)) ? $root.ngSizeDimensions : [];
+                $root.ngSizeWatch       = (angular.isArray($root.ngSizeWatch)) ? $root.ngSizeWatch : [];
+
+                var handler = function() {
+                    angular.forEach($root.ngSizeWatch, function(el, i) {
+                        // Dimensions Not Equal?
+                        if ($root.ngSizeDimensions[i][0] != el.offsetWidth || $root.ngSizeDimensions[i][1] != el.offsetHeight) {
+                            // Update Them
+                            $root.ngSizeDimensions[i] = [el.offsetWidth, el.offsetHeight];
+                            // Update Scope?
+                            $root.$broadcast('size::changed', i);
+                        }
+                    });
+                };
+
+                // Add Element to Chain?
+                var exists = false;
+                angular.forEach($root.ngSizeWatch, function(el, i) { if (el === element[0]) exists = i });
+
+                // Ok.
+                if (exists === false) {
+                    $root.ngSizeWatch.push(element[0]);
+                    $root.ngSizeDimensions.push([element[0].offsetWidth, element[0].offsetHeight]);
+                    exists = $root.ngSizeWatch.length-1;
+                }
+
+                // Update Scope?
+                $scope.$on('size::changed', function(event, i) {
+                    // Relevant to the element attached to *this* directive
+                    if (i === exists) {
+                        $scope.size = {
+                            width: $root.ngSizeDimensions[i][0],
+                            height: $root.ngSizeDimensions[i][1]
+                        };
+                    }
+                });
+
+                // Refresh: 100ms
+                if (!window.ngSizeHandler) window.ngSizeHandler = setInterval(handler, 100);
+
+                // Window Resize?
+                // angular.element(window).on('resize', handler);
+
+            }
+        };
+    }]);;
 
 'use strict';
 
