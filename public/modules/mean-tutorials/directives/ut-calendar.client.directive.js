@@ -4,8 +4,7 @@ angular.module('mean-tutorials').directive('utCalendar', ['UtCalendar',
 	function(UtCalendar) {
 		return {
 			template: '<div class="container" style="margin-top:20px">'+
-                        '<div>{{calendarSize}}</div>'+
-                        '<table id="calendar" class="meanT-calendar" ng-size="calendarSize"></table>'+
+                        '<table id="calendar" class="meanT-calendar"></table>'+
                       '</div>',
             scope:{
 
@@ -65,16 +64,6 @@ angular.module('mean-tutorials').directive('utCalendar', ['UtCalendar',
                         }
                     }
                 })
-
-                scope.$watchCollection('calendarSize', function(newNames, oldNames) {
-                    var margin = {top: -5, right: -5, bottom: -5, left: -5};
-                    console.log('dddddd changed');
-                    scope.$apply(
-                        scope.svg.attr("width", newNames.width + margin.left + margin.right)
-                            .attr("height", newNames.height + margin.top + margin.bottom)
-                    );
-
-                });
 			}
 		};
 	}

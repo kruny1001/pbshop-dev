@@ -116,6 +116,7 @@
             <div class="meanT-headSubTitle">
                 You can check out our current project.
             </div>
+            <ut-calendar></ut-calendar>
             <div class="container" style="margin-top:20px">
                 <table id="calendar" class="meanT-calendar"></table>
             </div>
@@ -134,13 +135,18 @@
 
         </md-content>
 
+        <!-- Right Menu-->
         <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
             <md-toolbar class="md-tall md-warn md-hue-5">
-                <div class="sidebar-header header-cover" style="background-image: url(http://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);">
+                <div class="sidebar-header header-cover"
+                     style="background-image: url(http://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);">
                     <h1 class="md-toolbar-tools">My Page</h1>
                 </div>
             </md-toolbar>
             <!-- Authentication Needed -->
+            <a href="/auth/google" class="undecorated-link">
+                <img src="/modules/users/img/buttons/google.png">
+            </a>
             <md-content class="md-padding" layout="column" layout-align="center start">
                 <div layout="row" layout-align="end">
                     <md-button class="md-primary" ng-click="logIn($event)">

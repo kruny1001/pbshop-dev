@@ -16,11 +16,11 @@ module.exports = function(config) {
 
 		// Test results reporter to use
 		// Possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-		//reporters: ['progress'],
-		reporters: ['progress'],
+
+		reporters: ['progress','growl'],
 
 		// Web server port
-		port: 9876,
+		port: 23053,
 
 		// Enable / disable colors in the output (reporters and logs)
 		colors: true,
