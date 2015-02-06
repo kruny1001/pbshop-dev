@@ -60,18 +60,23 @@ angular.module('tj-hair').controller('TjMainController', ['$scope','$timeout',
 				}
 				 */
 				//group.drag(move, start, stop);
-				parentSvg.append(group);
+				//parentSvg.append(group);
 				//$scope.addedObject.push(group.node.id);
 				$scope.$apply();
 			});
 		}
 
-		var backSvg = Snap('#backGroundSvg');
-		Snap.load("modules/tj-hair/img/building1.svg", function(data) {
+		var backSvg = Snap('#frontLogo');
+		Snap.load("modules/tj-hair/img/tjB.svg", function(data) {
 			backSvg.append(data);
+			backSvg.select('svg').attr({
+				class:'svgTestClass'
+			});
 			var circlePinPosition = {x:'443' , y:'299', id:'circlePin1'};
 			$scope.addSVG('backGroundSvg', circlePinPosition);
 			$timeout(function() {
+
+				//var svgE = backSvg.select('svg');
 
 				TweenLite.to('#p1 #whole', 2, {opacity:1, scale:0.7, x:50, y:50})
 				/*
