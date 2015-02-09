@@ -47,7 +47,8 @@ module.exports = function(config) {
 
 		// Continuous Integration mode
 		// If true, it capture browsers, run tests and exit
-		singleRun: true,
+		// 2/6
+		//singleRun: false,
 
         preprocessors: {
             'public/modules/**/*.html': ['ng-html2js'],

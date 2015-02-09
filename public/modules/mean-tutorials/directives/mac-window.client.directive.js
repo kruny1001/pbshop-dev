@@ -6,6 +6,7 @@ angular.module('mean-tutorials').directive('macWindow', [
 			scope: {
 				projectInfos: '=info'
 			},
+            //template: macWindowTpl,
 			templateUrl: 'modules/mean-tutorials/directives/templates/mac-window.html',
 			restrict: 'E',
 			link: function postLink(scope, element, attrs) {

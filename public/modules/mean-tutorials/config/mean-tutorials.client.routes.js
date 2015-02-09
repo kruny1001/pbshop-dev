@@ -5,6 +5,7 @@ angular.module('mean-tutorials').config(['$stateProvider',
     function($stateProvider) {
         // Mean tutorials state routing
         $stateProvider.
+
             state('projectview', {
                 abstract: true,
                 url: '/projects',

@@ -11,7 +11,6 @@
 
 		beforeEach(inject(function($controller, $rootScope) {
 			scope = $rootScope.$new();
-
 			HeaderController = $controller('HeaderController', {
 				$scope: scope
 			});

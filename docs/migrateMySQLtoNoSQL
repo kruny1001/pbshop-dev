@@ -3,3 +3,7 @@ http://stackoverflow.com/questions/4546698/library-not-loaded-libmysqlclient-16-
 
 MongoDB
 Mapresuce
+
+
+mongorestore -d mean-dev -c gskb ./gskb.bson
+

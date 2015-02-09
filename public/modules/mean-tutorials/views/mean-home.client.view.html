@@ -1,6 +1,6 @@
 <section data-ng-controller="MeanHomeController" layout="column" layout-fill>
     <div class="meanT-headToolBar">
-        <div class="meanT-brandName">
+        <div class="meanT-brandName" color-border="colorBorder.header">
             <a href="/#!/versioning" target="_blank">Version: 0.0.2</a>
         </div>
     </div>
@@ -12,6 +12,7 @@
             <md-content class="md-padding" layout="column" layout-align="center start">
                 <md-button ng-click="close()" class="md-primary" hide-gt-md>
                     Close MENU
+                </md-button>
                 </md-button>
                 <md-button ng-click="close()" class="md-primary">
                     Articles
@@ -36,9 +37,7 @@
         </md-sidenav>
 
         <md-content flex class="md-padding">
-            <!--
-            <button ng-click="loginBtn()">Login Btn</button>
-            -->
+
             <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
                 Menu
             </md-button>
@@ -46,31 +45,21 @@
                 My Page
             </md-button>
 
-
-
             <div class="meanT-headButtonGroup">
             </div>
 
-
-
-            <div class="meanT-headTitle">
+            <div class="meanT-headTitle" color-border="colorBorder.header">
                 <strong>Welcome to MEAN Tutorials</strong>
             </div>
+
             <div class="meanT-headSubTitle">
                 <strong>Mean Tutorials</strong> is a team for scripted, high-performance HTML5 technologies that works
-                in all major browsers. No other delivers such advanced.
-                <br/>
-                <br/>
-
+                in all major browsers. No other delivers such advanced.<br/><br/>
                 <a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">
                     <img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">
                 </a>
-
             </div>
-
             <hr/>
-
-
             <div class="meanT-contentTitle">
                 <strong>What We Are Doing</strong>
             </div>
@@ -111,27 +100,17 @@
                 </md-button>
             </div>
             <hr/>
-            <div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
 
+
+            <div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
             <div class="meanT-headSubTitle">
                 You can check out our current project.
             </div>
             <ut-calendar></ut-calendar>
-            <div class="container" style="margin-top:20px">
-                <table id="calendar" class="meanT-calendar"></table>
-            </div>
 
-            <hr/>
-
-            <mac-window info="announcements"></mac-window>
-
-            <hr/>
-
-            <mac-window info="projects"></mac-window>
-
-            <hr/>
-
-            <mac-window info="techs"></mac-window>
+            <hr/><mac-window info="announcements"></mac-window>
+            <hr/><mac-window info="projects"></mac-window>
+            <hr/><mac-window info="techs"></mac-window>
 
         </md-content>
 
@@ -160,7 +139,6 @@
                 <md-button ng-click="gotoState('projectview.dashboard')" class="md-primary">
                     Dashboard
                 </md-button>
-
                 <md-button ng-disabled="true" ng-click="close()" class="md-primary">
                     Activities
                 </md-button>
@@ -178,7 +156,6 @@
 
         <!-- Google Form
             <hr/>
-
             <br/>
             <a href="https://docs.google.com/forms/d/1HvDi8CBJrPE2m47JEO_jW3-moxjrVzX0nDCTczvvzDo/viewanalytics?usp=form_confirm" target="_blank">결과 보기</a>
             <div class="meanT-googleForm">
@@ -187,8 +164,6 @@
                 <iframe src="https://docs.google.com/forms/d/1HvDi8CBJrPE2m47JEO_jW3-moxjrVzX0nDCTczvvzDo/viewform?embedded=true" width="760" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
             </div>
         -->
-
         </div>
     </section>
-
 </section>
