@@ -84,8 +84,6 @@ module.exports = {
                 'public/lib/tinymce/plugins/media/plugin.min.js',
                 
                 'public/lib/moment/min/moment-with-locales.min.js',
-
-
 			]
 		},
 		css: [
