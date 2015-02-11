@@ -39,9 +39,15 @@ angular.module('mean-tutorials')
 
             $scope.toggleLeft = function() {
                 $mdSidenav('left').toggle()
+                    .then(function(){
+                        $log.debug("toggle left is done");
+                    });
             };
             $scope.toggleRight = function() {
                 $mdSidenav('right').toggle()
+                    .then(function(){
+                        $log.debug("toggle RIGHT is done");
+                    });
             };
 
             $scope.signUp = function(ev) {
