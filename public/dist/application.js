@@ -3341,7 +3341,22 @@ angular.module('mean-tutorials')
             }
 
         }
-]);
+]).controller('LeftCtrl12', ["$scope", "$timeout", "$mdSidenav", "$log", function($scope, $timeout, $mdSidenav, $log) {
+        $scope.close = function() {
+            $mdSidenav('left').close()
+                .then(function(){
+                    $log.debug("close LEFT is done");
+                });
+        };
+    }])
+    .controller('RightCtrl11', ["$scope", "$timeout", "$mdSidenav", "$log", function($scope, $timeout, $mdSidenav, $log) {
+        $scope.close = function() {
+            $mdSidenav('right').close()
+                .then(function(){
+                    $log.debug("close RIGHT is done");
+                });
+        };
+    }]);;
 
 "use strict";
 
