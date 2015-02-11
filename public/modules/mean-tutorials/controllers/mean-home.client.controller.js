@@ -81,14 +81,13 @@ angular.module('mean-tutorials')
                 $state.go('signup');
             };
 
-
-
             // Animation //
             var title = $('.ani-title');
             var youtubePlayBtn = $('#youtubePlayButton');
             var techIcons = $('.ani-techs');
             var meanTotem = $('#meanTotem');
             var meanTotemDesc = $('#meanTotem-desc');
+
             $scope.clickPlayBtn = function() {
                 TweenMax.fromTo(youtubePlayBtn, 1.5, {scale:2}, {scale:0.8, opacity:0});
                 TweenMax.to(title, 2.5, {x:-1200});
