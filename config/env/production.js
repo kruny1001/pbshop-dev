@@ -6,40 +6,35 @@ module.exports = {
 		lib: {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.min.css',
-				'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
-				'public/lib/angular-material/angular-material.css',
-				'public/lib/angular-material/themes/amber-theme.css',
-				'public/lib/angular-material/themes/blue-grey-theme.css',
-				'public/lib/angular-material/themes/brown-theme.css',
-				'public/lib/angular-material/themes/cyan-theme.css',
-				'public/lib/angular-material/themes/indigo-theme.css',
+				//'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
+				'public/lib/angular-material/angular-material.min.css',
+				'public/lib/angular-material/default-theme.css',
                 'public/lib/components-font-awesome/css/font-awesome.min.css',
 			],
 			js: [
 				'public/lib/angular/angular.min.js',
-				'public/lib/angular-resource/angular-resource.js', 
-				'public/lib/angular-cookies/angular-cookies.js', 
-				'public/lib/angular-animate/angular-animate.js', 
-				'public/lib/angular-touch/angular-touch.js', 
-				'public/lib/angular-sanitize/angular-sanitize.js', 
+				'public/lib/angular-resource/angular-resource.min.js',
+				'public/lib/angular-cookies/angular-cookies.min.js',
+				'public/lib/angular-animate/angular-animate.min.js',
+				'public/lib/angular-touch/angular-touch.min.js',
+				'public/lib/angular-sanitize/angular-sanitize.min.js',
 				'public/lib/angular-ui-router/release/angular-ui-router.min.js',
 				//'public/lib/angular-ui-utils/ui-utils.min.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
 
                 'public/lib/jquery/dist/jquery.min.js',
-                'public/lib/oclazyload/dist/ocLazyLoad.min.js',
-
+                //'public/lib/oclazyload/dist/ocLazyLoad.min.js',
 				'public/lib/angular-aria/angular-aria.min.js',
-				'public/lib/hammerjs/hammer.min.js',
+				//'public/lib/hammerjs/hammer.min.js',
 				'public/lib/angular-material/angular-material.min.js',
 
-                'public/lib/tinymce/tinymce.min.js',
-                'public/lib/angular-ui-tinymce/src/tinymce.js',
+                //'public/lib/tinymce/tinymce.min.js',
+                //'public/lib/angular-ui-tinymce/src/tinymce.js',
 
 				'public/lib/gsap/src/minified/TimelineMax.min.js',
 				'public/lib/gsap/src/minified/TweenMax.min.js',
 
-                'public/lib/gsap/src/minified/utils/Draggable.min.js',
+                //'public/lib/gsap/src/minified/utils/Draggable.min.js',
 				//'public/lib/gsap/src/minified/plugins/TextPlugin.min.js',
 				'public/lib/gsap/src/minified/plugins/ScrollToPlugin.min.js',
 				'public/lib/gsap/src/minified/plugins/ColorPropsPlugin.min.js',
@@ -55,16 +50,16 @@ module.exports = {
 				'public/lib/tremulajs/dist/Tremula.js',
                 */
 
-				'public/lib/Snap.svg/dist/snap.svg-min.js',
+				//'public/lib/Snap.svg/dist/snap.svg-min.js',
 				'public/lib/lodash/dist/lodash.min.js',
 				//'public/lib/angular-google-maps/dist/angular-google-maps.min.js',
 
 				'public/lib/d3/d3.min.js',
-				'public/lib/d3-timeline/src/d3-timeline.js',
+				//'public/lib/d3-timeline/src/d3-timeline.js',
 
 				'public/lib/topojson/topojson.js',
 
-				'public/lib/angular-smart-table/dist/smart-table.min.js',
+				//'public/lib/angular-smart-table/dist/smart-table.min.js',
 
                 'public/lib/tinymce/tinymce.min.js',
                 'public/lib/tinymce/plugins/image/plugin.min.js',
@@ -74,6 +69,7 @@ module.exports = {
                 'public/lib/tinymce/plugins/table/plugin.min.js',
                 'public/lib/tinymce/plugins/contextmenu/plugin.min.js',
                 'public/lib/tinymce/plugins/media/plugin.min.js',
+
                 'public/lib/moment/min/moment-with-locales.min.js',
 
 
