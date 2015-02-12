@@ -12,9 +12,14 @@ module.exports = function(app) {
     app.route('/gskbs')
         .get(gskb.list);
 
+	  app.route('/gskbs/indexQuery')
+		  .get(gskb.indexQuery);
+
     app.route('/gskbs/totalIndex')
         .get(gskb.getTotalbyKeyword);
 
+		//app.get('/gskbs/listdocs',
+		//	passport.authenticate('google', { scope : ['profile', 'email'] }));
     /*
     app.route('/products/list/:bannerId')
         .get(products.listByParentId);

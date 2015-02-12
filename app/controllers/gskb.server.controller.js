@@ -35,7 +35,7 @@ var getErrorMessage = function(err) {
  * List of Products
  */
 exports.list = function(req, res) {
-    gskb.find({}, {genes:1, genesSym:1})
+    gskb.find({}, {paperTitle:1, genesArr:1}).limit(10)
         .exec(function(err, gskbs) {
             if (err) {
                 return res.send(400, {
@@ -47,6 +47,23 @@ exports.list = function(req, res) {
         }
     );
 };
+
+exports.indexQuery = function(req, res) {
+	gskb.find()
+		.where('genesArr').in(["AT2G14610", "AT4G23150"])
+		.select('_id paperTitle genesArr')
+		//.limit(15)
+		.exec(function(err, gskbs){
+			if (err) {
+				return res.send(400, {
+					message: getErrorMessage(err)
+				});
+			} else {
+				res.jsonp(gskbs);
+			}
+		})
+
+}
 
 exports.getTotalbyKeyword = function(req, res){
     var o ={};

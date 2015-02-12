@@ -1,0 +1,12 @@
+<section data-ng-controller="BioTableController">
+	<h1>List Genes Information</h1>
+    Index serch by keywords <b>.where('genesArr').in(["AT2G14610", "AT4G23150"])</b>
+    <pre ng-repeat="element in data">
+        <h5>Title: {{element.paperTitle}}</h5> <br/><br/>
+        Genes: {{element.genesArr}} <br/>
+        <b>Total Number of Genes: {{element.genesArr.length}}</b>
+
+
+    </pre>
+
+</section>

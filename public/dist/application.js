@@ -1711,6 +1711,10 @@ angular.module('bioinfo').config(['$stateProvider',
 	function($stateProvider) {
 		// Bioinfo state routing
 		$stateProvider.
+		state('bio-table', {
+			url: '/bio-table',
+			templateUrl: 'modules/bioinfo/views/bio-table.client.view.html'
+		}).
 		state('bioinfo-home', {
 			url: '/bioinfo-home',
 			templateUrl: 'modules/bioinfo/views/bioinfo-home.client.view.html'
@@ -1818,6 +1822,37 @@ angular.module('mean-tutorials').controller('BioD31Controller', ['$scope',
             .attr("x2", x(0));
 
     }
+]);
+
+'use strict';
+
+angular.module('bioinfo').controller('BioTableController', ['$scope','$http',
+	function($scope,$http) {
+		$http.get('gskbs/indexQuery').success(function(data){
+			$scope.data = data;
+		});
+
+		function makeApiCall() {
+			gapi.client.load('plus', 'v1').then(function() {
+				var request = gapi.client.plus.people.get({
+					'userId': 'me'
+				});
+				request.then(function(resp) {
+					var heading = document.createElement('h4');
+					var image = document.createElement('img');
+					image.src = resp.result.image.url;
+					heading.appendChild(image);
+					heading.appendChild(document.createTextNode(resp.result.displayName));
+
+					document.getElementById('content').appendChild(heading);
+				}, function(reason) {
+					console.log('Error: ' + reason.result.error.message);
+				});
+			});
+		}
+		// Bio table controller logic
+		// ...
+	}
 ]);
 
 "use strict";
