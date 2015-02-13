@@ -2863,7 +2863,7 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 			getGoogleDriveInfo: getGoogleDriveInfo,
 			setupPicker: setupPicker,
 			listFolder: listFolder,
-            createFile: createFile
+			createFile: createFile
 		};
 
 		function createFolder(FolderName, accessToken){
@@ -2939,13 +2939,11 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 				picker.setVisible(true);
 			}
 			findFolder(callbackAfterFindFolder);
-
-
 		}
 
 		function listFolder(){
+			console.log('listForlder');
 			gapi.client.load('drive', 'v2').then(function() {
-
 				var request = gapi.client.drive.files.list({
 					maxResults:10,
 					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
@@ -2953,19 +2951,11 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 				request.then(function(resp){
 					console.log('result File list');
 					console.log(resp)
+					return resp;
 				});
-
-				var request = gapi.client.drive.files.list({
-					maxResults:10,
-					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
-				});
-				request.then(function(resp){
-					console.log('result File list');
-					console.log(resp)
-				});
-
 			});
 		}
+
 	}
 ]);
 
@@ -3558,6 +3548,7 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
                 'immediate': false
             }, handleAuthentication);
         }
+
         function handleAuthentication(result){
             if(result && !result.error){
                 $scope.isAuth = true;
@@ -3712,6 +3703,10 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             Googledrive.setupPicker(accessToken, pickerCallback);
         }
 
+	    $scope.listFolderInformation = function(){
+		    Googledrive.listFolder();
+	    }
+
         function createNewAccountFolder(){
             //Pre. Get User Information
             //check if there exists an
@@ -3804,6 +3799,33 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
     }
 ])
 
+	.controller('gDriveDashCtrl', ["$scope", "Googledrive", function($scope, Googledrive){
+		$scope.googleDrive={info:'gDriveCtrl'};
+
+		$scope.listingFolderInfo = function(){
+			$scope.gDocs = 'dd';
+			console.log('gDriveDashCtrl');
+			$scope.gDocs = Googledrive.listFolder();
+			var request = gapi.client.drive.files.get({
+				'fileId': "1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg"
+			});
+			request.execute(function(resp) {
+				if (!resp.error) {
+					console.log('Title: ' + resp.title);
+					console.log('Description: ' + resp.description);
+					console.log('MIME type: ' + resp.mimeType);
+					console.log(resp);
+					$scope.gDocs = resp;
+
+				} else if (resp.error.code == 401) {
+					// Access token might have expired.
+					checkAuth();
+				} else {
+					console.log('An error occured: ' + resp.error.message);
+				}
+			});
+		}
+	}])
 
     .controller('BottomSheetListCtrl', ["$scope", "$mdBottomSheet", function($scope, $mdBottomSheet) {
         $scope.items = [

@@ -97,6 +97,10 @@ exports.getTotalbyKeyword = function(req, res){
     function handleError(){console.log("error")}
 }
 
+exports.queryIndex = function(req, res, next, id){
+
+}
+
 /**
  * Product middleware
 

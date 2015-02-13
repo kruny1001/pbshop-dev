@@ -12,7 +12,7 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 			getGoogleDriveInfo: getGoogleDriveInfo,
 			setupPicker: setupPicker,
 			listFolder: listFolder,
-            createFile: createFile
+			createFile: createFile
 		};
 
 		function createFolder(FolderName, accessToken){
@@ -88,13 +88,11 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 				picker.setVisible(true);
 			}
 			findFolder(callbackAfterFindFolder);
-
-
 		}
 
 		function listFolder(){
+			console.log('listForlder');
 			gapi.client.load('drive', 'v2').then(function() {
-
 				var request = gapi.client.drive.files.list({
 					maxResults:10,
 					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
@@ -102,18 +100,10 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 				request.then(function(resp){
 					console.log('result File list');
 					console.log(resp)
+					return resp;
 				});
-
-				var request = gapi.client.drive.files.list({
-					maxResults:10,
-					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
-				});
-				request.then(function(resp){
-					console.log('result File list');
-					console.log(resp)
-				});
-
 			});
 		}
+
 	}
 ]);
