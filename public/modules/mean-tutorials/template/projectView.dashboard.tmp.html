@@ -1,11 +1,28 @@
 <div class="meanT-dashboard" ng-controller="ProjectviewdashboardController" ng-init="findEvents()">
     <div style="color:red; position: absolute; top:10px; right:20px;">{{width}}</div>
     <div class="meanT-brandName">Dashboard</div>
+    <md-button flex flex-order="4"
+               class="md-raised md-primary"
+               noink
+               style="background-color: #009688; font-size:medium; margin-right:10px;"
+
+               aria-label="{{authName}}"
+               ng-click="init()">
+        {{authName}}
+    </md-button>
     <div ng-controller="GapiCtrlController">
         <md-button ng-click="googleAccess()">Google Access</md-button>
         <div>{{url}}</div>
     </div>
 
+    <div ng-controller="gDriveDashCtrl">Check Google Drive
+    <md-button ng-click="listingFolderInfo()">List Forlder</md-button>
+        <div>Owner: {{gDocs.owners[0].displayName}}</div>
+        <div>Owner's Email: {{gDocs.owners[0].emailAddress}}</div>
+        <div>Picture:
+            <img ng-src="{{gDocs.owners[0].picture.url}}"/>
+        </div>
+    </div>
 
     <div class="meanT-dashboard-main">
         <div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
@@ -53,10 +70,12 @@
     <b layout="row" layout-align="center center" layout-margin>
         {{alert}}
     </b>
+
+
     <!---->
 
 
-    <!--
+
     <md-toolbar
         style="font-size:large;
         border-radius:15px 15px 0px 0px;">
@@ -154,6 +173,6 @@
             test-getGoogleDriveInfo
         </md-button>
     </md-content>
-    -->
+
 </div>
 

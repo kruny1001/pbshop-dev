@@ -77,6 +77,7 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
                 'immediate': false
             }, handleAuthentication);
         }
+
         function handleAuthentication(result){
             if(result && !result.error){
                 $scope.isAuth = true;
@@ -231,6 +232,10 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             Googledrive.setupPicker(accessToken, pickerCallback);
         }
 
+	    $scope.listFolderInformation = function(){
+		    Googledrive.listFolder();
+	    }
+
         function createNewAccountFolder(){
             //Pre. Get User Information
             //check if there exists an
@@ -323,6 +328,33 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
     }
 ])
 
+	.controller('gDriveDashCtrl', function($scope, Googledrive){
+		$scope.googleDrive={info:'gDriveCtrl'};
+
+		$scope.listingFolderInfo = function(){
+			$scope.gDocs = 'dd';
+			console.log('gDriveDashCtrl');
+			$scope.gDocs = Googledrive.listFolder();
+			var request = gapi.client.drive.files.get({
+				'fileId': "1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg"
+			});
+			request.execute(function(resp) {
+				if (!resp.error) {
+					console.log('Title: ' + resp.title);
+					console.log('Description: ' + resp.description);
+					console.log('MIME type: ' + resp.mimeType);
+					console.log(resp);
+					$scope.gDocs = resp;
+
+				} else if (resp.error.code == 401) {
+					// Access token might have expired.
+					checkAuth();
+				} else {
+					console.log('An error occured: ' + resp.error.message);
+				}
+			});
+		}
+	})
 
     .controller('BottomSheetListCtrl', function($scope, $mdBottomSheet) {
         $scope.items = [

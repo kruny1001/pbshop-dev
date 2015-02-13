@@ -18,8 +18,13 @@ module.exports = function(app) {
     app.route('/gskbs/totalIndex')
         .get(gskb.getTotalbyKeyword);
 
+		app.route('/gskbs/query/:index')
+			.get(gskb.queryIndex);
+
+		//app.param('g', products.gskbByID);
 		//app.get('/gskbs/listdocs',
 		//	passport.authenticate('google', { scope : ['profile', 'email'] }));
+
     /*
     app.route('/products/list/:bannerId')
         .get(products.listByParentId);
