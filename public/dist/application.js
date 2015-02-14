@@ -2516,6 +2516,15 @@ angular.module('d2l').controller('D2lHomeController', [
         $scope.authName = 'Authorization';
         $scope.googleDrive={info:'gDriveCtrl'};
 
+        $scope.hideResult = function(){
+            var target = $('.listFolder');
+            TweenLite.to(target, 0.5, {autoAlpha: 0, display:'none'})
+        };
+        $scope.showResult = function(){
+            var target = $('.listFolder')
+            TweenLite.to(target, 0.5, {autoAlpha: 1, display:'block'})
+        };
+
         $scope.init = function init(){
             window.gapi.load('auth', D2LOauth.authenticateWithGoogle);
             window.gapi.load('picker');
@@ -2524,7 +2533,14 @@ angular.module('d2l').controller('D2lHomeController', [
         }
 
         $scope.plusTest = function(){
-            Googledrive.plusTest();
+            var promise = Googledrive.plusTest();
+            promise.then(
+                function(result){
+                //    console.log('service is done')
+                    $scope.gPlus = result;
+                    $scope.$digest();
+                }
+            )
         }
 
         $scope.listingFolderInfo = function(){
@@ -3282,6 +3298,7 @@ angular.module('g-drive').factory('Googledrive', [
 		}
 
         function plusTest(){
+            var deffered = $q.defer();
             gapi.client.load('plus', 'v1').then(function(){
                 var request = gapi.client.plus.activities.list({
                     'userId' : 'me',
@@ -3291,14 +3308,13 @@ angular.module('g-drive').factory('Googledrive', [
                 request.execute(function(resp) {
                     var numItems = resp.items.length;
                     for (var i = 0; i < numItems; i++) {
-                        console.log('ID: ' + resp.items[i].id + ' Content: ' +
-                        resp.items[i].object.content);
+                        //console.log('ID: ' + resp.items[i].id + ' Content: ' + resp.items[i].object.content);
+                        deffered.resolve(resp.items);
                     }
                 });
             });
-
+            return deffered.promise;
         }
-
 	}
 ]);
 

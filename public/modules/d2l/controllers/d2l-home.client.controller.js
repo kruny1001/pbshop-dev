@@ -6,6 +6,15 @@ angular.module('d2l').controller('D2lHomeController', [
         $scope.authName = 'Authorization';
         $scope.googleDrive={info:'gDriveCtrl'};
 
+        $scope.hideResult = function(){
+            var target = $('.listFolder');
+            TweenLite.to(target, 0.5, {autoAlpha: 0, display:'none'})
+        };
+        $scope.showResult = function(){
+            var target = $('.listFolder')
+            TweenLite.to(target, 0.5, {autoAlpha: 1, display:'block'})
+        };
+
         $scope.init = function init(){
             window.gapi.load('auth', D2LOauth.authenticateWithGoogle);
             window.gapi.load('picker');
@@ -14,7 +23,14 @@ angular.module('d2l').controller('D2lHomeController', [
         }
 
         $scope.plusTest = function(){
-            Googledrive.plusTest();
+            var promise = Googledrive.plusTest();
+            promise.then(
+                function(result){
+                //    console.log('service is done')
+                    $scope.gPlus = result;
+                    $scope.$digest();
+                }
+            )
         }
 
         $scope.listingFolderInfo = function(){
