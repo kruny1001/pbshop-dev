@@ -70,7 +70,7 @@ module.exports = {
 				'public/lib/tinymce/plugins/contextmenu/plugin.min.js',
 				'public/lib/tinymce/plugins/media/plugin.min.js',
 
-				'public/lib/string/lib/string/string.min.js',
+				'public/lib/string/lib/string.min.js',
 				'public/lib/moment/min/moment-with-locales.min.js',
 			]
 		},

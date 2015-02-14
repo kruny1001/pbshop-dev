@@ -3,7 +3,7 @@
 angular.module('d2l').controller('D2lHomeController', [
 	'$scope','Googledrive','D2LOauth',
 	function($scope, Googledrive, D2LOauth) {
-		$scope.testStr = S('asdf asdf wef sdf asdf wefsdf asf sf ').truncate(20, ' ...Read More').s;
+		//$scope.testStr = S('asdf asdf wef sdf asdf wefsdf asf sf ').truncate(20, ' ...Read More').s;
 		$scope.authName = 'Authorization';
 		$scope.googleDrive={info:'gDriveCtrl'};
 
