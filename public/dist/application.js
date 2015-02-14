@@ -77,6 +77,11 @@ ApplicationConfiguration.registerModule('calculator');
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');
 
+'use strict';
+
+// Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('d2l');
+
 /**
  * Created by Kevin on 2014-11-26.
  */
@@ -2490,6 +2495,315 @@ angular.module('core').service('Menus', [
 	}
 ]);
 
+'use strict';
+
+//Setting up route
+angular.module('d2l').config(['$stateProvider',
+	function($stateProvider) {
+		// D2l state routing
+		$stateProvider.
+		state('d2l-home', {
+			url: '/d2l-home',
+			templateUrl: 'modules/d2l/views/d2l-home.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+angular.module('d2l').controller('D2lHomeController', [
+    '$scope','Googledrive','D2LOauth',
+	function($scope, Googledrive, D2LOauth) {
+        $scope.authName = 'Authorization';
+        $scope.googleDrive={info:'gDriveCtrl'};
+
+        $scope.init = function init(){
+            window.gapi.load('auth', D2LOauth.authenticateWithGoogle);
+            window.gapi.load('picker');
+            gapi.client.load('drive', 'v2').then(console.log('Ready to use Drive'));
+            gapi.client.load('plus', 'v1');
+        }
+
+        $scope.plusTest = function(){
+            Googledrive.plusTest();
+        }
+
+        $scope.listingFolderInfo = function(){
+            $scope.gDocs = 'dd';
+            console.log('gDriveDashCtrl');
+            var promise = Googledrive.listFolder();
+            promise.then(
+                function(result){
+                    console.log('service is done');
+                    $scope.gDocs = result.items;
+                    $scope.$digest();
+                }
+            )
+            //console.log($scope.gDocs);
+            //$scope.$digest();
+
+            //var request = gapi.client.drive.files.get({
+            //    'fileId': "1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg"
+            //});
+            //request.execute(function(resp) {
+            //    if (!resp.error) {
+            //        console.log('Title: ' + resp.title);
+            //        console.log('Description: ' + resp.description);
+            //        console.log('MIME type: ' + resp.mimeType);
+            //        console.log(resp);
+            //        $scope.gDocs = resp;
+            //        $scope.$digest();
+            //    } else if (resp.error.code == 401) {
+            //        // Access token might have expired.
+            //        checkAuth();
+            //    } else {
+            //        console.log('An error occured: ' + resp.error.message);
+            //    }
+            //});
+        }
+
+        // List File
+        $scope.listFile = function(){
+
+        }
+
+        //
+        //var accessToken;
+        //$scope.permalLink = 'http://drive.google.com/uc?export=view&id=';
+        //$scope.arrive = false;
+        //$scope.authName = 'Authorize';
+        //$scope.isAuth = false;
+        //$scope.init = function init(){
+        //    window.gapi.load('auth', $scope.authenticateWithGoogle);
+        //    window.gapi.load('picker');
+        //    gapi.client.load('urlshortener', 'v1');
+        //}
+        //$scope.authenticateWithGoogle =function authenticateWithGoogle(){
+        //    window.gapi.auth.authorize({
+        //        'client_id': configGdrive.clientId,
+        //        'scope':configGdrive.scopes,
+        //        'immediate': false
+        //    }, handleAuthentication);
+        //}
+        //
+        //function handleAuthentication(result){
+        //    if(result && !result.error){
+        //        $scope.isAuth = true;
+        //        $scope.authName = 'Deauthorize';
+        //        accessToken = result.access_token;
+        //        //console.log(accessToken);
+        //
+        //        /*
+        //         callGooglePlus();
+        //         setFilePicker();
+        //         listFolder();
+        //         getGoogleDriveInfo();
+        //         createFolder();
+        //         */
+        //        createNewAccountFolder();
+        //        setFilePicker(); // singleFile
+        //        //findTargetUriFolder();
+        //    }else{
+        //        console.log(result);
+        //        console.log(result.error);
+        //        console.log('fail to authentication')
+        //    }
+        //    $scope.$digest();
+        //}
+
+        function listFolder() {
+            Googledrive.listFolder()
+        }
+        /*
+         function createFolder(){
+         var folderName;
+         Googledrive.createFolder(folderName, accessToken);
+         }
+         */
+        function getGoogleDriveInfo(){
+            Googledrive.getGoogleDriveInfo();
+        }
+        function callGooglePlus(){
+            function callback(resp) {
+                console.log(resp);
+                var heading = document.createElement('h4');
+                var image = document.createElement('img');
+                image.src = resp.result.image.url;
+                heading.appendChild(image);
+                heading.appendChild(document.createTextNode(resp.result.displayName));
+
+                document.getElementById('content').appendChild(heading);
+            }
+            GooglePlus.callGooglePlus(callback);
+        }
+
+        // Google PlatForm Service
+        $scope.setupPicker = function() {
+            function pickerCallback(data) {
+                if(data.action == google.picker.Action.PICKED){
+                    //do something
+                    $scope.files = data.docs;
+                    $scope.arrive = true;
+
+                    // make shorten URL
+                    var request = gapi.client.urlshortener.url.get({
+                        'shortUrl': 'http://goo.gl/fbsS'
+                    });
+                    request.then(function(response) {
+                        appendResults(response.result.longUrl);
+                    }, function(reason) {
+                        console.log('Error: ' + reason.result.error.message);
+                    });
+
+                    //alert('URL: ' + data.docs[0].url);
+                    $scope.$digest()
+                }else if(data.action ==google.picker.Action.CANCEL){
+                    //alert('goodbye');
+                }
+            }
+            Googledrive.setupPicker(accessToken, pickerCallback);
+        }
+
+        $scope.listFolderInformation = function(){
+            Googledrive.listFolder();
+        }
+
+        function createNewAccountFolder(){
+            //Pre. Get User Information
+            //check if there exists an
+            // API /users/me (only allow to have)
+
+            var callback = function(resp){
+                console.log(resp.result.items.length);
+                if(resp.result.items.length == 0){
+                    $http.get('users/me')
+                        .success(function(response) {
+                            console.log(response);
+                            var folderName = 'D2l-'+response._id;
+                            //1. Create A New Folder
+                            Googledrive.createFolder(folderName, accessToken);
+                            //2. Update User Information
+                            //$http.get()
+                        });
+                }
+                else{
+                    console.log('there is already exist')
+                    $scope.rootGdriveFolderID = resp.result.items[0].id
+                    $scope.$digest();
+                }
+            }
+            Googledrive.findFolder(callback);
+        }
+	}
+]);
+
+'use strict';
+
+angular.module('d2l').factory('D2LOauth', ['configGdrive',
+	function(configGdrive) {
+        var testStr = 'asdfasdfsdfsf';
+        var accessToken;
+        var permalLink = 'http://drive.google.com/uc?export=view&id=';
+        var arrive = false;
+        var authName = 'Authorize';
+        var isAuth = false;
+
+		return {
+            getAccessToken: getAccessToken,
+            authenticateWithGoogle: authenticateWithGoogle,
+            //setupPicker: setupPicker,
+            createNewAccountFolder: createNewAccountFolder
+		};
+
+        function getAccessToken() {
+            return true;
+        }
+
+        function authenticateWithGoogle(){
+            window.gapi.auth.authorize({
+                'client_id': configGdrive.clientId,
+                'scope':configGdrive.scopes,
+                'immediate': false
+            }, handleAuthentication);
+        }
+
+        function handleAuthentication(result){
+            console.log(testStr);
+            if(result && !result.error){
+                isAuth = true;
+                authName = 'Deauthorize';
+                accessToken = 'ya29.FgGTDUyLSY6oSvDzClGVcrwws2xf2PJ6JHC5uXkRoutVf6k8BLamn4t9dsvKBG0sHtZR34tYjP6CHg';
+                //accessToken = result.access_token;
+                console.log(accessToken);
+                /*callGooglePlus();setFilePicker();listFolder();getGoogleDriveInfo();createFolder();*/
+
+                //createNewAccountFolder();
+                //setFilePicker(); // singleFile
+                //findTargetUriFolder();
+            }else{
+                console.log(result);
+                console.log('ERROR: '+result.error);
+                console.log('fail to authentication')
+            }
+            //$scope.$digest();
+        }
+
+        // Google PlatForm Service
+        //function setupPicker() {
+        //    function pickerCallback(data) {
+        //        if(data.action == google.picker.Action.PICKED){
+        //            //do something
+        //            $scope.files = data.docs;
+        //            $scope.arrive = true;
+        //
+        //            // make shorten URL
+        //            var request = gapi.client.urlshortener.url.get({
+        //                'shortUrl': 'http://goo.gl/fbsS'
+        //            });
+        //            request.then(function(response) {
+        //                appendResults(response.result.longUrl);
+        //            }, function(reason) {
+        //                console.log('Error: ' + reason.result.error.message);
+        //            });
+        //
+        //            //alert('URL: ' + data.docs[0].url);
+        //            $scope.$digest()
+        //        }else if(data.action ==google.picker.Action.CANCEL){
+        //            //alert('goodbye');
+        //        }
+        //    }
+        //    Googledrive.setupPicker(accessToken, pickerCallback);
+        //}
+
+        // Create New Account Folder
+        function createNewAccountFolder(){
+            //Pre. Get User Information
+            //check if there exists an
+            // API /users/me (only allow to have)
+
+            var callback = function(resp){
+                console.log(resp.result.items.length);
+                if(resp.result.items.length == 0){
+                    $http.get('users/me')
+                        .success(function(response) {
+                            console.log(response);
+                            var folderName = 'D2l-'+response._id;
+                            //1. Create A New Folder
+                            Googledrive.createFolder(folderName, accessToken);
+                            //2. Update User Information
+                            //$http.get()
+                        });
+                }
+                else{
+                    console.log('there is already exist')
+                    //$scope.rootGdriveFolderID = resp.result.items[0].id
+                    //$scope.$digest();
+                }
+            }
+            Googledrive.findFolder(callback);
+        }
+	}
+]);
+
 /**
  * Created by Kevin on 2014-11-26.
  */
@@ -2738,7 +3052,8 @@ angular.module('core').service('Menus', [
 "use strict";
 
 var CONFIG = {
-	clientId: '574563539488-n0vrevgjp3606l20hfk4rqfk1dc8j3qb.apps.googleusercontent.com',
+	//clientId: '574563539488-n0vrevgjp3606l20hfk4rqfk1dc8j3qb.apps.googleusercontent.com',
+    clientId: '574563539488-pctm7fr21vcetcfpdf9hhaje9q5vepee.apps.googleusercontent.com',
 	developerKey: 'AIzaSyBEGA9BOSoo0DF69RNRh9MsMKDxaVlnT_U',
 	scopes: [
 		'https://www.googleapis.com/auth/drive',
@@ -2854,21 +3169,24 @@ GDocs.prototype.upload = function(blob, callback, retry) {
     uploader.upload();
 };
 
-/*
- * Created by Kevin on 2014-10-29.
-* */
+///*
+// * Created by Kevin on 2014-10-29.
+//* */
 
 'use strict';
 
-angular.module('g-drive').factory('Googledrive', ['configGdrive',
-	function(configGdrive) {
+angular.module('g-drive').factory('Googledrive', [
+    '$q','configGdrive',
+	function($q, configGdrive) {
 		return {
 			createFolder: createFolder,
 			findFolder: findFolder,
 			getGoogleDriveInfo: getGoogleDriveInfo,
 			setupPicker: setupPicker,
 			listFolder: listFolder,
-			createFile: createFile
+			createFile: createFile,
+            /////////
+            plusTest: plusTest
 		};
 
 		function createFolder(FolderName, accessToken){
@@ -2947,19 +3265,39 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 		}
 
 		function listFolder(){
+            var deffered = $q.defer();
 			console.log('listForlder');
 			gapi.client.load('drive', 'v2').then(function() {
 				var request = gapi.client.drive.files.list({
 					maxResults:10,
-					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
+					fields: 'etag,items(thumbnailLink,id,webViewLink,webContentLink,title)'
 				});
 				request.then(function(resp){
 					console.log('result File list');
-					console.log(resp)
-					return resp;
+					//console.log(resp)
+					deffered.resolve(resp.result);
 				});
 			});
+            return deffered.promise;
 		}
+
+        function plusTest(){
+            gapi.client.load('plus', 'v1').then(function(){
+                var request = gapi.client.plus.activities.list({
+                    'userId' : 'me',
+                    'collection' : 'public'
+                });
+
+                request.execute(function(resp) {
+                    var numItems = resp.items.length;
+                    for (var i = 0; i < numItems; i++) {
+                        console.log('ID: ' + resp.items[i].id + ' Content: ' +
+                        resp.items[i].object.content);
+                    }
+                });
+            });
+
+        }
 
 	}
 ]);
@@ -5616,110 +5954,110 @@ angular.module('seller-interface').factory('Gdriveapps', ['$resource',
 /*
  * Created by Kevin on 2014-10-29.
 * */
-
-'use strict';
-
-angular.module('seller-interface').factory('Googledrive', ['configGdrive',
-	function(configGdrive) {
-		return {
-			createFolder: createFolder,
-			findFolder: findFolder,
-			getGoogleDriveInfo: getGoogleDriveInfo,
-			setupPicker: setupPicker,
-			listFolder: listFolder
-		};
-
-		function createFolder(FolderName, accessToken){
-			var request = gapi.client.request({
-				'path': '/drive/v2/files/',
-				'method': 'POST',
-				'headers': {
-					'Content-Type': 'application/json',
-					'Authorization': 'Bearer ' + accessToken
-				},
-				'body':{
-					"title" : FolderName,
-					"mimeType" : "application/vnd.google-apps.folder"
-				}
-			});
-			request.execute(function(resp) {
-				console.log(resp);
-			});
-		}
-
-		// Search Folder
-		function findFolder(callback){
-			gapi.client.load('drive', 'v2').then(function(){
-				var request = gapi.client.drive.files.list({
-					q: "title contains 'URI-'",
-					fields: 'items(id\,title)'
-				});
-				request.then(function(resp){
-					//console.log('result File list');
-					//console.log(resp);
-					callback(resp);
-				});
-			});
-		}
-
-		function getGoogleDriveInfo(){
-			gapi.client.load('drive', 'v2').then(function() {
-				var request = gapi.client.drive.about.get();
-				request.execute(function (resp) {
-					console.log('Current user name: ' + resp.name);
-					console.log('Root folder ID: ' + resp.rootFolderId);
-					console.log('Total quota (bytes): ' + resp.quotaBytesTotal);
-					console.log('Used quota (bytes): ' + resp.quotaBytesUsed);
-				});
-			});
-		}
-
-		//Google File Picker Platform
-		function setupPicker(accessToken, callback){
-			var callbackAfterFindFolder = function(resp){
-				var folderID = resp.result.items[0].id;
-				var picker = new google.picker.PickerBuilder()
-					.setOAuthToken(accessToken)
-					.setDeveloperKey(configGdrive.developerKey)
-					.addView(new google.picker.DocsUploadView().setParent(folderID))
-					.addView(new google.picker.DocsView().setParent(folderID))
-					.enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
-					.setLocale('ko')
-					//.enableFeature(google.picker.Feature.NAV_HIDDEN)
-					.setCallback(callback)
-					.build();
-				picker.setVisible(true);
-			}
-			findFolder(callbackAfterFindFolder);
-
-
-		}
-
-		function listFolder(){
-			gapi.client.load('drive', 'v2').then(function() {
-
-				var request = gapi.client.drive.files.list({
-					maxResults:10,
-					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
-				});
-				request.then(function(resp){
-					console.log('result File list');
-					console.log(resp)
-				});
-
-				var request = gapi.client.drive.files.list({
-					maxResults:10,
-					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
-				});
-				request.then(function(resp){
-					console.log('result File list');
-					console.log(resp)
-				});
-
-			});
-		}
-	}
-]);
+//
+//'use strict';
+//
+//angular.module('seller-interface').factory('Googledrive', ['configGdrive',
+//	function(configGdrive) {
+//		return {
+//			createFolder: createFolder,
+//			findFolder: findFolder,
+//			getGoogleDriveInfo: getGoogleDriveInfo,
+//			setupPicker: setupPicker,
+//			listFolder: listFolder
+//		};
+//
+//		function createFolder(FolderName, accessToken){
+//			var request = gapi.client.request({
+//				'path': '/drive/v2/files/',
+//				'method': 'POST',
+//				'headers': {
+//					'Content-Type': 'application/json',
+//					'Authorization': 'Bearer ' + accessToken
+//				},
+//				'body':{
+//					"title" : FolderName,
+//					"mimeType" : "application/vnd.google-apps.folder"
+//				}
+//			});
+//			request.execute(function(resp) {
+//				console.log(resp);
+//			});
+//		}
+//
+//		// Search Folder
+//		function findFolder(callback){
+//			gapi.client.load('drive', 'v2').then(function(){
+//				var request = gapi.client.drive.files.list({
+//					q: "title contains 'URI-'",
+//					fields: 'items(id\,title)'
+//				});
+//				request.then(function(resp){
+//					//console.log('result File list');
+//					//console.log(resp);
+//					callback(resp);
+//				});
+//			});
+//		}
+//
+//		function getGoogleDriveInfo(){
+//			gapi.client.load('drive', 'v2').then(function() {
+//				var request = gapi.client.drive.about.get();
+//				request.execute(function (resp) {
+//					console.log('Current user name: ' + resp.name);
+//					console.log('Root folder ID: ' + resp.rootFolderId);
+//					console.log('Total quota (bytes): ' + resp.quotaBytesTotal);
+//					console.log('Used quota (bytes): ' + resp.quotaBytesUsed);
+//				});
+//			});
+//		}
+//
+//		//Google File Picker Platform
+//		function setupPicker(accessToken, callback){
+//			var callbackAfterFindFolder = function(resp){
+//				var folderID = resp.result.items[0].id;
+//				var picker = new google.picker.PickerBuilder()
+//					.setOAuthToken(accessToken)
+//					.setDeveloperKey(configGdrive.developerKey)
+//					.addView(new google.picker.DocsUploadView().setParent(folderID))
+//					.addView(new google.picker.DocsView().setParent(folderID))
+//					.enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
+//					.setLocale('ko')
+//					//.enableFeature(google.picker.Feature.NAV_HIDDEN)
+//					.setCallback(callback)
+//					.build();
+//				picker.setVisible(true);
+//			}
+//			findFolder(callbackAfterFindFolder);
+//
+//
+//		}
+//
+//		function listFolder(){
+//			gapi.client.load('drive', 'v2').then(function() {
+//
+//				var request = gapi.client.drive.files.list({
+//					maxResults:10,
+//					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
+//				});
+//				request.then(function(resp){
+//					console.log('result File list');
+//					console.log(resp)
+//				});
+//
+//				var request = gapi.client.drive.files.list({
+//					maxResults:10,
+//					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
+//				});
+//				request.then(function(resp){
+//					console.log('result File list');
+//					console.log(resp)
+//				});
+//
+//			});
+//		}
+//	}
+//]);
 
 "use strict";
 

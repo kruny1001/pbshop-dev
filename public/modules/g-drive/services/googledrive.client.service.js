@@ -1,18 +1,21 @@
-/*
- * Created by Kevin on 2014-10-29.
-* */
+///*
+// * Created by Kevin on 2014-10-29.
+//* */
 
 'use strict';
 
-angular.module('g-drive').factory('Googledrive', ['configGdrive',
-	function(configGdrive) {
+angular.module('g-drive').factory('Googledrive', [
+    '$q','configGdrive',
+	function($q, configGdrive) {
 		return {
 			createFolder: createFolder,
 			findFolder: findFolder,
 			getGoogleDriveInfo: getGoogleDriveInfo,
 			setupPicker: setupPicker,
 			listFolder: listFolder,
-			createFile: createFile
+			createFile: createFile,
+            /////////
+            plusTest: plusTest
 		};
 
 		function createFolder(FolderName, accessToken){
@@ -91,19 +94,39 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 		}
 
 		function listFolder(){
+            var deffered = $q.defer();
 			console.log('listForlder');
 			gapi.client.load('drive', 'v2').then(function() {
 				var request = gapi.client.drive.files.list({
 					maxResults:10,
-					fields: 'items(id,owners(displayName,emailAddress,isAuthenticatedUser,kind,permissionId),selfLink)'
+					fields: 'etag,items(thumbnailLink,id,webViewLink,webContentLink,title)'
 				});
 				request.then(function(resp){
 					console.log('result File list');
-					console.log(resp)
-					return resp;
+					//console.log(resp)
+					deffered.resolve(resp.result);
 				});
 			});
+            return deffered.promise;
 		}
+
+        function plusTest(){
+            gapi.client.load('plus', 'v1').then(function(){
+                var request = gapi.client.plus.activities.list({
+                    'userId' : 'me',
+                    'collection' : 'public'
+                });
+
+                request.execute(function(resp) {
+                    var numItems = resp.items.length;
+                    for (var i = 0; i < numItems; i++) {
+                        console.log('ID: ' + resp.items[i].id + ' Content: ' +
+                        resp.items[i].object.content);
+                    }
+                });
+            });
+
+        }
 
 	}
 ]);
