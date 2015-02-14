@@ -71,16 +71,16 @@ module.exports = {
 
 				//'public/lib/angular-smart-table/dist/smart-table.debug.js',
 
-                'public/lib/tinymce/tinymce.min.js',
-                'public/lib/tinymce/plugins/image/plugin.min.js',
-                'public/lib/tinymce/plugins/link/plugin.min.js',
-                'public/lib/tinymce/plugins/fullscreen/plugin.min.js',
-                'public/lib/tinymce/plugins/code/plugin.min.js',
-                'public/lib/tinymce/plugins/table/plugin.min.js',
-                'public/lib/tinymce/plugins/contextmenu/plugin.min.js',
-                'public/lib/tinymce/plugins/media/plugin.min.js',
-                
-                'public/lib/moment/min/moment-with-locales.min.js',
+				'public/lib/tinymce/tinymce.min.js',
+        'public/lib/tinymce/plugins/image/plugin.min.js',
+        'public/lib/tinymce/plugins/link/plugin.min.js',
+        'public/lib/tinymce/plugins/fullscreen/plugin.min.js',
+        'public/lib/tinymce/plugins/code/plugin.min.js',
+        'public/lib/tinymce/plugins/table/plugin.min.js',
+        'public/lib/tinymce/plugins/contextmenu/plugin.min.js',
+        'public/lib/tinymce/plugins/media/plugin.min.js',
+				'public/lib/string/lib/string.min.js',
+        'public/lib/moment/min/moment-with-locales.min.js',
 			]
 		},
 		css: [

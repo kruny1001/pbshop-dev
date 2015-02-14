@@ -1,13 +1,18 @@
-<section data-ng-controller="D2lHomeController">
+<section data-ng-controller="D2lHomeController" layout="column" layout-fill>
 
     <h1>API List</h1>
 
-    <div class="container">
-        You can authorize your google account here<br/>
-        <md-button class="md-raised md-warn"  ng-click="init()">{{authName}}</md-button>
-    </div>
-    <hr/>
-    <div class="container">
+    <div class="profile">Profile</div>
+
+
+
+    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+        Before Accessing this API,<br/>
+        you must accept OAuth2 Google API Service
+        <md-button class="md-raised md-warn" style="font-size:11px" ng-click="init()">{{authName}}</md-button>
+    </md-whiteframe>
+    <br/>
+    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
         Check Google Drive<br/>
         <md-button class="md-raised md-primary" ng-click="listingFolderInfo()">List Forlder</md-button>
         <md-button class="md-primary" ng-click="hideResult()">Hide Result</md-button>
@@ -25,38 +30,14 @@
             <img ng-src="{{doc.thumbnailLink}}"/>
             <hr/>
         </div>
-    </div>
-    <hr/>
-    <div class="container">
+    </md-whiteframe>
+
+    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
         Check Your Google+ Account<br/>
         <md-button class="md-raised md-primary" ng-click="plusTest()">Plus Test</md-button>
-        <div class="" ng-repeat="gp in gPlus">
+        <md-checkbox ng-init="gPlusToggle=true" ng-model="gPlusToggle" aria-label="Checkbox 1">Show Result {{ gPlusToggle}}</md-checkbox>
+        <div ng-if="gPlusToggle" class="" ng-repeat="gp in gPlus">
             <div>{{$index}}: {{gp.object.content}}</div>
         </div>
-    </div>
-    <hr/>
-    <!--<div class="container">-->
-        <!--<div style="display:inline-block">-->
-            <!--list files-->
-            <!--<md-button  class="md-raised md-primary" aria-label="list files" ng-click="listFile()">list files</md-button>-->
-        <!--</div>-->
-        <!--<br/>-->
-        <!--<div style="display:inline-block">-->
-            <!--list files-->
-            <!--<md-button  class="md-raised md-primary" aria-label="list files" ng-click="listFile()">list files</md-button>-->
-        <!--</div>-->
-        <!--<br/>-->
-        <!--<div style="display:inline-block">-->
-            <!--list folder-->
-            <!--<md-button  class="md-raised md-primary" aria-label="list files" ng-click="listFile()">list folder</md-button>-->
-        <!--</div>-->
-        <!--<br/>-->
-    <!--</div>-->
-
-    <!--Google Access Trigger-->
-    <!--<div ng-controller="GapiCtrlController">-->
-    <!--<md-button class="md-raised md-primary" ng-click="googleAccess()">Google Access</md-button>-->
-    <!--<div>{{url}}</div>-->
-    <!--</div>-->
-    <!--Listing Folder Information-->
+    </md-whiteframe>
 </section>

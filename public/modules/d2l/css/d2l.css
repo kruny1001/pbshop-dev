@@ -2,6 +2,29 @@
     font-size:20px;
 }
 
+.d2lAuth{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
 .listFolder{
 
+}
+
+.profile{
+    right: -10px;
+    top:13px;
+    position: absolute;
+    transform: rotate(90deg);
+    /*float:right;*/
+    color: #ffffff;
+    padding: 10px;
+    background-color: #ffc62e;
+    border-radius:0px 0px 10px 10px;
+    /*transform-origin: left top 0;*/
+}
+
+.profile:hover {
+    background-color: mediumturquoise;
 }
