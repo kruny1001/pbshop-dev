@@ -20,7 +20,7 @@
     "lodash": "~2.4.1",
     "angular-smart-table": "~1.4.7",
     "firebase": "latest",
-    "angular-material": "latest",
+    "angular-material": "0.8.0-rc1-master-f704dda",
     "hammerjs": "~2.0.2",
     "components-font-awesome": "~4.2.0",
     "tinymce": "4.1.7",

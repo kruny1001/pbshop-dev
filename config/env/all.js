@@ -13,15 +13,15 @@ module.exports = {
 	assets: {
 		lib: {
 			css: [
-				'public/lib/bootstrap/dist/css/bootstrap.css',
+				//'public/lib/bootstrap/dist/css/bootstrap.css',
 				//'public/lib/bootstrap/dist/css/bootstrap-theme.css',
 				'public/lib/angular-material/angular-material.css',
-                'public/lib/angular-material/default-theme.css',
+				'public/lib/angular-material/default-theme.css',
 				//'public/lib/angular-material/themes/amber-theme.css',
 				//'public/lib/angular-material/themes/blue-grey-theme.css',
 				//'public/lib/angular-material/themes/brown-theme.css',
 				//'public/lib/angular-material/themes/cyan-theme.css',
-                'public/lib/components-font-awesome/css/font-awesome.min.css',
+				//'public/lib/components-font-awesome/css/font-awesome.min.css',
 			],
 			js: [
 				'public/lib/angular/angular.js',

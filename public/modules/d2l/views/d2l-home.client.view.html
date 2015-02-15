@@ -1,10 +1,8 @@
-<section data-ng-controller="D2lHomeController" layout="column" layout-fill>
+<section data-ng-controller="D2lHomeController">
 
-    <h1>API List</h1>
+    <h1>Google API List</h1>
 
     <div class="profile">Profile</div>
-
-
 
     <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
         Before Accessing this API,<br/>
@@ -31,7 +29,7 @@
             <hr/>
         </div>
     </md-whiteframe>
-
+    <br/>
     <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
         Check Your Google+ Account<br/>
         <md-button class="md-raised md-primary" ng-click="plusTest()">Plus Test</md-button>
@@ -40,4 +38,23 @@
             <div>{{$index}}: {{gp.object.content}}</div>
         </div>
     </md-whiteframe>
+
+    <div class="gridListdemoDynamicTiles">
+        <div ng-controller="gridListDemoCtrl as vm">
+            <md-grid-list
+                    md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+                    md-row-height-gt-md="1:1" md-row-height="4:3"
+                    md-gutter="8px" md-gutter-gt-sm="4px" >
+                <md-grid-tile ng-repeat="tile in vm.tiles"
+                              md-rowspan="{{tile.span.row}}"
+                              md-colspan="{{tile.span.col}}"
+                              ng-class="tile.background" >
+                    <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
+                    <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+                </md-grid-tile>
+            </md-grid-list>
+        </div>
+    </div>
+
+
 </section>
