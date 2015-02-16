@@ -121,6 +121,18 @@ angular.module('d2l').controller('D2lHomeController', [
 		function listFolder() {
 			Googledrive.listFolder()
 		}
+
+		$scope.findFolder = function() {
+			console.log('findFolder');
+			//var query = "title contains 'URI-' and mimeType = 'application/vnd.google-apps.folder'";
+			var query = "mimeType = 'application/vnd.google-apps.folder'";
+			Googledrive.findFolder(query, function(result){
+				$scope.numFolder = result.result.items.length;
+				$scope.$digest();
+				console.log(result);
+			});
+		}
+
 		/*
 		 function createFolder(){
 		 var folderName;

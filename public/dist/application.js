@@ -1629,12 +1629,11 @@ angular.module('articles').config(['$stateProvider',
 ]);
 "use strict";
 
-angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles',
-	function($scope, $stateParams, $location, Authentication, Articles) {
+angular.module('articles').controller('ArticlesController',
+	['$scope', '$stateParams', '$location', '$http', 'Authentication', 'Articles',
+	function($scope, $stateParams, $location, $http, Authentication, Articles) {
 		$scope.authentication = Authentication;
-
         $scope.docTypes = [{name: 'Project'}, {name: 'Article'}, {name: 'Information'}];
-
         $scope.docType = 2;
 
         $scope.radioData = [
@@ -2634,6 +2633,18 @@ angular.module('d2l').controller('D2lHomeController', [
 		function listFolder() {
 			Googledrive.listFolder()
 		}
+
+		$scope.findFolder = function() {
+			console.log('findFolder');
+			//var query = "title contains 'URI-' and mimeType = 'application/vnd.google-apps.folder'";
+			var query = "mimeType = 'application/vnd.google-apps.folder'";
+			Googledrive.findFolder(query, function(result){
+				$scope.numFolder = result.result.items.length;
+				$scope.$digest();
+				console.log(result);
+			});
+		}
+
 		/*
 		 function createFolder(){
 		 var folderName;
@@ -3290,10 +3301,13 @@ angular.module('g-drive').factory('Googledrive', [
 		}
 
 		// Search Folder
-		function findFolder(callback){
+		function findFolder(query, callback){
+			console.log('Service: '+query);
 			gapi.client.load('drive', 'v2').then(function(){
 				var request = gapi.client.drive.files.list({
-					q: "title contains 'URI-'",
+					//q: "title contains 'URI-'",
+					q:  query,
+					maxResults:10,
 					fields: 'items(id\,title)'
 				});
 				request.then(function(resp){

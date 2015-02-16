@@ -33,10 +33,11 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 		}
 
 		// Search Folder
-		function findFolder(callback){
+		function findFolder(query, callback){
 			gapi.client.load('drive', 'v2').then(function(){
 				var request = gapi.client.drive.files.list({
-					q: "title contains 'URI-'",
+					//q: "title contains 'URI-'",
+					q: query,
 					fields: 'items(id\,title)'
 				});
 				request.then(function(resp){

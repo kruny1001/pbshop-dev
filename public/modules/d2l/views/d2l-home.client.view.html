@@ -17,6 +17,7 @@
     <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
         Check Google Drive<br/>
         <md-button class="md-raised md-primary" ng-click="listingFolderInfo()">List Forlder</md-button>
+        <md-button class="md-primary" ng-click="findFolder()">findFolder Result  <div style="display: inline-flex; border-radius: 50%; background-color:#ffff00; width: 20px; color:red; text-align: center;">{{numFolder}}</div></md-button>
         <md-button class="md-primary" ng-click="hideResult()">Hide Result</md-button>
         <md-button class="md-primary" ng-click="showResult()">Show Result</md-button>
         <div class="listFolder" ng-repeat="doc in gDocs">

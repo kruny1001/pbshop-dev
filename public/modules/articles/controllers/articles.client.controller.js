@@ -1,11 +1,10 @@
 "use strict";
 
-angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles',
-	function($scope, $stateParams, $location, Authentication, Articles) {
+angular.module('articles').controller('ArticlesController',
+	['$scope', '$stateParams', '$location', '$http', 'Authentication', 'Articles',
+	function($scope, $stateParams, $location, $http, Authentication, Articles) {
 		$scope.authentication = Authentication;
-
         $scope.docTypes = [{name: 'Project'}, {name: 'Article'}, {name: 'Information'}];
-
         $scope.docType = 2;
 
         $scope.radioData = [
