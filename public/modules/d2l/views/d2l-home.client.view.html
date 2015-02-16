@@ -1,4 +1,8 @@
 <section data-ng-controller="D2lHomeController">
+    <!-- Debuging Purpose Start-->
+    <div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>
+    <!-- Debuging Purpose End-->
+
 
     <h1>Google API List</h1>
 
@@ -39,6 +43,7 @@
         </div>
     </md-whiteframe>
 
+    <h1>The Clean - User Interface</h1>
     <div class="gridListdemoDynamicTiles">
         <div ng-controller="gridListDemoCtrl as vm">
             <md-grid-list
@@ -48,8 +53,13 @@
                 <md-grid-tile ng-repeat="tile in vm.tiles"
                               md-rowspan="{{tile.span.row}}"
                               md-colspan="{{tile.span.col}}"
-                              ng-class="tile.background" >
-                    <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
+                              ng-class="tile.background"
+                        >
+
+                    <md-icon md-svg-icon="{{tile.icon}}" ng-click="test($event)"></md-icon>
+                    <!--<md-grid-tile-header style="height:20px">-->
+                        <!--<h6>This is a header</h6>-->
+                    <!--</md-grid-tile-header>-->
                     <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
                 </md-grid-tile>
             </md-grid-list>

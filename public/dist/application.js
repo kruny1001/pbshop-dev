@@ -2600,6 +2600,7 @@ angular.module('d2l').controller('D2lHomeController', [
 		//$scope.authenticateWithGoogle =function authenticateWithGoogle(){
 		//    window.gapi.auth.authorize({
 		//        'client_id': configGdrive.clientId,
+        
 		//        'scope':configGdrive.scopes,
 		//        'immediate': false
 		//    }, handleAuthentication);
@@ -2716,6 +2717,12 @@ angular.module('d2l').controller('D2lHomeController', [
 	}
 ])
 	.controller('gridListDemoCtrl', ["$scope", function($scope) {
+        $scope.test=function(event){
+            var target = event.target;
+            TweenLite.to(target, 0.3, {opacity: 0.8, scale:0.85});
+            TweenLite.to(target, 0.3, {opacity: 1, scale:1, rotation: 360, delay:0.2});
+            //TweenLite.to(target, 0.3, {backgroundColor: 'blue', delay:0.5});
+        }
 		this.tiles = buildGridModel({
 			icon : "avatar:svg-",
 			title: "Svg-",
@@ -2723,7 +2730,7 @@ angular.module('d2l').controller('D2lHomeController', [
 		});
 		function buildGridModel(tileTmpl){
 			var it, results = [ ];
-			for (var j=0; j<11; j++) {
+			for (var j=0; j<12; j++) {
 				it = angular.extend({},tileTmpl);
 				it.icon  = it.icon + (j+1);
 				it.title = it.title + (j+1);
@@ -2731,24 +2738,39 @@ angular.module('d2l').controller('D2lHomeController', [
 				switch(j+1) {
 					case 1:
 						it.background = "red";
-						it.span.row = it.span.col = 2;
+                        it.title = "Introduction";
+						//it.span.row = it.span.col = 2;
+
 						break;
-					case 2: it.background = "green";         break;
-					case 3: it.background = "darkBlue";      break;
+					case 2: it.background = "green"; it.title = "Tutorials"; break;
+					case 3: it.background = "darkBlue"; it.title = "Tech Scopes"; break;
 					case 4:
 						it.background = "blue";
-						it.span.col = 2;
+                        it.title = "Pricing";
+						//it.span.col = 2;
 						break;
 					case 5:
 						it.background = "yellow";
-						it.span.row = it.span.col = 2;
+                        it.title = "Articles";
+						//it.span.row = it.span.col = 2;
 						break;
-					case 6: it.background = "pink";          break;
-					case 7: it.background = "darkBlue";      break;
-					case 8: it.background = "purple";        break;
-					case 9: it.background = "deepBlue";      break;
-					case 10: it.background = "lightPurple";  break;
+					case 6: it.background = "pink";
+                        it.title = "Tutorials";
+                        break;
+					case 7: it.background = "darkBlue";
+                        it.title = "Projects";
+                        break;
+					case 8: it.background = "purple";
+                        it.title = "Portfolio";
+                        break;
+					case 9: it.background = "deepBlue";
+                        it.title = "Career";
+                        break;
+					case 10: it.background = "lightPurple";
+                        it.title = "MEANJS Stack";
+                        break;
 					case 11: it.background = "yellow";       break;
+                    case 12: it.background = "deepBlue";       break;
 				}
 				results.push(it);
 			}
@@ -3593,6 +3615,9 @@ angular.module('mean-tutorials')
         ['$scope','$state', '$http','$mdDialog','$timeout', '$mdSidenav', '$log', 'Authentication',
 	    function($scope,$state,$http,$mdDialog,$timeout, $mdSidenav, $log, Authentication) {
             $scope.Auth = Authentication;
+            $scope.goTo = function(stateName){
+                $state.go(stateName);
+            }
             console.log($scope.Auth);
             $http.get('modules/mean-tutorials/data/home.json').success(function(data) {
                 //console.log(data);
@@ -3893,36 +3918,6 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
         $scope.findEvents = function() {
             $scope.meanEvents = MeanEvents.query();
         };
-
-        $scope.width = window.innerWidth;
-        $('.rightPane').width(window.innerWidth - 74);
-        $(window).on("resize.doResize", function (){
-            $scope.width = window.innerWidth;
-            $('.rightPane').width(window.innerWidth - 74);
-            $scope.$apply(function(){
-
-                //do something to update current scope based on the new innerWidth and let angular update the view.
-            });
-        });
-
-        $scope.$on("$destroy",function (){
-            $(window).off("resize.doResize"); //remove the handler added earlier
-        });
-
-        $('.bottom-sheet-dashboard').width(window.innerWidth - 74);
-        $(window).on("resize.doResize", function (){
-            $scope.width = window.innerWidth;
-            $('.bottom-sheet-dashboard').width(window.innerWidth - 74);
-            $scope.$apply(function(){
-
-                //do something to update current scope based on the new innerWidth and let angular update the view.
-            });
-        });
-
-        $scope.$on("$destroy",function (){
-            $(window).off("resize.doResize"); //remove the handler added earlier
-        });
-
 
         $scope.testCreateFolder = function(){
             //console.log(accessToken);
@@ -6139,6 +6134,34 @@ angular.module('seller-interface').factory('GooglePlus', [
 				});
 			});
 		}
+	}
+]);
+
+'use strict';
+
+angular.module('size-util').controller('SizeUtil.sizeOfWidthController', ['$scope',
+	function($scope) {
+        $scope.width = window.innerWidth;
+
+        $('.bottom-sheet-dashboard').width(window.innerWidth - 74);
+        $(window).on("resize.doResize", function (){
+            $scope.width = window.innerWidth;
+            if($scope.width < 600)
+                $scope.screen = 'sm size';
+            else if($scope.width <  960)
+                $scope.screen = 'md size';
+            else
+                $scope.screen = 'bg size';
+            $('.bottom-sheet-dashboard').width(window.innerWidth - 74);
+            $scope.$apply(function(){
+
+                //do something to update current scope based on the new innerWidth and let angular update the view.
+            });
+        });
+
+        $scope.$on("$destroy",function (){
+            $(window).off("resize.doResize"); //remove the handler added earlier
+        });
 	}
 ]);
 

@@ -17,6 +17,9 @@ angular.module('mean-tutorials')
         ['$scope','$state', '$http','$mdDialog','$timeout', '$mdSidenav', '$log', 'Authentication',
 	    function($scope,$state,$http,$mdDialog,$timeout, $mdSidenav, $log, Authentication) {
             $scope.Auth = Authentication;
+            $scope.goTo = function(stateName){
+                $state.go(stateName);
+            }
             console.log($scope.Auth);
             $http.get('modules/mean-tutorials/data/home.json').success(function(data) {
                 //console.log(data);

@@ -20,36 +20,6 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             $scope.meanEvents = MeanEvents.query();
         };
 
-        $scope.width = window.innerWidth;
-        $('.rightPane').width(window.innerWidth - 74);
-        $(window).on("resize.doResize", function (){
-            $scope.width = window.innerWidth;
-            $('.rightPane').width(window.innerWidth - 74);
-            $scope.$apply(function(){
-
-                //do something to update current scope based on the new innerWidth and let angular update the view.
-            });
-        });
-
-        $scope.$on("$destroy",function (){
-            $(window).off("resize.doResize"); //remove the handler added earlier
-        });
-
-        $('.bottom-sheet-dashboard').width(window.innerWidth - 74);
-        $(window).on("resize.doResize", function (){
-            $scope.width = window.innerWidth;
-            $('.bottom-sheet-dashboard').width(window.innerWidth - 74);
-            $scope.$apply(function(){
-
-                //do something to update current scope based on the new innerWidth and let angular update the view.
-            });
-        });
-
-        $scope.$on("$destroy",function (){
-            $(window).off("resize.doResize"); //remove the handler added earlier
-        });
-
-
         $scope.testCreateFolder = function(){
             //console.log(accessToken);
             Googledrive.createFolder('chulwoo Fuck1', accessToken);

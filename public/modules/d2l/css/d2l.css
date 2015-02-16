@@ -28,10 +28,9 @@
 .profile:hover {
     background-color: mediumturquoise;
 }
-
 .gridListdemoDynamicTiles md-icon {
-    width: 50%;
-    height: 50%; }
+    width: 85%;
+    height: 85%; }
 .gridListdemoDynamicTiles md-icon svg {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
