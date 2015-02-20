@@ -215,12 +215,15 @@ angular.module('d2l').controller('D2lHomeController', [
 		}
 	}
 ])
-	.controller('gridListDemoCtrl', function($scope) {
+	.controller('gridListDemoCtrl', function($scope, $state) {
+        function goToHWList(){
+            $state.go('listD2lHws');
+        }
 		$scope.test=function(event){
 			var target = event.target;
 			console.log(target);
 			TweenLite.to(target, 0.3, {opacity: 0.8, scale:0.85});
-			TweenLite.to(target, 0.3, {opacity: 1, scale:1, rotation: 360, delay:0.2});
+			TweenLite.to(target, 0.3, {opacity: 1, scale:1, rotation: 360, delay:0.2, onComplete:goToHWList});
 			//TweenLite.to(target, 0.3, {backgroundColor: 'blue', delay:0.5});
 		}
 		this.tiles = buildGridModel({
@@ -276,4 +279,60 @@ angular.module('d2l').controller('D2lHomeController', [
 			}
 			return results;
 		}
-	});
+	})
+    .controller('DemoCtrl', ['$timeout', '$q', function DemoCtrl ($timeout, $q) {
+        var self = this;
+        // list of `state` value/display objects
+        self.states        = loadAll();
+        self.selectedItem  = null;
+        self.searchText    = null;
+        self.querySearch   = querySearch;
+        self.simulateQuery = false;
+        // ******************************
+        // Internal methods
+        // ******************************
+        /**
+         * Search for states... use $timeout to simulate
+         * remote dataservice call.
+         */
+        function querySearch (query) {
+            var results = query ? self.states.filter( createFilterFor(query) ) : [],
+                deferred;
+            if (self.simulateQuery) {
+                deferred = $q.defer();
+                $timeout(function () { deferred.resolve( results ); }, Math.random() * 1000, false);
+                return deferred.promise;
+            } else {
+                return results;
+            }
+        }
+        /**
+         * Build `states` list of key/value pairs
+         */
+        function loadAll() {
+            var allStates = 'Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware,\
+              Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana,\
+              Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana,\
+              Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina,\
+              North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina,\
+              South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia,\
+              Wisconsin, Wyoming';
+            return allStates.split(/, +/g).map( function (state) {
+                return {
+                    value: state.toLowerCase(),
+                    display: state
+                };
+            });
+        }
+        /**
+         * Create filter function for a query string
+         */
+        function createFilterFor(query) {
+            var lowercaseQuery = angular.lowercase(query);
+            return function filterFn(state) {
+                return (state.value.indexOf(lowercaseQuery) === 0);
+            };
+        }
+    }])
+
+

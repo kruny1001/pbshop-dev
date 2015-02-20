@@ -10,11 +10,11 @@ var mongoose = require('mongoose'),
  * D2l hw Schema
  */
 var D2lHwSchema = new Schema({
-	name: {
-		type: String,
-		default: '',
-		trim: true
-	},
+	//name: {
+	//	type: String,
+	//	default: '',
+	//	trim: true
+	//},
 	created: {
 		type: Date,
 		default: Date.now
@@ -42,7 +42,12 @@ var D2lHwSchema = new Schema({
 		type: String,
 		default: '',
 		trim: true
-	}
+	},
+    rate: {
+        type: Number,
+        default: 800,
+        trim: true
+    }
 });
 
 mongoose.model('D2lHw', D2lHwSchema);

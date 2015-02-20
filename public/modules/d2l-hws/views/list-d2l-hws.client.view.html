@@ -1,7 +1,11 @@
 <section data-ng-controller="D2lHwsController" data-ng-init="find()">
-    <div class="page-header">
-        <h1>D2l hws</h1>
-    </div>
+    <md-toolbar>
+        <h2 class="md-toolbar-tools">
+            <span><b>Assignment List</b></span>
+            <span flex></span>
+            <span ng-if="authentication !== undefined">LogIn required</span>
+        </h2>
+    </md-toolbar>
     <div class="list-group">
         <a data-ng-repeat="d2lHw in d2lHws" data-ng-href="#!/d2l-hws/{{d2lHw._id}}" class="list-group-item">
 			<small class="list-group-item-text">
@@ -10,7 +14,11 @@
 				by
 				<span data-ng-bind="d2lHw.user.displayName"></span>
 			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="d2lHw.name"></h4>
+			<!--<strong><h4 class="list-group-item-heading" data-ng-bind="d2lHw.name"></h4></strong>-->
+            <h4 class="list-group-item-heading"><b>{{d2lHw.title}}</b></h4>
+            <h6 class="list-group-item-heading">{{d2lHw.desc}}</h6>
+            <h6 class="list-group-item-heading">{{d2lHw.dDate}}</h6>
+            <h4 class="list-group-item-heading">{{d2lHw.content}}</h4>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!d2lHws.$resolved || d2lHws.length">
