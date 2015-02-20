@@ -216,12 +216,13 @@ angular.module('d2l').controller('D2lHomeController', [
 	}
 ])
 	.controller('gridListDemoCtrl', function($scope) {
-        $scope.test=function(event){
-            var target = event.target;
-            TweenLite.to(target, 0.3, {opacity: 0.8, scale:0.85});
-            TweenLite.to(target, 0.3, {opacity: 1, scale:1, rotation: 360, delay:0.2});
-            //TweenLite.to(target, 0.3, {backgroundColor: 'blue', delay:0.5});
-        }
+		$scope.test=function(event){
+			var target = event.target;
+			console.log(target);
+			TweenLite.to(target, 0.3, {opacity: 0.8, scale:0.85});
+			TweenLite.to(target, 0.3, {opacity: 1, scale:1, rotation: 360, delay:0.2});
+			//TweenLite.to(target, 0.3, {backgroundColor: 'blue', delay:0.5});
+		}
 		this.tiles = buildGridModel({
 			icon : "avatar:svg-",
 			title: "Svg-",
@@ -242,34 +243,34 @@ angular.module('d2l').controller('D2lHomeController', [
 
 						break;
 					case 2: it.background = "green"; it.title = "Tutorials"; break;
-					case 3: it.background = "darkBlue"; it.title = "Tech Scopes"; break;
+					case 3: it.background = "darkBlue"; it.title = "Assignments"; break;
 					case 4:
 						it.background = "blue";
-                        it.title = "Pricing";
+						it.title = "Pricing";
 						//it.span.col = 2;
 						break;
 					case 5:
 						it.background = "yellow";
-                        it.title = "Articles";
+            it.title = "Articles";
 						//it.span.row = it.span.col = 2;
 						break;
 					case 6: it.background = "pink";
-                        it.title = "Tutorials";
-                        break;
+            it.title = "Tutorials";
+            break;
 					case 7: it.background = "darkBlue";
-                        it.title = "Projects";
-                        break;
+            it.title = "Projects";
+            break;
 					case 8: it.background = "purple";
-                        it.title = "Portfolio";
-                        break;
+            it.title = "Portfolio";
+            break;
 					case 9: it.background = "deepBlue";
-                        it.title = "Career";
-                        break;
+            it.title = "Career";
+            break;
 					case 10: it.background = "lightPurple";
-                        it.title = "MEANJS Stack";
-                        break;
+						it.title = "MEANJS Stack";
+            break;
 					case 11: it.background = "yellow";       break;
-                    case 12: it.background = "deepBlue";       break;
+            case 12: it.background = "deepBlue";       break;
 				}
 				results.push(it);
 			}

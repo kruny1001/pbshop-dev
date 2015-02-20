@@ -3,6 +3,29 @@
     <div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>
     <!-- Debuging Purpose End-->
 
+    <h1>The Clean - User Interface</h1>
+    <div class="gridListdemoDynamicTiles">
+        <div ng-controller="gridListDemoCtrl as vm">
+            <md-grid-list
+                    md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+                    md-row-height-gt-md="1:1" md-row-height="4:3"
+                    md-gutter="8px" md-gutter-gt-sm="4px" >
+                <md-grid-tile ng-repeat="tile in vm.tiles"
+                              md-rowspan="{{tile.span.row}}"
+                              md-colspan="{{tile.span.col}}"
+                              ng-class="tile.background"
+                        >
+
+                    <md-icon md-svg-icon="{{tile.icon}}" ng-click="test($event)"></md-icon>
+                    <!--<md-grid-tile-header style="height:20px">-->
+                        <!--<h6>This is a header</h6>-->
+                    <!--</md-grid-tile-header>-->
+                    <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+                </md-grid-tile>
+            </md-grid-list>
+        </div>
+    </div>
+
 
     <h1>Google API List</h1>
 
@@ -43,29 +66,6 @@
             <div>{{$index}}: {{gp.object.content}}</div>
         </div>
     </md-whiteframe>
-
-    <h1>The Clean - User Interface</h1>
-    <div class="gridListdemoDynamicTiles">
-        <div ng-controller="gridListDemoCtrl as vm">
-            <md-grid-list
-                    md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
-                    md-row-height-gt-md="1:1" md-row-height="4:3"
-                    md-gutter="8px" md-gutter-gt-sm="4px" >
-                <md-grid-tile ng-repeat="tile in vm.tiles"
-                              md-rowspan="{{tile.span.row}}"
-                              md-colspan="{{tile.span.col}}"
-                              ng-class="tile.background"
-                        >
-
-                    <md-icon md-svg-icon="{{tile.icon}}" ng-click="test($event)"></md-icon>
-                    <!--<md-grid-tile-header style="height:20px">-->
-                        <!--<h6>This is a header</h6>-->
-                    <!--</md-grid-tile-header>-->
-                    <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
-                </md-grid-tile>
-            </md-grid-list>
-        </div>
-    </div>
 
 
 </section>

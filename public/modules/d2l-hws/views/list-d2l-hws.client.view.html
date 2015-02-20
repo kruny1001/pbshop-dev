@@ -1,0 +1,19 @@
+<section data-ng-controller="D2lHwsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>D2l hws</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="d2lHw in d2lHws" data-ng-href="#!/d2l-hws/{{d2lHw._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="d2lHw.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="d2lHw.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="d2lHw.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!d2lHws.$resolved || d2lHws.length">
+    	No D2l hws yet, why don't you <a href="/#!/d2l-hws/create">create one</a>?
+    </div>
+</section>

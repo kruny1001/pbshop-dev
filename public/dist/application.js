@@ -7,7 +7,9 @@ var ApplicationConfiguration = (function() {
 	var applicationModuleVendorDependencies =
         [
             'ngResource',
-            'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router',
+            'ngCookies',  'ngAnimate',  'ngTouch',
+	          'ngMessages',
+	          'ngSanitize',  'ui.router',
             'ui.bootstrap', //'ui.utils',
             'ngMaterial', /*'ng-context-menu', 'uiGmapgoogle-maps',*/
             //'smart-table'
@@ -77,6 +79,10 @@ ApplicationConfiguration.registerModule('calculator');
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');
 
+'use strict';
+
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('d2l-hws');
 'use strict';
 
 // Use application configuration module to register a new module
@@ -2497,6 +2503,110 @@ angular.module('core').service('Menus', [
 'use strict';
 
 //Setting up route
+angular.module('d2l-hws').config(['$stateProvider',
+	function($stateProvider) {
+		// D2l hws state routing
+		$stateProvider.
+		state('listD2lHws', {
+			url: '/d2l-hws',
+			templateUrl: 'modules/d2l-hws/views/list-d2l-hws.client.view.html'
+		}).
+		state('createD2lHw', {
+			url: '/d2l-hws/create',
+			templateUrl: 'modules/d2l-hws/views/create-d2l-hw.client.view.html'
+		}).
+		state('viewD2lHw', {
+			url: '/d2l-hws/:d2lHwId',
+			templateUrl: 'modules/d2l-hws/views/view-d2l-hw.client.view.html'
+		}).
+		state('editD2lHw', {
+			url: '/d2l-hws/:d2lHwId/edit',
+			templateUrl: 'modules/d2l-hws/views/edit-d2l-hw.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+// D2l hws controller
+angular.module('d2l-hws').controller('D2lHwsController', ['$scope', '$stateParams', '$location', 'Authentication', 'D2lHws',
+	function($scope, $stateParams, $location, Authentication, D2lHws) {
+		$scope.authentication = Authentication;
+
+		// Create new D2l hw
+		$scope.create = function() {
+			// Create new D2l hw object
+			var d2lHw = new D2lHws ({
+				name: this.name
+			});
+
+			// Redirect after save
+			d2lHw.$save(function(response) {
+				$location.path('d2l-hws/' + response._id);
+
+				// Clear form fields
+				$scope.name = '';
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Remove existing D2l hw
+		$scope.remove = function(d2lHw) {
+			if ( d2lHw ) { 
+				d2lHw.$remove();
+
+				for (var i in $scope.d2lHws) {
+					if ($scope.d2lHws [i] === d2lHw) {
+						$scope.d2lHws.splice(i, 1);
+					}
+				}
+			} else {
+				$scope.d2lHw.$remove(function() {
+					$location.path('d2l-hws');
+				});
+			}
+		};
+
+		// Update existing D2l hw
+		$scope.update = function() {
+			var d2lHw = $scope.d2lHw;
+
+			d2lHw.$update(function() {
+				$location.path('d2l-hws/' + d2lHw._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Find a list of D2l hws
+		$scope.find = function() {
+			$scope.d2lHws = D2lHws.query();
+		};
+
+		// Find existing D2l hw
+		$scope.findOne = function() {
+			$scope.d2lHw = D2lHws.get({ 
+				d2lHwId: $stateParams.d2lHwId
+			});
+		};
+	}
+]);
+'use strict';
+
+//D2l hws service used to communicate D2l hws REST endpoints
+angular.module('d2l-hws').factory('D2lHws', ['$resource',
+	function($resource) {
+		return $resource('d2l-hws/:d2lHwId', { d2lHwId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);
+'use strict';
+
+//Setting up route
 angular.module('d2l').config(['$stateProvider','$mdIconProvider',
 	function($stateProvider,$mdIconProvider) {
 		// D2l state routing
@@ -2504,7 +2614,11 @@ angular.module('d2l').config(['$stateProvider','$mdIconProvider',
 		state('d2l-home', {
 			url: '/d2l-home',
 			templateUrl: 'modules/d2l/views/d2l-home.client.view.html'
-		});
+		})
+		.state('d2l-hw', {
+				url: '/d2l/hw',
+				templateUrl: 'modules/d2l/views/d2l-hw.client.view.html'
+			});
 
 		$mdIconProvider.iconSet("avatar", '/modules/d2l/svg/avatar-icons.svg', 128);
 	}
@@ -2728,12 +2842,13 @@ angular.module('d2l').controller('D2lHomeController', [
 	}
 ])
 	.controller('gridListDemoCtrl', ["$scope", function($scope) {
-        $scope.test=function(event){
-            var target = event.target;
-            TweenLite.to(target, 0.3, {opacity: 0.8, scale:0.85});
-            TweenLite.to(target, 0.3, {opacity: 1, scale:1, rotation: 360, delay:0.2});
-            //TweenLite.to(target, 0.3, {backgroundColor: 'blue', delay:0.5});
-        }
+		$scope.test=function(event){
+			var target = event.target;
+			console.log(target);
+			TweenLite.to(target, 0.3, {opacity: 0.8, scale:0.85});
+			TweenLite.to(target, 0.3, {opacity: 1, scale:1, rotation: 360, delay:0.2});
+			//TweenLite.to(target, 0.3, {backgroundColor: 'blue', delay:0.5});
+		}
 		this.tiles = buildGridModel({
 			icon : "avatar:svg-",
 			title: "Svg-",
@@ -2754,40 +2869,112 @@ angular.module('d2l').controller('D2lHomeController', [
 
 						break;
 					case 2: it.background = "green"; it.title = "Tutorials"; break;
-					case 3: it.background = "darkBlue"; it.title = "Tech Scopes"; break;
+					case 3: it.background = "darkBlue"; it.title = "Assignments"; break;
 					case 4:
 						it.background = "blue";
-                        it.title = "Pricing";
+						it.title = "Pricing";
 						//it.span.col = 2;
 						break;
 					case 5:
 						it.background = "yellow";
-                        it.title = "Articles";
+            it.title = "Articles";
 						//it.span.row = it.span.col = 2;
 						break;
 					case 6: it.background = "pink";
-                        it.title = "Tutorials";
-                        break;
+            it.title = "Tutorials";
+            break;
 					case 7: it.background = "darkBlue";
-                        it.title = "Projects";
-                        break;
+            it.title = "Projects";
+            break;
 					case 8: it.background = "purple";
-                        it.title = "Portfolio";
-                        break;
+            it.title = "Portfolio";
+            break;
 					case 9: it.background = "deepBlue";
-                        it.title = "Career";
-                        break;
+            it.title = "Career";
+            break;
 					case 10: it.background = "lightPurple";
-                        it.title = "MEANJS Stack";
-                        break;
+						it.title = "MEANJS Stack";
+            break;
 					case 11: it.background = "yellow";       break;
-                    case 12: it.background = "deepBlue";       break;
+            case 12: it.background = "deepBlue";       break;
 				}
 				results.push(it);
 			}
 			return results;
 		}
 	}]);
+
+'use strict';
+
+angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '$location', 'Authentication', 'D2lHws',
+	function($scope, $stateParams, $location, Authentication, D2lHws) {
+		$scope.project = {
+			title:'Assignment 1',
+			dDate:'4/1/2015',
+			desc: 'Nuclear Missile Defense System',
+			rate: 500
+		};
+
+		$scope.authentication = Authentication;
+		console.log($scope.authentication);
+		// Create new D2l hw
+		$scope.create = function() {
+			console.log('Create');
+			// Create new D2l hw object
+			var d2lHw = new D2lHws ($scope.project);
+
+			// Redirect after save
+			d2lHw.$save(function(response) {
+				$location.path('d2l-hws/' + response._id);
+
+				// Clear form fields
+				$scope.name = '';
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Remove existing D2l hw
+		$scope.remove = function(d2lHw) {
+			if ( d2lHw ) {
+				d2lHw.$remove();
+
+				for (var i in $scope.d2lHws) {
+					if ($scope.d2lHws [i] === d2lHw) {
+						$scope.d2lHws.splice(i, 1);
+					}
+				}
+			} else {
+				$scope.d2lHw.$remove(function() {
+					$location.path('d2l-hws');
+				});
+			}
+		};
+
+		// Update existing D2l hw
+		$scope.update = function() {
+			var d2lHw = $scope.d2lHw;
+
+			d2lHw.$update(function() {
+				$location.path('d2l-hws/' + d2lHw._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Find a list of D2l hws
+		$scope.find = function() {
+			$scope.d2lHws = D2lHws.query();
+		};
+
+		// Find existing D2l hw
+		$scope.findOne = function() {
+			$scope.d2lHw = D2lHws.get({
+				d2lHwId: $stateParams.d2lHwId
+			});
+		};
+	}
+]);
 
 'use strict';
 

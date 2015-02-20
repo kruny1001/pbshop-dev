@@ -8,7 +8,11 @@ angular.module('d2l').config(['$stateProvider','$mdIconProvider',
 		state('d2l-home', {
 			url: '/d2l-home',
 			templateUrl: 'modules/d2l/views/d2l-home.client.view.html'
-		});
+		})
+		.state('d2l-hw', {
+				url: '/d2l/hw',
+				templateUrl: 'modules/d2l/views/d2l-hw.client.view.html'
+			});
 
 		$mdIconProvider.iconSet("avatar", '/modules/d2l/svg/avatar-icons.svg', 128);
 	}

@@ -7,7 +7,9 @@ var ApplicationConfiguration = (function() {
 	var applicationModuleVendorDependencies =
         [
             'ngResource',
-            'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router',
+            'ngCookies',  'ngAnimate',  'ngTouch',
+	          'ngMessages',
+	          'ngSanitize',  'ui.router',
             'ui.bootstrap', //'ui.utils',
             'ngMaterial', /*'ng-context-menu', 'uiGmapgoogle-maps',*/
             //'smart-table'
