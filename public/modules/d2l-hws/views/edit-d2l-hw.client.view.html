@@ -21,7 +21,7 @@
 
             <md-input-container>
                 <label>description</label>
-                <input md-maxlength="30" required name="desc" ng-model="d2lHw.desc">
+                <input md-maxlength="130" required name="desc" ng-model="d2lHw.desc">
                 <div ng-messages="projectForm.description.$error">
                     <div ng-message="required">This is required.</div>
                     <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
@@ -39,7 +39,7 @@
 
             <md-input-container>
                 <label>Contents</label>
-                <textarea ng-model="d2lHw.content" columns="1" md-maxlength="150"></textarea>
+                <textarea ng-model="d2lHw.content" columns="1" md-maxlength="650"></textarea>
             </md-input-container>
 
             <md-input-container>

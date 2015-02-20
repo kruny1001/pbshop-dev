@@ -6,9 +6,11 @@
             <span ng-if="authentication !== undefined">LogIn required</span>
         </h2>
     </md-toolbar>
+
     <div class="page-header">
-		<h1 data-ng-bind="d2lHw.name"></h1>
+		<h1 data-ng-bind="d2lHw.title"></h1>
 	</div>
+
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == d2lHw.user._id))">
 		<a class="btn btn-primary" href="/#!/d2l-hws/{{d2lHw._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
@@ -25,4 +27,11 @@
 			<span data-ng-bind="d2lHw.user.displayName"></span>
 		</em>
 	</small>
+
+    <md-content class="md-padding" layout="column">
+        <label>Description: </label><h5 data-ng-bind="d2lHw.desc"></h5>
+        <label>Due Date: </label><h5 data-ng-bind="d2lHw.dDate"></h5>
+        <label>Content: </label><h5 data-ng-bind="d2lHw.content"></h5>
+    </md-content>
+
 </section>

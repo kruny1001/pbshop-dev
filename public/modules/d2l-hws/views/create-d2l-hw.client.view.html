@@ -1,4 +1,4 @@
-<section data-ng-controller="D2lHwsController">
+<section data-ng-controller="D2lHwController">
     <md-toolbar>
         <h2 class="md-toolbar-tools">
             <span><b>Assignment Wizard</b></span>
@@ -6,22 +6,65 @@
             <span ng-if="authentication !== undefined">LogIn required</span>
         </h2>
     </md-toolbar>
-    <div class="col-md-12">
-        <form class="form-horizontal" data-ng-submit="create()" novalidate>
-            <fieldset>
-                <div class="form-group">
-                    <label class="control-label" for="name">Name</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
-                    </div>
+
+    <md-content class="md-padding">
+        You can generate an assignment.<br/><br/>
+        <form name="projectForm" data-ng-submit="create()">
+            <md-input-container>
+                <label>Title</label>
+                <input md-maxlength="30" required name="title" ng-model="project.title">
+                <div ng-messages="projectForm.description.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
                 </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-default">
+            </md-input-container>
+
+            <md-input-container>
+                <label>description</label>
+                <input md-maxlength="130" required name="desc" ng-model="project.desc">
+                <div ng-messages="projectForm.description.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
                 </div>
-				<div data-ng-show="error" class="text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
-            </fieldset>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Due Date</label>
+                <input md-maxlength="30" required name="dDate" ng-model="project.dDate">
+                <div ng-messages="projectForm.description.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Contents</label>
+                <textarea ng-model="project.content" columns="1" md-maxlength="650"></textarea>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Hourly Rate (USD)</label>
+                <input required type="number" step="any" name="rate" ng-model="project.rate" min="800" max="4999">
+                <div ng-messages="projectForm.rate.$error">
+                    <div ng-message="required">You've got to charge something! You can't just <b>give away</b> a Missile Defense System.</div>
+                    <div ng-message="min">You should charge at least $800 an hour. This job is a big deal... if you mess up, everyone dies!</div>
+                    <div ng-message="max">$5,000 an hour? That's a little ridiculous. I doubt event Bill Clinton could afford that.</div>
+                </div>
+            </md-input-container>
+            <div style="margin-top:12px; margin-left:20px;">
+                <md-button type="submit" class="md-fab md-primary md-hue-2" aria-label="Profile">
+                    <md-icon md-svg-src="modules/d2l/svg/ic_play_arrow_24px.svg"></md-icon>
+                    <md-tooltip>
+                        Submit
+                    </md-tooltip>
+                </md-button>
+                <md-button class="md-fab" aria-label="Comment">
+                    <md-icon md-svg-src="modules/d2l/svg/ic_menu_24px.svg"></md-icon>
+                    <md-tooltip>
+                        Cancel
+                    </md-tooltip>
+                </md-button>
+            </div>
         </form>
-    </div>
+    </md-content>
 </section>

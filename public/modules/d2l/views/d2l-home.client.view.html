@@ -3,10 +3,16 @@
     <div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>
     <!-- Debuging Purpose End-->
 
-    <h1>The Clean - UI</h1>
+    <md-toolbar>
+        <h2 class="md-toolbar-tools">
+            <span><b>Desired 2 Learn</b></span>
+            <span flex></span>
+            <span ng-if="authentication !== undefined">LogIn required</span>
+        </h2>
+    </md-toolbar>
 
     <md-content class="md-padding" layout="column" ng-controller="DemoCtrl as ctrl">
-
+        <p>Search</p>
         <md-autocomplete
                 md-no-cache="ctrl.noCache"
                 md-selected-item="ctrl.selectedItem"
