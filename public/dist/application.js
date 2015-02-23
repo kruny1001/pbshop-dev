@@ -2612,6 +2612,18 @@ angular.module('d2l').config(['$stateProvider','$mdIconProvider',
 	function($stateProvider,$mdIconProvider) {
 		// D2l state routing
 		$stateProvider.
+		state('d2l-stu', {
+			url: '/d2l-stu',
+			templateUrl: 'modules/d2l/views/d2l-stu.client.view.html'
+		}).
+		state('d2l-ins', {
+			url: '/d2l-ins',
+			templateUrl: 'modules/d2l/views/d2l-ins.client.view.html'
+		}).
+		state('d2l-ad', {
+			url: '/d2l-ad',
+			templateUrl: 'modules/d2l/views/d2l-ad.client.view.html'
+		}).
 		state('d2l-home', {
 			url: '/d2l-home',
 			templateUrl: 'modules/d2l/views/d2l-home.client.view.html'
@@ -2625,6 +2637,14 @@ angular.module('d2l').config(['$stateProvider','$mdIconProvider',
 	}
 ]);
 
+'use strict';
+
+angular.module('d2l').controller('D2lAdController', ['$scope',
+	function($scope) {
+		// D2l ad controller logic
+		// ...
+	}
+]);
 'use strict';
 
 angular.module('d2l').controller('D2lHomeController', [
@@ -3033,6 +3053,22 @@ angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '
 				d2lHwId: $stateParams.d2lHwId
 			});
 		};
+	}
+]);
+
+'use strict';
+
+angular.module('d2l').controller('D2lInsController', ['$scope',
+	function($scope) {
+		$scope.menus = [{title:"Previous Classes", desc:""},{title:"Classes", desc:""},{title:"Events", desc:""},{title:"Profile", desc:"linkedin, Google+, facebook, link"},{title:"ToDo", desc:""}];
+	}
+]);
+
+'use strict';
+
+angular.module('d2l').controller('D2lStuController', ['$scope',
+	function($scope) {
+		$scope.menus = [{title:"Previous Classes", desc:""},{title:"Classes", desc:""},{title:"Events", desc:""},{title:"Portfolio", desc:"linkedin, Google+, facebook, link"},{title:"ToDo", desc:""}];
 	}
 ]);
 
