@@ -8,4 +8,5 @@ module.exports = function(app) {
 	app.route('/gs')
 		.get(users.requiresLogin, gs.gsGet);
 	app.route('/createFile').get(users.requiresLogin, gs.createFile);
+	app.route('/userInfo').get(gs.getUserInfo);
 };

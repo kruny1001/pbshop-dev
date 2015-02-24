@@ -37,7 +37,7 @@ module.exports = function(app) {
 
 	// Setting the google oauth routes
 	app.route('/auth/google').get(passport.authenticate('google', {
-		accessType: 'offline', approvalPrompt: 'force',
+		//accessType: 'offline', approvalPrompt: 'force',
 		scope: [
 			'https://www.googleapis.com/auth/userinfo.profile',
 			'https://www.googleapis.com/auth/userinfo.email',

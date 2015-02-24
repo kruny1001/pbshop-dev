@@ -11,47 +11,77 @@ var CLIENT_ID='574563539488-n0vrevgjp3606l20hfk4rqfk1dc8j3qb.apps.googleusercont
 	REDIRECT_URL = '/auth/google/callback';
 var SCOPE = 'https://www.googleapis.com/auth/drive.file';
 var google = require('googleapis');
-var OAuth2Client = google.auth.OAuth2;
-var plus = google.plus('v1');
-
-var oauth2Client = new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 
 exports.gsGet = function(req, res){
 	//res.jsonp(req.user.additionalProvidersData.google.accessToken);
 	//res.jsonp(req.user);
-
+	var google = require('googleapis');
+	var OAuth2 = google.auth.OAuth2;
+	var plus = google.plus('v1');
+	var oauth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 	oauth2Client.setCredentials({
 		access_token: req.user.additionalProvidersData.google.accessToken,
 		refresh_token: req.user.additionalProvidersData.google.refreshToken
 	});
-	plus.people.get({ userId: 'me', auth: oauth2Client }, function(err, profile) {
-			if (err) {
-				console.log('An error occured', err);
-				return;
-			}
-			res.jsonp(profile);
-		});
+	oauth2Client.refreshAccessToken(function(err, tokens) {
+		// your access_token is now refreshed and stored in oauth2Client
+		// store these new tokens in a safe place (e.g. database)
+		//console.log('!!!!', tokens);
+		oauth2Client.setCredentials(tokens);
+		plus.people.get({ userId: 'me', auth: oauth2Client }, function(err, profile) {
+				if (err) {
+					console.log('An error occured', err);
+					return;
+				}
+				res.jsonp(profile);
+			});
+	});
+	//plus.people.get({ userId: 'me', auth: oauth2Client }, function(err, profile) {
+	//		if (err) {
+	//			console.log('An error occured', err);
+	//			return;
+	//		}
+	//		res.jsonp(profile);
+	//	});
+}
+
+exports.getUserInfo = function(req, res) {
+	res.jsonp(req.user);
 }
 
 /**
  * Create a Gs app
  */
 exports.createFile = function(req, res) {
+
+	var plus = google.plus('v1');
+	var drive = google.drive('v2');
+	var OAuth2 = google.auth.OAuth2;
+	var oauth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 	oauth2Client.setCredentials({
 		access_token: req.user.additionalProvidersData.google.accessToken,
 		refresh_token: req.user.additionalProvidersData.google.refreshToken
 	});
-	var drive = google.drive('v2');
-	// insertion example
-	drive.files.insert({
-		resource: {
-			title: 'folderTest',
-			mimeType: 'application/vnd.google-apps.folder'
-		},
-		auth: oauth2Client
-	}, function(err, response) {
-		if(err !== null)
-			res.jsonp({'error': err, 'inserted': response.id})
+
+	oauth2Client.refreshAccessToken(function(err, tokens) {
+		// your access_token is now refreshed and stored in oauth2Client
+		// store these new tokens in a safe place (e.g. database)
+		//console.log('!!!!', tokens);
+		oauth2Client.setCredentials(tokens);
+		// insertion example
+		drive.files.insert({
+			resource: {
+				title: 'refreshToken Folder',
+				mimeType: 'application/vnd.google-apps.folder'
+			},
+			auth: oauth2Client
+		}, function(err, response) {
+			if (err) {
+				console.log('An error occured', err);
+				return;
+			}
+			res.jsonp(response);
+		});
 	});
 };
 
