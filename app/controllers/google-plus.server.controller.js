@@ -30,6 +30,7 @@ exports.doSomthing = function(code){
         // Now tokens contains an access_token and an optional refresh_token. Save them.
         if(!err) {
             oauth2Client.setCredentials(tokens);
+
             var drive = google.drive({ version: 'v2', auth: oauth2Client });
             plus.people.get({ userId: 'me', auth: oauth2Client }, function(err, profile) {
                 if (err) {

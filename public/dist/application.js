@@ -1654,6 +1654,7 @@ angular.module('articles').controller('ArticlesController',
                 docType: $scope.docType,
 				content: $scope.content
 			});
+
 			article.$save(function(response) {
 				$location.path('articles/' + response._id);
 				$scope.title = '';

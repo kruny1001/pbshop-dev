@@ -3,6 +3,7 @@
 module.exports = function(app) {
 	// Routing logic   
 	// ...
+
     var gPlus = require('../../app/controllers/google-plus.server.controller')
 
     app.route('/gapi')
