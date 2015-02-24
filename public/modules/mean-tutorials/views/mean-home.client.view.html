@@ -1,12 +1,11 @@
-<section ng-controller="MeanHomeController" layout="column" layout-fill>
+<section class="headerEnabled" ng-controller="MeanHomeController" layout="column" layout-fill>
     <div class="meanT-headToolBar">
-        <div class="meanT-brandName" color-border="colorBorder.header">
+        <div class="meanT-brandName">
             <a href="/#!/versioning" target="_blank">Version: 0.0.2</a>
+            <span style="margin-left:20px;">{{notice}}</span>
         </div>
     </div>
-
     <section layout="row">
-
         <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
             <md-toolbar MeanHomeControllerclass="md-theme-indigo">
                 <h1 class="md-toolbar-tools">MENU</h1>
@@ -51,7 +50,8 @@
             <div class="meanT-headButtonGroup">
             </div>
 
-            <div class="meanT-headTitle" color-border="colorBorder.header">
+            <!--<div class="meanT-headTitle" color-border="colorBorder.header">-->
+            <div class="meanT-headTitle">
                 <strong>Welcome to MEAN Tutorials</strong>
             </div>
 
@@ -125,34 +125,52 @@
                     <h1 class="md-toolbar-tools">My Page</h1>
                 </div>
             </md-toolbar>
+
             <!-- Authentication Needed -->
-            <a href="/auth/google" class="undecorated-link">
-                <img src="/modules/users/img/buttons/google.png">
-            </a>
+            <!--<a href="/auth/google" class="undecorated-link">-->
+                <!--<img src="/modules/users/img/buttons/google.png">-->
+            <!--</a>-->
+
             <md-content class="md-padding" layout="column" layout-align="center start">
-                <div layout="row" layout-align="end">
+                <div layout="row">
+                <md-button class="md-primary" href="/auth/google" >
+                    <md-icon md-svg-src="/modules/mean-tutorials/img/social-google.svg"></md-icon>
+                </md-button>
+                </div>
+
+                <div layout="row" data-ng-hide="authentication.user">
+
                     <md-button class="md-primary" ng-click="logIn($event)">
+                        <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
                         Log In
                     </md-button>
+                    <!--<span flex></span>-->
                     <md-button class="md-primary" ng-click="signUp($event)">
+                        <md-icon md-svg-src="/modules/mean-tutorials/img/log-out.svg"></md-icon>
                         Sign Up
                     </md-button>
                 </div>
-
-                <md-button ng-click="gotoState('projectview.dashboard')" class="md-primary">
+                <md-button ng-disabled="false" ui-sref="d2l-stu" class="md-primary">
+                    <md-icon md-svg-src="/modules/mean-tutorials/img/android-person.svg"></md-icon>
+                    Account
+                </md-button>
+                <md-button ur-sref="projectview.dashboard" class="md-primary">
+                    <md-icon md-svg-src="/modules/mean-tutorials/img/grid.svg"></md-icon>
                     Dashboard
                 </md-button>
                 <md-button ng-disabled="true" ng-click="close()" class="md-primary">
-                    Activities
-                </md-button>
-                <md-button ng-disabled="true" ng-click="close()" class="md-primary">
+                    <md-icon md-svg-src="/modules/mean-tutorials/img/briefcase.svg"></md-icon>
                     Projects
                 </md-button>
-                <md-button ng-disabled="false" ng-click="goTo('d2l-home')" class="md-primary">
+                <md-button ng-disabled="false" ui-sref="d2l-home" class="md-primary">
+                    <md-icon md-svg-src="/modules/mean-tutorials/img/easel.svg"></md-icon>
                     Desire 2 Learn
                 </md-button>
-                <md-button ng-disabled="true" ng-click="close()" class="md-primary">
-                    Inbox
+                <md-button ng-disabled="false" ui-sref="d2l-ins" class="md-primary">
+                    Instructor (beta)
+                </md-button>
+                <md-button ng-disabled="false" ui-sref="d2l-stu" class="md-primary">
+                    Student (beta)
                 </md-button>
             </md-content>
         </md-sidenav>

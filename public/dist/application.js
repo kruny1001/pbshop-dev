@@ -2618,9 +2618,18 @@ angular.module('d2l').config(['$stateProvider','$mdIconProvider',
 			templateUrl: 'modules/d2l/views/d2l-stu.client.view.html'
 		}).
 		state('d2l-ins', {
+			abstract: true,
 			url: '/d2l-ins',
 			templateUrl: 'modules/d2l/views/d2l-ins.client.view.html'
 		}).
+			state('d2l-ins.menu',{
+				url: '/menu',
+				templateUrl: 'modules/d2l/template/ins-menu.html'
+			}).
+			state('d2l-ins.class', {
+				url: '/class',
+				templateUrl: 'modules/d2l/template/ins-class.html'
+			}).
 		state('d2l-ad', {
 			url: '/d2l-ad',
 			templateUrl: 'modules/d2l/views/d2l-ad.client.view.html'
@@ -3061,7 +3070,7 @@ angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '
 
 angular.module('d2l').controller('D2lInsController', ['$scope',
 	function($scope) {
-		$scope.menus = [{title:"Previous Classes", desc:""},{title:"Classes", desc:""},{title:"Events", desc:""},{title:"Profile", desc:"linkedin, Google+, facebook, link"},{title:"ToDo", desc:""}];
+		$scope.menus = [{title:"Classes", desc:""},{title:"Events", desc:""},{title:"Profile", desc:"linkedin, Google+, facebook, link"},{title:"ToDo", desc:""},{title:"Previous Classes", desc:""}];
 	}
 ]);
 
@@ -3070,6 +3079,30 @@ angular.module('d2l').controller('D2lInsController', ['$scope',
 angular.module('d2l').controller('D2lStuController', ['$scope',
 	function($scope) {
 		$scope.menus = [{title:"Previous Classes", desc:""},{title:"Classes", desc:""},{title:"Events", desc:""},{title:"Portfolio", desc:"linkedin, Google+, facebook, link"},{title:"ToDo", desc:""}];
+	}
+]);
+
+'use strict';
+
+angular.module('d2l').controller('InsClassController', ['$scope','$http',
+	function($scope,$http) {
+		$scope.createFile = function(){
+			$http.get('/createFile').success(function(data, status, headers, config){
+				console.log('data', data);
+				console.log('status', status);
+				console.log('headers', headers);
+				console.log('config', config);
+			});
+		}
+		$scope.listGPlus = function(){
+			$http.get('/gs').success(function(data, status, headers, config){
+				$scope.userInfo = data;
+				console.log('data', data);
+				console.log('status', status);
+				console.log('headers', headers);
+				console.log('config', config);
+			});
+		}
 	}
 ]);
 
@@ -3898,7 +3931,8 @@ angular.module('mean-tutorials').controller('HomeDialogtmpController', ['$scope'
 
 angular.module('mean-tutorials')
 	.controller('MeanLoginCtrl', ['$scope', 'Authentication','$mdDialog',function($scope, Authentication){
-        $scope.Auth = Authentication;
+        $scope.authentication = Authentication;
+
         $scope.hide = function() {
             $mdDialog.hide();
         };
@@ -3912,11 +3946,13 @@ angular.module('mean-tutorials')
 	.controller('MeanHomeController',
         ['$scope','$state', '$http','$mdDialog','$timeout', '$mdSidenav', '$log', 'Authentication',
 	    function($scope,$state,$http,$mdDialog,$timeout, $mdSidenav, $log, Authentication) {
-            $scope.Auth = Authentication;
+            $scope.authentication = Authentication;
+		        console.log('!!!!! ',$scope.authentication);
+		        $scope.notice = "Web Application for E-Learning";
             $scope.goTo = function(stateName){
                 $state.go(stateName);
             }
-            console.log($scope.Auth);
+
             $http.get('modules/mean-tutorials/data/home.json').success(function(data) {
                 //console.log(data);
                 $scope.dataFromJson = data;
@@ -3950,20 +3986,31 @@ angular.module('mean-tutorials')
             };
 
             $scope.signUp = function(ev) {
-                $mdDialog.show(
-                    $mdDialog.alert()
-                        .title('Sign-in')
-                        .content('Please Sign Up if you want to become our member')
-                        .ariaLabel('Password notification')
-                        .ok('Got it!')
-                        .targetEvent(ev)
-                );
+	            $mdDialog.show({
+		            controller: 'MeanLoginCtrl',
+		            templateUrl: 'modules/mean-tutorials/template/MD/signup-dialog.tpl.html',
+		            targetEvent: ev
+	            })
+		            .then(function(answer) {
+			            $scope.alert = 'You said the information was "' + answer + '".';
+		            }, function() {
+			            $scope.alert = 'You cancelled the dialog.';
+		            });
+                //
+                //$mdDialog.show(
+                //    $mdDialog.alert()
+                //        .title('Sign-in')
+                //        .content('Please Sign Up if you want to become our member')
+                //        .ariaLabel('Password notification')
+                //        .ok('Got it!')
+                //        .targetEvent(ev)
+                //);
             };
 
             $scope.logIn = function(ev) {
                 $mdDialog.show({
                     controller: 'MeanLoginCtrl',
-                    templateUrl: 'modules/mean-tutorials/template/MD/home-dialog.tpl.html',
+                    templateUrl: 'modules/mean-tutorials/template/MD/signin-dialog.tpl.html',
                     targetEvent: ev
                 })
                 .then(function(answer) {

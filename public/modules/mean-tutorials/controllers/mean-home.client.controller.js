@@ -2,7 +2,8 @@
 
 angular.module('mean-tutorials')
 	.controller('MeanLoginCtrl', ['$scope', 'Authentication','$mdDialog',function($scope, Authentication){
-        $scope.Auth = Authentication;
+        $scope.authentication = Authentication;
+
         $scope.hide = function() {
             $mdDialog.hide();
         };
@@ -16,11 +17,13 @@ angular.module('mean-tutorials')
 	.controller('MeanHomeController',
         ['$scope','$state', '$http','$mdDialog','$timeout', '$mdSidenav', '$log', 'Authentication',
 	    function($scope,$state,$http,$mdDialog,$timeout, $mdSidenav, $log, Authentication) {
-            $scope.Auth = Authentication;
+            $scope.authentication = Authentication;
+		        console.log('!!!!! ',$scope.authentication);
+		        $scope.notice = "Web Application for E-Learning";
             $scope.goTo = function(stateName){
                 $state.go(stateName);
             }
-            console.log($scope.Auth);
+
             $http.get('modules/mean-tutorials/data/home.json').success(function(data) {
                 //console.log(data);
                 $scope.dataFromJson = data;
@@ -54,20 +57,31 @@ angular.module('mean-tutorials')
             };
 
             $scope.signUp = function(ev) {
-                $mdDialog.show(
-                    $mdDialog.alert()
-                        .title('Sign-in')
-                        .content('Please Sign Up if you want to become our member')
-                        .ariaLabel('Password notification')
-                        .ok('Got it!')
-                        .targetEvent(ev)
-                );
+	            $mdDialog.show({
+		            controller: 'MeanLoginCtrl',
+		            templateUrl: 'modules/mean-tutorials/template/MD/signup-dialog.tpl.html',
+		            targetEvent: ev
+	            })
+		            .then(function(answer) {
+			            $scope.alert = 'You said the information was "' + answer + '".';
+		            }, function() {
+			            $scope.alert = 'You cancelled the dialog.';
+		            });
+                //
+                //$mdDialog.show(
+                //    $mdDialog.alert()
+                //        .title('Sign-in')
+                //        .content('Please Sign Up if you want to become our member')
+                //        .ariaLabel('Password notification')
+                //        .ok('Got it!')
+                //        .targetEvent(ev)
+                //);
             };
 
             $scope.logIn = function(ev) {
                 $mdDialog.show({
                     controller: 'MeanLoginCtrl',
-                    templateUrl: 'modules/mean-tutorials/template/MD/home-dialog.tpl.html',
+                    templateUrl: 'modules/mean-tutorials/template/MD/signin-dialog.tpl.html',
                     targetEvent: ev
                 })
                 .then(function(answer) {

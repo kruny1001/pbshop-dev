@@ -10,9 +10,18 @@ angular.module('d2l').config(['$stateProvider','$mdIconProvider',
 			templateUrl: 'modules/d2l/views/d2l-stu.client.view.html'
 		}).
 		state('d2l-ins', {
+			abstract: true,
 			url: '/d2l-ins',
 			templateUrl: 'modules/d2l/views/d2l-ins.client.view.html'
 		}).
+			state('d2l-ins.menu',{
+				url: '/menu',
+				templateUrl: 'modules/d2l/template/ins-menu.html'
+			}).
+			state('d2l-ins.class', {
+				url: '/class',
+				templateUrl: 'modules/d2l/template/ins-class.html'
+			}).
 		state('d2l-ad', {
 			url: '/d2l-ad',
 			templateUrl: 'modules/d2l/views/d2l-ad.client.view.html'
