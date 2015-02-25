@@ -21,12 +21,13 @@ exports.gsGet = function(req, res){
 	var oauth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 	oauth2Client.setCredentials({
 		access_token: req.user.additionalProvidersData.google.accessToken,
-		refresh_token: req.user.additionalProvidersData.google.refreshToken
+		refresh_token: req.user.additionalProvidersData.google.refreshToken,
+		expiry_date:(new Date()).getTime()*1000
 	});
 	oauth2Client.refreshAccessToken(function(err, tokens) {
 		// your access_token is now refreshed and stored in oauth2Client
 		// store these new tokens in a safe place (e.g. database)
-		//console.log('!!!!', tokens);
+		console.log('!!!!', tokens);
 		oauth2Client.setCredentials(tokens);
 		plus.people.get({ userId: 'me', auth: oauth2Client }, function(err, profile) {
 				if (err) {
