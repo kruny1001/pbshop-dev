@@ -20,44 +20,48 @@
         position: absolute;
         bottom: 5px;
         left: 7px;
-        color: #ccc;
+        color: #717070;
         font-size: 14px; }
 </style>
     <section layout="row" layout-sm="column" layout-align="center center"
-             style="background: #f7f7f7;
-        border-radius: 3px;
-        text-align: center;
-        margin: 1em;
-        position: relative !important;
-        padding-bottom: 10px;">
-        <md-button class="md-raised md-primary" ng-click="createFile()">Create Folder</md-button>
-        <md-button class="md-raised md-primary" ng-click="listGPlus()">Create Assignment</md-button>
+             class="ins-container">
+        <md-button id="createFileBtn" class="md-raised md-primary" ng-click="createFile()">Create Folder</md-button>
+        <md-button class="md-raised md-primary" ng-click="listGPlus()">Get Your Google+</md-button>
         <md-button class="md-raised md-primary">Create Discussion</md-button>
         <div class="label">Google Drive</div>
     </section>
-    <pre>{{userInfo}}</pre>
-    <section layout="row" layout-sm="column" layout-align="center center"
-             style="background: #f7f7f7;
-        border-radius: 3px;
-        text-align: center;
-        margin: 1em;
-        position: relative !important;
-        padding-bottom: 10px;">
-        <md-button class="md-raised md-primary">Create Folder</md-button>
-        <md-button class="md-raised md-primary">Create Assignment</md-button>
-        <md-button class="md-raised md-primary">Create Discussion</md-button>
-        <div class="label">Google Drive</div>
-    </section>
-</md-content >
 
-<md-toolbar>
-    <div class="md-toolbar-tools">
-        <span><b>Add Assignment</b></span>
-        <span flex></span>
-        <md-button ng-click="toggleRight()" class="md-button md-warn md-raised md-hue-2" style="min-width: 72px; height:60%; font-size: 14px; padding:6px;">
-            My Page
-        </md-button>
+    <div id="fileCreator" class="ins-container">
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <label>File Name</label>
+                <input ng-model="assignment.firstName" placeholder="Placeholder text">
+            </md-input-container>
+            <md-input-container flex>
+                <label>Location</label>
+                <input ng-model="assignment.dirName">
+            </md-input-container>
+        </div>
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <label>Due Date</label>
+                <input ng-model="assignment.dDate">
+            </md-input-container>
+        </div>
+        <div layout="column" layout-align="center center" style="min-height: 200px;">
+            <p>Select Type of File</p>
+            <md-select ng-model="neighborhood" placeholder="Neighborhood" flex>
+                <md-option ng-value="opt" ng-repeat="opt in neighborhoods">{{ opt }}</md-option>
+            </md-select>
+        </div>
+        <div layout layout-sm="column"><md-button class="md-raised md-primary" style="margin-bottom:20px;">Publish</md-button>
+            <md-button class="md-raised md-primary" style="margin-bottom:20px;">Save</md-button></div>
+
+        <div class="label">Create Assignment UI</div>
     </div>
-</md-toolbar>
-<md-content></md-content>
+
+    <pre ng-show="fileResult"><h3>Create Folder Result</h3>{{fileResult}}</pre>
+    <pre ng-show="userInfo"><h3>Google+ Profile Result</h3>Google Profile: {{userInfo.name.givenName}} {{userInfo.name.familyName}} ({{userInfo.gender}})</pre>
+
+</md-content >
 </section>
