@@ -12,6 +12,9 @@ module.exports = function(app) {
     app.route('/gskbs')
         .get(gskb.list);
 
+    app.route('/gs')
+        .get(gskb.gs);
+
 	  app.route('/gskbs/indexQuery')
 		  .get(gskb.indexQuery);
 

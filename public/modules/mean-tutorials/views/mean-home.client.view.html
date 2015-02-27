@@ -6,7 +6,7 @@
         </div>
     </div>
     <section layout="row">
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2 headerEnabled" md-component-id="left" md-is-locked-open="$media('gt-md')">
             <md-toolbar MeanHomeControllerclass="md-theme-indigo">
                 <h1 class="md-toolbar-tools">MENU</h1>
             </md-toolbar>
@@ -104,7 +104,6 @@
             </div>
             <hr/>
 
-
             <div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
             <div class="meanT-headSubTitle">
                 You can check out our current project.
@@ -118,7 +117,7 @@
         </md-content>
 
         <!-- Right Menu-->
-        <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+        <md-sidenav class="md-sidenav-right md-whiteframe-z2 headerEnabled" md-component-id="right">
             <md-toolbar class="md-tall md-warn md-hue-5">
                 <div class="sidebar-header header-cover"
                      style="background-image: url(http://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);">
@@ -139,7 +138,6 @@
                 </div>
 
                 <div layout="row" data-ng-hide="authentication.user">
-
                     <md-button class="md-primary" ng-click="logIn($event)">
                         <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
                         Log In
@@ -150,11 +148,12 @@
                         Sign Up
                     </md-button>
                 </div>
-                <md-button ng-disabled="false" ui-sref="d2l-stu" class="md-primary">
+
+                <md-button ng-disabled="false" ui-sref="profile" class="md-primary">
                     <md-icon md-svg-src="/modules/mean-tutorials/img/android-person.svg"></md-icon>
                     Account
                 </md-button>
-                <md-button ur-sref="projectview.dashboard" class="md-primary">
+                <md-button ng-disabled="false" ui-sref="projectview.dashboard" class="md-primary">
                     <md-icon md-svg-src="/modules/mean-tutorials/img/grid.svg"></md-icon>
                     Dashboard
                 </md-button>
@@ -166,7 +165,7 @@
                     <md-icon md-svg-src="/modules/mean-tutorials/img/easel.svg"></md-icon>
                     Desire 2 Learn
                 </md-button>
-                <md-button ng-disabled="false" ui-sref="d2l-ins" class="md-primary">
+                <md-button ng-disabled="false" ui-sref="d2l-ins.class" class="md-primary">
                     Instructor (beta)
                 </md-button>
                 <md-button ng-disabled="false" ui-sref="d2l-stu" class="md-primary">

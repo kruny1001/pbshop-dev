@@ -31,6 +31,35 @@ var getErrorMessage = function(err) {
     return message;
 };
 
+exports.gs = function(req, res) {
+    var http = require('http');
+    var options = {
+
+        //https://script.google.com/macros/s/AKfycbzkbUo2czehvdVTBUKQERzSkr6areSBpLLsaTZ9uGLtz1wx_lY/exec
+        host: 'script.google.com',
+        path:'/macros/s/AKfycbzkbUo2czehvdVTBUKQERzSkr6areSBpLLsaTZ9uGLtz1wx_lY/exec',
+        //This is what changes the request to a POST request
+        method:'GET'
+    }
+    var callback = function(response) {
+        var str = ''
+        response.on('data', function (chunk) {
+            str += chunk;
+        });
+
+        response.on('end', function () {
+            //console.log(str);
+            res.send(str);
+        });
+    }
+
+    var req = http.request(options, callback);
+    //This is the data we are posting, it needs to be a string or a buffer
+
+    req.write("hello world!");
+    req.end();
+}
+
 /**
  * List of Products
  */
