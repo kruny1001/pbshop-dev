@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular.module('seller-interface').controller('HistoryPaymentController', ['$scope','Authentication','Payments','PaymentsBySellerData',
 	function($scope, Authentication, Payments, PaymentsBySellerData) {

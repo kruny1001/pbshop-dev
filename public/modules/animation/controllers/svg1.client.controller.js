@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular.module('animation').directive('onFinishRender', function ($timeout) {
 	return {
@@ -10,7 +10,7 @@ angular.module('animation').directive('onFinishRender', function ($timeout) {
 				});
 			}
 		}
-	}
+	};
 });
 
 angular.module('animation').controller('Svg1Controller', ['$scope','$timeout',
@@ -27,9 +27,9 @@ angular.module('animation').controller('Svg1Controller', ['$scope','$timeout',
 			console.log('instruction loaded');
 			var instructions = $('.inst');
 			angular.forEach(instructions, function(value) {
-					timeLineInst.from(value, 0.75, {x: -200, autoAlpha: 0, ease:Expo.easeOut});
+					timeLineInst.from(value, 0.75, {x: -200, autoAlpha: 0});
 				}
-			)
+			);
 		});
 
 		$scope.afterLogo = false;
@@ -65,20 +65,20 @@ angular.module('animation').controller('Svg1Controller', ['$scope','$timeout',
 			var afterLogo = function(){
 				console.log('dddd');
 				$scope.afterLogo = true;
-			}
+			};
 			var wholeSvg=$('.svg1-logo');
 			var logo_r = $('#logo-r');
 			var logo_u = $('#logo-u');
 			var logoTimeLine = new TimelineMax({paused:true, onComplete: afterLogo});
 			logoTimeLine.set([logo_r, logo_u],{opacity:0})
 				.fromTo([logo_r, logo_u], 2.5, {x:0, scale:0.5, opacity:0},{scale:1, opacity:1})
-				.to(logo_r, 1.5, {rotation: 360, transformOrigin: "50% 50%", ease:Circ.easeOut})
+				.to(logo_r, 1.5, {rotation: 360, transformOrigin: "50% 50%"});
 				//.to(wholeSvg, 1.5, {top: 20, scale: 0.2})
 				//.to(wholeSvg, 1.5, {top: 20, scale: 0.2, display: 'none', ease:Circ.easeOut });
 
 			$scope.replay = function(){
 				logoTimeLine.restart();
-			}
+			};
 
 			$timeout(function(){
 				logoTimeLine.play();

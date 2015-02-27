@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular.module('animation').controller('ThreeController', ['$scope',
 	function($scope) {

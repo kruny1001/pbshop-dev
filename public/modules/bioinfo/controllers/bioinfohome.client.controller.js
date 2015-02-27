@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular.module('bioinfo').controller('BioinfohomeController', ['$scope','$http',
 	function($scope,$http) {

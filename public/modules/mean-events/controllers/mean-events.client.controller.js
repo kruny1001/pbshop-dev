@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // Mean events controller
 angular.module('mean-events').controller('MeanEventsController', ['$scope', '$stateParams', '$location', 'Authentication', 'MeanEvents',

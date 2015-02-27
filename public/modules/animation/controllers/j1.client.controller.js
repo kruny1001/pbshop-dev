@@ -3,7 +3,7 @@
 angular.module('animation').controller('J1Controller', ['$scope', '$timeout',
 	function($scope, $timeout) {
 
-		var svgMVMU = Snap('#j1Svg');
+		var svgMVMU = new Snap('#j1Svg');
 		Snap.load("modules/animation/img/svg/j1.svg", function(data) {
 			svgMVMU.append(data);
 
@@ -76,7 +76,7 @@ angular.module('animation').controller('J1Controller', ['$scope', '$timeout',
 				.to([leftAir,rightAir], 0.25, {opacity: 0})
 				.to([leftAir,rightAir], 0.25, {opacity: 1})
 				.to(faceColor, 2, {opacity: 1})
-				.to(logo, 2, {scale: 0.5, x: -10})
+				.to(logo, 2, {scale: 0.5, x: -10});
 
 				var audio = document.getElementById("audioTag");
 				audio.play();
@@ -96,7 +96,7 @@ angular.module('animation').controller('J1Controller', ['$scope', '$timeout',
 
 				$scope.replay = function(){
 					masterTimeLine.restart();
-				}
+				};
 			}, 1000);
 		});
 

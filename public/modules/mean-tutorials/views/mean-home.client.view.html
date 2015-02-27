@@ -5,6 +5,7 @@
             <span style="margin-left:20px;">{{notice}}</span>
         </div>
     </div>
+
     <section layout="row">
         <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
             <md-toolbar MeanHomeControllerclass="md-theme-indigo">
@@ -12,8 +13,8 @@
             </md-toolbar>
             <md-content class="md-padding">
             <!--<md-content class="md-padding" layout="column" layout-align="center start">-->
-                <md-button ng-click="close()" class="md-primary" hide-gt-md>
-                    Close MENU
+                <md-button ui-sref="ads1" ng-click="close()" class="md-primary" hide-gt-md>
+                    ADS1
                 </md-button>
                 </md-button>
                 <md-button ng-click="close()" class="md-primary">
@@ -37,16 +38,13 @@
                 </p>
             </md-content>
         </md-sidenav>
-
         <md-content flex class="md-padding">
-
             <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
                 Menu
             </md-button>
             <md-button ng-click="toggleRight()" class="md-primary">
                 My Page
             </md-button>
-
             <div class="meanT-headButtonGroup">
             </div>
 
@@ -154,7 +152,7 @@
                     <md-icon md-svg-src="/modules/mean-tutorials/img/android-person.svg"></md-icon>
                     Account
                 </md-button>
-                <md-button ur-sref="projectview.dashboard" class="md-primary">
+                <md-button ui-sref="projectview.dashboard" class="md-primary">
                     <md-icon md-svg-src="/modules/mean-tutorials/img/grid.svg"></md-icon>
                     Dashboard
                 </md-button>

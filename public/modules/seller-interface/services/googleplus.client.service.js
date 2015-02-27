@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular.module('seller-interface').factory('GooglePlus', [
 	function() {

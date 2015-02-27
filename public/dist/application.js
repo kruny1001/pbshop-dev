@@ -59,25 +59,30 @@ angular.element(document).ready(function() {
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('animation');
 
-"use strict";
+'use strict';
 
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('articles');
 
-"use strict";
+'use strict';
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('bioinfo');
 
-"use strict";
+'use strict';
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('calculator');
 
-"use strict";
+'use strict';
 
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');
+
+'use strict';
+
+// Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('d2l-ads');
 
 'use strict';
 
@@ -97,17 +102,17 @@ ApplicationConfiguration.registerModule('d2l');
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('disqus');
 
-"use strict";
+'use strict';
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('g-drive');
 
-"use strict";
+'use strict';
 
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('mean-events');
 
-"use strict";
+'use strict';
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('mean-tutorials');
@@ -120,7 +125,7 @@ ApplicationConfiguration.registerModule('payments');
 
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('products');
-"use strict";
+'use strict';
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('seller-interface');
@@ -135,7 +140,7 @@ ApplicationConfiguration.registerModule('size-util');
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('the-clean');
 
-"use strict";
+'use strict';
 
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('tinymce');
@@ -149,7 +154,7 @@ ApplicationConfiguration.registerModule('user-interface');
 
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('users');
-"use strict";
+'use strict';
 
 //Setting up route
 angular.module('animation').config(['$stateProvider',
@@ -180,7 +185,7 @@ angular.module('animation').config(['$stateProvider',
 angular.module('animation').controller('J1Controller', ['$scope', '$timeout',
 	function($scope, $timeout) {
 
-		var svgMVMU = Snap('#j1Svg');
+		var svgMVMU = new Snap('#j1Svg');
 		Snap.load("modules/animation/img/svg/j1.svg", function(data) {
 			svgMVMU.append(data);
 
@@ -253,7 +258,7 @@ angular.module('animation').controller('J1Controller', ['$scope', '$timeout',
 				.to([leftAir,rightAir], 0.25, {opacity: 0})
 				.to([leftAir,rightAir], 0.25, {opacity: 1})
 				.to(faceColor, 2, {opacity: 1})
-				.to(logo, 2, {scale: 0.5, x: -10})
+				.to(logo, 2, {scale: 0.5, x: -10});
 
 				var audio = document.getElementById("audioTag");
 				audio.play();
@@ -273,7 +278,7 @@ angular.module('animation').controller('J1Controller', ['$scope', '$timeout',
 
 				$scope.replay = function(){
 					masterTimeLine.restart();
-				}
+				};
 			}, 1000);
 		});
 
@@ -292,7 +297,7 @@ angular.module('animation').controller('Ryuhm12Controller', ['$scope',
 		// ...
 	}
 ]);
-"use strict";
+'use strict';
 
 angular.module('animation').directive('onFinishRender', ["$timeout", function ($timeout) {
 	return {
@@ -304,7 +309,7 @@ angular.module('animation').directive('onFinishRender', ["$timeout", function ($
 				});
 			}
 		}
-	}
+	};
 }]);
 
 angular.module('animation').controller('Svg1Controller', ['$scope','$timeout',
@@ -321,9 +326,9 @@ angular.module('animation').controller('Svg1Controller', ['$scope','$timeout',
 			console.log('instruction loaded');
 			var instructions = $('.inst');
 			angular.forEach(instructions, function(value) {
-					timeLineInst.from(value, 0.75, {x: -200, autoAlpha: 0, ease:Expo.easeOut});
+					timeLineInst.from(value, 0.75, {x: -200, autoAlpha: 0});
 				}
-			)
+			);
 		});
 
 		$scope.afterLogo = false;
@@ -359,20 +364,20 @@ angular.module('animation').controller('Svg1Controller', ['$scope','$timeout',
 			var afterLogo = function(){
 				console.log('dddd');
 				$scope.afterLogo = true;
-			}
+			};
 			var wholeSvg=$('.svg1-logo');
 			var logo_r = $('#logo-r');
 			var logo_u = $('#logo-u');
 			var logoTimeLine = new TimelineMax({paused:true, onComplete: afterLogo});
 			logoTimeLine.set([logo_r, logo_u],{opacity:0})
 				.fromTo([logo_r, logo_u], 2.5, {x:0, scale:0.5, opacity:0},{scale:1, opacity:1})
-				.to(logo_r, 1.5, {rotation: 360, transformOrigin: "50% 50%", ease:Circ.easeOut})
+				.to(logo_r, 1.5, {rotation: 360, transformOrigin: "50% 50%"});
 				//.to(wholeSvg, 1.5, {top: 20, scale: 0.2})
 				//.to(wholeSvg, 1.5, {top: 20, scale: 0.2, display: 'none', ease:Circ.easeOut });
 
 			$scope.replay = function(){
 				logoTimeLine.restart();
-			}
+			};
 
 			$timeout(function(){
 				logoTimeLine.play();
@@ -383,7 +388,7 @@ angular.module('animation').controller('Svg1Controller', ['$scope','$timeout',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('animation').controller('ThreeController', ['$scope',
 	function($scope) {
@@ -1633,7 +1638,7 @@ angular.module('articles').config(['$stateProvider',
 		});
 	}
 ]);
-"use strict";
+'use strict';
 
 angular.module('articles').controller('ArticlesController',
 	['$scope', '$stateParams', '$location', '$http', 'Authentication', 'Articles',
@@ -1871,7 +1876,7 @@ angular.module('bioinfo').controller('BioTableController', ['$scope','$http',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('bioinfo').controller('BioinfohomeController', ['$scope','$http',
 	function($scope,$http) {
@@ -1944,7 +1949,7 @@ angular.module('bioinfo').controller('BioinfohomeController', ['$scope','$http',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('bioinfo').directive('menuiconHover', [
 	function() {
@@ -1964,7 +1969,7 @@ angular.module('bioinfo').directive('menuiconHover', [
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('calculator').controller('CalTestController', ['$scope',
 	function($scope) {
@@ -2188,7 +2193,7 @@ angular.module('ui.tinymce', [])
 		};
 	}]);
 
-"use strict";
+'use strict';
 
 angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus',
 	function($scope, Authentication, Menus) {
@@ -2207,7 +2212,7 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 	}
 ]);
 
-"use strict";
+'use strict';
 
 
 angular.module('core').controller('HomeController', ['$scope', 'Authentication',
@@ -2224,7 +2229,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('core').controller('LinklistController', ['$scope',
 	function($scope) {
@@ -2316,7 +2321,7 @@ angular.module('core').controller('PlanController', ['$scope', '$element', 'Auth
 ]);
 
 
-"use strict";
+'use strict';
 
 angular.module('core').factory('Getplans', ['$resource',
 	function($resource) {
@@ -2334,7 +2339,7 @@ angular.module('core').factory('Getplans', ['$resource',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 //Menu service used for managing  menus
 angular.module('core').service('Menus', [
@@ -2498,6 +2503,61 @@ angular.module('core').service('Menus', [
 
 		//Adding the topbar menu
 		this.addMenu('topbar');
+	}
+]);
+
+'use strict';
+
+//Setting up route
+angular.module('d2l-ads').config(['$stateProvider',
+	function($stateProvider) {
+		// D2l ads state routing
+		$stateProvider.
+		state('ads1', {
+			url: '/ads1',
+			templateUrl: 'modules/d2l-ads/views/ads1.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+angular.module('d2l-ads').controller('Ads1Controller', ['$scope',
+	function($scope) {
+		var iconData = [
+			{name: 'icon-home'        , color: "#777" },
+			{name: 'icon-user-plus'   , color: "rgb(89, 226, 168)" },
+			{name: 'icon-google-plus2', color: "#A00" },
+			{name: 'icon-youtube4'    , color:"#00A" },
+			// Use theming to color the font-icon
+			{name: 'icon-settings'    , color:"#A00", theme:"md-warn md-hue-5"}
+		];
+		// Create a set of sizes...
+		$scope.sizes = [
+			{size:12,padding:0},
+			{size:21,padding:2},
+			{size:36,padding:6},
+			{size:48,padding:10}
+		];
+		$scope.fonts = [].concat(iconData);
+		$scope.it = $scope.sizes[3];
+		var gdoc = $('.s48');
+	//	TweenMax.to(gdoc, 2, {scale:2});
+		$scope.animate = function() {
+			TweenMax.to(gdoc, 2, {scaleY:2});
+		}
+
+		$scope.animate2 = function() {
+			TweenMax.to(gdoc, 2, {scale:2});
+		}
+
+		$scope.animate3 = function() {
+			TweenMax.to(gdoc, 2, {scaleX:1, scaleY:1});
+		}
+		function sizeUp(size){
+			var gdoc = $('.s48');
+			TweenMax.to(gdoc, 2, {scale:size});
+		}
+
 	}
 ]);
 
@@ -3219,7 +3279,7 @@ angular.module('d2l').factory('D2LOauth', ['configGdrive',
  */
 
 (function (angular, window) {
-    "use strict";
+    'use strict';
 
     var disqusModule = angular.module('disqus', [ ]);
 
@@ -3459,7 +3519,7 @@ angular.module('d2l').factory('D2LOauth', ['configGdrive',
 })(angular, this);
 
 
-"use strict";
+'use strict';
 
 var CONFIG = {
 	//clientId: '574563539488-n0vrevgjp3606l20hfk4rqfk1dc8j3qb.apps.googleusercontent.com',
@@ -3480,7 +3540,7 @@ angular.module('g-drive').config(['$stateProvider',
 	}
 ]);
 
-"use strict";
+'use strict';
 function GDocs(selector) {
     var SCOPE_ = 'https://www.googleapis.com/drive/v2/';
     this.lastResponse = null;
@@ -3715,7 +3775,7 @@ angular.module('g-drive').factory('Googledrive', [
 	}
 ]);
 
-"use strict";
+'use strict';
 
 // Configuring the Articles module
 angular.module('mean-events').run(['Menus',
@@ -3727,7 +3787,7 @@ angular.module('mean-events').run(['Menus',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 //Setting up route
 angular.module('mean-events').config(['$stateProvider',
@@ -3753,7 +3813,7 @@ angular.module('mean-events').config(['$stateProvider',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 // Mean events controller
 angular.module('mean-events').controller('MeanEventsController', ['$scope', '$stateParams', '$location', 'Authentication', 'MeanEvents',
@@ -3840,7 +3900,6 @@ angular.module('mean-tutorials').config(['$stateProvider',
     function($stateProvider) {
         // Mean tutorials state routing
         $stateProvider.
-
             state('projectview', {
                 abstract: true,
                 url: '/projects',
@@ -3872,13 +3931,17 @@ angular.module('mean-tutorials').config(['$stateProvider',
                 templateUrl: 'modules/mean-tutorials/views/project1.client.view.html'
             }).
             state('mean-home', {
-                url: '/',
-                templateUrl: 'modules/mean-tutorials/views/mean-home.client.view.html'
+			        url: '/',
+			        templateUrl: 'modules/mean-tutorials/views/mean-home.client.view.html'
+			        //views:{
+				       // "":{templateUrl: 'modules/mean-tutorials/views/mean-home.client.view.html'},
+				       // "tt":{template:"<h1>Hello World</h1>"}
+			        //}
             });
     }
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('mean-tutorials').controller('CalTestController', ['$scope',
 	function($scope) {
@@ -3927,7 +3990,7 @@ angular.module('mean-tutorials').controller('HomeDialogtmpController', ['$scope'
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('mean-tutorials')
 	.controller('MeanLoginCtrl', ['$scope', 'Authentication','$mdDialog',function($scope, Authentication){
@@ -4050,7 +4113,7 @@ angular.module('mean-tutorials')
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('mean-tutorials')
     .controller('Project1Controller', ['$scope','$document','$timeout','$log','$mdSidenav',
@@ -4156,7 +4219,7 @@ angular.module('mean-tutorials')
         };
     }]);;
 
-"use strict";
+'use strict';
 
 angular.module('mean-tutorials').controller('Project2Controller', ['$scope',
 	function($scope,$rootScope) {
@@ -4242,7 +4305,7 @@ angular.module('mean-tutorials').controller('ProjectviewProjectsController', ['$
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['$scope',
     '$window', '$state', '$http', '$q', '$mdDialog', '$mdSidenav', 'configGdrive',
@@ -4692,7 +4755,7 @@ window.consts = {
     ]
 };
 
-"use strict";
+'use strict';
 
 angular.module('mean-tutorials').directive('macWindow', [
 	function() {
@@ -4720,7 +4783,7 @@ angular.module('mean-tutorials').directive('macWindow', [
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('mean-tutorials').directive('utCalendar', ['UtCalendar',
 	function(UtCalendar) {
@@ -4863,7 +4926,7 @@ angular.module('payments').run(['Menus',
 		//Menus.addSubMenuItem('topbar', 'payments', 'New Payment', 'payments/create');
 	}
 ]);
-"use strict";
+'use strict';
 
 //Setting up route
 angular.module('payments').config(['$stateProvider',
@@ -4889,7 +4952,7 @@ angular.module('payments').config(['$stateProvider',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 // Payments controller
 angular.module('payments').controller('PaymentsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Payments',
@@ -4955,7 +5018,7 @@ angular.module('payments').controller('PaymentsController', ['$scope', '$statePa
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('payments').factory('GetPurchaseJWT', ['$resource',
 	function($resource) {
@@ -4969,7 +5032,7 @@ angular.module('payments').factory('GetPurchaseJWT', ['$resource',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 //Payments service used to communicate Payments REST endpoints
 angular.module('payments').factory('Payments', ['$resource',
@@ -5141,7 +5204,7 @@ angular.module('products').factory('ProductByUserId', ['$resource', function($re
         }
     });
 }]);
-"use strict";
+'use strict';
 
 //Products service used to communicate Products REST endpoints
 angular.module('products').factory('Products', ['$resource', function($resource) {
@@ -6000,7 +6063,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     // ---------------------------------------------------------------------------
 });
 */
-"use strict";
+'use strict';
 
 // Gdriveapps controller
 
@@ -6083,7 +6146,7 @@ angular.module('seller-interface').controller('GdriveappsController', ['$scope',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('seller-interface').controller('HistoryPaymentController', ['$scope','Authentication','Payments','PaymentsBySellerData',
 	function($scope, Authentication, Payments, PaymentsBySellerData) {
@@ -6317,7 +6380,7 @@ var googlePlusUserLoader = (function() {
 
 
 
-"use strict";
+'use strict';
 
 angular.module('seller-interface').factory('gdocs', [
 	function() {
@@ -6337,7 +6400,7 @@ angular.module('seller-interface').factory('gdocs', [
 	}
 ]);
 
-"use strict";
+'use strict';
 
 //Gdriveapps service used to communicate Gdriveapps REST endpoints
 angular.module('seller-interface').factory('Gdriveapps', ['$resource',
@@ -6459,7 +6522,7 @@ angular.module('seller-interface').factory('Gdriveapps', ['$resource',
 //	}
 //]);
 
-"use strict";
+'use strict';
 
 angular.module('seller-interface').factory('GooglePlus', [
 	function() {
@@ -7176,7 +7239,7 @@ angular.module('tinymce').directive('uiTinymce', ['uiTinymceConfig', function(ui
     };
 }]);
 
-"use strict";
+'use strict';
 
 //Setting up route
 angular.module('user-interface').config(['$stateProvider','$disqusProvider',
@@ -7207,7 +7270,7 @@ angular.module('user-interface').config(['$stateProvider','$disqusProvider',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('user-interface').controller('DetailProductController', ['$scope','$stateParams','$sce','Products', 'GetPurchaseJWT','Payments','configGdrive',
 	function($scope, $stateParams, $sce, Products, GetPurchaseJWT, Payments, configGdrive) {
@@ -7394,7 +7457,7 @@ angular.module('user-interface').controller('DetailProductController', ['$scope'
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('user-interface').controller('ExperimentalinterfaceController', ['$scope',
 	function($scope) {
@@ -7704,7 +7767,7 @@ angular.module('user-interface').controller('ListingProductController', ['$scope
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('user-interface').controller('McmuController', ['$scope', '$timeout',
 	function($scope, $timeout) {
@@ -7810,7 +7873,7 @@ angular.module('user-interface').controller('McmuController', ['$scope', '$timeo
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('user-interface').directive('article', ['Articles',
 	function(Articles) {
@@ -7886,7 +7949,7 @@ angular.module('user-interface').directive('mainInterface', ['$compile',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('user-interface').factory('Allproducts', ['$resource',
 	function($resource) {
@@ -7900,7 +7963,7 @@ angular.module('user-interface').factory('AllBanners', ['$resource',
 	}
 ]);
 
-"use strict";
+'use strict';
 
 // Config HTTP Error Handling
 angular.module('users').config(['$httpProvider',
@@ -7976,7 +8039,7 @@ angular.module('users').config(['$stateProvider',
 		});
 	}
 ]);
-"use strict";
+'use strict';
 
 angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication',
 	function($scope, $http, $location, Authentication) {
@@ -8011,7 +8074,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('users').controller('PasswordController', ['$scope', '$stateParams', '$http', '$location', 'Authentication',
 	function($scope, $stateParams, $http, $location, Authentication) {
@@ -8056,7 +8119,7 @@ angular.module('users').controller('PasswordController', ['$scope', '$stateParam
 	}
 ]);
 
-"use strict";
+'use strict';
 
 angular.module('users').controller('SettingsController', ['$scope', '$http', '$location', 'Users', 'Authentication',
 	function($scope, $http, $location, Users, Authentication) {
@@ -8128,7 +8191,7 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 	}
 ]);
 
-"use strict";
+'use strict';
 
 // Authentication service for user variables
 angular.module('users').factory('Authentication', [

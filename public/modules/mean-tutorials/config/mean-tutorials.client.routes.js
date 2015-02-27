@@ -5,7 +5,6 @@ angular.module('mean-tutorials').config(['$stateProvider',
     function($stateProvider) {
         // Mean tutorials state routing
         $stateProvider.
-
             state('projectview', {
                 abstract: true,
                 url: '/projects',
@@ -37,8 +36,12 @@ angular.module('mean-tutorials').config(['$stateProvider',
                 templateUrl: 'modules/mean-tutorials/views/project1.client.view.html'
             }).
             state('mean-home', {
-                url: '/',
-                templateUrl: 'modules/mean-tutorials/views/mean-home.client.view.html'
+			        url: '/',
+			        templateUrl: 'modules/mean-tutorials/views/mean-home.client.view.html'
+			        //views:{
+				       // "":{templateUrl: 'modules/mean-tutorials/views/mean-home.client.view.html'},
+				       // "tt":{template:"<h1>Hello World</h1>"}
+			        //}
             });
     }
 ]);

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['$scope',
     '$window', '$state', '$http', '$q', '$mdDialog', '$mdSidenav', 'configGdrive',

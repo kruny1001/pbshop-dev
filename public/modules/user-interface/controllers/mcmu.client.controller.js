@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular.module('user-interface').controller('McmuController', ['$scope', '$timeout',
 	function($scope, $timeout) {

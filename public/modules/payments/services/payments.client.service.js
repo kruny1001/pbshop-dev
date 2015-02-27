@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 //Payments service used to communicate Payments REST endpoints
 angular.module('payments').factory('Payments', ['$resource',

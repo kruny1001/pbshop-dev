@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular.module('mean-tutorials').controller('Project2Controller', ['$scope',
 	function($scope,$rootScope) {

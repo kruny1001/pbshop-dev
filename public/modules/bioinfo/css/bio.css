@@ -16,7 +16,7 @@
 .leftPane {
     float: left;
     position: fixed;
-    left: 0px;
+    left: 0;
     top: 0;
     height: 100%;
     width: 72px;

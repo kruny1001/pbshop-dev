@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular.module('calculator').controller('CalTestController', ['$scope',
 	function($scope) {

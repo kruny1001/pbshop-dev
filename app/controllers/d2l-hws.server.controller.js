@@ -89,9 +89,10 @@ exports.list = function(req, res) {
  */
 exports.d2lHwByID = function(req, res, next, id) { 
 	D2lHw.findById(id).populate('user', 'displayName').exec(function(err, d2lHw) {
-		if (err) return next(err);
 		if (! d2lHw) return next(new Error('Failed to load D2l hw ' + id));
+		if (err) return next(err);
 		req.d2lHw = d2lHw ;
+		console.log(d2lHw);
 		next();
 	});
 };

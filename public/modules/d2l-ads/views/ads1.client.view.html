@@ -1,0 +1,31 @@
+<section class="headerEnabled ad1-container" data-ng-controller="Ads1Controller">
+    <style>
+        .ad1-container{
+            background-color: #e7e7e7;
+
+        }
+        .s48 {
+            width: 148px;
+            height: 148px;
+            color: #00f; }
+    </style>
+	This is the Ads1
+
+    <div ng-repeat="font in fonts" layout="row" layout-padding layout-margin>
+    <div ng-repeat="it in sizes" flex style="height:100px" id="gdoc" layout="row" layout-align="center center">
+    <md-icon
+        id="gdoc1"
+        md-svg-src='/modules/d2l-ads/svg/gdoc.svg'
+        md-font-icon="{{ font.name }}"
+        ng-style="{color: !font.theme && font.color, 'font-size': it.size + 'px', height: it.size + 'px'}"
+        ng-class="font.theme"
+        alt="{{ font.name + it.size }}"
+        class="s48 ">
+    </md-icon>
+    </div>
+    </div>
+
+    <md-button class="md-primary" ng-click="animate()">Animatie</md-button>
+    <md-button class="md-primary" ng-click="animate2()">Animatie2</md-button>
+    <md-button class="md-primary" ng-click="animate3()">Animatie3</md-button>
+</section>

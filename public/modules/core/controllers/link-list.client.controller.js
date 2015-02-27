@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular.module('core').controller('LinklistController', ['$scope',
 	function($scope) {

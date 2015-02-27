@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var CONFIG = {
 	//clientId: '574563539488-n0vrevgjp3606l20hfk4rqfk1dc8j3qb.apps.googleusercontent.com',

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular.module('user-interface').factory('Allproducts', ['$resource',
 	function($resource) {

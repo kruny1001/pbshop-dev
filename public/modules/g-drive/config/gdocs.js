@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 function GDocs(selector) {
     var SCOPE_ = 'https://www.googleapis.com/drive/v2/';
     this.lastResponse = null;
