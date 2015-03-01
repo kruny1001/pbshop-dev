@@ -8,41 +8,6 @@
     <section data-ng-controller="Project1Controller"
              layout="column" layout-fill layout="row" flex>
 
-        <md-sidenav
-                class="md-sidenav-left md-whiteframe-z2"
-                md-component-id="left"
-                md-is-locked-open="$media('gt-md')">
-            <md-toolbar MeanHomeControllerclass="md-theme-indigo">
-                <h1 class="md-toolbar-tools">MENU</h1>
-            </md-toolbar>
-            <md-content class="md-padding" ng-controller="LeftCtrl12">
-                <!--<md-content class="md-padding" layout="column" layout-align="center start">-->
-                <md-button ng-click="close()" class="md-primary" hide-gt-md>
-                    Close MENU
-                </md-button>
-                </md-button>
-                <md-button ng-click="close()" class="md-primary">
-                    Articles
-                </md-button>
-                <md-button ng-click="close()" class="md-primary">
-                    Activities
-                </md-button>
-                <md-button ng-click="close()" class="md-primary">
-                    Projects
-                </md-button>
-                <md-button ng-click="close()" class="md-primary">
-                    Comments
-                </md-button>
-                <md-button ng-click="close()" class="md-primary">
-                    Inbox
-                </md-button>
-                <p hide-md show-gt-md>
-                    This sidenav is locked open on your device. To go back to the default behavior,
-                    narrow your display.
-                </p>
-            </md-content>
-        </md-sidenav>
-
         <md-content flex class="md-padding">
             <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
                 Menu
@@ -63,47 +28,12 @@
                 <div id="geo" style="position: absolute;top:0;left: 0;width: 100%;height: 100%;max-height: 600px;"></div>
             </div >
 
+            <pre>
+                <code class="language-javascript" prism>
+                    {{snippet}}
+                </code>
+            </pre>
             <div disqus="id" style="margin:auto; margin-left: 20px; margin-right:20px;	"></div>
         </md-content>
-
-        <!-- Right Menu-->
-        <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
-            <md-toolbar class="md-tall md-warn md-hue-5">
-                <div class="sidebar-header header-cover"
-                     style="background-image: url(http://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);">
-                    <h1 class="md-toolbar-tools">My Page</h1>
-                </div>
-            </md-toolbar>
-            <!-- Authentication Needed -->
-            <a href="/auth/google" class="undecorated-link">
-                <img src="/modules/users/img/buttons/google.png">
-            </a>
-            <md-content class="md-padding" ng-controller="RightCtrl11" layout="column" layout-align="center start">
-                <div layout="row" layout-align="end">
-                    <md-button class="md-primary" ng-click="logIn($event)">
-                        Log In
-                    </md-button>
-                    <md-button class="md-primary" ng-click="signUp($event)">
-                        Sign Up
-                    </md-button>
-                </div>
-
-                <md-button ng-click="gotoState('projectview.dashboard')" class="md-primary">
-                    Dashboard
-                </md-button>
-                <md-button ng-disabled="true" ng-click="close()" class="md-primary">
-                    Activities
-                </md-button>
-                <md-button ng-disabled="true" ng-click="close()" class="md-primary">
-                    Projects
-                </md-button>
-                <md-button ng-disabled="true" ng-click="close()" class="md-primary">
-                    Comments
-                </md-button>
-                <md-button ng-disabled="true" ng-click="close()" class="md-primary">
-                    Inbox
-                </md-button>
-            </md-content>
-        </md-sidenav>
     </section>
 <!--</section>-->

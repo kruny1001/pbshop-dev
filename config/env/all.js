@@ -17,6 +17,7 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
 				'public/lib/angular-material/angular-material.css',
 				'public/lib/angular-material/default-theme.css',
+
 				//'public/lib/angular-material/themes/amber-theme.css',
 				//'public/lib/angular-material/themes/blue-grey-theme.css',
 				//'public/lib/angular-material/themes/brown-theme.css',
@@ -82,6 +83,8 @@ module.exports = {
         'public/lib/tinymce/plugins/media/plugin.min.js',
 				'public/lib/string/lib/string.min.js',
         'public/lib/moment/min/moment-with-locales.min.js',
+
+                'public/third/prism/prism.js'
 			]
 		},
 		css: [

@@ -3,6 +3,9 @@
 angular.module('mean-tutorials')
     .controller('Project1Controller', ['$scope','$document','$timeout','$log','$mdSidenav',
         function($scope, $document, $timeout, $log, $mdSidenav) {
+            $scope.snippet = 'angular.module(\'mean-tutorials\')'+
+                '.controller(\'Project1Controller\', [\'$scope\',\'$document\',\'$timeout\',\'$log\',\'$mdSidenav\','+
+                    'function($scope, $document, $timeout, $log, $mdSidenav) {';
             $scope.toggleLeft = function() {
                 $mdSidenav('left').toggle()
                     .then(function(){

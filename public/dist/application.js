@@ -156,6 +156,11 @@ ApplicationConfiguration.registerModule('user-interface');
 ApplicationConfiguration.registerModule('users');
 'use strict';
 
+// Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('util');
+
+'use strict';
+
 //Setting up route
 angular.module('animation').config(['$stateProvider',
 	function($stateProvider) {
@@ -2523,6 +2528,36 @@ angular.module('d2l-ads').config(['$stateProvider',
 
 angular.module('d2l-ads').controller('Ads1Controller', ['$scope',
 	function($scope) {
+        $scope.date = {
+            month: moment().format("MMM"),
+            date: moment().date(),
+            year: moment().year()
+        }
+        $scope.animationC1=function(){
+            var c = $('.ad1-calendarHolder');
+            TweenMax.to(c, 0.6, {x:0, y:0, scale:0.4, transformOrigin: "50% 50%"});
+        }
+
+        $scope.animationC2=function(){
+            var c = $('.ad1-calendarHolder');
+            TweenMax.to(c, 0.6, {x:0, y:0, scale:1, transformOrigin: "50% 50%"});
+        }
+
+        $scope.init = function(){
+            TweenMax.to($('#testDate'), 0.6, {x:0, y:0, scale:0.3, transformOrigin: "50% 50%"});
+            TweenMax.to($('#testTool'), 0.6, {height:100});
+        }
+
+        $(".ad1-calendarHolder").hover(
+            function() {
+                TweenLite.to($(this).find('.ad1-timer'), 1.2, {rotationY:360, ease:Back.easeOut});
+            },
+            function() {
+                TweenLite.to($(this).find('.ad1-timer'), 1.2, {rotationY:0, ease:Back.easeOut});
+            }
+        );
+
+        $scope.menus = [{title: "Animation1", desc:""}, {title: "Animation2", desc:""}, {title: "Animation3", desc:""}]
 		var iconData = [
 			{name: 'icon-home'        , color: "#777" },
 			{name: 'icon-user-plus'   , color: "rgb(89, 226, 168)" },
@@ -4142,6 +4177,9 @@ angular.module('mean-tutorials')
 angular.module('mean-tutorials')
     .controller('Project1Controller', ['$scope','$document','$timeout','$log','$mdSidenav',
         function($scope, $document, $timeout, $log, $mdSidenav) {
+            $scope.snippet = 'angular.module(\'mean-tutorials\')'+
+                '.controller(\'Project1Controller\', [\'$scope\',\'$document\',\'$timeout\',\'$log\',\'$mdSidenav\','+
+                    'function($scope, $document, $timeout, $log, $mdSidenav) {';
             $scope.toggleLeft = function() {
                 $mdSidenav('left').toggle()
                     .then(function(){
@@ -8240,5 +8278,19 @@ angular.module('users').factory('Users', ['$resource',
 				method: 'PUT'
 			}
 		});
+	}
+]);
+'use strict';
+
+angular.module('util').directive('prism', [
+	function() {
+		return {
+            restrict: 'A',
+			link: function postLink(scope, element, attrs) {
+				element.ready(function(){
+                   Prism.highlightElement(element[0]);
+                });
+			}
+		};
 	}
 ]);
