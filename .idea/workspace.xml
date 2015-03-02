@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads2.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/tests/ads2.client.controller.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/views/ads2.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/directives/cal-date.client.directive.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads1.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads1.client.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-ads/css/ads1.css" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/css/ads1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-ads/config/d2l-ads.client.routes.js" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/config/d2l-ads.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-events/controllers/mean-events.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-events/controllers/mean-events.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/mean-events.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/mean-events.server.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/users.authentication.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/users/users.authentication.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/all.js" afterPath="$PROJECT_DIR$/config/env/all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-ads/directives/cal-date.client.directive.js" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/directives/cal-date.client.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/production.js" afterPath="$PROJECT_DIR$/config/env/production.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -41,16 +37,16 @@
     <favorites_list name="pbshop-dev" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.35095716">
+    <splitter split-orientation="horizontal" split-proportion="0.79516804">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.5">
+        <splitter split-orientation="vertical" split-proportion="0.38390502">
           <split-first>
             <leaf>
               <file leaf-file-name="ads1.client.controller.js" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads1.client.controller.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1200">
-                      <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+                    <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1080">
+                      <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
@@ -59,12 +55,13 @@
               <file leaf-file-name="ads1.client.view.html" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="-11.176471" vertical-offset="0" max-vertical-offset="2070">
-                      <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+                    <state vertical-scroll-proportion="-11.176471" vertical-offset="75" max-vertical-offset="1545">
+                      <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
                       <folding>
-                        <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                        <element signature="n#style#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                        <element signature="n#style#0;n#div#0;n#div#2;n#section#0;n#!!top" expanded="true" />
+                        <element signature="n#style#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
+                        <marker date="1425258697000" expanded="true" signature="714:2383" placeholder="..." />
+                        <marker date="1425258697000" expanded="true" signature="2420:2458" placeholder="..." />
+                        <marker date="1425258697000" expanded="true" signature="2533:2596" placeholder="..." />
                       </folding>
                     </state>
                   </provider>
@@ -73,8 +70,8 @@
               <file leaf-file-name="cal-date.client.directive.js" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/directives/cal-date.client.directive.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.7714286" vertical-offset="0" max-vertical-offset="495">
-                      <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+                    <state vertical-scroll-proportion="0.58787876" vertical-offset="203" max-vertical-offset="615">
+                      <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
@@ -87,13 +84,41 @@
               <file leaf-file-name="ads1.client.view.html" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.46875" vertical-offset="315" max-vertical-offset="2070">
-                      <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+                    <state vertical-scroll-proportion="0.35573122" vertical-offset="270" max-vertical-offset="1545">
+                      <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
                       <folding>
-                        <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                        <element signature="n#style#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                        <element signature="n#style#0;n#div#0;n#div#2;n#section#0;n#!!top" expanded="true" />
+                        <element signature="n#style#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
                       </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="all.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/config/env/all.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1650">
+                      <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="development.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/config/env/development.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="735">
+                      <caret line="20" column="40" selection-start-line="18" selection-start-column="8" selection-end-line="20" selection-end-column="40" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="production.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/config/env/production.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1830">
+                      <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+                      <folding />
                     </state>
                   </provider>
                 </entry>
@@ -107,12 +132,17 @@
           <file leaf-file-name="ads1.client.view.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-21.25" vertical-offset="1005" max-vertical-offset="2070">
-                  <caret line="101" column="18" selection-start-line="92" selection-start-column="12" selection-end-line="101" selection-end-column="18" />
+                <state vertical-scroll-proportion="-21.25" vertical-offset="510" max-vertical-offset="1545">
+                  <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
                   <folding>
-                    <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#2;n#section#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
+                    <marker date="1425258697000" expanded="true" signature="109:556" placeholder="..." />
+                    <marker date="1425258697000" expanded="true" signature="714:2383" placeholder="..." />
+                    <marker date="1425258697000" expanded="true" signature="1135:1615" placeholder="..." />
+                    <marker date="1425258697000" expanded="true" signature="1186:1424" placeholder="..." />
+                    <marker date="1425258697000" expanded="true" signature="1503:1589" placeholder="..." />
+                    <marker date="1425258697000" expanded="true" signature="2420:2458" placeholder="..." />
+                    <marker date="1425258697000" expanded="true" signature="2533:2596" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -121,7 +151,7 @@
           <file leaf-file-name="ads1.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/css/ads1.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5273973" vertical-offset="440" max-vertical-offset="1170">
+                <state vertical-scroll-proportion="0.80543935" vertical-offset="440" max-vertical-offset="1170">
                   <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
                   <folding />
                 </state>
@@ -166,8 +196,6 @@
         <option value="$PROJECT_DIR$/docs/googleApi" />
         <option value="$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l/config/d2l.client.routes.js" />
-        <option value="$PROJECT_DIR$/config/env/all.js" />
-        <option value="$PROJECT_DIR$/config/env/production.js" />
         <option value="$PROJECT_DIR$/public/config.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l/svg/1.svg" />
         <option value="$PROJECT_DIR$/public/modules/d2l/svg/2.svg" />
@@ -188,11 +216,13 @@
         <option value="$PROJECT_DIR$/app/controllers/users/users.authentication.server.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/mean-events/controllers/mean-events.client.controller.js" />
         <option value="$PROJECT_DIR$/app/controllers/mean-events.server.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads1.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-ads/views/ads2.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-ads/css/ads1.css" />
+        <option value="$PROJECT_DIR$/config/env/all.js" />
+        <option value="$PROJECT_DIR$/config/env/production.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads1.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-ads/directives/cal-date.client.directive.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-ads/css/ads1.css" />
       </list>
     </option>
   </component>
@@ -309,7 +339,7 @@
     <data>$PROJECT_DIR$/node_modules/karma</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="163" />
+    <option name="x" value="48" />
     <option name="y" value="23" />
     <option name="width" value="1118" />
     <option name="height" value="877" />
@@ -523,7 +553,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -537,47 +571,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="angular-material" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1235,18 +1237,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00049" summary="test push">
-      <created>1420755650022</created>
-      <option name="number" value="00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1420755650022</updated>
-    </task>
-    <task id="LOCAL-00050" summary="mean tutorial page">
-      <created>1421206267318</created>
-      <option name="number" value="00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1421206267319</updated>
-    </task>
     <task id="LOCAL-00051" summary="fix mean tutorial page">
       <created>1421206332207</created>
       <option name="number" value="00051" />
@@ -1529,11 +1519,23 @@
       <option name="project" value="LOCAL" />
       <updated>1425008361511</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="ads1 update">
+      <created>1425257313000</created>
+      <option name="number" value="00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1425257313001</updated>
+    </task>
+    <task id="LOCAL-00099" summary="ads1 update">
+      <created>1425257351276</created>
+      <option name="number" value="00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1425257351276</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="163" y="23" width="1118" height="877" extended-state="0" />
+    <frame x="48" y="23" width="1118" height="877" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32133332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1542,18 +1544,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19676946" sideWeight="0.16016015" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33469945" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33509234" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33245382" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21695533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40291706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27406418" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45514512" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14516129" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5710526" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1602,7 +1604,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="decorate mean-home" />
     <MESSAGE value="decorate2 mean-home" />
     <MESSAGE value="decorate3 mean-home" />
     <MESSAGE value="add calculator mean-home" />
@@ -1627,7 +1628,8 @@
     <MESSAGE value="d2l adjust md-maxlength" />
     <MESSAGE value="d2l ins and stu view" />
     <MESSAGE value="update3" />
-    <option name="LAST_COMMIT_MESSAGE" value="update3" />
+    <MESSAGE value="ads1 update" />
+    <option name="LAST_COMMIT_MESSAGE" value="ads1 update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1700,27 +1702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1605">
-          <caret line="27" column="62" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/production.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36945814" vertical-offset="90" max-vertical-offset="1830">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/development.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7364532" vertical-offset="1" max-vertical-offset="735">
-          <caret line="20" column="40" selection-start-line="18" selection-start-column="8" selection-end-line="20" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1986,38 +1967,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/css/ads1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80543935" vertical-offset="440" max-vertical-offset="1170">
+          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1650">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/development.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="735">
+          <caret line="20" column="40" selection-start-line="18" selection-start-column="8" selection-end-line="20" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/production.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1830">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads1.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1200">
-          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1080">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.25" vertical-offset="1005" max-vertical-offset="2070">
-          <caret line="101" column="18" selection-start-line="92" selection-start-column="12" selection-end-line="101" selection-end-column="18" />
+        <state vertical-scroll-proportion="-11.176471" vertical-offset="75" max-vertical-offset="1545">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
+            <marker date="1425258697000" expanded="true" signature="714:2383" placeholder="..." />
+            <marker date="1425258697000" expanded="true" signature="2420:2458" placeholder="..." />
+            <marker date="1425258697000" expanded="true" signature="2533:2596" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/directives/cal-date.client.directive.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7714286" vertical-offset="0" max-vertical-offset="495">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/css/ads1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5273973" vertical-offset="440" max-vertical-offset="1170">
-          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.58787876" vertical-offset="203" max-vertical-offset="615">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>

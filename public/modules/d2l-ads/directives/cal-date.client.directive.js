@@ -16,10 +16,18 @@ angular.module('d2l-ads').directive('calDate', [
 			restrict: 'E',
 			link:{
 				pre: function preLink(scope, iElement, iAttrs, controller) {
-					console.log('pre: '+ iElement);
+					//console.log('pre: '+ iElement);
 				},
 				post: function postLink(scope, iElement, iAttrs, controller) {
-					console.log('post: '+ iElement);
+					$(".ad1-calendarHolder").hover(
+						function() {
+							TweenLite.to($(this).find('.ad1-timer'), 1.2, {rotationY:360, ease:Back.easeOut});
+						},
+						function() {
+							TweenLite.to($(this).find('.ad1-timer'), 1.2, {rotationY:0, ease:Back.easeOut});
+						}
+					);
+					//console.log('post: '+ iElement);
 				}
 			}
 		};

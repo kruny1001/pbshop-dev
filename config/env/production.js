@@ -8,7 +8,7 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap.min.css',
 				//'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
 				'public/lib/angular-material/angular-material.min.css',
-				'public/lib/angular-material/default-theme.css',
+				//'public/lib/angular-material/default-theme.css',
 				'public/lib/components-font-awesome/css/font-awesome.min.css',
 			],
 			js: [

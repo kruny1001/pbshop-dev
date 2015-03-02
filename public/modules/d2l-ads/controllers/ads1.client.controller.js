@@ -18,21 +18,13 @@ angular.module('d2l-ads').controller('Ads1Controller', ['$scope',
         }
 
         $scope.init = function(){
-	          var tl = new TimelineMax();
-
-            var Tween1 = TweenMax.to($('#testDate'), 3.6, {x:0, y:0, scale:0.2, transformOrigin: "0% 0%"});
-            var Tween2 = TweenMax.to($('#testTool'), 0.6, {height:100, y:30});
-	          tl.add(Tween1).add(Tween2);
+	          //var tl = new TimelineMax();
+	          //
+	          //var Tween1 = TweenMax.to($('#testDate'), 3.6, {x:0, y:0, scale:0.2, transformOrigin: "0% 0%"});
+	          //var Tween2 = TweenMax.to($('#testTool'), 0.6, {height:100, y:30});
+	          //tl.add(Tween1).add(Tween2);
         }
 
-        $(".ad1-calendarHolder").hover(
-            function() {
-                TweenLite.to($(this).find('.ad1-timer'), 1.2, {rotationY:360, ease:Back.easeOut});
-            },
-            function() {
-                TweenLite.to($(this).find('.ad1-timer'), 1.2, {rotationY:0, ease:Back.easeOut});
-            }
-        );
 
         $scope.menus = [{title: "Animation1", desc:""}, {title: "Animation2", desc:""}, {title: "Animation3", desc:""}]
 		var iconData = [
