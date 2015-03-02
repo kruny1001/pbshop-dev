@@ -3,7 +3,7 @@
 angular.module('d2l-ads').controller('Ads1Controller', ['$scope',
 	function($scope) {
         $scope.date = {
-            month: moment().format("MMM"),
+            month: moment().format("MMM").toUpperCase(),
             date: moment().date(),
             year: moment().year()
         }
@@ -18,8 +18,11 @@ angular.module('d2l-ads').controller('Ads1Controller', ['$scope',
         }
 
         $scope.init = function(){
-            TweenMax.to($('#testDate'), 0.6, {x:0, y:0, scale:0.3, transformOrigin: "50% 50%"});
-            TweenMax.to($('#testTool'), 0.6, {height:100});
+	          var tl = new TimelineMax();
+
+            var Tween1 = TweenMax.to($('#testDate'), 3.6, {x:0, y:0, scale:0.2, transformOrigin: "0% 0%"});
+            var Tween2 = TweenMax.to($('#testTool'), 0.6, {height:100, y:30});
+	          tl.add(Tween1).add(Tween2);
         }
 
         $(".ad1-calendarHolder").hover(

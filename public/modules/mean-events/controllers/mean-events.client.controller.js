@@ -4,7 +4,7 @@
 angular.module('mean-events').controller('MeanEventsController', ['$scope', '$stateParams', '$location', 'Authentication', 'MeanEvents',
 	function($scope, $stateParams, $location, Authentication, MeanEvents) {
 		$scope.authentication = Authentication;
-
+		console.log($scope.authentication);
 		// Create new Mean event
 		$scope.create = function() {
 			// Create new Mean event object

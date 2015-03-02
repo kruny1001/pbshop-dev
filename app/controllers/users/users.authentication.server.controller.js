@@ -59,6 +59,7 @@ exports.signin = function(req, res, next) {
 			user.salt = undefined;
 
 			req.login(user, function(err) {
+				console.log(user);
 				if (err) {
 					res.status(400).send(err);
 				} else {

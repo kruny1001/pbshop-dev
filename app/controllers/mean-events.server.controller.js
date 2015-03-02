@@ -88,9 +88,11 @@ exports.list = function(req, res) {
  * Mean event middleware
  */
 exports.meanEventByID = function(req, res, next, id) { 
-	MeanEvent.findById(id).populate('user', 'displayName').exec(function(err, meanEvent) {
-		if (err) return next(err);
-		if (! meanEvent) return next(new Error('Failed to load Mean event ' + id));
+	MeanEvent.findById(id)
+		.populate('user', 'displayName')
+		.exec(function(err, meanEvent) {
+			if (! meanEvent) return next(new Error('Failed to load Mean event ' + id));
+			if (err) return next(err);
 		req.meanEvent = meanEvent ;
 		next();
 	});
