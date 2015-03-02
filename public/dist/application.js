@@ -2518,6 +2518,10 @@ angular.module('d2l-ads').config(['$stateProvider',
 	function($stateProvider) {
 		// D2l ads state routing
 		$stateProvider.
+		state('ads2', {
+			url: '/ads2',
+			templateUrl: 'modules/d2l-ads/views/ads2.client.view.html'
+		}).
 		state('ads1', {
 			url: '/ads1',
 			templateUrl: 'modules/d2l-ads/views/ads1.client.view.html'
@@ -2529,7 +2533,7 @@ angular.module('d2l-ads').config(['$stateProvider',
 angular.module('d2l-ads').controller('Ads1Controller', ['$scope',
 	function($scope) {
         $scope.date = {
-            month: moment().format("MMM"),
+            month: moment().format("MMM").toUpperCase(),
             date: moment().date(),
             year: moment().year()
         }
@@ -2544,8 +2548,11 @@ angular.module('d2l-ads').controller('Ads1Controller', ['$scope',
         }
 
         $scope.init = function(){
-            TweenMax.to($('#testDate'), 0.6, {x:0, y:0, scale:0.3, transformOrigin: "50% 50%"});
-            TweenMax.to($('#testTool'), 0.6, {height:100});
+	          var tl = new TimelineMax();
+
+            var Tween1 = TweenMax.to($('#testDate'), 3.6, {x:0, y:0, scale:0.2, transformOrigin: "0% 0%"});
+            var Tween2 = TweenMax.to($('#testTool'), 0.6, {height:100, y:30});
+	          tl.add(Tween1).add(Tween2);
         }
 
         $(".ad1-calendarHolder").hover(
@@ -2593,6 +2600,42 @@ angular.module('d2l-ads').controller('Ads1Controller', ['$scope',
 			TweenMax.to(gdoc, 2, {scale:size});
 		}
 
+	}
+]);
+
+'use strict';
+
+angular.module('d2l-ads').controller('Ads2Controller', ['$scope',
+	function($scope) {
+		// Ads2 controller logic
+		// ...
+	}
+]);
+'use strict';
+
+angular.module('d2l-ads').directive('calDate', [
+	function() {
+		return {
+			template: '<div class="ad1-calendarHolder" >'
+								+'<div class="ad1-calendar">'
+								+'<div class="ad1-month">{{date.month}}</div>'
+								+'<div class="ad1-day">{{date.date}}</div>'
+								+'<div class="ad1-year">{{date.year}}</div>'
+								+'</div>'
+								+'<div class="ad1-timer"  ng-mouseover="ad1TimerHover()">'
+								+'<div class="ad1-sec">1</div>'
+								+'</div>'
+								+'</div>',
+			restrict: 'E',
+			link:{
+				pre: function preLink(scope, iElement, iAttrs, controller) {
+					console.log('pre: '+ iElement);
+				},
+				post: function postLink(scope, iElement, iAttrs, controller) {
+					console.log('post: '+ iElement);
+				}
+			}
+		};
 	}
 ]);
 
@@ -3878,7 +3921,7 @@ angular.module('mean-events').config(['$stateProvider',
 angular.module('mean-events').controller('MeanEventsController', ['$scope', '$stateParams', '$location', 'Authentication', 'MeanEvents',
 	function($scope, $stateParams, $location, Authentication, MeanEvents) {
 		$scope.authentication = Authentication;
-
+		console.log($scope.authentication);
 		// Create new Mean event
 		$scope.create = function() {
 			// Create new Mean event object
