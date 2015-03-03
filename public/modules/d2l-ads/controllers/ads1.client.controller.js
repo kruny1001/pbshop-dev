@@ -62,5 +62,15 @@ angular.module('d2l-ads').controller('Ads1Controller', ['$scope',
 			TweenMax.to(gdoc, 2, {scale:size});
 		}
 
+		var c = $('#svg-line-transit');
+		var aspect = c.width()/c.height();
+		var container = c.parent().parent().parent();
+		$(window).on("resize", function(){
+			var targetWidth = container.width();
+			c.attr("width", targetWidth);
+			c.attr("height", Math.round(targetWidth/aspect));
+			console.log('changed');
+		}).trigger("resize");
+
 	}
 ]);

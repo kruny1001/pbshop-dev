@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/directives/line-trasit.client.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/css/lineTransit.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads1.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads1.client.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.css" afterPath="$PROJECT_DIR$/public/dist/application.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-ads/directives/line-trasit.client.directive.js" afterPath="$PROJECT_DIR$/public/modules/d2l-ads/directives/line-trasit.client.directive.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -36,16 +34,16 @@
     <favorites_list name="pbshop-dev" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.58027077">
+    <splitter split-orientation="horizontal" split-proportion="0.40780142">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.38390502">
+        <splitter split-orientation="vertical" split-proportion="0.74110675">
           <split-first>
             <leaf>
               <file leaf-file-name="ads1.client.controller.js" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads1.client.controller.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.72289157" vertical-offset="90" max-vertical-offset="1080">
-                      <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="16" selection-end-column="63" />
+                    <state vertical-scroll-proportion="0.21965317" vertical-offset="884" max-vertical-offset="1230">
+                      <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="72" selection-end-column="25" />
                       <folding />
                     </state>
                   </provider>
@@ -78,8 +76,8 @@
               <file leaf-file-name="ads1.client.view.html" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.70866144" vertical-offset="375" max-vertical-offset="1080">
-                      <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+                    <state vertical-scroll-proportion="2.2916667" vertical-offset="0" max-vertical-offset="1080">
+                      <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
                       <folding>
                         <element signature="n#style#0;n#section#0;n#!!top" expanded="false" />
                       </folding>
@@ -126,8 +124,8 @@
           <file leaf-file-name="ads1.client.view.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-21.25" vertical-offset="585" max-vertical-offset="1335">
-                  <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+                <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="1335">
+                  <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
                   <folding />
                 </state>
               </provider>
@@ -136,8 +134,8 @@
           <file leaf-file-name="line-trasit.client.directive.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/directives/line-trasit.client.directive.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.43125" vertical-offset="618" max-vertical-offset="1350">
-                  <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+                <state vertical-scroll-proportion="0.49790794" vertical-offset="902" max-vertical-offset="1545">
+                  <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -213,11 +211,11 @@
         <option value="$PROJECT_DIR$/public/modules/d2l-ads/css/ads1.css" />
         <option value="$PROJECT_DIR$/config/env/all.js" />
         <option value="$PROJECT_DIR$/config/env/production.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads1.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-ads/directives/cal-date.client.directive.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-ads/css/lineTransit.css" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-ads/directives/line-trasit.client.directive.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads1.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-ads/directives/line-trasit.client.directive.js" />
       </list>
     </option>
   </component>
@@ -334,9 +332,9 @@
     <data>$PROJECT_DIR$/node_modules/karma</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="714" />
+    <option name="x" value="74" />
     <option name="y" value="23" />
-    <option name="width" value="1330" />
+    <option name="width" value="1431" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -943,12 +941,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00052" summary="fix2 mean tutorial page">
-      <created>1421206648147</created>
-      <option name="number" value="00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1421206648147</updated>
-    </task>
     <task id="LOCAL-00053" summary="mean tutorial add mac window">
       <created>1421339372446</created>
       <option name="number" value="00053" />
@@ -1237,11 +1229,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425258754096</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="ads1 linetransit">
+      <created>1425353141409</created>
+      <option name="number" value="00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1425353141410</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="714" y="23" width="1330" height="877" extended-state="0" />
+    <frame x="74" y="23" width="1431" height="877" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32133332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1250,18 +1248,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19676946" sideWeight="0.16016015" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33469945" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33157894" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33245382" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21008404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20992908" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27406418" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45514512" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14516129" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5710526" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1310,7 +1308,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="decorate2 mean-home" />
     <MESSAGE value="decorate3 mean-home" />
     <MESSAGE value="add calculator mean-home" />
     <MESSAGE value="test push" />
@@ -1335,7 +1332,8 @@
     <MESSAGE value="d2l ins and stu view" />
     <MESSAGE value="update3" />
     <MESSAGE value="ads1 update" />
-    <option name="LAST_COMMIT_MESSAGE" value="ads1 update" />
+    <MESSAGE value="ads1 linetransit" />
+    <option name="LAST_COMMIT_MESSAGE" value="ads1 linetransit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1346,7 +1344,7 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="17" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1696,26 +1694,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/directives/line-trasit.client.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43125" vertical-offset="618" max-vertical-offset="1350">
-          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375" vertical-offset="150" max-vertical-offset="1335">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="1335">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/controllers/ads1.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72289157" vertical-offset="90" max-vertical-offset="1080">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="16" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.21965317" vertical-offset="884" max-vertical-offset="1230">
+          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="72" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/directives/line-trasit.client.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49790794" vertical-offset="902" max-vertical-offset="1545">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
       </provider>
