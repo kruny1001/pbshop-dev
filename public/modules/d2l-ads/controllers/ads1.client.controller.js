@@ -57,20 +57,10 @@ angular.module('d2l-ads').controller('Ads1Controller', ['$scope',
 		$scope.animate3 = function() {
 			TweenMax.to(gdoc, 2, {scaleX:1, scaleY:1});
 		}
+
 		function sizeUp(size){
 			var gdoc = $('.s48');
 			TweenMax.to(gdoc, 2, {scale:size});
 		}
-
-		var c = $('#svg-line-transit');
-		var aspect = c.width()/c.height();
-		var container = c.parent().parent().parent();
-		$(window).on("resize", function(){
-			var targetWidth = container.width();
-			c.attr("width", targetWidth);
-			c.attr("height", Math.round(targetWidth/aspect));
-			console.log('changed');
-		}).trigger("resize");
-
 	}
 ]);

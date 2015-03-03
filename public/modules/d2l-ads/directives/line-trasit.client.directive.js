@@ -6,7 +6,7 @@ angular.module('d2l-ads').directive('lineTrasit', [
 			template: '<div class="svg-container" id="lineTransit"></div>',
 			restrict: 'E',
 			link: {
-				post:function postLink(scope, element, attrs) {
+				pre:function preLink(scope, element, attrs){
 					var n = 40,
 						random = d3.random.normal(0, .2),
 						data = d3.range(n).map(random);
@@ -31,8 +31,8 @@ angular.module('d2l-ads').directive('lineTrasit', [
 						.attr("id","svg-line-transit")
 						.attr("viewBox","0 0 400 300")
 						.attr("perserveAspectRatio","xMinYMid")
-						.attr("width", width + margin.left + margin.right)
-						.attr("height", height + margin.top + margin.bottom)
+						.attr("width", width)
+						.attr("height", height)
 						.append("g")
 						.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -77,17 +77,21 @@ angular.module('d2l-ads').directive('lineTrasit', [
 
 						// pop the old data point off the front
 						data.shift();
-
 					}
-
+				},
+				post:function postLink(scope, element, attrs) {
 					var c = $('#svg-line-transit');
 					var aspect = c.width()/c.height();
 					var container = c.parent().parent().parent();
 					$(window).on("resize", function(){
 						var container = c.parent().parent().parent();
 						var targetWidth = container.width();
-						c.attr("width", targetWidth);
-						c.attr("height", Math.round(targetWidth/aspect));
+						if($('figure').width() !==0){
+							c.attr("width", targetWidth);
+							c.attr("height", Math.round(targetWidth/aspect));
+						}
+						//c.attr("width", targetWidth);
+						//c.attr("height", Math.round(targetWidth/aspect));
 						console.log('changed');
 					}).trigger("resize");
 				}
