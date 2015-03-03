@@ -20,78 +20,64 @@
 
     <!-- START Date widget -->
 
+    <md-content>
+        <h2>E-Learning Web Application</h2>
+
+    </md-content>
+
+    <md-content>
+        <h2>E-Learning Web Application</h2>
+
+    </md-content>
+
+    <h2>123</h2>
     <md-grid-list
-            md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+            md-cols-sm="1" md-cols-md="2" md-cols-gt-md="2"
             md-row-height="4:3"
             >
-            <!--md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"-->
-            <!--md-row-height-gt-sm="1:1" md-row-height="2:2"-->
-            <!--md-gutter="6x" md-gutter-gt-sm="4px"-->
-
-
         <md-grid-tile class="green">
             <md-grid-tile-header>
-                <h2>CalDate Directive</h2>
+                <h3>CalDate Directive</h3>
             </md-grid-tile-header>
             <cal-date></cal-date>
-            <!--<div class="ad1-calendarHolder" >-->
-                <!--<div class="ad1-calendar">-->
-                    <!--<div class="ad1-month">{{date.month}}</div>-->
-                    <!--<div class="ad1-day">{{date.date}}</div>-->
-                    <!--<div class="ad1-year">{{date.year}}</div>-->
-                <!--</div>-->
-                <!--<div class="ad1-timer"  ng-mouseover="ad1TimerHover()">-->
-                    <!--<div class="ad1-sec">1</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <md-grid-tile-footer>
-                <h3>#2: (1r x 1c)</h3>
-            </md-grid-tile-footer>
-        </md-grid-tile>
-        <md-grid-tile class="yellow" md-colspan="1" md-rowspan="1">
-            <md-grid-tile-header>
-                <h2>Widget Example</h2>
-            </md-grid-tile-header>
             <div layout="column">
                 <div layout="row">
                     <md-button class="md-primary" ng-click="animationC1()">Animatie</md-button>
                     <md-button class="md-primary" ng-click="animationC2()">Animatie2</md-button>
                 </div>
             </div>
-            <md-grid-tile-footer>
-                <h3>#3: (1r x 1c)</h3>
-            </md-grid-tile-footer>
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>#2: (1r x 1c)</h3>-->
+            <!--</md-grid-tile-footer>-->
+        </md-grid-tile>
+        <md-grid-tile class="yellow">
+            <md-grid-tile-header>
+                <h3>Realtime Monitoring</h3>
+            </md-grid-tile-header>
+            <line-trasit></line-trasit>
+        </md-grid-tile>
+        <md-grid-tile class="blue">
+            <md-grid-tile-header>
+                <h3>More time More teach</h3>
+            </md-grid-tile-header>
+        </md-grid-tile>
+        <md-grid-tile class="purple">
+            <md-grid-tile-header>
+                <h3>Portfolio</h3>
+            </md-grid-tile-header>
         </md-grid-tile>
     </md-grid-list>
 
-    <!--<div id="testTool" style="background-color: #3dec49; height:100%">-->
-        <!--<div id="testDate"flex layout layout-align="center start">-->
-            <!--<cal-date></cal-date>-->
-        <!--</div>-->
+    <md-content>
+        <h2>E-Learning Web Application</h2>
+    </md-content>
+
+    <!--<div layout="column" layout-fill>-->
+        <!--<md-whiteframe class="md-whiteframe-z3 d2l-ins-whiteframe" layout layout-align="start center"-->
+                       <!--ng-repeat="menu in menus">-->
+            <!--<span><h3>{{menu.title}}</h3></span>-->
+            <!--<span><h4>{{menu.desc}}</h4></span>-->
+        <!--</md-whiteframe>-->
     <!--</div>-->
-    <div layout="column" layout-fill>
-        <md-whiteframe class="md-whiteframe-z3 d2l-ins-whiteframe" layout layout-align="start center"
-                       ng-repeat="menu in menus">
-            <span><h3>{{menu.title}}</h3></span>
-            <span><h4>{{menu.desc}}</h4></span>
-        </md-whiteframe>
-    </div>
 
-    <div ng-repeat="font in fonts" layout="row" layout-padding layout-margin>
-    <div ng-repeat="it in sizes" flex style="height:100px" id="gdoc" layout="row" layout-align="center center">
-    <md-icon
-        id="gdoc1"
-        md-svg-src='/modules/d2l-ads/svg/gdoc.svg'
-        md-font-icon="{{ font.name }}"
-        ng-style="{color: !font.theme && font.color, 'font-size': it.size + 'px', height: it.size + 'px'}"
-        ng-class="font.theme"
-        alt="{{ font.name + it.size }}"
-        class="s48 ">
-    </md-icon>
-    </div>
-    </div>
-
-    <md-button class="md-primary" ng-click="animate()">Animatie</md-button>
-    <md-button class="md-primary" ng-click="animate2()">Animatie2</md-button>
-    <md-button class="md-primary" ng-click="animate3()">Animatie3</md-button>
 </section>
