@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('d2l-ads').directive('lineTrasit', [
-	function() {
+angular.module('d2l-ads').directive('lineTrasit', ['$timeout',
+	function($timeout) {
 		return {
 			template: '<div class="svg-container" id="lineTransit"></div>',
 			restrict: 'E',
@@ -83,17 +83,16 @@ angular.module('d2l-ads').directive('lineTrasit', [
 					var c = $('#svg-line-transit');
 					var aspect = c.width()/c.height();
 					var container = c.parent().parent().parent();
-					$(window).on("resize", function(){
-						var container = c.parent().parent().parent();
-						var targetWidth = container.width();
-						if($('figure').width() !==0){
-							c.attr("width", targetWidth);
-							c.attr("height", Math.round(targetWidth/aspect));
-						}
-						//c.attr("width", targetWidth);
-						//c.attr("height", Math.round(targetWidth/aspect));
-						console.log('changed');
-					}).trigger("resize");
+					$(window).on("resize", $timeout(
+						function(){
+							$timeout()
+							var container = c.parent().parent().parent();
+							var targetWidth = container.width();
+							if($('figure').width() !==0){
+								c.attr("width", targetWidth);
+								c.attr("height", Math.round(targetWidth/aspect));
+							}
+						},0.5)).trigger("resize");
 				}
 			}
 		};

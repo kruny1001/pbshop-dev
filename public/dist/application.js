@@ -2641,8 +2641,8 @@ angular.module('d2l-ads').directive('calDate', [
 
 'use strict';
 
-angular.module('d2l-ads').directive('lineTrasit', [
-	function() {
+angular.module('d2l-ads').directive('lineTrasit', ['$timeout',
+	function($timeout) {
 		return {
 			template: '<div class="svg-container" id="lineTransit"></div>',
 			restrict: 'E',
@@ -2724,17 +2724,16 @@ angular.module('d2l-ads').directive('lineTrasit', [
 					var c = $('#svg-line-transit');
 					var aspect = c.width()/c.height();
 					var container = c.parent().parent().parent();
-					$(window).on("resize", function(){
-						var container = c.parent().parent().parent();
-						var targetWidth = container.width();
-						if($('figure').width() !==0){
-							c.attr("width", targetWidth);
-							c.attr("height", Math.round(targetWidth/aspect));
-						}
-						//c.attr("width", targetWidth);
-						//c.attr("height", Math.round(targetWidth/aspect));
-						console.log('changed');
-					}).trigger("resize");
+					$(window).on("resize", $timeout(
+						function(){
+							$timeout()
+							var container = c.parent().parent().parent();
+							var targetWidth = container.width();
+							if($('figure').width() !==0){
+								c.attr("width", targetWidth);
+								c.attr("height", Math.round(targetWidth/aspect));
+							}
+						},0.5)).trigger("resize");
 				}
 			}
 		};
@@ -7017,10 +7016,22 @@ angular.module('the-clean').config(['$stateProvider',
 	function($stateProvider) {
 		// The clean state routing
 		$stateProvider.
+		state('tc-order', {
+			url: '/tc-order',
+			templateUrl: 'modules/the-clean/views/tc-order.client.view.html'
+		}).
 		state('the-clean', {
 			url: '/the-clean',
 			templateUrl: 'modules/the-clean/views/the-clean.client.view.html'
 		});
+	}
+]);
+'use strict';
+
+angular.module('the-clean').controller('TcOrderController', ['$scope',
+	function($scope) {
+		// Tc order controller logic
+		// ...
 	}
 ]);
 'use strict';
@@ -7359,6 +7370,19 @@ angular.module('the-clean').controller('TheCleanController', ['$scope',
         }
 
     }
+]);
+
+'use strict';
+
+angular.module('the-clean').directive('tcOrderUi', [
+	function() {
+		return {
+			templateUrl: 'modules/the-clean/directives/template/tc-order-ui-tpl.html',
+			restrict: 'E',
+			link: function postLink(scope, element, attrs) {
+			}
+		};
+	}
 ]);
 
 'use strict';
