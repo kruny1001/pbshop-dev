@@ -16,6 +16,7 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap.css',
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
 				'public/lib/angular-material/angular-material.min.css',
+                'public/lib/nvd3/nv.d3.min.css'
 				//'public/lib/angular-material/default-theme.css',
 
 				//'public/lib/angular-material/themes/amber-theme.css',
@@ -84,7 +85,11 @@ module.exports = {
 				'public/lib/string/lib/string.min.js',
         'public/lib/moment/min/moment-with-locales.min.js',
 
-                'public/third/prism/prism.js'
+                'public/third/prism/prism.js',
+
+                'public/lib/nvd3/nv.d3.min.js',
+                'public/lib/angular-nvd3/dist/angular-nvd3.min.js',
+
 			]
 		},
 		css: [

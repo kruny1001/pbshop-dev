@@ -1,6 +1,6 @@
-<div class="container">
-    <h2>Order UI</h2>
-    <p>This user interface represents input fields to order specific user requirementsr</p>
+<div class="container tc-order-ui" style="border-radius: 30px; border: 5px solid red; padding: 20px 20px 20px 20px;">
+    <h2>주문하기</h2>
+    <p>사용자가 주문을 하기 위한 Form 입니다. </p>
     <p><div>Order Information: {{user}}</div></p>
     <md-content class="md-padding" layout="row" layout-sm="column" style="font-size:1.2em">
         <md-input-container>
@@ -20,10 +20,10 @@
     <md-content>
         <form name="userForm">
             <div layout layout-sm="column">
-                <md-input-container style="width:80%">
-                    <label>Company (Disabled)</label>
-                    <input ng-model="user.company" disabled>
-                </md-input-container>
+                <!--<md-input-container style="width:80%">-->
+                    <!--<label>Company (Disabled)</label>-->
+                    <!--<input ng-model="user.company" disabled>-->
+                <!--</md-input-container>-->
                 <md-input-container flex>
                     <label>Submission Date</label>
                     <input type="date" ng-model="user.submissionDate">
@@ -31,37 +31,32 @@
             </div>
             <div layout layout-sm="column">
                 <md-input-container flex>
-                    <label>First Name</label>
-                    <input ng-model="user.firstName" placeholder="Placeholder text">
-                </md-input-container>
-                <md-input-container flex>
-                    <label>Last Name</label>
-                    <input ng-model="theMax">
+                    <label>Name</label>
+                    <input ng-model="user.firstName" placeholder="이름을 적어 주세요">
                 </md-input-container>
             </div>
             <md-input-container flex>
                 <label>Address</label>
-                <input ng-model="user.address">
+                <input ng-model="user.address" placeholder="주소를 적어 주세요">
             </md-input-container>
-            <div layout layout-sm="column">
-                <md-input-container flex>
-                    <label>City</label>
-                    <input ng-model="user.city">
-                </md-input-container>
-                <md-input-container flex>
-                    <label>State</label>
-                    <input ng-model="user.state">
-                </md-input-container>
-                <md-input-container flex>
-                    <label>Postal Code</label>
-                    <input ng-model="user.postalCode">
-                </md-input-container>
-            </div>
+            <!--<div layout layout-sm="column">-->
+                <!--<md-input-container flex>-->
+                    <!--<label>City</label>-->
+                    <!--<input ng-model="user.city">-->
+                <!--</md-input-container>-->
+                <!--<md-input-container flex>-->
+                    <!--<label>State</label>-->
+                    <!--<input ng-model="user.state">-->
+                <!--</md-input-container>-->
+                <!--<md-input-container flex>-->
+                    <!--<label>Postal Code</label>-->
+                    <!--<input ng-model="user.postalCode">-->
+                <!--</md-input-container>-->
+            <!--</div>-->
             <md-input-container flex>
-                <label>Biography</label>
-                <textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea>
+                <label>상세주문요청</label>
+                <textarea ng-model="user.biography" columns="1" md-maxlength="150" placeholder="추가 주문 사항을 알려 주세요"></textarea>
             </md-input-container>
         </form>
     </md-content>
-
 </div>

@@ -1,84 +1,133 @@
-<!DOCTYPE HTML>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <script src="http://d3js.org/d3.v2.js"></script>
-    <style>
-        line.arrow {
-            stroke: #666;
-            stroke-width: 1px;
+    <title>Dot Plot</title>
+    <script type="text/javascript" src="../deps/d3.v2.js"></script>
+    <script type="text/javascript" src="../deps/Three.js"></script>
+    <script type="text/javascript" src="../deps/Stats.js"></script>
+    <script type="text/javascript" src="../lib/d3-threeD.js"></script>
+    <style type="text/css">
+        body {
+            font: 10px sans-serif;
         }
-        marker#arrow {
-            fill: #666;
+        path.dot {
+            fill: white;
+            stroke-width: 1.5px;
         }
-        .link-label {
-            font-family: sans-serif;
-            font-size: 11px;
+        rect {
+            fill: none;
+            stroke: black;
+            shape-rendering: crispEdges;
+        }
+        .x line, .y line {
+            stroke: #ccc;
+            shape-rendering: crispEdges;
         }
     </style>
 </head>
-
 <body>
-<script>
+<script type="text/wavascript">
 
-    var nodes = [{x:80,y:150}, {x:40,y:10}, {x:200,y:30}];
-    var links = [{s:0,t:1,label:"foo"}, {s:0,t:2,label:"bar"}];
+var data = d3.range(100).map(function(i) {
+  return {x: i / 99, y: Math.random()};
+});
 
-    var w = 300;
-    var h = 300;
+var w = 450,
+    h = 450,
+    p = 20,
+    x = d3.scale.linear().range([0, w]),
+    y = d3.scale.linear().range([h, 0]),
+    symbol = d3.scale.ordinal().range(d3.svg.symbolTypes),
+    color = d3.scale.category10();
 
-    var svg = d3.select("body")
-            .append("svg")
-            .attr("width", w)
-            .attr("height", h);
+var vis = d3.select("body")
+  .append("svg")
+    .attr("width", w + p * 2)
+    .attr("height", h + p * 2)
+  .append("g")
+    .attr("transform", "translate(" + p + "," + p + ")");
 
-    // define marker
-    svg.append("svg:defs").selectAll("marker")
-            .data(["arrow"])
-            .enter().append("svg:marker")
-            .attr("id", String)
-            .attr("viewBox", "0 -5 10 10")
-            .attr("refX", 10)
-            .attr("refY", 0)
-            .attr("markerWidth", 10)
-            .attr("markerHeight", 10)
-            .attr("orient", "auto")
-            .append("svg:path")
-            .attr("d", "M0,-5L10,0L0,0");
+var xrule = vis.selectAll("g.x")
+    .data(x.ticks(10))
+  .enter().append("g")
+    .attr("class", "x");
 
-    svg.selectAll("line")
-            .data(links)
-            .enter()
-            .append("svg:line")
-            .attr("x1", function(d) { return nodes[d.s].x; })
-            .attr("y1", function(d) { return nodes[d.s].y; })
-            .attr("x2", function(d) { return nodes[d.t].x; })
-            .attr("y2", function(d) { return nodes[d.t].y; })
-            .attr("class", "link arrow")
-            .attr("marker-end", "url(#arrow)");
+xrule.append("line")
+    .attr("x1", x)
+    .attr("x2", x)
+    .attr("y1", 0)
+    .attr("y2", h);
 
-    svg.selectAll("text")
-            .data(links)
-            .enter()
-            .append("svg:g")
-            .append("svg:text")
-            .text(function(d) { return d.label; })
-            .attr("class", "link-label")
-            .attr("text-anchor", "middle")
-            .attr("transform", function(d) {
-                var dx = (nodes[d.t].x - nodes[d.s].x),
-                        dy = (nodes[d.t].y - nodes[d.s].y);
-                var dr = Math.sqrt(dx * dx + dy * dy);
-                var offset = (1 - (1 / dr)) / 2;
-                var deg = 180 / Math.PI * Math.atan2(dy, dx);
-                var x = (nodes[d.s].x + dx * offset);
-                var y = (nodes[d.s].y + dy * offset);
-                return "translate(" + x + ", " + y + ") rotate(" + deg + ")";
-            });
+xrule.append("text")
+    .attr("x", x)
+    .attr("y", h + 3)
+    .attr("dy", ".71em")
+    .attr("text-anchor", "middle")
+    .text(x.tickFormat(10));
 
+var yrule = vis.selectAll("g.y")
+    .data(y.ticks(10))
+  .enter().append("g")
+    .attr("class", "y");
+
+yrule.append("line")
+    .attr("x1", 0)
+    .attr("x2", w)
+    .attr("y1", y)
+    .attr("y2", y);
+
+yrule.append("text")
+    .attr("x", -3)
+    .attr("y", y)
+    .attr("dy", ".35em")
+    .attr("text-anchor", "end")
+    .text(y.tickFormat(10));
+
+vis.append("rect")
+    .attr("width", w)
+    .attr("height", h);
+
+vis.selectAll("path.dot")
+    .data(data)
+  .enter().append("path")
+    .attr("class", "dot")
+    .attr("stroke", function(d, i) { return color(i); })
+    .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; })
+    .attr("d", d3.svg.symbol()
+    .type(function(d, i) { return symbol(i); }));
+
+    </script>
+<script type="text/javascript">
+    var data = d3.range(100).map(function(i) {
+        return {x: i / 99, y: Math.random()};
+    });
+    var w = 450,
+            h = 450,
+            p = 20,
+            x = d3.scale.linear().range([0, w]),
+            y = d3.scale.linear().range([h, 0]),
+            symbol = d3.scale.ordinal().range(d3.svg.symbolTypes),
+            color = d3.scale.category10();
+    var vis = d3.select("body")
+            .append3d("svg")
+            .attr("width", w + p * 2)
+            .attr("height", h + p * 2)
+            .append3d("g")
+            .attr("transform", "translate(" + p + "," + p + ")");
+    /*
+     vis.selectAll3d("sphere")
+     .data(data)
+     .enter().append3d("sphere")
+     .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
+     */
+    vis.selectAll3d("path.dot")
+            .data(data)
+            .enter().append3d("path")
+            .attr("class", "dot")
+            .attr("stroke", function(d, i) { return color(i); })
+            .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; })
+            .attr("d", d3.svg.symbol()
+                    .type(function(d, i) { return symbol(i); }));
 </script>
 </body>
-
 </html>

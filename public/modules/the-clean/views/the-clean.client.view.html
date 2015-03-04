@@ -1,18 +1,44 @@
-<section data-ng-controller="TheCleanController">
+<section class="headerEnabled" data-ng-controller="TheCleanController">
     <!-- Menu Bar-->
 
-    <div id="text" style="display:block"><h1>The Clean</h1></div>
-	<!--<div id="text" style="display:inline-block"><h1>The Clean</h1><pre>asdfsafefsdfsdfsdfsf</pre></div>-->
-    <h2>Order</h2>
-    <h2>Status Board</h2>
-    <h2>Price</h2>
-    <h2>Coupon</h2>
+    <div id="text" style="display:block"><h1><strong>The Clean Project</strong></h1></div>
 
-    <div class="layout">
-        <label><input id="mixed" name="layout" type="radio" value="mixed" checked=""/> Mixed Tile Size</label>
-        <label><input id="fixed" name="layout" type="radio" value="fixed"/> Fixed Tile Size</label>
-        <label><input id="column" name="layout" type="radio" value="column"/> Single Column</label>
+    <h2><strong>Module Interface</strong></h2>
+	<!--<div id="text" style="display:inline-block"><h1>The Clean</h1><pre>asdfsafefsdfsdfsdfsf</pre></div>-->
+    <md-button class="md-warn md-raised md-hue-3" ng-click="tcProgress = toggle(tcProgress)"><strong>Progress {{tcProgress}}</strong></md-button>
+    <md-button class="md-warn md-raised md-hue-1" ng-click="tcOrder = toggle(tcOrder)"><strong>주문인터페이스 {{tcOrder}}</strong></md-button>
+    <md-button class="md-warn md-raised md-hue-2" ng-click="tcStartPage = toggle(tcStartPage)"><strong>시작페이지 {{tcStartPage}}</strong></md-button>
+    <md-button class="md-warn md-raised md-hue-3" ng-click="tcPrice = toggle(tcPrice)"><strong>가격표 {{tcPrice}}</strong></md-button>
+    <md-button class="md-warn md-raised md-hue-3" ng-click="tcPrice = toggle(tcPrice)"><strong>주문내역 {{tcPrice}}</strong></md-button>
+
+
+    <nvd3 options="options" data="data" ng-show="tcProgress"></nvd3>
+
+    <h2><strong>User Information</strong></h2>
+    <md-button class="md-warn md-raised md-hue-3" style="margin-bottom: 20px" ng-click="tcUserInfo = toggle(tcUserInfo)"><strong>User Information {{tcUserInfo}}</strong></md-button>
+    <div id="tc-user-info" ng-show="tcUserInfo">
+        <pre ng-show="authentication.user === ''">
+            로그인이 필요 합니다.
+        </pre>
+        <pre ng-show="authentication.user !== ''">
+            Current User ID: {{authentication.user.username}}
+            Email:{{authentication.user.email}}
+            Roles:{{authentication.user.roles}}
+        </pre>
     </div>
-    <button id="add">ADD TILE</button>
-    <div id="list"></div>
+
+
+    <tc-order ng-show="tcOrder" ng-model="toppings" user-info="authentication" ></tc-order>
+
+
+    <tc-start-page ng-show="tcStartPage"></tc-start-page>
+    <tc-price ng-show="tcPrice"></tc-price>
+
+    <!--<div class="layout">-->
+        <!--<label><input id="mixed" name="layout" type="radio" value="mixed" checked=""/> Mixed Tile Size</label>-->
+        <!--<label><input id="fixed" name="layout" type="radio" value="fixed"/> Fixed Tile Size</label>-->
+        <!--<label><input id="column" name="layout" type="radio" value="column"/> Single Column</label>-->
+    <!--</div>-->
+    <!--<button id="add">ADD TILE</button>-->
+    <!--<div id="list"></div>-->
 </section>

@@ -23,7 +23,9 @@
  **************************************************************/
 
 angular.module('the-clean')
+
     .directive('tcOrder',OrderDirective)
+
     .directive('tcOrderHeader', OrderHeader)
     .directive('tcGetRequires', GetRequires)
     .provider('$tcOrder', SelectProvider);
@@ -32,13 +34,24 @@ function OrderDirective($tcOrder, $interpolate, $compile, $parse) {
     return {
         restrict: 'E',
         templateUrl: 'modules/the-clean/directives/template/tc-order-ui-tpl.html',
-        require: ['mdSelect', 'ngModel'],
+        require: ['tcOrder', 'ngModel'],
         compile: compile,
         controller: function() {}
     };
 
     function compile(element, attr){
+        console.log(element);
         var labelEl=element.find('tc-order-label').remove();
+
+        return function postLink(scope, element, attr, ctrls){
+            console.log('postLink Function');
+            var tcOrderCtrl = ctrls[0];
+            var ngModel = ctrls[1];
+            var userInfo = ctrls[2];
+            console.log(tcOrderCtrl);
+            console.log(ngModel);
+            console.log(userInfo);
+        }
     }
 }
 

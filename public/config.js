@@ -13,7 +13,8 @@ var ApplicationConfiguration = (function() {
             'ui.bootstrap', //'ui.utils',
             'ngMaterial', /*'ng-context-menu', 'uiGmapgoogle-maps',*/
             //'smart-table'
-            //'oc.lazyLoad'
+            //'oc.lazyLoad',
+            'nvd3'
         ];
 
 	// Add a new vertical module
