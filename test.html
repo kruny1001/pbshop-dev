@@ -1,137 +1,84 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
+
 <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://d3js.org/d3.v2.js"></script>
     <style>
-        html, body, #map-canvas {
-            height: 100%;
-            margin: 0px;
-            padding: 0px
+        line.arrow {
+            stroke: #666;
+            stroke-width: 1px;
         }
-    </style>
-    <title>Place search pagination</title>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
-    <script>
-        var map, placesList;
-
-        function initialize() {
-            var pyrmont = new google.maps.LatLng(-33.8665433, 151.1956316);
-
-            map = new google.maps.Map(document.getElementById('map-canvas'), {
-                center: pyrmont,
-                zoom: 17
-            });
-
-            var request = {
-                location: pyrmont,
-                radius: 500,
-                types: ['store']
-            };
-
-            placesList = document.getElementById('places');
-
-            var service = new google.maps.places.PlacesService(map);
-            service.nearbySearch(request, callback);
+        marker#arrow {
+            fill: #666;
         }
-
-        function callback(results, status, pagination) {
-            if (status != google.maps.places.PlacesServiceStatus.OK) {
-                return;
-            } else {
-                createMarkers(results);
-
-                if (pagination.hasNextPage) {
-                    var moreButton = document.getElementById('more');
-
-                    moreButton.disabled = false;
-
-                    google.maps.event.addDomListenerOnce(moreButton, 'click',
-                            function() {
-                                moreButton.disabled = true;
-                                pagination.nextPage();
-                            });
-                }
-            }
-        }
-
-        function createMarkers(places) {
-            var bounds = new google.maps.LatLngBounds();
-
-            for (var i = 0, place; place = places[i]; i++) {
-                var image = {
-                    url: place.icon,
-                    size: new google.maps.Size(71, 71),
-                    origin: new google.maps.Point(0, 0),
-                    anchor: new google.maps.Point(17, 34),
-                    scaledSize: new google.maps.Size(25, 25)
-                };
-
-                var marker = new google.maps.Marker({
-                    map: map,
-                    icon: image,
-                    title: place.name,
-                    position: place.geometry.location
-                });
-
-                placesList.innerHTML += '<li>' + place.name + '</li>';
-
-                bounds.extend(place.geometry.location);
-            }
-            map.fitBounds(bounds);
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-
-    </script>
-    <style>
-        #results {
-            font-family: Arial, Helvetica, sans-serif;
-            position: absolute;
-            right: 5px;
-            top: 50%;
-            margin-top: -195px;
-            height: 380px;
-            width: 200px;
-            padding: 5px;
-            z-index: 5;
-            border: 1px solid #999;
-            background: #fff;
-        }
-        h2 {
-            font-size: 22px;
-            margin: 0 0 5px 0;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            height: 321px;
-            width: 200px;
-            overflow-y: scroll;
-        }
-        li {
-            background-color: #f1f1f1;
-            padding: 10px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        li:nth-child(odd) {
-            background-color: #fcfcfc;
-        }
-        #more {
-            width: 100%;
-            margin: 5px 0 0 0;
+        .link-label {
+            font-family: sans-serif;
+            font-size: 11px;
         }
     </style>
 </head>
+
 <body>
-<div id="map-canvas"></div>
-<div id="results">
-    <h2>Results</h2>
-    <ul id="places"></ul>
-    <button id="more">More results</button>
-</div>
+<script>
+
+    var nodes = [{x:80,y:150}, {x:40,y:10}, {x:200,y:30}];
+    var links = [{s:0,t:1,label:"foo"}, {s:0,t:2,label:"bar"}];
+
+    var w = 300;
+    var h = 300;
+
+    var svg = d3.select("body")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h);
+
+    // define marker
+    svg.append("svg:defs").selectAll("marker")
+            .data(["arrow"])
+            .enter().append("svg:marker")
+            .attr("id", String)
+            .attr("viewBox", "0 -5 10 10")
+            .attr("refX", 10)
+            .attr("refY", 0)
+            .attr("markerWidth", 10)
+            .attr("markerHeight", 10)
+            .attr("orient", "auto")
+            .append("svg:path")
+            .attr("d", "M0,-5L10,0L0,0");
+
+    svg.selectAll("line")
+            .data(links)
+            .enter()
+            .append("svg:line")
+            .attr("x1", function(d) { return nodes[d.s].x; })
+            .attr("y1", function(d) { return nodes[d.s].y; })
+            .attr("x2", function(d) { return nodes[d.t].x; })
+            .attr("y2", function(d) { return nodes[d.t].y; })
+            .attr("class", "link arrow")
+            .attr("marker-end", "url(#arrow)");
+
+    svg.selectAll("text")
+            .data(links)
+            .enter()
+            .append("svg:g")
+            .append("svg:text")
+            .text(function(d) { return d.label; })
+            .attr("class", "link-label")
+            .attr("text-anchor", "middle")
+            .attr("transform", function(d) {
+                var dx = (nodes[d.t].x - nodes[d.s].x),
+                        dy = (nodes[d.t].y - nodes[d.s].y);
+                var dr = Math.sqrt(dx * dx + dy * dy);
+                var offset = (1 - (1 / dr)) / 2;
+                var deg = 180 / Math.PI * Math.atan2(dy, dx);
+                var x = (nodes[d.s].x + dx * offset);
+                var y = (nodes[d.s].y + dy * offset);
+                return "translate(" + x + ", " + y + ") rotate(" + deg + ")";
+            });
+
+</script>
 </body>
+
 </html>
