@@ -1,0 +1,33 @@
+<div id="fileCreator" class="ins-container">
+    <div layout layout-sm="column">
+        <md-input-container flex>
+            <label>Class Name</label>
+            <input ng-model="assignment.firstName" placeholder="Placeholder text">
+        </md-input-container>
+        <md-input-container flex>
+            <label>Course #</label>
+            <input ng-model="assignment.dirName">
+        </md-input-container>
+    </div>
+    <div layout layout-sm="column">
+        <md-input-container flex>
+            <label>Start Date</label>
+            <input type="date" ng-model="assignment.dDate">
+        </md-input-container>
+        <md-input-container flex>
+            <label>Due Date</label>
+            <input type="date" ng-model="assignment.dDate">
+        </md-input-container>
+    </div>
+    <div layout="column" layout-align="center center" style="min-height: 200px;">
+        <p>Select Type of File</p>
+        <md-select ng-model="neighborhood" placeholder="Document Type" flex>
+            <md-option ng-value="opt" ng-repeat="opt in docTypes">{{ opt }}</md-option>
+        </md-select>
+    </div>
+    <div layout layout-sm="column">
+        <md-button class="md-raised md-primary" style="margin-bottom:20px;" ng-click="showCustomToast()">Publish</md-button>
+        <md-button class="md-raised md-primary" style="margin-bottom:20px;" ng-click="showCustomToast()">Save</md-button></div>
+
+    <div class="label">Create Assignment UI</div>
+</div>

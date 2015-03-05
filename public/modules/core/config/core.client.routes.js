@@ -16,7 +16,9 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			templateUrl: 'modules/core/views/home.client.view.html'
 		});
 	}
-]);
+]).constant("devConfig", {
+		"directive": "red"
+	});
 
 
 /**
