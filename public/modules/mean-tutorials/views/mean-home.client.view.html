@@ -7,6 +7,63 @@
         </div>
     </div>
 
+
+    <md-content layout="column" layout-align="center center">
+        <md-content class="meanT-homeFirstRow">
+
+            <md-button ng-click="toggleLeft()" class="md-primary">Menu</md-button>
+            <md-button ng-click="toggleRight()" class="md-primary">My Page</md-button>
+
+            <div class="meanT-headButtonGroup">
+                <cal-date></cal-date>
+            </div>
+
+            <!--<div class="meanT-headTitle" color-border="colorBorder.header">-->
+            <div class="meanT-headTitle">
+                <strong>Welcome to MEAN Tutorials</strong>
+            </div>
+
+            <div class="meanT-headSubTitle" hide-sm>
+                <strong>Mean Tutorials</strong> is a team for scripted, high-performance HTML5 technologies that works
+                in all major browsers. No other delivers such advanced.<br/><br/>
+                <a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">
+                    <img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">
+                </a>
+            </div>
+        </md-content>
+
+        <md-content flex class="md-padding">
+
+
+            <div class="meanT-headSubTitle" show-sm hide-gt-sm>
+                <strong>Mean Tutorials</strong> is a team for scripted, high-performance HTML5 technologies that works
+                in all major browsers. No other delivers such advanced.<br/><br/>
+                <a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">
+                    <img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">
+                </a>
+            </div>
+
+            <div class="meanT-contentTitle">
+                <strong>What We Are Doing</strong>
+            </div>
+
+            <mj-home-ani></mj-home-ani>
+
+            <hr/>
+
+            <div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
+            <div class="meanT-headSubTitle">
+                You can check out our current project.
+            </div>
+            <ut-calendar></ut-calendar>
+
+            <hr/><mac-window info="announcements"></mac-window>
+            <hr/><mac-window info="projects"></mac-window>
+            <hr/><mac-window info="techs"></mac-window>
+
+        </md-content>
+    </md-content>
+
     <section layout="row">
         <!--<md-sidenav class="md-sidenav-left md-whiteframe-z2 headerEnabled" md-component-id="left" md-is-locked-open="$media('gt-md')">-->
         <md-sidenav class="md-sidenav-left md-whiteframe-z2 headerEnabled" md-component-id="left">
@@ -36,49 +93,9 @@
             </md-content>
         </md-sidenav>
 
-        <md-content flex class="md-padding">
 
-            <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
-            Menu
-        </md-button>
-            <md-button ng-click="toggleRight()" class="md-primary">
-                My Page
-            </md-button>
-            <div class="meanT-headButtonGroup">
-            </div>
 
-            <!--<div class="meanT-headTitle" color-border="colorBorder.header">-->
-            <div class="meanT-headTitle">
-                <strong>Welcome to MEAN Tutorials</strong>
-            </div>
 
-            <div class="meanT-headSubTitle">
-                <strong>Mean Tutorials</strong> is a team for scripted, high-performance HTML5 technologies that works
-                in all major browsers. No other delivers such advanced.<br/><br/>
-                <a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">
-                    <img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">
-                </a>
-            </div>
-            <hr/>
-            <div class="meanT-contentTitle">
-                <strong>What We Are Doing</strong>
-            </div>
-
-            <mj-home-ani></mj-home-ani>
-
-            <hr/>
-
-            <div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
-            <div class="meanT-headSubTitle">
-                You can check out our current project.
-            </div>
-            <ut-calendar></ut-calendar>
-
-            <hr/><mac-window info="announcements"></mac-window>
-            <hr/><mac-window info="projects"></mac-window>
-            <hr/><mac-window info="techs"></mac-window>
-
-        </md-content>
 
         <!-- Right Menu-->
         <md-sidenav class="md-sidenav-right md-whiteframe-z2 headerEnabled" md-component-id="right">
