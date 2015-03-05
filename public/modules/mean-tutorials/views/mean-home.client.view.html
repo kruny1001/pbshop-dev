@@ -1,20 +1,28 @@
 <section class="headerEnabled" ng-controller="MeanHomeController" layout="column" layout-fill>
+
     <div class="meanT-headToolBar">
         <div class="meanT-brandName">
-            <a href="/#!/versioning" target="_blank">Version: 0.0.2</a>
+            <a href="/#!/versioning" target="_blank">Version: 0.0.3</a>
             <span style="margin-left:20px;">{{notice}}</span>
         </div>
     </div>
+
     <section layout="row">
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2 headerEnabled" md-component-id="left" md-is-locked-open="$media('gt-md')">
+        <!--<md-sidenav class="md-sidenav-left md-whiteframe-z2 headerEnabled" md-component-id="left" md-is-locked-open="$media('gt-md')">-->
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2 headerEnabled" md-component-id="left">
             <md-toolbar MeanHomeControllerclass="md-theme-indigo">
                 <h1 class="md-toolbar-tools">MENU</h1>
             </md-toolbar>
-            <md-content class="md-padding">
-            <!--<md-content class="md-padding" layout="column" layout-align="center start">-->
+            <!--<md-content class="md-padding">-->
+            <md-content class="md-padding" layout="column" layout-align="center start">
+                <H3>Kevin S</H3>
                 <md-button ui-sref="ads1" ng-click="close()" class="md-primary" hide-gt-md>
-                    ADS1
+                    PORTFOLIO
                 </md-button>
+                <md-button ui-sref="ads1" ng-click="close()" class="md-primary" hide-gt-md>
+                    CV
+                </md-button>
+                <H3>Ongoing Project</H3>
                 </md-button>
                 <md-button ui-sref="the-clean" ng-click="close()" class="md-primary">
                     The Clean
@@ -22,19 +30,9 @@
                 <md-button ui-sref="top-hair-wigs" ng-click="close()" class="md-primary">
                     Top Hair Wigs
                 </md-button>
-                <md-button ng-click="close()" class="md-primary">
-                    Projects
+                <md-button ui-sref="top-hair-wigs" ng-click="close()" class="md-primary">
+                    E-Learning App
                 </md-button>
-                <md-button ng-click="close()" class="md-primary">
-                    Comments
-                </md-button>
-                <md-button ng-click="close()" class="md-primary">
-                    Inbox
-                </md-button>
-                <p hide-md show-gt-md>
-                    This sidenav is locked open on your device. To go back to the default behavior,
-                    narrow your display.
-                </p>
             </md-content>
         </md-sidenav>
 
@@ -66,41 +64,8 @@
                 <strong>What We Are Doing</strong>
             </div>
 
-            <figure class="meanT-figure">
-                <div class="stretchy-wrapper">
-                    <div id="ani-title" class="ani-title">Click Play Button</div>
-                    <img id='youtubePlayButton'
-                         class="meanT-imgCenter"
-                         ng-src="modules/mean-tutorials/img/youtubePlay.png"
-                         ng-click="clickPlayBtn()" />
-                    <div id="ani-techs" class="ani-techs">
-                        <img id='meanTotem'
-                             class="meanT-hide"
-                             ng-src="modules/mean-tutorials/img/mean_totem.png"
-                             ng-click="clickPlayBtn()" />
-                        <div id="meanTotem-desc" class="meanT-hide ani-rightSideDesc">
-                            <br/>
-                            <strong>M</strong>ongoDB
-                            <br/>
-                            <strong>E</strong>xpress
-                            <br/>
-                            <strong>A</strong>ngularJS
-                            <br/>
-                            <strong>N</strong>odeJS
-                            <br/>
-                        </div>
-                    </div>
-                </div>
-            </figure>
+            <mj-home-ani></mj-home-ani>
 
-            <div layout="row" layout-align="center">
-                <md-button class="md-primary" ng-click="clickPlayBtn()">
-                    Click Youtube Btn
-                </md-button>
-                <md-button class="md-primary" ng-click="resetPlayBtn()">
-                    Reset Youtube Btn
-                </md-button>
-            </div>
             <hr/>
 
             <div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
