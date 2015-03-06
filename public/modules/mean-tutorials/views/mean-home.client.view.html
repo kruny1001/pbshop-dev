@@ -7,12 +7,12 @@
         </div>
     </div>
 
-
     <md-content layout="column" layout-align="center center">
         <md-content class="meanT-homeFirstRow">
-
-            <md-button ng-click="toggleLeft()" class="md-primary">Menu</md-button>
-            <md-button ng-click="toggleRight()" class="md-primary">My Page</md-button>
+            <div style="position:fixed; z-index: 999">
+                <md-button ng-click="toggleLeft()" class="md-primary"><b>Menu</b></md-button>
+                <md-button ng-click="toggleRight()" class="md-primary"><b>My Page</b></md-button>
+            </div>
 
             <div class="meanT-headButtonGroup">
                 <cal-date></cal-date>
@@ -66,7 +66,8 @@
 
     <section layout="row">
         <!--<md-sidenav class="md-sidenav-left md-whiteframe-z2 headerEnabled" md-component-id="left" md-is-locked-open="$media('gt-md')">-->
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2 headerEnabled" md-component-id="left">
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2 headerEnabled" md-component-id="left"
+                    style="position:fixed; z-index: 999; top:0">
             <md-toolbar MeanHomeControllerclass="md-theme-indigo">
                 <h1 class="md-toolbar-tools">MENU</h1>
             </md-toolbar>
@@ -98,7 +99,8 @@
 
 
         <!-- Right Menu-->
-        <md-sidenav class="md-sidenav-right md-whiteframe-z2 headerEnabled" md-component-id="right">
+        <md-sidenav class="md-sidenav-right md-whiteframe-z2 headerEnabled" md-component-id="right"
+                    style="position:fixed; z-index: 999; top:0">
             <md-toolbar class="md-tall md-warn md-hue-5">
                 <div class="sidebar-header header-cover"
                      style="background-image: url(http://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);">

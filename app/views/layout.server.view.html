@@ -97,6 +97,15 @@
 	<!--Embedding The User Object-->
 	<script type="text/javascript">
 		var user = {{ user | json | safe }};
+
+        $(document).on( 'scroll', function(){
+            console.log('11111');
+            if($(document).scrollTop() > 150)
+                TweenMax.to($('header'), 1, {y:-51});
+            else
+                TweenMax.to($('header'), 1, {y:0});
+        });
+
 	</script>
 
 	<!--Application JavaScript Files-->

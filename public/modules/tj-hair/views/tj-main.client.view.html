@@ -1,0 +1,148 @@
+<section data-ng-controller="TjMainController">
+	<div id='frontLogo' ng-style="style()" style="background-color: #7BD2C9" resize>
+		<div style="position: absolute; top:0; z-index:9999; ">
+			<div style="color:#FF7BAC; font-size:3.5em;">TJ Hair Salon</div>
+			<div style="color:#FF7BAC; font-size:1.5em;">Korean Hair Designer</div>
+			<div style="color:#ec971f; font-size:2.5em; margin:auto "> The Best Place to get a Hair Cut</div>
+		</div>
+	</div>
+	<section class="tjHeader">
+		<md-button class="md-raised md-warn" ng-click="scrollTo('tjAbout')">About</md-button>
+		<md-button class="md-raised md-warn" ng-click="scrollTo('tjPrice')">Price</md-button>
+		<md-button class="md-raised md-warn" ng-click="scrollTo('tjMap')">Map</md-button>
+		<md-button class="md-raised md-warn" ng-click="scrollTo('tjReview')">Review</md-button>
+		<div> Facebook </div>
+	</section>
+	<section id="topSection" class="tjTopSection">
+		<h1>TJ Hair Salon</h1>
+		<p>Korean Hair Designer</p>
+
+		<svg id="backGroundSvg" style="width:100%; height:100%; display:none">
+		</svg>
+	</section>
+	<section class="tjAbout">
+		<h1>About TJ Hair</h1>
+		<p>Hi, I'm TJ.<br/>
+			My work is focused principally on the Hair Deign.</p>
+	</section>
+	<section class="tjPrice">
+		<h1>Service Menu</h1>
+		<p>We offer those services</p>
+		<div layout="row" layout-md="column" layout-sm="column" layout-align="center center">
+				<md-card  style="background-color: #ec971f"class="md-whiteframe-z2">
+					<div>
+						<svg class="menuItemSvg" id="cut"></svg>
+						<div class="menuTitle" >Cut</div>
+						<div class="menuItem" >Men(+11yr): $20</div>
+						<div class="menuItem" >Women(+11yr): $25</div>
+						<div class="menuItem" >kid(<11yr): $20</div>
+					</div>
+				</md-card>
+				<md-card style="background-color: #ec971f" class="md-whiteframe-z2">
+					<div>
+						<svg class="menuItemSvg" id="perm"></svg>
+						<div class="menuTitle" >Perm</div>
+						<div class="menuItem">Men(+11yr): $20</div>
+						<div class="menuItem">Women(+11yr): $25</div>
+						<div class="menuItem">kid(<11yr): $20</div>
+					</div>
+				</md-card>
+				<md-card style="background-color: #ec971f" class="md-whiteframe-z2">
+					<div>
+						<svg class="menuItemSvg"id="color"></svg>
+						<div class="menuTitle">Color</div>
+						<div class="menuItem">Men(+11yr): $20</div>
+						<div class="menuItem">Women(+11yr): $25</div>
+						<div class="menuItem">kid(<11yr): $20</div>
+					</div>
+				</md-card>
+				<md-card style="background-color: #ec971f" class="md-whiteframe-z2">
+					<div>
+						<svg class="menuItemSvg" id="treatment"></svg>
+						<div class="menuTitle">Treatment</div>
+						<div class="menuItem">Men(+11yr): $20</div>
+						<div class="menuItem">Women(+11yr): $25</div>
+						<div class="menuItem">kid(<11yr): $20</div>
+					</div>
+				</md-card>
+		</div>
+
+		<!--
+
+		<div class="tjMenu" layout="row" layout-md="column" layout-align="space-around start"
+			 layout-margin>
+			<div flex>
+				<svg class="menuItemSvg" id="cut"></svg>
+				<div class="menuTitle" >Cut</div>
+				<div class="menuItem" >Men(+11yr): $20</div>
+				<div class="menuItem" >Women(+11yr): $25</div>
+				<div class="menuItem" >kid(<11yr): $20</div>
+			</div>
+			<div flex>
+				<svg class="menuItemSvg" id="perm"></svg>
+				<div class="menuTitle" >Perm</div>
+				<div class="menuItem">Men(+11yr): $20</div>
+				<div class="menuItem">Women(+11yr): $25</div>
+				<div class="menuItem">kid(<11yr): $20</div>
+			</div>
+			<div flex>
+				<svg class="menuItemSvg"id="color"></svg>
+				<div class="menuTitle">Color</div>
+				<div class="menuItem">Men(+11yr): $20</div>
+				<div class="menuItem">Women(+11yr): $25</div>
+				<div class="menuItem">kid(<11yr): $20</div>
+			</div>
+			<div flex>
+				<svg class="menuItemSvg" id="treatment"></svg>
+				<div class="menuTitle">Treatment</div>
+				<div class="menuItem">Men(+11yr): $20</div>
+				<div class="menuItem">Women(+11yr): $25</div>
+				<div class="menuItem">kid(<11yr): $20</div>
+			</div>
+		</div>
+		-->
+	</section>
+
+	<section class="tjMap">
+		<h1>Contact & Location</h1>
+		<p>(763) 544-1700</p>
+		<p>
+			2550 Hillsboro Avenue North, Golden Valley, MN 55427<br/>
+		</p>
+		<div class="mapContainer">
+			<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+				<ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+				</ui-gmap-marker>
+			</ui-gmap-google-map>
+		</div>
+	</section>
+
+	<section class="tjReview">
+		<h1>Yelp Reviews</h1>
+		<p style="text-align:center;">http://www.yelp.com/biz/tjs-hair-studio-golden-valley-2</p>
+		<md-content style="margin-left:10px; margin-right:10px; padding-bottom:10px;">
+			<md-list>
+				<md-item ng-repeat="item in todos">
+					<md-item-content style="padding: 0px 27px 0px 27px;">
+						<div class="md-tile-left">
+							<img ng-src="{{item.face}}" class="tjReviewFace" alt="{{item.who}}">
+							<div>{{item.who}}</div>
+							<div>{{item.where}}</div>
+							<div>{{item.when}}</div>
+						</div>
+						<div class="md-tile-content">
+
+							<p>
+								{{item.notes}}
+							</p>
+						</div>
+					</md-item-content>
+				</md-item>
+			</md-list>
+		</md-content>
+	</section>
+
+	<section class="tjFooter">
+		<p>Designed By Kevin S.</p>
+	</section>
+</section>

@@ -1,0 +1,292 @@
+.svgTestClass{
+    position:absolute;
+    height: 100%;
+    width:100%;
+    bottom:0;
+}
+
+.angular-google-map-container {
+    height: 400px;
+    position: relative;
+}
+
+.tjHeader{
+    color:white;
+    z-index:999;
+    width:100%;
+    position: fixed;
+    margin-top:5px;
+    margin-left:5px;
+}
+
+.tjHeader .tjBrand {
+
+}
+
+.tjHeader div{
+    margin: auto;
+    display:inline;
+    margin-right:10px;
+    margin-left:10px;
+}
+
+.tjTopSection{
+    position: relative;
+    padding-top: 160px;
+    /*padding-bottom: 160px;*/
+    background-color:#3DB3B9;
+    color:white
+}
+
+.tjTopSection h1{
+    font-size:5.2em;
+    line-height: 0.8;
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:0.5rem;
+}
+
+.tjTopSection p{
+    font-size:1.4em;
+    text-align:center;
+}
+
+
+@media (max-width: 380px) {
+    .tjTopSection{
+        padding-top: 1px;
+    }
+    .tjTopSection h1{
+        font-size:3.2em;
+    }
+    .tjTopSection p{
+        font-size:1.2em;
+    }
+}
+
+.tjAbout{
+    padding: 15px 0px 100px 0px;
+    background-color:white;
+    color:#8C8C8C;
+}
+
+.tjAbout h1{
+    font-size:3.5em;
+    line-height: 0.8;
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:0.5rem;
+
+}
+
+.tjAbout p{
+    font-size:1.4em;
+    text-align:center;
+}
+
+@media (max-width: 380px) {
+    .tjAbout{
+        padding-top: 1px;
+    }
+    .tjAbout h1{
+        font-size:3.2em;
+    }
+    .tjAbout p{
+        font-size:1.2em;
+    }
+}
+
+.tjPrice{
+    padding: 15px 0px 100px 0px;
+    background-color:#DB6464;
+    color:white;
+}
+
+.tjMenu{
+    margin-top:20px;
+}
+
+.menuTitle{
+    border-color:white;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    text-align: center;
+    font-size:1.6em;
+}
+
+.menuItem{
+    text-align: center;
+    font-size:1.2em;
+}
+
+.tjPrice h1{
+    text-align:center;
+    display:block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end:0px;
+    font-size:3.5em;
+    line-height: 0.8;
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:0.5rem;
+
+}
+
+.tjPrice p{
+    font-size:1.4em;
+    text-align:center;
+
+}
+
+@media (max-width: 380px) {
+    .tjPrice{
+        padding-top: 1px;
+    }
+    .tjPrice h1{
+        font-size:3.2em;
+    }
+    .tjPrice p{
+        font-size:1.2em;
+    }
+}
+
+.tjMap{
+    padding: 15px 0px 100px 0px;
+    background-color:#1F2B39;
+    color:white;
+}
+
+.tjMap h1{
+    display:block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end:0px;
+    font-size:3.5em;
+    line-height: 0.8;
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:0.5rem;
+}
+
+.tjMap p{
+    font-size:1.4em;
+    text-align:center;
+}
+
+.mapContainer{
+    display: table;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 380px) {
+    .tjMap{
+        padding-top: 1px;
+    }
+    .tjMap h1{
+        font-size:3.2em;
+    }
+    .tjMap p{
+        font-size:1.2em;
+    }
+
+    .mapContainer{
+        display: table;
+        width: 96%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.tjFooter{
+    padding: 15px 0px 15px 0px;
+    background-color: #f5973d;
+    color:white;
+}
+
+
+
+
+
+.tjFooter h1{
+    display:block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end:0px;
+    font-size:3.5em;
+    line-height: 0.8;
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:0.5rem;
+}
+
+.tjFooter p{
+    font-size:1.4em;
+    text-align:center;
+}
+
+.menuItemSvg{
+    display: block;
+    margin: auto;
+    padding:auto;
+
+}
+
+
+
+.tjReviewFace {
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    width: 48px;
+    margin: 16px; }
+
+
+.tjReview{
+    padding: 15px 0px 100px 0px;
+    background-color:#B90B03;
+    color:white;
+}
+
+.tjReview h1{
+    font-size:3.5em;
+    line-height: 0.8;
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:0.5rem;
+
+}
+
+.tjReview p{
+    font-size:1em;
+    color:#8C8C8C;
+}
+
+.tjReview .md-item-content{
+    padding: 0px 27px 0px 27px;
+}
+
+.tjReview .md-tile-left{
+    color:#8C8C8C;
+    width:104px;
+    margin-right:13px;
+}
+
+
+@media (max-width: 380px) {
+    .tjReview{
+        padding-top: 1px;
+    }
+    .tjReview h1{
+        font-size:3.2em;
+    }
+    .tjReview p{
+        font-size:0.4em;
+    }
+
+    .tjReview .md-tile-left{
+        width:67px;
+        font-size:0.4em;
+        margin-right:5px;
+    }
+}
+

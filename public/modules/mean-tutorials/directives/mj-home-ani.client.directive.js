@@ -25,6 +25,13 @@ angular.module('mean-tutorials').directive('mjHomeAni', [
 					TweenMax.to(title, 0.5, {x:0});
 					TweenMax.to([meanTotem, meanTotemDesc], 1.3, {display:'none', height: '0%', opacity:0});
 				}
+
+                scope.aniTrigger = function(){
+                    var tl = new TimelineMax();
+                    var t1 = TweenMax.to($('#meanTotem'), 1, {yPercent:-45, force3D:true});
+                    var t2 = TweenMax.to($('#meanTotem'), 1, {yPercent:0, force3D:true});
+                    tl.add(t1).add(t2);
+                }
 				// End Animation //
 			}
 		};

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="b1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+<g id="whole">
+	<path fill="#4A8DCE" stroke="#E87552" stroke-width="3" stroke-miterlimit="10" d="M284.8,234.2H15.4c-5.3,0-9.5-4.3-9.5-9.5V74.6
+		c0-5.3,4.3-9.5,9.5-9.5h269.3c5.3,0,9.5,4.3,9.5,9.5v150.1C294.3,230,290,234.2,284.8,234.2z"/>
+	<path fill="#FFFFFF" stroke="#E87552" stroke-width="3" stroke-miterlimit="10" d="M277.1,230.1H22.9c-5.3,0-9.5-4.3-9.5-9.5V79.4
+		c0-5.3,4.3-9.5,9.5-9.5h254.1c5.3,0,9.5,4.3,9.5,9.5v141.2C286.6,225.8,282.3,230.1,277.1,230.1z"/>
+	<path fill="#5AE3ED" d="M188.3,224.3H24.8c-4.4,0-7.9-3.5-7.9-7.9V83c0-4.4,3.5-7.9,7.9-7.9h163.4c4.4,0,7.9,3.5,7.9,7.9v133.3
+		C196.2,220.7,192.7,224.3,188.3,224.3z"/>
+	<path fill="#5AE3ED" d="M274.5,224.3h-65c-4.8,0-8.7-3.9-8.7-8.7V83.8c0-4.8,3.9-8.7,8.7-8.7h65c4.8,0,8.7,3.9,8.7,8.7v131.7
+		C283.3,220.4,279.4,224.3,274.5,224.3z"/>
+	
+		<line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" x1="265.1" y1="188.4" x2="254.2" y2="199.3"/>
+	<path fill="#FFFFFF" d="M266.1,162.3h-44.2c-3.1,0-5.5-2.5-5.5-5.5v-13.3c0-3.1,2.5-5.5,5.5-5.5h44.2c3.1,0,5.5,2.5,5.5,5.5v13.3
+		C271.6,159.8,269.1,162.3,266.1,162.3z"/>
+	
+		<line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-miterlimit="10" x1="168" y1="171.2" x2="149.9" y2="189.2"/>
+	
+		<line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" x1="275.5" y1="192.3" x2="254.3" y2="213.5"/>
+	
+		<line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-miterlimit="10" x1="185.2" y1="177.6" x2="150.1" y2="212.7"/>
+	<path d="M243.5,116.2c5.7,12,21.5,25.9,21.5,25.9"/>
+	<path d="M242,116.2c-5.7,12-21.5,25.9-21.5,25.9"/>
+	<circle fill="#FC3D03" cx="242.8" cy="116.3" r="3.7"/>
+	<circle fill="#FF5D0E" stroke="#000000" stroke-miterlimit="10" cx="265.1" cy="142.5" r="2.6"/>
+	<circle fill="#FF5D0E" stroke="#000000" stroke-miterlimit="10" cx="220.1" cy="142.5" r="2.6"/>
+	<rect x="227.3" y="145.1" fill="none" width="29.1" height="10"/>
+	<text transform="matrix(1 0 0 1 227.2588 153.585)" font-family="'MyriadPro-Regular'" font-size="12">OPEN</text>
+	<path fill="#4A8DCE" stroke="#E87552" stroke-width="3" stroke-miterlimit="10" d="M274.6,59.3H28.9c-6.6,0-12-5.4-12-12v-3.2
+		c0-6.6,5.4-12,12-12h245.7c6.6,0,12,5.4,12,12v3.2C286.6,53.9,281.2,59.3,274.6,59.3z"/>
+	<rect x="118.6" y="39.9" fill="none" width="63.1" height="11.7"/>
+	<text transform="matrix(1 0 0 1 118.5801 48.4166)" font-family="'MyriadPro-Regular'" font-size="12">TJ Hair Shop</text>
+</g>
+</svg>
