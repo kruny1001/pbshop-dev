@@ -86,30 +86,43 @@ exports.createFile = function(req, res) {
 	});
 };
 
-/**
- * Show the current Gs app
- */
-exports.read = function(req, res) {
 
+exports.createHWD2l = function(req, res) {
+    var response = req;
+    console.log(req.body);
+    res.jsonp({result: "hello world"});
+
+    var drive = google.drive('v2');
+    var OAuth2 = google.auth.OAuth2;
+
+    var oauth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
+    oauth2Client.setCredentials({
+        access_token: req.user.additionalProvidersData.google.accessToken,
+        refresh_token: req.user.additionalProvidersData.google.refreshToken
+    });
+
+    oauth2Client.refreshAccessToken(function(err, tokens) {
+        oauth2Client.setCredentials(tokens);
+        // insertion example
+        drive.files.insert({
+            resource: {
+                title: 'refreshToken Folder',
+                mimeType: 'application/vnd.google-apps.folder'
+            },
+            auth: oauth2Client
+        }, function(err, response) {
+            if (err) {
+                console.log('An error occured', err);
+                return;
+            }
+            res.jsonp(response);
+        });
+    });
+}
+
+exports.contacts = function(req, res) {
+    Contact.find({}, function(err, obj) {
+        res.json(obj)
+    });
 };
 
-/**
- * Update a Gs app
- */
-exports.update = function(req, res) {
-
-};
-
-/**
- * Delete an Gs app
- */
-exports.delete = function(req, res) {
-
-};
-
-/**
- * List of Gs apps
- */
-exports.list = function(req, res) {
-
-};

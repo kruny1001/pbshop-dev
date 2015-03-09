@@ -14,7 +14,8 @@ var ApplicationConfiguration = (function() {
             'ngMaterial', /*'ng-context-menu', 'uiGmapgoogle-maps',*/
             //'smart-table'
             //'oc.lazyLoad',
-            'nvd3'
+            'nvd3',
+            'braintree-angular'
         ];
 
 	// Add a new vertical module
@@ -2125,7 +2126,8 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 	}
 ]).constant("devConfig", {
 		"directive": "red"
-	});
+	})
+    .constant('clientTokenPath', 'eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIyYmFjOWMxNjE4ZjA3Mzg2YjFmNjRkYTk1Mjc1MTliOWQ3NzMyMjIxOTIxOWUzZDgzOGI4MDVlZWExYzBkY2JhfGNyZWF0ZWRfYXQ9MjAxNS0wMy0wNlQxOTo1NToxOC45MTE2MTMxMjcrMDAwMFx1MDAyNm1lcmNoYW50X2lkPWRjcHNweTJicndkanIzcW5cdTAwMjZwdWJsaWNfa2V5PTl3d3J6cWszdnIzdDRuYzgiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvZGNwc3B5MmJyd2RqcjNxbi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzL2RjcHNweTJicndkanIzcW4vY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsInRocmVlRFNlY3VyZSI6eyJsb29rdXBVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvZGNwc3B5MmJyd2RqcjNxbi90aHJlZV9kX3NlY3VyZS9sb29rdXAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwibWVyY2hhbnRBY2NvdW50SWQiOiJzdGNoMm5mZGZ3c3p5dHc1IiwiY3VycmVuY3lJc29Db2RlIjoiVVNEIn0sImNvaW5iYXNlRW5hYmxlZCI6dHJ1ZSwiY29pbmJhc2UiOnsiY2xpZW50SWQiOiIxMWQyNzIyOWJhNThiNTZkN2UzYzAxYTA1MjdmNGQ1YjQ0NmQ0ZjY4NDgxN2NiNjIzZDI1NWI1NzNhZGRjNTliIiwibWVyY2hhbnRBY2NvdW50IjoiY29pbmJhc2UtZGV2ZWxvcG1lbnQtbWVyY2hhbnRAZ2V0YnJhaW50cmVlLmNvbSIsInNjb3BlcyI6ImF1dGhvcml6YXRpb25zOmJyYWludHJlZSB1c2VyIiwicmVkaXJlY3RVcmwiOiJodHRwczovL2Fzc2V0cy5icmFpbnRyZWVnYXRld2F5LmNvbS9jb2luYmFzZS9vYXV0aC9yZWRpcmVjdC1sYW5kaW5nLmh0bWwifSwibWVyY2hhbnRJZCI6ImRjcHNweTJicndkanIzcW4iLCJ2ZW5tbyI6Im9mZmxpbmUiLCJhcHBsZVBheSI6eyJzdGF0dXMiOiJtb2NrIiwiY291bnRyeUNvZGUiOiJVUyIsImN1cnJlbmN5Q29kZSI6IlVTRCIsIm1lcmNoYW50SWRlbnRpZmllciI6Im1lcmNoYW50LmNvbS5icmFpbnRyZWVwYXltZW50cy5kZXYtZGNvcGVsYW5kIiwic3VwcG9ydGVkTmV0d29ya3MiOlsidmlzYSIsIm1hc3RlcmNhcmQiLCJhbWV4Il19fQ==');
 
 
 /**
@@ -3262,6 +3264,7 @@ angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '
 
 		$scope.authentication = Authentication;
 		console.log($scope.authentication);
+
 		// Create new D2l hw
 		$scope.create = function() {
 			console.log('Create');
@@ -3339,8 +3342,13 @@ angular.module('d2l').controller('D2lStuController', ['$scope',
 
 'use strict';
 
-angular.module('d2l').controller('InsClassController', ['$scope','$http',
-	function($scope,$http) {
+angular.module('d2l').controller('InsClassController', ['$scope','$http','CreateFile',
+	function($scope,$http,CreateFile) {
+
+        var objFile = CreateFile.create();
+        console.log(objFile.getInfo());
+        //console.log(objFile.query());
+
         TweenMax.set($('#fileCreator'), {alpha:0, yPercent:-150});
         $scope.assignments = [];
         //$scope.isOpen=false;
@@ -3418,7 +3426,7 @@ angular.module('d2l')
 		};
 	}]);
 
-function HwGenerator($mdToast, devConfig) {
+function HwGenerator($mdToast, devConfig, D2lHws) {
 	return {
 		templateUrl: 'modules/d2l/directives/template/d2l-hw-generator-tpl.html',
 		restrict: 'E',
@@ -3426,6 +3434,22 @@ function HwGenerator($mdToast, devConfig) {
 			scope.isOpen=true;
 			//scope.devColor = devConfig.directive;
 			scope.docTypes = ['Docs', 'Sheets', 'Slides', 'PDF'];
+
+            scope.create = function() {
+                console.log('Create');
+                // Create new D2l hw object
+                var d2lHw = new D2lHws (scope.project);
+
+                // Redirect after save
+                d2lHw.$save(function(response) {
+                    $location.path('d2l-hws/' + response._id);
+
+                    // Clear form fields
+                    $scope.name = '';
+                }, function(errorResponse) {
+                    $scope.error = errorResponse.data.message;
+                });
+            };
 
 			scope.createFile = function(){
 				//$http.get('/createFile').success(function(data, status, headers, config){
@@ -3480,7 +3504,39 @@ function HwGenerator($mdToast, devConfig) {
 		}
 	};
 }
-HwGenerator.$inject = ["$mdToast", "devConfig"];
+HwGenerator.$inject = ["$mdToast", "devConfig", "D2lHws"];
+
+'use strict';
+
+angular.module('d2l').factory('CreateFile',CreateFile);
+
+function CreateFile($resource) {
+    return {
+        create: create,
+        read: read
+    };
+
+    function create(){
+        console.log('Create Function from CreateFile');
+        var o = $resource('/userInfo',
+            {userId: 123, cardId:'@id'},
+            {
+                charge:{method:'POST', params:{charge:true}},
+                getInfo:{method:'GET'}
+            });
+        return o;
+    }
+
+    function read(){
+        console.log('read Function from CreateFile');
+        var o =$resource('/createFile', {},
+            {
+                readFile:{method:'GET', params:{id:'@id'}}
+            });
+        return o;
+    }
+}
+CreateFile.$inject = ["$resource"];
 
 'use strict';
 
@@ -4330,6 +4386,9 @@ MeanLoginCtrl.$inject = ["$scope", "Authentication", "$mdDialog"];
 function MeanHomeController(
 		$scope, $state, $http, $mdDialog,
 		$mdSidenav, $log, Authentication) {
+
+
+
 
 	$scope.date = {
 		month: moment().format("MMM").toUpperCase(),

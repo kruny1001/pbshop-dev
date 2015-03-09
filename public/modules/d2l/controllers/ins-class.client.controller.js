@@ -1,7 +1,12 @@
 'use strict';
 
-angular.module('d2l').controller('InsClassController', ['$scope','$http',
-	function($scope,$http) {
+angular.module('d2l').controller('InsClassController', ['$scope','$http','CreateFile',
+	function($scope,$http,CreateFile) {
+
+        var objFile = CreateFile.create();
+        console.log(objFile.getInfo());
+        //console.log(objFile.query());
+
         TweenMax.set($('#fileCreator'), {alpha:0, yPercent:-150});
         $scope.assignments = [];
         //$scope.isOpen=false;

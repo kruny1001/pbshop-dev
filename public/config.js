@@ -14,7 +14,8 @@ var ApplicationConfiguration = (function() {
             'ngMaterial', /*'ng-context-menu', 'uiGmapgoogle-maps',*/
             //'smart-table'
             //'oc.lazyLoad',
-            'nvd3'
+            'nvd3',
+            'braintree-angular'
         ];
 
 	// Add a new vertical module

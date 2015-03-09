@@ -90,6 +90,8 @@ module.exports = {
                 'public/lib/nvd3/nv.d3.min.js',
                 'public/lib/angular-nvd3/dist/angular-nvd3.min.js',
 
+                'public/lib/braintree-angular/dist/braintree-angular.js'
+
 			]
 		},
 		css: [

@@ -22,6 +22,9 @@ function MeanHomeController(
 		$scope, $state, $http, $mdDialog,
 		$mdSidenav, $log, Authentication) {
 
+
+
+
 	$scope.date = {
 		month: moment().format("MMM").toUpperCase(),
 		date: moment().date(),

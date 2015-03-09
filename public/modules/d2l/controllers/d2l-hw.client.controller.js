@@ -11,6 +11,7 @@ angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '
 
 		$scope.authentication = Authentication;
 		console.log($scope.authentication);
+
 		// Create new D2l hw
 		$scope.create = function() {
 			console.log('Create');

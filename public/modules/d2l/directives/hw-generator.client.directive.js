@@ -31,7 +31,7 @@ angular.module('d2l')
 		};
 	});
 
-function HwGenerator($mdToast, devConfig) {
+function HwGenerator($mdToast, devConfig, D2lHws) {
 	return {
 		templateUrl: 'modules/d2l/directives/template/d2l-hw-generator-tpl.html',
 		restrict: 'E',
@@ -39,6 +39,22 @@ function HwGenerator($mdToast, devConfig) {
 			scope.isOpen=true;
 			//scope.devColor = devConfig.directive;
 			scope.docTypes = ['Docs', 'Sheets', 'Slides', 'PDF'];
+
+            scope.create = function() {
+                console.log('Create');
+                // Create new D2l hw object
+                var d2lHw = new D2lHws (scope.project);
+
+                // Redirect after save
+                d2lHw.$save(function(response) {
+                    $location.path('d2l-hws/' + response._id);
+
+                    // Clear form fields
+                    $scope.name = '';
+                }, function(errorResponse) {
+                    $scope.error = errorResponse.data.message;
+                });
+            };
 
 			scope.createFile = function(){
 				//$http.get('/createFile').success(function(data, status, headers, config){

@@ -14,6 +14,8 @@ module.exports = function(app) {
 		.put(users.requiresLogin, d2lHws.hasAuthorization, d2lHws.update)
 		.delete(users.requiresLogin, d2lHws.hasAuthorization, d2lHws.delete);
 
+
+
 	// Finish by binding the D2l hw middleware
 	app.param('d2lHwId', d2lHws.d2lHwByID);
 };
