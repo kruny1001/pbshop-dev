@@ -1,36 +1,40 @@
 <md-content id="fileCreator" class="md-padding">
     You can generate an assignment.<br/><br/>
     <form name="projectForm" data-ng-submit="create()">
-        <md-input-container>
-            <label>Title</label>
-            <input md-maxlength="30" required name="title" ng-model="project.title">
-            <div ng-messages="projectForm.description.$error">
-                <div ng-message="required">This is required.</div>
-                <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
-            </div>
-        </md-input-container>
+        <md-content class="md-padding" layout="row" layout-sm="column" style="font-size:1.2em">
+            <md-input-container flex>
+                <label>Title</label>
+                <input md-maxlength="30" required name="title" ng-model="project.title">
+                <div ng-messages="projectForm.description.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                </div>
+            </md-input-container>
 
-        <md-input-container>
-            <label>description</label>
-            <input md-maxlength="130" required name="desc" ng-model="project.desc">
-            <div ng-messages="projectForm.description.$error">
-                <div ng-message="required">This is required.</div>
-                <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
-            </div>
-        </md-input-container>
+            <md-input-container flex>
+                <label>description</label>
+                <input md-maxlength="130" required name="desc" ng-model="project.desc">
+                <div ng-messages="projectForm.description.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                </div>
+            </md-input-container>
+        </md-content>
 
-        <md-input-container>
-            <label>Due Date</label>
-            <input type="date" required name="dDate" ng-model="project.dDate">
-            <div ng-messages="projectForm.description.$error">
-                <div ng-message="required">This is required.</div>
-            </div>
-        </md-input-container>
+        <md-content class="md-padding" layout="row" layout-sm="column" style="font-size:1.2em">
+            <md-input-container flex>
+                <label>Due Date</label>
+                <input type="date" required name="dDate" ng-model="project.dDate">
+                <div ng-messages="projectForm.description.$error">
+                    <div ng-message="required">This is required.</div>
+                </div>
+            </md-input-container>
 
-        <md-input-container>
-            <label>Contents</label>
-            <textarea ng-model="project.content" columns="1" md-maxlength="650"></textarea>
-        </md-input-container>
+            <md-input-container flex>
+                <label>Contents</label>
+                <textarea ng-model="project.content" columns="1" md-maxlength="650"></textarea>
+            </md-input-container>
+        </md-content>
 
         <!--<md-input-container>-->
             <!--<label>Hourly Rate (USD)</label>-->
@@ -41,15 +45,23 @@
                 <!--<div ng-message="max">$5,000 an hour? That's a little ridiculous. I doubt event Bill Clinton could afford that.</div>-->
             <!--</div>-->
         <!--</md-input-container>-->
-        <div layout="row" style="margin-top:12px; margin-left:20px;">
+        <div layout="row" style="margin-top:12px; margin-left:20px; margin-bottom: 10px;">
             <md-button type="submit" class="md-fab md-primary md-hue-2" aria-label="Profile">
                 <md-icon md-svg-src="modules/d2l/svg/ic_play_arrow_24px.svg"></md-icon>
                 <md-tooltip>
                     Submit
                 </md-tooltip>
             </md-button>
+
+            <md-button class="md-fab md-warn" aria-label="Publish">
+                <md-icon md-svg-src="modules/d2l/svg/gdoc.svg"></md-icon>
+                <md-tooltip>
+                    Publish
+                </md-tooltip>
+            </md-button>
+
             <md-button class="md-fab" aria-label="Comment">
-                <md-icon md-svg-src="modules/d2l/svg/ic_menu_24px.svg"></md-icon>
+                <md-icon style="font-size:40px; height:40px;" md-svg-src="modules/d2l/svg/ic_menu_24px.svg"></md-icon>
                 <md-tooltip>
                     Cancel
                 </md-tooltip>

@@ -1,0 +1,29 @@
+<md-content id="fileCreator" class="md-padding">
+    You can publish an assignment.<br/><br/>
+
+    <div layout="column" layout-align="center center" style="height: 100px;">
+        <md-select ng-model="user" md-on-open="loadUsers()" style="min-width: 200px;">
+            <md-select-label>{{ user ? user.name : 'Assign to user' }}</md-select-label>
+            <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+        </md-select>
+        <p class="result">You have assigned the task to: {{ user ? user.name : 'No one yet' }}</p>
+    </div>
+
+    <div layout="row" style="margin-top:12px; margin-left:20px; margin-bottom: 10px;">
+        <md-button class="md-fab md-primary md-hue-2" aria-label="Profile" ng-click="listP(user.docId)">
+            <md-icon md-svg-src="modules/d2l/svg/ic_play_arrow_24px.svg"></md-icon>
+            <md-tooltip>
+                Publish
+            </md-tooltip>
+        </md-button>
+        <md-button class="md-fab md-primary md-hue-2" aria-label="Profile" ng-click="copyFile(user.docId)">
+            <md-icon md-svg-src="modules/d2l/svg/ic_menu_24px.svg"></md-icon>
+            <md-tooltip>
+                Copy
+            </md-tooltip>
+        </md-button>
+    </div>
+
+    <div ng-repeat="item in items">{{item}}</div>
+    <div class="label">Publish Assignment GDOCS</div>
+</md-content>

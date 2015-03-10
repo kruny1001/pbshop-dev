@@ -35,7 +35,7 @@ exports.gsGet = function(req, res){
 		oauth2Client.setCredentials(tokens);
 		plus.people.get({ userId: 'me', auth: oauth2Client }, function(err, profile) {
 				if (err) {
-					console.log('An error occured', err);
+					console.log('[geGet]-An error occured', err);
 					return;
 				}
 				res.jsonp(profile);
@@ -82,7 +82,7 @@ exports.createFile = function(req, res) {
 			auth: oauth2Client
 		}, function(err, response) {
 			if (err) {
-				console.log('An error occured', err);
+				console.log('[create file] - An error occured', err);
 				return;
 			}
 			res.jsonp(response);
@@ -113,7 +113,7 @@ exports.createHWD2l = function(req, res) {
             auth: oauth2Client
         }, function(err, response) {
             if (err) {
-                console.log('An error occured', err);
+                console.log('[create hwd2l]-An error occured', err);
                 return;
             }
             res.jsonp(response);
@@ -133,13 +133,12 @@ exports.getPermissionHWD2l = function(req, res){
 		// insertion example
 		drive.permissions.list(
 			{
-				'fileId': req.params.id,//'1DAka3Pg2DjItjXWtiSKOsZK71uFSo5rxLG4t5wCNHpA',
+				'fileId': req.param("id"),//'1DAka3Pg2DjItjXWtiSKOsZK71uFSo5rxLG4t5wCNHpA',
 				'fields' : 'items(additionalRoles,id,name,photoLink,role)',
 				auth: oauth2Client
 			}, function(err, response) {
 				if (err) {
-					console.log('An error occured', err);
-					//res.jsonp(err);
+					console.log('[get permission]-An error occured', err);
 					return;
 				}
 				res.jsonp(response);
@@ -171,12 +170,40 @@ exports.insertPermissionHWD2l = function(req, res){
 				auth: oauth2Client
 			}, function(err, response) {
 				if (err) {
-					console.log('An error occured', err);
+					console.log('[insertPermission]-An error occured', err);
 					//res.jsonp(err);
 					return;
 				}
 				res.jsonp(response);
 			});
+	});
+}
+
+// copy target Documents
+exports.copyHWD2l = function(req, res){
+	var oauth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
+	oauth2Client.setCredentials({
+		access_token: req.user.additionalProvidersData.google.accessToken,
+		refresh_token: req.user.additionalProvidersData.google.refreshToken
+	});
+
+	oauth2Client.refreshAccessToken(function(err, tokens) {
+		oauth2Client.setCredentials(tokens);
+		// insertion example
+		drive.files.copy(
+			{
+				'fileId': req.params.id,//'1DAka3Pg2DjItjXWtiSKOsZK71uFSo5rxLG4t5wCNHpA',
+				'resource':{title:'KevinS hw2'},
+				//'fields' : 'items(additionalRoles,id,name,photoLink,role)',
+				auth: oauth2Client
+			}, function(err, response) {
+				if (err) {
+					console.log('[copyHWD2l]-An error occured', err);
+					return;
+				}
+				res.jsonp(response);
+			});
+
 	});
 }
 
@@ -197,7 +224,7 @@ exports.getHWD2l = function(req, res){
 				auth: oauth2Client
 			}, function(err, response) {
 			if (err) {
-				console.log('An error occured', err);
+				console.log('[getHWD2l]-An error occured', err);
 				return;
 			}
 			res.jsonp(response);

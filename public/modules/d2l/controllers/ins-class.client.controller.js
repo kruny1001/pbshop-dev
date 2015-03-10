@@ -9,6 +9,11 @@ angular.module('d2l').controller('InsClassController', ['$scope','$http','Create
 
         TweenMax.set($('#fileCreator'), {alpha:0, yPercent:-150});
         $scope.assignments = [];
+
+				$scope.publishFile = function(){
+
+				}
+
         //$scope.isOpen=false;
 		//$scope.createFile = function(){
 		//	//$http.get('/createFile').success(function(data, status, headers, config){

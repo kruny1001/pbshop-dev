@@ -15,5 +15,7 @@ module.exports = function(app) {
 	app.route('/HWD2l/getPermission/:id').get(users.requiresLogin, gs.getPermissionHWD2l);
 	app.route('/HWD2l/insertPermission/:id').get(users.requiresLogin, gs.insertPermissionHWD2l);
 
+	app.route('/HWD2l/copyFile/:id').get(users.requiresLogin, gs.copyHWD2l);
+
 	app.route('/userInfo').get(gs.getUserInfo);
 };

@@ -3351,6 +3351,11 @@ angular.module('d2l').controller('InsClassController', ['$scope','$http','Create
 
         TweenMax.set($('#fileCreator'), {alpha:0, yPercent:-150});
         $scope.assignments = [];
+
+				$scope.publishFile = function(){
+
+				}
+
         //$scope.isOpen=false;
 		//$scope.createFile = function(){
 		//	//$http.get('/createFile').success(function(data, status, headers, config){
@@ -3420,13 +3425,28 @@ angular.module('d2l').controller('InsClassController', ['$scope','$http','Create
 angular.module('d2l')
 
 	.directive('d2lHwGenerator', HwGenerator)
+	.directive('d2lHwPublisher', HwPublisher)
+	.factory('D2lHwPermission', ['$resource',
+		function($resource) {
+			return $resource('/HWD2l/getPermission/:id', {
+				id: '@_id'
+			},{getDoc: {method:'GET'}});
+		}
+	])
+	.factory('D2lHwCopy', ['$resource',
+		function($resource) {
+			return $resource('/HWD2l/copyFile/:id', {
+				id: '@_id'
+			},{copyDoc: {method:'GET'}});
+		}
+	])
 	.controller('ToastCtrl', ["$scope", "$mdToast", function($scope, $mdToast) {
 		$scope.closeToast = function() {
 			$mdToast.hide();
 		};
 	}]);
 
-function HwGenerator($mdToast, devConfig, D2lHws) {
+function HwGenerator($mdToast, $location, devConfig, D2lHws) {
 	return {
 		templateUrl: 'modules/d2l/directives/template/d2l-hw-generator-tpl.html',
 		restrict: 'E',
@@ -3435,21 +3455,20 @@ function HwGenerator($mdToast, devConfig, D2lHws) {
 			//scope.devColor = devConfig.directive;
 			scope.docTypes = ['Docs', 'Sheets', 'Slides', 'PDF'];
 
-            scope.create = function() {
-                console.log('Create');
-                // Create new D2l hw object
-                var d2lHw = new D2lHws (scope.project);
+			scope.create = function() {
+				console.log('Create');
+				// Create new D2l hw object
+				var d2lHw = new D2lHws (scope.project);
+				// Redirect after save
 
-                // Redirect after save
-                d2lHw.$save(function(response) {
-                    $location.path('d2l-hws/' + response._id);
-
-                    // Clear form fields
-                    $scope.name = '';
-                }, function(errorResponse) {
-                    $scope.error = errorResponse.data.message;
-                });
-            };
+				d2lHw.$save(function(response) {
+					$location.path('d2l-hws/' + response._id);
+					// Clear form fields
+					scope.name = '';
+				}, function(errorResponse) {
+					$scope.error = errorResponse.data.message;
+				});
+			};
 
 			scope.createFile = function(){
 				//$http.get('/createFile').success(function(data, status, headers, config){
@@ -3504,7 +3523,70 @@ function HwGenerator($mdToast, devConfig, D2lHws) {
 		}
 	};
 }
-HwGenerator.$inject = ["$mdToast", "devConfig", "D2lHws"];
+HwGenerator.$inject = ["$mdToast", "$location", "devConfig", "D2lHws"];
+
+function HwPublisher($timeout,D2lHwPermission, D2lHwCopy){
+	return {
+		templateUrl: 'modules/d2l/directives/template/d2l-hw-publisher-tpl.html',
+		restrict: 'E',
+		link:function postLink(scope, element, attrs) {
+			scope.listP = function(id){
+					scope.result = D2lHwPermission.getDoc({
+						id: id
+					}).$promise.then(
+						//success
+						function( value ){
+							scope.items = value.items;
+							//based On the result
+						},
+						//error
+						function( error ){console.log(error);}
+					)
+			};
+
+
+			//Make a Copy
+			scope.copyFile = function(id){
+				D2lHwCopy.copyDoc({id:id})
+					.$promise.then(function(value){console.log(value)},function(error){console.log(error)})
+			}
+
+			//Insert Permissions
+
+
+			//Create File
+			scope.publish = function(id){
+				scope.result = D2lHwPermission.getDoc({
+					id: id
+				}).$promise.then(
+					//success
+					function( value ){
+						scope.items = value.items;
+						//based On the result
+					},
+					//error
+					function( error ){console.log(error);}
+				)
+			};
+
+			scope.loadUsers = function() {
+				// Use timeout to simulate a 650ms request.
+				scope.users = [];
+				return $timeout(function() {
+					scope.users = [
+						{ id: 1, name: 'Copy of restFulAPI Test2', docId:'1HP0LZO1chIZSp-wxK0Gx2B5EVDrw9dVnl8y6OkQB5_k' },
+						//{ id: 2, name: 'Shaggy Rodgers' },
+						//{ id: 3, name: 'Fred Jones' },
+						//{ id: 4, name: 'Daphne Blake' },
+						//{ id: 5, name: 'Velma Dinkley' },
+					];
+				}, 650);
+			};
+
+		}
+	}
+}
+HwPublisher.$inject = ["$timeout", "D2lHwPermission", "D2lHwCopy"];
 
 'use strict';
 
@@ -7838,7 +7920,7 @@ function GetRequires($parse){
 }
 GetRequires.$inject = ["$parse"];
 
-function SelectProvider($$interimElementProvider) {
+function SelectProvider($$interimElementProvider) {
 	selectDefaultOptions.$inject = ["$tcOrder", "$mdConstant", "$$rAF", "$mdUtil", "$mdTheming", "$timeout"];
 	return $$interimElementProvider('$tcOrder')
 		.setDefaults({
