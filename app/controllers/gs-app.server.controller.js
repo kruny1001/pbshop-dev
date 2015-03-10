@@ -174,7 +174,7 @@ exports.insertPermissionHWD2l = function(req, res){
 				'resource':{
 					"role":"reader",
 					"type":"user",
-					"value": "hjopy89@gmail.com"
+					"value": "nujabes403@gmail.com"
 				},
 				//'fields' : 'items(additionalRoles,id,name,photoLink,role)',
 				auth: oauth2Client
