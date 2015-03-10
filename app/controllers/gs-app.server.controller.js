@@ -90,15 +90,12 @@ exports.createFile = function(req, res) {
 	});
 };
 
-
 exports.createHWD2l = function(req, res) {
     var response = req;
     console.log(req.body);
     res.jsonp({result: "hello world"});
-
-    var drive = google.drive('v2');
-    var OAuth2 = google.auth.OAuth2;
-
+    //var drive = google.drive('v2');
+    //var OAuth2 = google.auth.OAuth2;
     var oauth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
     oauth2Client.setCredentials({
         access_token: req.user.additionalProvidersData.google.accessToken,
@@ -125,9 +122,6 @@ exports.createHWD2l = function(req, res) {
 }
 
 exports.getPermissionHWD2l = function(req, res){
-	//var drive = google.drive('v2');
-	//var OAuth2 = google.auth.OAuth2;
-
 	var oauth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 	oauth2Client.setCredentials({
 		access_token: req.user.additionalProvidersData.google.accessToken,
@@ -154,9 +148,6 @@ exports.getPermissionHWD2l = function(req, res){
 }
 
 exports.insertPermissionHWD2l = function(req, res){
-	//var drive = google.drive('v2');
-	//var OAuth2 = google.auth.OAuth2;
-
 	var oauth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 	oauth2Client.setCredentials({
 		access_token: req.user.additionalProvidersData.google.accessToken,
@@ -190,9 +181,6 @@ exports.insertPermissionHWD2l = function(req, res){
 }
 
 exports.getHWD2l = function(req, res){
-	//var drive = google.drive('v2');
-	//var OAuth2 = google.auth.OAuth2;
-
 	var oauth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 	oauth2Client.setCredentials({
 		access_token: req.user.additionalProvidersData.google.accessToken,
@@ -217,12 +205,3 @@ exports.getHWD2l = function(req, res){
 
 	});
 }
-
-
-
-exports.contacts = function(req, res) {
-    Contact.find({}, function(err, obj) {
-        res.json(obj)
-    });
-};
-

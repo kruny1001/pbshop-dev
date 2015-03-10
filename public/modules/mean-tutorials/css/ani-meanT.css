@@ -28,6 +28,7 @@ div.stretchy-wrapper {
     padding-bottom: 56.25%; /* 16:9 */
     position: relative;
     background: black;
+    overflow:hidden;
 }
 
 div.stretchy-wrapper > div {
