@@ -4388,6 +4388,12 @@ function MeanHomeController(
 		$mdSidenav, $log, Authentication) {
 
 
+	$(document).on( 'scroll', function(){
+		if($(document).scrollTop() > 150)
+			TweenMax.to($('#floatMenus'), 1, {y:-51});
+		else
+			TweenMax.set($('#floatMenus'), {y:0});
+	});
 
 
 	$scope.date = {
@@ -7832,7 +7838,7 @@ function GetRequires($parse){
 }
 GetRequires.$inject = ["$parse"];
 
-function SelectProvider($$interimElementProvider) {
+function SelectProvider($$interimElementProvider) {
 	selectDefaultOptions.$inject = ["$tcOrder", "$mdConstant", "$$rAF", "$mdUtil", "$mdTheming", "$timeout"];
 	return $$interimElementProvider('$tcOrder')
 		.setDefaults({

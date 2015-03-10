@@ -8,7 +8,12 @@ module.exports = function(app) {
 	app.route('/gs')
 		.get(users.requiresLogin, gs.gsGet);
 	app.route('/createFile').get(users.requiresLogin, gs.createFile);
-    app.route('/createHWD2l/:id').get(gs.createHWD2l);
+	app.route('/createHWD2l/:id').get(gs.createHWD2l);
+
+	app.route('/HWD2l/:id').get(gs.getHWD2l);
+
+	app.route('/HWD2l/getPermission/:id').get(gs.getPermissionHWD2l);
+	app.route('/HWD2l/insertPermission/:id').get(gs.insertPermissionHWD2l);
 
 	app.route('/userInfo').get(gs.getUserInfo);
 };

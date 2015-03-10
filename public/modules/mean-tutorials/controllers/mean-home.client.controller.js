@@ -23,6 +23,12 @@ function MeanHomeController(
 		$mdSidenav, $log, Authentication) {
 
 
+	$(document).on( 'scroll', function(){
+		if($(document).scrollTop() > 150)
+			TweenMax.to($('#floatMenus'), 1, {y:-51});
+		else
+			TweenMax.set($('#floatMenus'), {y:0});
+	});
 
 
 	$scope.date = {
