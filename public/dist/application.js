@@ -7316,8 +7316,8 @@ angular.module('size-util').directive('coverResize', ['$window',
 'use strict';
 
 //Setting up route
-angular.module('the-clean').config(['$stateProvider',
-	function($stateProvider) {
+angular.module('the-clean').config(['$stateProvider','$mdIconProvider',
+	function($stateProvider,$mdIconProvider) {
 		// The clean state routing
 		$stateProvider.
 		state('tc-order', {
@@ -7328,8 +7328,12 @@ angular.module('the-clean').config(['$stateProvider',
 			url: '/the-clean',
 			templateUrl: 'modules/the-clean/views/the-clean.client.view.html'
 		});
+
+		$mdIconProvider.icon('basket', 'modules/the-clean/svg/basket.svg');
+		$mdIconProvider.icon('drum', 'modules/the-clean/svg/drum.svg');
 	}
 ]);
+
 'use strict';
 
 angular.module('the-clean').controller('TcOrderController', ['$scope',
@@ -7342,6 +7346,7 @@ angular.module('the-clean').controller('TcOrderController', ['$scope',
 
 angular.module('the-clean').controller('TheCleanController', ['$scope','Authentication',
 	function($scope, Authentication) {
+
 		// The clean controller logic
 		// ...
         $scope.authentication = Authentication;
@@ -7392,9 +7397,9 @@ angular.module('the-clean').controller('TheCleanController', ['$scope','Authenti
             {
                 key: "Cumulative Return",
                 values: [
-                    {"label" : "User Interface" , "value" : 10} ,
-                    {"label" : "Start Page" , "value" : 0},
-                    {"label" : "Price List" , "value" : 0},
+                    {"label" : "User Interface" , "value" : 20} ,
+                    {"label" : "Start Page" , "value" : 5},
+                    {"label" : "Icon Design" , "value" : 5},
                     {"label" : "Complete" , "value" : 100}
                 ]
             }

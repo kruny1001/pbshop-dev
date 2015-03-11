@@ -1,8 +1,8 @@
 'use strict';
 
 //Setting up route
-angular.module('the-clean').config(['$stateProvider',
-	function($stateProvider) {
+angular.module('the-clean').config(['$stateProvider','$mdIconProvider',
+	function($stateProvider,$mdIconProvider) {
 		// The clean state routing
 		$stateProvider.
 		state('tc-order', {
@@ -13,5 +13,8 @@ angular.module('the-clean').config(['$stateProvider',
 			url: '/the-clean',
 			templateUrl: 'modules/the-clean/views/the-clean.client.view.html'
 		});
+
+		$mdIconProvider.icon('basket', 'modules/the-clean/svg/basket.svg');
+		$mdIconProvider.icon('drum', 'modules/the-clean/svg/drum.svg');
 	}
 ]);

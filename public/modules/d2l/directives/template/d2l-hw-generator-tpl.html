@@ -1,11 +1,11 @@
 <md-content id="fileCreator" class="md-padding">
     You can generate an assignment.<br/><br/>
     <form name="projectForm" data-ng-submit="create()">
-        <md-content class="md-padding" layout="row" layout-sm="column" style="font-size:1.2em">
+        <md-content class="md-padding ins-container" layout="row" layout-sm="column" style="font-size:1.2em">
             <md-input-container flex>
                 <label>Title</label>
                 <input md-maxlength="30" required name="title" ng-model="project.title">
-                <div ng-messages="projectForm.description.$error">
+                <div ng-messages="projectForm.title.$error">
                     <div ng-message="required">This is required.</div>
                     <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
                 </div>
@@ -14,7 +14,7 @@
             <md-input-container flex>
                 <label>description</label>
                 <input md-maxlength="130" required name="desc" ng-model="project.desc">
-                <div ng-messages="projectForm.description.$error">
+                <div ng-messages="projectForm.desc.$error">
                     <div ng-message="required">This is required.</div>
                     <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
                 </div>
@@ -25,7 +25,7 @@
             <md-input-container flex>
                 <label>Due Date</label>
                 <input type="date" required name="dDate" ng-model="project.dDate">
-                <div ng-messages="projectForm.description.$error">
+                <div ng-messages="projectForm.dDate.$error">
                     <div ng-message="required">This is required.</div>
                 </div>
             </md-input-container>

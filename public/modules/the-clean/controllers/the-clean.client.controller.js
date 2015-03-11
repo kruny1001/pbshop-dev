@@ -2,6 +2,7 @@
 
 angular.module('the-clean').controller('TheCleanController', ['$scope','Authentication',
 	function($scope, Authentication) {
+
 		// The clean controller logic
 		// ...
         $scope.authentication = Authentication;
@@ -52,9 +53,9 @@ angular.module('the-clean').controller('TheCleanController', ['$scope','Authenti
             {
                 key: "Cumulative Return",
                 values: [
-                    {"label" : "User Interface" , "value" : 10} ,
-                    {"label" : "Start Page" , "value" : 0},
-                    {"label" : "Price List" , "value" : 0},
+                    {"label" : "User Interface" , "value" : 20} ,
+                    {"label" : "Start Page" , "value" : 5},
+                    {"label" : "Icon Design" , "value" : 5},
                     {"label" : "Complete" , "value" : 100}
                 ]
             }
