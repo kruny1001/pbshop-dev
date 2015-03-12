@@ -39,7 +39,7 @@ function OrderDirective($tcOrder, $interpolate, $compile, $parse, $mdToast) {
 		templateUrl: 'modules/the-clean/directives/template/tc-order-ui-tpl.html',
 		require: ['tcOrder'],
 		compile: compile,
-		controller: function(){}
+		controller: 'TheCleanCrudsController' //function(){}
 	};
 
 	function compile(element, attr){
@@ -47,34 +47,42 @@ function OrderDirective($tcOrder, $interpolate, $compile, $parse, $mdToast) {
 		var labelEl=element.find('tc-order-label').remove();
 
 		return function postLink(scope, element, attr, ctrls){
-            scope.hello = "Hello World";
-            scope.biography = "빠른베송 부탁 드립니다.";
-            scope.rate = 1;
 
-            var toastPosition = {
-                bottom: true,
-                top: false,
-                left: false,
-                right: true
-            };
-            var getToastPosition = function() {
-                return Object.keys(toastPosition)
-                    .filter(function(pos) { return toastPosition[pos]; })
-                    .join(' ');
-            };
+			scope.orderDate = moment()._d;
+			scope.deliberyDate = moment()._d;
+			scope.address = 'Not Yet';
+			scope.numOrder = 1;
+			scope.detailInfo = "빠른베송 부탁 드립니다.";
+			scope.price = scope.numOrder * 900;
 
-            scope.create = function(){
-                $mdToast.show({
-                    controller: function($scope, $mdToast) {
-                        $scope.closeToast = function() {
-                            $mdToast.hide();
-                        };
-                    },
-                    template: '<md-toast> <span flex>Submitted</span> <md-button ng-click="closeToast()">Close </md-button> </md-toast>',
-                    hideDelay: 6000,
-                    position: getToastPosition()
-                });
-            }
+			scope.getTotal = function(){
+				scope.price = scope.numOrder * 900;
+			}
+
+			var toastPosition = {
+				bottom: true,
+				top: false,
+				left: false,
+				right: true
+			};
+			var getToastPosition = function() {
+				return Object.keys(toastPosition)
+					.filter(function(pos) { return toastPosition[pos]; })
+					.join(' ');
+			};
+
+			scope.createToast = function(){
+				$mdToast.show({
+					controller: function($scope, $mdToast) {
+						$scope.closeToast = function() {
+							$mdToast.hide();
+						};
+					},
+					template: '<md-toast> <span flex>Submitted</span> <md-button ng-click="closeToast()">Close </md-button> </md-toast>',
+					hideDelay: 6000,
+					position: getToastPosition()
+				});
+			}
 		}
 	}
 

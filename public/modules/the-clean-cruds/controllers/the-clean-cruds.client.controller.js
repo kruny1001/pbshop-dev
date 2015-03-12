@@ -10,7 +10,12 @@ angular.module('the-clean-cruds').controller('TheCleanCrudsController', ['$scope
 		$scope.create = function() {
 			// Create new The clean crud object
 			var theCleanCrud = new TheCleanCruds ({
-				name: this.name
+				//name: this.name,
+				orderDate:this.orderDate,
+				deliberyDate: this.deliberyDate,
+				Address: this.address,
+				numOrder: this.numOrder,
+				detailInfo: this.detailInfo
 			});
 
 			// Redirect after save

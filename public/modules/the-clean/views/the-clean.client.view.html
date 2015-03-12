@@ -10,7 +10,7 @@
             <md-button class="md-warn md-raised md-hue-1" ng-click="tcOrder = toggle(tcOrder)"><strong>주문인터페이스 {{tcOrder}}</strong></md-button>
         </div>
         <div flex flex-order="3">
-            <md-button ng-disabled="true" class="md-warn md-raised md-hue-2" ng-click="tcStartPage = toggle(tcStartPage)"><strong>시작페이지 {{tcStartPage}}</strong></md-button>
+            <md-button class="md-warn md-raised md-hue-2" ng-click="tcStartPage = toggle(tcStartPage)"><strong>시작페이지 {{tcStartPage}}</strong></md-button>
         </div>
         <div flex flex-order="4">
             <md-button  ng-disabled="true" class="md-warn md-raised md-hue-3" ng-click="tcPrice = toggle(tcPrice)"><strong>가격표 {{tcPrice}}</strong></md-button>
@@ -19,57 +19,60 @@
 
     <nvd3 options="options" data="data" ng-show="tcProgress"></nvd3>
 
-    <iframe height='206' scrolling='no' src='//codepen.io/kruny1001/embed/yyRMZm/?height=206' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/kruny1001/pen/yyRMZm/'>yyRMZm</a> by Kevin S (<a href='http://codepen.io/kruny1001'>@kruny1001</a>) on <a href='http://codepen.io'>CodePen</a>.
-    </iframe>
+    <md-content ng-show="tcStartPage">
+        <iframe height='206' scrolling='no' src='//codepen.io/kruny1001/embed/yyRMZm/?height=206' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/kruny1001/pen/yyRMZm/'>yyRMZm</a> by Kevin S (<a href='http://codepen.io/kruny1001'>@kruny1001</a>) on <a href='http://codepen.io'>CodePen</a>.
+        </iframe>
 
-    <!--<div style="height:200px; width:200px;">-->
+        <!--<div style="height:200px; width:200px;">-->
         <!--<md-icon md-svg-icon="basket"-->
-                <!--ng-style="{color: !font.theme && font.color, 'font-size': '250px', height: '100%', width:'100%'}">-->
+        <!--ng-style="{color: !font.theme && font.color, 'font-size': '250px', height: '100%', width:'100%'}">-->
         <!--</md-icon>-->
-    <!--</div>-->
+        <!--</div>-->
 
-    <div layout="row" layout-sm="column" layout-align="center center">
-        <md-card style="max-width:250px;">
-            <div style="width:80%; margin-left:auto; margin-right:auto;">
-                <md-icon md-svg-icon="basket"
-                         ng-style="{color: !font.theme && font.color, 'font-size': '250px', height: '100%', width:'100%'}">
-                </md-icon>
-            </div>
-            <md-card-content style="font-family: 'Hanna', serif;">
-                <h2>빨래바구니</h2>
-                <p>
-                    빨래 바구니에 빨랫거리를 담아 봅시다.
-                </p>
-            </md-card-content>
-        </md-card>
+        <div layout="row" layout-sm="column" layout-align="center center">
+            <md-card style="max-width:250px;">
+                <div style="width:80%; margin-left:auto; margin-right:auto;">
+                    <md-icon md-svg-icon="basket"
+                             ng-style="{color: !font.theme && font.color, 'font-size': '250px', height: '100%', width:'100%'}">
+                    </md-icon>
+                </div>
+                <md-card-content style="font-family: 'Hanna', serif;">
+                    <h2>빨래바구니</h2>
+                    <p>
+                        빨래 바구니에 빨랫거리를 담아 봅시다.
+                    </p>
+                </md-card-content>
+            </md-card>
 
-        <md-card style="max-width:250px; ">
-            <div style="width:80%; margin-left:auto; margin-right:auto;">
-                <md-icon md-svg-icon="drum"
-                         ng-style="{color: !font.theme && font.color, 'font-size': '250px', height: '100%', width:'100%'}">
-                </md-icon>
-            </div>
-            <md-card-content style="font-family: 'Hanna', serif;">
-                <h2>드럼세탁기</h2>
-                <p>
-                    빨래 바구니에 빨랫거리를 담은뒤 세탁기를 돌립니다.
-                </p>
-            </md-card-content>
-        </md-card>
-        <md-card style="max-width:250px; ">
-            <div style="width:80%; margin-left:auto; margin-right:auto;">
-                <md-icon md-svg-icon="drum"
-                         ng-style="{color: !font.theme && font.color, 'font-size': '250px', height: '100%', width:'100%'}">
-                </md-icon>
-            </div>
-            <md-card-content style="font-family: 'Hanna', serif;">
-                <h2>드럼세탁기</h2>
-                <p>
-                    빨래 바구니에 빨랫거리를 담은뒤 세탁기를 돌립니다.
-                </p>
-            </md-card-content>
-        </md-card>
-    </div>
+            <md-card style="max-width:250px; ">
+                <div style="width:80%; margin-left:auto; margin-right:auto;">
+                    <md-icon md-svg-icon="drum"
+                             ng-style="{color: !font.theme && font.color, 'font-size': '250px', height: '100%', width:'100%'}">
+                    </md-icon>
+                </div>
+                <md-card-content style="font-family: 'Hanna', serif;">
+                    <h2>드럼세탁기</h2>
+                    <p>
+                        빨래 바구니에 빨랫거리를 담은뒤 세탁기를 돌립니다.
+                    </p>
+                </md-card-content>
+            </md-card>
+            <md-card style="max-width:250px; ">
+                <div style="width:80%; margin-left:auto; margin-right:auto;">
+                    <md-icon md-svg-icon="drum"
+                             ng-style="{color: !font.theme && font.color, 'font-size': '250px', height: '100%', width:'100%'}">
+                    </md-icon>
+                </div>
+                <md-card-content style="font-family: 'Hanna', serif;">
+                    <h2>드럼세탁기</h2>
+                    <p>
+                        빨래 바구니에 빨랫거리를 담은뒤 세탁기를 돌립니다.
+                    </p>
+                </md-card-content>
+            </md-card>
+        </div>
+    </md-content>
+
 
     <!--<h3><strong>Module Interface</strong></h3>-->
 
@@ -105,5 +108,7 @@
 
     <hr/>
     <div> Footer </div>
+    <!--<md-button class="md-warn" ui-sref="createTheCleanCrud">Create</md-button>-->
+    <md-button class="md-warn" ui-sref="listTheCleanCruds">Order List</md-button>
     <hr/>
 </section>

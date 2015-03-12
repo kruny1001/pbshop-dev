@@ -52,7 +52,8 @@ angular.module('the-clean').controller('TheCleanController', ['$scope','Authenti
             {
                 key: "Cumulative Return",
                 values: [
-                    {"label" : "User Interface" , "value" : 20} ,
+                    {"label" : "User Interface" , "value" : 22},
+	                  {"label" : "Backend" , "value" : 5},
                     {"label" : "Start Page" , "value" : 5},
                     {"label" : "Icon Design" , "value" : 5},
                     {"label" : "Complete" , "value" : 100}

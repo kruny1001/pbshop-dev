@@ -12,8 +12,7 @@ var mongoose = require('mongoose'),
 var TheCleanCrudSchema = new Schema({
 	name: {
 		type: String,
-		default: '',
-		required: 'Please fill The clean crud name',
+		default: 'tc crud',
 		trim: true
 	},
     orderDate:{
@@ -22,6 +21,9 @@ var TheCleanCrudSchema = new Schema({
     deliberyDate:{
         type: Date
     },
+		numOrder:{
+			type: Number
+		},
     Address:{
         type: String
     },
