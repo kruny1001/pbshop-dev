@@ -1,0 +1,19 @@
+<section class="headerEnabled" data-ng-controller="TheCleanCrudsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>The clean cruds</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="theCleanCrud in theCleanCruds" data-ng-href="#!/the-clean-cruds/{{theCleanCrud._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="theCleanCrud.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="theCleanCrud.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="theCleanCrud.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!theCleanCruds.$resolved || theCleanCruds.length">
+    	No The clean cruds yet, why don't you <a href="/#!/the-clean-cruds/create">create one</a>?
+    </div>
+</section>

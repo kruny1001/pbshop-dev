@@ -139,6 +139,10 @@ ApplicationConfiguration.registerModule('size-util');
 
 'use strict';
 
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('the-clean-cruds');
+'use strict';
+
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('the-clean');
 
@@ -7316,6 +7320,112 @@ angular.module('size-util').directive('coverResize', ['$window',
 'use strict';
 
 //Setting up route
+angular.module('the-clean-cruds').config(['$stateProvider',
+	function($stateProvider) {
+		// The clean cruds state routing
+		$stateProvider.
+		state('listTheCleanCruds', {
+			url: '/the-clean-cruds',
+			templateUrl: 'modules/the-clean-cruds/views/list-the-clean-cruds.client.view.html'
+		}).
+		state('createTheCleanCrud', {
+			url: '/the-clean-cruds/create',
+			templateUrl: 'modules/the-clean-cruds/views/create-the-clean-crud.client.view.html'
+		}).
+		state('viewTheCleanCrud', {
+			url: '/the-clean-cruds/:theCleanCrudId',
+			templateUrl: 'modules/the-clean-cruds/views/view-the-clean-crud.client.view.html'
+		}).
+		state('editTheCleanCrud', {
+			url: '/the-clean-cruds/:theCleanCrudId/edit',
+			templateUrl: 'modules/the-clean-cruds/views/edit-the-clean-crud.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+// The clean cruds controller
+angular.module('the-clean-cruds').controller('TheCleanCrudsController', ['$scope', '$stateParams', '$location', 'Authentication', 'TheCleanCruds',
+	function($scope, $stateParams, $location, Authentication, TheCleanCruds) {
+		$scope.authentication = Authentication;
+
+
+		// Create new The clean crud
+		$scope.create = function() {
+			// Create new The clean crud object
+			var theCleanCrud = new TheCleanCruds ({
+				name: this.name
+			});
+
+			// Redirect after save
+			theCleanCrud.$save(function(response) {
+				$location.path('the-clean-cruds/' + response._id);
+
+				// Clear form fields
+				$scope.name = '';
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Remove existing The clean crud
+		$scope.remove = function(theCleanCrud) {
+			if ( theCleanCrud ) { 
+				theCleanCrud.$remove();
+
+				for (var i in $scope.theCleanCruds) {
+					if ($scope.theCleanCruds [i] === theCleanCrud) {
+						$scope.theCleanCruds.splice(i, 1);
+					}
+				}
+			} else {
+				$scope.theCleanCrud.$remove(function() {
+					$location.path('the-clean-cruds');
+				});
+			}
+		};
+
+		// Update existing The clean crud
+		$scope.update = function() {
+			var theCleanCrud = $scope.theCleanCrud;
+
+			theCleanCrud.$update(function() {
+				$location.path('the-clean-cruds/' + theCleanCrud._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Find a list of The clean cruds
+		$scope.find = function() {
+			$scope.theCleanCruds = TheCleanCruds.query();
+		};
+
+		// Find existing The clean crud
+		$scope.findOne = function() {
+			$scope.theCleanCrud = TheCleanCruds.get({ 
+				theCleanCrudId: $stateParams.theCleanCrudId
+			});
+		};
+	}
+]);
+
+'use strict';
+
+//The clean cruds service used to communicate The clean cruds REST endpoints
+angular.module('the-clean-cruds').factory('TheCleanCruds', ['$resource',
+	function($resource) {
+		return $resource('the-clean-cruds/:theCleanCrudId', { theCleanCrudId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);
+'use strict';
+
+//Setting up route
 angular.module('the-clean').config(['$stateProvider','$mdIconProvider',
 	function($stateProvider,$mdIconProvider) {
 		// The clean state routing
@@ -7346,7 +7456,6 @@ angular.module('the-clean').controller('TcOrderController', ['$scope',
 
 angular.module('the-clean').controller('TheCleanController', ['$scope','Authentication',
 	function($scope, Authentication) {
-
 		// The clean controller logic
 		// ...
         $scope.authentication = Authentication;
@@ -7768,13 +7877,16 @@ angular.module('the-clean')
 	.provider('$tcOrder', SelectProvider);
 
 
-function OrderDirective($tcOrder, $interpolate, $compile, $parse) {
+function OrderDirective($tcOrder, $interpolate, $compile, $parse, $mdToast) {
 	return {
 		restrict: 'E',
+        scope: {
+            userInfo: '=userInfo'
+        },
 		templateUrl: 'modules/the-clean/directives/template/tc-order-ui-tpl.html',
-		require: ['tcOrder', 'ngModel'],
+		require: ['tcOrder'],
 		compile: compile,
-		controller: function() {}
+		controller: function(){}
 	};
 
 	function compile(element, attr){
@@ -7782,17 +7894,42 @@ function OrderDirective($tcOrder, $interpolate, $compile, $parse) {
 		var labelEl=element.find('tc-order-label').remove();
 
 		return function postLink(scope, element, attr, ctrls){
-			console.log('postLink Function');
-			var tcOrderCtrl = ctrls[0];
-			var ngModel = ctrls[1];
-			var userInfo = ctrls[2];
-			console.log(tcOrderCtrl);
-			console.log(ngModel);
-			console.log(userInfo);
+            scope.hello = "Hello World";
+            scope.biography = "빠른베송 부탁 드립니다.";
+            scope.rate = 1;
+
+            var toastPosition = {
+                bottom: true,
+                top: false,
+                left: false,
+                right: true
+            };
+            var getToastPosition = function() {
+                return Object.keys(toastPosition)
+                    .filter(function(pos) { return toastPosition[pos]; })
+                    .join(' ');
+            };
+
+            scope.create = function(){
+                $mdToast.show({
+                    controller: function($scope, $mdToast) {
+                        $scope.closeToast = function() {
+                            $mdToast.hide();
+                        };
+                    },
+                    template: '<md-toast> <span flex>Submitted</span> <md-button ng-click="closeToast()">Close </md-button> </md-toast>',
+                    hideDelay: 6000,
+                    position: getToastPosition()
+                });
+            }
 		}
 	}
+
+    function OrderDirectiveController($scope){
+        console.log($scope.authentication);
+    }
 }
-OrderDirective.$inject = ["$tcOrder", "$interpolate", "$compile", "$parse"];
+OrderDirective.$inject = ["$tcOrder", "$interpolate", "$compile", "$parse", "$mdToast"];
 
 //SlideShow
 function OrderHeader($mdTheming){

@@ -2,7 +2,6 @@
 
 angular.module('the-clean').controller('TheCleanController', ['$scope','Authentication',
 	function($scope, Authentication) {
-
 		// The clean controller logic
 		// ...
         $scope.authentication = Authentication;

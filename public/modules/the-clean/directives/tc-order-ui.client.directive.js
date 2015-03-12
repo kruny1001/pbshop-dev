@@ -30,13 +30,16 @@ angular.module('the-clean')
 	.provider('$tcOrder', SelectProvider);
 
 
-function OrderDirective($tcOrder, $interpolate, $compile, $parse) {
+function OrderDirective($tcOrder, $interpolate, $compile, $parse, $mdToast) {
 	return {
 		restrict: 'E',
+        scope: {
+            userInfo: '=userInfo'
+        },
 		templateUrl: 'modules/the-clean/directives/template/tc-order-ui-tpl.html',
-		require: ['tcOrder', 'ngModel'],
+		require: ['tcOrder'],
 		compile: compile,
-		controller: function() {}
+		controller: function(){}
 	};
 
 	function compile(element, attr){
@@ -44,15 +47,40 @@ function OrderDirective($tcOrder, $interpolate, $compile, $parse) {
 		var labelEl=element.find('tc-order-label').remove();
 
 		return function postLink(scope, element, attr, ctrls){
-			console.log('postLink Function');
-			var tcOrderCtrl = ctrls[0];
-			var ngModel = ctrls[1];
-			var userInfo = ctrls[2];
-			console.log(tcOrderCtrl);
-			console.log(ngModel);
-			console.log(userInfo);
+            scope.hello = "Hello World";
+            scope.biography = "빠른베송 부탁 드립니다.";
+            scope.rate = 1;
+
+            var toastPosition = {
+                bottom: true,
+                top: false,
+                left: false,
+                right: true
+            };
+            var getToastPosition = function() {
+                return Object.keys(toastPosition)
+                    .filter(function(pos) { return toastPosition[pos]; })
+                    .join(' ');
+            };
+
+            scope.create = function(){
+                $mdToast.show({
+                    controller: function($scope, $mdToast) {
+                        $scope.closeToast = function() {
+                            $mdToast.hide();
+                        };
+                    },
+                    template: '<md-toast> <span flex>Submitted</span> <md-button ng-click="closeToast()">Close </md-button> </md-toast>',
+                    hideDelay: 6000,
+                    position: getToastPosition()
+                });
+            }
 		}
 	}
+
+    function OrderDirectiveController($scope){
+        console.log($scope.authentication);
+    }
 }
 
 //SlideShow
