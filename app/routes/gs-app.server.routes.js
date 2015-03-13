@@ -14,6 +14,10 @@ module.exports = function(app) {
 
 	app.route('/HWD2l/:id').get(users.requiresLogin, gs.getHWD2l);
 
+	//Find Super Parent folder
+	app.route('/superParent').get(users.requiresLogin, gs.searchMainFloder);
+
+
 	//Permission
 	app.route('/HWD2l/getPermission/:id').get(users.requiresLogin, gs.getPermissionHWD2l);
 	app.route('/HWD2l/insertPermission/:id').get(users.requiresLogin, gs.insertPermissionHWD2l);

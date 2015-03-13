@@ -16,6 +16,93 @@ var drive = google.drive('v2');
 var plus = google.plus('v1');
 var OAuth2 = google.auth.OAuth2;
 
+exports.searchMainFloder = function(req, res){
+	var oauth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
+	var userId = req.user.id;
+	var tokens = {
+		access_token: req.user.additionalProvidersData.google.accessToken,
+		refresh_token: req.user.additionalProvidersData.google.refreshToken,
+		expiry_date:(new Date()).getTime() + 8640000
+	};
+
+
+	oauth2Client.setCredentials(tokens);
+
+	//oauth2Client.setCredentials(tokens);
+
+	//
+	//oauth2Client.refreshAccessToken(function(err, tokens) {
+	//
+	//	oauth2Client.setCredentials(tokens);
+	//	tokens = tokens
+	//});
+
+	console.log(tokens);
+
+	console.log("title contains 'LMS-"+req.user.id+"'");
+	drive.files.list({
+		q:"title contains 'LMS-"+req.user.id+"'",
+		fields: 'items(id\,title)',
+		auth: oauth2Client
+	}, function(err, response){
+		if (err) {
+			console.log('[refreshAccessToken-find folder] - An error occured', err);
+			return;
+		}
+		if (response.items.length > 0)
+			res.jsonp(response);
+		else{
+			drive.files.insert({
+				resource: {
+					title: 'LMS-'+req.user.id,
+					mimeType: 'application/vnd.google-apps.folder'
+				},
+				auth: oauth2Client
+			}, function(err, response) {
+				if (err) {
+					console.log('[refreshAccessToken]-An error occured', err);
+					return;
+				}
+				res.jsonp(response);
+			});
+		}//end if
+	})
+
+	//oauth2Client.refreshAccessToken(function(err, tokens) {
+	//	// your access_token is now refreshed and stored in oauth2Client
+	//	// store these new tokens in a safe place (e.g. database)
+	//
+	//	oauth2Client.setCredentials(tokens);
+		//drive.files.list({
+		//		q:"title contains 'LMS-'",
+		//		fields: 'items(id\,title)',
+		//	auth: oauth2Client
+		//}, function(err, response){
+		//	if (err) {
+		//		console.log('[refreshAccessToken-find folder] - An error occured', err);
+		//		return;
+		//	}
+		//	if (response.items.length > 0)
+		//		res.jsonp(response);
+		//	else{
+		//		drive.files.insert({
+		//			resource: {
+		//				title: 'LMS-folder',
+		//				mimeType: 'application/vnd.google-apps.folder'
+		//			},
+		//			auth: oauth2Client
+		//		}, function(err, response) {
+		//			if (err) {
+		//				console.log('[refreshAccessToken]-An error occured', err);
+		//				return;
+		//			}
+		//			res.jsonp(response);
+		//		});
+		//	}//end if
+		//})
+	//});
+}
+
 exports.gsGet = function(req, res){
 	//res.jsonp(req.user.additionalProvidersData.google.accessToken);
 	//res.jsonp(req.user);
