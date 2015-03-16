@@ -2874,6 +2874,10 @@ angular.module('d2l').config(['$stateProvider','$mdIconProvider',
 	function($stateProvider,$mdIconProvider) {
 		// D2l state routing
 		$stateProvider.
+		state('d2l-main', {
+			url: '/d2l-main',
+			templateUrl: 'modules/d2l/views/d2l-main.client.view.html'
+		}).
 		state('d2l-stu', {
 			url: '/d2l-stu',
 			templateUrl: 'modules/d2l/views/d2l-stu.client.view.html'
@@ -2924,6 +2928,7 @@ angular.module('d2l').controller('D2lHomeController', [
 		//$scope.testStr = S('asdf asdf wef sdf asdf wefsdf asf sf ').truncate(20, ' ...Read More').s;
 		$scope.authName = 'Authorization';
 		$scope.googleDrive={info:'gDriveCtrl'};
+		$scope.openMenu = true;
 
 		$scope.hideResult = function(){
 			var target = $('.listFolder');
@@ -3135,9 +3140,10 @@ angular.module('d2l').controller('D2lHomeController', [
 ])
 	.controller('gridListDemoCtrl', ["$scope", "$state", function($scope, $state) {
         function goToHWList(){
-            $state.go('listD2lHws');
+            //$state.go('listD2lHws');
         }
-		$scope.test=function(event){
+		$scope.test=function(event, targetInfo){
+			console.log('dddd');
 			var target = event.target;
 			console.log(target);
 			TweenLite.to(target, 0.3, {opacity: 0.8, scale:0.85});
@@ -3159,12 +3165,12 @@ angular.module('d2l').controller('D2lHomeController', [
 				switch(j+1) {
 					case 1:
 						it.background = "red";
-                        it.title = "Introduction";
+                        it.title = "Notifications";
 						//it.span.row = it.span.col = 2;
 
 						break;
 					case 2: it.background = "green"; it.title = "Tutorials"; break;
-					case 3: it.background = "darkBlue"; it.title = "Assignments"; break;
+					case 3: it.background = "darkBlue"; it.title = "Classes"; it.state="classes"; break;
 					case 4:
 						it.background = "blue";
 						it.title = "Pricing";
@@ -3349,43 +3355,35 @@ angular.module('d2l').controller('D2lStuController', ['$scope',
 angular.module('d2l').controller('InsClassController', ['$scope','$http','CreateFile',
 	function($scope,$http,CreateFile) {
 
-        var objFile = CreateFile.create();
-        console.log(objFile.getInfo());
-        //console.log(objFile.query());
+		var objFile = CreateFile.create();
+		console.log(objFile.getInfo());
 
-        TweenMax.set($('#fileCreator'), {alpha:0, yPercent:-150});
-        $scope.assignments = [];
+		TweenMax.set($('#fileCreator'), {alpha:0, yPercent:-150});
+		$scope.assignments = [];
 
-				$scope.publishFile = function(){
 
-				}
+		$scope.createHWbtn = function(){
+			$scope.isOpen = !$scope.isOpen;
+			if($scope.isOpen){
+				console.log("open");
+				TweenMax.to($('#fileCreator'), 1, {alpha:1, yPercent:0, display:"block",   ease: Power2.easeOut, paused:false});
+			}
 
-        //$scope.isOpen=false;
-		//$scope.createFile = function(){
-		//	//$http.get('/createFile').success(function(data, status, headers, config){
-     //        //       $scope.fileResult = data;
-		//	//	//console.log('data', data);
-		//	//	//console.log('status', status);
-		//	//	//console.log('headers', headers);
-		//	//	//console.log('config', config);
-		//	//});
-     //       $scope.isOpen = !$scope.isOpen;
-     //       if($scope.isOpen){
-     //           console.log("open");
-     //           TweenMax.to($('#fileCreator'), 1, {alpha:1, yPercent:0, display:"block",   ease: Power2.easeOut, paused:false});
-     //           //TweenMax.to($('#createFileBtn'), 0.6,{boxShadow:"inset 0 0 25px #05fe65, 0px 0px 30px 12px #12ea9b", repeat:-1, yoyo:true, ease:Linear.easeNone});
-     //           //TweenMax.to($('#fileCreator'),1, {yPercent:-150, transformOrigin:"0 0 0", ease:Back.easeOut});
-     //       }
-		//
-     //       else{
-     //           console.log("close");
-     //           TweenMax.to($('#fileCreator'), 1, {alpha:0, yPercent:-150, display:"none", ease: Power2.easeOut, paused:false});
-     //           //TweenMax.to($('#createFileBtn'), 0.6,{boxShadow:"inset 0 0 0px #05fe65, 0px 0px 0px 0px #12ea9b", repeat:-1, yoyo:true, ease:Linear.easeNone});
-     //           //TweenMax.to($('#fileCreator'),1, {height:'100%', transformOrigin:"0 0 0", ease:Back.easeOut});
-     //       }
-		//
-     //       $scope.assignment = '';
-		//}
+			else{
+				console.log("close");
+				TweenMax.to($('#fileCreator'), 1, {alpha:0, yPercent:-150, display:"none", ease: Power2.easeOut, paused:false});
+			}
+			$scope.assignment = '';
+		}
+
+		$scope.createFolder = function(){
+
+		}
+
+		$scope.publishFile = function(){
+
+		}
+
 		$scope.listGPlus = function(){
 			$http.get('/gs').success(function(data, status, headers, config){
 				$scope.userInfo = data;
@@ -3395,10 +3393,6 @@ angular.module('d2l').controller('InsClassController', ['$scope','$http','Create
 				console.log('config', config);
 			});
 		}
-
-        $scope.neighborhoods = ['Chelsea', 'Financial District', 'Midtown', 'West Village', 'Williamsburg'];
-
-
 	}
 ]);
 
@@ -3439,8 +3433,8 @@ angular.module('d2l')
 	])
 	.factory('D2lHwCopy', ['$resource',
 		function($resource) {
-			return $resource('/HWD2l/copyFile/:id', {
-				id: '@_id'
+			return $resource('/HWD2l/copyFile/:id/:userNameDoc', {
+				id: '@_id',userNameDoc:'@_userNameDoc'
 			},{copyDoc: {method:'GET'}});
 		}
 	])
@@ -3474,31 +3468,7 @@ function HwGenerator($mdToast, $location, devConfig, D2lHws) {
 				});
 			};
 
-			scope.createFile = function(){
-				//$http.get('/createFile').success(function(data, status, headers, config){
-				//       $scope.fileResult = data;
-				//	//console.log('data', data);
-				//	//console.log('status', status);
-				//	//console.log('headers', headers);
-				//	//console.log('config', config);
-				//});
-				scope.isOpen = !scope.isOpen;
-				if(scope.isOpen){
-					console.log("open");
-					TweenMax.to($('#fileCreator'), 1, {alpha:1, yPercent:0, display:"block",   ease: Power2.easeOut, paused:false});
-					//TweenMax.to($('#createFileBtn'), 0.6,{boxShadow:"inset 0 0 25px #05fe65, 0px 0px 30px 12px #12ea9b", repeat:-1, yoyo:true, ease:Linear.easeNone});
-					//TweenMax.to($('#fileCreator'),1, {yPercent:-150, transformOrigin:"0 0 0", ease:Back.easeOut});
-				}
 
-				else{
-					console.log("close");
-					TweenMax.to($('#fileCreator'), 1, {alpha:0, yPercent:-150, display:"none", ease: Power2.easeOut, paused:false});
-					//TweenMax.to($('#createFileBtn'), 0.6,{boxShadow:"inset 0 0 0px #05fe65, 0px 0px 0px 0px #12ea9b", repeat:-1, yoyo:true, ease:Linear.easeNone});
-					//TweenMax.to($('#fileCreator'),1, {height:'100%', transformOrigin:"0 0 0", ease:Back.easeOut});
-				}
-
-				scope.assignment = '';
-			}
 
 			scope.publishHW = function() {
 				alert('Click');
@@ -3529,7 +3499,7 @@ function HwGenerator($mdToast, $location, devConfig, D2lHws) {
 }
 HwGenerator.$inject = ["$mdToast", "$location", "devConfig", "D2lHws"];
 
-function HwPublisher($timeout,D2lHwPermission, D2lHwCopy){
+function HwPublisher($timeout, $http, D2lHwPermission, D2lHwCopy, D2lHws){
 	return {
 		templateUrl: 'modules/d2l/directives/template/d2l-hw-publisher-tpl.html',
 		restrict: 'E',
@@ -3548,11 +3518,27 @@ function HwPublisher($timeout,D2lHwPermission, D2lHwCopy){
 					)
 			};
 
-
 			//Make a Copy
-			scope.copyFile = function(id){
-				D2lHwCopy.copyDoc({id:id})
-					.$promise.then(function(value){console.log(value)},function(error){console.log(error)})
+			scope.copyFileTemplate = function(id){
+
+				var users = [{email:"pbshop1001@gmail.com"},{email:"kruny1001@gmail.com"}];
+
+				users.forEach(function(user){
+					D2lHwCopy.copyDoc({id:id, userNameDoc: user.email})
+						.$promise.then(function(value){console.log(value); alert('copy process is done');},function(error){console.log(error)});
+				})
+
+
+
+				//D2lHwCopy.copyDoc({id:id})
+				//	.$promise.then(function(value){console.log(value); alert('copy process is done');},function(error){console.log(error)});
+
+			}
+
+			scope.gsCopyFile = function(){
+
+				var url = 'http://localhost:8080/api/AKfycbwqcvW0ogVTk4o5-J89Fih5wO2XoNcsiTX_FCfbPXZdhGpIYNHW/cats';
+				$http.get(url).success(function(data){console.log(data)}).error(function(data){data});
 			}
 
 			//Insert Permissions
@@ -3576,6 +3562,8 @@ function HwPublisher($timeout,D2lHwPermission, D2lHwCopy){
 			scope.loadUsers = function() {
 				// Use timeout to simulate a 650ms request.
 				scope.users = [];
+				scope.d2lhws = D2lHws.query();
+
 				return $timeout(function() {
 					scope.users = [
 						{ id: 1, name: 'Copy of restFulAPI Test2', docId:'1HP0LZO1chIZSp-wxK0Gx2B5EVDrw9dVnl8y6OkQB5_k' },
@@ -3590,7 +3578,7 @@ function HwPublisher($timeout,D2lHwPermission, D2lHwCopy){
 		}
 	}
 }
-HwPublisher.$inject = ["$timeout", "D2lHwPermission", "D2lHwCopy"];
+HwPublisher.$inject = ["$timeout", "$http", "D2lHwPermission", "D2lHwCopy", "D2lHws"];
 
 'use strict';
 

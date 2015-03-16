@@ -35,8 +35,8 @@ angular.module('d2l')
 	])
 	.factory('D2lHwCopy', ['$resource',
 		function($resource) {
-			return $resource('/HWD2l/copyFile/:id', {
-				id: '@_id'
+			return $resource('/HWD2l/copyFile/:id/:userNameDoc', {
+				id: '@_id',userNameDoc:'@_userNameDoc'
 			},{copyDoc: {method:'GET'}});
 		}
 	])
@@ -70,31 +70,7 @@ function HwGenerator($mdToast, $location, devConfig, D2lHws) {
 				});
 			};
 
-			scope.createFile = function(){
-				//$http.get('/createFile').success(function(data, status, headers, config){
-				//       $scope.fileResult = data;
-				//	//console.log('data', data);
-				//	//console.log('status', status);
-				//	//console.log('headers', headers);
-				//	//console.log('config', config);
-				//});
-				scope.isOpen = !scope.isOpen;
-				if(scope.isOpen){
-					console.log("open");
-					TweenMax.to($('#fileCreator'), 1, {alpha:1, yPercent:0, display:"block",   ease: Power2.easeOut, paused:false});
-					//TweenMax.to($('#createFileBtn'), 0.6,{boxShadow:"inset 0 0 25px #05fe65, 0px 0px 30px 12px #12ea9b", repeat:-1, yoyo:true, ease:Linear.easeNone});
-					//TweenMax.to($('#fileCreator'),1, {yPercent:-150, transformOrigin:"0 0 0", ease:Back.easeOut});
-				}
 
-				else{
-					console.log("close");
-					TweenMax.to($('#fileCreator'), 1, {alpha:0, yPercent:-150, display:"none", ease: Power2.easeOut, paused:false});
-					//TweenMax.to($('#createFileBtn'), 0.6,{boxShadow:"inset 0 0 0px #05fe65, 0px 0px 0px 0px #12ea9b", repeat:-1, yoyo:true, ease:Linear.easeNone});
-					//TweenMax.to($('#fileCreator'),1, {height:'100%', transformOrigin:"0 0 0", ease:Back.easeOut});
-				}
-
-				scope.assignment = '';
-			}
 
 			scope.publishHW = function() {
 				alert('Click');
@@ -124,7 +100,7 @@ function HwGenerator($mdToast, $location, devConfig, D2lHws) {
 	};
 }
 
-function HwPublisher($timeout,D2lHwPermission, D2lHwCopy){
+function HwPublisher($timeout, $http, D2lHwPermission, D2lHwCopy, D2lHws){
 	return {
 		templateUrl: 'modules/d2l/directives/template/d2l-hw-publisher-tpl.html',
 		restrict: 'E',
@@ -143,11 +119,27 @@ function HwPublisher($timeout,D2lHwPermission, D2lHwCopy){
 					)
 			};
 
-
 			//Make a Copy
-			scope.copyFile = function(id){
-				D2lHwCopy.copyDoc({id:id})
-					.$promise.then(function(value){console.log(value)},function(error){console.log(error)})
+			scope.copyFileTemplate = function(id){
+
+				var users = [{email:"pbshop1001@gmail.com"},{email:"kruny1001@gmail.com"}];
+
+				users.forEach(function(user){
+					D2lHwCopy.copyDoc({id:id, userNameDoc: user.email})
+						.$promise.then(function(value){console.log(value); alert('copy process is done');},function(error){console.log(error)});
+				})
+
+
+
+				//D2lHwCopy.copyDoc({id:id})
+				//	.$promise.then(function(value){console.log(value); alert('copy process is done');},function(error){console.log(error)});
+
+			}
+
+			scope.gsCopyFile = function(){
+
+				var url = 'http://localhost:8080/api/AKfycbwqcvW0ogVTk4o5-J89Fih5wO2XoNcsiTX_FCfbPXZdhGpIYNHW/cats';
+				$http.get(url).success(function(data){console.log(data)}).error(function(data){data});
 			}
 
 			//Insert Permissions
@@ -171,6 +163,8 @@ function HwPublisher($timeout,D2lHwPermission, D2lHwCopy){
 			scope.loadUsers = function() {
 				// Use timeout to simulate a 650ms request.
 				scope.users = [];
+				scope.d2lhws = D2lHws.query();
+
 				return $timeout(function() {
 					scope.users = [
 						{ id: 1, name: 'Copy of restFulAPI Test2', docId:'1HP0LZO1chIZSp-wxK0Gx2B5EVDrw9dVnl8y6OkQB5_k' },

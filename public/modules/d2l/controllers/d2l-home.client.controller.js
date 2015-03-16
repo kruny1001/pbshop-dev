@@ -6,6 +6,7 @@ angular.module('d2l').controller('D2lHomeController', [
 		//$scope.testStr = S('asdf asdf wef sdf asdf wefsdf asf sf ').truncate(20, ' ...Read More').s;
 		$scope.authName = 'Authorization';
 		$scope.googleDrive={info:'gDriveCtrl'};
+		$scope.openMenu = true;
 
 		$scope.hideResult = function(){
 			var target = $('.listFolder');
@@ -217,9 +218,10 @@ angular.module('d2l').controller('D2lHomeController', [
 ])
 	.controller('gridListDemoCtrl', function($scope, $state) {
         function goToHWList(){
-            $state.go('listD2lHws');
+            //$state.go('listD2lHws');
         }
-		$scope.test=function(event){
+		$scope.test=function(event, targetInfo){
+			console.log('dddd');
 			var target = event.target;
 			console.log(target);
 			TweenLite.to(target, 0.3, {opacity: 0.8, scale:0.85});
@@ -241,12 +243,12 @@ angular.module('d2l').controller('D2lHomeController', [
 				switch(j+1) {
 					case 1:
 						it.background = "red";
-                        it.title = "Introduction";
+                        it.title = "Notifications";
 						//it.span.row = it.span.col = 2;
 
 						break;
 					case 2: it.background = "green"; it.title = "Tutorials"; break;
-					case 3: it.background = "darkBlue"; it.title = "Assignments"; break;
+					case 3: it.background = "darkBlue"; it.title = "Classes"; it.state="classes"; break;
 					case 4:
 						it.background = "blue";
 						it.title = "Pricing";

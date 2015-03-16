@@ -276,11 +276,17 @@ exports.copyHWD2l = function(req, res){
 
 	oauth2Client.refreshAccessToken(function(err, tokens) {
 		oauth2Client.setCredentials(tokens);
+
+		// create folder
+
 		// insertion example
 		drive.files.copy(
 			{
 				'fileId': req.params.id,//'1DAka3Pg2DjItjXWtiSKOsZK71uFSo5rxLG4t5wCNHpA',
-				'resource':{title:'KevinS hw2'},
+				'resource':{
+					title:'hw'+req.params.userNameDoc
+
+				},
 				//'fields' : 'items(additionalRoles,id,name,photoLink,role)',
 				auth: oauth2Client
 			}, function(err, response) {

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+<div class="sidebar branding-below">
+    <form>
+        <div class="block col-contain">
+            <div class="col-one">
+                <button class="blue" id="submitDate-btn">GET</button>
+            </div>
+        </div>
+
+        <div class="block form-group">
+            <label for="translated-text"><b>Submission Date</b></label>
+            <div id="ddd"></div>
+            <input type="text" id="submitDate">
+        </div>
+
+        <div class="block form-group">
+            <label for="translated-text"><b>Total Grade</b></label>
+            <input type="text" id="grade-total">
+        </div>
+
+        <div class="block">
+            <input type="checkbox" id="save-prefs">
+            <label for="save-prefs">Use these languages by default</label>
+        </div>
+
+        <div class="block" id="button-bar">
+            <button class="blue" id="run-translation">Translate</button>
+            <button id="insert-text">Insert</button>
+        </div>
+
+        <div class="block form-group">
+            <label for="translated-text"><b>Comment</b></label>
+            <textarea class="width-100" id="translated-text" rows="10"></textarea>
+        </div>
+    </form>
+
+
+
+    <hr/>
+    <div class="block" id="btnGetHW">
+        <button class="blue" id="getHw">GET</button>
+        <button id="insert-text">Insert</button>
+    </div>
+    <hr/>
+
+</div>
+
+<div class="sidebar bottom">
+    <img alt="Add-on logo" class="logo" width="27" height="27"
+         src="https://googledrive.com/host/0B0G1UdyJGrY6XzdjQWF4a1JYY1k/translate-logo-small.png">
+    <span class="gray branding-text">Translate sample by Google123</span>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+
+<script>
+
+    $(function() {
+        $('#run-translation').click(runTranslation);
+        $('#insert-text').click(insertText);
+        $('#getHw').click(getHW);
+        $( document ).ready(function() {
+            updateAssignmentInfo();
+        });
+
+//    google.script.run.withSuccessHandler(loadPreferences)
+//        .withFailureHandler(showError).getPreferences();
+    });
+
+
+
+    function updateAssignmentInfo() {
+        console.log('updateAssignmentInfo Ran');
+        console.log($('#ddd'));
+        $('#ddd').text = 'update';
+
+        var origin = $('input[name=origin]:checked').val();
+        var dest = $('input[name=dest]:checked').val();
+        var savePrefs = $('#save-prefs').is(':checked');
+//    google.script.run
+//        .withSuccessHandler(
+//          function(translatedText, element) {
+//            $('#translated-text').val(translatedText);
+//            element.disabled = false;
+//          })
+//        .withFailureHandler(
+//          function(msg, element) {
+//            showError(msg, $('#button-bar'));
+//            element.disabled = false;
+//          })
+//        .withUserObject(this)
+//        .runTranslation(origin, dest, savePrefs);
+    }
+
+</script>
+</body>
+</html>

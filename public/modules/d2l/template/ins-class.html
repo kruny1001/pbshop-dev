@@ -25,9 +25,9 @@
 </style>
     <section layout="row" layout-sm="column" layout-align="center center"
              class="ins-container">
-        <md-button id="createFileBtn" class="md-raised md-primary" ng-click="createFile()">Create File</md-button>
+        <md-button id="createFileBtn" class="md-raised md-primary" ng-click="createHWbtn()">Create HW</md-button>
         <md-button id="createFolderBtn" class="md-raised md-primary" ng-click="createFolder()">Create Folder</md-button>
-        <md-button id="publishFileBtn" class="md-raised md-primary" ng-click="publishFile()">Publish File</md-button>
+        <md-button id="publishFileBtn" class="md-raised md-primary" ng-click="publishFile()">Publish HW</md-button>
         <md-button class="md-raised md-primary" ng-click="listGPlus()">Get Your Google+</md-button>
         <md-button class="md-raised md-primary">Create Discussion</md-button>
         <div class="label">Google Drive</div>
@@ -35,34 +35,6 @@
 
     <d2l-hw-generator color-border='red'></d2l-hw-generator>
     <d2l-hw-publisher color-border='gery'></d2l-hw-publisher>
-
-    <!--<div id="fileCreator" class="ins-container">-->
-        <!--<div layout layout-sm="column">-->
-            <!--<md-input-container flex>-->
-                <!--<label>File Name</label>-->
-                <!--<input ng-model="assignment.firstName" placeholder="Placeholder text">-->
-            <!--</md-input-container>-->
-            <!--<md-input-container flex>-->
-                <!--<label>Location</label>-->
-                <!--<input ng-model="assignment.dirName">-->
-            <!--</md-input-container>-->
-        <!--</div>-->
-        <!--<div layout layout-sm="column">-->
-            <!--<md-input-container flex>-->
-                <!--<label>Due Date</label>-->
-                <!--<input ng-model="assignment.dDate">-->
-            <!--</md-input-container>-->
-        <!--</div>-->
-        <!--<div layout="column" layout-align="center center" style="min-height: 200px;">-->
-            <!--<p>Select Type of File</p>-->
-            <!--<md-select ng-model="neighborhood" placeholder="Neighborhood" flex>-->
-                <!--<md-option ng-value="opt" ng-repeat="opt in neighborhoods">{{ opt }}</md-option>-->
-            <!--</md-select>-->
-        <!--</div>-->
-        <!--<div layout layout-sm="column"><md-button class="md-raised md-primary" style="margin-bottom:20px;">Publish</md-button>-->
-            <!--<md-button class="md-raised md-primary" style="margin-bottom:20px;">Save</md-button></div>-->
-        <!--<div class="label">Create Assignment UI</div>-->
-    <!--</div>-->
 
     <pre ng-show="fileResult"><h3>Create Folder Result</h3>{{fileResult}}</pre>
     <pre ng-show="userInfo"><h3>Google+ Profile Result</h3>Google Profile: {{userInfo.name.givenName}} {{userInfo.name.familyName}} ({{userInfo.gender}})</pre>
