@@ -1,0 +1,15 @@
+ .sample {
+    height: 500px; }
+ .remove-tab {
+    margin-bottom: 40px; }
+ .demo-tab {
+    height: 300px;
+    text-align: center; }
+ .demo-tab button {
+    margin-bottom: 40px; }
+ md-tabs,  md-tabs .md-header {
+    border-bottom: 1px solid #D8D8D8; }
+ md-tab[disabled] {
+    opacity: 0.5; }
+ .md-tab-content {
+    background: white; }

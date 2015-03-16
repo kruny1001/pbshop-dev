@@ -1,0 +1,90 @@
+<section class="headerEnabled" data-ng-controller="TopHairHomeController">
+    <div layout="row" layout-align="space-around center">
+        <div>FREE SHIPPING INFO</div>
+        <div>LOGO</div>
+        <div>SEARCH</div>
+    </div>
+
+    <th-top-menu></th-top-menu>
+
+
+    <h3>Best Selling</h3>
+    <h3>New Arrivals</h3>
+    <h3>Hot Now</h3>
+    <h3>All About Weaving</h3>
+    <h3>Unprocessed Hair Super Sale</h3>
+    <h3>Featured Brand</h3>
+
+    <div style="height: 500px;" layout="column">
+        <md-tabs style="overflow: hidden" md-selected="selectedIndex" flex>
+            <md-tab ng-repeat="tab in tabs"
+                    ng-disabled="tab.disabled"
+                    label="{{tab.title}}">
+                <div class="demo-tab tab{{$index%4}}" layout="column" layout-align="space-around center">
+                    <div ng-bind="tab.content"></div>
+                    <md-button class="md-primary md-raised" ng-click="removeTab( tab )">
+                        Update
+                    </md-button>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </div>
+
+
+    <div layout="row" layout-sm="column" layout-align="center center"
+            style="border-top: 5px solid #ff60ad;">
+        <md-card>
+            <img src="modules/top-hair/img/beauty-blog_B.jpg" alt="Washed Out">
+            <!--<md-card-content>-->
+                <!--<h2>Paracosm</h2>-->
+                <!--<p>-->
+                    <!--The titles of Washed Out's breakthrough song and the first single from Paracosm share the-->
+                    <!--two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...-->
+                <!--</p>-->
+            <!--</md-card-content>-->
+        </md-card>
+
+        <md-card>
+            <img src="modules/top-hair/img/beauty-blog_B.jpg" alt="Washed Out">
+        </md-card>
+
+        <md-card>
+            <img src="modules/top-hair/img/beauty-blog_B.jpg" alt="Washed Out">
+        </md-card>
+
+        <md-card>
+            <img src="modules/top-hair/img/beauty-blog_B.jpg" alt="Washed Out">
+        </md-card>
+    </div>
+
+
+
+    <div layout="row" layout-sm="column" layout-align="space-around center"
+            style="border-top: 5px solid #A7A7A7;
+  border-bottom: 5px solid #A7A7A7;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  padding: 10px 0px 10px 0px;">
+        <md-card>
+            <img src="modules/top-hair/img/footer_contents_31.png" alt="Washed Out">
+            <!--<md-card-content>-->
+            <!--<h2>Paracosm</h2>-->
+            <!--<p>-->
+            <!--The titles of Washed Out's breakthrough song and the first single from Paracosm share the-->
+            <!--two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...-->
+            <!--</p>-->
+            <!--</md-card-content>-->
+        </md-card>
+
+        <md-card>
+            <img src="modules/top-hair/img/footer_contents_31.png" alt="Washed Out">
+        </md-card>
+
+        <md-card>
+            <img src="modules/top-hair/img/footer_contents_31.png" alt="Washed Out">
+        </md-card>
+        <md-card>
+            <img src="modules/top-hair/img/footer_contents_31.png" alt="Washed Out">
+        </md-card>
+    </div>
+</section>
