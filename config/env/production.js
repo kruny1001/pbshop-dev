@@ -60,8 +60,8 @@ module.exports = {
 				//'public/lib/d3-timeline/src/d3-timeline.js',
 
 				'public/lib/topojson/topojson.js',
+				'public/lib/angular-smart-table/dist/smart-table.min.js',
 
-				//'public/lib/angular-smart-table/dist/smart-table.min.js',
 
 				'public/lib/tinymce/tinymce.min.js',
 				'public/lib/tinymce/plugins/image/plugin.min.js',

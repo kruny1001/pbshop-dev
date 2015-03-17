@@ -72,7 +72,7 @@ module.exports = {
 
 				'public/lib/topojson/topojson.js',
 
-				//'public/lib/angular-smart-table/dist/smart-table.debug.js',
+				'public/lib/angular-smart-table/dist/smart-table.min.js',
 
 				'public/lib/tinymce/tinymce.min.js',
         'public/lib/tinymce/plugins/image/plugin.min.js',

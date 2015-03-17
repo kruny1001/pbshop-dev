@@ -3,6 +3,7 @@
     <div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>
     <!-- Debuging Purpose End-->
 
+
     <md-toolbar>
         <h2 class="md-toolbar-tools">
             <span><b>LMS App</b></span>
@@ -12,7 +13,170 @@
         </h2>
     </md-toolbar>
 
+    <div ng-show="openMenu" class="gridListdemoDynamicTiles">
+        <div ng-controller="gridListDemoCtrl as vm">
+            <md-grid-list
+                    md-cols-sm="3" md-cols-md="6" md-cols-gt-md="12"
+                    md-row-height-gt-md="1:1" md-row-height="4:3"
+                    md-gutter="8px" md-gutter-gt-sm="4px" >
+                <md-grid-tile ng-repeat="tile in vm.tiles"
+                              md-rowspan="{{tile.span.row}}"
+                              md-colspan="{{tile.span.col}}"
+                              ng-class="tile.background"
+                              id="tile.title"
+                        >
 
+                    <md-icon md-svg-icon="{{tile.icon}}" ng-click="test($event, tile)"></md-icon>
+                    <!--<md-grid-tile-header style="height:20px">-->
+                    <!--<h6>This is a header</h6>-->
+                    <!--</md-grid-tile-header>-->
+                    <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+                </md-grid-tile>
+            </md-grid-list>
+        </div>
+    </div>
+
+    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="row" layout-sm="column" layout-align="space-around center" style="font-size:12px">
+        <div style="border-top: 5px solid #ff60ad;">
+            <h3>List HW</h3>
+            <p>Add, Edit, Udpate or Remove Homework</p>
+            <table st-table="HWCollection" class="table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th st-sort="title">Title</th>
+                    <th st-sort="class">Class</th>
+                    <th st-sort="dDate">Due Date</th>
+                    <th st-sort="tPoint">Total Point</th>
+                    <th st-sort="tPercent">Total Percent</th>
+                    <th st-sort="average">Average</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="HW in HWCollection">
+                    <td cs-select="HW"></td>
+                    <td>{{HW.title}}</td>
+                    <td>{{HW.class | uppercase}}</td>
+                    <td>{{HW.dDate}}</td>
+                    <td>{{HW.tPoint}}</td>
+                    <td>{{HW.tPercent}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="border-top: 5px solid #ffa935;">
+            <h3>List HW</h3>
+            <p>Add, Edit, Udpate or Remove Homework</p>
+            <table st-table="HWCollection" class="table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th st-sort="title">Title</th>
+                    <th st-sort="class">Class</th>
+                    <th st-sort="dDate">Due Date</th>
+                    <th st-sort="tPoint">Total Point</th>
+                    <th st-sort="tPercent">Total Percent</th>
+                    <th st-sort="average">Average</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="HW in HWCollection">
+                    <td cs-select="HW"></td>
+                    <td>{{HW.title}}</td>
+                    <td>{{HW.class | uppercase}}</td>
+                    <td>{{HW.dDate}}</td>
+                    <td>{{HW.tPoint}}</td>
+                    <td>{{HW.tPercent}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </md-whiteframe>
+
+    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+        <!-- {title:'Lecture1', class:'CSC601-2015', publishDate:'1/5', docLink:''}, -->
+        <div style="border-top: 5px solid #45b3ff;">
+            <h3>List Class Materials</h3>
+            <p>Add, Edit, Udpate or Remove Class Materials</p>
+            <table st-table="cmCollection" class="table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th st-sort="title">Title</th>
+                    <th st-sort="class">Class</th>
+                    <th st-sort="publishDate">Publish Date</th>
+                    <th st-sort="docLink">Doc Link</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="CM in cmCollection">
+                    <td cs-select="CM"></td>
+                    <td>{{CM.title}}</td>
+                    <td>{{CM.class | uppercase}}</td>
+                    <td>{{CM.publishDate}}</td>
+                    <td>{{CM.docLink}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </md-whiteframe>
+
+    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+        <div style="border-top: 5px solid #ff5635;">
+        <md-button><a href="https://script.google.com/macros/s/AKfycbwkEMqSvuUvGbn4qkTTqee7aQDkJlmn6eMWyXAGOW-VWEbWpEk6/exec" target="_blank">New HW</a></md-button>
+        <h3>Grade Board for Instructor</h3>
+        <table st-table="rowCollection" class="table">
+            <thead>
+            <tr>
+                <th></th>
+                <th st-sort="firstName">First name</th>
+                <th st-sort="lastName">Last name</th>
+                <th st-sort="userId">ID</th>
+                <th st-sort="grade">Grade</th>
+                <th st-sort="gradePercent">%</th>
+                <th st-sort="submit">Submit</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="row in rowCollection">
+                <td cs-select="row"></td>
+                <td>{{row.firstName | uppercase}}</td>
+                <td>{{row.lastName}}</td>
+                <td>{{row.id}}</td>
+                <td>{{row.grade}}</td>
+                <td>{{row.grade / 100 * 100}}</td>
+                <td><md-checkbox ng-model="row.submit" aria-label="Checkbox 1" style="margin:0px; margiin-left:10px;" ng-disabled="true"></md-checkbox></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </md-whiteframe>
+
+    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+        <div style="border-top: 5px solid #63ff5e;">
+            <h3>Grade Board for Student</h3>
+            <table st-table="gradeCollection" class="table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th st-sort="numAssignment">First name</th>
+                    <th st-sort="grade">Last name</th>
+                    <th st-sort="percent">%</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="row in gradeCollection">
+                    <td cs-select="row"></td>
+                    <td>{{row.numAssignment | uppercase}}</td>
+                    <td>{{row.grade}}</td>
+                    <td>{{row.grade / row.total * 100}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </md-whiteframe>
     <!-- Search Box-->
     <!--<md-content class="md-padding" layout="column" ng-controller="DemoCtrl as ctrl">-->
         <!--<p>Search</p>-->
@@ -32,53 +196,41 @@
     <!--</md-content>-->
 
 
-    <div ng-show="openMenu" class="gridListdemoDynamicTiles">
-        <div ng-controller="gridListDemoCtrl as vm">
-            <md-grid-list
-                    md-cols-sm="2" md-cols-md="4" md-cols-gt-md="8"
-                    md-row-height-gt-md="1:1" md-row-height="4:3"
-                    md-gutter="8px" md-gutter-gt-sm="4px" >
-                <md-grid-tile ng-repeat="tile in vm.tiles"
-                              md-rowspan="{{tile.span.row}}"
-                              md-colspan="{{tile.span.col}}"
-                              ng-class="tile.background"
-                        >
 
-                    <md-icon md-svg-icon="{{tile.icon}}" ng-click="test($event, tile)"></md-icon>
-                    <!--<md-grid-tile-header style="height:20px">-->
-                        <!--<h6>This is a header</h6>-->
-                    <!--</md-grid-tile-header>-->
-                    <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
-                </md-grid-tile>
-            </md-grid-list>
+
+    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+        <h3> Class Board </h3>
+        <div layout="column" layout-fill>
+            <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
+                <span>New Assignment is updated</span>
+            </md-whiteframe>
+            <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
+                <span>New Assignment is updated</span>
+            </md-whiteframe>
+            <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
+                <span>Exam is coming SOON</span>
+            </md-whiteframe>
         </div>
-    </div>
+    </md-whiteframe>
 
-    <h3> Class Board </h3>
-    <div layout="column" layout-fill>
-        <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
-            <span>New Assignment is updated</span>
-        </md-whiteframe>
-        <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
-            <span>New Assignment is updated</span>
-        </md-whiteframe>
-        <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
-            <span>Exam is coming SOON</span>
-        </md-whiteframe>
-    </div>
-    <h3> Important Date </h3>
-    <div layout="column" layout-fill>
-        <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
-            <span>2nd Exam 4/21</span>
-        </md-whiteframe>
-        <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
-            <span>New Assignment is updated</span>
-        </md-whiteframe>
-        <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
-            <span>Exam is coming SOON</span>
-        </md-whiteframe>
-    </div>
-    <h3> Scheduler </h3>
+    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+        <h3> Important Date </h3>
+        <div layout="column" layout-fill>
+            <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
+                <span>2nd Exam 4/21</span>
+            </md-whiteframe>
+            <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
+                <span>New Assignment is updated</span>
+            </md-whiteframe>
+            <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
+                <span>Exam is coming SOON</span>
+            </md-whiteframe>
+        </div>
+    </md-whiteframe>
+
+    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+        <h3> Scheduler </h3>
+    </md-whiteframe>
 
     <h1>Google API List</h1>
 

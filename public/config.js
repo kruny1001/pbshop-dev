@@ -12,7 +12,7 @@ var ApplicationConfiguration = (function() {
 	          'ngSanitize',  'ui.router',
             'ui.bootstrap', //'ui.utils',
             'ngMaterial', /*'ng-context-menu', 'uiGmapgoogle-maps',*/
-            //'smart-table'
+            'smart-table',
             //'oc.lazyLoad',
             'nvd3',
             'braintree-angular'

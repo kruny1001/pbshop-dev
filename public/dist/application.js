@@ -12,7 +12,7 @@ var ApplicationConfiguration = (function() {
 	          'ngSanitize',  'ui.router',
             'ui.bootstrap', //'ui.utils',
             'ngMaterial', /*'ng-context-menu', 'uiGmapgoogle-maps',*/
-            //'smart-table'
+            'smart-table',
             //'oc.lazyLoad',
             'nvd3',
             'braintree-angular'
@@ -2930,6 +2930,48 @@ angular.module('d2l').controller('D2lAdController', ['$scope',
 angular.module('d2l').controller('D2lHomeController', [
 	'$scope','Googledrive','D2LOauth',
 	function($scope, Googledrive, D2LOauth) {
+
+		//remove Header
+		TweenMax.set($('header'), {y:-51});
+
+		//End remove Header
+		//table data
+		$scope.cmCollection = [
+			{title:'Lecture1', class:'CSC601-2015', publishDate:'1/5', docLink:''},
+			{title:'Lecture2', class:'CSC601-2015', publishDate:'1/12', docLink:''},
+			{title:'Lecture3', class:'CSC601-2015', publishDate:'1/19', docLink:''},
+			{title:'Lecture4', class:'CSC601-2015', publishDate:'1/26', docLink:''},
+			{title:'Lecture5', class:'CSC601-2015', publishDate:'2/5', docLink:''},
+			{title:'Lecture6', class:'CSC601-2015', publishDate:'2/12', docLink:''}
+		];
+
+		$scope.HWCollection = [
+			{title:'A1', class:'CSC601-2015', dDate:'1/12', tPoint:'200', tPercent:'5%', docLink:''},
+			{title:'A2', class:'CSC601-2015', dDate:'1/25', tPoint:'300', tPercent:'5%', docLink:''},
+			{title:'A3', class:'CSC601-2015', dDate:'2/12', tPoint:'400', tPercent:'5%', docLink:''},
+			{title:'A4', class:'CSC601-2015', dDate:'2/25', tPoint:'300', tPercent:'5%', docLink:''},
+			{title:'A5', class:'CSC601-2015', dDate:'3/19', tPoint:'200', tPercent:'5%', docLink:''},
+			{title:'A6', class:'CSC601-2015', dDate:'4/12', tPoint:'250', tPercent:'5%', docLink:''}
+		];
+
+		//Should be connected with DB
+		$scope.rowCollection = [
+			{firstName: 'Laurent', lastName: 'Renard', id:'1905548', grade:95, submit:true, email: 'whatever@gmail.com'},
+			{firstName: 'Blandine', lastName: 'Faivre', id:'1905528', grade:0, submit:false, email: 'oufblandou@gmail.com'},
+			{firstName: 'Blandine', lastName: 'Faivre', id:'1905528', grade:100, submit:true, email: 'oufblandou@gmail.com'},
+			{firstName: 'Francoise', lastName: 'Frere', id:'1906648', grade:65, submit:true, email: 'raymondef@gmail.com'}
+		];
+
+		//Should be connected with DB
+		$scope.gradeCollection = [
+			{numAssignment: 'A1', grade:200, total: 250, docLink:""},
+			{numAssignment: 'A2', grade:160, total: 250, docLink:""},
+			{numAssignment: 'A3', grade:220, total: 250, docLink:""},
+			{numAssignment: 'A4', grade:75, total: 100, docLink:""},
+			{numAssignment: 'A5', grade:85, total: 150, docLink:""}
+		]
+		//end table data
+
 		//$scope.testStr = S('asdf asdf wef sdf asdf wefsdf asf sf ').truncate(20, ' ...Read More').s;
 		$scope.authName = 'Authorization';
 		$scope.googleDrive={info:'gDriveCtrl'};
@@ -8069,7 +8111,7 @@ function GetRequires($parse){
 }
 GetRequires.$inject = ["$parse"];
 
-function SelectProvider($$interimElementProvider) {
+function SelectProvider($$interimElementProvider) {
 	selectDefaultOptions.$inject = ["$tcOrder", "$mdConstant", "$$rAF", "$mdUtil", "$mdTheming", "$timeout"];
 	return $$interimElementProvider('$tcOrder')
 		.setDefaults({
