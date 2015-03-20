@@ -5,103 +5,102 @@
  */
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors.server.controller'),
-	D2lHw = mongoose.model('D2lHw'),
-	D2lClass = mongoose.model('D2lClass'),
+	D2lGrade = mongoose.model('D2lGrade'),
 	_ = require('lodash');
 
 /**
- * Create a D2l hw
+ * Create a D2l grade
  */
-exports.create = function(req, res, next) {
-	var d2lHw = new D2lHw(req.body);
-	d2lHw.user = req.user;
-	d2lHw.save(function(err) {
+exports.create = function(req, res) {
+	var d2lGrade = new D2lGrade(req.body);
+	d2lGrade.user = req.user;
+
+	d2lGrade.save(function(err) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			D2lClass.populate('class').exec(function(err, item){});
+			res.jsonp(d2lGrade);
 		}
 	});
 };
 
 /**
- * Show the current D2l hw
+ * Show the current D2l grade
  */
 exports.read = function(req, res) {
-	res.jsonp(req.d2lHw);
+	res.jsonp(req.d2lGrade);
 };
 
 /**
- * Update a D2l hw
+ * Update a D2l grade
  */
 exports.update = function(req, res) {
-	var d2lHw = req.d2lHw ;
+	var d2lGrade = req.d2lGrade ;
 
-	d2lHw = _.extend(d2lHw , req.body);
+	d2lGrade = _.extend(d2lGrade , req.body);
 
-	d2lHw.save(function(err) {
+	d2lGrade.save(function(err) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(d2lHw);
+			res.jsonp(d2lGrade);
 		}
 	});
 };
 
 /**
- * Delete an D2l hw
+ * Delete an D2l grade
  */
 exports.delete = function(req, res) {
-	var d2lHw = req.d2lHw ;
+	var d2lGrade = req.d2lGrade ;
 
-	d2lHw.remove(function(err) {
+	d2lGrade.remove(function(err) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(d2lHw);
+			res.jsonp(d2lGrade);
 		}
 	});
 };
 
 /**
- * List of D2l hws
+ * List of D2l grades
  */
 exports.list = function(req, res) { 
-	D2lHw.find().sort('-created').populate('user', 'displayName').exec(function(err, d2lHws) {
+	D2lGrade.find().sort('-created').populate('user', 'displayName').exec(function(err, d2lGrades) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(d2lHws);
+			res.jsonp(d2lGrades);
 		}
 	});
 };
 
 /**
- * D2l hw middleware
+ * D2l grade middleware
  */
-exports.d2lHwByID = function(req, res, next, id) { 
-	D2lHw.findById(id).populate('user', 'displayName').exec(function(err, d2lHw) {
-		if (! d2lHw) return next(new Error('Failed to load D2l hw ' + id));
+exports.d2lGradeByID = function(req, res, next, id) { 
+	D2lGrade.findById(id).populate('user', 'displayName').exec(function(err, d2lGrade) {
 		if (err) return next(err);
-		req.d2lHw = d2lHw ;
-		console.log(d2lHw);
+		if (! d2lGrade) return next(new Error('Failed to load D2l grade ' + id));
+		req.d2lGrade = d2lGrade ;
 		next();
 	});
 };
 
 /**
- * D2l hw authorization middleware
+ * D2l grade authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
-	if (req.d2lHw.user.id !== req.user.id) {
+	if (req.d2lGrade.user.id !== req.user.id) {
 		return res.status(403).send('User is not authorized');
 	}
 	next();

@@ -29,9 +29,56 @@
 	</small>
 
     <md-content class="md-padding" layout="column">
-        <label>Description: </label><h5 data-ng-bind="d2lHw.desc"></h5>
-        <label>Due Date: </label><h5 data-ng-bind="d2lHw.dDate"></h5>
-        <label>Content: </label><h5 data-ng-bind="d2lHw.content"></h5>
+        <md-input-container>
+            <label>Title</label>
+            <input disabled md-maxlength="30" required name="title" ng-model="d2lHw.title">
+            <div ng-messages="projectForm.description.$error">
+                <div ng-message="required">This is required.</div>
+                <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+            </div>
+        </md-input-container>
+
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <label>Total Grade</label>
+                <input disabled type="number" name="title" ng-model="d2lHw.totalGrade">
+                <div ng-messages="projectForm.totalGrade.$error">
+                    <!--<div ng-message="required">This is required.</div>-->
+                    <!--<div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>-->
+                </div>
+            </md-input-container>
+            <md-input-container flex>
+                <label>Percent</label>
+                <input disabled type="number" name="percent" ng-model="d2lHw.percent">
+                <div ng-messages="projectForm.totalGrade.$error">
+                    <!--<div ng-message="required">This is required.</div>-->
+                    <!--<div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>-->
+                </div>
+            </md-input-container>
+        </div>
+
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <label>Due Date</label>
+                <input disabled type="date" required name="dDate" ng-model="d2lHw.dDate">
+            </md-input-container>
+
+            <md-input-container flex>
+                <label>description</label>
+                <input disabled md-maxlength="130" required name="desc" ng-model="d2lHw.desc">
+                <div ng-messages="projectForm.description.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                </div>
+            </md-input-container>
+        </div>
+
+        <md-input-container>
+            <label>Contents</label>
+            <textarea disabled ng-model="d2lHw.content" columns="1" md-maxlength="650"></textarea>
+        </md-input-container>
+
+
     </md-content>
 
 </section>

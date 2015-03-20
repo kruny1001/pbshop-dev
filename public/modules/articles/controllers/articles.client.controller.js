@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('articles').controller('ArticlesController',
-	['$scope', '$stateParams', '$location', '$http', 'Authentication', 'Articles',
-	function($scope, $stateParams, $location, $http, Authentication, Articles) {
+	['$scope', '$stateParams', '$location', '$http', '$sce','Authentication', 'Articles',
+	function($scope, $stateParams, $location, $http, $sce, Authentication, Articles) {
 		$scope.authentication = Authentication;
         $scope.docTypes = [{name: 'Project'}, {name: 'Article'}, {name: 'Information'}];
         $scope.docType = 2;
@@ -63,10 +63,7 @@ angular.module('articles').controller('ArticlesController',
 		$scope.findOne = function() {
 			$scope.article = Articles.get({
 				articleId: $stateParams.articleId
-			})
-            //    .then(function(){
-            //    $scope.id=$scope.article._id;
-            //});
+			}, function(data){console.log(data);data.content = $sce.trustAsHtml(data.content)})
 		};
 	}
 ]);

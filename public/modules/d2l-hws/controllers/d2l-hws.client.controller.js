@@ -9,7 +9,8 @@ angular.module('d2l-hws').controller('D2lHwsController', ['$scope', '$stateParam
 		$scope.create = function() {
 			// Create new D2l hw object
 			var d2lHw = new D2lHws ({
-				name: this.name
+				name: this.name,
+				dDate: new Date(this.dDate)
 			});
 
 			// Redirect after save
@@ -43,6 +44,8 @@ angular.module('d2l-hws').controller('D2lHwsController', ['$scope', '$stateParam
 		// Update existing D2l hw
 		$scope.update = function() {
 			var d2lHw = $scope.d2lHw;
+			console.log('here');
+			d2lHw.dDate = new Date(d2lHw.dDate);
 
 			d2lHw.$update(function() {
 				$location.path('d2l-hws/' + d2lHw._id);
@@ -60,6 +63,8 @@ angular.module('d2l-hws').controller('D2lHwsController', ['$scope', '$stateParam
 		$scope.findOne = function() {
 			$scope.d2lHw = D2lHws.get({ 
 				d2lHwId: $stateParams.d2lHwId
+			}, function(result){
+				result.dDate = new Date(result.dDate);
 			});
 		};
 	}

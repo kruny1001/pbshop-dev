@@ -9,6 +9,8 @@
   ],
 
   "announcements":[
+    {"name":"LMS Project Submission", "date":"Apr 1st", "body":"Submission Date"},
+    {"name":"LMS Project", "date":"Mar 17th", "body":"App Review"},
     {"name":"MongoDB Group", "date":"Mar 17th", "body":"MongoDB University에서 DB수업이 있습니다. M202: MongoDB Advanced Deployment and Operations, M102: MongoDB for DBAs, M101JS: MongoDB for Node.js Developers"},
     {"name":"12nd Conference", "date":"Jan 17th", "body":"동훈님과 누자베스님께서 angularJS 코드 설명을 해주시겠습니다."},
     {"name":"New Member", "date":"Jan 14th", "body":"Shin Charlie became our team member! email:present1011 at gmail dot com"},

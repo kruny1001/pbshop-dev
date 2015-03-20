@@ -23,6 +23,10 @@ var D2lHwSchema = new Schema({
 		type: Schema.ObjectId,
 		ref: 'User'
 	},
+	class:{
+		type: Schema.ObjectId,
+		ref: 'D2lClass'
+	},
 	title:{
 		type: String,
 		default: '',
@@ -33,21 +37,27 @@ var D2lHwSchema = new Schema({
 		default: '',
 		trim: true
 	},
+	totalGrade:{
+		type: Number,
+		default: 0
+	},
+	percent:{
+		type: Number,
+		default: 0
+	},
 	dDate:{
-		type: String,
-		default: '',
-		trim: true
+		type: Date
 	},
 	content:{
 		type: String,
 		default: '',
 		trim: true
-	},
-    rate: {
-        type: Number,
-        default: 800,
-        trim: true
-    }
+	}
+    //rate: {
+    //    type: Number,
+    //    default: 800,
+    //    trim: true
+    //}
 });
 
 mongoose.model('D2lHw', D2lHwSchema);

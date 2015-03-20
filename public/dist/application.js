@@ -89,6 +89,14 @@ ApplicationConfiguration.registerModule('d2l-ads');
 'use strict';
 
 // Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('d2l-classes');
+'use strict';
+
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('d2l-grades');
+'use strict';
+
+// Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('d2l-hws');
 'use strict';
 
@@ -1662,8 +1670,8 @@ angular.module('articles').config(['$stateProvider',
 'use strict';
 
 angular.module('articles').controller('ArticlesController',
-	['$scope', '$stateParams', '$location', '$http', 'Authentication', 'Articles',
-	function($scope, $stateParams, $location, $http, Authentication, Articles) {
+	['$scope', '$stateParams', '$location', '$http', '$sce','Authentication', 'Articles',
+	function($scope, $stateParams, $location, $http, $sce, Authentication, Articles) {
 		$scope.authentication = Authentication;
         $scope.docTypes = [{name: 'Project'}, {name: 'Article'}, {name: 'Information'}];
         $scope.docType = 2;
@@ -1724,10 +1732,7 @@ angular.module('articles').controller('ArticlesController',
 		$scope.findOne = function() {
 			$scope.article = Articles.get({
 				articleId: $stateParams.articleId
-			})
-            //    .then(function(){
-            //    $scope.id=$scope.article._id;
-            //});
+			}, function(data){console.log(data);data.content = $sce.trustAsHtml(data.content)})
 		};
 	}
 ]);
@@ -2769,6 +2774,236 @@ angular.module('d2l-ads').directive('lineTrasit', ['$timeout',
 
 'use strict';
 
+// Configuring the Articles module
+angular.module('d2l-classes').run(['Menus',
+	function(Menus) {
+		// Set top bar menu items
+		Menus.addMenuItem('topbar', 'D2l classes', 'd2l-classes', 'dropdown', '/d2l-classes(/create)?');
+		Menus.addSubMenuItem('topbar', 'd2l-classes', 'List D2l classes', 'd2l-classes');
+		Menus.addSubMenuItem('topbar', 'd2l-classes', 'New D2l class', 'd2l-classes/create');
+	}
+]);
+'use strict';
+
+//Setting up route
+angular.module('d2l-classes').config(['$stateProvider',
+	function($stateProvider) {
+		// D2l classes state routing
+		$stateProvider.
+		state('listD2lClasses', {
+			url: '/d2l-classes',
+			templateUrl: 'modules/d2l-classes/views/list-d2l-classes.client.view.html'
+		}).
+		state('createD2lClass', {
+			url: '/d2l-classes/create',
+			templateUrl: 'modules/d2l-classes/views/create-d2l-class.client.view.html'
+		}).
+		state('viewD2lClass', {
+			url: '/d2l-classes/:d2lClassId',
+			templateUrl: 'modules/d2l-classes/views/view-d2l-class.client.view.html'
+		}).
+		state('editD2lClass', {
+			url: '/d2l-classes/:d2lClassId/edit',
+			templateUrl: 'modules/d2l-classes/views/edit-d2l-class.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+// D2l classes controller
+angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$stateParams', '$location', 'Authentication', 'D2lClasses',
+	function($scope, $stateParams, $location, Authentication, D2lClasses) {
+		$scope.authentication = Authentication;
+
+		// Create new D2l class
+		$scope.create = function() {
+			// Create new D2l class object
+			var d2lClass = new D2lClasses ({
+				name: this.name
+			});
+
+			// Redirect after save
+			d2lClass.$save(function(response) {
+				$location.path('d2l-classes/' + response._id);
+
+				// Clear form fields
+				$scope.name = '';
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Remove existing D2l class
+		$scope.remove = function(d2lClass) {
+			if ( d2lClass ) { 
+				d2lClass.$remove();
+
+				for (var i in $scope.d2lClasses) {
+					if ($scope.d2lClasses [i] === d2lClass) {
+						$scope.d2lClasses.splice(i, 1);
+					}
+				}
+			} else {
+				$scope.d2lClass.$remove(function() {
+					$location.path('d2l-classes');
+				});
+			}
+		};
+
+		// Update existing D2l class
+		$scope.update = function() {
+			var d2lClass = $scope.d2lClass;
+
+			d2lClass.$update(function() {
+				$location.path('d2l-classes/' + d2lClass._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Find a list of D2l classes
+		$scope.find = function() {
+			$scope.d2lClasses = D2lClasses.query();
+		};
+
+		// Find existing D2l class
+		$scope.findOne = function() {
+			$scope.d2lClass = D2lClasses.get({ 
+				d2lClassId: $stateParams.d2lClassId
+			});
+		};
+	}
+]);
+'use strict';
+
+//D2l classes service used to communicate D2l classes REST endpoints
+angular.module('d2l-classes').factory('D2lClasses', ['$resource',
+	function($resource) {
+		return $resource('d2l-classes/:d2lClassId', { d2lClassId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);
+'use strict';
+
+// Configuring the Articles module
+angular.module('d2l-grades').run(['Menus',
+	function(Menus) {
+		// Set top bar menu items
+		Menus.addMenuItem('topbar', 'D2l grades', 'd2l-grades', 'dropdown', '/d2l-grades(/create)?');
+		Menus.addSubMenuItem('topbar', 'd2l-grades', 'List D2l grades', 'd2l-grades');
+		Menus.addSubMenuItem('topbar', 'd2l-grades', 'New D2l grade', 'd2l-grades/create');
+	}
+]);
+'use strict';
+
+//Setting up route
+angular.module('d2l-grades').config(['$stateProvider',
+	function($stateProvider) {
+		// D2l grades state routing
+		$stateProvider.
+		state('listD2lGrades', {
+			url: '/d2l-grades',
+			templateUrl: 'modules/d2l-grades/views/list-d2l-grades.client.view.html'
+		}).
+		state('createD2lGrade', {
+			url: '/d2l-grades/create',
+			templateUrl: 'modules/d2l-grades/views/create-d2l-grade.client.view.html'
+		}).
+		state('viewD2lGrade', {
+			url: '/d2l-grades/:d2lGradeId',
+			templateUrl: 'modules/d2l-grades/views/view-d2l-grade.client.view.html'
+		}).
+		state('editD2lGrade', {
+			url: '/d2l-grades/:d2lGradeId/edit',
+			templateUrl: 'modules/d2l-grades/views/edit-d2l-grade.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+// D2l grades controller
+angular.module('d2l-grades').controller('D2lGradesController', ['$scope', '$stateParams', '$location', 'Authentication', 'D2lGrades',
+	function($scope, $stateParams, $location, Authentication, D2lGrades) {
+		$scope.authentication = Authentication;
+
+		// Create new D2l grade
+		$scope.create = function() {
+			// Create new D2l grade object
+			var d2lGrade = new D2lGrades ({
+				name: this.name
+			});
+
+			// Redirect after save
+			d2lGrade.$save(function(response) {
+				$location.path('d2l-grades/' + response._id);
+
+				// Clear form fields
+				$scope.name = '';
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Remove existing D2l grade
+		$scope.remove = function(d2lGrade) {
+			if ( d2lGrade ) { 
+				d2lGrade.$remove();
+
+				for (var i in $scope.d2lGrades) {
+					if ($scope.d2lGrades [i] === d2lGrade) {
+						$scope.d2lGrades.splice(i, 1);
+					}
+				}
+			} else {
+				$scope.d2lGrade.$remove(function() {
+					$location.path('d2l-grades');
+				});
+			}
+		};
+
+		// Update existing D2l grade
+		$scope.update = function() {
+			var d2lGrade = $scope.d2lGrade;
+
+			d2lGrade.$update(function() {
+				$location.path('d2l-grades/' + d2lGrade._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Find a list of D2l grades
+		$scope.find = function() {
+			$scope.d2lGrades = D2lGrades.query();
+		};
+
+		// Find existing D2l grade
+		$scope.findOne = function() {
+			$scope.d2lGrade = D2lGrades.get({ 
+				d2lGradeId: $stateParams.d2lGradeId
+			});
+		};
+	}
+]);
+'use strict';
+
+//D2l grades service used to communicate D2l grades REST endpoints
+angular.module('d2l-grades').factory('D2lGrades', ['$resource',
+	function($resource) {
+		return $resource('d2l-grades/:d2lGradeId', { d2lGradeId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);
+'use strict';
+
 //Setting up route
 angular.module('d2l-hws').config(['$stateProvider',
 	function($stateProvider) {
@@ -2803,7 +3038,8 @@ angular.module('d2l-hws').controller('D2lHwsController', ['$scope', '$stateParam
 		$scope.create = function() {
 			// Create new D2l hw object
 			var d2lHw = new D2lHws ({
-				name: this.name
+				name: this.name,
+				dDate: new Date(this.dDate)
 			});
 
 			// Redirect after save
@@ -2837,6 +3073,8 @@ angular.module('d2l-hws').controller('D2lHwsController', ['$scope', '$stateParam
 		// Update existing D2l hw
 		$scope.update = function() {
 			var d2lHw = $scope.d2lHw;
+			console.log('here');
+			d2lHw.dDate = new Date(d2lHw.dDate);
 
 			d2lHw.$update(function() {
 				$location.path('d2l-hws/' + d2lHw._id);
@@ -2854,6 +3092,8 @@ angular.module('d2l-hws').controller('D2lHwsController', ['$scope', '$stateParam
 		$scope.findOne = function() {
 			$scope.d2lHw = D2lHws.get({ 
 				d2lHwId: $stateParams.d2lHwId
+			}, function(result){
+				result.dDate = new Date(result.dDate);
 			});
 		};
 	}
@@ -2928,13 +3168,49 @@ angular.module('d2l').controller('D2lAdController', ['$scope',
 'use strict';
 
 angular.module('d2l').controller('D2lHomeController', [
-	'$scope','Googledrive','D2LOauth',
-	function($scope, Googledrive, D2LOauth) {
+	'$scope','$http','$interval','Googledrive','D2LOauth',
+	function($scope, $http, $interval, Googledrive, D2LOauth) {
 
 		//remove Header
 		TweenMax.set($('header'), {y:-51});
 
+		$scope.mode = 'query';
+		$scope.determinateValue = 30;
+		$interval(function() {
+			$scope.determinateValue += 1;
+			if ($scope.determinateValue > 100) {
+				$scope.determinateValue = 30;
+			}
+		}, 100, 0, true);
+		$scope.progressCircular = false;
 		//End remove Header
+		// app script test //
+
+		$scope.files = [{fileId:"13C7rKU3N7fnyEC4h92YSyYQxtVDP3ZVqsbKPwrWIqFs", fileName:"Add-On"},{fileId:"1wOt48YCVJ0R064vRwx2a40TuAgACoJUzeYK9tIEDFA0", fileName:"Assignment2"}]
+		$scope.appScript = function(fileId) {
+			$scope.progressCircular = true;
+			/* APP SCRIPT*/
+			//var fileId = '1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'; //Assignment2
+			//var fileId = e.parameter.docId;
+			//var fileId2 = '13C7rKU3N7fnyEC4h92YSyYQxtVDP3ZVqsbKPwrWIqFs'; //Add-On
+			/* END APP SCRIPT*/
+			var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec';
+			$http.get(AppScriptAPI+'?docId='+fileId+'&val2=world')
+				.success(function(data){
+					console.log(data);
+					$scope.progressCircular = false;
+				})
+				.error(function(data, status, headers, config) {
+					console.log(data);
+					$scope.progressCircular = false;
+				})
+
+
+
+
+
+		}
+		// End app script
 		//table data
 		$scope.cmCollection = [
 			{title:'Lecture1', class:'CSC601-2015', publishDate:'1/5', docLink:''},
@@ -3310,14 +3586,22 @@ angular.module('d2l').controller('D2lHomeController', [
 
 'use strict';
 
-angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '$location', 'Authentication', 'D2lHws',
-	function($scope, $stateParams, $location, Authentication, D2lHws) {
+angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '$location', '$timeout', 'Authentication', 'D2lHws','D2lClasses',
+	function($scope, $stateParams, $location, $timeout, Authentication, D2lHws, D2lClasses) {
 		$scope.project = {
 			title:'Assignment 1',
 			dDate:'4/1/2015',
 			desc: 'Nuclear Missile Defense System',
 			rate: 500
 		};
+
+
+		$scope.loadClasses = function() {
+			return $timeout(function() {
+				$scope.classes = D2lClasses.query();
+			}, 650);
+		};
+
 
 		$scope.authentication = Authentication;
 		console.log($scope.authentication);
@@ -3326,7 +3610,10 @@ angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '
 		$scope.create = function() {
 			console.log('Create');
 			// Create new D2l hw object
+
 			var d2lHw = new D2lHws ($scope.project);
+			d2lHw.class = d2lHw.class._id;
+			console.log(d2lHw);
 
 			// Redirect after save
 			d2lHw.$save(function(response) {

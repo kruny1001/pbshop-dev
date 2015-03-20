@@ -1,13 +1,49 @@
 'use strict';
 
 angular.module('d2l').controller('D2lHomeController', [
-	'$scope','Googledrive','D2LOauth',
-	function($scope, Googledrive, D2LOauth) {
+	'$scope','$http','$interval','Googledrive','D2LOauth',
+	function($scope, $http, $interval, Googledrive, D2LOauth) {
 
 		//remove Header
 		TweenMax.set($('header'), {y:-51});
 
+		$scope.mode = 'query';
+		$scope.determinateValue = 30;
+		$interval(function() {
+			$scope.determinateValue += 1;
+			if ($scope.determinateValue > 100) {
+				$scope.determinateValue = 30;
+			}
+		}, 100, 0, true);
+		$scope.progressCircular = false;
 		//End remove Header
+		// app script test //
+
+		$scope.files = [{fileId:"13C7rKU3N7fnyEC4h92YSyYQxtVDP3ZVqsbKPwrWIqFs", fileName:"Add-On"},{fileId:"1wOt48YCVJ0R064vRwx2a40TuAgACoJUzeYK9tIEDFA0", fileName:"Assignment2"}]
+		$scope.appScript = function(fileId) {
+			$scope.progressCircular = true;
+			/* APP SCRIPT*/
+			//var fileId = '1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'; //Assignment2
+			//var fileId = e.parameter.docId;
+			//var fileId2 = '13C7rKU3N7fnyEC4h92YSyYQxtVDP3ZVqsbKPwrWIqFs'; //Add-On
+			/* END APP SCRIPT*/
+			var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec';
+			$http.get(AppScriptAPI+'?docId='+fileId+'&val2=world')
+				.success(function(data){
+					console.log(data);
+					$scope.progressCircular = false;
+				})
+				.error(function(data, status, headers, config) {
+					console.log(data);
+					$scope.progressCircular = false;
+				})
+
+
+
+
+
+		}
+		// End app script
 		//table data
 		$scope.cmCollection = [
 			{title:'Lecture1', class:'CSC601-2015', publishDate:'1/5', docLink:''},

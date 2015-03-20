@@ -12,7 +12,7 @@ Submit your program (.cpp) to the D2L dropbox for CSC601 in the Assignment1
 folder. Name your program CSC601hw1-lastname.cpp.
 -->
 
-<section data-ng-controller="D2lHwController">
+<section class="headerEnabled" data-ng-controller="D2lHwController">
     <md-toolbar>
         <h2 class="md-toolbar-tools">
             <span><b>Assignment Wizard</b></span>
@@ -30,6 +30,15 @@ folder. Name your program CSC601hw1-lastname.cpp.
                 <div ng-messages="projectForm.description.$error">
                     <div ng-message="required">This is required.</div>
                     <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Grade</label>
+                <input type="number" name="title" ng-model="project.grade">
+                <div ng-messages="projectForm.grade.$error">
+                    <!--<div ng-message="required">This is required.</div>-->
+                    <!--<div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>-->
                 </div>
             </md-input-container>
 

@@ -19,38 +19,46 @@
                 </div>
             </md-input-container>
 
-            <md-input-container>
-                <label>description</label>
-                <input md-maxlength="130" required name="desc" ng-model="d2lHw.desc">
-                <div ng-messages="projectForm.description.$error">
-                    <div ng-message="required">This is required.</div>
-                    <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
-                </div>
-            </md-input-container>
+            <div layout layout-sm="column">
+                <md-input-container flex>
+                    <label>Total Grade</label>
+                    <input type="number" name="title" ng-model="d2lHw.totalGrade">
+                    <div ng-messages="projectForm.totalGrade.$error">
+                        <!--<div ng-message="required">This is required.</div>-->
+                        <!--<div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>-->
+                    </div>
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Percent</label>
+                    <input type="number" name="percent" ng-model="d2lHw.percent">
+                    <div ng-messages="projectForm.totalGrade.$error">
+                        <!--<div ng-message="required">This is required.</div>-->
+                        <!--<div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>-->
+                    </div>
+                </md-input-container>
+            </div>
 
-            <md-input-container>
-                <label>Due Date</label>
-                <input md-maxlength="30" required name="dDate" ng-model="d2lHw.dDate">
-                <div ng-messages="projectForm.description.$error">
-                    <div ng-message="required">This is required.</div>
-                    <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
-                </div>
-            </md-input-container>
+            <div layout layout-sm="column">
+                <md-input-container flex>
+                    <label>Due Date</label>
+                    <input type="date" required name="dDate" ng-model="d2lHw.dDate">
+                </md-input-container>
+
+                <md-input-container flex>
+                    <label>description</label>
+                    <input md-maxlength="130" required name="desc" ng-model="d2lHw.desc">
+                    <div ng-messages="projectForm.description.$error">
+                        <div ng-message="required">This is required.</div>
+                        <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                    </div>
+                </md-input-container>
+            </div>
 
             <md-input-container>
                 <label>Contents</label>
                 <textarea ng-model="d2lHw.content" columns="1" md-maxlength="650"></textarea>
             </md-input-container>
 
-            <md-input-container>
-                <label>Hourly Rate (USD)</label>
-                <input required type="number" step="any" name="rate" ng-model="d2lHw.rate" min="800" max="4999">
-                <div ng-messages="projectForm.rate.$error">
-                    <div ng-message="required">You've got to charge something! You can't just <b>give away</b> a Missile Defense System.</div>
-                    <div ng-message="min">You should charge at least $800 an hour. This job is a big deal... if you mess up, everyone dies!</div>
-                    <div ng-message="max">$5,000 an hour? That's a little ridiculous. I doubt event Bill Clinton could afford that.</div>
-                </div>
-            </md-input-container>
             <md-input-container layout="row">
                 <md-button type="submit" class="md-fab md-primary md-hue-2" aria-label="Profile">
                     <md-icon md-svg-src="modules/d2l/svg/ic_play_arrow_24px.svg"></md-icon>

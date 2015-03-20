@@ -1,13 +1,21 @@
 'use strict';
 
-angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '$location', 'Authentication', 'D2lHws',
-	function($scope, $stateParams, $location, Authentication, D2lHws) {
+angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '$location', '$timeout', 'Authentication', 'D2lHws','D2lClasses',
+	function($scope, $stateParams, $location, $timeout, Authentication, D2lHws, D2lClasses) {
 		$scope.project = {
 			title:'Assignment 1',
 			dDate:'4/1/2015',
 			desc: 'Nuclear Missile Defense System',
 			rate: 500
 		};
+
+
+		$scope.loadClasses = function() {
+			return $timeout(function() {
+				$scope.classes = D2lClasses.query();
+			}, 650);
+		};
+
 
 		$scope.authentication = Authentication;
 		console.log($scope.authentication);
@@ -16,7 +24,10 @@ angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '
 		$scope.create = function() {
 			console.log('Create');
 			// Create new D2l hw object
+
 			var d2lHw = new D2lHws ($scope.project);
+			d2lHw.class = d2lHw.class._id;
+			console.log(d2lHw);
 
 			// Redirect after save
 			d2lHw.$save(function(response) {

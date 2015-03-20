@@ -5,103 +5,102 @@
  */
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors.server.controller'),
-	D2lHw = mongoose.model('D2lHw'),
 	D2lClass = mongoose.model('D2lClass'),
 	_ = require('lodash');
 
 /**
- * Create a D2l hw
+ * Create a D2l class
  */
-exports.create = function(req, res, next) {
-	var d2lHw = new D2lHw(req.body);
-	d2lHw.user = req.user;
-	d2lHw.save(function(err) {
+exports.create = function(req, res) {
+	var d2lClass = new D2lClass(req.body);
+	d2lClass.user = req.user;
+
+	d2lClass.save(function(err) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			D2lClass.populate('class').exec(function(err, item){});
+			res.jsonp(d2lClass);
 		}
 	});
 };
 
 /**
- * Show the current D2l hw
+ * Show the current D2l class
  */
 exports.read = function(req, res) {
-	res.jsonp(req.d2lHw);
+	res.jsonp(req.d2lClass);
 };
 
 /**
- * Update a D2l hw
+ * Update a D2l class
  */
 exports.update = function(req, res) {
-	var d2lHw = req.d2lHw ;
+	var d2lClass = req.d2lClass ;
 
-	d2lHw = _.extend(d2lHw , req.body);
+	d2lClass = _.extend(d2lClass , req.body);
 
-	d2lHw.save(function(err) {
+	d2lClass.save(function(err) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(d2lHw);
+			res.jsonp(d2lClass);
 		}
 	});
 };
 
 /**
- * Delete an D2l hw
+ * Delete an D2l class
  */
 exports.delete = function(req, res) {
-	var d2lHw = req.d2lHw ;
+	var d2lClass = req.d2lClass ;
 
-	d2lHw.remove(function(err) {
+	d2lClass.remove(function(err) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(d2lHw);
+			res.jsonp(d2lClass);
 		}
 	});
 };
 
 /**
- * List of D2l hws
+ * List of D2l classes
  */
 exports.list = function(req, res) { 
-	D2lHw.find().sort('-created').populate('user', 'displayName').exec(function(err, d2lHws) {
+	D2lClass.find().sort('-created').populate('user', 'displayName').exec(function(err, d2lClasses) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(d2lHws);
+			res.jsonp(d2lClasses);
 		}
 	});
 };
 
 /**
- * D2l hw middleware
+ * D2l class middleware
  */
-exports.d2lHwByID = function(req, res, next, id) { 
-	D2lHw.findById(id).populate('user', 'displayName').exec(function(err, d2lHw) {
-		if (! d2lHw) return next(new Error('Failed to load D2l hw ' + id));
+exports.d2lClassByID = function(req, res, next, id) { 
+	D2lClass.findById(id).populate('user', 'displayName').exec(function(err, d2lClass) {
 		if (err) return next(err);
-		req.d2lHw = d2lHw ;
-		console.log(d2lHw);
+		if (! d2lClass) return next(new Error('Failed to load D2l class ' + id));
+		req.d2lClass = d2lClass ;
 		next();
 	});
 };
 
 /**
- * D2l hw authorization middleware
+ * D2l class authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
-	if (req.d2lHw.user.id !== req.user.id) {
+	if (req.d2lClass.user.id !== req.user.id) {
 		return res.status(403).send('User is not authorized');
 	}
 	next();
