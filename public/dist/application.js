@@ -3336,7 +3336,7 @@ angular.module('d2l').controller('D2lHomeController', [
 			/* END APP SCRIPT*/
 
 			var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzJEZyl0IuBoop5F9PG5Jv7rH3o4sPWp-5iNfxEcPhKjOzSxwY/exec';
-			$http.get(AppScriptAPI+'?docId='+fileId+'&val2=world')
+			$http.get(AppScriptAPI+'?docId='+fileId+'&userId=world')
 				.success(function(data){
 					console.log(data);
 					$scope.progressCircular = false;
