@@ -5,6 +5,10 @@ angular.module('d2l').config(['$stateProvider','$mdIconProvider',
 	function($stateProvider,$mdIconProvider) {
 		// D2l state routing
 		$stateProvider.
+		state('lms-start', {
+			url: '/lms-start',
+			templateUrl: 'modules/d2l/views/lms-start.client.view.html'
+		}).
 		state('d2l-main', {
 			url: '/d2l-main',
 			templateUrl: 'modules/d2l/views/d2l-main.client.view.html'

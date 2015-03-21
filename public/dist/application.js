@@ -3119,6 +3119,10 @@ angular.module('d2l').config(['$stateProvider','$mdIconProvider',
 	function($stateProvider,$mdIconProvider) {
 		// D2l state routing
 		$stateProvider.
+		state('lms-start', {
+			url: '/lms-start',
+			templateUrl: 'modules/d2l/views/lms-start.client.view.html'
+		}).
 		state('d2l-main', {
 			url: '/d2l-main',
 			templateUrl: 'modules/d2l/views/d2l-main.client.view.html'
@@ -3194,7 +3198,8 @@ angular.module('d2l').controller('D2lHomeController', [
 			//var fileId = e.parameter.docId;
 			//var fileId2 = '13C7rKU3N7fnyEC4h92YSyYQxtVDP3ZVqsbKPwrWIqFs'; //Add-On
 			/* END APP SCRIPT*/
-			var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec';
+
+			var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzJEZyl0IuBoop5F9PG5Jv7rH3o4sPWp-5iNfxEcPhKjOzSxwY/exec';
 			$http.get(AppScriptAPI+'?docId='+fileId+'&val2=world')
 				.success(function(data){
 					console.log(data);
@@ -3730,6 +3735,14 @@ angular.module('d2l').controller('InsClassController', ['$scope','$http','Create
 	}
 ]);
 
+'use strict';
+
+angular.module('d2l').controller('LmsStartController', ['$scope',
+	function($scope) {
+		// Lms start controller logic
+		// ...
+	}
+]);
 'use strict';
 
 /**
