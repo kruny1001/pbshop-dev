@@ -8547,7 +8547,7 @@ function GetRequires($parse){
 }
 GetRequires.$inject = ["$parse"];
 
-function SelectProvider($$interimElementProvider) {
+function SelectProvider($$interimElementProvider) {
 	selectDefaultOptions.$inject = ["$tcOrder", "$mdConstant", "$$rAF", "$mdUtil", "$mdTheming", "$timeout"];
 	return $$interimElementProvider('$tcOrder')
 		.setDefaults({
