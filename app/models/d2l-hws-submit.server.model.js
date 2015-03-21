@@ -16,6 +16,10 @@ var D2lHwsSubmitSchema = new Schema({
 		required: 'Please fill D2l hws submit name',
 		trim: true
 	},
+	originId:{
+		type: String,
+		trim: true
+	},
 	docId: {
 		type: String,
 		trim: true
