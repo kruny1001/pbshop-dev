@@ -3355,30 +3355,26 @@ angular.module('d2l').controller('D2lHomeController', [
 		}
 		// End app script
 		//table data
-		$scope.cmCollection = [
-			{title:'Lecture1', class:'CSC601-2015', publishDate:'1/5', docLink:''},
-			{title:'Lecture2', class:'CSC601-2015', publishDate:'1/12', docLink:''},
-			{title:'Lecture3', class:'CSC601-2015', publishDate:'1/19', docLink:''},
-			{title:'Lecture4', class:'CSC601-2015', publishDate:'1/26', docLink:''},
-			{title:'Lecture5', class:'CSC601-2015', publishDate:'2/5', docLink:''},
-			{title:'Lecture6', class:'CSC601-2015', publishDate:'2/12', docLink:''}
-		];
+		//$scope.cmCollection = [
+		//	{title:'Lecture1', class:'CSC601-2015', publishDate:'1/5', docLink:''},
+		//	{title:'Lecture2', class:'CSC601-2015', publishDate:'1/12', docLink:''},
+		//	{title:'Lecture3', class:'CSC601-2015', publishDate:'1/19', docLink:''},
+		//	{title:'Lecture4', class:'CSC601-2015', publishDate:'1/26', docLink:''},
+		//	{title:'Lecture5', class:'CSC601-2015', publishDate:'2/5', docLink:''},
+		//	{title:'Lecture6', class:'CSC601-2015', publishDate:'2/12', docLink:''}
+		//];
 
-		$scope.HWCollection = [
-			{title:'A1', class:'CSC601-2015', dDate:'1/12', tPoint:'200', tPercent:'5%', docLink:''},
-			{title:'A2', class:'CSC601-2015', dDate:'1/25', tPoint:'300', tPercent:'5%', docLink:''},
-			{title:'A3', class:'CSC601-2015', dDate:'2/12', tPoint:'400', tPercent:'5%', docLink:''},
-			{title:'A4', class:'CSC601-2015', dDate:'2/25', tPoint:'300', tPercent:'5%', docLink:''},
-			{title:'A5', class:'CSC601-2015', dDate:'3/19', tPoint:'200', tPercent:'5%', docLink:''},
-			{title:'A6', class:'CSC601-2015', dDate:'4/12', tPoint:'250', tPercent:'5%', docLink:''}
+		$scope.cmCollection = [
+			{title:'A1', class:'CSC601-2015', publishDate:'1/5', dDate:'1/12', tPoint:'200', tPercent:'5%', docLink:'https://docs.google.com/document/d/1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM/edit?usp=sharing', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',user:'kruny1001@gmail.com', published:false},
+			{title:'A2', class:'CSC601-2015', publishDate:'1/5', dDate:'1/12', tPoint:'200', tPercent:'5%', docLink:'https://docs.google.com/document/d/1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM/edit?usp=sharing', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',user:'kruny1001@gmail.com', published:false},
 		];
 
 		//Should be connected with DB
 		$scope.rowCollection = [
-			{firstName: 'Laurent', lastName: 'Renard', id:'1905548', grade:95, submit:true, email: 'whatever@gmail.com'},
-			{firstName: 'Blandine', lastName: 'Faivre', id:'1905528', grade:0, submit:false, email: 'oufblandou@gmail.com'},
-			{firstName: 'Blandine', lastName: 'Faivre', id:'1905528', grade:100, submit:true, email: 'oufblandou@gmail.com'},
-			{firstName: 'Francoise', lastName: 'Frere', id:'1906648', grade:65, submit:true, email: 'raymondef@gmail.com'}
+			{title:'A1', class:'CSC601', firstName: 'Laurent', lastName: 'Renard', id:'1905548', grade:95, submit:true, email: 'whatever@gmail.com', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'},
+			{title:'A2', class:'CSC601', firstName: 'Blandine', lastName: 'Faivre', id:'1905528', grade:0, submit:false, email: 'oufblandou@gmail.com', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'},
+			{title:'A3', class:'CSC601', firstName: 'Blandine', lastName: 'Faivre', id:'1905528', grade:100, submit:true, email: 'oufblandou@gmail.com', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'},
+			{title:'A4', class:'CSC601', firstName: 'Francoise', lastName: 'Frere', id:'1906648', grade:65, submit:true, email: 'raymondef@gmail.com', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'}
 		];
 
 		//Should be connected with DB
