@@ -97,6 +97,10 @@ ApplicationConfiguration.registerModule('d2l-grades');
 'use strict';
 
 // Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('d2l-hws-submits');
+'use strict';
+
+// Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('d2l-hws');
 'use strict';
 
@@ -3004,6 +3008,121 @@ angular.module('d2l-grades').factory('D2lGrades', ['$resource',
 ]);
 'use strict';
 
+// Configuring the Articles module
+angular.module('d2l-hws-submits').run(['Menus',
+	function(Menus) {
+		// Set top bar menu items
+		Menus.addMenuItem('topbar', 'D2l hws submits', 'd2l-hws-submits', 'dropdown', '/d2l-hws-submits(/create)?');
+		Menus.addSubMenuItem('topbar', 'd2l-hws-submits', 'List D2l hws submits', 'd2l-hws-submits');
+		Menus.addSubMenuItem('topbar', 'd2l-hws-submits', 'New D2l hws submit', 'd2l-hws-submits/create');
+	}
+]);
+'use strict';
+
+//Setting up route
+angular.module('d2l-hws-submits').config(['$stateProvider',
+	function($stateProvider) {
+		// D2l hws submits state routing
+		$stateProvider.
+		state('listD2lHwsSubmits', {
+			url: '/d2l-hws-submits',
+			templateUrl: 'modules/d2l-hws-submits/views/list-d2l-hws-submits.client.view.html'
+		}).
+		state('createD2lHwsSubmit', {
+			url: '/d2l-hws-submits/create',
+			templateUrl: 'modules/d2l-hws-submits/views/create-d2l-hws-submit.client.view.html'
+		}).
+		state('viewD2lHwsSubmit', {
+			url: '/d2l-hws-submits/:d2lHwsSubmitId',
+			templateUrl: 'modules/d2l-hws-submits/views/view-d2l-hws-submit.client.view.html'
+		}).
+		state('editD2lHwsSubmit', {
+			url: '/d2l-hws-submits/:d2lHwsSubmitId/edit',
+			templateUrl: 'modules/d2l-hws-submits/views/edit-d2l-hws-submit.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+// D2l hws submits controller
+angular.module('d2l-hws-submits').controller('D2lHwsSubmitsController', ['$scope', '$stateParams', '$location', 'Authentication', 'D2lHwsSubmits',
+	function($scope, $stateParams, $location, Authentication, D2lHwsSubmits) {
+		$scope.authentication = Authentication;
+
+		// Create new D2l hws submit
+		$scope.create = function() {
+			// Create new D2l hws submit object
+			var d2lHwsSubmit = new D2lHwsSubmits ({
+				name: this.name
+			});
+
+			// Redirect after save
+			d2lHwsSubmit.$save(function(response) {
+				$location.path('d2l-hws-submits/' + response._id);
+
+				// Clear form fields
+				$scope.name = '';
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Remove existing D2l hws submit
+		$scope.remove = function(d2lHwsSubmit) {
+			if ( d2lHwsSubmit ) { 
+				d2lHwsSubmit.$remove();
+
+				for (var i in $scope.d2lHwsSubmits) {
+					if ($scope.d2lHwsSubmits [i] === d2lHwsSubmit) {
+						$scope.d2lHwsSubmits.splice(i, 1);
+					}
+				}
+			} else {
+				$scope.d2lHwsSubmit.$remove(function() {
+					$location.path('d2l-hws-submits');
+				});
+			}
+		};
+
+		// Update existing D2l hws submit
+		$scope.update = function() {
+			var d2lHwsSubmit = $scope.d2lHwsSubmit;
+
+			d2lHwsSubmit.$update(function() {
+				$location.path('d2l-hws-submits/' + d2lHwsSubmit._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Find a list of D2l hws submits
+		$scope.find = function() {
+			$scope.d2lHwsSubmits = D2lHwsSubmits.query();
+		};
+
+		// Find existing D2l hws submit
+		$scope.findOne = function() {
+			$scope.d2lHwsSubmit = D2lHwsSubmits.get({ 
+				d2lHwsSubmitId: $stateParams.d2lHwsSubmitId
+			});
+		};
+	}
+]);
+'use strict';
+
+//D2l hws submits service used to communicate D2l hws submits REST endpoints
+angular.module('d2l-hws-submits').factory('D2lHwsSubmits', ['$resource',
+	function($resource) {
+		return $resource('d2l-hws-submits/:d2lHwsSubmitId', { d2lHwsSubmitId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);
+'use strict';
+
 //Setting up route
 angular.module('d2l-hws').config(['$stateProvider',
 	function($stateProvider) {
@@ -3172,8 +3291,25 @@ angular.module('d2l').controller('D2lAdController', ['$scope',
 'use strict';
 
 angular.module('d2l').controller('D2lHomeController', [
-	'$scope','$http','$interval','Googledrive','D2LOauth',
-	function($scope, $http, $interval, Googledrive, D2LOauth) {
+	'$scope','$http','$window', '$interval','Googledrive','D2LOauth','D2lHwsSubmits',
+	function($scope, $http, $window, $interval, Googledrive, D2LOauth, D2lHwsSubmits) {
+
+        $scope.AppScriptAPI = "";
+        $scope.docs = [{docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',user:'Kevin1905548'}];
+
+        $scope.getHW = function(doc){
+            var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId='+doc.docId+'&user='+doc.user;
+            $window.open(AppScriptAPI);
+            // Create new D2l hws submit object
+            var d2lHwsSubmit = new D2lHwsSubmits ({
+                name: 'add Assign',
+                docId: doc.docId
+            });
+            d2lHwsSubmit.$save(function(response) {
+            }, function(errorResponse) {
+                $scope.error = errorResponse.data.message;
+            });
+        };
 
 		//remove Header
 		TweenMax.set($('header'), {y:-51});
@@ -8411,7 +8547,7 @@ function GetRequires($parse){
 }
 GetRequires.$inject = ["$parse"];
 
-function SelectProvider($$interimElementProvider) {
+function SelectProvider($$interimElementProvider) {
 	selectDefaultOptions.$inject = ["$tcOrder", "$mdConstant", "$$rAF", "$mdUtil", "$mdTheming", "$timeout"];
 	return $$interimElementProvider('$tcOrder')
 		.setDefaults({

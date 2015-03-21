@@ -1,8 +1,25 @@
 'use strict';
 
 angular.module('d2l').controller('D2lHomeController', [
-	'$scope','$http','$interval','Googledrive','D2LOauth',
-	function($scope, $http, $interval, Googledrive, D2LOauth) {
+	'$scope','$http','$window', '$interval','Googledrive','D2LOauth','D2lHwsSubmits',
+	function($scope, $http, $window, $interval, Googledrive, D2LOauth, D2lHwsSubmits) {
+
+        $scope.AppScriptAPI = "";
+        $scope.docs = [{docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',user:'Kevin1905548'}];
+
+        $scope.getHW = function(doc){
+            var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId='+doc.docId+'&user='+doc.user;
+            $window.open(AppScriptAPI);
+            // Create new D2l hws submit object
+            var d2lHwsSubmit = new D2lHwsSubmits ({
+                name: 'add Assign',
+                docId: doc.docId
+            });
+            d2lHwsSubmit.$save(function(response) {
+            }, function(errorResponse) {
+                $scope.error = errorResponse.data.message;
+            });
+        };
 
 		//remove Header
 		TweenMax.set($('header'), {y:-51});
