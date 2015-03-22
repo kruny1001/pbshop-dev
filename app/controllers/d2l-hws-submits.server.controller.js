@@ -13,7 +13,7 @@ var mongoose = require('mongoose'),
  */
 exports.create = function(req, res) {
 	var d2lHwsSubmit = new D2lHwsSubmit(req.body);
-	d2lHwsSubmit.user = req.user;
+	//d2lHwsSubmit.user = req.user;
 
 	d2lHwsSubmit.save(function(err) {
 		if (err) {
@@ -105,3 +105,15 @@ exports.hasAuthorization = function(req, res, next) {
 	}
 	next();
 };
+
+exports.getSubmitInfo = function(req, res){
+	D2lHwsSubmit.find({originId: req.params.docId, userEmail: req.params.userEmail}).exec(function(err, d2lHwsSubmit){
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.jsonp(d2lHwsSubmit);
+		}
+	});
+}

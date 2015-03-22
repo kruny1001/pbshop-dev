@@ -36,35 +36,9 @@
         </div>
     </div>
 
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="row" layout-sm="column" layout-align="space-around center" style="font-size:12px">
+    <md-whiteframe class="md-whiteframe-z1 d2lAuth"
+                   layout="row" layout-sm="column" layout-align="space-around center" style="font-size:12px">
         <div style="border-top: 5px solid #ff60ad;">
-            <h3>List HW</h3>
-            <p>Add, Edit, Udpate or Remove Homework</p>
-            <table st-table="HWCollection" class="table">
-                <thead>
-                <tr>
-                    <th></th>
-                    <th st-sort="title">Title</th>
-                    <th st-sort="class">Class</th>
-                    <th st-sort="dDate">Due Date</th>
-                    <th st-sort="tPoint">Total Point</th>
-                    <th st-sort="tPercent">Total Percent</th>
-                    <th st-sort="average">Average</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="HW in HWCollection">
-                    <td cs-select="HW"></td>
-                    <td>{{HW.title}}</td>
-                    <td>{{HW.class | uppercase}}</td>
-                    <td>{{HW.dDate}}</td>
-                    <td>{{HW.tPoint}}</td>
-                    <td>{{HW.tPercent}}</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div style="border-top: 5px solid #ffa935;">
             <h3>List HW</h3>
             <p>Add, Edit, Udpate or Remove Homework</p>
             <table st-table="HWCollection" class="table">
@@ -95,9 +69,13 @@
 
     <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
         <!-- {title:'Lecture1', class:'CSC601-2015', publishDate:'1/5', docLink:''}, -->
-        <div style="border-top: 5px solid #45b3ff;">
-            <h3>List Class Materials</h3>
-            <p>Add, Edit, Udpate or Remove Class Materials</p>
+        <div style="border-top: 5px solid #45b3ff; font-size:10px;">
+            <h3>Assignments (For Instructor)</h3>
+            <p>
+                Add, Edit, Udpate or Remove Class Materials
+                <md-button class="md-primary md-raised" ng-click="AddHW()">Add HW</md-button>
+                <md-button class="md-primary md-raised" ng-click="AddHW()">Edit HW</md-button>
+            </p>
             <table st-table="cmCollection" class="table">
                 <thead>
                 <tr>
@@ -105,7 +83,9 @@
                     <th st-sort="title">Title</th>
                     <th st-sort="class">Class</th>
                     <th st-sort="publishDate">Publish Date</th>
+                    <th st-sort="publishDate">Due Date</th>
                     <th st-sort="docLink">Doc Link</th>
+                    <th st-sort="numSubmit"># Submit</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -114,7 +94,13 @@
                     <td>{{CM.title}}</td>
                     <td>{{CM.class | uppercase}}</td>
                     <td>{{CM.publishDate}}</td>
-                    <td>{{CM.docLink}}</td>
+                    <td>{{CM.dDate}}</td>
+                    <td>
+                        <a ng-href="{{CM.docLink}}" target="_blank">
+                            Doc Link
+                        </a>
+                    </td>
+                    <td>20/100</td>
                 </tr>
                 </tbody>
             </table>
@@ -124,43 +110,38 @@
 
     <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
 
-        <div ng-repeat="doc in docs">
-            <md-button class="md-warn md-raised" ng-click="getHW(doc)">Get Doc</md-button>
-            <a href="https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId=1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM&user=Kevin1905548"
-                ng-click="getHW()" onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0');
-                return false;">Make New File</a>
-        </div>
+        <!--<div ng-repeat="doc in docs">-->
+            <!--<md-button class="md-warn md-raised" ng-click="getHW(doc)">Get Doc</md-button>-->
+            <!--<a href="https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId=1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM&user=Kevin1905548"-->
+                <!--ng-click="getHW()" onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0');-->
+                <!--return false;">Make New File</a>-->
+        <!--</div>-->
 
-
-        <div style="border-top: 5px solid #ff5635;">
-            <!--<div ng-repeat="file in files">-->
-                <!--<md-button ng-hide="progressCircular" ng-click="appScript(file.fileId)">{{file.fileName}}</md-button>-->
-                <!--<md-progress-circular ng-show="progressCircular" class="md-hue-2" md-mode="indeterminate"></md-progress-circular>-->
-                <!--<h6 ng-show="progressCircular">Creating a file...</h6>-->
-            <!--</div>-->
-
-        <h3>Grade Board for Instructor</h3>
+        <div style="border-top: 5px solid #ff5635; font-size:10px;">
+        <h3>Assignments (For Student)</h3>
         <table st-table="rowCollection" class="table">
             <thead>
-            <tr>
-                <th></th>
-                <th st-sort="firstName">First name</th>
-                <th st-sort="lastName">Last name</th>
-                <th st-sort="userId">ID</th>
-                <th st-sort="grade">Grade</th>
-                <th st-sort="gradePercent">%</th>
-                <th st-sort="submit">Submit</th>
-            </tr>
+                <tr>
+                    <th></th>
+                    <th st-sort="title">Title</th>
+                    <th st-sort="class">Class</th>
+                    <th st-sort="grade">Grade</th>
+                    <th st-sort="gradePercent">%</th>
+                    <th st-sort="submit">Submit</th>
+                    <th st-sort="late">Late</th>
+                    <th st-sort="docLink">Copy to Gdrive</th>
+                </tr>
             </thead>
             <tbody>
             <tr ng-repeat="row in rowCollection">
                 <td cs-select="row"></td>
-                <td>{{row.firstName | uppercase}}</td>
-                <td>{{row.lastName}}</td>
-                <td>{{row.id}}</td>
+                <td>{{row.title}}</td>
+                <td>{{row.class}}</td>
                 <td>{{row.grade}}</td>
                 <td>{{row.grade / 100 * 100}}</td>
                 <td><md-checkbox ng-model="row.submit" aria-label="Checkbox 1" style="margin:0px; margiin-left:10px;" ng-disabled="true"></md-checkbox></td>
+                <td><md-checkbox ng-model="row.submit" aria-label="Checkbox 1" style="margin:0px; margiin-left:10px;" ng-disabled="true"></md-checkbox></td>
+                <td><md-button class="md-warn md-raised" ng-click="getHW(row)">Get Doc</md-button></td>
             </tr>
             </tbody>
         </table>
@@ -172,20 +153,20 @@
             <h3>Grade Board for Student</h3>
             <table st-table="gradeCollection" class="table">
                 <thead>
-                <tr>
-                    <th></th>
-                    <th st-sort="numAssignment">First name</th>
-                    <th st-sort="grade">Last name</th>
-                    <th st-sort="percent">%</th>
-                </tr>
+                    <tr>
+                        <th></th>
+                        <th st-sort="numAssignment">First name</th>
+                        <th st-sort="grade">Last name</th>
+                        <th st-sort="percent">%</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="row in gradeCollection">
-                    <td cs-select="row"></td>
-                    <td>{{row.numAssignment | uppercase}}</td>
-                    <td>{{row.grade}}</td>
-                    <td>{{row.grade / row.total * 100}}</td>
-                </tr>
+                    <tr ng-repeat="row in gradeCollection">
+                        <td cs-select="row"></td>
+                        <td>{{row.numAssignment | uppercase}}</td>
+                        <td>{{row.grade}}</td>
+                        <td>{{row.grade / row.total * 100}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
