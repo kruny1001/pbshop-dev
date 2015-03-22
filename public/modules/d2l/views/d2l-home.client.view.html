@@ -153,20 +153,20 @@
             <h3>Grade Board for Student</h3>
             <table st-table="gradeCollection" class="table">
                 <thead>
-                <tr>
-                    <th></th>
-                    <th st-sort="numAssignment">First name</th>
-                    <th st-sort="grade">Last name</th>
-                    <th st-sort="percent">%</th>
-                </tr>
+                    <tr>
+                        <th></th>
+                        <th st-sort="numAssignment">First name</th>
+                        <th st-sort="grade">Last name</th>
+                        <th st-sort="percent">%</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="row in gradeCollection">
-                    <td cs-select="row"></td>
-                    <td>{{row.numAssignment | uppercase}}</td>
-                    <td>{{row.grade}}</td>
-                    <td>{{row.grade / row.total * 100}}</td>
-                </tr>
+                    <tr ng-repeat="row in gradeCollection">
+                        <td cs-select="row"></td>
+                        <td>{{row.numAssignment | uppercase}}</td>
+                        <td>{{row.grade}}</td>
+                        <td>{{row.grade / row.total * 100}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
