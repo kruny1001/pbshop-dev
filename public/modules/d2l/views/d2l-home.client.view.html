@@ -3,17 +3,14 @@
     <div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>
     <!-- Debuging Purpose End-->
 
-
     <md-toolbar>
         <h2 class="md-toolbar-tools">
             <span><b>LMS App</b></span>
             <span flex></span>
             <span><md-button class="md-warn" ng-click="openMenu=!openMenu">Menu</md-button></span>
-            <span ng-if="authentication !== undefined">LogIn required</span>
+            <!--<span ng-if="authentication !== undefined">LogIn required</span>-->
         </h2>
     </md-toolbar>
-
-
 
     <div ng-show="openMenu" class="gridListdemoDynamicTiles">
         <div ng-controller="gridListDemoCtrl as vm">
@@ -77,10 +74,10 @@
                     <th st-sort="title">Title</th>
                     <th st-sort="class">Class</th>
                     <th st-sort="dDate">Due Date</th>
-                    <th st-sort="tPoint">Total</th>
-                    <th st-sort="tPercent">Total %</th>
+                    <th st-sort="tPoint" hide-sm>Total</th>
+                    <th st-sort="tPercent" hide-sm>Total %</th>
                     <th st-sort="dLink">Doc Link</th>
-                    <th st-sort="dEdit">Edit</th>
+                    <th st-sort="dEdit" hide-sm>Edit</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -89,8 +86,9 @@
                     <td>{{HW.title}}</td>
                     <td>{{HW.class.name}}</td>
                     <td>{{HW.dDate |  date : format : timezone}}</td>
-                    <td>{{HW.totalGrade}}</td>
-                    <td>{{HW.percent}}</td>
+                    <td hide-sm>{{HW.totalGrade}}</td>
+                    <td hide-sm>{{HW.percent}}</td>
+                    <td> <md-button class="md-warn md-raised" ng-click="linkHW(HW.gdocId)">Get Doc</md-button></td>
                 </tr>
                 </tbody>
             </table>
@@ -124,7 +122,7 @@
                     <td>{{HW.dDate |  date : format : timezone}}</td>
                     <td>{{HW.totalGrade}}</td>
                     <td>{{HW.percent}}</td>
-                    <td>{{HW.percent}}</td>
+                    <!--<td><md-button class="md-warn md-raised" ng-click="linkHW(HW.gdocId)">Get Doc</md-button></td>-->
                 </tr>
                 </tbody>
             </table>
@@ -240,6 +238,7 @@
 
     </md-whiteframe>
 
+
     <!-- Search Box-->
     <!--<md-content class="md-padding" layout="column" ng-controller="DemoCtrl as ctrl">-->
         <!--<p>Search</p>-->
@@ -295,46 +294,47 @@
         <h3> Scheduler </h3>
     </md-whiteframe>
 
-    <h1>Google API List</h1>
+    <div ng-controller="GDriveFilePickerController">
+        <h1>Google API List</h1>
 
-    <div class="profile">Profile</div>
+        <div class="profile">Profile</div>
 
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
-        Before Accessing this API,<br/>
-        you must accept OAuth2 Google API Service
-        <md-button class="md-raised md-warn" style="font-size:11px" ng-click="init()">{{authName}}</md-button>
-    </md-whiteframe>
-    <br/>
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
-        Check Google Drive<br/>
-        <md-button class="md-raised md-primary" ng-click="listingFolderInfo()">List Forlder</md-button>
-        <md-button class="md-primary" ng-click="findFolder()">findFolder Result  <div style="display: inline-flex; border-radius: 50%; background-color:#ffff00; width: 20px; color:red; text-align: center;">{{numFolder}}</div></md-button>
-        <md-button class="md-primary" ng-click="hideResult()">Hide Result</md-button>
-        <md-button class="md-primary" ng-click="showResult()">Show Result</md-button>
-        <div class="listFolder" ng-repeat="doc in gDocs">
-            <div ng-if="doc.id!==undefined"><b>ID:</b> {{doc.id}}</div>
-            <div ng-if="doc.title!==undefined"><b>TITLE:</b> {{doc.title}}</div>
-            <div ng-if="doc.webViewLink!==undefined"><b>Web View Link:</b> {{doc.webViewLink}}</div>
-            <div ng-if="doc.webContentLink!==undefined"><b>Web Content Link:</b>
-                <a href="{{doc.webContentLink}}" target="_blank">Link</a>
+        <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+            Before Accessing this API,<br/>
+            you must accept OAuth2 Google API Service
+            <md-button class="md-raised md-warn" style="font-size:11px" ng-click="init()">{{authName}}</md-button>
+        </md-whiteframe>
+        <br/>
+        <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+            Check Google Drive<br/>
+            <md-button class="md-raised md-primary" ng-click="listingFolderInfo()">List Forlder</md-button>
+            <md-button class="md-primary" ng-click="findFolder()">findFolder Result  <div style="display: inline-flex; border-radius: 50%; background-color:#ffff00; width: 20px; color:red; text-align: center;">{{numFolder}}</div></md-button>
+            <md-button class="md-primary" ng-click="hideResult()">Hide Result</md-button>
+            <md-button class="md-primary" ng-click="showResult()">Show Result</md-button>
+            <div class="listFolder" ng-repeat="doc in gDocs">
+                <div ng-if="doc.id!==undefined"><b>ID:</b> {{doc.id}}</div>
+                <div ng-if="doc.title!==undefined"><b>TITLE:</b> {{doc.title}}</div>
+                <div ng-if="doc.webViewLink!==undefined"><b>Web View Link:</b> {{doc.webViewLink}}</div>
+                <div ng-if="doc.webContentLink!==undefined"><b>Web Content Link:</b>
+                    <a href="{{doc.webContentLink}}" target="_blank">Link</a>
+                </div>
+                <div ng-if="doc.thumbnailLink!==undefined"><b>Thumbnail Link:</b>
+                    <a href="{{doc.thumbnailLink}}" target="_blank">Link</a>
+                </div>
+                <img ng-src="{{doc.thumbnailLink}}"/>
+                <hr/>
             </div>
-            <div ng-if="doc.thumbnailLink!==undefined"><b>Thumbnail Link:</b>
-                <a href="{{doc.thumbnailLink}}" target="_blank">Link</a>
+        </md-whiteframe>
+        <br/>
+
+        <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+            Check Your Google+ Account<br/>
+            <md-button class="md-raised md-primary" ng-click="plusTest()">Plus Test</md-button>
+            <md-checkbox ng-init="gPlusToggle=true" ng-model="gPlusToggle" aria-label="Checkbox 1">Show Result {{ gPlusToggle}}</md-checkbox>
+            <div ng-if="gPlusToggle" class="" ng-repeat="gp in gPlus">
+                <div>{{$index}}: {{gp.object.content}}</div>
             </div>
-            <img ng-src="{{doc.thumbnailLink}}"/>
-            <hr/>
-        </div>
-    </md-whiteframe>
-    <br/>
-
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
-        Check Your Google+ Account<br/>
-        <md-button class="md-raised md-primary" ng-click="plusTest()">Plus Test</md-button>
-        <md-checkbox ng-init="gPlusToggle=true" ng-model="gPlusToggle" aria-label="Checkbox 1">Show Result {{ gPlusToggle}}</md-checkbox>
-        <div ng-if="gPlusToggle" class="" ng-repeat="gp in gPlus">
-            <div>{{$index}}: {{gp.object.content}}</div>
-        </div>
-    </md-whiteframe>
-
+        </md-whiteframe>
+    </div>
 
 </section>

@@ -1,4 +1,4 @@
-<section data-ng-controller="D2lHwsController" data-ng-init="findOne()">
+<section class="headerEnabled" data-ng-controller="D2lHwsController" data-ng-init="findOne()">
 
     <md-toolbar>
         <h2 class="md-toolbar-tools">
@@ -18,6 +18,17 @@
                     <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
                 </div>
             </md-input-container>
+
+
+            <div layout="column" layout-align="center center" style="height: 100px;">
+                <p>Select Class</p>
+                <md-select ng-model="d2lHw.class" md-on-open="loadClasses()" style="min-width: 200px;">
+                    <md-select-label>{{ d2lHw.class ? d2lHw.class.name : 'Select Class' }}</md-select-label>
+                    <md-option ng-value="class" ng-repeat="class in classes">{{class.prefix}} {{class.name}}</md-option>
+                </md-select>
+                <p class="hws-select-result">You have assigned for: {{ d2lHw.class ? d2lHw.class.prefix+" "+d2lHw.class.name : 'No class yet' }}</p>
+            </div>
+
 
             <div layout layout-sm="column">
                 <md-input-container flex>

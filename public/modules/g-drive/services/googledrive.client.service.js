@@ -37,12 +37,12 @@ angular.module('g-drive').factory('Googledrive', [
 		}
 
 		// Search Folder
-		function findFolder(query, callback){
-			console.log('Service: '+query);
+		function findFolder(callback){
+			//console.log('Service: '+query);
 			gapi.client.load('drive', 'v2').then(function(){
 				var request = gapi.client.drive.files.list({
-					//q: "title contains 'URI-'",
-					q:  query,
+					q: "title contains 'Open'",
+					//q:  query,
 					maxResults:10,
 					fields: 'items(id\,title)'
 				});
@@ -60,7 +60,7 @@ angular.module('g-drive').factory('Googledrive', [
                     fields: 'items(id\,title)'
                 });
                 request.then(function(resp){
-                    callback(resp);
+                    //callback(resp);
                 });
             });
         }
@@ -79,15 +79,17 @@ angular.module('g-drive').factory('Googledrive', [
 
 		//Google File Picker Platform
 		function setupPicker(accessToken, callback){
+			console.log('from gdrive service');
 			var callbackAfterFindFolder = function(resp){
 				var folderID = resp.result.items[0].id;
 				var picker = new google.picker.PickerBuilder()
 					.setOAuthToken(accessToken)
+					//.setOAuthToken("ya29.NQGgHdO9RRpPL_NSzdY7BHnDa7irQ9sVyYj-0NJKeOK-fWZdZ_7msD8oquqWdKBsAl_Om4Zd1WO84Q")
 					.setDeveloperKey(configGdrive.developerKey)
-					.addView(new google.picker.DocsUploadView().setParent(folderID))
+					//.addView(new google.picker.DocsUploadView().setParent(folderID))
 					.addView(new google.picker.DocsView().setParent(folderID))
 					.enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
-					.setLocale('ko')
+					.setLocale('us')
 					//.enableFeature(google.picker.Feature.NAV_HIDDEN)
 					.setCallback(callback)
 					.build();

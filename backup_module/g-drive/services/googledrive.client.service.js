@@ -41,8 +41,8 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 					fields: 'items(id\,title)'
 				});
 				request.then(function(resp){
-					//console.log('result File list');
-					//console.log(resp);
+					console.log('result File list');
+					console.log(resp);
 					callback(resp);
 				});
 			});
@@ -67,18 +67,16 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 				var picker = new google.picker.PickerBuilder()
 					.setOAuthToken(accessToken)
 					.setDeveloperKey(configGdrive.developerKey)
-					.addView(new google.picker.DocsUploadView().setParent(folderID))
-					.addView(new google.picker.DocsView().setParent(folderID))
+					//.addView(new google.picker.DocsUploadView().setParent(folderID))
+					//.addView(new google.picker.DocsView().setParent(folderID))
 					.enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
-					.setLocale('ko')
+					//.setLocale('ko')
 					//.enableFeature(google.picker.Feature.NAV_HIDDEN)
 					.setCallback(callback)
 					.build();
 				picker.setVisible(true);
 			}
-			findFolder(callbackAfterFindFolder);
-
-
+			findFolder("title contains 'URI-'",callbackAfterFindFolder);
 		}
 
 		function listFolder(){
@@ -101,7 +99,6 @@ angular.module('g-drive').factory('Googledrive', ['configGdrive',
 					console.log('result File list');
 					console.log(resp)
 				});
-
 			});
 		}
 	}

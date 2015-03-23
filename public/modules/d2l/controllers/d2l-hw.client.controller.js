@@ -1,14 +1,23 @@
 'use strict';
 
-angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '$location', '$timeout', 'Authentication', 'D2lHws','D2lClasses',
-	function($scope, $stateParams, $location, $timeout, Authentication, D2lHws, D2lClasses) {
-		$scope.project = {
-			title:'Assignment 1',
-			dDate:'4/1/2015',
-			desc: 'Nuclear Missile Defense System',
-			rate: 500
-		};
+angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams',
+	'$location', '$timeout', 'Authentication', 'D2lHws','D2lClasses', 'GDriveSelectResult',
+	function($scope, $stateParams, $location, $timeout, Authentication, D2lHws, D2lClasses, GDriveSelectResult) {
 
+
+		$scope.$on('handleEmit', function(event, args) {
+			console.log('broadcast is invoked');
+			$scope.project.gdocId=args.message;
+			$scope.$digest();
+		});
+
+		$scope.docs = GDriveSelectResult;
+		$scope.project = {gdocId : $scope.docs.id};
+		$scope.project = {
+			dDate: new Date('4/1/2015'),
+			gdocId : GDriveSelectResult.id
+			//desc: 'Nuclear Missile Defense System',
+		};
 
 		$scope.loadClasses = function() {
 			return $timeout(function() {
@@ -16,17 +25,16 @@ angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '
 			}, 650);
 		};
 
-
 		$scope.authentication = Authentication;
 		console.log($scope.authentication);
 
 		// Create new D2l hw
-		$scope.create = function() {
+		$scope.createNewRecord = function() {
 			console.log('Create');
 			// Create new D2l hw object
 
 			var d2lHw = new D2lHws ($scope.project);
-			//d2lHw.class = d2lHw.class;
+			d2lHw.class = d2lHw.class._id;
 
 			// Redirect after save
 			d2lHw.$save(function(response) {
@@ -58,7 +66,9 @@ angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '
 
 		// Update existing D2l hw
 		$scope.update = function() {
+			alert('dd');
 			var d2lHw = $scope.d2lHw;
+			d2lHw.class = d2lHw.class._id;
 
 			d2lHw.$update(function() {
 				$location.path('d2l-hws/' + d2lHw._id);

@@ -45,7 +45,8 @@ angular.module('d2l-hws').controller('D2lHwsController', ['$scope', '$stateParam
 		// Update existing D2l hw
 		$scope.update = function() {
 			var d2lHw = $scope.d2lHw;
-			console.log('here');
+			d2lHw.class = d2lHw.class._id;
+			//console.log('here');
 			d2lHw.dDate = new Date(d2lHw.dDate);
 
 			d2lHw.$update(function() {
