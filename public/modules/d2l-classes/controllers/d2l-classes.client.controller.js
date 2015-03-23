@@ -9,7 +9,8 @@ angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$st
 		$scope.create = function() {
 			// Create new D2l class object
 			var d2lClass = new D2lClasses ({
-				name: this.name
+				name: this.name,
+                prefix:this.prefix
 			});
 
 			// Redirect after save
@@ -18,6 +19,7 @@ angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$st
 
 				// Clear form fields
 				$scope.name = '';
+                $scope.prefix = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

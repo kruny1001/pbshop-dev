@@ -1,4 +1,4 @@
-<section data-ng-controller="D2lClassesController" data-ng-init="find()">
+<section class="headerEnabled" data-ng-controller="D2lClassesController" data-ng-init="find()">
     <div class="page-header">
         <h1>D2l classes</h1>
     </div>
@@ -10,7 +10,8 @@
 				by
 				<span data-ng-bind="d2lClass.user.displayName"></span>
 			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="d2lClass.name"></h4>
+            <h4 class="list-group-item-heading"><b>{{d2lClass.prefix}}</b> {{d2lClass.name}}</h4>
+			<!--<h4 class="list-group-item-heading" data-ng-bind="d2lClass.name"></h4>-->
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!d2lClasses.$resolved || d2lClasses.length">

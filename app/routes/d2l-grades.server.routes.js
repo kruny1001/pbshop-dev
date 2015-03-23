@@ -7,7 +7,7 @@ module.exports = function(app) {
 	// D2l grades Routes
 	app.route('/d2l-grades')
 		.get(d2lGrades.list)
-		.post(users.requiresLogin, d2lGrades.create);
+		.post(d2lGrades.create);
 
 	app.route('/d2l-grades/:d2lGradeId')
 		.get(d2lGrades.read)

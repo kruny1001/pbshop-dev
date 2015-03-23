@@ -18,7 +18,7 @@ var D2lGradeSchema = new Schema({
 	},
 	Assignment:{
 		type: Schema.ObjectId,
-		ref:'D2lHw'
+		ref:'D2lHwsSubmit'
 	},
 	grade:{
 		type:Number,
