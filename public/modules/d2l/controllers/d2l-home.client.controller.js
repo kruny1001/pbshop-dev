@@ -1,13 +1,16 @@
 'use strict';
 
 angular.module('d2l').controller('D2lHomeController', [
-	'$scope','$http','$window', '$interval','Googledrive','D2LOauth','D2lHwsSubmits',
-	function($scope, $http, $window, $interval, Googledrive, D2LOauth, D2lHwsSubmits) {
+	'$scope','$http','$window', '$interval','Googledrive','D2LOauth','D2lHwsSubmits','D2lClasses','D2lHws',
+	function($scope, $http, $window, $interval, Googledrive, D2LOauth, D2lHwsSubmits, D2lClasses, D2lHws) {
 
         $scope.AppScriptAPI = "";
         $scope.docs = [
 	        {docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',user:'kruny1001@gmail.com'}
         ];
+
+        $scope.classes = D2lClasses.query();
+        $scope.hws = D2lHws.query();
 
         $scope.getHW = function(doc){
             var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId='+doc.docId+'&userId='+doc.user;
@@ -81,10 +84,23 @@ angular.module('d2l').controller('D2lHomeController', [
 
 		//Should be connected with DB
 		$scope.rowCollection = [
-			{title:'A1', class:'CSC601', firstName: 'Laurent', lastName: 'Renard', id:'1905548', grade:95, submit:true, email: 'whatever@gmail.com', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'},
-			{title:'A2', class:'CSC601', firstName: 'Blandine', lastName: 'Faivre', id:'1905528', grade:0, submit:false, email: 'oufblandou@gmail.com', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'},
-			{title:'A3', class:'CSC601', firstName: 'Blandine', lastName: 'Faivre', id:'1905528', grade:100, submit:true, email: 'oufblandou@gmail.com', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'},
-			{title:'A4', class:'CSC601', firstName: 'Francoise', lastName: 'Frere', id:'1906648', grade:65, submit:true, email: 'raymondef@gmail.com', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'}
+			{
+                title:'A1', class:'CSC601', firstName: 'Laurent', lastName: 'Renard',
+                id:'1905548', grade:95, submit:true, email: 'whatever@gmail.com',
+                docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',
+                instructor:'openboard.instructor@gmail.com'},
+			{title:'A2', class:'CSC601', firstName: 'Blandine', lastName: 'Faivre',
+                id:'1905528', grade:0, submit:false, email: 'oufblandou@gmail.com',
+                docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',
+                instructor:'openboard.instructor@gmail.com'},
+			{title:'A3', class:'CSC601', firstName: 'Blandine', lastName: 'Faivre',
+                id:'1905528', grade:100, submit:true, email: 'oufblandou@gmail.com',
+                docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',
+                instructor:'openboard.instructor@gmail.com'},
+			{title:'A4', class:'CSC601', firstName: 'Francoise', lastName: 'Frere',
+                id:'1906648', grade:65, submit:true, email: 'raymondef@gmail.com',
+                docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',
+                instructor:'openboard.instructor@gmail.com'}
 		];
 
 		//Should be connected with DB

@@ -6,23 +6,24 @@ angular.module('d2l-hws').controller('D2lHwsController', ['$scope', '$stateParam
 		$scope.authentication = Authentication;
 
 		// Create new D2l hw
-		$scope.create = function() {
-			// Create new D2l hw object
-			var d2lHw = new D2lHws ({
-				name: this.name,
-				dDate: new Date(this.dDate)
-			});
-
-			// Redirect after save
-			d2lHw.$save(function(response) {
-				$location.path('d2l-hws/' + response._id);
-
-				// Clear form fields
-				$scope.name = '';
-			}, function(errorResponse) {
-				$scope.error = errorResponse.data.message;
-			});
-		};
+		//$scope.create = function() {
+		//	// Create new D2l hw object
+		//	var d2lHw = new D2lHws ({
+		//		name: this.name,
+         //       class: this.
+		//		dDate: new Date(this.dDate)
+		//	});
+        //
+		//	// Redirect after save
+		//	d2lHw.$save(function(response) {
+		//		$location.path('d2l-hws/' + response._id);
+        //
+		//		// Clear form fields
+		//		$scope.name = '';
+		//	}, function(errorResponse) {
+		//		$scope.error = errorResponse.data.message;
+		//	});
+		//};
 
 		// Remove existing D2l hw
 		$scope.remove = function(d2lHw) {

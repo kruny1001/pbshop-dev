@@ -3154,23 +3154,24 @@ angular.module('d2l-hws').controller('D2lHwsController', ['$scope', '$stateParam
 		$scope.authentication = Authentication;
 
 		// Create new D2l hw
-		$scope.create = function() {
-			// Create new D2l hw object
-			var d2lHw = new D2lHws ({
-				name: this.name,
-				dDate: new Date(this.dDate)
-			});
-
-			// Redirect after save
-			d2lHw.$save(function(response) {
-				$location.path('d2l-hws/' + response._id);
-
-				// Clear form fields
-				$scope.name = '';
-			}, function(errorResponse) {
-				$scope.error = errorResponse.data.message;
-			});
-		};
+		//$scope.create = function() {
+		//	// Create new D2l hw object
+		//	var d2lHw = new D2lHws ({
+		//		name: this.name,
+         //       class: this.
+		//		dDate: new Date(this.dDate)
+		//	});
+        //
+		//	// Redirect after save
+		//	d2lHw.$save(function(response) {
+		//		$location.path('d2l-hws/' + response._id);
+        //
+		//		// Clear form fields
+		//		$scope.name = '';
+		//	}, function(errorResponse) {
+		//		$scope.error = errorResponse.data.message;
+		//	});
+		//};
 
 		// Remove existing D2l hw
 		$scope.remove = function(d2lHw) {
@@ -3291,13 +3292,16 @@ angular.module('d2l').controller('D2lAdController', ['$scope',
 'use strict';
 
 angular.module('d2l').controller('D2lHomeController', [
-	'$scope','$http','$window', '$interval','Googledrive','D2LOauth','D2lHwsSubmits',
-	function($scope, $http, $window, $interval, Googledrive, D2LOauth, D2lHwsSubmits) {
+	'$scope','$http','$window', '$interval','Googledrive','D2LOauth','D2lHwsSubmits','D2lClasses','D2lHws',
+	function($scope, $http, $window, $interval, Googledrive, D2LOauth, D2lHwsSubmits, D2lClasses, D2lHws) {
 
         $scope.AppScriptAPI = "";
         $scope.docs = [
 	        {docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',user:'kruny1001@gmail.com'}
         ];
+
+        $scope.classes = D2lClasses.query();
+        $scope.hws = D2lHws.query();
 
         $scope.getHW = function(doc){
             var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId='+doc.docId+'&userId='+doc.user;
@@ -3371,10 +3375,23 @@ angular.module('d2l').controller('D2lHomeController', [
 
 		//Should be connected with DB
 		$scope.rowCollection = [
-			{title:'A1', class:'CSC601', firstName: 'Laurent', lastName: 'Renard', id:'1905548', grade:95, submit:true, email: 'whatever@gmail.com', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'},
-			{title:'A2', class:'CSC601', firstName: 'Blandine', lastName: 'Faivre', id:'1905528', grade:0, submit:false, email: 'oufblandou@gmail.com', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'},
-			{title:'A3', class:'CSC601', firstName: 'Blandine', lastName: 'Faivre', id:'1905528', grade:100, submit:true, email: 'oufblandou@gmail.com', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'},
-			{title:'A4', class:'CSC601', firstName: 'Francoise', lastName: 'Frere', id:'1906648', grade:65, submit:true, email: 'raymondef@gmail.com', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM'}
+			{
+                title:'A1', class:'CSC601', firstName: 'Laurent', lastName: 'Renard',
+                id:'1905548', grade:95, submit:true, email: 'whatever@gmail.com',
+                docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',
+                instructor:'openboard.instructor@gmail.com'},
+			{title:'A2', class:'CSC601', firstName: 'Blandine', lastName: 'Faivre',
+                id:'1905528', grade:0, submit:false, email: 'oufblandou@gmail.com',
+                docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',
+                instructor:'openboard.instructor@gmail.com'},
+			{title:'A3', class:'CSC601', firstName: 'Blandine', lastName: 'Faivre',
+                id:'1905528', grade:100, submit:true, email: 'oufblandou@gmail.com',
+                docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',
+                instructor:'openboard.instructor@gmail.com'},
+			{title:'A4', class:'CSC601', firstName: 'Francoise', lastName: 'Frere',
+                id:'1906648', grade:65, submit:true, email: 'raymondef@gmail.com',
+                docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',
+                instructor:'openboard.instructor@gmail.com'}
 		];
 
 		//Should be connected with DB
@@ -3751,8 +3768,7 @@ angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '
 			// Create new D2l hw object
 
 			var d2lHw = new D2lHws ($scope.project);
-			d2lHw.class = d2lHw.class._id;
-			console.log(d2lHw);
+			//d2lHw.class = d2lHw.class;
 
 			// Redirect after save
 			d2lHw.$save(function(response) {
@@ -8545,7 +8561,7 @@ function GetRequires($parse){
 }
 GetRequires.$inject = ["$parse"];
 
-function SelectProvider($$interimElementProvider) {
+function SelectProvider($$interimElementProvider) {
 	selectDefaultOptions.$inject = ["$tcOrder", "$mdConstant", "$$rAF", "$mdUtil", "$mdTheming", "$timeout"];
 	return $$interimElementProvider('$tcOrder')
 		.setDefaults({

@@ -15,13 +15,18 @@ var mongoose = require('mongoose'),
 exports.create = function(req, res, next) {
 	var d2lHw = new D2lHw(req.body);
 	d2lHw.user = req.user;
+
 	d2lHw.save(function(err) {
 		if (err) {
+            console.log(err);
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			D2lClass.populate('class').exec(function(err, item){});
+            //D2lClass.populate(d2lHw, {path:"class", model: 'D2lClass'},function(error, found){
+            //    console.log(found);
+            //    res.json(d2lHw);
+            //});
 		}
 	});
 };
@@ -79,7 +84,12 @@ exports.list = function(req, res) {
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(d2lHws);
+
+            D2lClass.populate(d2lHws, {path:"class", model: 'D2lClass'},function(error, found){
+                    console.log(found);
+                    res.jsonp(found);
+                });
+
 		}
 	});
 };

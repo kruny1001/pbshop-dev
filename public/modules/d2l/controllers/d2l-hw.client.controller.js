@@ -26,8 +26,7 @@ angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams', '
 			// Create new D2l hw object
 
 			var d2lHw = new D2lHws ($scope.project);
-			d2lHw.class = d2lHw.class._id;
-			console.log(d2lHw);
+			//d2lHw.class = d2lHw.class;
 
 			// Redirect after save
 			d2lHw.$save(function(response) {

@@ -31,7 +31,12 @@ var D2lHwsSubmitSchema = new Schema({
 	userEmail: {
 		type: String,
 		trim: true
-	}
+	},
+    submission:{
+        type: Boolean,
+        default: false
+    }
+
 });
 
 mongoose.model('D2lHwsSubmit', D2lHwsSubmitSchema);

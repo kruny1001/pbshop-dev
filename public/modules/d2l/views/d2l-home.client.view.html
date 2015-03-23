@@ -13,6 +13,8 @@
         </h2>
     </md-toolbar>
 
+
+
     <div ng-show="openMenu" class="gridListdemoDynamicTiles">
         <div ng-controller="gridListDemoCtrl as vm">
             <md-grid-list
@@ -38,6 +40,31 @@
 
     <md-whiteframe class="md-whiteframe-z1 d2lAuth"
                    layout="row" layout-sm="column" layout-align="space-around center" style="font-size:12px">
+        <div style="border-top: 5px solid #b9ff57; padding: 5px;">
+            <h3>Classes</h3>
+            <table st-table="HWCollection" class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th st-sort="title">Prefix</th>
+                        <th st-sort="class">Class Name</th>
+                        <th st-sort="dDate">Instructor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="class in classes">
+                        <td cs-select="HW"></td>
+                        <td>{{class.prefix}}</td>
+                        <td>{{class.name}}</td>
+                        <td>{{class.user.displayName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </md-whiteframe>
+
+    <md-whiteframe class="md-whiteframe-z1 d2lAuth"
+                   layout="row" layout-sm="column" layout-align="space-around center">
         <div style="border-top: 5px solid #ff60ad;">
             <h3>List HW</h3>
             <p>Add, Edit, Udpate or Remove Homework</p>
@@ -48,19 +75,20 @@
                     <th st-sort="title">Title</th>
                     <th st-sort="class">Class</th>
                     <th st-sort="dDate">Due Date</th>
-                    <th st-sort="tPoint">Total Point</th>
-                    <th st-sort="tPercent">Total Percent</th>
-                    <th st-sort="average">Average</th>
+                    <th st-sort="tPoint">Total</th>
+                    <th st-sort="tPercent">Total %</th>
+                    <th st-sort="dLink">Doc Link</th>
+                    <th st-sort="dEdit">Edit</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="HW in HWCollection">
+                <tr ng-repeat="HW in hws">
                     <td cs-select="HW"></td>
                     <td>{{HW.title}}</td>
-                    <td>{{HW.class | uppercase}}</td>
-                    <td>{{HW.dDate}}</td>
-                    <td>{{HW.tPoint}}</td>
-                    <td>{{HW.tPercent}}</td>
+                    <td>{{HW.class.name}}</td>
+                    <td>{{HW.dDate |  date : format : timezone}}</td>
+                    <td>{{HW.totalGrade}}</td>
+                    <td>{{HW.percent}}</td>
                 </tr>
                 </tbody>
             </table>
