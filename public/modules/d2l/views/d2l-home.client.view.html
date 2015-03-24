@@ -87,7 +87,7 @@
                     <td>{{HW.dDate |  date : format : timezone}}</td>
                     <td>{{HW.totalGrade}}</td>
                     <td hide-sm>{{HW.percent}}</td>
-                    <td> <md-button class="md-warn md-raised" style="font-size:0.8em" ng-click="linkHW(HW.gdocId)">Get Doc</md-button></td>
+                    <td> <md-button class="md-warn md-raised" style="font-size:0.8em" ng-click="linkHW(HW.gdocId)">Open</md-button></td>
                 </tr>
                 <tr>
                     <td><b>Total</b></td>
@@ -102,6 +102,7 @@
         </div>
     </md-whiteframe>
 
+    <!-- List Grade -->
     <!--Grade Board for Student-->
     <md-whiteframe class="md-whiteframe-z2 cntBox" layout="column">
         <div style="border-top: 5px solid #ee6c0a; padding: 5px;">

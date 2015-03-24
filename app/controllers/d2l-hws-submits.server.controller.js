@@ -117,3 +117,15 @@ exports.getSubmitInfo = function(req, res){
 		}
 	});
 }
+
+exports.getSubmitInfo = function(req, res){
+	D2lHwsSubmit.find({docId: req.params.docId, userEmail: req.params.userEmail}).exec(function(err, d2lHwsSubmit){
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.jsonp(d2lHwsSubmit);
+		}
+	});
+}
