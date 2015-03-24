@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.css" afterPath="$PROJECT_DIR$/public/dist/application.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html" afterPath="$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l/css/d2l.css" afterPath="$PROJECT_DIR$/public/modules/d2l/css/d2l.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l/controllers/g-drive-file-picker.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/d2l/controllers/g-drive-file-picker.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js" afterPath="$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -52,28 +45,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="d2l-home.client.controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="d2l-home.client.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6231884" vertical-offset="1546" max-vertical-offset="2250">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1546" max-vertical-offset="2250">
               <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="d2l-home.client.view.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="d2l-home.client.view.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.352941" vertical-offset="525" max-vertical-offset="2520">
-              <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.5572354" vertical-offset="807" max-vertical-offset="3150">
+              <caret line="94" column="29" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
               <folding>
                 <element signature="n#md-toolbar#0;n#section#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#section#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-button#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#section#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -151,8 +143,8 @@
         <option value="$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l/controllers/g-drive-file-picker.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l/css/d2l.css" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html" />
       </list>
     </option>
   </component>
@@ -271,7 +263,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="40" />
     <option name="y" value="23" />
-    <option name="width" value="723" />
+    <option name="width" value="996" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -1079,12 +1071,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00080" summary="util size">
-      <created>1422938894106</created>
-      <option name="number" value="00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1422938894106</updated>
-    </task>
     <task id="LOCAL-00081" summary="util size">
       <created>1423149187616</created>
       <option name="number" value="00081" />
@@ -1373,11 +1359,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427147175782</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="d2l-home decorate view">
+      <created>1427215991271</created>
+      <option name="number" value="00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1427215991271</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="23" width="723" height="877" extended-state="0" />
+    <frame x="40" y="23" width="996" height="877" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32133332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1386,12 +1378,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3812665" sideWeight="0.18308227" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33245382" sideWeight="0.78066915" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.77322406" sideWeight="0.8169177" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28496042" sideWeight="0.8169177" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26638177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19179487" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27236843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1447,7 +1439,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="util size" />
     <MESSAGE value="update info" />
     <MESSAGE value="regular update" />
     <MESSAGE value="update 2/11" />
@@ -1472,7 +1463,8 @@
     <MESSAGE value="oAuth update" />
     <MESSAGE value="lms app" />
     <MESSAGE value="LMS edit table" />
-    <option name="LAST_COMMIT_MESSAGE" value="LMS edit table" />
+    <MESSAGE value="d2l-home decorate view" />
+    <option name="LAST_COMMIT_MESSAGE" value="d2l-home decorate view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1888,27 +1880,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1546" max-vertical-offset="2250">
+          <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.352941" vertical-offset="525" max-vertical-offset="2520">
-          <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.5572354" vertical-offset="807" max-vertical-offset="3150">
+          <caret line="94" column="29" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
           <folding>
             <element signature="n#md-toolbar#0;n#section#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-button#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#section#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6231884" vertical-offset="1546" max-vertical-offset="2250">
-          <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -36,7 +36,7 @@
         <div style="border-top: 5px solid #378fff; padding: 5px;">
             <div class="tableTitle">Classes</div>
             <p hide-sm>Check your registered classes</p>
-            <table st-table="HWCollection" class="table">
+            <table st-table="HWCollection" class="table table-striped">
                 <thead>
                     <tr>
                         <!--<th></th>-->
@@ -82,9 +82,10 @@
                 <tr ng-repeat="HW in hwsCopy">
                     <!--<td cs-select="HW"></td>-->
                     <td>{{HW.title}}</td>
-                    <td>{{HW.class.name}}</td>
+                    <td hide-sm>{{HW.class.name}}</td>
+                    <td show-sm hide-gt-sm>{{HW.class.prefix}}</td>
                     <td>{{HW.dDate |  date : format : timezone}}</td>
-                    <td hide-sm>{{HW.totalGrade}}</td>
+                    <td>{{HW.totalGrade}}</td>
                     <td hide-sm>{{HW.percent}}</td>
                     <td> <md-button class="md-warn md-raised" style="font-size:0.8em" ng-click="linkHW(HW.gdocId)">Get Doc</md-button></td>
                 </tr>
@@ -92,9 +93,8 @@
                     <td><b>Total</b></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                     <td>{{totalHwPoints}}</td>
-                    <td>{{totalPercentages}}</td>
+                    <td hide-sm>{{totalPercentages}}</td>
                     <td></td>
                 </tr>
                 </tbody>
@@ -107,7 +107,7 @@
         <div style="border-top: 5px solid #ee6c0a; padding: 5px;">
             <div class="tableTitle">Grade Board for Student</div>
             <p hide-sm>Check your registered classes</p>
-            <table st-table="gradeCollection" class="table">
+            <table st-table="gradeCollection" class="table table-striped">
                 <thead>
                     <tr>
                         <th></th>
