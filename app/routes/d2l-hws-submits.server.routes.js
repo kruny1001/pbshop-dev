@@ -17,7 +17,7 @@ module.exports = function(app) {
 	app.route('/d2l-hws-submits/getBydocId/:docId/:userEmail')
 		.get(d2lHwsSubmits.getSubmitInfo);
 
-	app.route('/d2l-hws-submits/getBydocIdGS/:docId/:userEmail')
+	app.route('/d2l-hws-submits/getBydocIdGS/:docId')
 		.get(d2lHwsSubmits.getSubmitInfoGS);
 
 
