@@ -7,6 +7,7 @@ var mongoose = require('mongoose'),
 	errorHandler = require('./errors.server.controller'),
 	D2lHw = mongoose.model('D2lHw'),
 	D2lClass = mongoose.model('D2lClass'),
+	User = mongoose.model('User'),
 	_ = require('lodash');
 
 /**
@@ -122,3 +123,20 @@ exports.hasAuthorization = function(req, res, next) {
 	}
 	next();
 };
+
+exports.getOriginDoc = function(req, res){
+	D2lHw.find({gdocId: req.params.gdocId}).exec(function(err, result){
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			D2lClass.populate(result, {path:"class", model: 'D2lClass'},function(error, found){
+				User.populate(result, {path:"user", model:"User", select:'displayName email'}, function(error, user){
+					res.jsonp(user);
+				});
+
+			});
+		}
+	});
+}
