@@ -8,6 +8,13 @@ angular.module('d2l')
 	.factory('GDriveSelectResult', GDriveSelectResult)
 	.controller('GDriveFilePickerController', GDriveFilePicker);
 
+// Communicating between controller and Picker
+function GDriveSelectResult(){
+	var selectedDocs={id:''};
+	return selectedDocs;
+}
+
+
 function GDriveFilePicker($scope, Googledrive, configGdrive, GDriveSelectResult) {
 	$scope.isAuth = true;
 	$scope.docs = [];
@@ -90,14 +97,13 @@ function GDriveFilePicker($scope, Googledrive, configGdrive, GDriveSelectResult)
 	}
 
 	var accessToken;
-	$scope.permalLink = 'http://drive.google.com/uc?export=view&id=';
 	$scope.arrive = false;
 	$scope.authName = 'Authorize';
 
 	$scope.init = function init(){
 		window.gapi.load('auth', $scope.authenticateWithGoogle);
 		window.gapi.load('picker');
-		gapi.client.load('urlshortener', 'v1');
+		//gapi.client.load('urlshortener', 'v1');
 	}
 	$scope.authenticateWithGoogle =function authenticateWithGoogle(){
 		window.gapi.auth.authorize({
@@ -142,8 +148,7 @@ function GDriveFilePicker($scope, Googledrive, configGdrive, GDriveSelectResult)
 		//var query = "title contains 'URI-' and mimeType = 'application/vnd.google-apps.folder'";
 		var query = "mimeType = 'application/vnd.google-apps.folder'";
 		Googledrive.findFolder(query, function(result){
-			$scope.numFolder = result.result.items.length;
-			$scope.$digest();
+			//var numFolder = result.result.items.length;
 			console.log(result);
 		});
 	}
@@ -151,6 +156,7 @@ function GDriveFilePicker($scope, Googledrive, configGdrive, GDriveSelectResult)
 	$scope.listFolderInformation = function(){
 		Googledrive.listFolder();
 	}
+
 
 	function createNewAccountFolder(){
 		//Pre. Get User Information
@@ -178,11 +184,4 @@ function GDriveFilePicker($scope, Googledrive, configGdrive, GDriveSelectResult)
 		}
 		Googledrive.findFolder(callback);
 	}
-
-
-}
-
-function GDriveSelectResult(){
-	var selectedDocs={id:''};
-	return selectedDocs;
 }

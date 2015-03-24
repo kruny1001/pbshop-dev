@@ -1,6 +1,6 @@
 <section class="headerEnabled" data-ng-controller="D2lHomeController">
     <!-- Debuging Purpose Start-->
-    <div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>
+    <!--<div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>-->
     <!-- Debuging Purpose End-->
 
     <md-toolbar>
@@ -22,13 +22,8 @@
                               md-rowspan="{{tile.span.row}}"
                               md-colspan="{{tile.span.col}}"
                               ng-class="tile.background"
-                              id="tile.title"
-                        >
-
+                              id="tile.title">
                     <md-icon md-svg-icon="{{tile.icon}}" ng-click="test($event, tile)"></md-icon>
-                    <!--<md-grid-tile-header style="height:20px">-->
-                    <!--<h6>This is a header</h6>-->
-                    <!--</md-grid-tile-header>-->
                     <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
                 </md-grid-tile>
             </md-grid-list>
@@ -36,14 +31,15 @@
     </div>
 
     <!--Classes-->
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth"
-                   layout="row" layout-sm="column" layout-align="space-around center" style="font-size:12px">
-        <div style="border-top: 5px solid #b9ff57; padding: 5px;">
-            <h3>Classes</h3>
+    <md-whiteframe class="md-whiteframe-z2 cntBox"
+                   layout="row" layout-sm="column" layout-align="space-around center">
+        <div style="border-top: 5px solid #378fff; padding: 5px;">
+            <div class="tableTitle">Classes</div>
+            <p hide-sm>Check your registered classes</p>
             <table st-table="HWCollection" class="table">
                 <thead>
                     <tr>
-                        <th></th>
+                        <!--<th></th>-->
                         <th st-sort="title">Prefix</th>
                         <th st-sort="class">Class Name</th>
                         <th st-sort="dDate">Instructor</th>
@@ -51,7 +47,7 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="class in classes">
-                        <td cs-select="HW"></td>
+                        <!--<td cs-select="HW"></td>-->
                         <td>{{class.prefix}}</td>
                         <td>{{class.name}}</td>
                         <td>{{class.user.displayName}}</td>
@@ -62,160 +58,55 @@
     </md-whiteframe>
 
     <!--List HW-->
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth"
+    <md-whiteframe class="md-whiteframe-z2 cntBox"
                    layout="row" layout-sm="column" layout-align="space-around center">
-        <div style="border-top: 5px solid #ff60ad;">
-            <h3>List HW</h3>
-            <p>Add, Edit, Udpate or Remove Homework</p>
-            <table st-table="HWCollection" class="table">
+        <div style="border-top: 5px solid #ff60ad; padding: 5px;">
+            <div class="tableTitle">List HW</div>
+            <p hide-sm>Add, Edit, Udpate or Remove Homework</p>
+            <table st-table="hwsCopy" st-safe-src="hws" class="table table-striped">
                 <thead>
                 <tr>
-                    <th></th>
+                    <!--<th></th>-->
                     <th st-sort="title">Title</th>
-                    <th st-sort="class">Class</th>
+                    <th>Class</th>
                     <th st-sort="dDate">Due Date</th>
-                    <th st-sort="tPoint" hide-sm>Total</th>
-                    <th st-sort="tPercent" hide-sm>Total %</th>
-                    <th st-sort="dLink">Doc Link</th>
-                    <th st-sort="dEdit" hide-sm>Edit</th>
+                    <th st-sort="totalGrade" hide-sm>Total</th>
+                    <th st-sort="percent" hide-sm>Total %</th>
+                    <th>Doc Link</th>
+                </tr>
+                <tr>
+                    <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="HW in hws">
-                    <td cs-select="HW"></td>
+                <tr ng-repeat="HW in hwsCopy">
+                    <!--<td cs-select="HW"></td>-->
                     <td>{{HW.title}}</td>
                     <td>{{HW.class.name}}</td>
                     <td>{{HW.dDate |  date : format : timezone}}</td>
                     <td hide-sm>{{HW.totalGrade}}</td>
                     <td hide-sm>{{HW.percent}}</td>
-                    <td> <md-button class="md-warn md-raised" ng-click="linkHW(HW.gdocId)">Get Doc</md-button></td>
+                    <td> <md-button class="md-warn md-raised" style="font-size:0.8em" ng-click="linkHW(HW.gdocId)">Get Doc</md-button></td>
+                </tr>
+                <tr>
+                    <td><b>Total</b></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{totalHwPoints}}</td>
+                    <td>{{totalPercentages}}</td>
+                    <td></td>
                 </tr>
                 </tbody>
             </table>
-        </div>
-    </md-whiteframe>
-
-    <!--List Grade-->
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth"
-            layout="row" layout-sm="column" layout-align="space-around center">
-        <div style="border-top: 5px solid #ffb738;">
-            <h3>List Grade</h3>
-
-            <table st-table="HWCollection" class="table">
-                <thead>
-                <tr>
-                    <th></th>
-                    <th st-sort="title">Title</th>
-                    <th st-sort="class">Class</th>
-                    <th st-sort="class">Name</th>
-                    <th st-sort="dDate">Grade</th>
-                    <th st-sort="tPoint">First Name</th>
-                    <th st-sort="tPoint">Last Name</th>
-                    <th st-sort="dLink">Doc Link</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="HW in hws">
-                    <td cs-select="HW"></td>
-                    <td>{{HW.title}}</td>
-                    <td>{{HW.class.name}}</td>
-                    <td>{{HW.dDate |  date : format : timezone}}</td>
-                    <td>{{HW.totalGrade}}</td>
-                    <td>{{HW.percent}}</td>
-                    <!--<td><md-button class="md-warn md-raised" ng-click="linkHW(HW.gdocId)">Get Doc</md-button></td>-->
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </md-whiteframe>
-
-    <!--Assignments (For Instructor)-->
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
-        <!-- {title:'Lecture1', class:'CSC601-2015', publishDate:'1/5', docLink:''}, -->
-        <div style="border-top: 5px solid #45b3ff; font-size:10px;">
-            <h3>Assignments (For Instructor)</h3>
-            <p>
-                Add, Edit, Udpate or Remove Class Materials
-                <md-button class="md-primary md-raised" ng-click="AddHW()">Add HW</md-button>
-                <md-button class="md-primary md-raised" ng-click="AddHW()">Edit HW</md-button>
-            </p>
-            <table st-table="cmCollection" class="table">
-                <thead>
-                <tr>
-                    <th></th>
-                    <th st-sort="title">Title</th>
-                    <th st-sort="class">Class</th>
-                    <th st-sort="publishDate">Publish Date</th>
-                    <th st-sort="publishDate">Due Date</th>
-                    <th st-sort="docLink">Doc Link</th>
-                    <th st-sort="numSubmit"># Submit</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="CM in cmCollection">
-                    <td cs-select="CM"></td>
-                    <td>{{CM.title}}</td>
-                    <td>{{CM.class | uppercase}}</td>
-                    <td>{{CM.publishDate}}</td>
-                    <td>{{CM.dDate}}</td>
-                    <td>
-                        <a ng-href="{{CM.docLink}}" target="_blank">
-                            Doc Link
-                        </a>
-                    </td>
-                    <td>20/100</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-
-    </md-whiteframe>
-
-    <!--Assignments (For Student)-->
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
-
-        <!--<div ng-repeat="doc in docs">-->
-            <!--<md-button class="md-warn md-raised" ng-click="getHW(doc)">Get Doc</md-button>-->
-            <!--<a href="https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId=1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM&user=Kevin1905548"-->
-                <!--ng-click="getHW()" onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0');-->
-                <!--return false;">Make New File</a>-->
-        <!--</div>-->
-
-        <div style="border-top: 5px solid #ff5635; font-size:10px;">
-        <h3>Assignments (For Student)</h3>
-        <table st-table="rowCollection" class="table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th st-sort="title">Title</th>
-                    <th st-sort="class">Class</th>
-                    <th st-sort="grade">Grade</th>
-                    <th st-sort="gradePercent">%</th>
-                    <th st-sort="submit">Submit</th>
-                    <th st-sort="late">Late</th>
-                    <th st-sort="docLink">Copy to Gdrive</th>
-                </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="row in rowCollection">
-                <td cs-select="row"></td>
-                <td>{{row.title}}</td>
-                <td>{{row.class}}</td>
-                <td>{{row.grade}}</td>
-                <td>{{row.grade / 100 * 100}}</td>
-                <td><md-checkbox ng-model="row.submit" aria-label="Checkbox 1" style="margin:0px; margiin-left:10px;" ng-disabled="true"></md-checkbox></td>
-                <td><md-checkbox ng-model="row.submit" aria-label="Checkbox 1" style="margin:0px; margiin-left:10px;" ng-disabled="true"></md-checkbox></td>
-                <td><md-button class="md-warn md-raised" ng-click="getHW(row)">Get Doc</md-button></td>
-            </tr>
-            </tbody>
-        </table>
         </div>
     </md-whiteframe>
 
     <!--Grade Board for Student-->
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
-        <div style="border-top: 5px solid #63ff5e;">
-            <h3>Grade Board for Student</h3>
+    <md-whiteframe class="md-whiteframe-z2 cntBox" layout="column">
+        <div style="border-top: 5px solid #ee6c0a; padding: 5px;">
+            <div class="tableTitle">Grade Board for Student</div>
+            <p hide-sm>Check your registered classes</p>
             <table st-table="gradeCollection" class="table">
                 <thead>
                     <tr>
@@ -235,9 +126,7 @@
                 </tbody>
             </table>
         </div>
-
     </md-whiteframe>
-
 
     <!-- Search Box-->
     <!--<md-content class="md-padding" layout="column" ng-controller="DemoCtrl as ctrl">-->
@@ -257,10 +146,7 @@
         <!--&lt;!&ndash;<p style="padding-left: 15px;">By default, It will cache results when performing a query.  After the initial call is performed, it will use the cached results to eliminate unnecessary server requests or lookup logic. This can be disabled above.</p>&ndash;&gt;-->
     <!--</md-content>-->
 
-
-
-
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+    <md-whiteframe class="md-whiteframe-z1 cntBox" layout="column">
         <h3> Class Board </h3>
         <div layout="column" layout-fill>
             <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
@@ -275,7 +161,7 @@
         </div>
     </md-whiteframe>
 
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+    <md-whiteframe class="md-whiteframe-z1 cntBox" layout="column">
         <h3> Important Date </h3>
         <div layout="column" layout-fill>
             <md-whiteframe class="class-board md-whiteframe-z5" layout layout-align="start center">
@@ -290,22 +176,23 @@
         </div>
     </md-whiteframe>
 
-    <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+    <md-whiteframe class="md-whiteframe-z1 cntBox" layout="column">
         <h3> Scheduler </h3>
     </md-whiteframe>
 
+    <!-- Google Experimental Stuff
     <div ng-controller="GDriveFilePickerController">
         <h1>Google API List</h1>
 
         <div class="profile">Profile</div>
 
-        <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+        <md-whiteframe class="md-whiteframe-z1 cntBox" layout="column">
             Before Accessing this API,<br/>
             you must accept OAuth2 Google API Service
             <md-button class="md-raised md-warn" style="font-size:11px" ng-click="init()">{{authName}}</md-button>
         </md-whiteframe>
         <br/>
-        <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+        <md-whiteframe class="md-whiteframe-z1 cntBox" layout="column">
             Check Google Drive<br/>
             <md-button class="md-raised md-primary" ng-click="listingFolderInfo()">List Forlder</md-button>
             <md-button class="md-primary" ng-click="findFolder()">findFolder Result  <div style="display: inline-flex; border-radius: 50%; background-color:#ffff00; width: 20px; color:red; text-align: center;">{{numFolder}}</div></md-button>
@@ -327,7 +214,7 @@
         </md-whiteframe>
         <br/>
 
-        <md-whiteframe class="md-whiteframe-z1 d2lAuth" layout="column">
+        <md-whiteframe class="md-whiteframe-z1 cntBox" layout="column">
             Check Your Google+ Account<br/>
             <md-button class="md-raised md-primary" ng-click="plusTest()">Plus Test</md-button>
             <md-checkbox ng-init="gPlusToggle=true" ng-model="gPlusToggle" aria-label="Checkbox 1">Show Result {{ gPlusToggle}}</md-checkbox>
@@ -336,5 +223,5 @@
             </div>
         </md-whiteframe>
     </div>
-
+    -->
 </section>

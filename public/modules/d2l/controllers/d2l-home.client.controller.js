@@ -2,60 +2,19 @@
 
 angular.module('d2l')
 	.controller('D2lHomeController', D2lHomeController)     //main D2l-Home page
-	.controller('gridListDemoCtrl', gridListDemoCtrl) //grid Menu
-	.controller('DemoCtrl', DemoCtrl);            //<!-- Search Box: Should be removed later-->
+	.controller('gridListDemoCtrl', gridListDemoCtrl)       //grid Menu
+	.controller('DemoCtrl', DemoCtrl);                      //<!-- Search Box: Should be removed later-->
 
-function D2lHomeController($scope, $window, Authentication, D2LOauth, D2lHwsSubmits, D2lClasses, D2lHws) {
+function D2lHomeController(
+	$scope, $window, Authentication, D2LOauth, D2lHwsSubmits, D2lClasses, D2lHws) {
+
 	//Init
 	$scope.classes = D2lClasses.query();
 	$scope.hws = D2lHws.query();
+	$scope.hwsCopy = [].concat($scope.hws);
+	$scope.totalHwPoints = 0;
+	$scope.totalPercentages = 0;
 	var authentication = Authentication;
-	console.log(authentication);
-	$scope.docs = [
-		{docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',user:'kruny1001@gmail.com'}
-	];
-
-	$scope.getHW = function(doc){
-		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId='+doc.docId+'&userId='+authentication.user.username;
-		$window.open(AppScriptAPI);
-	};
-
-	$scope.linkHW = function(docId){
-		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId='+docId+'&userId='+authentication.user.username;
-		$window.open(AppScriptAPI);
-	};
-
-
-	//remove Header
-	//TweenMax.set($('header'), {y:-51});
-
-	$scope.files = [{fileId:"13C7rKU3N7fnyEC4h92YSyYQxtVDP3ZVqsbKPwrWIqFs", fileName:"Add-On"},{fileId:"1wOt48YCVJ0R064vRwx2a40TuAgACoJUzeYK9tIEDFA0", fileName:"Assignment2"}]
-
-	$scope.cmCollection = [
-		{title:'A1', class:'CSC601-2015', publishDate:'1/5', dDate:'1/12', tPoint:'200', tPercent:'5%', docLink:'https://docs.google.com/document/d/1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM/edit?usp=sharing', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',user:'kruny1001@gmail.com', published:false},
-		{title:'A2', class:'CSC601-2015', publishDate:'1/5', dDate:'1/12', tPoint:'200', tPercent:'5%', docLink:'https://docs.google.com/document/d/1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM/edit?usp=sharing', docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',user:'kruny1001@gmail.com', published:false},
-	];
-
-	//Should be connected with DB
-	$scope.rowCollection = [
-		{
-			title:'A1', class:'CSC601', firstName: 'Laurent', lastName: 'Renard',
-			id:'1905548', grade:95, submit:true, email: 'whatever@gmail.com',
-			docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',
-			instructor:'openboard.instructor@gmail.com'},
-		{title:'A2', class:'CSC601', firstName: 'Blandine', lastName: 'Faivre',
-			id:'1905528', grade:0, submit:false, email: 'oufblandou@gmail.com',
-			docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',
-			instructor:'openboard.instructor@gmail.com'},
-		{title:'A3', class:'CSC601', firstName: 'Blandine', lastName: 'Faivre',
-			id:'1905528', grade:100, submit:true, email: 'oufblandou@gmail.com',
-			docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',
-			instructor:'openboard.instructor@gmail.com'},
-		{title:'A4', class:'CSC601', firstName: 'Francoise', lastName: 'Frere',
-			id:'1906648', grade:65, submit:true, email: 'raymondef@gmail.com',
-			docId:'1wqIynYi4EyBRDJCkULTV5-lucN09iRzPeKe8CVt6BAM',
-			instructor:'openboard.instructor@gmail.com'}
-	];
 
 	//Should be connected with DB
 	$scope.gradeCollection = [
@@ -64,9 +23,26 @@ function D2lHomeController($scope, $window, Authentication, D2LOauth, D2lHwsSubm
 		{numAssignment: 'A3', grade:220, total: 250, docLink:""},
 		{numAssignment: 'A4', grade:75, total: 100, docLink:""},
 		{numAssignment: 'A5', grade:85, total: 150, docLink:""}
-	]
-	//end table data
+	];
+
+	// To get average and total
+	$scope.hws.$promise.then(function(){
+		angular.forEach($scope.hws, function(value, key){
+				$scope.totalHwPoints += value.totalGrade;
+				$scope.totalPercentages += value.percent;
+		});
+	});
+
+	$scope.linkHW = function(docId){
+		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId='+docId+'&userId='+authentication.user.username;
+		$window.open(AppScriptAPI);
+	};
+
+
+
 }
+
+// Open Grid Menu Controller
 function gridListDemoCtrl($scope, $state){
 	function goToHWList(){
 		//$state.go('listD2lHws');
@@ -92,47 +68,26 @@ function gridListDemoCtrl($scope, $state){
 			it.title = it.title + (j+1);
 			it.span  = { row : "1", col : "1" };
 			switch(j+1) {
-				case 1:
-					it.background = "red";
-					it.title = "Notifications";
-					//it.span.row = it.span.col = 2;
-
-					break;
-				case 2: it.background = "green"; it.title = "Tutorials"; break;
-				case 3: it.background = "darkBlue"; it.title = "Classes"; it.state="classes"; break;
-				case 4:
-					it.background = "blue";
-					it.title = "Pricing";
-					//it.span.col = 2;
-					break;
-				case 5:
-					it.background = "yellow";
-					it.title = "Articles";
-					//it.span.row = it.span.col = 2;
-					break;
-				case 6: it.background = "pink";
-					it.title = "Tutorials";
-					break;
-				case 7: it.background = "darkBlue";
-					it.title = "Projects";
-					break;
-				case 8: it.background = "purple";
-					it.title = "Portfolio";
-					break;
-				case 9: it.background = "deepBlue";
-					it.title = "Career";
-					break;
-				case 10: it.background = "lightPurple";
-					it.title = "MEANJS Stack";
-					break;
-				case 11: it.background = "yellow";       break;
-				case 12: it.background = "deepBlue";       break;
+				case 1: it.background = "red"; it.title = "Notifications"; /* it.span.row = it.span.col = 2; */ break;
+				case 2: it.background = "green"; it.title = "Classes"; break;
+				case 3: it.background = "darkBlue"; it.title = "List HWs"; it.state="classes"; break;
+				case 4: it.background = "blue"; it.title = "Grades"; /*it.span.col = 2;*/ break;
+				case 5: it.background = "yellow"; it.title = "Articles"; /* it.span.row = it.span.col = 2; */ break;
+				case 6: it.background = "pink"; it.title = "Tutorials"; break;
+				case 7: it.background = "darkBlue"; it.title = "Projects"; break;
+				case 8: it.background = "purple"; it.title = "Portfolio"; break;
+				case 9: it.background = "deepBlue"; it.title = "Career"; break;
+				case 10: it.background = "lightPurple"; it.title = "MEANJS Stack"; break;
+				case 11: it.background = "yellow"; break;
+				case 12: it.background = "deepBlue"; break;
 			}
 			results.push(it);
 		}
 		return results;
 	}
 }
+
+// Search Box Controller Angular Material
 function DemoCtrl($timeout, $q){
 		var self = this;
 		// list of `state` value/display objects

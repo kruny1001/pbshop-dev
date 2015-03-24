@@ -84,10 +84,12 @@ angular.module('g-drive').factory('Googledrive', [
 				var folderID = resp.result.items[0].id;
 				var picker = new google.picker.PickerBuilder()
 					.setOAuthToken(accessToken)
+
 					//.setOAuthToken("ya29.NQGgHdO9RRpPL_NSzdY7BHnDa7irQ9sVyYj-0NJKeOK-fWZdZ_7msD8oquqWdKBsAl_Om4Zd1WO84Q")
 					.setDeveloperKey(configGdrive.developerKey)
 					//.addView(new google.picker.DocsUploadView().setParent(folderID))
-					.addView(new google.picker.DocsView().setParent(folderID))
+					//.addView(new google.picker.DocsView().setParent(folderID))
+					.addView(new google.picker.DocsView())
 					.enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
 					.setLocale('us')
 					//.enableFeature(google.picker.Feature.NAV_HIDDEN)
