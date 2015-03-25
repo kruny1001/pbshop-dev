@@ -13,7 +13,7 @@ var mongoose = require('mongoose'),
  */
 exports.create = function(req, res) {
 	var d2lGrade = new D2lGrade(req.body);
-	d2lGrade.user = req.user;
+	//d2lGrade.user = req.user;
 
 	d2lGrade.save(function(err) {
 		if (err) {

@@ -25,6 +25,7 @@ var D2lClassSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
+	// Instructor
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'

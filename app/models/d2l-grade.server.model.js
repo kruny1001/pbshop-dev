@@ -28,13 +28,20 @@ var D2lGradeSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
-	user: {
-		type: Schema.ObjectId,
-		ref: 'User'
-	},
 	student: {
 		type: Schema.ObjectId,
 		ref: 'User'
+	},
+	instructor: {
+		type: Schema.ObjectId,
+		ref: 'User'
+	},
+	class:{
+		type: Schema.ObjectId,
+		ref:'D2lClass'
+	},
+	comment:{
+		type: String
 	}
 });
 
