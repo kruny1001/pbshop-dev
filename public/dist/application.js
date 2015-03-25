@@ -1641,11 +1641,12 @@ angular.module('animation').directive('fadeUp', ['$timeout',
 angular.module('articles').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
-		Menus.addMenuItem('topbar', 'Articles', 'articles', 'dropdown', '/articles(/create)?');
-		Menus.addSubMenuItem('topbar', 'articles', 'List Articles', 'articles');
-		Menus.addSubMenuItem('topbar', 'articles', 'New Article', 'articles/create');
+		//Menus.addMenuItem('topbar', 'Articles', 'articles', 'dropdown', '/articles(/create)?');
+		//Menus.addSubMenuItem('topbar', 'articles', 'List Articles', 'articles');
+		//Menus.addSubMenuItem('topbar', 'articles', 'New Article', 'articles/create');
 	}
 ]);
+
 'use strict';
 
 // Setting up route
@@ -4628,9 +4629,9 @@ angular.module('g-drive').factory('Googledrive', [
 angular.module('mean-events').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
-		Menus.addMenuItem('topbar', 'Mean events', 'mean-events', 'dropdown', '/mean-events(/create)?');
-		Menus.addSubMenuItem('topbar', 'mean-events', 'List Mean events', 'mean-events');
-		Menus.addSubMenuItem('topbar', 'mean-events', 'New Mean event', 'mean-events/create');
+		//Menus.addMenuItem('topbar', 'Mean events', 'mean-events', 'dropdown', '/mean-events(/create)?');
+		//Menus.addSubMenuItem('topbar', 'mean-events', 'List Mean events', 'mean-events');
+		//Menus.addSubMenuItem('topbar', 'mean-events', 'New Mean event', 'mean-events/create');
 	}
 ]);
 
@@ -8456,7 +8457,7 @@ function GetRequires($parse){
 }
 GetRequires.$inject = ["$parse"];
 
-function SelectProvider($$interimElementProvider) {
+function SelectProvider($$interimElementProvider) {
 	selectDefaultOptions.$inject = ["$tcOrder", "$mdConstant", "$$rAF", "$mdUtil", "$mdTheming", "$timeout"];
 	return $$interimElementProvider('$tcOrder')
 		.setDefaults({

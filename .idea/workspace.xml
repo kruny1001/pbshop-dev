@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/result.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/d2l-class.server.model.js" afterPath="$PROJECT_DIR$/app/models/d2l-class.server.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/d2l-grade.server.model.js" afterPath="$PROJECT_DIR$/app/models/d2l-grade.server.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/articles/config/articles.client.config.js" afterPath="$PROJECT_DIR$/public/modules/articles/config/articles.client.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/d2l-hw.server.model.js" afterPath="$PROJECT_DIR$/app/models/d2l-hw.server.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js" afterPath="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-hws-submits/views/view-d2l-hws-submit.client.view.html" afterPath="$PROJECT_DIR$/public/modules/d2l-hws-submits/views/view-d2l-hws-submit.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -35,101 +37,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="d2l-grades.server.routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes/d2l-grades.server.routes.js">
+      <file leaf-file-name="d2l-hw.server.model.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/d2l-hw.server.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="1292">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view-d2l-hws-submit.client.view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws-submits/views/view-d2l-hws-submit.client.view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.7142856" vertical-offset="0" max-vertical-offset="513">
+              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="d2l-grade.server.model.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/d2l-grade.server.model.js">
+      <file leaf-file-name="header.client.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/header.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="810">
-              <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/result.js">
+      <file leaf-file-name="home.client.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/home.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4516129" vertical-offset="75" max-vertical-offset="570">
-              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="418">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="d2l-grades.server.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js">
+      <file leaf-file-name="link-list.client.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/link-list.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1695">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1425">
+              <caret line="32" column="29" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="d2l-class.server.model.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/d2l-class.server.model.js">
+      <file leaf-file-name="plan.client.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/plan.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="615">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="instructor.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appScript/instructor.html">
+      <file leaf-file-name="menus.client.service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/core/services/menus.client.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6470588" vertical-offset="0" max-vertical-offset="1032">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="3268">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="d2l-hws-submits.server.routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws-submits.server.routes.js">
+      <file leaf-file-name="articles.client.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/articles/articles.client.module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="190">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="d2l-hws-submits.server.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws-submits.server.controller.js">
+      <file leaf-file-name="articles.client.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/articles/config/articles.client.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1533" max-vertical-offset="2055">
-              <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="130" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+              <caret line="8" column="87" selection-start-line="6" selection-start-column="10" selection-end-line="8" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="d2l-hws.server.routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws.server.routes.js">
+      <file leaf-file-name="mean-events.client.config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="d2l-hws.server.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws.server.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="2220">
-              <caret line="133" column="89" selection-start-line="133" selection-start-column="89" selection-end-line="133" selection-end-column="89" />
+            <state vertical-scroll-proportion="0.2825279" vertical-offset="0" max-vertical-offset="538">
+              <caret line="8" column="96" selection-start-line="6" selection-start-column="10" selection-end-line="8" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -147,57 +151,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/gs-app.server.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/directives/template/d2l-hw-publisher-tpl.html" />
-        <option value="$PROJECT_DIR$/braintree.html" />
-        <option value="$PROJECT_DIR$/config/express.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/directives/hw-generator.client.directive.js" />
-        <option value="$PROJECT_DIR$/gs.html" />
-        <option value="$PROJECT_DIR$/gs2.html" />
-        <option value="$PROJECT_DIR$/public/config.js" />
-        <option value="$PROJECT_DIR$/config/env/all.js" />
-        <option value="$PROJECT_DIR$/config/env/production.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/views/d2l-hw.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/data/home.json" />
-        <option value="$PROJECT_DIR$/public/modules/articles/views/view-article.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/articles/controllers/articles.client.controller.js" />
-        <option value="$PROJECT_DIR$/ajax.html" />
-        <option value="$PROJECT_DIR$/appScript/app.gs" />
-        <option value="$PROJECT_DIR$/appScript/ajax.html" />
-        <option value="$PROJECT_DIR$/bower.json" />
-        <option value="$PROJECT_DIR$/app/controllers/users.server.controller.js" />
-        <option value="$PROJECT_DIR$/app/controllers/users/users.authorization.server.controller.js" />
-        <option value="$PROJECT_DIR$/app/controllers/users/users.profile.server.controller.js" />
-        <option value="$PROJECT_DIR$/app/routes/users.server.routes.js" />
-        <option value="$PROJECT_DIR$/app/routes/gs-api.server.routes.js" />
-        <option value="$PROJECT_DIR$/app/controllers/gs-api.server.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/views/lms-start.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/css/lms.css" />
-        <option value="$PROJECT_DIR$/app/models/d2l-hws-submit.server.model.js" />
-        <option value="$PROJECT_DIR$/app/views/layout.server.view.html" />
-        <option value="$PROJECT_DIR$/backup_module/g-drive/services/googledrive.client.service.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-hws/css/d2l-hws.css" />
-        <option value="$PROJECT_DIR$/app/models/d2l-hw.server.model.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-hws/views/create-d2l-hw.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-hws/views/list-d2l-hws.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-hws/views/view-d2l-hw.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-hws/views/edit-d2l-hw.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/controllers/d2l-hw.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-hws/controllers/d2l-hws.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/controllers/g-drive-file-picker.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/css/d2l.css" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html" />
-        <option value="$PROJECT_DIR$/appScript/instructor.html" />
-        <option value="$PROJECT_DIR$/app/routes/d2l-hws-submits.server.routes.js" />
-        <option value="$PROJECT_DIR$/app/controllers/d2l-hws-submits.server.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l/services/createfile.client.service.js" />
+        <option value="$PROJECT_DIR$/testNodeModule/firebaseT1.js" />
+        <option value="$PROJECT_DIR$/testNodeModule/in1.html" />
         <option value="$PROJECT_DIR$/app/routes/d2l-hws.server.routes.js" />
-        <option value="$PROJECT_DIR$/app/controllers/d2l-hws.server.controller.js" />
-        <option value="$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js" />
+        <option value="$PROJECT_DIR$/testNodeModule/req.json" />
+        <option value="$PROJECT_DIR$/public/modules/d2l/directives/template/d2l-hw-generator-tpl.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l/directives/hw-generator.client.directive.js" />
+        <option value="$PROJECT_DIR$/app/controllers/gs-app.server.controller.js" />
+        <option value="$PROJECT_DIR$/app/routes/gs-app.server.routes.js" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/css/ani-meanT.css" />
+        <option value="$PROJECT_DIR$/sss.html" />
+        <option value="$PROJECT_DIR$/public/modules/the-clean-cruds/views/list-the-clean-cruds.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/the-clean-cruds/views/create-the-clean-crud.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/the-clean-cruds/views/edit-the-clean-crud.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/the-clean-cruds/views/view-the-clean-crud.client.view.html" />
+        <option value="$PROJECT_DIR$/app/models/the-clean-crud.server.model.js" />
+        <option value="$PROJECT_DIR$/public/modules/the-clean-cruds/controllers/the-clean-cruds.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/dist/application.js" />
+        <option value="$PROJECT_DIR$/public/modules/the-clean/controllers/the-clean.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/the-clean/views/the-clean.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/the-clean/directives/tc-order-ui.client.directive.js" />
+        <option value="$PROJECT_DIR$/public/modules/the-clean/directives/template/tc-order-ui-tpl.html" />
+        <option value="$PROJECT_DIR$/public/modules/top-hair/controllers/top-hair-home.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/top-hair/css/tabs.css" />
+        <option value="$PROJECT_DIR$/public/modules/top-hair/views/top-hair-home.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html" />
+        <option value="$PROJECT_DIR$/docs/codepen example.md" />
+        <option value="$PROJECT_DIR$/app/routes/d2l-hws-submits.server.routes.js" />
+        <option value="$PROJECT_DIR$/aaa.html" />
+        <option value="$PROJECT_DIR$/pixi.js" />
+        <option value="$PROJECT_DIR$/pixi/aaa.html" />
+        <option value="$PROJECT_DIR$/app/models/d2l-hws-submit.server.model.js" />
         <option value="$PROJECT_DIR$/app/models/d2l-class.server.model.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-hws/views/create-d2l-hw.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-hws/controllers/d2l-hws.client.controller.js" />
+        <option value="$PROJECT_DIR$/app/controllers/articles.server.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l/controllers/d2l-hw.client.controller.js" />
+        <option value="$PROJECT_DIR$/app/controllers/d2l-hws.server.controller.js" />
         <option value="$PROJECT_DIR$/app/models/d2l-grade.server.model.js" />
-        <option value="$PROJECT_DIR$/result.js" />
+        <option value="$PROJECT_DIR$/app/routes/d2l-grades.server.routes.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/edit-d2l-class.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/create-d2l-class.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classes.client.view.html" />
+        <option value="$PROJECT_DIR$/app/models/d2l-hw.server.model.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-hws-submits/views/view-d2l-hws-submit.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/articles/config/articles.client.config.js" />
+        <option value="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js" />
       </list>
     </option>
   </component>
@@ -314,10 +318,10 @@
     <data>$PROJECT_DIR$/node_modules/karma</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="367" />
-    <option name="y" value="23" />
-    <option name="width" value="1074" />
-    <option name="height" value="877" />
+    <option name="x" value="476" />
+    <option name="y" value="51" />
+    <option name="width" value="801" />
+    <option name="height" value="953" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -361,19 +365,99 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mean-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mean-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/gas-rest-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../reveal.js-master" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editorconfig.notification" value="Applied .editorconfig settings" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="options.lastSelected" value="configurable.group.appearance" />
+    <property name="options.lastSelected" value="Template Data Languages" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -385,18 +469,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/modules/the-clean/svg" />
+      <recent name="C:\Users\Kevin\Desktop\d1\pbshop-dev\public\modules\top-hair\img" />
+      <recent name="C:\Users\Kevin\Desktop\d1\pbshop-dev\public\modules" />
       <recent name="$PROJECT_DIR$/public/modules/d2l" />
       <recent name="$PROJECT_DIR$/public/modules/mean-tutorials/controllers" />
       <recent name="$PROJECT_DIR$/public/modules" />
-      <recent name="$PROJECT_DIR$/backup_module" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/appScript" />
-      <recent name="$PROJECT_DIR$/public/modules/d2l/directives/template" />
+      <recent name="C:\Users\Kevin\Desktop\d1\pbshop-dev\pixi" />
       <recent name="$PROJECT_DIR$/public/modules/d2l/svg" />
       <recent name="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/MD" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/app/controllers" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -761,6 +845,11 @@
     </option>
   </component>
   <component name="RunManager" selected="Node.js.server.js">
+    <configuration default="false" name="testTS.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="$USER_HOME$/.nvm/v0.10.32/bin/node" path-to-js-file="testTS.js" working-dir="$PROJECT_DIR$">
+      <RunnerSettings RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="Basic" />
+      <method />
+    </configuration>
     <configuration default="false" name="tesJwt.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="$USER_HOME$/.nvm/v0.10.32/bin/node" path-to-js-file="tesJwt.js" working-dir="$PROJECT_DIR$">
       <RunnerSettings RunnerId="Basic" />
       <ConfigurationWrapper RunnerId="Basic" />
@@ -778,12 +867,7 @@
       <ConfigurationWrapper RunnerId="Basic" />
       <method />
     </configuration>
-    <configuration default="false" name="aaaa.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="$USER_HOME$/.nvm/v0.10.32/bin/node" path-to-js-file="aaaa.js" working-dir="$PROJECT_DIR$">
-      <RunnerSettings RunnerId="Basic" />
-      <ConfigurationWrapper RunnerId="Basic" />
-      <method />
-    </configuration>
-    <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="$USER_HOME$/.nvm/v0.10.32/bin/node" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
+    <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
       <RunnerSettings RunnerId="Basic" />
       <RunnerSettings RunnerId="debuggableProgram" />
       <ConfigurationWrapper RunnerId="Basic" />
@@ -794,17 +878,6 @@
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
-    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="/bin/bash" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -857,7 +930,9 @@
     </configuration>
     <configuration default="false" name="t1.js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="$USER_HOME$/.nvm/v0.10.32/bin/node" path-to-js-file="t1.js" working-dir="$PROJECT_DIR$/lodashPractice">
       <RunnerSettings RunnerId="Basic" />
+      <RunnerSettings RunnerId="debuggableProgram" />
       <ConfigurationWrapper RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="debuggableProgram" />
       <method />
     </configuration>
     <list size="9">
@@ -865,19 +940,19 @@
       <item index="1" class="java.lang.String" itemvalue="Node.js.Unnamed" />
       <item index="2" class="java.lang.String" itemvalue="Node.js.home.client.controller.test.js" />
       <item index="3" class="java.lang.String" itemvalue="Node.js.t1.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.tesJwt.js" />
-      <item index="5" class="java.lang.String" itemvalue="Node.js.testGoogleAPIs.js" />
-      <item index="6" class="java.lang.String" itemvalue="Node.js.growlTest.js" />
-      <item index="7" class="java.lang.String" itemvalue="Node.js.aaaa.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.testTS.js" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.tesJwt.js" />
+      <item index="6" class="java.lang.String" itemvalue="Node.js.testGoogleAPIs.js" />
+      <item index="7" class="java.lang.String" itemvalue="Node.js.growlTest.js" />
       <item index="8" class="java.lang.String" itemvalue="Node.js.server.js" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Node.js.server.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.aaaa.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.growlTest.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.testGoogleAPIs.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.tesJwt.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.growlTest.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.testGoogleAPIs.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.tesJwt.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.testTS.js" />
       </list>
     </recent_temporary>
   </component>
@@ -892,6 +967,126 @@
       <created>1416897923119</created>
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
+    </task>
+    <task id="LOCAL-00066" summary="update profile">
+      <created>1421724996848</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1421724996848</updated>
+    </task>
+    <task id="LOCAL-00067" summary="add disqus">
+      <created>1421896288967</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1421896288969</updated>
+    </task>
+    <task id="LOCAL-00068" summary="add versioning page">
+      <created>1421945164784</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1421945164785</updated>
+    </task>
+    <task id="LOCAL-00069" summary="add versioning page">
+      <created>1422036160409</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1422036160411</updated>
+    </task>
+    <task id="LOCAL-00070" summary="edit project2">
+      <created>1422045590385</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1422045590386</updated>
+    </task>
+    <task id="LOCAL-00071" summary="optimized modules">
+      <created>1422226904611</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1422226904612</updated>
+    </task>
+    <task id="LOCAL-00072" summary="optimized modules">
+      <created>1422228440226</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1422228440226</updated>
+    </task>
+    <task id="LOCAL-00073" summary="add CRUD Article functionality for Project Article">
+      <created>1422253299524</created>
+      <option name="number" value="00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1422253299524</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Google API Factory">
+      <created>1422303034093</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1422303034093</updated>
+    </task>
+    <task id="LOCAL-00075" summary="projects dashboard with API">
+      <created>1422569590436</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1422569590437</updated>
+    </task>
+    <task id="LOCAL-00076" summary="projects dashboard with API">
+      <created>1422570926613</created>
+      <option name="number" value="00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1422570926613</updated>
+    </task>
+    <task id="LOCAL-00077" summary="projects dashboard with API">
+      <created>1422589031320</created>
+      <option name="number" value="00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1422589031321</updated>
+    </task>
+    <task id="LOCAL-00078" summary="mean Home">
+      <created>1422596609003</created>
+      <option name="number" value="00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1422596609003</updated>
+    </task>
+    <task id="LOCAL-00079" summary="mean Home">
+      <created>1422892433812</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1422892433812</updated>
+    </task>
+    <task id="LOCAL-00080" summary="util size">
+      <created>1422938894106</created>
+      <option name="number" value="00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1422938894106</updated>
+    </task>
+    <task id="LOCAL-00081" summary="util size">
+      <created>1423149187616</created>
+      <option name="number" value="00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1423149187616</updated>
+    </task>
+    <task id="LOCAL-00082" summary="util size">
+      <created>1423447374068</created>
+      <option name="number" value="00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1423447374069</updated>
+    </task>
+    <task id="LOCAL-00083" summary="util size">
+      <created>1423447554613</created>
+      <option name="number" value="00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1423447554613</updated>
+    </task>
+    <task id="LOCAL-00084" summary="update info">
+      <created>1423448179823</created>
+      <option name="number" value="00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1423448179823</updated>
+    </task>
+    <task id="LOCAL-00085" summary="regular update">
+      <created>1423626841910</created>
+      <option name="number" value="00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1423626841912</updated>
     </task>
     <task id="LOCAL-00086" summary="update 2/11">
       <created>1423713617119</created>
@@ -977,259 +1172,139 @@
       <option name="project" value="LOCAL" />
       <updated>1425257351276</updated>
     </task>
-    <task id="LOCAL-00100" summary="ads1 update">
-      <created>1425258754096</created>
+    <task id="LOCAL-00100" summary="ads1 add progressBar">
+      <created>1425456181529</created>
       <option name="number" value="00100" />
       <option name="project" value="LOCAL" />
-      <updated>1425258754096</updated>
+      <updated>1425456181530</updated>
     </task>
-    <task id="LOCAL-00101" summary="ads1 linetransit">
-      <created>1425353141409</created>
+    <task id="LOCAL-00101" summary="TC Project">
+      <created>1425509039556</created>
       <option name="number" value="00101" />
       <option name="project" value="LOCAL" />
-      <updated>1425353141410</updated>
+      <updated>1425509039557</updated>
     </task>
-    <task id="LOCAL-00102" summary="ads1 linetransit responsive">
-      <created>1425355996947</created>
+    <task id="LOCAL-00102" summary="TC Project">
+      <created>1425512335653</created>
       <option name="number" value="00102" />
       <option name="project" value="LOCAL" />
-      <updated>1425355996947</updated>
+      <updated>1425512335653</updated>
     </task>
-    <task id="LOCAL-00103" summary="ads1 linetransit responsive2">
-      <created>1425356676664</created>
+    <task id="LOCAL-00103" summary="TC Project">
+      <created>1425516514030</created>
       <option name="number" value="00103" />
       <option name="project" value="LOCAL" />
-      <updated>1425356676664</updated>
+      <updated>1425516514031</updated>
     </task>
-    <task id="LOCAL-00104" summary="tc: order ui">
-      <created>1425400594850</created>
+    <task id="LOCAL-00104" summary="TC Project">
+      <created>1425517720393</created>
       <option name="number" value="00104" />
       <option name="project" value="LOCAL" />
-      <updated>1425400594850</updated>
+      <updated>1425517720393</updated>
     </task>
-    <task id="LOCAL-00105" summary="ins view template with toast">
-      <created>1425573227822</created>
+    <task id="LOCAL-00105" summary="deco">
+      <created>1425630729842</created>
       <option name="number" value="00105" />
       <option name="project" value="LOCAL" />
-      <updated>1425573227823</updated>
+      <updated>1425630729843</updated>
     </task>
-    <task id="LOCAL-00106" summary="ins view template with toast">
-      <created>1425588696127</created>
+    <task id="LOCAL-00106" summary="deco">
+      <created>1425927854087</created>
       <option name="number" value="00106" />
       <option name="project" value="LOCAL" />
-      <updated>1425588696128</updated>
+      <updated>1425927854088</updated>
     </task>
-    <task id="LOCAL-00107" summary="meanT home page decorate">
-      <created>1425594744558</created>
+    <task id="LOCAL-00107" summary="Permission">
+      <created>1425988378966</created>
       <option name="number" value="00107" />
       <option name="project" value="LOCAL" />
-      <updated>1425594744558</updated>
+      <updated>1425988378967</updated>
     </task>
-    <task id="LOCAL-00108" summary="meanT floatMenu animation">
-      <created>1425956361658</created>
+    <task id="LOCAL-00108" summary="Permission &amp; ani">
+      <created>1425990565082</created>
       <option name="number" value="00108" />
       <option name="project" value="LOCAL" />
-      <updated>1425956361658</updated>
+      <updated>1425990565082</updated>
     </task>
-    <task id="LOCAL-00109" summary="google Doc permission and copy">
-      <created>1426023107032</created>
+    <task id="LOCAL-00109" summary="TC deco">
+      <created>1426136362963</created>
       <option name="number" value="00109" />
       <option name="project" value="LOCAL" />
-      <updated>1426023107034</updated>
+      <updated>1426136362964</updated>
     </task>
-    <task id="LOCAL-00110" summary="[theClean] animation work">
-      <created>1426108375465</created>
+    <task id="LOCAL-00110" summary="th project">
+      <created>1426487169254</created>
       <option name="number" value="00110" />
       <option name="project" value="LOCAL" />
-      <updated>1426108375467</updated>
+      <updated>1426487169255</updated>
     </task>
-    <task id="LOCAL-00111" summary="[theClean] backend">
-      <created>1426190081795</created>
+    <task id="LOCAL-00111" summary="lms hws-submit">
+      <created>1426917478654</created>
       <option name="number" value="00111" />
       <option name="project" value="LOCAL" />
-      <updated>1426190081796</updated>
+      <updated>1426917478655</updated>
     </task>
-    <task id="LOCAL-00112" summary="update Project Info">
-      <created>1426199898685</created>
+    <task id="LOCAL-00112" summary="lms hws-submit">
+      <created>1426969735827</created>
       <option name="number" value="00112" />
       <option name="project" value="LOCAL" />
-      <updated>1426199898685</updated>
+      <updated>1426969735828</updated>
     </task>
-    <task id="LOCAL-00113" summary="oAuth update">
-      <created>1426214535697</created>
+    <task id="LOCAL-00113" summary="lms hws-hws">
+      <created>1427079347780</created>
       <option name="number" value="00113" />
       <option name="project" value="LOCAL" />
-      <updated>1426214535698</updated>
+      <updated>1427079347782</updated>
     </task>
-    <task id="LOCAL-00114" summary="oAuth update">
-      <created>1426481844540</created>
+    <task id="LOCAL-00114" summary="lms d2l-classes">
+      <created>1427086504486</created>
       <option name="number" value="00114" />
       <option name="project" value="LOCAL" />
-      <updated>1426481844541</updated>
+      <updated>1427086504486</updated>
     </task>
-    <task id="LOCAL-00115" summary="lms app">
-      <created>1426565911143</created>
-      <option name="number" value="00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1426565911144</updated>
-    </task>
-    <task id="LOCAL-00116" summary="lms app">
-      <created>1426820968532</created>
-      <option name="number" value="00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1426820968533</updated>
-    </task>
-    <task id="LOCAL-00117" summary="lms app">
-      <created>1426972556842</created>
-      <option name="number" value="00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1426972556843</updated>
-    </task>
-    <task id="LOCAL-00118" summary="lms app">
-      <created>1426973324713</created>
-      <option name="number" value="00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1426973324713</updated>
-    </task>
-    <task id="LOCAL-00119" summary="lms app">
-      <created>1426973844904</created>
-      <option name="number" value="00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1426973844904</updated>
-    </task>
-    <task id="LOCAL-00120" summary="lms app">
-      <created>1426973915601</created>
-      <option name="number" value="00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1426973915601</updated>
-    </task>
-    <task id="LOCAL-00121" summary="lms app">
-      <created>1426975206610</created>
-      <option name="number" value="00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1426975206610</updated>
-    </task>
-    <task id="LOCAL-00122" summary="LMS edit table">
-      <created>1426979393188</created>
-      <option name="number" value="00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1426979393188</updated>
-    </task>
-    <task id="LOCAL-00123" summary="LMS edit table">
-      <created>1426988801594</created>
-      <option name="number" value="00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1426988801595</updated>
-    </task>
-    <task id="LOCAL-00124" summary="LMS edit table">
-      <created>1426988838844</created>
-      <option name="number" value="00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1426988838844</updated>
-    </task>
-    <task id="LOCAL-00125" summary="LMS edit table">
-      <created>1426989319018</created>
-      <option name="number" value="00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1426989319018</updated>
-    </task>
-    <task id="LOCAL-00126" summary="LMS edit table">
-      <created>1426990335090</created>
-      <option name="number" value="00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1426990335090</updated>
-    </task>
-    <task id="LOCAL-00127" summary="LMS edit table">
-      <created>1426991050431</created>
-      <option name="number" value="00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1426991050431</updated>
-    </task>
-    <task id="LOCAL-00128" summary="LMS edit table">
-      <created>1427147175781</created>
-      <option name="number" value="00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1427147175782</updated>
-    </task>
-    <task id="LOCAL-00129" summary="d2l-home decorate view">
-      <created>1427215991271</created>
-      <option name="number" value="00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1427215991271</updated>
-    </task>
-    <task id="LOCAL-00130" summary="d2l-home decorate view2">
-      <created>1427216813732</created>
-      <option name="number" value="00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1427216813732</updated>
-    </task>
-    <task id="LOCAL-00131" summary="d2l-hws-submits server add route for GS">
-      <created>1427228785503</created>
-      <option name="number" value="00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1427228785503</updated>
-    </task>
-    <task id="LOCAL-00132" summary="d2l-hws-submits server add route for GS">
-      <created>1427229274055</created>
-      <option name="number" value="00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1427229274055</updated>
-    </task>
-    <task id="LOCAL-00133" summary="d2l-hws-submits server add route for GS">
-      <created>1427229819074</created>
-      <option name="number" value="00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1427229819074</updated>
-    </task>
-    <task id="LOCAL-00134" summary="d2l-hws/getGDoc API">
-      <created>1427234902359</created>
-      <option name="number" value="00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1427234902359</updated>
-    </task>
-    <option name="localTasksCounter" value="135" />
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="367" y="23" width="1074" height="877" extended-state="0" />
+    <frame x="476" y="51" width="801" height="953" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27261308" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32133332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37598944" sideWeight="0.8169177" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45394737" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45218578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3812665" sideWeight="0.18308227" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33245382" sideWeight="0.78066915" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34960422" sideWeight="0.8169177" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46746203" sideWeight="0.85024154" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29819563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27236843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44298822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19676946" sideWeight="0.16016015" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33152762" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45444685" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40086675" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14516129" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5710526" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27406418" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32133332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.468039" sideWeight="0.85024154" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37598944" sideWeight="0.8169177" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45514512" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45218578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3812665" sideWeight="0.18308227" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4550321" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5013405" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33245382" sideWeight="0.78066915" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27176782" sideWeight="0.8169177" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19676946" sideWeight="0.16016015" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3329718" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46912244" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5710526" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14516129" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1237,11 +1312,11 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2673435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27236843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27414903" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27406418" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1261,6 +1336,14 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="add CRUD Article functionality for Project Article" />
+    <MESSAGE value="Google API Factory" />
+    <MESSAGE value="projects dashboard with API" />
+    <MESSAGE value="mean Home" />
+    <MESSAGE value="util size" />
+    <MESSAGE value="update info" />
+    <MESSAGE value="regular update" />
+    <MESSAGE value="update 2/11" />
     <MESSAGE value="apply material design d2l" />
     <MESSAGE value="d2l query drive api" />
     <MESSAGE value="d2l hw crud module added" />
@@ -1268,427 +1351,390 @@
     <MESSAGE value="d2l ins and stu view" />
     <MESSAGE value="update3" />
     <MESSAGE value="ads1 update" />
-    <MESSAGE value="ads1 linetransit" />
-    <MESSAGE value="ads1 linetransit responsive" />
-    <MESSAGE value="ads1 linetransit responsive2" />
-    <MESSAGE value="tc: order ui" />
-    <MESSAGE value="ins view template with toast" />
-    <MESSAGE value="meanT home page decorate" />
-    <MESSAGE value="meanT floatMenu animation" />
-    <MESSAGE value="google Doc permission and copy" />
-    <MESSAGE value="[theClean] animation work" />
-    <MESSAGE value="[theClean] backend" />
-    <MESSAGE value="update Project Info" />
-    <MESSAGE value="oAuth update" />
-    <MESSAGE value="lms app" />
-    <MESSAGE value="LMS edit table" />
-    <MESSAGE value="d2l-home decorate view" />
-    <MESSAGE value="d2l-home decorate view2" />
-    <MESSAGE value="d2l-hws-submits server add route for GS" />
-    <MESSAGE value="d2l-hws/getGDoc API" />
-    <option name="LAST_COMMIT_MESSAGE" value="d2l-hws/getGDoc API" />
+    <MESSAGE value="ads1 add progressBar" />
+    <MESSAGE value="TC Project" />
+    <MESSAGE value="deco" />
+    <MESSAGE value="Permission" />
+    <MESSAGE value="Permission &amp; ani" />
+    <MESSAGE value="TC deco" />
+    <MESSAGE value="th project" />
+    <MESSAGE value="lms hws-submit" />
+    <MESSAGE value="lms hws-hws" />
+    <MESSAGE value="lms d2l-classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="lms d2l-classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="38" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/d2l-hws-submit.server.model.js">
+    <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws-submits.server.routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="123" max-vertical-offset="720">
-          <caret line="23" column="10" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/lib/gsap/src/minified/TweenMax.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l/config/d2l.client.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="810">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l/services/d2loauth.client.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="1695">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/articles/controllers/articles.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1125">
-          <caret line="3" column="73" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/g-drive/config/g-drive.client.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3345725" vertical-offset="0" max-vertical-offset="538">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layout.server.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.75" vertical-offset="585" max-vertical-offset="1860">
-          <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backup_module/g-drive/config/g-drive.client.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.055762082" vertical-offset="0" max-vertical-offset="538">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="12" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.dashboard.tmp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0" vertical-offset="90" max-vertical-offset="2745">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backup_module/g-drive/g-drive.client.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="538">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/config/mean-tutorials.client.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4182156" vertical-offset="0" max-vertical-offset="795">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5174538" vertical-offset="1818" max-vertical-offset="2655">
-          <caret line="138" column="67" selection-start-line="138" selection-start-column="56" selection-end-line="138" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backup_module/g-drive/services/googledrive.client.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.259259" vertical-offset="449" max-vertical-offset="960">
-          <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws/css/d2l-hws.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.111524165" vertical-offset="0" max-vertical-offset="538">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.88235295" vertical-offset="0" max-vertical-offset="735">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/services/ut-calendar.client.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.055762082" vertical-offset="0" max-vertical-offset="990">
-          <caret line="2" column="52" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2085">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectviewdashboard.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.1301117" vertical-offset="0" max-vertical-offset="5385">
-          <caret line="184" column="0" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectview-projects-controller.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="538">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectView.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.2" vertical-offset="105" max-vertical-offset="630">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project2.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="538">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/home-dialogtmp.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="538">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/gapi-ctrl.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08364312" vertical-offset="0" max-vertical-offset="538">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project1.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23913044" vertical-offset="0" max-vertical-offset="1710">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/calculator/directives/calculator.client.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5507246" vertical-offset="730" max-vertical-offset="1815">
-          <caret line="74" column="31" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/calculator/controllers/cal-test.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="730">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/d2l-hw.server.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.19125684" vertical-offset="270" max-vertical-offset="945">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l/views/d2l-hw.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="31.875" vertical-offset="765" max-vertical-offset="1500">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws/views/view-d2l-hw.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1350">
-          <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws/views/create-d2l-hw.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.916667" vertical-offset="194" max-vertical-offset="1485">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="39" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws/views/edit-d2l-hw.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="1425">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-select#0;n#div#0;n#form#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws/views/list-d2l-hws.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="495">
-          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/g-drive/services/googledrive.client.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5964215" vertical-offset="885" max-vertical-offset="1515">
-          <caret line="91" column="47" selection-start-line="91" selection-start-column="47" selection-end-line="91" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l/controllers/d2l-hw.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0038168" vertical-offset="0" max-vertical-offset="1470">
-          <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws/controllers/d2l-hws.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1185">
-          <caret line="56" column="6" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l/controllers/g-drive-file-picker.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2520">
-          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="n#!!block;n#createNewAccountFolder#0;n#!!block;n#GDriveFilePicker#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l/css/d2l.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1546" max-vertical-offset="2250">
-          <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="2175">
-          <caret line="14" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="n#md-toolbar#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-button#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#section#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appScript/instructor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6470588" vertical-offset="0" max-vertical-offset="1032">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws-submits/controllers/d2l-hws-submits.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5581396" vertical-offset="603" max-vertical-offset="1065">
+        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1349">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pixi/pixi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="437">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.178572" vertical-offset="0" max-vertical-offset="3933">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/services/d2l-classes.client.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws-submits/services/d2l-hws-submits.client.service.js">
+    <entry file="file://$PROJECT_DIR$/app/controllers/d2l-classes.server.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31007752" vertical-offset="0" max-vertical-offset="387">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2147">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws-submits.server.routes.js">
+    <entry file="file://$PROJECT_DIR$/app/controllers/banners.server.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2793">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws-submits.server.controller.js">
+    <entry file="file://$PROJECT_DIR$/app/controllers/gwPurchase.server.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1533" max-vertical-offset="2055">
-          <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="130" selection-end-column="1" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2109">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws.server.routes.js">
+    <entry file="file://$PROJECT_DIR$/app/controllers/products.server.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="3154">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws.server.controller.js">
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws/views/create-d2l-hw.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="2220">
-          <caret line="133" column="89" selection-start-line="133" selection-start-column="89" selection-end-line="133" selection-end-column="89" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1900">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/d2l-hws-submit.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="394" max-vertical-offset="912">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="722">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/article.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74692875" vertical-offset="1596" max-vertical-offset="2869">
+          <caret line="100" column="5" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/the-clean-crud.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5405406" vertical-offset="627" max-vertical-offset="1121">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/mean-tevent.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9140049" vertical-offset="372" max-vertical-offset="779">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/mean-event.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.42014742" vertical-offset="171" max-vertical-offset="665">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/gskbAnalysis.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4938575" vertical-offset="201" max-vertical-offset="608">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/gskb.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1938">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/banner.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.26044226" vertical-offset="353" max-vertical-offset="760">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users/users.authorization.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74201477" vertical-offset="344" max-vertical-offset="1140">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/articles.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3840156" vertical-offset="240" max-vertical-offset="2546">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layout.server.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.142857" vertical-offset="1681" max-vertical-offset="2337">
+          <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/d2l-class.server.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="615">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="760">
+          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js">
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws/controllers/d2l-hws.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1695">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1482">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws/services/d2l-hws.client.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18095239" vertical-offset="0" max-vertical-offset="525">
+          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l/controllers/d2l-hw.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="1672">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws.server.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1844" max-vertical-offset="2356">
+          <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws-submits.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14876957" vertical-offset="0" max-vertical-offset="2375">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28036323" vertical-offset="0" max-vertical-offset="8664">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/d2l-grades.server.routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
+        <state vertical-scroll-proportion="0.6139456" vertical-offset="0" max-vertical-offset="588">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/d2l-grade.server.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="810">
-          <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.19217686" vertical-offset="438" max-vertical-offset="1026">
+          <caret line="29" column="6" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="2147">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1161" max-vertical-offset="4446">
+          <caret line="76" column="20" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30956522" vertical-offset="525" max-vertical-offset="1406">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/edit-d2l-class.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37477148" vertical-offset="80" max-vertical-offset="627">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/create-d2l-class.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="627">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classes.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69469833" vertical-offset="0" max-vertical-offset="547">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09689214" vertical-offset="23" max-vertical-offset="570">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/d2l-hw.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="1292">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws-submits/views/view-d2l-hws-submit.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7142856" vertical-offset="0" max-vertical-offset="513">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result.js">
+    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/header.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4516129" vertical-offset="75" max-vertical-offset="570">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/home.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/link-list.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1425">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/plan.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="538">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/core/services/menus.client.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3268">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/articles/articles.client.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/articles/config/articles.client.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="8" column="87" selection-start-line="6" selection-start-column="10" selection-end-line="8" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2825279" vertical-offset="0" max-vertical-offset="538">
+          <caret line="8" column="96" selection-start-line="6" selection-start-column="10" selection-end-line="8" selection-end-column="96" />
           <folding />
         </state>
       </provider>

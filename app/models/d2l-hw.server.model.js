@@ -1,4 +1,9 @@
-'use strict';
+/*
+ user would be student
+ class contains instructor's user _id
+*/
+
+ 'use strict';
 
 /**
  * Module dependencies.
