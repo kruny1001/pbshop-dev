@@ -126,8 +126,8 @@
       <file leaf-file-name="mean-events.client.config.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.283054" vertical-offset="0" max-vertical-offset="537">
-              <caret line="8" column="96" selection-start-line="6" selection-start-column="10" selection-end-line="8" selection-end-column="96" />
+            <state vertical-scroll-proportion="0.14307229" vertical-offset="0" max-vertical-offset="664">
+              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -312,10 +312,8 @@
     <data>$PROJECT_DIR$/node_modules/karma</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="476" />
-    <option name="y" value="51" />
-    <option name="width" value="801" />
-    <option name="height" value="953" />
+    <option name="width" value="924" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -962,12 +960,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00067" summary="add disqus">
-      <created>1421896288967</created>
-      <option name="number" value="00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1421896288969</updated>
-    </task>
     <task id="LOCAL-00068" summary="add versioning page">
       <created>1421945164784</created>
       <option name="number" value="00068" />
@@ -1256,21 +1248,27 @@
       <option name="project" value="LOCAL" />
       <updated>1427250006351</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="lms d2l-classes">
+      <created>1427250075360</created>
+      <option name="number" value="00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1427250075360</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="476" y="51" width="801" height="953" extended-state="0" />
+    <frame x="0" y="0" width="924" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27295598" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23535791" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32133332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46746203" sideWeight="0.85024154" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44298822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38148984" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19676946" sideWeight="0.16016015" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33152762" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1727,8 +1725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.283054" vertical-offset="0" max-vertical-offset="537">
-          <caret line="8" column="96" selection-start-line="6" selection-start-column="10" selection-end-line="8" selection-end-column="96" />
+        <state vertical-scroll-proportion="0.14307229" vertical-offset="0" max-vertical-offset="664">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
           <folding />
         </state>
       </provider>
