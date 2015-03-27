@@ -114,46 +114,61 @@
             <!--</a>-->
 
             <md-content class="md-padding" layout="column" layout-align="center start">
+                <!-- Google Authentication
                 <div layout="row">
-                <md-button class="md-primary" href="/auth/google" >
-                    <md-icon md-svg-src="/modules/mean-tutorials/img/social-google.svg"></md-icon>
-                </md-button>
-                </div>
-
-                <div layout="row" data-ng-hide="authentication.user">
-                    <md-button class="md-primary" ng-click="showSignIn($event)">
-                        <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
-                        Sign In
-                    </md-button>
-                    <!--<span flex></span>-->
-                    <md-button class="md-primary" ng-click="showSignUp($event)">
-                        <md-icon md-svg-src="/modules/mean-tutorials/img/log-out.svg"></md-icon>
-                        Sign Up
+                    <md-button class="md-primary" href="/auth/google" >
+                        <md-icon md-svg-src="/modules/mean-tutorials/img/social-google.svg"></md-icon>
                     </md-button>
                 </div>
+                -->
+                <div data-ng-hide="authentication.user">
+                    <div layout="row">
+                        <p>You need to sign in</p>
+                    </div>
+                    <div layout="row">
+                        <md-button class="md-primary" ng-click="showSignIn($event)">
+                            <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
+                            Sign In
+                        </md-button>
+                        <!--<span flex></span>-->
+                        <md-button class="md-primary" ng-click="showSignUp($event)">
+                            <md-icon md-svg-src="/modules/mean-tutorials/img/log-out.svg"></md-icon>
+                            Sign Up
+                        </md-button>
+                    </div>
+                </div>
 
-                <md-button ng-disabled="false" ui-sref="profile" class="md-primary">
+                <md-button ng-disabled="false" ui-sref="openboard" class="md-primary">
                     <md-icon md-svg-src="/modules/mean-tutorials/img/android-person.svg"></md-icon>
-                    Account
+                    Get Started
                 </md-button>
-                <md-button ng-disabled="false" ui-sref="projectview.dashboard" class="md-primary">
-                    <md-icon md-svg-src="/modules/mean-tutorials/img/grid.svg"></md-icon>
-                    Dashboard
-                </md-button>
-                <md-button ng-disabled="true" ng-click="close()" class="md-primary">
-                    <md-icon md-svg-src="/modules/mean-tutorials/img/briefcase.svg"></md-icon>
-                    Projects
-                </md-button>
-                <md-button ng-disabled="false" ui-sref="d2l-home" class="md-primary">
-                    <md-icon md-svg-src="/modules/mean-tutorials/img/easel.svg"></md-icon>
-                    Desire 2 Learn
-                </md-button>
-                <md-button ng-disabled="false" ui-sref="d2l-ins.class" class="md-primary">
-                    Instructor (beta)
-                </md-button>
-                <md-button ng-disabled="false" ui-sref="d2l-stu" class="md-primary">
-                    Student (beta)
-                </md-button>
+
+                <div layout="column" layout-align="space-around start" data-ng-show="authentication.user">
+                    <md-button ng-disabled="false" ui-sref="profile" class="md-primary">
+                        <md-icon md-svg-src="/modules/mean-tutorials/img/android-person.svg"></md-icon>
+                        Account
+                    </md-button>
+
+                    <!--<md-button ng-disabled="false" ui-sref="projectview.dashboard" class="md-primary">-->
+                        <!--<md-icon md-svg-src="/modules/mean-tutorials/img/grid.svg"></md-icon>-->
+                        <!--Dashboard-->
+                    <!--</md-button>-->
+                    <!--<md-button ng-disabled="true" ng-click="close()" class="md-primary">-->
+                        <!--<md-icon md-svg-src="/modules/mean-tutorials/img/briefcase.svg"></md-icon>-->
+                        <!--Projects-->
+                    <!--</md-button>-->
+                    <md-button ng-disabled="false" ui-sref="d2l-home" class="md-primary">
+                        <md-icon md-svg-src="/modules/mean-tutorials/img/easel.svg"></md-icon>
+                        Open Board
+                    </md-button>
+                    <md-button ng-disabled="false" ui-sref="d2l-ins.class" class="md-primary">
+                        Instructor Demo (beta)
+                    </md-button>
+                    <md-button ng-disabled="false" ui-sref="d2l-stu" class="md-primary">
+                        Student Demo (beta)
+                    </md-button>
+                </div>
+
             </md-content>
         </md-sidenav>
 

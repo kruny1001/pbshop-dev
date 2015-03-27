@@ -1,0 +1,16 @@
+.ob-underbar{
+    width: 70%;
+    border-top: 5px solid #378fff;
+    padding: 20px;
+    margin-top: -15px;
+}
+
+.openboard-background{
+    background-color: whitesmoke;
+}
+
+.openboard-card-color{
+    margin:10px;
+    padding:10px;
+    background-color: #ffffff;
+}

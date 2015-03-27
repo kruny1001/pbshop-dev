@@ -1,8 +1,8 @@
 'use strict';
 
 // D2l classes controller
-angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$stateParams', '$location', 'Authentication', 'D2lClasses',
-	function($scope, $stateParams, $location, Authentication, D2lClasses) {
+angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$stateParams', '$location', '$mdDialog', 'Authentication', 'D2lClasses',
+	function($scope, $stateParams, $location, $mdDialog, Authentication, D2lClasses) {
 		$scope.authentication = Authentication;
 
 		// Create new D2l class
@@ -10,12 +10,14 @@ angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$st
 			// Create new D2l class object
 			var d2lClass = new D2lClasses ({
 				name: this.name,
-                prefix:this.prefix
+				prefix:this.prefix
 			});
 
 			// Redirect after save
 			d2lClass.$save(function(response) {
-				$location.path('d2l-classes/' + response._id);
+				console.log('ddd');
+				$mdDialog.hide();
+				//$location.path('d2l-classes/' + response._id);
 
 				// Clear form fields
 				$scope.name = '';
@@ -24,6 +26,8 @@ angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$st
 				$scope.error = errorResponse.data.message;
 			});
 		};
+
+
 
 		// Remove existing D2l class
 		$scope.remove = function(d2lClass) {

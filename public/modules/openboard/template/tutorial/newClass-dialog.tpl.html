@@ -1,0 +1,35 @@
+<md-dialog aria-label="createNewClass Btn">
+    <md-toolbar class="md-primary">
+        <h1 class="md-toolbar-tools">
+            Create New Class
+        </h1>
+    </md-toolbar>
+    <md-content>
+        <form name="projectForm" data-ng-submit="create()">
+            <p>Create a New Class</p>
+                <md-input-container>
+                    <label for="name">Name</label>
+                    <input required id="name" name="name" ng-model="name">
+                    <div ng-messages="projectForm.name.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container>
+                    <label for="prefix">Prefix</label>
+                    <input required id="prefix" name="prefix" ng-model="prefix">
+                    <div ng-messages="projectForm.prefix.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+            <div class="md-actions" layout="row">
+                <span flex></span>
+                <md-button type="submit">
+                    Done
+                </md-button>
+            </div>
+
+        </form>
+    </md-content>
+
+</md-dialog>

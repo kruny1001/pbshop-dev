@@ -9,6 +9,9 @@ module.exports = function(app) {
 		.get(d2lClasses.list)
 		.post(users.requiresLogin, d2lClasses.create);
 
+	app.route('/d2l-classes/i')
+		.get(d2lClasses.listOwnClass);
+
 	app.route('/d2l-classes/:d2lClassId')
 		.get(d2lClasses.read)
 		.put(users.requiresLogin, d2lClasses.hasAuthorization, d2lClasses.update)

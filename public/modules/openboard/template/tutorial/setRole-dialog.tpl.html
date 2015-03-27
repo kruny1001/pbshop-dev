@@ -1,0 +1,28 @@
+<md-dialog aria-label="setRole Btn">
+    <md-toolbar class="md-primary">
+        <h1 class="md-toolbar-tools">
+            Setting Role
+        </h1>
+    </md-toolbar>
+    <md-content>
+        <form name="projectForm" data-ng-submit="setRole()">
+            <p>Select role:</p>
+            <div layout="column" layout-align="center center" style="height: 100px;">
+                <label for="roles">Role: </label>
+                <md-select required name="roles" id="roles" placeholder="Select Role" ng-model="credentials.roles">
+                    <md-option value="instructor">Instructor</md-option>
+                    <md-option value="student">Student</md-option>
+                </md-select>
+            </div>
+
+            <div class="md-actions" layout="row">
+                <span flex></span>
+                <md-button type="submit">
+                    Done
+                </md-button>
+            </div>
+
+        </form>
+    </md-content>
+
+</md-dialog>

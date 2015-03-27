@@ -119,6 +119,11 @@ ApplicationConfiguration.registerModule('mean-tutorials');
 'use strict';
 
 // Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('openboard');
+
+'use strict';
+
+// Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('size-util');
 
 'use strict';
@@ -961,8 +966,8 @@ angular.module('d2l-classes').config(['$stateProvider',
 'use strict';
 
 // D2l classes controller
-angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$stateParams', '$location', 'Authentication', 'D2lClasses',
-	function($scope, $stateParams, $location, Authentication, D2lClasses) {
+angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$stateParams', '$location', '$mdDialog', 'Authentication', 'D2lClasses',
+	function($scope, $stateParams, $location, $mdDialog, Authentication, D2lClasses) {
 		$scope.authentication = Authentication;
 
 		// Create new D2l class
@@ -970,12 +975,14 @@ angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$st
 			// Create new D2l class object
 			var d2lClass = new D2lClasses ({
 				name: this.name,
-                prefix:this.prefix
+				prefix:this.prefix
 			});
 
 			// Redirect after save
 			d2lClass.$save(function(response) {
-				$location.path('d2l-classes/' + response._id);
+				console.log('ddd');
+				$mdDialog.hide();
+				//$location.path('d2l-classes/' + response._id);
 
 				// Clear form fields
 				$scope.name = '';
@@ -984,6 +991,8 @@ angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$st
 				$scope.error = errorResponse.data.message;
 			});
 		};
+
+
 
 		// Remove existing D2l class
 		$scope.remove = function(d2lClass) {
@@ -3956,6 +3965,89 @@ angular.module('mean-tutorials').factory('UtCalendar', [
 
 'use strict';
 
+//Setting up route
+angular.module('openboard').config(['$stateProvider',
+	function($stateProvider) {
+		// Openboard state routing
+		$stateProvider.
+		state('openboard', {
+			url: '/openboard',
+			templateUrl: 'modules/openboard/views/openboard.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+
+angular.module('openboard').controller('OpenboardController', OpenboardController);
+
+function OpenboardController($scope, $mdDialog, Authentication) {
+	// Openboard controller logic
+	// ...
+
+	//Init
+	$scope.authentication = Authentication;
+	$scope.user = Authentication.user;
+
+	// This function should be combined later
+	$scope.showSignUp = function(ev) {
+		$mdDialog.show({
+			controller: 'AuthenticationController',
+			templateUrl: 'modules/mean-tutorials/template/authentication/signup-dialog.tpl.html',
+			targetEvent: ev
+		})
+			.then(function(answer) {
+				$scope.alert = 'You said the information was "' + answer + '".';
+			}, function() {
+				$scope.alert = 'You cancelled the dialog.';
+			});
+	};
+
+	$scope.showSignIn = function(ev) {
+		$mdDialog.show({
+			controller: 'AuthenticationController',
+			templateUrl: 'modules/mean-tutorials/template/authentication/signin-dialog.tpl.html',
+			targetEvent: ev
+		})
+			.then(function(answer) {
+				$scope.alert = 'You said the information was "' + answer + '".';
+			}, function() {
+				$scope.alert = 'You cancelled the dialog.';
+			});
+	};
+
+	$scope.showSetRule = function(ev){
+		$mdDialog.show({
+			controller: 'AuthenticationController',
+			templateUrl: 'modules/openboard/template/tutorial/setRole-dialog.tpl.html',
+			targetEvent: ev
+		})
+			.then(function(answer) {
+				$scope.alert = 'You said the information was "' + answer + '".';
+				$scope.$digest();
+			}, function() {
+				$scope.alert = 'You cancelled the dialog.';
+			});
+	};
+
+	$scope.showNewClass = function(ev){
+		$mdDialog.show({
+			controller: 'D2lClassesController',
+			templateUrl: 'modules/openboard/template/tutorial/newClass-dialog.tpl.html',
+			targetEvent: ev
+		})
+			.then(function(answer) {
+				$scope.alert = 'You said the information was "' + answer + '".';
+				$scope.$digest();
+			}, function() {
+				$scope.alert = 'You cancelled the dialog.';
+			});
+	}
+}
+OpenboardController.$inject = ["$scope", "$mdDialog", "Authentication"];
+
+'use strict';
+
 angular.module('size-util').controller('SizeUtil.sizeOfWidthController', ['$scope',
 	function($scope) {
         $scope.width = window.innerWidth;
@@ -6196,12 +6288,12 @@ angular.module('users').config(['$stateProvider',
 ]);
 'use strict';
 
-angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', '$mdDialog', 'Authentication',
-	function($scope, $http, $location, $mdDialog, Authentication) {
+angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', '$mdDialog', 'Authentication','Users',
+	function($scope, $http, $location, $mdDialog, Authentication, Users) {
 		$scope.authentication = Authentication;
-
+		$scope.user = Authentication.user;
 		// If user is signed in then redirect back home
-		if ($scope.authentication.user) $location.path('/mean-home');
+		//if ($scope.authentication.user) $location.path('/mean-home');
 
 		$scope.signup = function() {
 			$http.post('/auth/signup', $scope.credentials).success(function(response) {
@@ -6209,7 +6301,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.authentication.user = response;
 				$mdDialog.hide();
 				// And redirect to the index page
-				$location.path('/mean-home');
+				//$location.path('/mean-home');
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
@@ -6221,12 +6313,23 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.authentication.user = response;
 				$mdDialog.hide();
 				// And redirect to the index page
-				$location.path('/mean-home');
+				//$location.path('/mean-home');
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
+		};
 
-
+		$scope.setRole = function(){
+			$scope.user.roles =$scope.credentials.roles;
+			var user = new Users($scope.user);
+			user.$update(function(response) {
+				$scope.success = true;
+				Authentication.user = response;
+				$scope.user = response;
+				$mdDialog.hide();
+			}, function(response) {
+				$scope.error = response.data.message;
+			});
 		};
 	}
 ]);
@@ -6301,6 +6404,7 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 
 		// Remove a user social account
 		$scope.removeUserSocialAccount = function(provider) {
+
 			$scope.success = $scope.error = null;
 
 			$http.delete('/users/accounts', {
@@ -6366,15 +6470,26 @@ angular.module('users').factory('Authentication', [
 'use strict';
 
 // Users service used for communicating with the users REST endpoint
-angular.module('users').factory('Users', ['$resource',
+angular.module('users')
+	.factory('Users', ['$resource',
+		function($resource) {
+			return $resource('users', {}, {
+				update: {
+					method: 'PUT'
+				}
+			});
+		}
+	])
+	.factory('UsersRole', ['$resource',
 	function($resource) {
-		return $resource('users', {}, {
+		return $resource('users/role', {}, {
 			update: {
 				method: 'PUT'
 			}
 		});
 	}
 ]);
+
 'use strict';
 
 angular.module('util').directive('prism', [

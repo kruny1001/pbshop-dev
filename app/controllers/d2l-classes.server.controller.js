@@ -84,6 +84,20 @@ exports.list = function(req, res) {
 	});
 };
 
+
+exports.listOwnClass = function(req, res) {
+	//console.log(req.user._id);
+	D2lClass.find({user:req.user}).sort('-created').populate('user', 'displayName').exec(function(err, d2lClasses) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.jsonp(d2lClasses);
+		}
+	});
+};
+
 /**
  * D2l class middleware
  */
