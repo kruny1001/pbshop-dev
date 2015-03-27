@@ -14,6 +14,11 @@
 	border-color: #78FA89;
 }
 
+/* Material Angular Issue*/
+input, button, textarea, select {
+    -webkit-transform: translate3d(0,0,0);
+}
+
 .without-container{
 /*	margin-top:51px;*/
 }
