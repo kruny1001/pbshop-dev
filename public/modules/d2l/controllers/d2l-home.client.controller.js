@@ -6,7 +6,7 @@ angular.module('d2l')
 	.controller('DemoCtrl', DemoCtrl);                      //<!-- Search Box: Should be removed later-->
 
 function D2lHomeController(
-	$scope, $window, Authentication, D2LOauth, D2lHwsSubmits, D2lClasses, D2lHws) {
+	$scope, $window, $http, Authentication, D2LOauth, D2lHwsSubmits, D2lClasses, D2lHws) {
 
 	//Init
 	$scope.classes = D2lClasses.query();
@@ -14,6 +14,13 @@ function D2lHomeController(
 	$scope.hwsCopy = [].concat($scope.hws);
 	$scope.totalHwPoints = 0;
 	$scope.totalPercentages = 0;
+	$scope.allGrade = [];
+	$http.get('/d2l-grades').success(
+		function(result){
+			$scope.allGrade = result;
+			console.log(result);
+		}
+	);
 	var authentication = Authentication;
 
 	//Should be connected with DB

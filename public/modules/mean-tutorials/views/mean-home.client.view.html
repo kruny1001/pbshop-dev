@@ -1,5 +1,11 @@
 <section class="headerEnabled" ng-controller="MeanHomeController" layout="column" layout-fill>
 
+    <style>
+        .md-dialog-container {
+            z-index:1000;
+        }
+    </style>
+
     <div class="meanT-headToolBar">
         <div class="meanT-brandName">
             <a href="/#!/versioning" target="_blank">Version: 0.0.3</a>
@@ -10,7 +16,7 @@
     <md-content layout="column" layout-align="center center">
         <md-content class="meanT-homeFirstRow">
             <div id="floatMenus" style="position:fixed; z-index: 999">
-                <md-button ng-click="toggleLeft()" class="md-primary"><b>Menu</b></md-button>
+                <!--<md-button ng-click="toggleLeft()" class="md-primary"><b>Menu</b></md-button>-->
                 <md-button ng-click="toggleRight()" class="md-primary"><b>My Page</b></md-button>
             </div>
 
@@ -18,14 +24,12 @@
                 <cal-date></cal-date>
             </div>
 
-            <!--<div class="meanT-headTitle" color-border="colorBorder.header">-->
             <div class="meanT-headTitle">
-                <strong>Welcome to MEAN Tutorials</strong>
+                <strong>{{homeContents.mainTitle}}</strong>
             </div>
 
             <div class="meanT-headSubTitle" hide-sm>
-                <strong>Mean Tutorials</strong> is a team for scripted, high-performance HTML5 technologies that works
-                in all major browsers. No other delivers such advanced.<br/><br/>
+                <strong>{{homeContents.mainTitle}}</strong> {{homeContents.subTitleText}}<br/><br/>
                 <a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">
                     <img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">
                 </a>
@@ -33,45 +37,44 @@
         </md-content>
 
         <md-content flex class="md-padding">
-
-
             <div class="meanT-headSubTitle" show-sm hide-gt-sm>
-                <strong>Mean Tutorials</strong> is a team for scripted, high-performance HTML5 technologies that works
-                in all major browsers. No other delivers such advanced.<br/><br/>
+                <strong>{{homeContents.mainTitle}}</strong> {{homeContents.subTitleText}}<br/><br/>
                 <a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">
                     <img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">
                 </a>
             </div>
 
+            <!-- Annimation -->
             <div class="meanT-contentTitle">
-                <strong>What We Are Doing</strong>
+                <strong>How to use Openboard</strong>
             </div>
-
             <mj-home-ani></mj-home-ani>
 
             <hr/>
 
-            <div class="meanT-contentTitle"><strong>Event Calendar</strong></div>
-            <div class="meanT-headSubTitle">
-                You can check out our current project.
-            </div>
-            <ut-calendar></ut-calendar>
+            <!--<div class="meanT-contentTitle"><strong>Event Calendar</strong></div>-->
+            <!--<div class="meanT-headSubTitle">-->
+                <!--You can check out our current project.-->
+            <!--</div>-->
+            <!--<ut-calendar></ut-calendar>-->
+            <!--<hr/>-->
 
-            <hr/><mac-window info="announcements"></mac-window>
-            <hr/><mac-window info="projects"></mac-window>
-            <hr/><mac-window info="techs"></mac-window>
+            <mac-window info="announcements"></mac-window>
+            <!--<hr/><mac-window info="projects"></mac-window>-->
+            <!--<hr/><mac-window info="techs"></mac-window>-->
 
         </md-content>
     </md-content>
 
     <section layout="row">
         <!--<md-sidenav class="md-sidenav-left md-whiteframe-z2 headerEnabled" md-component-id="left" md-is-locked-open="$media('gt-md')">-->
+
+        <!--
         <md-sidenav class="md-sidenav-left md-whiteframe-z2 headerEnabled" md-component-id="left"
                     style="position:fixed; z-index: 999; top:0">
             <md-toolbar MeanHomeControllerclass="md-theme-indigo">
                 <h1 class="md-toolbar-tools">MENU</h1>
             </md-toolbar>
-            <!--<md-content class="md-padding">-->
             <md-content class="md-padding" layout="column" layout-align="center start">
                 <H3>Kevin S</H3>
                 <md-button ui-sref="ads1" ng-click="close()" class="md-primary" hide-gt-md>
@@ -93,10 +96,7 @@
                 </md-button>
             </md-content>
         </md-sidenav>
-
-
-
-
+        -->
 
         <!-- Right Menu-->
         <md-sidenav class="md-sidenav-right md-whiteframe-z2 headerEnabled" md-component-id="right"
@@ -121,9 +121,9 @@
                 </div>
 
                 <div layout="row" data-ng-hide="authentication.user">
-                    <md-button class="md-primary" ng-click="logIn($event)">
+                    <md-button class="md-primary" ng-click="signIn($event)">
                         <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
-                        Log In
+                        Sign In
                     </md-button>
                     <!--<span flex></span>-->
                     <md-button class="md-primary" ng-click="signUp($event)">
@@ -157,15 +157,5 @@
             </md-content>
         </md-sidenav>
 
-        <!-- Google Form
-            <hr/>
-            <br/>
-            <a href="https://docs.google.com/forms/d/1HvDi8CBJrPE2m47JEO_jW3-moxjrVzX0nDCTczvvzDo/viewanalytics?usp=form_confirm" target="_blank">결과 보기</a>
-            <div class="meanT-googleForm">
-
-                <br/>
-                <iframe src="https://docs.google.com/forms/d/1HvDi8CBJrPE2m47JEO_jW3-moxjrVzX0nDCTczvvzDo/viewform?embedded=true" width="760" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-            </div>
-        -->
     </section>
 </section>

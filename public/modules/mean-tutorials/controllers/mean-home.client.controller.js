@@ -7,6 +7,7 @@ angular.module('mean-tutorials')
 function MeanLoginCtrl($scope, Authentication, $mdDialog){
 	$scope.authentication = Authentication;
 
+
 	$scope.hide = function() {
 		$mdDialog.hide();
 	};
@@ -23,6 +24,22 @@ function MeanHomeController(
 		$mdSidenav, $log, Authentication) {
 
 
+	//Initialization
+
+	//  Original Content
+	//$scope.homeContents = {
+	//	mainTitle : "Welcome to MEAN Tutorials",
+	//	subTitleText: "Mean Tutorials is a team for scripted, high-performance HTML5 technologies that works in all major browsers. No other delivers such advanced."
+	//};
+
+	//  Openboard Contest
+	$scope.homeContents = {
+		mainTitle : "Open Board",
+		subTitleText: "is an E-learning Management System. Save time to manage contents and assignments for Instructor. Easy to access and manage assignment and contents for students"
+	};
+	$scope.authentication = Authentication;
+	$scope.notice = "Prototype";
+
 	$(document).on( 'scroll', function(){
 		if($(document).scrollTop() > 150)
 			TweenMax.to($('#floatMenus'), 1, {y:-51});
@@ -30,15 +47,11 @@ function MeanHomeController(
 			TweenMax.set($('#floatMenus'), {y:0});
 	});
 
-
 	$scope.date = {
 		month: moment().format("MMM").toUpperCase(),
 		date: moment().date(),
 		year: moment().year()
 	}
-
-	$scope.authentication = Authentication;
-	$scope.notice = "Web Application for E-Learning";
 
 	$scope.goTo = function(stateName){
 		$state.go(stateName);
@@ -80,7 +93,7 @@ function MeanHomeController(
 	$scope.signUp = function(ev) {
 		$mdDialog.show({
 			controller: 'MeanLoginCtrl',
-			templateUrl: 'modules/mean-tutorials/template/MD/signup-dialog.tpl.html',
+			templateUrl: 'modules/mean-tutorials/template/authentication/signup-dialog.tpl.html',
 			targetEvent: ev
 		})
 			.then(function(answer) {
@@ -90,10 +103,10 @@ function MeanHomeController(
 			});
 	};
 
-	$scope.logIn = function(ev) {
+	$scope.signIn = function(ev) {
 		$mdDialog.show({
 			controller: 'MeanLoginCtrl',
-			templateUrl: 'modules/mean-tutorials/template/MD/signin-dialog.tpl.html',
+			templateUrl: 'modules/mean-tutorials/template/authentication/signin-dialog.tpl.html',
 			targetEvent: ev
 		})
 			.then(function(answer) {
@@ -110,24 +123,4 @@ function MeanHomeController(
 		$state.go('signup');
 	};
 
-	//// Animation //
-	//var title = $('.ani-title');
-	//var youtubePlayBtn = $('#youtubePlayButton');
-	//var techIcons = $('.ani-techs');
-	//var meanTotem = $('#meanTotem');
-	//var meanTotemDesc = $('#meanTotem-desc');
-	//
-	//$scope.clickPlayBtn = function() {
-	//	TweenMax.fromTo(youtubePlayBtn, 1.5, {scale:2}, {scale:0.8, opacity:0});
-	//	TweenMax.to(title, 2.5, {x:-1200});
-	//	TweenMax.to('.ani-techs', 0.1, {opacity:1});
-	//	TweenMax.to([meanTotem,meanTotemDesc], 1.3, {display:'block', height: '100%', opacity:1});
-	//}
-	//
-	//$scope.resetPlayBtn = function() {
-	//	TweenMax.to(youtubePlayBtn, 0.5, {scale:1, opacity:1});
-	//	TweenMax.to(title, 0.5, {x:0});
-	//	TweenMax.to([meanTotem, meanTotemDesc], 1.3, {display:'none', height: '0%', opacity:0});
-	//}
-	//// End Animation //
 }

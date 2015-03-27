@@ -4,9 +4,9 @@
 node_modules
 public/lib
 
-docs
-
 testNodeModule
 
+docs
 
 lodashPractice
+
