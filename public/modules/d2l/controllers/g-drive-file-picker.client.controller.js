@@ -22,6 +22,7 @@ function GDriveFilePicker($scope, Googledrive, configGdrive, GDriveSelectResult)
 		function pickerCallback(data) {
 			if(data.action == google.picker.Action.PICKED){
 				//do something
+				console.log(data);
 				$scope.files = data.docs;
 				$scope.arrive = true;
 				GDriveSelectResult.id = data.docs[0].id;

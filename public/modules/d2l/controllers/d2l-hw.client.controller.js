@@ -1,10 +1,8 @@
 'use strict';
 
 angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams',
-	'$location', '$timeout', 'Authentication', 'D2lHws','D2lClasses', 'GDriveSelectResult',
-	function($scope, $stateParams, $location, $timeout, Authentication, D2lHws, D2lClasses, GDriveSelectResult) {
-
-
+	'$location', '$timeout', 'Authentication', 'D2lHws','D2lClassesOwnership','D2lClasses', 'GDriveSelectResult',
+	function($scope, $stateParams, $location, $timeout, Authentication, D2lHws, D2lClassesOwnership, D2lClasses, GDriveSelectResult) {
 		$scope.$on('handleEmit', function(event, args) {
 			console.log('broadcast is invoked');
 			$scope.project.gdocId=args.message;
@@ -21,7 +19,7 @@ angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams',
 
 		$scope.loadClasses = function() {
 			return $timeout(function() {
-				$scope.classes = D2lClasses.query();
+				$scope.classes = D2lClassesOwnership.query();
 			}, 650);
 		};
 

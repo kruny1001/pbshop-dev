@@ -1048,7 +1048,17 @@ angular.module('d2l-classes').factory('D2lClasses', ['$resource',
 			}
 		});
 	}
+]).factory('D2lClassesOwnership', ['$resource',
+	function($resource) {
+		return $resource('d2l-classes/i', { d2lClassId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
 ]);
+
 'use strict';
 
 // Configuring the Articles module
@@ -1391,6 +1401,7 @@ angular.module('d2l-hws').factory('D2lHws', ['$resource',
 		});
 	}
 ]);
+
 'use strict';
 
 //Setting up route
@@ -1606,10 +1617,8 @@ function DemoCtrl($timeout, $q){
 'use strict';
 
 angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams',
-	'$location', '$timeout', 'Authentication', 'D2lHws','D2lClasses', 'GDriveSelectResult',
-	function($scope, $stateParams, $location, $timeout, Authentication, D2lHws, D2lClasses, GDriveSelectResult) {
-
-
+	'$location', '$timeout', 'Authentication', 'D2lHws','D2lClassesOwnership','D2lClasses', 'GDriveSelectResult',
+	function($scope, $stateParams, $location, $timeout, Authentication, D2lHws, D2lClassesOwnership, D2lClasses, GDriveSelectResult) {
 		$scope.$on('handleEmit', function(event, args) {
 			console.log('broadcast is invoked');
 			$scope.project.gdocId=args.message;
@@ -1626,7 +1635,7 @@ angular.module('d2l').controller('D2lHwController', ['$scope', '$stateParams',
 
 		$scope.loadClasses = function() {
 			return $timeout(function() {
-				$scope.classes = D2lClasses.query();
+				$scope.classes = D2lClassesOwnership.query();
 			}, 650);
 		};
 
@@ -1736,6 +1745,7 @@ function GDriveFilePicker($scope, Googledrive, configGdrive, GDriveSelectResult)
 		function pickerCallback(data) {
 			if(data.action == google.picker.Action.PICKED){
 				//do something
+				console.log(data);
 				$scope.files = data.docs;
 				$scope.arrive = true;
 				GDriveSelectResult.id = data.docs[0].id;
@@ -3996,11 +4006,11 @@ function OpenboardController($scope, $mdDialog, Authentication) {
 			templateUrl: 'modules/mean-tutorials/template/authentication/signup-dialog.tpl.html',
 			targetEvent: ev
 		})
-			.then(function(answer) {
-				$scope.alert = 'You said the information was "' + answer + '".';
-			}, function() {
-				$scope.alert = 'You cancelled the dialog.';
-			});
+			//.then(function(answer) {
+			//	$scope.alert = 'You said the information was "' + answer + '".';
+			//}, function() {
+			//	$scope.alert = 'You cancelled the dialog.';
+			//});
 	};
 
 	$scope.showSignIn = function(ev) {
@@ -4021,13 +4031,7 @@ function OpenboardController($scope, $mdDialog, Authentication) {
 			controller: 'AuthenticationController',
 			templateUrl: 'modules/openboard/template/tutorial/setRole-dialog.tpl.html',
 			targetEvent: ev
-		})
-			.then(function(answer) {
-				$scope.alert = 'You said the information was "' + answer + '".';
-				$scope.$digest();
-			}, function() {
-				$scope.alert = 'You cancelled the dialog.';
-			});
+		});
 	};
 
 	$scope.showNewClass = function(ev){
@@ -4035,14 +4039,62 @@ function OpenboardController($scope, $mdDialog, Authentication) {
 			controller: 'D2lClassesController',
 			templateUrl: 'modules/openboard/template/tutorial/newClass-dialog.tpl.html',
 			targetEvent: ev
-		})
-			.then(function(answer) {
-				$scope.alert = 'You said the information was "' + answer + '".';
-				$scope.$digest();
-			}, function() {
-				$scope.alert = 'You cancelled the dialog.';
+		});
+	};
+
+	$scope.showNewAssign = function(ev){
+		$mdDialog.show({
+			controller: D2lHwDialogCtrl,
+			templateUrl: 'modules/openboard/template/tutorial/newAssign-dialog.tpl.html',
+			targetEvent: ev
+		}).then(function(answer) {
+			$scope.alert = 'You said the information was "' + answer + '".';
+		}, function() {
+			$scope.alert = 'You cancelled the dialog.';
+		});
+
+		function D2lHwDialogCtrl(scope, $timeout, $mdDialog, D2lHws, D2lClassesOwnership, GDriveSelectResult){
+		// Create new D2l hw
+
+			scope.$on('handleEmit', function(event, args) {
+				console.log('broadcast is invoked');
+				scope.project.gdocId=args.message;
+				scope.$digest();
 			});
-	}
+
+			scope.docs = GDriveSelectResult;
+			scope.project = {gdocId : scope.docs.id};
+			scope.project = {
+				dDate: new Date('4/1/2015'),
+				gdocId : GDriveSelectResult.id
+				//desc: 'Nuclear Missile Defense System',
+			};
+
+			scope.loadClasses = function() {
+				return $timeout(function() {
+					scope.classes = D2lClassesOwnership.query();
+				}, 650);
+			};
+			scope.createNewRecord = function() {
+				console.log('Create');
+				// Create new D2l hw object
+				var d2lHw = new D2lHws (scope.project);
+				d2lHw.class = d2lHw.class._id;
+				// Redirect after save
+				d2lHw.$save(function(response) {
+					//$location.path('d2l-hws/' + response._id);
+					// Clear form fields
+					scope.name = '';
+					$mdDialog.cancel();
+					scope.project = null;
+
+				}, function(errorResponse) {
+					scope.error = errorResponse.data.message;
+				});
+			};
+		}
+
+	};
 }
 OpenboardController.$inject = ["$scope", "$mdDialog", "Authentication"];
 

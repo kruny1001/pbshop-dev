@@ -10,4 +10,13 @@ angular.module('d2l-classes').factory('D2lClasses', ['$resource',
 			}
 		});
 	}
+]).factory('D2lClassesOwnership', ['$resource',
+	function($resource) {
+		return $resource('d2l-classes/i', { d2lClassId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
 ]);

@@ -15,7 +15,7 @@
     <!--Classes-->
     <md-whiteframe class="md-whiteframe-z2 openboard-card-color"
                    layout="column" layout-align="space-around start">
-        <h2>Create Your Account</h2>
+        <h2>1. Create Your Account</h2>
         <div class="ob-underbar"></div>
         <div>Step 1: Create your account</div>
         <p>Click a Sign up button then fill out all field</p>
@@ -36,7 +36,7 @@
     <md-whiteframe class="md-whiteframe-z2 openboard-card-color"
                    layout="column" layout-align="space-around start">
 
-        <h2>Set a role as Instructor</h2>
+        <h2>2. Set a role as Instructor</h2>
         <div class="ob-underbar"></div>
 
         <h3>Step 2.1: Set your Role [Instructor]</h3>
@@ -82,14 +82,14 @@
 
     <md-whiteframe class="md-whiteframe-z2 openboard-card-color"
                    layout="column" layout-align="space-around start">
-        <h2>Create Assignment</h2>
+        <h2>3. Create Assignment</h2>
         <div class="ob-underbar"></div>
         <div>Step 3.1: Check your assignment is uploaded</div>
         <div>Step 3.2:</div>
 
         <div data-ng-show="authentication.user">
             <div layout="row">
-                <md-button class="md-primary" ng-click="showSetRule($event)">
+                <md-button class="md-primary" ng-click="showNewAssign($event)">
                     <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
                     Create an Assignment
                 </md-button>
@@ -99,7 +99,7 @@
 
     <md-whiteframe class="md-whiteframe-z2 openboard-card-color"
                    layout="column" layout-align="space-around start">
-        <h2>Change a role as Student</h2>
+        <h2>4. Change a role as Student</h2>
         <div class="ob-underbar"></div>
         <div>Step 4.1: Change your role as student</div>
         <div data-ng-show="authentication.user">
