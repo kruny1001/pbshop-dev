@@ -90,9 +90,9 @@ function MeanHomeController(
 			});
 	};
 
-	$scope.signUp = function(ev) {
+	$scope.showSignUp = function(ev) {
 		$mdDialog.show({
-			controller: 'MeanLoginCtrl',
+			controller: 'AuthenticationController',
 			templateUrl: 'modules/mean-tutorials/template/authentication/signup-dialog.tpl.html',
 			targetEvent: ev
 		})
@@ -102,10 +102,9 @@ function MeanHomeController(
 				$scope.alert = 'You cancelled the dialog.';
 			});
 	};
-
-	$scope.signIn = function(ev) {
+	$scope.showSignIn = function(ev) {
 		$mdDialog.show({
-			controller: 'MeanLoginCtrl',
+			controller: 'AuthenticationController',
 			templateUrl: 'modules/mean-tutorials/template/authentication/signin-dialog.tpl.html',
 			targetEvent: ev
 		})

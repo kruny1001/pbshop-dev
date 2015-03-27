@@ -5,31 +5,31 @@
         </h1>
     </md-toolbar>
     <md-content>
-        <form name="projectForm">
-
+        <form data-ng-submit="signin()" name="projectForm">
             <md-input-container>
-                <label>Username</label>
-                <input required name="userid" ng-model="project.userid">
-                <div ng-messages="projectForm.userid.$error">
+                <label for="username">Username</label>
+                <input type="text" id="username" required name="username" data-ng-model="credentials.username">
+                <div ng-messages="credentials.userid.$error">
                     <div ng-message="required">This is required.</div>
                 </div>
             </md-input-container>
             <md-input-container>
-                <label>Password</label>
-                <input required name="password" ng-model="project.password">
-                <div ng-messages="projectForm.password.$error">
+                <label for="password">Password</label>
+                <input type="password" required id="password" name="password" data-ng-model="credentials.password">
+                <div ng-messages="credentials.password.$error">
                     <div ng-message="required">This is required.</div>
                 </div>
             </md-input-container>
+            <div class="md-actions" layout="row">
+                <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" hide show-md>
+                    <H5>Forget ID or Password</H5>
+                </md-button>
+                <span flex></span>
+                <md-button type="submit" ng-click="">
+                    Sign In
+                </md-button>
+            </div>
         </form>
     </md-content>
-    <div class="md-actions" layout="row">
-        <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" hide show-md>
-            <H5>Forget ID or Password</H5>
-        </md-button>
-        <span flex></span>
-        <md-button ng-click="answer('not useful')">
-            Sign In
-        </md-button>
-    </div>
+
 </md-dialog>

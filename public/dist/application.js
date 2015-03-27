@@ -3074,9 +3074,9 @@ function MeanHomeController(
 			});
 	};
 
-	$scope.signUp = function(ev) {
+	$scope.showSignUp = function(ev) {
 		$mdDialog.show({
-			controller: 'MeanLoginCtrl',
+			controller: 'AuthenticationController',
 			templateUrl: 'modules/mean-tutorials/template/authentication/signup-dialog.tpl.html',
 			targetEvent: ev
 		})
@@ -3086,10 +3086,9 @@ function MeanHomeController(
 				$scope.alert = 'You cancelled the dialog.';
 			});
 	};
-
-	$scope.signIn = function(ev) {
+	$scope.showSignIn = function(ev) {
 		$mdDialog.show({
-			controller: 'MeanLoginCtrl',
+			controller: 'AuthenticationController',
 			templateUrl: 'modules/mean-tutorials/template/authentication/signin-dialog.tpl.html',
 			targetEvent: ev
 		})
@@ -6197,8 +6196,8 @@ angular.module('users').config(['$stateProvider',
 ]);
 'use strict';
 
-angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication',
-	function($scope, $http, $location, Authentication) {
+angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', '$mdDialog', 'Authentication',
+	function($scope, $http, $location, $mdDialog, Authentication) {
 		$scope.authentication = Authentication;
 
 		// If user is signed in then redirect back home
@@ -6208,7 +6207,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 			$http.post('/auth/signup', $scope.credentials).success(function(response) {
 				// If successful we assign the response to the global user model
 				$scope.authentication.user = response;
-
+				$mdDialog.hide();
 				// And redirect to the index page
 				$location.path('/mean-home');
 			}).error(function(response) {
@@ -6217,16 +6216,17 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 		};
 
 		$scope.signin = function() {
-			console.log('dddd');
 			$http.post('/auth/signin', $scope.credentials).success(function(response) {
 				// If successful we assign the response to the global user model
 				$scope.authentication.user = response;
-
+				$mdDialog.hide();
 				// And redirect to the index page
 				$location.path('/mean-home');
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
+
+
 		};
 	}
 ]);
