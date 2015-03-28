@@ -57,8 +57,9 @@ exports.updateRole = function(req, res) {
 	var message = null;
 
 	// For security measurement we remove the roles from the req.body object
-	req.body.roles="admin";
+	//req.body.roles="admin";
 
+	console.log(req.body.roles);
 	if (user) {
 		// Merge existing user
 		user = _.extend(user, req.body);

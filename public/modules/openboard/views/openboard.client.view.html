@@ -35,12 +35,11 @@
 
     <md-whiteframe class="md-whiteframe-z2 openboard-card-color"
                    layout="column" layout-align="space-around start">
-
         <h2>2. Set a role as Instructor</h2>
         <div class="ob-underbar"></div>
 
         <h3>Step 2.1: Set your Role [Instructor]</h3>
-        <div>Your Current Role: {{user.roles[0]}}</div>
+        <div>Your Current Role: {{user.roles}}</div>
         <div data-ng-show="authentication.user">
             <div layout="row">
                 <md-button class="md-primary" ng-click="showSetRule($event)">
@@ -48,16 +47,41 @@
                     Set Role
                 </md-button>
             </div>
+            <pre>{{alert}}</pre>
         </div>
 
         <h3>Step 2.2: Create your Class Board</h3>
-        <div data-ng-show="authentication.user">
+        <p>You need Instructor level</p>
+        <div data-ng-if="authentication.user.roles[0] ==='instructor' && authentication.user.roles">
             <div layout="row">
                 <md-button class="md-primary" ng-click="showNewClass($event)">
                     <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
                     Create Your Class Board
                 </md-button>
             </div>
+        </div>
+
+        <div style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
+            <div class="tableTitle">Classes</div>
+            <p hide-sm>Check your registered classes</p>
+            <table st-table="classesCopy" st-safe-src="classes" class="table table-striped">
+                <thead>
+                <tr>
+                    <!--<th></th>-->
+                    <th st-sort="title">Prefix</th>
+                    <th st-sort="class">Class Name</th>
+                    <th st-sort="dDate">Instructor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="CL in classesCopy">
+                    <!--<td cs-select="HW"></td>-->
+                    <td>{{CL.prefix}}</td>
+                    <td>{{CL.name}}</td>
+                    <td>{{CL.user.displayName}}</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
 
         <h3>Step 2.3: Create Assignment by using a template (Add-On)</h3>
@@ -75,9 +99,6 @@
         </p>
 
         <img title="Google Doc" class="img-responsive" ng-src="modules/openboard/img/copyFile.png">
-
-
-
     </md-whiteframe>
 
     <md-whiteframe class="md-whiteframe-z2 openboard-card-color"
@@ -101,30 +122,16 @@
                    layout="column" layout-align="space-around start">
         <h2>4. Change a role as Student</h2>
         <div class="ob-underbar"></div>
-        <div>Step 4.1: Change your role as student</div>
-        <div data-ng-show="authentication.user">
-            <div layout="row">
-                <md-button class="md-primary" ng-click="showSetRule($event)">
-                    <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
-                    Change a Role
-                </md-button>
-            </div>
-        </div>
-        <div>Step 4.2: Get an assignment from a Assignment List</div>
-        <div data-ng-show="authentication.user">
-            <div layout="row">
-                <md-button class="md-primary" ng-click="showSetRule($event)">
-                    <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
-                    Get an Assignment
-                </md-button>
-            </div>
-        </div>
-    </md-whiteframe>
+        <h3>Step 4.1: Change your role as student</h3>
 
-    <!--List HW-->
-    <md-whiteframe class="md-whiteframe-z2 openboard-card-color"
-                   layout="row" layout-sm="column" layout-align="space-around center">
-        <div style="border-top: 5px solid #ff60ad; padding: 5px;">
+            <md-button class="md-primary" ng-click="showSetRule()">
+                <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
+                Set Role
+            </md-button>
+        </div>
+
+        <h3>Step 4.2: Clik Open Button</h3>
+        <div style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
             <div class="tableTitle">List HW</div>
             <p hide-sm>Add, Edit, Udpate or Remove Homework</p>
             <table st-table="hwsCopy" st-safe-src="hws" class="table table-striped">
@@ -164,6 +171,21 @@
                 </tbody>
             </table>
         </div>
+        <h3>Step 4.3: Open your Google Doc</h3>
+
+        <h3>Step 4.4: Submit Your HW</h3>
+        <img title="Submit Google Doc" class="img-responsive" ng-src="modules/openboard/img/submitGdoc.gif">
+    </md-whiteframe>
+
+
+    <md-whiteframe class="md-whiteframe-z2 openboard-card-color"
+                   layout="column" layout-align="space-around start">
+        <h2>5. Grade Assignment</h2>
+        <div class="ob-underbar"></div>
+        <div>Step 5.1: Check your E-mail Account</div>
+        <div>Step 5.2.1: Open Submitted Assignment from Link</div>
+        <div>Step 5.2.2: Or Open Submitted Assignment from a website</div>
+
     </md-whiteframe>
 
     <!-- List Grade -->

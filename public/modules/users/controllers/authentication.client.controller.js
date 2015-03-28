@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', '$mdDialog', 'Authentication','Users',
-	function($scope, $http, $location, $mdDialog, Authentication, Users) {
+angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$timeout','$location', '$mdDialog', 'Authentication','Users',
+	function($scope, $http, $timeout, $location, $mdDialog, Authentication, Users) {
 		$scope.authentication = Authentication;
 		$scope.user = Authentication.user;
 		// If user is signed in then redirect back home
@@ -31,17 +31,23 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 			});
 		};
 
-		$scope.setRole = function(){
-			$scope.user.roles =$scope.credentials.roles;
-			var user = new Users($scope.user);
-			user.$update(function(response) {
-				$scope.success = true;
-				Authentication.user = response;
-				$scope.user = response;
-				$mdDialog.hide();
-			}, function(response) {
-				$scope.error = response.data.message;
-			});
-		};
+		//$scope.setRole = function(){
+		//	$scope.user.roles =$scope.credentials.roles;
+		//	var user = new Users($scope.user);
+		//	$http.put('/users/role').success(function(result){
+		//		Authentication.user = result;
+		//	}).error(function(response) {
+		//		$scope.error = response.message;
+		//	});
+		//	//user.$update(function(response) {
+		//	//	$scope.success = true;
+		//	//
+		//	//	$scope.user = response;
+		//	//	$mdDialog.hide();
+		//	//}, function(response) {
+		//	//	$scope.error = response.data.message;
+		//	//});
+		//};
+
 	}
 ]);

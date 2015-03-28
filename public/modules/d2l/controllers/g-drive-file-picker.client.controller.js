@@ -18,11 +18,13 @@ function GDriveSelectResult(){
 function GDriveFilePicker($scope, Googledrive, configGdrive, GDriveSelectResult) {
 	$scope.isAuth = true;
 	$scope.docs = [];
+
 	$scope.setupPicker = function() {
+
 		function pickerCallback(data) {
 			if(data.action == google.picker.Action.PICKED){
 				//do something
-				console.log(data);
+				//console.log(data);
 				$scope.files = data.docs;
 				$scope.arrive = true;
 				GDriveSelectResult.id = data.docs[0].id;
@@ -33,6 +35,8 @@ function GDriveFilePicker($scope, Googledrive, configGdrive, GDriveSelectResult)
 		}
 		Googledrive.setupPicker(accessToken, pickerCallback);
 	}
+
+
 
 	$scope.authName = 'Authorization';
 	$scope.googleDrive={info:'gDriveCtrl'};
@@ -120,8 +124,9 @@ function GDriveFilePicker($scope, Googledrive, configGdrive, GDriveSelectResult)
 			$scope.isAuth = true;
 			$scope.authName = 'Deauthorize';
 			accessToken = result.access_token;
-			console.log(accessToken);
 
+
+			$scope.setupPicker();
 			/*
 			 callGooglePlus();
 			 setFilePicker();
