@@ -4012,8 +4012,8 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 	$scope.classesCopy = [].concat($scope.classes);
 
 
-	$scope.linkHW = function(docId){
-		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId='+docId+'&userId='+authentication.user.username;
+	$scope.linkHW = function(hw){
+		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId='+hw.docId+'&userId='+authentication.user.username+'&title='+hw.title+'&dDate='+hw.dDate;
 		$window.open(AppScriptAPI);
 	};
 
