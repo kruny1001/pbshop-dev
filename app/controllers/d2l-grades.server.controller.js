@@ -19,7 +19,7 @@ exports.create = function(req, res) {
 	// require user id and hw id
 
 
-	d2lGrade.find({Assignment: req.body.Assignment, student:req.body.student}).exec(function(eer, result){
+	D2lGrade.find({Assignment: req.body.Assignment, student:req.body.student}).exec(function(eer, result){
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
