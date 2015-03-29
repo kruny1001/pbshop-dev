@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" afterPath="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -34,17 +33,27 @@
     <favorites_list name="pbshop-dev" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47269765">
+    <splitter split-orientation="horizontal" split-proportion="0.70343137">
       <split-first>
         <leaf>
-          <file leaf-file-name="openboard.client.controller.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="openboard.client.controller.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.3370473" vertical-offset="0" max-vertical-offset="2190">
-                  <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="2190">
+                  <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding>
-                    <element signature="e#3652#5088#0" expanded="false" />
+                    <element signature="e#3676#5112#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="d2l-hws.server.controller.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws.server.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="1726" max-vertical-offset="2220">
+                  <caret line="126" column="20" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="20" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -59,10 +68,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="d2l-hws.server.routes.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="d2l-hws.server.routes.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws.server.routes.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+                <state vertical-scroll-proportion="0.66852367" vertical-offset="0" max-vertical-offset="420">
                   <caret line="16" column="30" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="30" />
                   <folding />
                 </state>
@@ -158,8 +167,8 @@
           <file leaf-file-name="openboard.client.view.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.60714287" vertical-offset="2183" max-vertical-offset="3270">
-                  <caret line="158" column="39" selection-start-line="158" selection-start-column="29" selection-end-line="158" selection-end-column="39" />
+                <state vertical-scroll-proportion="0.31493506" vertical-offset="2183" max-vertical-offset="3270">
+                  <caret line="152" column="25" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
                   <folding>
                     <element signature="n#style#0;n#div#4;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#1;n#md-whiteframe#3;n#section#0;n#!!top" expanded="true" />
@@ -352,9 +361,9 @@
     <data>$PROJECT_DIR$/node_modules/karma</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="33" />
+    <option name="x" value="245" />
     <option name="y" value="23" />
-    <option name="width" value="1334" />
+    <option name="width" value="1085" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -1011,12 +1020,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00096" summary="d2l ins and stu view">
-      <created>1425007335494</created>
-      <option name="number" value="00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1425007335494</updated>
-    </task>
     <task id="LOCAL-00097" summary="update3">
       <created>1425008361511</created>
       <option name="number" value="00097" />
@@ -1305,11 +1308,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427578372698</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="getHTTP">
+      <created>1427582090681</created>
+      <option name="number" value="00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1427582090688</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="33" y="23" width="1334" height="877" extended-state="0" />
+    <frame x="245" y="23" width="1085" height="877" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32058048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1324,7 +1333,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1926885" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20488721" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27176782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1379,7 +1388,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="update3" />
     <MESSAGE value="ads1 update" />
     <MESSAGE value="ads1 linetransit" />
     <MESSAGE value="ads1 linetransit responsive" />
@@ -1404,7 +1412,8 @@
     <MESSAGE value="material input issue on IOS" />
     <MESSAGE value="update assignment" />
     <MESSAGE value="tutorial" />
-    <option name="LAST_COMMIT_MESSAGE" value="tutorial" />
+    <MESSAGE value="getHTTP" />
+    <option name="LAST_COMMIT_MESSAGE" value="getHTTP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1672,7 +1681,7 @@
         <state vertical-scroll-proportion="0.3323077" vertical-offset="32847" max-vertical-offset="98460">
           <caret line="2197" column="19" selection-start-line="2197" selection-start-column="14" selection-end-line="2197" selection-end-column="19" />
           <folding>
-            <marker date="1427582067000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427589443000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1755,26 +1764,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws.server.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.08571429" vertical-offset="30" max-vertical-offset="2220">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws-submits.server.routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
           <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws.server.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1789,8 +1782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60714287" vertical-offset="2183" max-vertical-offset="3270">
-          <caret line="158" column="39" selection-start-line="158" selection-start-column="29" selection-end-line="158" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.31493506" vertical-offset="2183" max-vertical-offset="3270">
+          <caret line="152" column="25" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#div#4;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#md-whiteframe#3;n#section#0;n#!!top" expanded="true" />
@@ -1803,11 +1796,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3370473" vertical-offset="0" max-vertical-offset="2190">
-          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="2190">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#3652#5088#0" expanded="false" />
+            <element signature="e#3676#5112#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1726" max-vertical-offset="2220">
+          <caret line="126" column="20" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws.server.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66852367" vertical-offset="0" max-vertical-offset="420">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>

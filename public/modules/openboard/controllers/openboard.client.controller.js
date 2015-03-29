@@ -18,10 +18,10 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 	$scope.classes = D2lClassesOwnership.query();
 	$scope.classesCopy = [].concat($scope.classes);
 
-
 	$scope.linkHW = function(hw){
-		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId='+hw.docId+'&userId='+authentication.user.username+'&title='+hw.title+'&dDate='+hw.dDate;
-		$window.open(AppScriptAPI);
+		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
+		var param = 'docId='+hw.gdocId+'&userId='+authentication.user.username+'&title='+hw.title+'&dDate='+hw.dDate;
+		$window.open(AppScriptAPI+param);
 	};
 
 	// This function should be combined later
