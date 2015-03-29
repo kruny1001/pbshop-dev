@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -871,12 +870,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00113" summary="oAuth update">
-      <created>1426214535697</created>
-      <option name="number" value="00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1426214535698</updated>
-    </task>
     <task id="LOCAL-00114" summary="oAuth update">
       <created>1426481844540</created>
       <option name="number" value="00114" />
@@ -1165,7 +1158,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427665813808</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="d2l-grade&#10;">
+      <created>1427666217593</created>
+      <option name="number" value="00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1427666217593</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="ToolWindowManager">
