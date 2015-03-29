@@ -41,8 +41,11 @@ exports.create = function(req, res) {
 			}
 			else{
 				//update
-				var d2lGrade = result ;
+				req.d2lGrade = result;
+				var d2lGrade = req.d2lGrade ;
+
 				d2lGrade = _.extend(d2lGrade , req.body);
+
 				d2lGrade.save(function(err) {
 					if (err) {
 						return res.status(400).send({
