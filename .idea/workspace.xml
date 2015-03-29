@@ -57,7 +57,7 @@
       <file leaf-file-name="d2l-grades.server.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.68487394" vertical-offset="64" max-vertical-offset="2025">
+            <state vertical-scroll-proportion="0.4327731" vertical-offset="184" max-vertical-offset="2340">
               <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
               <folding />
             </state>
@@ -278,7 +278,7 @@
     <data>$PROJECT_DIR$/node_modules/karma</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="408" />
+    <option name="x" value="319" />
     <option name="y" value="23" />
     <option name="width" value="1016" />
     <option name="height" value="877" />
@@ -871,12 +871,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00110" summary="[theClean] animation work">
-      <created>1426108375465</created>
-      <option name="number" value="00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1426108375467</updated>
-    </task>
     <task id="LOCAL-00111" summary="[theClean] backend">
       <created>1426190081795</created>
       <option name="number" value="00111" />
@@ -1165,11 +1159,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427664784192</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="d2l-grade&#10;">
+      <created>1427665026083</created>
+      <option name="number" value="00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1427665026083</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="408" y="23" width="1016" height="877" extended-state="0" />
+    <frame x="319" y="23" width="1016" height="877" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32058048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1679,7 +1679,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68487394" vertical-offset="64" max-vertical-offset="2025">
+        <state vertical-scroll-proportion="0.4327731" vertical-offset="184" max-vertical-offset="2340">
           <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
           <folding />
         </state>

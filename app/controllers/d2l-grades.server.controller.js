@@ -12,7 +12,7 @@ var mongoose = require('mongoose'),
  * Create a D2l grade
  */
 exports.create = function(req, res) {
-	var d2lGrade = new D2lGrade(req.body);
+	//var d2lGrade = new D2lGrade(req.body);
 	//d2lGrade.user = req.user;
 
 	//Check whether it is already existing
@@ -27,10 +27,31 @@ exports.create = function(req, res) {
 		} else {
 
 			if(result.length == 0){
-				res.jsonp({result:'Not found Need to write new'});
+				var d2lGrade = new D2lGrade(req.body);
+				d2lGrade.save(function(err) {
+					if (err) {
+						return res.status(400).send({
+							message: errorHandler.getErrorMessage(err)
+						});
+					} else {
+						res.jsonp(d2lGrade);
+					}
+				});
+
 			}
 			else{
-				res.jsonp({result:'Found need to update'});
+				//update
+				var d2lGrade = req.d2lGrade ;
+				d2lGrade = _.extend(d2lGrade , req.body);
+				d2lGrade.save(function(err) {
+					if (err) {
+						return res.status(400).send({
+							message: errorHandler.getErrorMessage(err)
+						});
+					} else {
+						res.jsonp(d2lGrade);
+					}
+				});
 			}
 		}
 	})
