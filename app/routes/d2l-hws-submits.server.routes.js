@@ -9,6 +9,9 @@ module.exports = function(app) {
 		.get(d2lHwsSubmits.list)
 		.post(d2lHwsSubmits.create);
 
+	app.route('/d2l-hws-submits/submitted')
+		.get(d2lHwsSubmits.listSubmission);
+
 	app.route('/d2l-hws-submits/:d2lHwsSubmitId')
 		.get(d2lHwsSubmits.read)
 		.put(users.requiresLogin, d2lHwsSubmits.hasAuthorization, d2lHwsSubmits.update)
@@ -20,6 +23,7 @@ module.exports = function(app) {
 	app.route('/d2l-hws-submits/getBydocIdGS/:docId')
 		.get(d2lHwsSubmits.getSubmitInfoGS)
 		.put(d2lHwsSubmits.updateSubmitInfoGS);
+
 
 
 	// Finish by binding the D2l hws submit middleware

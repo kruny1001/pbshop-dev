@@ -10,4 +10,14 @@ angular.module('d2l-hws-submits').factory('D2lHwsSubmits', ['$resource',
 			}
 		});
 	}
-]);
+])
+	.factory('D2lHwsSubmitsTrue', ['$resource',
+		function($resource) {
+			return $resource('d2l-hws-submits/submitted', { d2lHwsSubmitId: '@_id'
+			}, {
+				update: {
+					method: 'PUT'
+				}
+			});
+		}
+	]);

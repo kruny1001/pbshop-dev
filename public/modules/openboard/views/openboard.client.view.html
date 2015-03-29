@@ -184,6 +184,34 @@
         <h3>Step 5.1: Check your E-mail Account</h3>
 
         <h3>Step 5.2.1: Open Submitted Assignment from Link</h3>
+        <div style="border-top: 5px solid #ee6c0a; padding: 10px;">
+            <div class="tableTitle">Grade Board for Student</div>
+            <p hide-sm>Check your registered classes</p>
+            <table st-table="submittedHWCopy"
+                   st-safe-src="submittedHW"
+                   class="table table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th st-sort="numAssignment">Prefix</th>
+                        <th st-sort="grade">Class name</th>
+                        <th st-sort="percent">Score</th>
+                        <th>Graded</th>
+                        <th>Doc Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="subm in submittedHWCopy">
+                        <td cs-select="subm"></td>
+                        <td>{{subm.class.prefix | uppercase}}</td>
+                        <td>{{subm.class.name}}</td>
+                        <td>200</td>
+                        <td></td>
+                        <td><md-button></md-button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <h3>Step 5.2.2: Or Open Submitted Assignment from a website</h3>
 

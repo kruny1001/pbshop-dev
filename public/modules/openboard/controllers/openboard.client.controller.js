@@ -3,7 +3,7 @@
 
 angular.module('openboard').controller('OpenboardController', OpenboardController);
 
-function OpenboardController($scope, $mdDialog, $window, $http, Authentication, Users, D2lHws, D2lClassesOwnership, UsersRole) {
+function OpenboardController($scope, $mdDialog, $window, $http, Authentication, Users, D2lHws, D2lClassesOwnership, D2lHwsSubmitsTrue, UsersRole) {
 	// Openboard controller logic
 	// ...
 
@@ -17,6 +17,9 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 	$scope.hwsCopy = [].concat($scope.hws);
 	$scope.classes = D2lClassesOwnership.query();
 	$scope.classesCopy = [].concat($scope.classes);
+
+	$scope.submittedHW = D2lHwsSubmitsTrue.query();
+	$scope.submittedHWCopy = [].concat($scope.submittedHW);
 
 	$scope.linkHW = function(hw){
 		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';

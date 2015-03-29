@@ -1288,7 +1288,18 @@ angular.module('d2l-hws-submits').factory('D2lHwsSubmits', ['$resource',
 			}
 		});
 	}
-]);
+])
+	.factory('D2lHwsSubmitsTrue', ['$resource',
+		function($resource) {
+			return $resource('d2l-hws-submits/submitted', { d2lHwsSubmitId: '@_id'
+			}, {
+				update: {
+					method: 'PUT'
+				}
+			});
+		}
+	]);
+
 'use strict';
 
 //Setting up route
@@ -3996,7 +4007,7 @@ angular.module('openboard').config(['$stateProvider',
 
 angular.module('openboard').controller('OpenboardController', OpenboardController);
 
-function OpenboardController($scope, $mdDialog, $window, $http, Authentication, Users, D2lHws, D2lClassesOwnership, UsersRole) {
+function OpenboardController($scope, $mdDialog, $window, $http, Authentication, Users, D2lHws, D2lClassesOwnership, D2lHwsSubmitsTrue, UsersRole) {
 	// Openboard controller logic
 	// ...
 
@@ -4010,6 +4021,9 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 	$scope.hwsCopy = [].concat($scope.hws);
 	$scope.classes = D2lClassesOwnership.query();
 	$scope.classesCopy = [].concat($scope.classes);
+
+	$scope.submittedHW = D2lHwsSubmitsTrue.query();
+	$scope.submittedHWCopy = [].concat($scope.submittedHW);
 
 	$scope.linkHW = function(hw){
 		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
@@ -4182,7 +4196,7 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 	};
 
 }
-OpenboardController.$inject = ["$scope", "$mdDialog", "$window", "$http", "Authentication", "Users", "D2lHws", "D2lClassesOwnership", "UsersRole"];
+OpenboardController.$inject = ["$scope", "$mdDialog", "$window", "$http", "Authentication", "Users", "D2lHws", "D2lClassesOwnership", "D2lHwsSubmitsTrue", "UsersRole"];
 
 'use strict';
 
