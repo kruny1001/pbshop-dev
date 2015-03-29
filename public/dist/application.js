@@ -4013,6 +4013,14 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 
 	//https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId=1S1cucFhz96cGRHvXzgGqxuptNR-NgWKpIwI55RB67NU&userId=pbshop1001&title=8:56%20Test&dDate=2015-04-02T05:00:00.000Z&userIdRef=53bc47cd10a5bf0800bf940f&classId=5515aa5e70a4280b003607af
 	//https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId=1S1cucFhz96cGRHvXzgGqxuptNR-NgWKpIwI55RB67NU&userId=kruny1001&title=3_28%20test1&dDate=2015-04-01T05:00:00.000Z&userIdRef=54cfa0c6d5940f501bf796e7&classId=551710ba93a97a044e276fac
+	//https://script.google.com/macros/s
+	// /AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec
+	// ?docId=1S1cucFhz96cGRHvXzgGqxuptNR-NgWKpIwI55RB67NU
+	// &userId=kruny1001
+	// &title=8:56%20Test
+	// &dDate=2015-04-02T05:00:00.000Z
+	// &userIdRef=53bc47cd10a5bf0800bf940f
+	// &classId=5515aa5e70a4280b003607af
 	$scope.linkHW = function(hw){
 		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
 		var param = 'docId='+hw.gdocId+

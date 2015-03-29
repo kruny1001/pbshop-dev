@@ -6,6 +6,7 @@
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors.server.controller'),
 	D2lHwsSubmit = mongoose.model('D2lHwsSubmit'),
+	D2lClass = mongoose.model('D2lClass'),
 	_ = require('lodash');
 
 /**
@@ -106,6 +107,7 @@ exports.hasAuthorization = function(req, res, next) {
 	next();
 };
 
+
 exports.getSubmitInfo = function(req, res){
 	D2lHwsSubmit.find({originId: req.params.docId, userEmail: req.params.userEmail})
 		.exec(function(err, d2lHwsSubmit){
@@ -114,17 +116,7 @@ exports.getSubmitInfo = function(req, res){
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			D2lClasses.populate(d2lHwsSubmit.class,
-				{path:'user', select:'displayName, _id, email, username'}).exec(function(err, result){
-					if (err) {
-						return res.status(400).send({
-							message: errorHandler.getErrorMessage(err)
-						});
-					} else {
-						res.jsonp(result);
-					}
-				})
-			//res.jsonp(d2lHwsSubmit);
+			res.jsonp(d2lHwsSubmit);
 		}
 	});
 }
@@ -137,7 +129,18 @@ exports.getSubmitInfoGS = function(req, res){
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(d2lHwsSubmit);
+			D2lClass.populate(d2lHwsSubmit.class,
+				{path:'user', select:'displayName, _id, email, username'}).exec(function(err, result){
+					if (err) {
+						return res.status(400).send({
+							message: errorHandler.getErrorMessage(err)
+						});
+					} else {
+						console.log(result);
+						res.jsonp(result);
+					}
+				})
+			//res.jsonp(d2lHwsSubmit);
 		}
 	});
 }
