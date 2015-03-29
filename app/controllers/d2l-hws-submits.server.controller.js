@@ -53,6 +53,32 @@ exports.update = function(req, res) {
 	});
 };
 
+/*
+* */
+exports.updateSubmitInfoGS = function(req, res){
+	D2lHwsSubmit.find({docId: req.params.docId}).exec(function(err, result){
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+
+			var d2lHwsSubmit = result[0];
+			//console.log(req.params.docId);
+			d2lHwsSubmit = _.extend(d2lHwsSubmit , req.body);
+			d2lHwsSubmit.save(function(err) {
+				if (err) {
+					return res.status(400).send({
+						message: errorHandler.getErrorMessage(err)
+					});
+				} else {
+					res.jsonp(d2lHwsSubmit);
+				}
+			});
+		}
+	});
+}
+
 /**
  * Delete an D2l hws submit
  */
@@ -74,9 +100,9 @@ exports.delete = function(req, res) {
  * List of D2l hws submits
  */
 exports.list = function(req, res) {
-	var populationQuery = [{path:'class'}, {path:'instructor'}];
+	var populationQuery = [{path:'class', select:'name prefix'}, {path:'user', select:'displayName email username'}, {path:'instructor', select:'displayName email username'}];
 
-	D2lHwsSubmit.find().populate(populationQuery).sort('-created').populate('user', 'displayName').exec(function(err, d2lHwsSubmits) {
+	D2lHwsSubmit.find().populate(populationQuery).sort('-created').exec(function(err, d2lHwsSubmits) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)

@@ -18,7 +18,8 @@ module.exports = function(app) {
 		.get(d2lHwsSubmits.getSubmitInfo);
 
 	app.route('/d2l-hws-submits/getBydocIdGS/:docId')
-		.get(d2lHwsSubmits.getSubmitInfoGS);
+		.get(d2lHwsSubmits.getSubmitInfoGS)
+		.put(d2lHwsSubmits.updateSubmitInfoGS);
 
 
 	// Finish by binding the D2l hws submit middleware
