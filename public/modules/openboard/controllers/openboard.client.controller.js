@@ -35,6 +35,7 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 			'&title='+hw.title+
 			'&dDate='+hw.dDate+
 			'&userIdRef='+Authentication.user._id+
+			'&instructorRef='+hw.class.user+
 			'&classId='+hw.class._id;
 		$window.open(AppScriptAPI+param);
 	};

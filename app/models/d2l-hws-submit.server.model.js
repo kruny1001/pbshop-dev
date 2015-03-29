@@ -24,6 +24,10 @@ var D2lHwsSubmitSchema = new Schema({
 		type: Schema.ObjectId,
 		ref: 'D2lClass'
 	},
+	instructor:{
+		type:Schema.ObjectId,
+		ref: 'User'
+	},
 	originId:{
 		type: String,
 		trim: true

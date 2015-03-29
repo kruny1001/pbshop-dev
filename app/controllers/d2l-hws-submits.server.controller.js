@@ -122,25 +122,18 @@ exports.getSubmitInfo = function(req, res){
 }
 
 exports.getSubmitInfoGS = function(req, res){
-	var populateQuery = [{path:'class'},{path:'user'}];
+	var populateQuery = [
+		{path:'class', select:'name, prefix'},
+		{path:'user', select:'displayName, email, username'},
+		{path:'instructor', select:'displayName, email, username'}
+	];
 	D2lHwsSubmit.find({docId: req.params.docId}).populate(populateQuery).exec(function(err, d2lHwsSubmit){
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			D2lClass.populate(d2lHwsSubmit.class,
-				{path:'user', select:'displayName, _id, email, username'},function(err, result){
-					if (err) {
-						return res.status(400).send({
-							message: errorHandler.getErrorMessage(err)
-						});
-					} else {
-						console.log(result);
-						res.jsonp(result);
-					}
-				})
-			//res.jsonp(d2lHwsSubmit);
+			res.jsonp(d2lHwsSubmit);
 		}
 	});
 }
