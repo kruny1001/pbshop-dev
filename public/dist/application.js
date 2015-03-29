@@ -4013,7 +4013,12 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 
 	$scope.linkHW = function(hw){
 		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
-		var param = 'docId='+hw.gdocId+'&userId='+authentication.user.username+'&title='+hw.title+'&dDate='+hw.dDate;
+		var param = 'docId='+hw.gdocId+
+			'&userId='+authentication.user.username+
+			'&title='+hw.title+
+			'&dDate='+hw.dDate+
+			'&userId='+hw.user._id+
+			'&classId='+hw.class._id;
 		$window.open(AppScriptAPI+param);
 	};
 

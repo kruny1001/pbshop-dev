@@ -16,6 +16,14 @@ var D2lHwsSubmitSchema = new Schema({
 		required: 'Please fill D2l hws submit name',
 		trim: true
 	},
+	user: {
+		type: Schema.ObjectId,
+		ref: 'User'
+	},
+	class:{
+		type: Schema.ObjectId,
+		ref: 'D2lClass'
+	},
 	originId:{
 		type: String,
 		trim: true
@@ -32,10 +40,10 @@ var D2lHwsSubmitSchema = new Schema({
 		type: String,
 		trim: true
 	},
-    submission:{
-        type: Boolean,
-        default: false
-    }
+	submission:{
+    type: Boolean,
+    default: false
+	}
 
 });
 
