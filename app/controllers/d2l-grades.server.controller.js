@@ -41,7 +41,7 @@ exports.create = function(req, res) {
 			}
 			else{
 				//update
-				var d2lGrade = req.d2lGrade ;
+				var d2lGrade = result ;
 				d2lGrade = _.extend(d2lGrade , req.body);
 				d2lGrade.save(function(err) {
 					if (err) {
