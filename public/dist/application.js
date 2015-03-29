@@ -4011,13 +4011,15 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 	$scope.classes = D2lClassesOwnership.query();
 	$scope.classesCopy = [].concat($scope.classes);
 
+
+	https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId=1S1cucFhz96cGRHvXzgGqxuptNR-NgWKpIwI55RB67NU&userId=kruny1001&title=3_28%20test1&dDate=2015-04-01T05:00:00.000Z&userIdRef=54cfa0c6d5940f501bf796e7&classId=551710ba93a97a044e276fac
 	$scope.linkHW = function(hw){
 		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
 		var param = 'docId='+hw.gdocId+
 			'&userId='+authentication.user.username+
 			'&title='+hw.title+
 			'&dDate='+hw.dDate+
-			'&userId='+hw.user._id+
+			'&userIdRef='+hw.user._id+
 			'&classId='+hw.class._id;
 		$window.open(AppScriptAPI+param);
 	};
