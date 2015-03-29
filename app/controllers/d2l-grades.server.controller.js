@@ -37,15 +37,12 @@ exports.create = function(req, res) {
 						res.jsonp(d2lGrade);
 					}
 				});
-
 			}
 			else{
 				//update
-				req.d2lGrade = result;
+				req.d2lGrade = result[0];
 				var d2lGrade = req.d2lGrade ;
-
 				d2lGrade = _.extend(d2lGrade , req.body);
-
 				d2lGrade.save(function(err) {
 					if (err) {
 						return res.status(400).send({
@@ -57,19 +54,7 @@ exports.create = function(req, res) {
 				});
 			}
 		}
-	})
-
-	//d2lGrade.save(function(err) {
-	//	if (err) {
-	//		return res.status(400).send({
-	//			message: errorHandler.getErrorMessage(err)
-	//		});
-	//	} else {
-	//		res.jsonp(d2lGrade);
-	//	}
-	//});
-
-
+	});
 };
 
 /**
