@@ -73,8 +73,10 @@ exports.delete = function(req, res) {
 /**
  * List of D2l hws submits
  */
-exports.list = function(req, res) { 
-	D2lHwsSubmit.find().sort('-created').populate('user', 'displayName').exec(function(err, d2lHwsSubmits) {
+exports.list = function(req, res) {
+	var populationQuery = [{path:'class'}, {path:'instructor'}];
+
+	D2lHwsSubmit.find().populate(populationQuery).sort('-created').populate('user', 'displayName').exec(function(err, d2lHwsSubmits) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)

@@ -4011,16 +4011,6 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 	$scope.classes = D2lClassesOwnership.query();
 	$scope.classesCopy = [].concat($scope.classes);
 
-	//https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId=1S1cucFhz96cGRHvXzgGqxuptNR-NgWKpIwI55RB67NU&userId=pbshop1001&title=8:56%20Test&dDate=2015-04-02T05:00:00.000Z&userIdRef=53bc47cd10a5bf0800bf940f&classId=5515aa5e70a4280b003607af
-	//https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?docId=1S1cucFhz96cGRHvXzgGqxuptNR-NgWKpIwI55RB67NU&userId=kruny1001&title=3_28%20test1&dDate=2015-04-01T05:00:00.000Z&userIdRef=54cfa0c6d5940f501bf796e7&classId=551710ba93a97a044e276fac
-	//https://script.google.com/macros/s
-	// /AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec
-	// ?docId=1S1cucFhz96cGRHvXzgGqxuptNR-NgWKpIwI55RB67NU
-	// &userId=kruny1001
-	// &title=8:56%20Test
-	// &dDate=2015-04-02T05:00:00.000Z
-	// &userIdRef=53bc47cd10a5bf0800bf940f
-	// &classId=5515aa5e70a4280b003607af
 	$scope.linkHW = function(hw){
 		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
 		var param = 'docId='+hw.gdocId+
@@ -4040,11 +4030,6 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 			templateUrl: 'modules/mean-tutorials/template/authentication/signup-dialog.tpl.html',
 			targetEvent: ev
 		})
-			//.then(function(answer) {
-			//	$scope.alert = 'You said the information was "' + answer + '".';
-			//}, function() {
-			//	$scope.alert = 'You cancelled the dialog.';
-			//});
 	};
 
 	$scope.showSignIn = function(ev) {
@@ -4068,7 +4053,6 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 			$scope.alert = 'You cancelled.';
 		});
 	};
-
 
 	$scope.cancel = function() {
 		$mdDialog.cancel();
@@ -4132,7 +4116,6 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 	};
 
 	$scope.showNewAssign = function(ev){
-
 		$mdDialog.show({
 			controller: D2lHwDialogCtrl,
 			templateUrl: 'modules/openboard/template/tutorial/newAssign-dialog.tpl.html',
@@ -4185,7 +4168,6 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 		}
 	};
 
-
 	$scope.setRoleAsStudent = function(){
 		$scope.user.roles ="student";
 		var user = new Users($scope.user);
@@ -4198,6 +4180,7 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 			$scope.error = response.data.message;
 		});
 	};
+
 }
 OpenboardController.$inject = ["$scope", "$mdDialog", "$window", "$http", "Authentication", "Users", "D2lHws", "D2lClassesOwnership", "UsersRole"];
 
