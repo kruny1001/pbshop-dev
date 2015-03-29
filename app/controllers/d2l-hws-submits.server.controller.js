@@ -123,9 +123,9 @@ exports.getSubmitInfo = function(req, res){
 
 exports.getSubmitInfoGS = function(req, res){
 	var populateQuery = [
-		{path:'class', select:'name, prefix'},
-		{path:'user', select:'displayName, email, username'},
-		{path:'instructor', select:'displayName, email, username'}
+		{path:'class', select:'name prefix'},
+		{path:'user', select:'displayName email username'},
+		{path:'instructor', select:'displayName email username'}
 	];
 	D2lHwsSubmit.find({docId: req.params.docId}).populate(populateQuery).exec(function(err, d2lHwsSubmit){
 		if (err) {

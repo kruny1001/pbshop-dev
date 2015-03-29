@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/d2l-hws-submit.server.model.js" afterPath="$PROJECT_DIR$/app/models/d2l-hws-submit.server.model.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/d2l-hws-submits.server.controller.js" afterPath="$PROJECT_DIR$/app/controllers/d2l-hws-submits.server.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -35,7 +31,7 @@
     <favorites_list name="pbshop-dev" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5548589">
+    <splitter split-orientation="horizontal" split-proportion="0.32810867">
       <split-first>
         <leaf>
           <file leaf-file-name="openboard.client.controller.js" pinned="false" current-in-tab="true">
@@ -57,8 +53,8 @@
           <file leaf-file-name="d2l-hws-submits.server.controller.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws-submits.server.controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3382353" vertical-offset="1639" max-vertical-offset="2175">
-                  <caret line="120" column="5" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
+                <state vertical-scroll-proportion="0.6533613" vertical-offset="1594" max-vertical-offset="2175">
+                  <caret line="127" column="60" selection-start-line="127" selection-start-column="60" selection-end-line="127" selection-end-column="60" />
                   <folding />
                 </state>
               </provider>
@@ -245,8 +241,8 @@
     <data>$PROJECT_DIR$/node_modules/karma</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="225" />
-    <option name="y" value="23" />
+    <option name="x" value="99" />
+    <option name="y" value="24" />
     <option name="width" value="1220" />
     <option name="height" value="877" />
   </component>
@@ -824,12 +820,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00106" summary="ins view template with toast">
-      <created>1425588696127</created>
-      <option name="number" value="00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1425588696128</updated>
-    </task>
     <task id="LOCAL-00107" summary="meanT home page decorate">
       <created>1425594744558</created>
       <option name="number" value="00107" />
@@ -1118,11 +1108,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427603272507</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="getHTTP interaction6&#10;">
+      <created>1427604155204</created>
+      <option name="number" value="00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1427604155205</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="225" y="23" width="1220" height="877" extended-state="0" />
+    <frame x="99" y="24" width="1220" height="877" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32058048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1132,12 +1128,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3812665" sideWeight="0.18308227" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33245382" sideWeight="0.78066915" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31794196" sideWeight="0.8169177" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31794196" sideWeight="0.8169177" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20183486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20183486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27176782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1192,7 +1188,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ins view template with toast" />
     <MESSAGE value="meanT home page decorate" />
     <MESSAGE value="meanT floatMenu animation" />
     <MESSAGE value="google Doc permission and copy" />
@@ -1217,7 +1212,8 @@
     <MESSAGE value="getHTTP interaction3" />
     <MESSAGE value="getHTTP interaction4" />
     <MESSAGE value="getHTTP interaction5&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="getHTTP interaction5&#10;" />
+    <MESSAGE value="getHTTP interaction6&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="getHTTP interaction6&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1426,7 +1422,7 @@
         <state vertical-scroll-proportion="0.3323077" vertical-offset="32847" max-vertical-offset="98460">
           <caret line="2197" column="19" selection-start-line="2197" selection-start-column="14" selection-end-line="2197" selection-end-column="19" />
           <folding>
-            <marker date="1427604136000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427604693000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1627,8 +1623,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws-submits.server.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3382353" vertical-offset="1639" max-vertical-offset="2175">
-          <caret line="120" column="5" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.6533613" vertical-offset="1594" max-vertical-offset="2175">
+          <caret line="127" column="60" selection-start-line="127" selection-start-column="60" selection-end-line="127" selection-end-column="60" />
           <folding />
         </state>
       </provider>
