@@ -119,7 +119,8 @@ exports.getSubmitInfo = function(req, res){
 }
 
 exports.getSubmitInfoGS = function(req, res){
-	D2lHwsSubmit.find({docId: req.params.docId}).populate('class', 'user').exec(function(err, d2lHwsSubmit){
+	var populateQuery = [{path:'class'},{path:'user'}];
+	D2lHwsSubmit.find({docId: req.params.docId}).populate(populateQuery).exec(function(err, d2lHwsSubmit){
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
