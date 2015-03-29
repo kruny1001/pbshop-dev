@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+<!-- The CSS package above applies Google styling to buttons and other elements. -->
+
+<style>
+    .branding-top{
+        border-radius: 25px;
+        background-color: #22A7F0;
+        font-size: 20px;
+        color: #F5D76E;
+        width: 70%;
+        padding: 20px;
+        margin: 20px;
+        margin-left: auto;
+        text-align: center;
+        margin-right: auto;
+    }
+    .branding-below {
+        bottom: 56px;
+        top: 0;
+    }
+
+    .branding-text {
+        left: 7px;
+        position: relative;
+        top: 3px;
+    }
+</style>
+
+
+<div class="container-gs">
+    <div class="sidebar branding-below">
+        <!-- Logo -->
+        <div class="center-center branding-top">
+            <span><b>Openboard</b></span>
+        </div>
+
+        <div class="block form-group">
+            <label><b>Assignment Info</b></label>
+            <div id="assignClass">Class name:</div>
+            <div id="assignTitle">Assignment Title:</div>
+            <div id="assignDueDate">Due Date: </div>
+        </div>
+        <hr/>
+
+        <div class="block form-group">
+
+            <div class="block" style="display:inline-block">
+                <label><b>Student Info</b></label>
+                <div id="studentName">ddd</div>
+            </div>
+            <div id="submitStatus"></div>
+        </div>
+        <hr/>
+
+        <div class="block form-group">
+            <p>When you finish your assignment, you can submit it by clicking below button</p>
+            <!--
+            <select id="avail-hws"></select>
+            <button class="blue" id="copyHW">Get HW</button>
+            -->
+            <button class="blue" id="submitAssignment">Submit</button>
+        </div>
+    </div>
+</div>
+<div class="sidebar bottom">
+    <!-- <img alt="Add-on logo" class="logo" width="27" height="27"
+          src="https://googledrive.com/host/0B0G1UdyJGrY6XzdjQWF4a1JYY1k/translate-logo-small.png"> -->
+    <span class="gray branding-text">Openboard Add-ons by Kevin Son</span>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<script>
+    /**
+     * On document load, assign click handlers to each button and try to load the
+     * user's origin and destination language preferences if previously set.
+     */
+    $(function() {
+        //$('#getHw').click(getHW);
+        //$('#log-in').click(getAvailableHW);
+        //$('#copyHW').click(copyHWContents);
+        $('#submitAssignment').click(sendEmail);
+        google.script.run.withSuccessHandler(loadPreferences)
+                .withFailureHandler(showError).getPreferences();
+        google.script.run.withSuccessHandler(loadPreferences)
+                .withFailureHandler(showError).getPreferences();
+    });
+
+    /**
+     * Callback function that populates the origin and destination selection
+     * boxes with user preferences from the server.
+     *
+     * @param {Object} languagePrefs The saved origin and destination languages.
+     */
+//    function loadPreferences(languagePrefs) {
+//        $('input:radio[name="origin"]')
+//                .filter('[value=' + languagePrefs.originLang + ']')
+//                .attr('checked', true);
+//        $('input:radio[name="dest"]')
+//                .filter('[value=' + languagePrefs.destLang + ']')
+//                .attr('checked', true);
+//    }
+
+    /**
+     * Runs a server-side function to translate the user-selected text and update
+     * the sidebar UI with the resulting translation.
+     */
+//    function getHW() {
+//        google.script.run
+//                .withSuccessHandler(
+//                function(translatedText, element) {
+//                    $('#translated-text').val(translatedText);
+//                    element.disabled = false;
+//                })
+//                .withFailureHandler(
+//                function(msg, element) {
+//                    showError(msg, $('#button-bar'));
+//                    element.disabled = false;
+//                })
+//                .withUserObject(this)
+//                .getBlob();
+//    }
+
+//    function getAvailableHW(){
+//        console.log('1111');
+//        google.script.run.withSuccessHandler(
+//                function(HWS, element){
+//                    console.log('success');
+//                    console.log(HWS.length);
+//                    HWS.forEach(function(data){
+//                        $('#avail-hws').append('<option value="'+data._id+'">'+data.title+'</option>');
+//                    });
+//
+//                })
+//                .withFailureHandler(function(msg, element){
+//                    console.log('Not success');
+////         console.log('!!!   '+msg);
+////         showError(msg, $('#button-bar'));
+////         element.disabled = false;
+//                })
+//                .withUserObject(this)
+//                .getAvailableHW();
+//    }
+
+//    function copyHWContents(){
+//        console.log('CopyHWContents');
+//        console.log('Crnt target ID'+ $('#avail-hws').val());
+//        google.script.run.withSuccessHandler(
+//                function(HWS, element){
+//                    console.log('success');
+//                })
+//                .withFailureHandler(function(msg, element){
+//                    console.log('Not success');
+//                    console.log('!!!   '+msg);
+//                })
+//                .withUserObject(this)
+//                .writeContentOntoDoc($('#avail-hws').val());
+//    }
+
+    function sendEmail(){
+        google.script.run.withSuccessHandler(
+                function(HWS, element){
+                    console.log('success');
+                })
+                .withFailureHandler(function(msg, element){
+                    console.log('Not success');
+                    console.log('!!!   '+msg);
+                })
+                .withUserObject(this)
+                .sendEmail();
+    }
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+{
+    payload={
+        instructor=53bc47cd10a5bf0800bf940f,
+        student=53bc47cd10a5bf0800bf940f,
+        name=Assignment Demo 1: kruny1001@gmail.com,
+        Assignment=5518637dfde8e00b00e583e8,
+        class=55179f7b9d87c00b009574d5,
+        grade=22,
+        comment=ddd
+    }, method=post}

@@ -15,15 +15,37 @@ exports.create = function(req, res) {
 	var d2lGrade = new D2lGrade(req.body);
 	//d2lGrade.user = req.user;
 
-	d2lGrade.save(function(err) {
+	//Check whether it is already existing
+	// require user id and hw id
+
+
+	d2lGrade.find({Assignment: req.body.Assignment, student:req.body.student}).exec(function(eer, result){
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(d2lGrade);
+
+			if(result.length == 0){
+				res.jsonp({result:'Not found Need to write new'});
+			}
+			else{
+				res.jsonp({result:'Found need to update'});
+			}
 		}
-	});
+	})
+
+	//d2lGrade.save(function(err) {
+	//	if (err) {
+	//		return res.status(400).send({
+	//			message: errorHandler.getErrorMessage(err)
+	//		});
+	//	} else {
+	//		res.jsonp(d2lGrade);
+	//	}
+	//});
+
+
 };
 
 /**
