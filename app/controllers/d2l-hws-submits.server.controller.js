@@ -130,7 +130,7 @@ exports.getSubmitInfoGS = function(req, res){
 			});
 		} else {
 			D2lClass.populate(d2lHwsSubmit.class,
-				{path:'user', select:'displayName, _id, email, username'}).exec(function(err, result){
+				{path:'user', select:'displayName, _id, email, username'},function(err, result){
 					if (err) {
 						return res.status(400).send({
 							message: errorHandler.getErrorMessage(err)
