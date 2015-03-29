@@ -88,7 +88,7 @@ exports.list = function(req, res) {
  * D2l hws submit middleware
  */
 exports.d2lHwsSubmitByID = function(req, res, next, id) { 
-	D2lHwsSubmit.findById(id).populate('user', 'displayName').exec(function(err, d2lHwsSubmit) {
+	D2lHwsSubmit.findById(id).populate('user').populate('class').exec(function(err, d2lHwsSubmit) {
 		if (err) return next(err);
 		if (! d2lHwsSubmit) return next(new Error('Failed to load D2l hws submit ' + id));
 		req.d2lHwsSubmit = d2lHwsSubmit ;
@@ -119,7 +119,7 @@ exports.getSubmitInfo = function(req, res){
 }
 
 exports.getSubmitInfoGS = function(req, res){
-	D2lHwsSubmit.find({docId: req.params.docId}).exec(function(err, d2lHwsSubmit){
+	D2lHwsSubmit.find({docId: req.params.docId}).populate('class', 'user').exec(function(err, d2lHwsSubmit){
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
