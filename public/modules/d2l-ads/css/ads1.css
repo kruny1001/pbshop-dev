@@ -28,6 +28,7 @@
 }
 
 .ad1-month{
+    font-weight: bold;
     width:92px;
     font-size:21px;
     top:3px;
@@ -43,6 +44,7 @@
 }
 
 .ad1-year{
+    font-weight: bold;
     width:92px;
     color:#7C8BA4;
     font-size:11px;
