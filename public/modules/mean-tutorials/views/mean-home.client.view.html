@@ -17,12 +17,17 @@
         <md-content class="meanT-homeFirstRow">
             <div id="floatMenus" style="position:fixed; z-index: 999">
                 <!--<md-button ng-click="toggleLeft()" class="md-primary"><b>Menu</b></md-button>-->
-                <md-button ng-click="toggleRight()" class="md-primary"><b>My Page</b></md-button>
+
+                <md-button id="menuBtn" ng-click="toggleRight()" class="md-primary" ng-click="showSignIn($event)">
+                    <md-icon md-svg-src="/modules/mean-tutorials/img/menu.svg"></md-icon>
+                    <b>Menu</b>
+                </md-button>
+
             </div>
 
-            <div class="meanT-headButtonGroup">
-                <cal-date></cal-date>
-            </div>
+            <!--<div class="meanT-headButtonGroup">-->
+                <!--<cal-date></cal-date>-->
+            <!--</div>-->
 
             <div class="meanT-headTitle">
                 <strong>{{homeContents.mainTitle}}</strong>
@@ -30,27 +35,75 @@
 
             <div class="meanT-headSubTitle" hide-sm>
                 <strong>{{homeContents.mainTitle}}</strong> {{homeContents.subTitleText}}<br/><br/>
-                <a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">
-                    <img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">
-                </a>
+                <md-button class="md-raised md-primary" ng-click="goTo('openboard')" style="margin-bottom: 10px;">Get Started</md-button>
+                <!--<a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">-->
+                    <!--<img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">-->
+                <!--</a>-->
             </div>
         </md-content>
 
-        <md-content flex class="md-padding">
+        <md-content class="md-padding meanT-homeSecondRow">
             <div class="meanT-headSubTitle" show-sm hide-gt-sm>
                 <strong>{{homeContents.mainTitle}}</strong> {{homeContents.subTitleText}}<br/><br/>
-                <a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">
-                    <img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">
-                </a>
+                <md-button class="md-raised md-primary" ng-click="goTo('openboard')" style="margin-bottom: 10px;">Get Started</md-button>
+                <!--<a href="https://docs.google.com/document/d/1Q_CJwJftcL-zabVm0USc1px5HDfbpxu6Klav-XYOzNg/edit?usp=sharing" target="_blank">-->
+                    <!--<img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">-->
+                <!--</a>-->
             </div>
+
+            <md-whiteframe class="md-whiteframe-z2 meanT-home-card"
+                           layout="column" layout-align="space-around start">
+                <h2>Introduction</h2>
+                <div class="ob-underbar"></div>
+
+                <p> This contest is for developing a mobile application. However, I </p>
+
+                <h3> Purpose of this application</h3>
+                <p>Click a Sign up button then fill out all field</p>
+
+                <h3> Why this app is useful?</h3>
+                <p></p>
+
+                <h3>Demo Video</h3>
+                <p></p>
+            </md-whiteframe>
+
+            <md-whiteframe class="md-whiteframe-z2 meanT-home-card"
+                           layout="column" layout-align="space-around start">
+                <h2>How to use Openboard</h2>
+                <div class="ob-underbar"></div>
+
+
+            </md-whiteframe>
+
+
 
             <!-- Annimation -->
-            <div class="meanT-contentTitle">
-                <strong>How to use Openboard</strong>
-            </div>
-            <mj-home-ani></mj-home-ani>
+            <!--<div class="meanT-contentTitle">-->
+                <!--<strong>How to use Openboard</strong>-->
+            <!--</div>-->
+            <!--<div layout="row" layout-align="center start">-->
+                <!--<mj-home-ani></mj-home-ani>-->
+            <!--</div>-->
 
-            <hr/>
+
+            <md-whiteframe class="md-whiteframe-z2 meanT-home-card"
+                           layout="column" layout-align="space-around start">
+                <h2>Why use Google Family Products</h2>
+                <div class="ob-underbar"></div>
+                <p>These products make instructors and students easier to manage education contents</p>
+                <h3>Google Drive</h3>
+                <h3>GMail</h3>
+                <h3>Google Doc</h3>
+                <h3>Google Calendar</h3>
+            </md-whiteframe>
+
+            <md-whiteframe class="md-whiteframe-z2 meanT-home-card"
+                           layout="column" layout-align="space-around start">
+                <h2>Less time & More time</h2>
+                <div class="ob-underbar"></div>
+                <p>These products make instructors and students easier to manage education contents</p>
+            </md-whiteframe>
 
             <!--<div class="meanT-contentTitle"><strong>Event Calendar</strong></div>-->
             <!--<div class="meanT-headSubTitle">-->
@@ -59,7 +112,7 @@
             <!--<ut-calendar></ut-calendar>-->
             <!--<hr/>-->
 
-            <mac-window info="announcements"></mac-window>
+            <!--<mac-window info="announcements"></mac-window>-->
             <!--<hr/><mac-window info="projects"></mac-window>-->
             <!--<hr/><mac-window info="techs"></mac-window>-->
 
@@ -113,7 +166,7 @@
                 <!--<img src="/modules/users/img/buttons/google.png">-->
             <!--</a>-->
 
-            <md-content class="md-padding" layout="column" layout-align="center start">
+            <md-content class="md-padding" layout="column" layout-align="start start">
                 <!-- Google Authentication
                 <div layout="row">
                     <md-button class="md-primary" href="/auth/google" >
@@ -169,8 +222,14 @@
                     </md-button>
                 </div>
 
+                <div class="meanT-logo-bottom">
+                    <img alt="Add-on logo" class="meanT-logo" width="27" height="27"
+                         src="https://googledrive.com/host/0B0G1UdyJGrY6XzdjQWF4a1JYY1k/translate-logo-small.png">
+                    <span class="gray meanT-branding-text">Openboard Web App by Kevin S</span>
+                </div>
             </md-content>
         </md-sidenav>
 
     </section>
+
 </section>

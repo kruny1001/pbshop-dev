@@ -40,12 +40,12 @@ function MeanHomeController(
 	$scope.authentication = Authentication;
 	$scope.notice = "Prototype";
 
-	$(document).on( 'scroll', function(){
-		if($(document).scrollTop() > 150)
-			TweenMax.to($('#floatMenus'), 1, {y:-51});
-		else
-			TweenMax.set($('#floatMenus'), {y:0});
-	});
+	//$(document).on( 'scroll', function(){
+	//	if($(document).scrollTop() > 150)
+	//		TweenMax.to($('#floatMenus'), 1, {y:-51});
+	//	else
+	//		TweenMax.set($('#floatMenus'), {y:0});
+	//});
 
 	$scope.date = {
 		month: moment().format("MMM").toUpperCase(),
@@ -84,10 +84,15 @@ function MeanHomeController(
 			});
 	};
 	$scope.toggleRight = function() {
+		TweenMax.from($('#menuBtn'),2.5, {x:50, ease:Bounce.easeOut});
 		$mdSidenav('right').toggle()
 			.then(function(){
 				$log.debug("toggle RIGHT is done");
 			});
+	};
+
+	$scope.goGetStarted = function(){
+		$state.go('');
 	};
 
 	$scope.showSignUp = function(ev) {

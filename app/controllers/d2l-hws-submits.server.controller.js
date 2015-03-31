@@ -126,7 +126,6 @@ exports.listSubmission = function(req, res){
 	});
 };
 
-
 /**
  * D2l hws submit middleware
  */
