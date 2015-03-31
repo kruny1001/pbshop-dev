@@ -25,10 +25,6 @@
 
             </div>
 
-            <!--<div class="meanT-headButtonGroup">-->
-                <!--<cal-date></cal-date>-->
-            <!--</div>-->
-
             <div class="meanT-headTitle">
                 <strong>{{homeContents.mainTitle}}</strong>
             </div>
@@ -53,16 +49,27 @@
 
             <md-whiteframe class="md-whiteframe-z2 meanT-home-card"
                            layout="column" layout-align="space-around start">
+
+
+                <h1 class="md-display-3">Headline (3)</h1>
+                <h1 class="md-display-2">Headline (2)</h1>
+                <h1 class="md-display-1">Headline (1)</h1>
+                <h1> Headline (regular)</h1>
+                <h2 class="md-display-1">Headline</h2>
+                <h2>Headline</h2>
+                <h3 class="md-headline">Headline</h3>
+                <h3>Headline</h3>
+
                 <h2>Introduction</h2>
                 <div class="ob-underbar"></div>
 
-                <p> This contest is for developing a mobile application. However, I </p>
+                <p class="md-body-1"> This contest is for developing a mobile application. However, I </p>
 
                 <h3> Purpose of this application</h3>
-                <p>Click a Sign up button then fill out all field</p>
+                <p class="md-body-2">Click a Sign up button then fill out all field</p>
 
                 <h3> Why this app is useful?</h3>
-                <p></p>
+                <p class="md-caption">If you do not need to bother from creating an new assignment, gathering submitted assignments and updating a score to the sheet after grading</p>
 
                 <h3>Demo Video</h3>
                 <p></p>
@@ -103,6 +110,10 @@
                 <h2>Less time & More time</h2>
                 <div class="ob-underbar"></div>
                 <p>These products make instructors and students easier to manage education contents</p>
+
+
+
+
             </md-whiteframe>
 
             <!--<div class="meanT-contentTitle"><strong>Event Calendar</strong></div>-->
@@ -158,6 +169,7 @@
                 <div class="sidebar-header header-cover"
                      style="background-image: url(http://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);">
                     <h1 class="md-toolbar-tools">My Page</h1>
+
                 </div>
             </md-toolbar>
 
@@ -174,7 +186,10 @@
                     </md-button>
                 </div>
                 -->
-                <div data-ng-hide="authentication.user">
+
+                <cal-date></cal-date>
+
+                <div style="margin-top:20px;" data-ng-hide="authentication.user">
                     <div layout="row">
                         <p>You need to sign in</p>
                     </div>
@@ -184,23 +199,32 @@
                             Sign In
                         </md-button>
                         <!--<span flex></span>-->
+
                         <md-button class="md-primary" ng-click="showSignUp($event)">
                             <md-icon md-svg-src="/modules/mean-tutorials/img/log-out.svg"></md-icon>
                             Sign Up
                         </md-button>
+
                     </div>
                 </div>
 
-                <md-button ng-disabled="false" ui-sref="openboard" class="md-primary">
+                <md-button style="margin-top:10px;" ng-disabled="false" ui-sref="openboard" class="md-primary">
                     <md-icon md-svg-src="/modules/mean-tutorials/img/android-person.svg"></md-icon>
                     Get Started
                 </md-button>
 
                 <div layout="column" layout-align="space-around start" data-ng-show="authentication.user">
+                    <a href="/auth/signout">
+                        <md-button class="md-primary" ng-click="showSignIn($event)">
+                            <md-icon md-svg-src="/modules/mean-tutorials/img/log-out.svg"></md-icon>
+                            Sign Out
+                        </md-button>
+                    </a>
                     <md-button ng-disabled="false" ui-sref="profile" class="md-primary">
                         <md-icon md-svg-src="/modules/mean-tutorials/img/android-person.svg"></md-icon>
                         Account
                     </md-button>
+
 
                     <!--<md-button ng-disabled="false" ui-sref="projectview.dashboard" class="md-primary">-->
                         <!--<md-icon md-svg-src="/modules/mean-tutorials/img/grid.svg"></md-icon>-->

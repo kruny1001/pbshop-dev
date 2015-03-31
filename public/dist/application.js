@@ -3054,7 +3054,7 @@ function MeanHomeController(
 	//  Openboard Contest
 	$scope.homeContents = {
 		mainTitle : "Open Board",
-		subTitleText: "is an E-learning Management System. Save time to manage contents and assignments for Instructor. Easy to access and manage assignment and contents for students"
+		subTitleText: "is an e-Learning Management System. Save time to manage contents and assignments for Instructor. Easy to access and manage assignment and contents for students"
 	};
 	$scope.authentication = Authentication;
 	$scope.notice = "Prototype";
