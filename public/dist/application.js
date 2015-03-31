@@ -4030,6 +4030,8 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 	$scope.submittedHW = D2lHwsSubmitsTrue.query();
 	$scope.submittedHWCopy = [].concat($scope.submittedHW);
 
+	$scope.gradeCollection = D2lClassesOwnership.query();
+	$scope.gradeCollectionCopy = [].concat($scope.gradeCollection);
 	$scope.linkHW = function(hw){
 		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
 		var param = 'docId='+hw.gdocId+
