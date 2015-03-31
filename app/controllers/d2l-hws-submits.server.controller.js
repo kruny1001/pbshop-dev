@@ -64,7 +64,7 @@ exports.updateSubmitInfoGS = function(req, res){
 		} else {
 
 			var d2lHwsSubmit = result[0];
-			//console.log(req.params.docId);
+			console.log(result[0]);
 			d2lHwsSubmit = _.extend(d2lHwsSubmit , req.body);
 			d2lHwsSubmit.save(function(err) {
 				if (err) {
