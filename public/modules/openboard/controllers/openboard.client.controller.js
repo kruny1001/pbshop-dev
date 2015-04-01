@@ -37,7 +37,6 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 				$log.debug("close LEFT is done");
 				TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
 			});
-
 	};
 
 	$scope.linkHW = function(hw){
@@ -61,7 +60,9 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 	$scope.toggleLeft = function() {
 		$mdSidenav('left').toggle()
 			.then(function(){
+                TweenMax.to($("md-backdrop "),0.1,{position:'fixed'});
 				$log.debug("toggle left is done");
+
 			});
 	};
 

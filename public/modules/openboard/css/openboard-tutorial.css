@@ -1,11 +1,23 @@
-.ob-underbar{
-    width: 70%;
-    border-top: 5px solid #378fff;
-    padding: 20px;
-    margin-top: -15px;
-    margin-left: auto;
-    margin-right:auto;
+.ob-underbar-base{
+    border-left: 4px solid #3F51B5;
 }
+
+.ob-underbar-yellow{
+    border-left: 4px solid #F6CB51;
+}
+
+.ob-underbar-red{
+    border-left: 4px solid #E25942;
+}
+
+.ob-underbar-green{
+    border-left: 4px solid #13A89E;
+}
+
+.ob-underbar-dark{
+    border-left: 4px solid #3F4953;
+}
+
 
 .openboard-background{
     background-color: whitesmoke;
@@ -47,6 +59,13 @@
     margin-right:auto;
 }
 
+
+.docs-title-card-not-Center{
+    font-weight: 700;
+    line-height: 42px;
+    text-indent: 0px;
+}
+
 .docs-menu-icon{
     background: none;
     border: none;
@@ -62,4 +81,9 @@
 
 .md-sidenav-backdrop {
     height: 100%;
+}
+
+.card-border-left{
+
+    border-left: thick #4096ff;
 }
