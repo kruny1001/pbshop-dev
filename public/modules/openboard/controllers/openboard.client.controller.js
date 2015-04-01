@@ -143,9 +143,13 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			clickOutsideToClose: true
 		}).then(
 			function(){
+                var target = $("#step4").offset().top;
+                TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
                 $log.debug('created Class');
 				$scope.classes = D2lClassesOwnership.query();
-				$scope.classesCopy = [].concat($scope.classes);},
+				$scope.classesCopy = [].concat($scope.classes);
+
+            },
 			function(){
                 $log.debug('cancel');
             }
@@ -178,12 +182,13 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			clickOutsideToClose: false
 		}).then(
             function(){
+                $log.debug('cancel');
+            },
+            function(){
+
                 $log.debug('created Assignment');
                 $scope.hws = D2lHws.query();
                 $scope.hwsCopy = [].concat($scope.hws);
-            },
-            function(){
-                $log.debug('cancel');
             }
         );
 
