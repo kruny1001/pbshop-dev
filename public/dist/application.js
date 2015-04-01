@@ -3107,7 +3107,9 @@ function MeanHomeController(
 		$mdSidenav('right').toggle()
 			.then(function(){
 				$log.debug("toggle RIGHT is done");
+				TweenMax.set($("md-backdrop"),{position:'fixed'});
 			});
+
 	};
 
 	$scope.goGetStarted = function(){
@@ -4012,7 +4014,7 @@ angular.module('openboard').config(['$stateProvider',
 
 angular.module('openboard').controller('OpenboardController', OpenboardController);
 
-function OpenboardController($scope, $mdDialog, $window, $http, Authentication, Users, D2lHws, D2lClassesOwnership, D2lHwsSubmitsTrue, UsersRole) {
+function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http, Authentication, Users, D2lHws, D2lClassesOwnership, D2lHwsSubmitsTrue, UsersRole) {
 	// Openboard controller logic
 	// ...
 
@@ -4032,6 +4034,18 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 
 	$scope.gradeCollection = D2lClassesOwnership.query();
 	$scope.gradeCollectionCopy = [].concat($scope.gradeCollection);
+
+	$scope.scrollTo = function(elementId){
+		var target = $("#"+elementId).offset().top;
+
+		$mdSidenav('left').close()
+			.then(function(){
+				$log.debug("close LEFT is done");
+				TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
+			});
+
+	};
+
 	$scope.linkHW = function(hw){
 		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
 		var param = 'docId='+hw.gdocId+
@@ -4042,6 +4056,13 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 			'&instructorRef='+hw.class.user+
 			'&classId='+hw.class._id;
 		$window.open(AppScriptAPI+param);
+	};
+
+	$scope.toggleLeft = function() {
+		$mdSidenav('left').toggle()
+			.then(function(){
+				$log.debug("toggle left is done");
+			});
 	};
 
 	// This function should be combined later
@@ -4059,6 +4080,9 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 			templateUrl: 'modules/mean-tutorials/template/authentication/signin-dialog.tpl.html',
 			targetEvent: ev
 		});
+
+		TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
+		console.log('dddd');
 	};
 
 	$scope.showSetRule = function(ev){
@@ -4203,8 +4227,50 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 	};
 
 }
-OpenboardController.$inject = ["$scope", "$mdDialog", "$window", "$http", "Authentication", "Users", "D2lHws", "D2lClassesOwnership", "D2lHwsSubmitsTrue", "UsersRole"];
+OpenboardController.$inject = ["$scope", "$log", "$mdDialog", "$mdSidenav", "$window", "$http", "Authentication", "Users", "D2lHws", "D2lClassesOwnership", "D2lHwsSubmitsTrue", "UsersRole"];
 
+'use strict';
+
+angular.module('openboard').directive('openboardAni1', [
+	function() {
+		return {
+
+			templateUrl: "/modules/openboard/directives/template/openboard-ani1.html",
+			restrict: 'E',
+			link: function postLink(scope, element, attrs) {
+				// Openboard ani1 directive logic
+				// ...
+
+				$('#play').click(play);
+
+				var body1 = $('#body1');
+				var body2 = $('#body2');
+				var body3 = $('#body3');
+
+				var face1 = $('#face1');
+				var face2 = $('#face2');
+				var flag = $('#flag');
+				var a1 = $('.assign');
+
+				var tl = new TimelineMax({repeat: 2, repeatDelay: 1});
+
+				var t1 = TweenMax.to([body1, face1], 0.7, {display: 'none'});
+
+				var t2 = TweenMax.to([body2, face2], 0.2, {display: 'block'});
+
+				var f1 = TweenMax.from(flag, 1, {display: 'none', xPercent: 200, yPercent: -200, scale: 0.2})
+
+				var ta1 = TweenMax.to(a1, 4, {x:1500});
+
+				tl.add(ta1).add(f1).add(t1).add(t2).play();
+
+				function play() {
+					tl.restart();
+				}
+			}
+		}
+	}
+]);
 'use strict';
 
 angular.module('size-util').controller('SizeUtil.sizeOfWidthController', ['$scope',

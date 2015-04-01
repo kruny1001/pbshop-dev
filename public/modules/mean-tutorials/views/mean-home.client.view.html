@@ -1,4 +1,6 @@
-<section class="headerEnabled" ng-controller="MeanHomeController" layout="column" layout-fill>
+<section class="headerEnabled"
+         ng-controller="MeanHomeController"
+         layout="column" layout-fill>
 
     <style>
         .md-dialog-container {
@@ -38,7 +40,7 @@
             </div>
         </md-content>
 
-        <md-content class="md-padding meanT-homeSecondRow">
+        <md-content class="md-padding meanT-homeSecondRow" style="overflow:hidden">
             <div class="meanT-headSubTitle" show-sm hide-gt-sm>
                 <strong>{{homeContents.mainTitle}}</strong> {{homeContents.subTitleText}}<br/><br/>
                 <md-button class="md-raised md-primary" ng-click="goTo('openboard')" style="margin-bottom: 10px;">Get Started</md-button>
@@ -60,36 +62,64 @@
                 <!--<h3 class="md-headline">Headline</h3>-->
                 <!--<h3>Headline</h3>-->
 
-                <h2>Introduction</h2>
-                <div class="ob-underbar"></div>
+                <h3>Do you love to use D2L?</h3>
+                <!--<div class="ob-underbar"></div>-->
 
                 <p class="md-body-1">
-                    This web application is the online course management system. This app is mainly focused on
-                    assignment process. What if this process is minified and simplifed, student and instructor can reduce amount
-                    of time to handle for handling their assignments.
+                    It is HARD to manage lots of contents from a D2l, especially assignment. User must download a file and save a file to access it.
                 </p>
 
-                <h3>Get an Assignment</h3>
-                <p class="md-body-1">Click a Sign up button then fill out all field</p>
+                <ul class="md-body-2">
+                    <li>What if you forget to bring your USB</li>
+                    <li>What if you forget to update a file to your cloud drive such as Google drive, drob box or OneDrive</li>
+                    <li>What if you lost your use before submitting your assignment</li>
+                </ul>
 
-                <h3> Submit Your Assignment</h3>
-                <p class="md-body-1">If you do not need to bother from creating an new assignment, gathering submitted assignments and updating a score to the sheet after grading</p>
 
-                <h3>Grade and update an assignment from a document </h3>
-                <p>
 
-                </p>
+                <h3>Openboard can Solve all your Problems </h3>
+                <p class="md-body-1">Openboard is e-Learning Contents Management System.
+                    It allows to handling every process of assigning, submitting, grading
+                    and updating score <b>automatically</b> just by one Click</p>
+
+
+
             </md-whiteframe>
+
+
+            <openboard-ani1></openboard-ani1>
+
+
 
             <md-whiteframe class="md-whiteframe-z2 meanT-home-card"
                            layout="column" layout-align="space-around start">
-                <h2>How to use Openboard</h2>
-                <div class="ob-underbar"></div>
+                <h3>How to use Openboard</h3>
+                <!--<div class="ob-underbar"></div>-->
+                <h3>Get your Assignment</h3>
+                <p class="md-body-1">If you do not need to bother from creating an new assignment, gathering submitted assignments and updating a score to the sheet after grading</p>
 
+                <h3>Submit your assignment</h3>
+                <p>
+
+                </p>
 
             </md-whiteframe>
 
+            <openboard-ani1></openboard-ani1>
 
+            <md-whiteframe class="md-whiteframe-z2 meanT-home-card"
+                           layout="column" layout-align="space-around start">
+                <h3>Access submission of assignment</h3>
+                <!--<div class="ob-underbar"></div>-->
+                <h3>Get your Assignment</h3>
+                <p class="md-body-1">If you do not need to bother from creating an new assignment, gathering submitted assignments and updating a score to the sheet after grading</p>
+
+                <h3>Grade assignment and update Score</h3>
+                <p>
+
+                </p>
+
+            </md-whiteframe>
 
             <!-- Annimation -->
             <!--<div class="meanT-contentTitle">-->
@@ -100,10 +130,12 @@
             <!--</div>-->
 
 
+            <openboard-ani1></openboard-ani1>
+
+
             <md-whiteframe class="md-whiteframe-z2 meanT-home-card"
                            layout="column" layout-align="space-around start">
-                <h2>Why use Google Family Products</h2>
-                <div class="ob-underbar"></div>
+                <h3>What technologies make this possible</h3>
                 <p>These products make instructors and students easier to manage education contents</p>
                 <h3>Google Drive</h3>
                 <h3>GMail</h3>
@@ -111,14 +143,13 @@
                 <h3>Google Calendar</h3>
             </md-whiteframe>
 
+
+
             <md-whiteframe class="md-whiteframe-z2 meanT-home-card"
                            layout="column" layout-align="space-around start">
                 <h2>Less time & More time</h2>
                 <div class="ob-underbar"></div>
                 <p>These products make instructors and students easier to manage education contents</p>
-
-
-
 
             </md-whiteframe>
 
@@ -184,7 +215,7 @@
                 <!--<img src="/modules/users/img/buttons/google.png">-->
             <!--</a>-->
 
-            <md-content class="md-padding" layout="column" layout-align="start start">
+            <md-content class="md-padding" style="overflow: hidden;" layout="column" layout-align="start start">
                 <!-- Google Authentication
                 <div layout="row">
                     <md-button class="md-primary" href="/auth/google" >

@@ -88,7 +88,9 @@ function MeanHomeController(
 		$mdSidenav('right').toggle()
 			.then(function(){
 				$log.debug("toggle RIGHT is done");
+				TweenMax.set($("md-backdrop"),{position:'fixed'});
 			});
+
 	};
 
 	$scope.goGetStarted = function(){

@@ -3,7 +3,7 @@
 
 angular.module('openboard').controller('OpenboardController', OpenboardController);
 
-function OpenboardController($scope, $mdDialog, $window, $http, Authentication, Users, D2lHws, D2lClassesOwnership, D2lHwsSubmitsTrue, UsersRole) {
+function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http, Authentication, Users, D2lHws, D2lClassesOwnership, D2lHwsSubmitsTrue, UsersRole) {
 	// Openboard controller logic
 	// ...
 
@@ -23,6 +23,18 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 
 	$scope.gradeCollection = D2lClassesOwnership.query();
 	$scope.gradeCollectionCopy = [].concat($scope.gradeCollection);
+
+	$scope.scrollTo = function(elementId){
+		var target = $("#"+elementId).offset().top;
+
+		$mdSidenav('left').close()
+			.then(function(){
+				$log.debug("close LEFT is done");
+				TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
+			});
+
+	};
+
 	$scope.linkHW = function(hw){
 		var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
 		var param = 'docId='+hw.gdocId+
@@ -33,6 +45,13 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 			'&instructorRef='+hw.class.user+
 			'&classId='+hw.class._id;
 		$window.open(AppScriptAPI+param);
+	};
+
+	$scope.toggleLeft = function() {
+		$mdSidenav('left').toggle()
+			.then(function(){
+				$log.debug("toggle left is done");
+			});
 	};
 
 	// This function should be combined later
@@ -50,6 +69,9 @@ function OpenboardController($scope, $mdDialog, $window, $http, Authentication, 
 			templateUrl: 'modules/mean-tutorials/template/authentication/signin-dialog.tpl.html',
 			targetEvent: ev
 		});
+
+		TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
+		console.log('dddd');
 	};
 
 	$scope.showSetRule = function(ev){

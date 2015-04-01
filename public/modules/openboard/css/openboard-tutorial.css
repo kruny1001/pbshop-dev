@@ -3,6 +3,8 @@
     border-top: 5px solid #378fff;
     padding: 20px;
     margin-top: -15px;
+    margin-left: auto;
+    margin-right:auto;
 }
 
 .openboard-background{
@@ -13,4 +15,50 @@
     margin:10px;
     padding:10px;
     background-color: #ffffff;
+}
+
+.openboard-sidenav {
+    width: 254px !important;
+    min-width: 254px !important;
+    max-width: 254px !important;
+}
+
+.svg-logotype{
+    height:42px;
+    font-size:42px;
+    margin:0px;
+}
+
+.docs-logotype{
+    line-height: 42px;
+    text-indent: 15px;
+}
+
+.docs-title{
+    line-height: 42px;
+    text-indent: 0px;
+}
+
+.docs-title-card{
+    line-height: 42px;
+    text-indent: 0px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.docs-menu-icon{
+    background: none;
+    border: none;
+    margin-right: 16px;
+    padding: 0;
+}
+
+.docs-menu
+{
+    font-size: 1.2rem;
+}
+
+
+.md-sidenav-backdrop {
+    height: 100%;
 }
