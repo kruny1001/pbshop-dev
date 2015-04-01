@@ -30,7 +30,6 @@ function GDriveFilePicker($scope, Googledrive, configGdrive, GDriveSelectResult)
 				GDriveSelectResult.id = data.docs[0].id;
 				$scope.$emit('handleEmit', {message: GDriveSelectResult.id});
 			}else if(data.action ==google.picker.Action.CANCEL){
-
 			}
 		}
 		Googledrive.setupPicker(accessToken, pickerCallback);

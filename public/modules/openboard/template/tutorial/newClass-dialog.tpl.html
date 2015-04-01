@@ -11,7 +11,7 @@
                     <label for="name">Name</label>
                     <input required id="name" name="name" ng-model="name">
                     <div ng-messages="projectForm.name.$error">
-                        <div ng-message="required">This is required.</div>
+                        <div ng-message="required">Class name is required.</div>
                     </div>
                 </md-input-container>
 
@@ -19,7 +19,7 @@
                     <label for="prefix">Prefix</label>
                     <input required id="prefix" name="prefix" ng-model="prefix">
                     <div ng-messages="projectForm.prefix.$error">
-                        <div ng-message="required">This is required.</div>
+                        <div ng-message="required">This is required.(ex. CSC-101)</div>
                     </div>
                 </md-input-container>
             <div class="md-actions" layout="row">
@@ -30,6 +30,9 @@
                 <md-button type="submit">
                     Done
                 </md-button>
+            </div>
+            <div data-ng-show="error" class="text-center text-danger">
+                <strong class="md-body-2" data-ng-bind="error"></strong>
             </div>
         </form>
     </md-content>

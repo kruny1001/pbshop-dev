@@ -47,6 +47,12 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 		$window.open(AppScriptAPI+param);
 	};
 
+    $scope.copyHWTemplate = function(gdocId){
+        var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
+        var param = 'docId='+gdocId+'&userIdRef='+Authentication.user._id+'&task=copy';
+        $window.open(AppScriptAPI+param);
+    };
+
 	$scope.toggleLeft = function() {
 		$mdSidenav('left').toggle()
 			.then(function(){
@@ -54,93 +60,108 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			});
 	};
 
+    function DialogController($scope, $mdDialog){
+        $scope.hide = function() {
+            $mdDialog.hide();
+        };
+        $scope.cancel = function() {
+            $mdDialog.cancel();
+        };
+        $scope.answer = function(answer) {
+            $mdDialog.hide(answer);
+        };
+    }
+
 	// This function should be combined later
-	$scope.showSignUp = function(ev) {
+	$scope.showSignUpTutorial = function(ev) {
 		$mdDialog.show({
-			controller: 'AuthenticationController',
-			templateUrl: 'modules/mean-tutorials/template/authentication/signup-dialog.tpl.html',
+			controller: DialogController,
+			templateUrl: 'modules/openboard/template/authentication/signup-dialog.tpl.html',
 			targetEvent: ev
 		})
+        TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
 	};
 
-	$scope.showSignIn = function(ev) {
+	$scope.showSignInTutorial = function(ev, elementId) {
 		$mdDialog.show({
-			controller: 'AuthenticationController',
-			templateUrl: 'modules/mean-tutorials/template/authentication/signin-dialog.tpl.html',
-			targetEvent: ev
-		});
-
-		TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
-		console.log('dddd');
-	};
-
-	$scope.showSetRule = function(ev){
-		$mdDialog.show({
-			controller: 'OpenboardController',
-			templateUrl: 'modules/openboard/template/tutorial/setRole-dialog.tpl.html',
+			controller: DialogController,
+			templateUrl: 'modules/openboard/template/authentication/signin-dialog.tpl.html',
 			targetEvent: ev,
-			clickOutsideToClose: false,
-			//preserveScope: true
-		}).then(function(answer) {
-			$scope.alert = 'You updated as "' + answer + '".';
-		}, function() {
-			$scope.alert = 'You cancelled.';
-		});
+            clickOutsideToClose: true
+		}).then(function(answer){
+                var target = $("#"+elementId).offset().top;
+                TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
+            },function(){
+                console.log('cancel');
+            }
+        );
+		TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
 	};
 
-	$scope.cancel = function() {
-		$mdDialog.cancel();
-	};
+	//$scope.showSetRule = function(ev){
+	//	$mdDialog.show({
+	//		controller: 'OpenboardController',
+	//		templateUrl: 'modules/openboard/template/tutorial/setRole-dialog.tpl.html',
+	//		targetEvent: ev,
+	//		clickOutsideToClose: false
+	//		//preserveScope: true
+	//	}).then(function(answer) {
+	//		$scope.alert = 'You updated as "' + answer + '".';
+	//	}, function() {
+	//		$scope.alert = 'You cancelled.';
+	//	});
+	//};
+    //
+	//$scope.cancel = function() {
+	//	$mdDialog.cancel();
+	//};
+    //
+	//$scope.answer = function(answer) {
+	//	//$mdDialog.hide(answer);
+	//};
 
-	$scope.answer = function(answer) {
-		//$mdDialog.hide(answer);
-	};
-
-	$scope.setRole = function(){
-		console.log('openboardCtrl-setRole ' +$scope.user.roles);
-		$scope.user.roles =$scope.credentials.roles;
-		console.log('openboardCtrl-setRole ' +$scope.user.roles);
-		var user = new UsersRole($scope.user);
-		user.$update(function(result) {
-				Authentication.user = result;
-				$scope.user =Authentication.user;
-				$scope.alert = "[Success] Update";
-				$mdDialog.hide($scope.credentials.roles);
-			}, function(response) {
-				$scope.error = response.data.message;
-		});
-	};
+	//$scope.setRole = function(){
+	//	console.log('openboardCtrl-setRole ' +$scope.user.roles);
+	//	$scope.user.roles =$scope.credentials.roles;
+	//	console.log('openboardCtrl-setRole ' +$scope.user.roles);
+	//	var user = new UsersRole($scope.user);
+	//	user.$update(function(result) {
+	//			Authentication.user = result;
+	//			$scope.user =Authentication.user;
+	//			$scope.alert = "[Success] Update";
+	//			$mdDialog.hide($scope.credentials.roles);
+	//		}, function(response) {
+	//			$scope.error = response.data.message;
+	//	});
+	//};
 
 	$scope.showNewClass = function(ev){
 		$mdDialog.show({
-			//controller: 'D2lClassesController',
 			controller: D2lClassDialogCtrl,
 			templateUrl: 'modules/openboard/template/tutorial/newClass-dialog.tpl.html',
 			targetEvent: ev,
-			clickOutsideToClose: false
+			clickOutsideToClose: true
 		}).then(
 			function(){
-				console.log('created Class');
+                $log.debug('created Class');
 				$scope.classes = D2lClassesOwnership.query();
 				$scope.classesCopy = [].concat($scope.classes);},
-			function(){console.log('2')}
+			function(){
+                $log.debug('cancel');
+            }
 		);
 		function D2lClassDialogCtrl($scope, $mdDialog, D2lClasses){
 			$scope.cancel = function() {
 				$mdDialog.cancel();
 			};
-
 			$scope.create = function() {
 				// Create new D2l class object
 				var d2lClass = new D2lClasses ({
 					name: this.name,
 					prefix:this.prefix
 				});
-
 				// Redirect after save
 				d2lClass.$save(function(response) {
-					$scope.name = '';
-					$scope.prefix = '';
 					$mdDialog.hide();
 				}, function(errorResponse) {
 					$scope.error = errorResponse.data.message;
@@ -155,14 +176,23 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			templateUrl: 'modules/openboard/template/tutorial/newAssign-dialog.tpl.html',
 			targetEvent: ev,
 			clickOutsideToClose: false
-		});
+		}).then(
+            function(){
+                $log.debug('created Assignment');
+                $scope.hws = D2lHws.query();
+                $scope.hwsCopy = [].concat($scope.hws);
+            },
+            function(){
+                $log.debug('cancel');
+            }
+        );
 
 		function D2lHwDialogCtrl(scope, $timeout, $mdDialog, D2lHws, D2lClassesOwnership, GDriveSelectResult){
 		// Create new D2l hw
 			scope.$on('handleEmit', function(event, args) {
 				console.log('broadcast is invoked');
 				scope.project.gdocId=args.message;
-				//scope.$digest();
+				scope.$digest();
 			});
 			scope.cancel = function(){
 				$mdDialog.hide();

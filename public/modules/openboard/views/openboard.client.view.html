@@ -3,7 +3,7 @@
          layout="column" layout-fill
          class="headerEnabled openboard-background">
     <!-- Debuging Purpose Start-->
-    <!--<div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>-->
+    <div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>
     <!-- Debuging Purpose End-->
 
 <style>
@@ -20,8 +20,10 @@
         </md-icon>
     </button>
 
+    <!-- Main Content-->
     <md-content layout="column" flex>
 
+        <!-- ToolBar -->
         <md-toolbar id="toolBar">
             <h2 class="md-toolbar-tools">
                 <a ng-href="/#!/" layout="row" flex="" class="docs-logo">
@@ -41,14 +43,14 @@
             </h2>
         </md-toolbar>
 
+
         <md-content>
-
-
+            <!--Introduction-->
             <md-whiteframe id="intro"
                            class="md-whiteframe-z2 openboard-card-color"
                            layout="column" layout-align="space-around start">
                 <h2 class="docs-title-card">Introduction</h2>
-                <div class="ob-underbar"></div>
+                <!--<div class="ob-underbar"></div>-->
                 <div layout="column" layout-fill>
                     <h4>Create amazing assignments</h4>
                     <p>With <b>Openboard</b>, you can assign, submit, and grade wherever you can do.</p>
@@ -75,19 +77,22 @@
                            layout="column" layout-align="space-around start">
 
                 <h2 class="docs-title-card">1. Create a New Account </h2>
-                <div class="ob-underbar"></div>
-                <p>For access to Openboard, you need to create new user account.</p>
+                <!--<div class="ob-underbar"></div>-->
                 <div data-ng-hide="authentication.user">
+                    <p>For access to Openboard, you need to create new user account.</p>
                     <div layout="row">
-                        <md-button class="md-primary" ng-click="showSignIn($event)">
+                        <md-button class="md-primary" ng-click="showSignInTutorial($event, 'step2')">
                             <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
                             Sign In
                         </md-button>
-                        <md-button class="md-primary" ng-click="showSignUp($event)">
+                        <md-button class="md-primary" ng-click="showSignUpTutorial($event)">
                             <md-icon md-svg-src="/modules/mean-tutorials/img/log-out.svg"></md-icon>
                             Sign Up
                         </md-button>
                     </div>
+                </div>
+                <div data-ng-if="authentication.user !=''">
+                    <h4><b>Step 1 is Done</b></h4>
                 </div>
             </md-whiteframe>
 
@@ -96,30 +101,14 @@
                            class="md-whiteframe-z2 openboard-card-color"
                            layout="column" layout-align="space-around start">
                 <h2 class="docs-title-card">2. Create a New Class</h2>
-                <div class="ob-underbar"></div>
 
-                <h3>Step 2.1: Set your Role [Instructor]</h3>
-                <div>Your Current Role: {{user.roles}}</div>
-                <div data-ng-show="authentication.user">
-                    <div layout="row">
-                        <md-button class="md-primary" ng-click="showSetRule($event)">
-                            <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
-                            Set Role
-                        </md-button>
-                    </div>
-                    <pre>{{alert}}</pre>
-                </div>
-                <div data-ng-if="authentication.user.roles[0] ==='student' && authentication.user.roles">
-                    <div><h1>You need to change your role as "Instructor"</h1></div>
-                </div>
-                <div data-ng-if="authentication.user.roles[0] ==='instructor' && authentication.user.roles">
-                    <h3>Step 2.2: Create your Class Board</h3>
-                    <p>You need Instructor level</p>
+                <div data-ng-if="authentication.user!=''">
 
+                    <h4>Step 2.1: Create New Class</h4>
                     <div layout="row">
                         <md-button class="md-primary" ng-click="showNewClass($event)">
                             <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
-                            Create Your Class Board
+                            Create New Class
                         </md-button>
                     </div>
 
@@ -144,25 +133,21 @@
                             </tr>
                             </tbody>
                         </table>
+
+                        <h4>Step 2.2: Create Assignment by using a template (Add-On)</h4>
+                        <p>
+                            Click below button to download Assignment Template File onto your Google Drive
+                        </p>
+
+                        <md-button class="md-primary" ng-click="copyHWTemplate('1S1cucFhz96cGRHvXzgGqxuptNR-NgWKpIwI55RB67NU')">
+                            <md-icon style="font-size:40px; width:40px; height:40px;" md-svg-src="modules/openboard/img/doc.svg"></md-icon>
+                            Copy Assignment Template
+                        </md-button>
                     </div>
-
-                    <h3>Step 2.3: Create Assignment by using a template (Add-On)</h3>
-                    <p>
-                        Copy this Document Template including App Script
-                        Click a Document Image to Open Google Doc
-                    </p>
-                    <a href="https://docs.google.com/document/d/1S1cucFhz96cGRHvXzgGqxuptNR-NgWKpIwI55RB67NU/edit?usp=sharing" target="_blank">
-                        <img title="Google Doc" class="meanT-googleDocImg" ng-src="modules/mean-tutorials/img/google_docs.png">
-                    </a>
-
-                    <p>
-                        From Google Doc, Make a copy onto your google drive.
-                        (File -> Make a Copy)
-                    </p>
-
-                    <img title="Google Doc" class="img-responsive" ng-src="modules/openboard/img/copyFile.png">
                 </div>
-
+                <div ng-if="authentication.user ==''">
+                    You need to sign in First
+                </div>
             </md-whiteframe>
 
             <!--Create an New Assignment-->
@@ -170,8 +155,8 @@
                            class="md-whiteframe-z2 openboard-card-color"
                            layout="column" layout-align="space-around start">
                 <h2 class="docs-title-card">3. Create a New Assignment</h2>
-                <div class="ob-underbar"></div>
-                <div>Step 3.1: Check your assignment is uploaded</div>
+                <!--<div class="ob-underbar"></div>-->
+                <h4>Step 3.1: Check your assignment is uploaded</h4>
                 <div>Step 3.2:</div>
 
                 <div data-ng-show="authentication.user">
@@ -182,6 +167,7 @@
                         </md-button>
                     </div>
                 </div>
+
             </md-whiteframe>
 
             <!--Access an Assignment-->
@@ -189,62 +175,61 @@
                            class="md-whiteframe-z2 openboard-card-color"
                            layout="column" layout-align="space-around start">
                 <h2 class="docs-title-card">4. Access an Assignment</h2>
-                <div class="ob-underbar"></div>
-                <h3>Step 4.1: Change your role as student</h3>
+                <!--<div class="ob-underbar"></div>-->
 
-                <md-button class="md-primary" ng-click="showSetRule()">
-                    <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
-                    Set Role
-                </md-button>
+
+                <!--<md-button class="md-primary" ng-click="showSetRule()">-->
+                    <!--<md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>-->
+                    <!--Set Role-->
+                <!--</md-button>-->
+
+                <h4>Step 4.1: Clik Open Button</h4>
+                <div style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
+                    <div class="tableTitle">List HW</div>
+                    <p hide-sm>Add, Edit, Udpate or Remove Homework</p>
+                    <table st-table="hwsCopy" st-safe-src="hws" class="table table-striped">
+                        <thead>
+                        <tr>
+                            <!--<th></th>-->
+                            <th st-sort="title">Title</th>
+                            <th>Class</th>
+                            <th st-sort="dDate">Due Date</th>
+                            <th st-sort="totalGrade" hide-sm>Total</th>
+                            <th st-sort="percent" hide-sm>Total %</th>
+                            <th>Doc Link</th>
+                        </tr>
+                        <tr>
+                            <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="HW in hwsCopy">
+                            <!--<td cs-select="HW"></td>-->
+                            <td>{{HW.title}}</td>
+                            <td hide-sm>{{HW.class.name}}</td>
+                            <td show-sm hide-gt-sm>{{HW.class.prefix}}</td>
+                            <td>{{HW.dDate |  date : format : timezone}}</td>
+                            <td>{{HW.totalGrade}}</td>
+                            <td hide-sm>{{HW.percent}}</td>
+                            <td> <md-button class="md-warn md-raised" style="font-size:0.8em" ng-click="linkHW(HW)">Open</md-button></td>
+                        </tr>
+                        <tr>
+                            <td><b>Total</b></td>
+                            <td></td>
+                            <td></td>
+                            <td>{{totalHwPoints}}</td>
+                            <td hide-sm>{{totalPercentages}}</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
+                <h4>Step 4.2: Open your Google Doc</h4>
 
-                <div data-ng-if="authentication.user.roles[0] ==='student' && authentication.user.roles">
-                    <h3>Step 4.2: Clik Open Button</h3>
-                    <div style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
-                        <div class="tableTitle">List HW</div>
-                        <p hide-sm>Add, Edit, Udpate or Remove Homework</p>
-                        <table st-table="hwsCopy" st-safe-src="hws" class="table table-striped">
-                            <thead>
-                            <tr>
-                                <!--<th></th>-->
-                                <th st-sort="title">Title</th>
-                                <th>Class</th>
-                                <th st-sort="dDate">Due Date</th>
-                                <th st-sort="totalGrade" hide-sm>Total</th>
-                                <th st-sort="percent" hide-sm>Total %</th>
-                                <th>Doc Link</th>
-                            </tr>
-                            <tr>
-                                <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr ng-repeat="HW in hwsCopy">
-                                <!--<td cs-select="HW"></td>-->
-                                <td>{{HW.title}}</td>
-                                <td hide-sm>{{HW.class.name}}</td>
-                                <td show-sm hide-gt-sm>{{HW.class.prefix}}</td>
-                                <td>{{HW.dDate |  date : format : timezone}}</td>
-                                <td>{{HW.totalGrade}}</td>
-                                <td hide-sm>{{HW.percent}}</td>
-                                <td> <md-button class="md-warn md-raised" style="font-size:0.8em" ng-click="linkHW(HW)">Open</md-button></td>
-                            </tr>
-                            <tr>
-                                <td><b>Total</b></td>
-                                <td></td>
-                                <td></td>
-                                <td>{{totalHwPoints}}</td>
-                                <td hide-sm>{{totalPercentages}}</td>
-                                <td></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <h3>Step 4.3: Open your Google Doc</h3>
+                <h4>Step 4.3: Submit Your HW</h4>
+                <img title="Submit Google Doc" class="img-responsive" ng-src="modules/openboard/img/submitGdoc.gif">
 
-                    <h3>Step 4.4: Submit Your HW</h3>
-                    <img title="Submit Google Doc" class="img-responsive" ng-src="modules/openboard/img/submitGdoc.gif">
-                </div>
+
             </md-whiteframe>
 
             <!--Grade an Assignment-->
@@ -254,11 +239,11 @@
                 <h2 class="docs-title-card">5. Grade an Assignment</h2>
                 <div class="ob-underbar"></div>
 
-                <p> Once you submitted an assignment, a notification email will be sent to Instructor's email account. For this tutorial, you are the instructor. Check your Gmail Account.</p>
+                <p> Once you submitted an assignment, a notification email will be sent to Instructor's email account. For this tutorial, you are the instructor. Check your email Account.</p>
 
-                <h3>Step 5.1: Check your E-mail Account</h3>
+                <h4>Step 5.1: Check your E-mail Account</h4>
 
-                <h3>Step 5.2.1: Open Submitted Assignment from Link</h3>
+                <h4>Step 5.2.1: Open Submitted Assignment from Link</h4>
                 <div style="border-top: 5px solid #ee6c0a; padding: 10px;">
                     <div class="tableTitle">Grade Board for Student</div>
                     <p hide-sm>Check your registered classes</p>
@@ -288,7 +273,7 @@
                     </table>
                 </div>
 
-                <h3>Step 5.2.2: Or Open Submitted Assignment from a website</h3>
+                <h4>Step 5.2.2: Or Open Submitted Assignment from a website</h4>
 
             </md-whiteframe>
 
@@ -297,7 +282,7 @@
             <md-whiteframe class="md-whiteframe-z2 openboard-card-color" layout="column">
                 <div style="border-top: 5px solid #ee6c0a; padding: 5px;">
                     <div class="tableTitle">Grade Board for Student</div>
-                    <p hide-sm>Check your registered classes</p>
+                    <!--<p hide-sm>Check your registered classes</p>-->
                     <table st-table="gradeCollectionCopy" st-safe-src="gradeCollection" class="table table-striped">
                         <thead>
                         <tr>
