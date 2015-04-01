@@ -248,6 +248,31 @@
                 <h4>Step 5.1: Check your E-mail Account</h4>
 
                 <h4>Step 5.2.1: Open Submitted Assignment from Link</h4>
+
+                <div class="md-body-2" style="border-top: 5px solid #ee6c0a; padding: 5px;">
+                    <div class="tableTitle">Grade Board for Student</div>
+                    <!--<p hide-sm>Check your registered classes</p>-->
+                    <table st-table="gradeCollectionCopy" st-safe-src="submittedHW" class="table table-striped">
+                        <thead>
+                        <tr>
+
+                            <th st-sort="numAssignment">Prefix</th>
+                            <th st-sort="grade">Class</th>
+                            <th st-sort="grade">Student</th>
+                            <th st-sort="percent">Doc Link</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in submittedHWCopyCopy">
+                            <td>{{row.class.prefix | uppercase}}</td>
+                            <td>{{row.class.name}}</td>
+                            <td>{{row.user.displayName}}</td>
+                            <td><md-button class="md-warn md-raised" style="font-size:0.8em" ng-click="openDoc(row.docId)">Open</md-button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <div class="md-body-2" style="border-top: 5px solid #ee6c0a; padding: 10px;">
                     <div class="tableTitle">Grade Board for Student</div>
                     <p hide-sm>Check your registered classes</p>
@@ -256,17 +281,14 @@
                            class="table table-striped">
                         <thead>
                         <tr>
-                            <th></th>
-                            <th st-sort="numAssignment">Prefix</th>
-                            <th st-sort="grade">Class name</th>
-                            <th st-sort="percent">Score</th>
+                            <th st-sort="class">Prefix</th>
+                            <th st-sort="name">Class name</th>
                             <th>Graded</th>
                             <th>Doc Link</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr ng-repeat="subm in submittedHWCopy">
-                            <td cs-select="subm"></td>
                             <td>{{subm.class.prefix | uppercase}}</td>
                             <td>{{subm.class.name}}</td>
                             <td>200</td>
@@ -284,8 +306,9 @@
             <!-- List Grade -->
             <!--Grade Board for Student-->
             <md-whiteframe class="md-whiteframe-z2 openboard-card-color" layout="column">
+
                 <div class="md-body-2" style="border-top: 5px solid #ee6c0a; padding: 5px;">
-                    <h3 class="docs-title-card">Grade Board for Student</h3>
+                    <div class="tableTitle">Grade Board for Student</div>
                     <!--<p hide-sm>Check your registered classes</p>-->
                     <table st-table="gradeCollectionCopy" st-safe-src="submittedHWCopy" class="table table-striped">
                         <thead>

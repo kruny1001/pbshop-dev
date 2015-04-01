@@ -4034,6 +4034,11 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 	$scope.gradeCollection = D2lClassesOwnership.query();
 	$scope.gradeCollectionCopy = [].concat($scope.gradeCollection);
 
+    $scope.openDoc = function(docId){
+        var url = 'https://docs.google.com/document/d/'+docId+'/edit';
+        $window.open(url);
+    };
+
 	$scope.scrollTo = function(elementId){
 		var target = $("#"+elementId).offset().top;
 

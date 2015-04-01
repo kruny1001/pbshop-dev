@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/all.js" afterPath="$PROJECT_DIR$/config/env/all.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.css" afterPath="$PROJECT_DIR$/public/dist/application.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/development.js" afterPath="$PROJECT_DIR$/config/env/development.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/openboard/template/tutorial/newClass-dialog.tpl.html" afterPath="$PROJECT_DIR$/public/modules/openboard/template/tutorial/newClass-dialog.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/openboard/css/openboard-tutorial.css" afterPath="$PROJECT_DIR$/public/modules/openboard/css/openboard-tutorial.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" afterPath="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -40,31 +35,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="openboard.client.view.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7205882" vertical-offset="2393" max-vertical-offset="3040">
-              <caret line="305" column="29" selection-start-line="305" selection-start-column="29" selection-end-line="305" selection-end-column="29" />
-              <folding>
-                <element signature="n#md-toolbar#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#md-icon#0;n#a#0;n#h2#0;n#md-toolbar#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#md-whiteframe#1;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#md-icon#0;n#md-button#0;n#div#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#md-whiteframe#3;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#md-whiteframe#6;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#section#0;n#section#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="d2l-hws-submits.server.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws-submits.server.controller.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -75,12 +45,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="d2l-hws-submits.server.routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws-submits.server.routes.js">
+      <file leaf-file-name="openboard.client.view.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
-              <caret line="11" column="41" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="41" />
-              <folding />
+            <state vertical-scroll-proportion="0.44537815" vertical-offset="4823" max-vertical-offset="6840">
+              <caret line="265" column="67" selection-start-line="265" selection-start-column="67" selection-end-line="265" selection-end-column="67" />
+              <folding>
+                <element signature="n#style#0;n#md-icon#0;n#a#0;n#h2#0;n#md-toolbar#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-icon#0;n#md-button#0;n#div#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-button#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-button#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-whiteframe#6;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#md-whiteframe#6;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,11 +69,11 @@
       <file leaf-file-name="openboard.client.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4465">
-              <caret line="21" column="26" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="4560">
+              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
               <folding>
-                <element signature="e#2445#2674#0" expanded="false" />
-                <element signature="e#5046#5456#0" expanded="false" />
+                <element signature="e#2589#2818#0" expanded="false" />
+                <element signature="e#5190#5600#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -307,8 +288,8 @@
     <data>$PROJECT_DIR$/node_modules/karma</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="619" />
-    <option name="width" value="1182" />
+    <option name="x" value="688" />
+    <option name="width" value="1113" />
     <option name="height" value="1073" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -1364,12 +1345,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00071" summary="optimized modules">
-      <created>1422226904611</created>
-      <option name="number" value="00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1422226904612</updated>
-    </task>
     <task id="LOCAL-00072" summary="optimized modules">
       <created>1422228440226</created>
       <option name="number" value="00072" />
@@ -1658,11 +1633,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427915256782</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="draft version2">
+      <created>1427918538435</created>
+      <option name="number" value="00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1427918538436</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="619" y="0" width="1182" height="1073" extended-state="0" />
+    <frame x="688" y="0" width="1113" height="1073" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32133332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1672,12 +1653,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19676946" sideWeight="0.16016015" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33127317" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3726776" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3726776" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25524476" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2716279" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27406418" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1732,7 +1713,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Google API Factory" />
     <MESSAGE value="projects dashboard with API" />
     <MESSAGE value="mean Home" />
     <MESSAGE value="util size" />
@@ -1757,7 +1737,8 @@
     <MESSAGE value="lms hws-hws" />
     <MESSAGE value="lms d2l-classes" />
     <MESSAGE value="draft version 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="draft version 1" />
+    <MESSAGE value="draft version2" />
+    <option name="LAST_COMMIT_MESSAGE" value="draft version2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2123,17 +2104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4465">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="26" />
-          <folding>
-            <element signature="e#2445#2674#0" expanded="false" />
-            <element signature="e#5046#5456#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws-submits/services/d2l-hws-submits.client.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
@@ -2150,25 +2120,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="4560">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding>
+            <element signature="e#2589#2818#0" expanded="false" />
+            <element signature="e#5190#5600#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7205882" vertical-offset="2393" max-vertical-offset="3040">
-          <caret line="305" column="29" selection-start-line="305" selection-start-column="29" selection-end-line="305" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.44537815" vertical-offset="4823" max-vertical-offset="6840">
+          <caret line="265" column="67" selection-start-line="265" selection-start-column="67" selection-end-line="265" selection-end-column="67" />
           <folding>
-            <element signature="n#md-toolbar#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#md-icon#0;n#a#0;n#h2#0;n#md-toolbar#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#md-whiteframe#1;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#md-icon#0;n#md-button#0;n#div#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#md-whiteframe#3;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-button#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#md-whiteframe#6;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#section#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#md-whiteframe#6;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
