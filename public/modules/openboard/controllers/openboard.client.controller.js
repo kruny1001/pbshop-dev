@@ -3,7 +3,7 @@
 
 angular.module('openboard').controller('OpenboardController', OpenboardController);
 
-function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http, Authentication, Users, D2lHws, D2lClassesOwnership, D2lHwsSubmitsTrue, UsersRole) {
+function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http, Authentication, Users, D2lHws, D2lGrades, D2lClassesOwnership, D2lHwsSubmitsTrue, UsersRole) {
 	// Openboard controller logic
 	// ...
 
@@ -21,8 +21,17 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 	$scope.submittedHW = D2lHwsSubmitsTrue.query();
 	$scope.submittedHWCopy = [].concat($scope.submittedHW);
 
-	$scope.gradeCollection = D2lClassesOwnership.query();
-	$scope.gradeCollectionCopy = [].concat($scope.gradeCollection);
+
+	$scope.gradeCollection = D2lGrades.query();
+	//$scope.gradeCollectionCopy = [].concat($scope.gradeCollection);
+
+	console.log('ddd');
+	//$http.get('http://pbshop.herokuapp.com/d2l-grades').success(function(result){
+	//	$scope.gradeCollection = result;
+	//	console.log(result[0]);
+	//	$scope.gradeCollectionCopy = [].concat($scope.gradeCollection);
+	//});
+
 
     $scope.openDoc = function(docId){
         var url = 'https://docs.google.com/document/d/'+docId+'/edit';

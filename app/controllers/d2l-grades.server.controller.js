@@ -103,8 +103,9 @@ exports.delete = function(req, res) {
 /**
  * List of D2l grades
  */
-exports.list = function(req, res) { 
-	D2lGrade.find().sort('-created').populate('user', 'displayName').exec(function(err, d2lGrades) {
+exports.list = function(req, res) {
+	var populationQuery = [{path:'class', select:'name prefix'}, {path:'student', select:'displayName email username'}, {path:'instructor', select:'displayName email username'}];
+	D2lGrade.find().sort('-created').populate(populationQuery).exec(function(err, d2lGrades) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
