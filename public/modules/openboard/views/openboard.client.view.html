@@ -6,6 +6,9 @@
     <!--<div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>-->
     <!-- Debuging Purpose End-->
 
+
+
+
 <style>
     md-backdrop.md-opaque.md-default-theme {
         background-color: rgba(0,0,0,.3);
@@ -23,6 +26,7 @@
 
     <!-- Main Content-->
     <md-content layout="column" flex>
+
 
         <!-- ToolBar -->
         <md-toolbar id="toolBar">
@@ -47,9 +51,15 @@
 
         <md-content>
             <!--Introduction-->
+
             <md-whiteframe id="intro"
                            class="md-whiteframe-z2 openboard-card-color ob-underbar-base"
                            layout="column" layout-align="space-around start">
+                <!--Need enable ProgressLinearCtrl from openbardCtrl-->
+                <!--<div class="progress-report" ng-controller="progressLinearCtrl" layout="column" layout-margin style="padding:2px;">-->
+                    <!--<md-progress-linear class="md-accent" md-mode="{{mode}}" value="{{determinateValue}}"></md-progress-linear>-->
+                <!--</div>-->
+
                 <h3 class="docs-title-card">Introduction</h3>
                 <!--<div class="ob-underbar"></div>-->
                 <div layout="column" layout-fill>

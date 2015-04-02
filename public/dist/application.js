@@ -945,22 +945,44 @@ angular.module('d2l-classes').config(['$stateProvider',
 	function($stateProvider) {
 		// D2l classes state routing
 		$stateProvider.
-		state('listD2lClasses', {
-			url: '/d2l-classes',
-			templateUrl: 'modules/d2l-classes/views/list-d2l-classes.client.view.html'
-		}).
-		state('createD2lClass', {
-			url: '/d2l-classes/create',
-			templateUrl: 'modules/d2l-classes/views/create-d2l-class.client.view.html'
-		}).
-		state('viewD2lClass', {
-			url: '/d2l-classes/:d2lClassId',
-			templateUrl: 'modules/d2l-classes/views/view-d2l-class.client.view.html'
-		}).
-		state('editD2lClass', {
-			url: '/d2l-classes/:d2lClassId/edit',
-			templateUrl: 'modules/d2l-classes/views/edit-d2l-class.client.view.html'
-		});
+
+			state('d2lClassInfo', {
+				abstract: true,
+				url: '/class',
+				templateUrl: 'modules/d2l-classes/views/d2l-class-info.client.view.html'
+			}).
+				state('d2lClassInfo.contact', {
+					url: '/class-contact',
+					controller:'contactController',
+					templateUrl: 'modules/d2l-classes/views/class-contact.client.view.html'
+				}).
+				state('d2lClassInfo.about', {
+					url: '/about',
+					controller:'aboutController',
+					templateUrl: 'modules/d2l-classes/views/class-about.client.view.html'
+				}).
+				state('d2lClassInfo.home', {
+					url: '/home',
+					controller:'mainController',
+					templateUrl: 'modules/d2l-classes/views/class-home.client.view.html'
+				}).
+
+			state('listD2lClasses', {
+				url: '/d2l-classes',
+				templateUrl: 'modules/d2l-classes/views/list-d2l-classes.client.view.html'
+			}).
+			state('createD2lClass', {
+				url: '/d2l-classes/create',
+				templateUrl: 'modules/d2l-classes/views/create-d2l-class.client.view.html'
+			}).
+			state('viewD2lClass', {
+				url: '/d2l-classes/:d2lClassId',
+				templateUrl: 'modules/d2l-classes/views/view-d2l-class.client.view.html'
+			}).
+			state('editD2lClass', {
+				url: '/d2l-classes/:d2lClassId/edit',
+				templateUrl: 'modules/d2l-classes/views/edit-d2l-class.client.view.html'
+			});
 	}
 ]);
 'use strict';
@@ -1034,7 +1056,72 @@ angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$st
 			});
 		};
 	}
-]);
+]).controller('gridClassMenu', gridClassMenu);
+
+function gridClassMenu($scope){
+	this.tiles = buildGridModel({
+		icon : "avatar:svg-",
+		title: "Svg-",
+		background: ""
+	});
+	function buildGridModel(tileTmpl){
+		var it, results = [ ];
+		for (var j=0; j<11; j++) {
+			it = angular.extend({},tileTmpl);
+			it.icon  = it.icon + (j+1);
+			it.title = it.title + (j+1);
+			it.span  = { row : "1", col : "1" };
+			switch(j+1) {
+				case 1:
+					it.background = "red";
+					it.span.row = it.span.col = 2;
+					break;
+				case 2: it.background = "green";         break;
+				case 3: it.background = "darkBlue";      break;
+				case 4:
+					it.background = "blue";
+					it.span.col = 2;
+					break;
+				case 5:
+					it.background = "yellow";
+					it.span.row = it.span.col = 2;
+					break;
+				case 6: it.background = "pink";          break;
+				case 7: it.background = "darkBlue";      break;
+				case 8: it.background = "purple";        break;
+				case 9: it.background = "deepBlue";      break;
+				case 10: it.background = "lightPurple";  break;
+				case 11: it.background = "yellow";       break;
+			}
+			results.push(it);
+		}
+		return results;
+	}
+}
+gridClassMenu.$inject = ["$scope"];
+
+
+
+angular.module('d2l-classes')
+	.controller('mainController', ["$scope", "$state", function($scope, $state) {
+		$scope.pageClass = 'page-home';
+		$scope.goTo = function(name){
+			$state.go(name);
+		}
+	}])
+	.controller('aboutController', ["$scope", "$state", function($scope, $state) {
+		$scope.pageClass = 'page-about';
+		$scope.goTo = function(name){
+			$state.go(name);
+		}
+	}])
+	.controller('contactController', ["$scope", "$state", function($scope, $state) {
+		$scope.pageClass = 'page-contact';
+		$scope.goTo = function(name){
+			$state.go(name);
+		}
+	}]);
+
 
 'use strict';
 
@@ -4044,7 +4131,25 @@ angular.module('openboard').config(['$stateProvider',
 'use strict';
 
 
-angular.module('openboard').controller('OpenboardController', OpenboardController);
+angular.module('openboard')
+	.config(["$mdThemingProvider", function($mdThemingProvider) {}])
+	//.controller('progressLinearCtrl', ['$scope', '$interval', function($scope, $interval) {
+	//	$scope.mode = 'query';
+	//	$scope.determinateValue = 30;
+	//	$scope.determinateValue2 = 30;
+	//	$interval(function() {
+	//		$scope.determinateValue += 1;
+	//		$scope.determinateValue2 += 1.5;
+	//		if ($scope.determinateValue > 100) {
+	//			$scope.determinateValue = 30;
+	//			$scope.determinateValue2 = 30;
+	//		}
+	//	}, 100, 0, true);
+	//	$interval(function() {
+	//		$scope.mode = ($scope.mode == 'query' ? 'determinate' : 'query');
+	//	}, 7200, 0, true);
+	//}])
+	.controller('OpenboardController', OpenboardController);
 
 function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http, Authentication, Users, D2lHws, D2lGrades, D2lClassesOwnership, D2lHwsSubmitsTrue, UsersRole) {
 	// Openboard controller logic

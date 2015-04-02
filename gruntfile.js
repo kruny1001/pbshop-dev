@@ -177,9 +177,9 @@ module.exports = function(grunt) {
 	// Test task.
 	grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
 
-    grunt.registerTask('dgeni', 'Generate docs via dgeni.', function() {
-        var done = this.async();
-        var dgeni = new Dgeni([require('./docs/dgeni-example')]);
-        dgeni.generate().then(done);
-    });
+    //grunt.registerTask('dgeni', 'Generate docs via dgeni.', function() {
+    //    var done = this.async();
+    //    var dgeni = new Dgeni([require('./docs/dgeni-example')]);
+    //    dgeni.generate().then(done);
+    //});
 };

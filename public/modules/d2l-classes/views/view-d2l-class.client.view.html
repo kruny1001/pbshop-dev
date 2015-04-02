@@ -1,8 +1,73 @@
+
 <section class="headerEnabled" data-ng-controller="D2lClassesController" data-ng-init="findOne()">
+
+	<style>
+		md-backdrop.md-opaque.md-default-theme {
+			background-color: rgba(0,0,0,.3);
+			height:100%;
+		}
+
+	</style>
+
+	<button class="docs-menu-icon" style="z-index:1111; position:fixed; right: 15px; top: 8px; width:45px; height:45px" aria-label="Toggle Menu"
+			ng-click="toggleLeftOpen()">
+		<md-icon md-svg-src="modules/openboard/img/menu.svg"
+				 class="ng-isolate-scope md-default-theme" aria-hidden="true">
+		</md-icon>
+	</button>
+
+	<!-- Main Content-->
+	<md-content layout="column" flex>
+
+		<!-- ToolBar -->
+		<md-toolbar id="toolBar">
+			<h2 class="md-toolbar-tools">
+				<a ng-href="/#!/" layout="row" flex="" class="docs-logo">
+					<md-icon md-svg-src="modules/openboard/img/pack.svg"
+							 class="svg-logotype ng-isolate-scope md-default-theme"
+							 style="height:40px;
+                                 font-size:40px; margin:0px;"
+							 aria-hidden="true">
+					</md-icon>
+					<div class="docs-logotype">Open Board</div>
+				</a>
+
+				<span class="docs-title" hide-sm>{{d2lClass.name}}</span>
+				<span flex hide-sm></span>
+				<!--<span><md-button class="md-warn" ng-click="openMenu=!openMenu">Menu</md-button></span>-->
+				<!--<span ng-if="authentication !== undefined">LogIn required</span>-->
+			</h2>
+		</md-toolbar>
+
+		<md-content>
+
+			<a sref="d2lClassInfo" class="btn btn-primary btn-lg">Home</a>
+			<a sref="d2lClassInfo" class="btn btn-danger btn-lg">Contact</a>
+
+			<div ng-controller="gridClassMenu as vm" flex>
+				<md-grid-list
+						md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+						md-row-height-gt-md="1:1" md-row-height="4:3"
+						md-gutter="8px" md-gutter-gt-sm="4px" >
+					<md-grid-tile ng-repeat="tile in vm.tiles"
+								  md-rowspan="{{tile.span.row}}"
+								  md-colspan="{{tile.span.col}}"
+								  ng-class="tile.background" >
+						<md-icon md-svg-icon="{{tile.icon}}"></md-icon>
+						<md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+					</md-grid-tile>
+				</md-grid-list>
+			</div>
+
+		</md-content>
+
+	</md-content>
+
 	<div class="page-header">
 		<!--<h1 data-ng-bind="d2lClass.name"></h1>-->
         <h1>{{d2lClass.prefix}} {{d2lClass.name}}</h1>
 	</div>
+
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == d2lClass.user._id))">
 		<a class="btn btn-primary" href="/#!/d2l-classes/{{d2lClass._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
@@ -11,6 +76,7 @@
 			<i class="glyphicon glyphicon-trash"></i>
 		</a>
 	</div>
+
 	<small>
 		<em class="text-muted">
 			Posted on
@@ -19,6 +85,7 @@
 			<span data-ng-bind="d2lClass.user.displayName"></span>
 		</em>
 	</small>
-    <div>Prefix: {{d2lClass.prefix}}</div>
+
+	<div>Prefix: {{d2lClass.prefix}}</div>
     <div>Name: {{d2lClass.name}}</div>
 </section>
