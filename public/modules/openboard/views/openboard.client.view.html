@@ -306,7 +306,7 @@
             <!-- List Grade -->
             <!--Grade Board for Student-->
             <md-whiteframe class="md-whiteframe-z2 openboard-card-color ob-underbar-yellow" layout="column">
-
+                <div class="tableTitle">Grades Analysis</div>
                 <div class="md-caption" style="border-top: 5px solid #ee6c0a; padding: 5px;">
                     <div class="tableTitle">Grade Board for Student</div>
                     <!--<p hide-sm>Check your registered classes</p>-->
@@ -316,7 +316,7 @@
                                 <th st-sort="prefix">Prefix</th>
                                 <th hide-sm st-sort="name">Class</th>
                                 <th st-sort="grade">Grade</th>
-                                <th st-sort="grade">Student</th>
+                                <th st-sort="student.displayName">Student</th>
                                 <th hide-sm st-sort="comment">Document Link</th>
                             </tr>
                         </thead>
@@ -331,6 +331,10 @@
                         </tbody>
                     </table>
                 </div>
+
+                <h4>Analysis</h4>
+                <nvd3 options="options" data="data"></nvd3>
+
             </md-whiteframe>
         </md-content>
     </md-content>

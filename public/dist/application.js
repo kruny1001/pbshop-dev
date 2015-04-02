@@ -4035,7 +4035,22 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 	$scope.gradeCollection = D2lGrades.query();
 	//$scope.gradeCollectionCopy = [].concat($scope.gradeCollection);
 
-	console.log('ddd');
+
+	$scope.options = {
+		chart: {
+			type: 'bulletChart',
+			transitionDuration: 500
+		}
+	};
+
+	$scope.data = {
+		"title": "CSC-101 A1",
+		"subtitle": "US$, in thousands",
+		"ranges": [150,225,300],
+		"measures": [220],
+		"markers": [250]
+	}
+
 	//$http.get('http://pbshop.herokuapp.com/d2l-grades').success(function(result){
 	//	$scope.gradeCollection = result;
 	//	console.log(result[0]);
