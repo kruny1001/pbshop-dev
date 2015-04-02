@@ -179,6 +179,7 @@
 
             <md-content class="md-padding" style="overflow: hidden;" layout="column" layout-align="start start">
                 <!-- Google Authentication
+                <p>We recomemend sign up with your Google Ac</p>
                 <div layout="row">
                     <md-button class="md-primary" href="/auth/google" >
                         <md-icon md-svg-src="/modules/mean-tutorials/img/social-google.svg"></md-icon>
@@ -191,6 +192,13 @@
                 <div style="margin-top:20px;" data-ng-hide="authentication.user">
 
                     <div layout="row">
+                        <p>We recomemend sign up with your Google Account</p>
+                        <div layout="row">
+                            <md-button class="md-primary" href="/auth/google" >
+                                <md-icon md-svg-src="/modules/mean-tutorials/img/social-google.svg"></md-icon>
+                            </md-button>
+                        </div>
+
                         <md-button class="md-primary" ng-click="showSignInTutorial($event)">
                             <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
                             Sign In
