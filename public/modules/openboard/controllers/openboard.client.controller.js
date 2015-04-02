@@ -190,7 +190,7 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			templateUrl: 'modules/openboard/template/authentication/signup-dialog.tpl.html',
 			targetEvent: ev
 		})
-        TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
+		TweenMax.to($("md-backdrop"),0.5,{position:'fixed'});
 	};
 
 	$scope.showSignInTutorial = function(ev, elementId) {
@@ -200,13 +200,13 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			targetEvent: ev,
             clickOutsideToClose: true
 		}).then(function(answer){
-                var target = $("#"+elementId).offset().top;
-                TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
+                //var target = $("#"+elementId).offset().top;
+                //TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
             },function(){
-                console.log('cancel');
+                //console.log('cancel');
             }
         );
-		TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
+		TweenMax.to($("md-backdrop"),0.5,{position:'fixed'});
 	};
 
 	//$scope.showSetRule = function(ev){

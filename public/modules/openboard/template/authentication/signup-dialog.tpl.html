@@ -5,7 +5,7 @@
         </h1>
     </md-toolbar>
     <md-content ng-controller="AuthenticationController">
-        <form name="projectForm" data-ng-submit="signup()">
+        <form name="projectForm" data-ng-submit="signup('openboard')">
             <md-input-container>
                 <label for="firstName">First Name</label>
                 <input required id="firstName" name="firstName" ng-model="credentials.firstName">

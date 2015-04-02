@@ -8,15 +8,6 @@ function MeanLoginCtrl($scope, Authentication, $mdDialog){
 	$scope.authentication = Authentication;
 
 
-	$scope.hide = function() {
-		$mdDialog.hide();
-	};
-	$scope.cancel = function() {
-		$mdDialog.cancel();
-	};
-	$scope.answer = function(answer) {
-		$mdDialog.hide(answer);
-	};
 }
 
 function MeanHomeController(
@@ -129,4 +120,46 @@ function MeanHomeController(
 		$state.go('signup');
 	};
 
+
+	// This function should be combined later
+	$scope.showSignUpTutorial = function(ev) {
+		console.log('mean home');
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'modules/mean-tutorials/template/authentication/signup-dialog.tpl.html',
+			targetEvent: ev
+		})
+		//TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
+	};
+
+	$scope.showSignInTutorial = function(ev, elementId) {
+		console.log('mean home');
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'modules/mean-tutorials/template/authentication/signin-dialog.tpl.html',
+			targetEvent: ev,
+			clickOutsideToClose: true
+		}).then(function(answer){
+				//var target = $("#"+elementId).offset().top;
+				//TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
+				console.log('first');
+
+			},function(){
+				console.log('cancel');
+			}
+		);
+		//TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
+	};
+	function DialogController($scope, $mdDialog){
+		$scope.hide = function() {
+			$mdDialog.hide();
+			//console.log('cancel');
+		};
+		$scope.cancel = function() {
+			$mdDialog.cancel();
+		};
+		$scope.answer = function(answer) {
+			$mdDialog.hide(answer);
+		};
+	}
 }

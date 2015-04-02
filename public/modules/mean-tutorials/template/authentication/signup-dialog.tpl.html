@@ -4,7 +4,7 @@
             Sign Up
         </h1>
     </md-toolbar>
-    <md-content>
+    <md-content ng-controller="AuthenticationController">
         <form name="projectForm" data-ng-submit="signup()">
             <md-input-container>
                 <label for="firstName">First Name</label>
@@ -44,12 +44,18 @@
             </md-input-container>
 
             <div class="md-actions" layout="row">
+                <md-button ng-click="hide()">
+                    Cancel
+                </md-button>
                 <span flex></span>
                 <md-button type="submit">
                     Sign Up
                 </md-button>
             </div>
 
+            <div data-ng-show="error" class="text-center text-danger">
+                <strong class="md-body-2" data-ng-bind="error"></strong>
+            </div>
         </form>
     </md-content>
 

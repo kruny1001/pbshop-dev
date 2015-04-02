@@ -3025,15 +3025,6 @@ function MeanLoginCtrl($scope, Authentication, $mdDialog){
 	$scope.authentication = Authentication;
 
 
-	$scope.hide = function() {
-		$mdDialog.hide();
-	};
-	$scope.cancel = function() {
-		$mdDialog.cancel();
-	};
-	$scope.answer = function(answer) {
-		$mdDialog.hide(answer);
-	};
 }
 MeanLoginCtrl.$inject = ["$scope", "Authentication", "$mdDialog"];
 
@@ -3147,6 +3138,48 @@ function MeanHomeController(
 		$state.go('signup');
 	};
 
+
+	// This function should be combined later
+	$scope.showSignUpTutorial = function(ev) {
+		console.log('mean home');
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'modules/mean-tutorials/template/authentication/signup-dialog.tpl.html',
+			targetEvent: ev
+		})
+		//TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
+	};
+
+	$scope.showSignInTutorial = function(ev, elementId) {
+		console.log('mean home');
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'modules/mean-tutorials/template/authentication/signin-dialog.tpl.html',
+			targetEvent: ev,
+			clickOutsideToClose: true
+		}).then(function(answer){
+				//var target = $("#"+elementId).offset().top;
+				//TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
+				console.log('first');
+
+			},function(){
+				console.log('cancel');
+			}
+		);
+		//TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
+	};
+	function DialogController($scope, $mdDialog){
+		$scope.hide = function() {
+			$mdDialog.hide();
+			//console.log('cancel');
+		};
+		$scope.cancel = function() {
+			$mdDialog.cancel();
+		};
+		$scope.answer = function(answer) {
+			$mdDialog.hide(answer);
+		};
+	}
 }
 MeanHomeController.$inject = ["$scope", "$state", "$http", "$mdDialog", "$mdSidenav", "$log", "Authentication"];
 
@@ -4200,7 +4233,7 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			templateUrl: 'modules/openboard/template/authentication/signup-dialog.tpl.html',
 			targetEvent: ev
 		})
-        TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
+		TweenMax.to($("md-backdrop"),0.5,{position:'fixed'});
 	};
 
 	$scope.showSignInTutorial = function(ev, elementId) {
@@ -4210,13 +4243,13 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			targetEvent: ev,
             clickOutsideToClose: true
 		}).then(function(answer){
-                var target = $("#"+elementId).offset().top;
-                TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
+                //var target = $("#"+elementId).offset().top;
+                //TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
             },function(){
-                console.log('cancel');
+                //console.log('cancel');
             }
         );
-		TweenMax.to($("md-backdrop.md"),0.5,{position:'fixed'});
+		TweenMax.to($("md-backdrop"),0.5,{position:'fixed'});
 	};
 
 	//$scope.showSetRule = function(ev){
@@ -6670,32 +6703,39 @@ angular.module('users').config(['$stateProvider',
 ]);
 'use strict';
 
-angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$timeout','$location', '$mdDialog', 'Authentication','Users',
-	function($scope, $http, $timeout, $location, $mdDialog, Authentication, Users) {
+angular.module('users').controller('AuthenticationController',
+	['$scope', '$http', '$timeout','$location', '$mdDialog', '$state', 'Authentication','Users',
+	function($scope, $http, $timeout, $location, $mdDialog, $state, Authentication, Users) {
 		$scope.authentication = Authentication;
 		$scope.user = Authentication.user;
 		// If user is signed in then redirect back home
 		//if ($scope.authentication.user) $location.path('/mean-home');
 
-		$scope.signup = function() {
+		$scope.signup = function(destination) {
 			$http.post('/auth/signup', $scope.credentials).success(function(response) {
 				// If successful we assign the response to the global user model
 				$scope.authentication.user = response;
 				$mdDialog.hide();
 				// And redirect to the index page
-				$location.path('/');
+				if(typeof destination == undefined)
+					$location.path('/');
+				else
+					$state.go(destination);
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
 		};
 
-		$scope.signin = function() {
+		$scope.signin = function(destination) {
 			$http.post('/auth/signin', $scope.credentials).success(function(response) {
 				// If successful we assign the response to the global user model
 				$scope.authentication.user = response;
 				$mdDialog.hide();
 				// And redirect to the index page
-				$location.path('/');
+				if(typeof destination == undefined)
+					$location.path('/');
+				else
+					$state.go(destination);
 			}).error(function(response) {
 				$scope.error = response.message;
 			});

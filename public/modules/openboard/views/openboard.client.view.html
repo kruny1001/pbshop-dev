@@ -81,9 +81,14 @@
                 <h3 class="docs-title-card">1. Create a New Account </h3>
                 <!--<div class="ob-underbar"></div>-->
 
+                <div data-ng-show="authentication.user">
+                    You Signed in
+                </div>
+                <div data-ng-show="authentication.user==''">
                     <p>For access to Openboard, you need to create new user account.</p>
+
                     <div layout="row">
-                        <md-button class="md-primary" ng-click="showSignInTutorial($event, 'step2')">
+                        <md-button class="md-primary" ng-click="showSignInTutorial($event)">
                             <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
                             Sign In
                         </md-button>
@@ -92,7 +97,7 @@
                             Sign Up
                         </md-button>
                     </div>
-
+                </div>
             </md-whiteframe>
 
             <!--Create a New Class-->
