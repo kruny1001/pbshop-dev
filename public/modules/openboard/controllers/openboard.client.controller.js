@@ -13,33 +13,114 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 	$scope.user = Authentication.user;
 	$scope.roles = [{name: 'Student',value:'student'},{name: 'Instructor', value:'instructor'}];
 
+
+
 	$scope.hws = D2lHws.query();
-	$scope.hwsCopy = [].concat($scope.hws);
+	$scope.hws.$promise.then(function(result){
+		$scope.hwsCopy = [].concat(result);
+	});
 	$scope.classes = D2lClassesOwnership.query();
-	$scope.classesCopy = [].concat($scope.classes);
-
+	$scope.classes.$promise.then(function(result){
+		$scope.classesCopy = [].concat(result);
+	});
 	$scope.submittedHW = D2lHwsSubmitsTrue.query();
-	$scope.submittedHWCopy = [].concat($scope.submittedHW);
-
-
+	$scope.submittedHW.$promise.then(function(result){
+		$scope.submittedHWCopy = [].concat(result);
+	});
 	$scope.gradeCollection = D2lGrades.query();
+	$scope.gradeCollection.$promise.then(function (result) {
+		$scope.gradeCollectionCopy = [].concat(result);
+	});
 	//$scope.gradeCollectionCopy = [].concat($scope.gradeCollection);
 
 
 	$scope.options = {
 		chart: {
-			type: 'bulletChart',
-			transitionDuration: 500
+			type: 'multiBarChart',
+			height: 450,
+			margin : {
+				top: 20,
+				right: 20,
+				bottom: 60,
+				left: 45
+			},
+			clipEdge: true,
+			staggerLabels: true,
+			transitionDuration: 500,
+			stacked: false,
+			showControls:false,
+			xAxis: {
+				axisLabel: 'Assignment Name',
+				showMaxMin: false,
+				tickFormat: function(d){
+					return d;
+					//return d3.requote(d);
+
+				}
+			},
+			yAxis: {
+				axisLabel: 'Percentage(%)',
+				axisLabelDistance: 40,
+				tickFormat: function(d){
+					return d3.format('d')(d);
+				}
+			},
+			//yDomain:[0,100]
 		}
 	};
 
-	$scope.data = {
-		"title": "CSC-101 A1",
-		"subtitle": "US$, in thousands",
-		"ranges": [150,225,300],
-		"measures": [220],
-		"markers": [250]
-	}
+	$scope.data1 =
+		[
+			{
+		"values" : [{
+			"y" : 75,
+			"x" : "Kevin"
+		}, {
+			"y" : 90,
+			"x" : "Eric"
+		}, {
+			"y" : 95,
+			"x" : "Jason"
+		}],
+		"key" : "Assignment1"
+	}, {
+		"values" : [{
+			"y" : 46,
+			"x" : "Kevin"
+		}, {
+			"y" : 100,
+			"x" : "Eric"
+		}, {
+			"y" : 100,
+			"x" : "Jason"
+		}],
+		"key" : "Assignment2"
+	},{
+		"values" : [{
+			"y" : 65,
+			"x" : "Kevin"
+		}, {
+			"y" : 70,
+			"x" : "Eric"
+		}, {
+			"y" : 35,
+			"x" : "Jason"
+		}],
+		"key" : "Assignment3"
+	},
+		{
+			"values" : [{
+				"y" : 45,
+				"x" : "Kevin"
+			}, {
+				"y" : 90,
+				"x" : "Eric"
+			}, {
+				"y" : 85,
+				"x" : "Jason"
+			}],
+			"key" : "Assignment4"
+		}];
 
 	//$http.get('http://pbshop.herokuapp.com/d2l-grades').success(function(result){
 	//	$scope.gradeCollection = result;
@@ -81,11 +162,11 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
         $window.open(AppScriptAPI+param);
     };
 
-	$scope.toggleLeft = function() {
+	$scope.toggleLeftOpen = function() {
 		$mdSidenav('left').toggle()
 			.then(function(){
                 TweenMax.to($("md-backdrop "),0.1,{position:'fixed'});
-				$log.debug("toggle left is done");
+				//$log.debug("toggle left is done");
 
 			});
 	};
@@ -173,9 +254,9 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			clickOutsideToClose: true
 		}).then(
 			function(){
-                var target = $("#step4").offset().top;
-                TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
-                $log.debug('created Class');
+				//var target = $("#step4").offset().top;
+        //TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
+        $log.debug('created Class');
 				$scope.classes = D2lClassesOwnership.query();
 				$scope.classesCopy = [].concat($scope.classes);
 

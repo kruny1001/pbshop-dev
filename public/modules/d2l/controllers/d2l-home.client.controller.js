@@ -18,7 +18,7 @@ function D2lHomeController(
 	$http.get('/d2l-grades').success(
 		function(result){
 			$scope.allGrade = result;
-			console.log(result);
+			//console.log(result);
 		}
 	);
 	var authentication = Authentication;
