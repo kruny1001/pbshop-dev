@@ -361,4 +361,16 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 		});
 	};
 
+	$scope.ownHwUpdate = function(){
+
+	}
+
+	$scope.allHwUpdate = function(){
+
+	}
+
+	$scope.openSubmission = function(docId){
+
+	}
+
 }

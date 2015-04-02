@@ -187,6 +187,7 @@
                 <p>
                     You can make a copy of assignment template by clicking open button.
                     Open Board will upload new file onto your Google Drive</p>
+
                 <!--<md-button class="md-primary" ng-click="showSetRule()">-->
                     <!--<md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>-->
                     <!--Set Role-->
@@ -194,10 +195,13 @@
                 <br/>
                 <br/>
 
-                    <h4>Step 4.1: Clik Open Button</h4>
+
+                    <h4>Step 4.1: Click Open Button</h4>
                     <div class="md-caption" style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
                         <div class="tableTitle">List HW</div>
                         <p hide-sm>Add, Edit, Udpate or Remove Homework</p>
+                        <md-button ng-click="ownHwUpdate()">Your Class assignments</md-button>
+                        <md-button ng-click="allHwUpdate()">All assignments from Open Board</md-button>
                         <table st-table="hwsCopy" st-safe-src="hws" class="table table-striped">
                             <thead>
                             <tr>
@@ -222,50 +226,17 @@
                                 <td>{{HW.dDate |  date : format : timezone}}</td>
                                 <td hide-sm>{{HW.totalGrade}}</td>
                                 <td hide-sm>{{HW.percent}}</td>
-                                <td><button type="button" style="font-size:0.8em" class="btn btn-default" ng-click="linkHW(HW)">Open</button>
+                                <td><md-button class="md-warn md-raised" ng-click="linkHW(HW)">Open</md-button>
                                     <!--<md-button class="md-warn md-raised" style="font-size:0.8em" ng-click="linkHW(HW)">Open</md-button>-->
                                 </td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
-
-
-
-
-                <h4>Step 5.3: Check Grade</h4>
-                <div class="md-caption" style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
-                    <div class="tableTitle">Grade Board</div>
-                    <table st-table="gradeCollectionCopy" st-safe-src="gradeCollection" class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th st-sort="prefix">Prefix</th>
-                            <th hide-sm st-sort="name">Class</th>
-                            <th st-sort="grade">Grade</th>
-                            <th st-sort="student.displayName">Student</th>
-                            <th hide-sm st-sort="comment">Document Link</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr ng-repeat="r in gradeCollectionCopy">
-                            <td>{{r.class.prefix | uppercase}}</td>
-                            <td hide-sm>{{r.class.name}}</td>
-                            <td>{{r.grade}}</td>
-                            <td>{{r.student.displayName}}</td>
-                            <td hide-sm>{{r.comment}}</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-
                     <h4>Step 4.2: Submit Your HW</h4>
                     <div style="margin-left:auto; margin-right:auto">
                         <img title="Submit Google Doc" class="img-responsive" ng-src="modules/openboard/img/submitGdoc.gif">
                     </div>
-
-
-
-
             </md-whiteframe>
 
             <!--Grade an Assignment-->
@@ -291,7 +262,7 @@
                         <tr>
                             <th st-sort="class">Prefix</th>
                             <th st-sort="name">Class name</th>
-                            <th>Graded</th>
+                            <th st-sort="user.displayName">Student</th>
                             <th>Doc Link</th>
                         </tr>
                         </thead>
@@ -299,9 +270,8 @@
                         <tr ng-repeat="subm in submittedHWCopy">
                             <td>{{subm.class.prefix | uppercase}}</td>
                             <td>{{subm.class.name}}</td>
-                            <td>200</td>
-                            <td></td>
-                            <td><md-button></md-button></td>
+                            <td>{{subm.user.displayName}}</td>
+                            <td><md-button class="md-warn md-raised" ng-click="openDoc(subm.docId)">Grade</md-button></td>
                         </tr>
                         </tbody>
                     </table>

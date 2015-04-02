@@ -4371,6 +4371,18 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 		});
 	};
 
+	$scope.ownHwUpdate = function(){
+
+	}
+
+	$scope.allHwUpdate = function(){
+
+	}
+
+	$scope.openSubmission = function(docId){
+
+	}
+
 }
 OpenboardController.$inject = ["$scope", "$log", "$mdDialog", "$mdSidenav", "$window", "$http", "Authentication", "Users", "D2lHws", "D2lGrades", "D2lClassesOwnership", "D2lHwsSubmitsTrue", "UsersRole"];
 
