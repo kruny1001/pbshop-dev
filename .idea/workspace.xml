@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -142,11 +145,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.39184952">
       <split-first>
         <leaf>
-          <file leaf-file-name="openboard.client.view.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="openboard.client.view.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.23554604">
-                  <caret line="266" column="0" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+                <state vertical-scroll-proportion="-4.8039217">
+                  <caret line="275" column="0" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
                   <folding>
                     <element signature="n#style#0;n#section#0;n#!!top" expanded="false" />
                     <element signature="n#style#0;n#button#0;n#section#0;n#!!top" expanded="true" />
@@ -166,6 +169,36 @@
                     <element signature="n#style#0;n#md-sidenav#0;n#section#0;n#section#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#md-icon#0;n#a#0;n#h1#0;n#md-toolbar#0;n#md-sidenav#0;n#section#0;n#section#0;n#!!top" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="users.authentication.server.controller.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/users/users.authentication.server.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-4.3703704">
+                  <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="signin.client.view.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/modules/users/views/authentication/signin.client.view.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-23.75">
+                  <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="40" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="authentication.client.controller.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.3633218">
+                  <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="22" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -211,7 +244,7 @@
           <file leaf-file-name="openboard.client.view.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5465587">
+                <state vertical-scroll-proportion="0.48736462">
                   <caret line="219" column="19" selection-start-line="219" selection-start-column="19" selection-end-line="219" selection-end-column="20" />
                   <folding>
                     <element signature="n#style#0;n#section#0;n#!!top" expanded="false" />
@@ -273,7 +306,6 @@
         <option value="$PROJECT_DIR$/public/modules/d2l-hws/services/d2l-hws.client.service.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-classes/services/d2l-classes.client.service.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l/controllers/d2l-hw.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js" />
         <option value="$PROJECT_DIR$/app/controllers/users/users.profile.server.controller.js" />
         <option value="$PROJECT_DIR$/public/lib/angular-material/modules/js/dialog/dialog.js" />
         <option value="$PROJECT_DIR$/bower.json" />
@@ -311,6 +343,7 @@
         <option value="$PROJECT_DIR$/public/modules/openboard/css/openboard-tutorial.css" />
         <option value="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js" />
       </list>
     </option>
   </component>
@@ -506,7 +539,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="277" />
+    <option name="x" value="407" />
     <option name="y" value="23" />
     <option name="width" value="1616" />
     <option name="height" value="865" />
@@ -1085,12 +1118,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00129" summary="d2l-home decorate view">
-      <created>1427215991271</created>
-      <option name="number" value="00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1427215991271</updated>
-    </task>
     <task id="LOCAL-00130" summary="d2l-home decorate view2">
       <created>1427216813732</created>
       <option name="number" value="00130" />
@@ -1379,26 +1406,32 @@
       <option name="project" value="LOCAL" />
       <updated>1427955234298</updated>
     </task>
-    <option name="localTasksCounter" value="178" />
+    <task id="LOCAL-00178" summary="openboard">
+      <created>1427955710434</created>
+      <option name="number" value="00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1427955710434</updated>
+    </task>
+    <option name="localTasksCounter" value="179" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="277" y="23" width="1616" height="865" extended-state="0" />
+    <frame x="407" y="23" width="1616" height="865" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37349397" sideWeight="0.8169177" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18875502" sideWeight="0.8169177" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3751669" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27968338" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3812665" sideWeight="0.18308227" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14860977" sideWeight="0.50970876" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33199465" sideWeight="0.78066915" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21253918" sideWeight="0.31684983" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21253918" sideWeight="0.31518152" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21253918" sideWeight="0.6831502" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26907632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21253918" sideWeight="0.6848185" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26907632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32058048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1485,20 +1518,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/node_modules/mpromise/lib/promise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.607362">
-          <caret line="179" column="14" selection-start-line="179" selection-start-column="14" selection-end-line="179" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws-submits/services/d2l-hws-submits.client.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws-submits.server.routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25965664">
@@ -1573,13 +1592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.048969">
           <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/users/views/authentication/signin.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53608245">
-          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="40" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1852,8 +1864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23554604">
-          <caret line="266" column="0" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.8039217">
+          <caret line="275" column="0" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#button#0;n#section#0;n#!!top" expanded="true" />
@@ -1873,6 +1885,30 @@
             <element signature="n#style#0;n#md-sidenav#0;n#section#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-icon#0;n#a#0;n#h1#0;n#md-toolbar#0;n#md-sidenav#0;n#section#0;n#section#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users/users.authentication.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.3703704">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/users/views/authentication/signin.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.75">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="40" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3633218">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>

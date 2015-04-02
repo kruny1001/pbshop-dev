@@ -13,7 +13,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.authentication.user = response;
 				$mdDialog.hide();
 				// And redirect to the index page
-				//$location.path('/mean-home');
+				$location.path('/');
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
@@ -25,7 +25,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.authentication.user = response;
 				$mdDialog.hide();
 				// And redirect to the index page
-				//$location.path('/mean-home');
+				$location.path('/');
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
