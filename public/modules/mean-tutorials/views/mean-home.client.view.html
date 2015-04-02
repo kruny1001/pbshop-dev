@@ -191,13 +191,16 @@
 
                 <div style="margin-top:20px;" data-ng-hide="authentication.user">
 
+                    <p>We recomemend you sign up with your Google Account</p>
                     <div layout="row">
-                        <p>We recomemend sign up with your Google Account</p>
-                        <div layout="row">
-                            <md-button class="md-primary" href="/auth/google" >
-                                <md-icon md-svg-src="/modules/mean-tutorials/img/social-google.svg"></md-icon>
-                            </md-button>
-                        </div>
+                        <md-button class="md-primary" href="/auth/google" >
+                            <md-icon md-svg-src="/modules/mean-tutorials/img/social-google.svg"></md-icon>
+                            Recommended
+                        </md-button>
+                    </div>
+                    <p>Or</p>
+                    <div layout="row">
+
 
                         <md-button class="md-primary" ng-click="showSignInTutorial($event)">
                             <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
