@@ -290,34 +290,48 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			controller: D2lHwDialogCtrl,
 			templateUrl: 'modules/openboard/template/tutorial/newAssign-dialog.tpl.html',
 			targetEvent: ev,
-			clickOutsideToClose: false
+			clickOutsideToClose: false,
+			preserveScope: false,
+			locals: {project:{gdocId: ''}},
+			bindToController: true,
+			//onComplete: reset
+
 		}).then(
             function(){
                 $log.debug('cancel');
             },
             function(){
-
-                $log.debug('created Assignment');
+                //$log.debug('created Assignment');
                 $scope.hws = D2lHws.query();
                 $scope.hwsCopy = [].concat($scope.hws);
             }
         );
 
 		function D2lHwDialogCtrl(scope, $timeout, $mdDialog, D2lHws, D2lClassesOwnership, GDriveSelectResult){
-		// Create new D2l hw
+
 			scope.$on('handleEmit', function(event, args) {
 				console.log('broadcast is invoked');
 				scope.project.gdocId=args.message;
 				scope.$digest();
 			});
 			scope.cancel = function(){
-				$mdDialog.hide();
+				$mdDialog.cancel();
+				scope.docs = "";
+				scope.project = '';
+				scope.projectForm = '';
+				args.message = '';
+				scope.$digest();
+				console.log('B');;
 			};
 			scope.docs = GDriveSelectResult;
 			scope.project = {gdocId : scope.docs.id};
+
+			var dDate = new Date();
+			dDate.setHours(23,59,59,999);
+
 			scope.project = {
-				dDate: new Date('4/1/2015'),
-				gdocId : GDriveSelectResult.id
+				dDate: dDate
+				//gdocId : scope.docs.id
 				//desc: 'Nuclear Missile Defense System',
 			};
 
@@ -331,13 +345,17 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			scope.createNewRecord = function() {
 				console.log('Create');
 				// Create new D2l hw object
+				scope.project.dDate.setHours(23,59,59,999);
 				var d2lHw = new D2lHws (scope.project);
 				d2lHw.class = d2lHw.class._id;
+
 				// Redirect after save
 				d2lHw.$save(function(response) {
 					//$location.path('d2l-hws/' + response._id);
 					// Clear form fields
 					scope.name = '';
+					scope.project.gdocId = '';
+					scope.projectForm = null;
 					$mdDialog.cancel();
 					scope.project = null;
 

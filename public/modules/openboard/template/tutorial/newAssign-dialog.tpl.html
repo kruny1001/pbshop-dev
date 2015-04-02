@@ -7,7 +7,7 @@
     <md-content>
         <form name="projectForm" data-ng-submit="createNewRecord()">
 
-            <div ng-show="project.gdocId == ''">
+            <div ng-show="project.gdocId == undefined">
                 <p>First you need to select file from your Google Drive</p>
                 <div layout layout-sm='column' ng-controller="GDriveFilePickerController">
                     <label>Select File</label>
@@ -17,7 +17,7 @@
             </div>
 
 
-            <div ng-show="project.gdocId !== ''">
+            <div ng-show="project.gdocId !== undefined">
                 <md-input-container>
                     <label>Title</label>
                     <input md-maxlength="30" required name="title" ng-model="project.title">
