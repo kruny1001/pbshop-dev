@@ -17,12 +17,30 @@
 
 </style>
 
-    <button class="docs-menu-icon" style="z-index:1111; position:fixed; right: 15px; top: 8px; width:45px; height:45px" aria-label="Toggle Menu"
-            ng-click="toggleLeftOpen()">
-        <md-icon md-svg-src="modules/openboard/img/menu.svg"
-                 class="ng-isolate-scope md-default-theme" aria-hidden="true">
-        </md-icon>
-    </button>
+    <div layout="row" layout-align="end" style="  z-index: 1111;
+  position: fixed;
+  top: 8px;
+  height: 45px;
+  width: 200px;
+  right: 10px;">
+
+        <button class="docs-menu-icon" style="width:45px; height:45px" aria-label="Toggle Menu"
+                ng-click="toggleLeftOpen()">
+            <md-icon md-svg-src="modules/openboard/img/profile.svg"
+                     class="ng-isolate-scope md-default-theme" aria-hidden="true">
+            </md-icon>
+        </button>
+        <button class="docs-menu-icon" style="width:45px; height:45px" aria-label="Account Menu"
+                ng-click="toggleLeftOpen()">
+            <md-icon md-svg-src="modules/openboard/img/menu.svg"
+                     class="ng-isolate-scope md-default-theme" aria-hidden="true">
+            </md-icon>
+        </button>
+    </div>
+
+    <div layout="row" layout-align="end end" style="z-index:1111; position:fixed; top: 60px; width:100%;">
+        <op-profile ></op-profile>
+    </div>
 
     <!-- Main Content-->
     <md-content layout="column" flex>

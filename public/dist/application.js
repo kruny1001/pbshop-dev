@@ -935,6 +935,7 @@ angular.module('d2l-ads').directive('openboardAds1', [
 			templateUrl: '/modules/d2l-ads/directives/template/openboard-ads1.html',
 			restrict: 'E',
 			link: function postLink(scope, element, attrs) {
+                scope.insertDriveIconURL = 'modules/d2l-ads/svg/gdoc.svg';
                 var papers =[];
                 papers.push($('#paper1'));
                 papers.push($('#paper2'));
@@ -946,6 +947,15 @@ angular.module('d2l-ads').directive('openboardAds1', [
                 TweenMax.to(papers[2], 2, {x:200, y:-400, rotation: 22});
                 TweenMax.to(papers[3], 2, {x:600, y:-400, rotation: 62});
                 TweenMax.to(papers[4], 2, {x:-200, y:600, rotation: 2});
+
+
+                var tl = new TimelineLite();
+                tl.set("#content", {visibility:"visible"})
+                    .from(".titleH1Ads1", 0.5, {left:100, autoAlpha:0}) // autoAlpha handles both css properties visibility and opacity.
+                    .from(".titleH2Ads1", 0.5, {left:-100, autoAlpha:0}, "-=0.25") //add tween 0.25 seconds before previous tween ends
+                    .from("#feature", 0.5, {scale:0.5, autoAlpha:0}, "feature") // add feature label at start position of this tween
+                    .from("#description", 0.5, {left:100, autoAlpha:0}, "feature+=0.25") // add tween 0.25 seconds after the feature label
+                    .staggerFrom(".ad1-nav img", 0.5, {scale:0, rotation:-180, autoAlpha:0}, 0.2, "stagger");
 			}
 		};
 	}
@@ -4565,6 +4575,39 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 
 }
 OpenboardController.$inject = ["$scope", "$log", "$mdDialog", "$mdSidenav", "$window", "$http", "Authentication", "Users", "D2lHws", "D2lGrades", "D2lClassesOwnership", "D2lHwsSubmitsTrue", "UsersRole"];
+
+'use strict';
+
+angular.module('openboard').directive('opProfile', ['$interval','Authentication',
+	function($interval,Authentication) {
+		return {
+			templateUrl: 'modules/openboard/directives/template/op-profile.html',
+			restrict: 'E',
+			link: function postLink(scope, element, attrs) {
+                var profileOpen = true;
+                var user = Authentication.user;
+                scope.openProfile = function(){
+                    console.log(element.find('md-card-content'));
+                    if(profileOpen)
+                    {
+                        TweenMax.to(element.find('md-card-content'), 1, {autoAlpha:0, display:'none'});
+                        TweenMax.to(element, 1, {scale: 0.7});
+                    }
+
+                    else{
+                        TweenMax.to(element.find('md-card-content'), 1, {autoAlpha:1, display:'block'});
+                        TweenMax.to(element, 1, {scale: 1});
+                    }
+
+                    profileOpen = !profileOpen;
+                }
+                scope.closeProfile = function(){
+                    console.log(element.find('md-card-content'));
+                }
+			}
+		};
+	}
+]);
 
 'use strict';
 
