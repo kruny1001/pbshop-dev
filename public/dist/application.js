@@ -379,6 +379,100 @@ angular.module('ui.tinymce', [])
 
 'use strict';
 
+angular.module('core').controller('CoreHeadController', ['$scope',
+	function($scope) {
+		// Core head controller logic
+		// ...
+
+        $scope.cards = [
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' },
+            {text: 'Bla bla bla bla bla bla bla ',
+                title: 'Bla' }
+        ];
+	}
+]);
+
+'use strict';
+
 angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus',
 	function($scope, Authentication, Menus) {
 		$scope.authentication = Authentication;
@@ -4572,7 +4666,6 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 	$scope.openSubmission = function(docId){
 
 	}
-
 }
 OpenboardController.$inject = ["$scope", "$log", "$mdDialog", "$mdSidenav", "$window", "$http", "Authentication", "Users", "D2lHws", "D2lGrades", "D2lClassesOwnership", "D2lHwsSubmitsTrue", "UsersRole"];
 

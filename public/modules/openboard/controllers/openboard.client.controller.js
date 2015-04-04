@@ -408,5 +408,4 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 	$scope.openSubmission = function(docId){
 
 	}
-
 }

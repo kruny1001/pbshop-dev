@@ -1,5 +1,29 @@
 {% extends 'layout.server.view.html' %}
 
 {% block content %}
-	<section data-ui-view></section>
+
+<div layout="column"  ng-controller="CoreHeadController">
+    <md-toolbar id="toolBar">
+        <h2 class="md-toolbar-tools">
+            <a ng-href="/#!/" layout="row" flex="" class="docs-logo">
+                <md-icon md-svg-src="modules/openboard/img/pack.svg"
+                         class="svg-logotype ng-isolate-scope md-default-theme"
+                         style="height:40px;
+                                 font-size:40px; margin:0px;"
+                         aria-hidden="true">
+                </md-icon>
+                <div class="docs-logotype">Open Board</div>
+            </a>
+            <span class="docs-title" hide-sm>Getting Started:</span>
+            <span flex hide-sm></span>
+        </h2>
+    </md-toolbar>
+    <md-content flex md-scroll-y class='md-padding'>
+        <md-card ng-repeat = "card in cards">
+            sdfsdfsdfsdfsdfdfsdf
+        </md-card>
+    </md-content>
+    <div flex>Footer</div>
+</div>
+
 {% endblock %}
