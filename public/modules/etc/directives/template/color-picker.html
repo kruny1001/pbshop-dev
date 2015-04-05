@@ -1,0 +1,17 @@
+
+<div style="min-width:300px; max-width:600px; marign-left:auto; margin-right:auto;">
+<md-grid-list
+        md-cols-sm="6" md-cols-md="6" md-cols-gt-md="6"
+        md-row-height-gt-md="1:1" md-row-height="1:1"
+        md-gutter="4px" md-gutter-gt-sm="4px" >
+    <md-grid-tile ng-repeat="tile in vm.tiles"
+                  md-rowspan="{{tile.span.row}}"
+                  md-colspan="{{tile.span.col}}"
+                  ng-class="tile.background" >
+
+        <img style="height:100%; width:100%;" ng-src="{{tile.img}}">
+        <!--<md-icon md-svg-src="{{tile.icon}}"></md-icon>-->
+        <md-grid-tile-footer style="height:20px;"><h5>{{tile.title}}</h5></md-grid-tile-footer>
+    </md-grid-tile>
+</md-grid-list>
+</div>
