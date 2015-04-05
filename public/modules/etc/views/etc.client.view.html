@@ -1,10 +1,22 @@
 <section data-ng-controller="EtcController">
 	<div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>
 
-	<div> Color Picker Directive</div>
-	<div layout="row" layout-align="center center">
-		<color-picker></color-picker>
-	</div>
 
-	<div> Product Detail Directive</div>
+	<h3></h3>
+	<md-whiteframe class="md-whiteframe-z2 meanT-home-card ob-underbar-base"
+				   layout="column" layout-align="space-around start">
+		<h3>Product Info</h3>
+		<product-detail style="width:100%;"></product-detail>
+
+	</md-whiteframe>
+
+	<md-whiteframe class="md-whiteframe-z2 meanT-home-card ob-underbar-base"
+				   layout="column" layout-align="space-around start">
+		<h3>Color Picker(Directive)</h3>
+		<color-picker style="height:100%; width:100%"></color-picker>
+	</md-whiteframe>
+
+
+
+
 </section>

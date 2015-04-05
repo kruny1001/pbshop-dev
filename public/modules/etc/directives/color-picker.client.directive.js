@@ -13,6 +13,32 @@ angular.module('etc').directive('colorPicker', [
 		};
 
 		function ColorPickerCtrl($scope) {
+			this.items=[
+				{imgSrc:"modules/etc/img/1.jpg", title:"Color 1"},
+				{imgSrc:"modules/etc/img/2.jpg", title:"Color 2"},
+				{imgSrc:"modules/etc/img/3.jpg", title:"Color 3"},
+				{imgSrc:"modules/etc/img/4.jpg", title:"Color 4"},
+				{imgSrc:"modules/etc/img/5.jpg", title:"Color 5"},
+				{imgSrc:"modules/etc/img/6.jpg", title:"Color 6"},
+				{imgSrc:"modules/etc/img/7.jpg", title:"Color 7"},
+				{imgSrc:"modules/etc/img/8.jpg", title:"Color 8"},
+				{imgSrc:"modules/etc/img/9.jpg", title:"Color 9"},
+				{imgSrc:"modules/etc/img/10.jpg", title:"Color 10"},
+				{imgSrc:"modules/etc/img/11.jpg", title:"Color 11"},
+				{imgSrc:"modules/etc/img/12.jpg", title:"Color 12"},
+				{imgSrc:"modules/etc/img/13.jpg", title:"Color 13"},
+				{imgSrc:"modules/etc/img/14.jpg", title:"Color 14"},
+				{imgSrc:"modules/etc/img/15.jpg", title:"Color 15"},
+				{imgSrc:"modules/etc/img/16.jpg", title:"Color 16"},
+			];
+
+			this.coverSelected = function(event) {
+				console.log("selected");
+				//console.log(event);
+				console.log(event.path[2].outerHTML)
+				TweenLite.to(event.path[2].outerHTML, 1, {display:"block"});
+			}
+
 			this.tiles = buildGridModel({
 				icon : "avatar:svg-",
 				title: "Svg-",
