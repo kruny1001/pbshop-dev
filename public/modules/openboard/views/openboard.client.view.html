@@ -6,9 +6,6 @@
     <!--<div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>-->
     <!-- Debuging Purpose End-->
 
-
-
-
 <style>
     md-backdrop.md-opaque.md-default-theme {
         background-color: rgba(0,0,0,.3);
@@ -16,7 +13,6 @@
     }
 
 </style>
-
     <div layout="row" layout-align="end" style="  z-index: 1111;
   position: fixed;
   top: 8px;
@@ -38,38 +34,16 @@
         </button>
     </div>
 
-    <div layout="row" layout-align="end end" style="z-index:1111; position:fixed; top: 60px; width:100%;">
+    <div data-ng-show="authentication.user" layout="row"
+         layout-align="end end"
+         style="z-index:1111; position:fixed; top: 60px; right: 10px;">
         <op-profile ></op-profile>
     </div>
 
     <!-- Main Content-->
     <md-content layout="column" flex>
-
-
-        <!-- ToolBar -->
-        <md-toolbar id="toolBar">
-            <h2 class="md-toolbar-tools">
-                <a ng-href="/#!/" layout="row" flex="" class="docs-logo">
-                    <md-icon md-svg-src="modules/openboard/img/pack.svg"
-                             class="svg-logotype ng-isolate-scope md-default-theme"
-                             style="height:40px;
-                                 font-size:40px; margin:0px;"
-                             aria-hidden="true">
-                    </md-icon>
-                    <div class="docs-logotype">Open Board</div>
-                </a>
-
-                <span class="docs-title" hide-sm>Getting Started:</span>
-                <span flex hide-sm></span>
-                <!--<span><md-button class="md-warn" ng-click="openMenu=!openMenu">Menu</md-button></span>-->
-                <!--<span ng-if="authentication !== undefined">LogIn required</span>-->
-            </h2>
-        </md-toolbar>
-
-
         <md-content>
             <!--Introduction-->
-
             <md-whiteframe id="intro"
                            class="md-whiteframe-z2 openboard-card-color ob-underbar-base"
                            layout="column" layout-align="space-around start">
@@ -83,7 +57,7 @@
                 <div layout="column" layout-fill>
                     <center>
                         <h4>Create amazing assignments</h4>
-                        <p>With <b>Openboard</b>, you can assign, submit, and grade wherever you can do.</p>
+                        <p>With <b>Open Board</b>, you can assign, submit, and grade wherever you can do.</p>
                     </center>
                     <hr/>
                     <div layout="row" layout-align="space-around start">

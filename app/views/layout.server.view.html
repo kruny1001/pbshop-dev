@@ -80,26 +80,9 @@
 
 	<!--<header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>-->
 
+	{% block content %}{% endblock %}
 
 
-	<!--{% block content %}{% endblock %}-->
-
-
-        <div layout="column" tabindex="-1" flex role="main" >
-            <md-toolbar class="md-warn">
-                <div class="md-toolbar-tools">
-                    <h2 class="md-flex">Toolbar: md-warn</h2>
-                </div>
-            </md-toolbar>
-            <md-content md-scroll-y ui-view>
-            </md-content>
-        </div>
-        <!--{% block content %}{% endblock %}-->
-
-
-
-
-	<!--Embedding The User Object-->
 	<script type="text/javascript">
 		var user = {{ user | json | safe }};
 	</script>

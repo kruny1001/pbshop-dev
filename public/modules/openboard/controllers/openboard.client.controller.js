@@ -3,24 +3,7 @@
 
 angular.module('openboard')
 	.config(function($mdThemingProvider) {})
-	//.controller('progressLinearCtrl', ['$scope', '$interval', function($scope, $interval) {
-	//	$scope.mode = 'query';
-	//	$scope.determinateValue = 30;
-	//	$scope.determinateValue2 = 30;
-	//	$interval(function() {
-	//		$scope.determinateValue += 1;
-	//		$scope.determinateValue2 += 1.5;
-	//		if ($scope.determinateValue > 100) {
-	//			$scope.determinateValue = 30;
-	//			$scope.determinateValue2 = 30;
-	//		}
-	//	}, 100, 0, true);
-	//	$interval(function() {
-	//		$scope.mode = ($scope.mode == 'query' ? 'determinate' : 'query');
-	//	}, 7200, 0, true);
-	//}])
 	.controller('OpenboardController', OpenboardController);
-
 function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http, Authentication, Users, D2lHws, D2lGrades, D2lClassesOwnership, D2lHwsSubmitsTrue, UsersRole) {
 	// Openboard controller logic
 	// ...
@@ -30,8 +13,6 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 	var authentication = Authentication;
 	$scope.user = Authentication.user;
 	$scope.roles = [{name: 'Student',value:'student'},{name: 'Instructor', value:'instructor'}];
-
-
 
 	$scope.hws = D2lHws.query();
 	$scope.hws.$promise.then(function(result){
@@ -49,8 +30,6 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 	$scope.gradeCollection.$promise.then(function (result) {
 		$scope.gradeCollectionCopy = [].concat(result);
 	});
-	//$scope.gradeCollectionCopy = [].concat($scope.gradeCollection);
-
 
 	$scope.options = {
 		chart: {
@@ -140,17 +119,10 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			"key" : "Assignment4"
 		}];
 
-	//$http.get('http://pbshop.herokuapp.com/d2l-grades').success(function(result){
-	//	$scope.gradeCollection = result;
-	//	console.log(result[0]);
-	//	$scope.gradeCollectionCopy = [].concat($scope.gradeCollection);
-	//});
-
-
-    $scope.openDoc = function(docId){
-        var url = 'https://docs.google.com/document/d/'+docId+'/edit';
-        $window.open(url);
-    };
+	$scope.openDoc = function(docId){
+		var url = 'https://docs.google.com/document/d/'+docId+'/edit';
+		$window.open(url);
+	};
 
 	$scope.scrollTo = function(elementId){
 		var target = $("#"+elementId).offset().top;
@@ -158,6 +130,7 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 		$mdSidenav('left').close()
 			.then(function(){
 				$log.debug("close LEFT is done");
+				console.log(target);
 				TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
 			});
 	};
@@ -189,17 +162,17 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			});
 	};
 
-    function DialogController($scope, $mdDialog){
-        $scope.hide = function() {
-            $mdDialog.hide();
-        };
-        $scope.cancel = function() {
-            $mdDialog.cancel();
-        };
-        $scope.answer = function(answer) {
-            $mdDialog.hide(answer);
-        };
-    }
+	function DialogController($scope, $mdDialog){
+		$scope.hide = function() {
+			$mdDialog.hide();
+		};
+		$scope.cancel = function() {
+			$mdDialog.cancel();
+		};
+		$scope.answer = function(answer) {
+			$mdDialog.hide(answer);
+		};
+	}
 
 	// This function should be combined later
 	$scope.showSignUpTutorial = function(ev) {
@@ -226,43 +199,6 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
         );
 		TweenMax.to($("md-backdrop"),0.5,{position:'fixed'});
 	};
-
-	//$scope.showSetRule = function(ev){
-	//	$mdDialog.show({
-	//		controller: 'OpenboardController',
-	//		templateUrl: 'modules/openboard/template/tutorial/setRole-dialog.tpl.html',
-	//		targetEvent: ev,
-	//		clickOutsideToClose: false
-	//		//preserveScope: true
-	//	}).then(function(answer) {
-	//		$scope.alert = 'You updated as "' + answer + '".';
-	//	}, function() {
-	//		$scope.alert = 'You cancelled.';
-	//	});
-	//};
-    //
-	//$scope.cancel = function() {
-	//	$mdDialog.cancel();
-	//};
-    //
-	//$scope.answer = function(answer) {
-	//	//$mdDialog.hide(answer);
-	//};
-
-	//$scope.setRole = function(){
-	//	console.log('openboardCtrl-setRole ' +$scope.user.roles);
-	//	$scope.user.roles =$scope.credentials.roles;
-	//	console.log('openboardCtrl-setRole ' +$scope.user.roles);
-	//	var user = new UsersRole($scope.user);
-	//	user.$update(function(result) {
-	//			Authentication.user = result;
-	//			$scope.user =Authentication.user;
-	//			$scope.alert = "[Success] Update";
-	//			$mdDialog.hide($scope.credentials.roles);
-	//		}, function(response) {
-	//			$scope.error = response.data.message;
-	//	});
-	//};
 
 	$scope.showNewClass = function(ev){
 		$mdDialog.show({

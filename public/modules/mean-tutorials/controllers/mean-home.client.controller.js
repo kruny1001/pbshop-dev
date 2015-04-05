@@ -75,11 +75,11 @@ function MeanHomeController(
 			});
 	};
 	$scope.toggleRight = function() {
-		TweenMax.from($('#menuBtn'),2.5, {x:50, ease:Bounce.easeOut});
+		//TweenMax.from($('#menuBtn'),2.5, {x:50, ease:Bounce.easeOut});
 		$mdSidenav('right').toggle()
 			.then(function(){
 				$log.debug("toggle RIGHT is done");
-				TweenMax.set($("md-backdrop"),{position:'fixed'});
+				//TweenMax.set($("md-backdrop"),{position:'fixed'});
 			});
 
 	};

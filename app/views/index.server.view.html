@@ -2,28 +2,26 @@
 
 {% block content %}
 
-<div layout="column"  ng-controller="CoreHeadController">
-    <md-toolbar id="toolBar">
-        <h2 class="md-toolbar-tools">
-            <a ng-href="/#!/" layout="row" flex="" class="docs-logo">
-                <md-icon md-svg-src="modules/openboard/img/pack.svg"
-                         class="svg-logotype ng-isolate-scope md-default-theme"
-                         style="height:40px;
-                                 font-size:40px; margin:0px;"
-                         aria-hidden="true">
-                </md-icon>
-                <div class="docs-logotype">Open Board</div>
-            </a>
-            <span class="docs-title" hide-sm>Getting Started:</span>
-            <span flex hide-sm></span>
-        </h2>
-    </md-toolbar>
-    <md-content flex md-scroll-y class='md-padding'>
-        <md-card ng-repeat = "card in cards">
-            sdfsdfsdfsdfsdfdfsdf
-        </md-card>
-    </md-content>
-    <div flex>Footer</div>
-</div>
+<div layout="row" tabindex="-1" flex role="main" layout-fill>
 
+
+
+        <md-sidenav
+                flex
+                md-is-locked-open="$mdMedia('gt-md')"
+                id="sideNav"
+                data-ng-include="'/modules/core/views/sideNav.client.view.html'"
+                class="openboard-sidenav md-sidenav-left md-whiteframe-z2
+                ng-isolate-scope md-closed md-locked-open"
+                style="width:254px;"
+                md-component-id="left" tabindex="-1"></md-sidenav>
+
+
+    <div layout="column" flex>
+        <md-toolbar class="md-primary" data-ng-include="'/modules/core/views/header.client.view.html'"></md-toolbar>
+        <md-content md-scroll-y ui-view flex></md-content>
+    </div>
+
+
+</div>
 {% endblock %}

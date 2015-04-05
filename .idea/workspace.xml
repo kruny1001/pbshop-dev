@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/tests/core-head.client.controller.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/views/header.client.view.html" afterPath="$PROJECT_DIR$/public/modules/core/views/header.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/index.server.view.html" afterPath="$PROJECT_DIR$/app/views/index.server.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout.server.view.html" afterPath="$PROJECT_DIR$/app/views/layout.server.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" afterPath="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -30,114 +32,198 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="pbshop-dev" />
+    <favorites_list name="pbshop-dev">
+      <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/css" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/css/openboard-tutorial.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/img" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/img/submit.gif" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/img/copyFile.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/img/submitGdoc.gif" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/views" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/config" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/config/openboard.client.routes.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/services" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/template" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/template/tutorial" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/template/tutorial/setRole-dialog.tpl.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/template/tutorial/newClass-dialog.tpl.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/template/tutorial/newAssign-dialog.tpl.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/directives" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/controllers" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/openboard/openboard.client.module.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+      <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/projects.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/ani-meanT.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/dashboard.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/mac-window.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/mean-timeline.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-project.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/meanTutorials.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/signin-dialog.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-calendar.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/meanT-project1.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/profile-widget.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/materialBottomSheet.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/us.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/grid.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/menu.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/easel.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/log-in.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/log-out.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/briefcase.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/ios-person.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/mean_totem.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/backProfile.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/google_docs.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/youtubePlay.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/arrow-left-c.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/social-google.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/img/android-person.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/data" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/data/home.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/views" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/project1.client.view.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/project2.client.view.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/versioning.client.view.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/projectView.client.view.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/config" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/config/mean-tutorials.client.routes.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/services" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/services/ut-calendar.client.service.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/template" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/authentication" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/authentication/signin-dialog.tpl.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/authentication/signup-dialog.tpl.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/authentication/BOTTOM-SHEET-LIST-TEMPLATE.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.articles.tmp.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.projects.tmp.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/projectView.dashboard.tmp.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/bottom-sheet-grid-template.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/bottom-sheet-list-template.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/directives" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/directives/templates" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/directives/templates/mac-window.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/directives/templates/mjHomeAni.tpl.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/directives/calendar.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/directives/mac-window.client.directive.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/directives/mj-home-ani.client.directive.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/directives/ut-calendar.client.directive.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers" module="pbshop-dev" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project1.client.controller.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/project2.client.controller.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/gapi-ctrl.client.controller.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectView.client.controller.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/home-dialogtmp.client.controller.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectviewdashboard.client.controller.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectview-projects-controller.client.controller.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/public/modules/mean-tutorials/mean-tutorials.client.module.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+    </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.62676823">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="index.server.view.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/views/index.server.view.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.14728682" vertical-offset="0" max-vertical-offset="516">
-                  <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="57" />
-                  <folding>
-                    <element signature="n#h2#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#style#0;n#md-icon#0;n#a#0;n#h2#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="core-head.client.controller.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1007" max-vertical-offset="1881">
-                  <caret line="89" column="30" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
-                  <folding>
-                    <marker date="1428167948546" expanded="true" signature="71:3586" placeholder="[...]" />
-                    <marker date="1428167948546" expanded="true" signature="100:3584" placeholder="{...}" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="layout.server.view.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/layout.server.view.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-5.2105265" vertical-offset="1451" max-vertical-offset="2432">
-                  <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="openboardads1.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/css/openboardads1.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1299" max-vertical-offset="1843">
-                  <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
-                  <folding>
-                    <marker date="1428098835719" expanded="true" signature="1197:1237" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="op-profile.client.directive.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/modules/openboard/directives/op-profile.client.directive.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="722">
-                  <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="openboard.client.view.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.58914727" vertical-offset="437" max-vertical-offset="6251">
-                  <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#button#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#button#0;n#div#0;n#section#0;n#!!top" expanded="false" />
-                    <element signature="n#style#0;n#button#1;n#div#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#button#1;n#div#0;n#section#0;n#!!top" expanded="false" />
-                    <element signature="n#style#0;n#div#1;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#div#1;n#section#0;n#!!top" expanded="false" />
-                    <element signature="n#md-toolbar#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                    <element signature="n#style#0;n#md-icon#0;n#a#0;n#h2#0;n#md-toolbar#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#md-whiteframe#0;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#md-whiteframe#0;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#md-icon#0;n#md-button#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#2;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#section#0;n#section#0;n#!!top" expanded="false" />
-                    <element signature="n#style#0;n#md-sidenav#0;n#section#0;n#section#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#md-icon#0;n#a#0;n#h1#0;n#md-toolbar#0;n#md-sidenav#0;n#section#0;n#section#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="openboard.client.controller.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6357827">
+              <caret line="132" column="28" selection-start-line="132" selection-start-column="28" selection-end-line="132" selection-end-column="28" />
+              <folding>
+                <element signature="e#1167#1737#0" expanded="false" />
+                <element signature="e#1758#2397#0" expanded="false" />
+                <element signature="e#1934#1969#0" expanded="false" />
+                <element signature="e#1971#2006#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="openboard.client.view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.745098">
+              <caret line="120" column="31" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#1;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#md-whiteframe#0;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#md-whiteframe#0;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-icon#0;n#md-button#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#md-sidenav#0;n#section#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#md-sidenav#0;n#section#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-icon#0;n#a#0;n#h1#0;n#md-toolbar#0;n#md-sidenav#0;n#section#0;n#section#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.server.view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/index.server.view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.875">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#md-sidenav#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sideNav.client.view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.875">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+              <folding>
+                <element signature="n#style#0;n#md-icon#0;n#a#0;n#h1#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Html5" />
+      </list>
+    </option>
   </component>
   <component name="Git.Push.Settings">
     <option name="myUpdateMethod" value="REBASE" />
@@ -149,63 +235,138 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/routes/d2l-hws-submits.server.routes.js" />
-        <option value="$PROJECT_DIR$/aaa.html" />
-        <option value="$PROJECT_DIR$/pixi.js" />
-        <option value="$PROJECT_DIR$/pixi/aaa.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l/controllers/g-drive-file-picker.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/openboard/template/tutorial/newClass-dialog.tpl.html" />
         <option value="$PROJECT_DIR$/app/models/d2l-hws-submit.server.model.js" />
-        <option value="$PROJECT_DIR$/app/models/d2l-class.server.model.js" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/app/routes/d2l-hws-submits.server.routes.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-hws-submits/services/d2l-hws-submits.client.service.js" />
+        <option value="$PROJECT_DIR$/gs.html" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/directives/templates/mjHomeAni.tpl.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-ads/css/ads1.css" />
+        <option value="$PROJECT_DIR$/app/controllers/d2l-hws-submits.server.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanTutorials.css" />
+        <option value="$PROJECT_DIR$/public/modules/openboard/img/instructor.svg" />
+        <option value="$PROJECT_DIR$/public/modules/openboard/img/flag.svg" />
+        <option value="$PROJECT_DIR$/public/modules/openboard/css/ani1.css" />
+        <option value="$PROJECT_DIR$/public/modules/openboard/directives/openboard-ani1.client.directive.js" />
+        <option value="$PROJECT_DIR$/public/modules/openboard/img/teacher4.svg" />
+        <option value="$PROJECT_DIR$/public/modules/openboard/img/book135.svg" />
+        <option value="$PROJECT_DIR$/public/modules/openboard/directives/template/openboard-ani1.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-grades/services/d2l-grades.client.service.js" />
+        <option value="$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js" />
+        <option value="$PROJECT_DIR$/docs/backup.md" />
+        <option value="$PROJECT_DIR$/plan/test.html" />
+        <option value="$PROJECT_DIR$/plan/dashboard.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-hws/views/create-d2l-hw.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-hws/controllers/d2l-hws.client.controller.js" />
-        <option value="$PROJECT_DIR$/app/controllers/articles.server.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/controllers/d2l-hw.client.controller.js" />
-        <option value="$PROJECT_DIR$/app/controllers/d2l-hws.server.controller.js" />
-        <option value="$PROJECT_DIR$/app/routes/d2l-grades.server.routes.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/edit-d2l-class.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/create-d2l-class.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classes.client.view.html" />
-        <option value="$PROJECT_DIR$/app/models/d2l-hw.server.model.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-hws-submits/views/view-d2l-hws-submit.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/articles/config/articles.client.config.js" />
-        <option value="$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js" />
-        <option value="$PROJECT_DIR$/result.js" />
-        <option value="$PROJECT_DIR$/appScript/instructor.html" />
-        <option value="$USER_HOME$/AppData/Local/Temp/signup.html" />
-        <option value="$PROJECT_DIR$/app/models/d2l-grade.server.model.js" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/template/authentication/signin-dialog.tpl.html" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/template/authentication/signup-dialog.tpl.html" />
         <option value="$PROJECT_DIR$/public/modules/openboard/template/authentication/signin-dialog.tpl.html" />
         <option value="$PROJECT_DIR$/public/modules/openboard/template/authentication/signup-dialog.tpl.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l/controllers/g-drive-file-picker.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/openboard/template/tutorial/newAssign-dialog.tpl.html" />
-        <option value="$PROJECT_DIR$/public/modules/openboard/img/doc.svg" />
-        <option value="$PROJECT_DIR$/public/modules/openboard/template/tutorial/newClass-dialog.tpl.html" />
-        <option value="$PROJECT_DIR$/config/env/all.js" />
-        <option value="$PROJECT_DIR$/config/env/development.js" />
-        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/css/meanTutorials.css" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-ads/directives/openboard-ads1.html" />
-        <option value="$PROJECT_DIR$/../../infographics 03.svg" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-ads/directives/template/openboard-ads1.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-ads/views/ads2.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/openboard/css/openboard-tutorial.css" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-ads/css/openboardads1.css" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-ads/directives/openboard-ads1.client.directive.js" />
-        <option value="$PROJECT_DIR$/public/modules/openboard/directives/template/op-profile.html" />
-        <option value="$PROJECT_DIR$/public/modules/openboard/directives/op-profile.client.directive.js" />
-        <option value="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js" />
-        <option value="$PROJECT_DIR$/app/views/index.server.view.html" />
+        <option value="$PROJECT_DIR$/gruntfile.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/class-page.css" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/config/d2l-classes.client.routes.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/class-contact.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/d2l-class-info.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/class-about.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/class-home.client.view.html" />
         <option value="$PROJECT_DIR$/app/views/layout.server.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/core/views/header.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html" />
+        <option value="$PROJECT_DIR$/app/views/index.server.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" />
       </list>
     </option>
   </component>
   <component name="JsBowerSettings">
     <exe-path>/usr/local/bin/bower</exe-path>
     <config-path>$PROJECT_DIR$/bower.json</config-path>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true">
+    <gruntfile path="$PROJECT_DIR$/gruntfile.js">
+      <alias-task name="build" info="Alias for &quot;lint&quot;, &quot;loadConfig&quot;, &quot;ngAnnotate&quot;, &quot;uglify&quot;, &quot;cssmin&quot; tasks." file-path="$PROJECT_DIR$/gruntfile.js">
+        <dependency value="lint" />
+        <dependency value="loadConfig" />
+        <dependency value="ngAnnotate" />
+        <dependency value="uglify" />
+        <dependency value="cssmin" />
+      </alias-task>
+      <alias-task name="debug" info="Alias for &quot;lint&quot;, &quot;concurrent:debug&quot; tasks." file-path="$PROJECT_DIR$/gruntfile.js">
+        <dependency value="lint" />
+        <dependency value="concurrent:debug" />
+      </alias-task>
+      <alias-task name="default" info="Alias for &quot;concurrent:default&quot; task." file-path="$PROJECT_DIR$/gruntfile.js">
+        <dependency value="concurrent:default" />
+      </alias-task>
+      <alias-task name="lint" info="Alias for &quot;jshint&quot;, &quot;csslint&quot; tasks." file-path="$PROJECT_DIR$/gruntfile.js">
+        <dependency value="jshint" />
+        <dependency value="csslint" />
+      </alias-task>
+      <alias-task name="secure" info="Alias for &quot;env:secure&quot;, &quot;lint&quot;, &quot;concurrent:default&quot; tasks." file-path="$PROJECT_DIR$/gruntfile.js">
+        <dependency value="env:secure" />
+        <dependency value="lint" />
+        <dependency value="concurrent:default" />
+      </alias-task>
+      <alias-task name="test" info="Alias for &quot;env:test&quot;, &quot;mochaTest&quot;, &quot;karma:unit&quot; tasks." file-path="$PROJECT_DIR$/gruntfile.js">
+        <dependency value="env:test" />
+        <dependency value="mochaTest" />
+        <dependency value="karma:unit" />
+      </alias-task>
+      <core-task name="concurrent" info="Run grunt tasks concurrently" file-path="$PROJECT_DIR$/node_modules/grunt-concurrent/tasks/concurrent.js" multi="true">
+        <target value="default" />
+        <target value="debug" />
+      </core-task>
+      <core-task name="csslint" info="Lint CSS files with csslint" file-path="$PROJECT_DIR$/node_modules/grunt-contrib-csslint/tasks/csslint.js" multi="true">
+        <target value="all" />
+      </core-task>
+      <core-task name="cssmin" info="Minify CSS" file-path="$PROJECT_DIR$/node_modules/grunt-contrib-cssmin/tasks/cssmin.js" multi="true">
+        <target value="combine" />
+      </core-task>
+      <core-task name="env" info="Specify an ENV configuration for future tasks in the chain" file-path="$PROJECT_DIR$/node_modules/grunt-env/tasks/env.js" multi="true">
+        <target value="test" />
+        <target value="secure" />
+      </core-task>
+      <core-task name="jshint" info="Validate files with JSHint." file-path="$PROJECT_DIR$/node_modules/grunt-contrib-jshint/tasks/jshint.js" multi="true">
+        <target value="all" />
+      </core-task>
+      <core-task name="karma" info="run karma." file-path="$PROJECT_DIR$/node_modules/grunt-karma/tasks/grunt-karma.js" multi="true">
+        <target value="unit" />
+      </core-task>
+      <core-task name="loadConfig" info="Task that loads the config into a grunt option." file-path="$PROJECT_DIR$/gruntfile.js" multi="false" />
+      <core-task name="mochaTest" info="Run node unit tests with Mocha" file-path="$PROJECT_DIR$/node_modules/grunt-mocha-test/tasks/mocha-test.js" multi="true">
+        <target value="src" />
+      </core-task>
+      <core-task name="ngAnnotate" info="Add, remove and rebuild AngularJS dependency injection annotations" file-path="$PROJECT_DIR$/node_modules/grunt-ng-annotate/tasks/ng-annotate.js" multi="true">
+        <target value="production" />
+      </core-task>
+      <core-task name="node-inspector" info="Runs node-inspector to debug your node.js JavaScripts" file-path="$PROJECT_DIR$/node_modules/grunt-node-inspector/tasks/inspector.js" multi="true">
+        <target value="custom" />
+      </core-task>
+      <core-task name="nodemon" info="Runs a nodemon monitor of your node.js server." file-path="$PROJECT_DIR$/node_modules/grunt-nodemon/tasks/nodemon.js" multi="true">
+        <target value="dev" />
+      </core-task>
+      <core-task name="uglify" info="Minify files with UglifyJS." file-path="$PROJECT_DIR$/node_modules/grunt-contrib-uglify/tasks/uglify.js" multi="true">
+        <target value="production" />
+      </core-task>
+      <core-task name="watch" info="Run predefined tasks whenever watched files change." file-path="$PROJECT_DIR$/node_modules/grunt-contrib-watch/tasks/watch.js" multi="false">
+        <target value="serverViews" />
+        <target value="serverJS" />
+        <target value="clientViews" />
+        <target value="clientJS" />
+        <target value="clientCSS" />
+      </core-task>
+    </gruntfile>
   </component>
   <component name="JsGruntFileManager">
     <gruntfiles>
@@ -315,10 +476,14 @@
   <component name="JsKarmaPackageDirSetting">
     <data>$PROJECT_DIR$/node_modules/karma</data>
   </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="50" />
-    <option name="width" value="1208" />
-    <option name="height" value="1080" />
+    <option name="x" value="598" />
+    <option name="y" value="23" />
+    <option name="width" value="794" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -343,6 +508,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -362,19 +528,83 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../reveal.js-master" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/gas-rest-master" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editorconfig.notification" value="Applied .editorconfig settings" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="options.lastSelected" value="Template Data Languages" />
+    <property name="options.lastSelected" value="configurable.group.appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -386,17 +616,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Kevin\Desktop\d1\pbshop-dev\public\modules\openboard\img" />
-      <recent name="C:\Users\Kevin\Desktop\d1\pbshop-dev\public\modules\openboard\template" />
-      <recent name="C:\Users\Kevin\Desktop\d1\pbshop-dev\public\modules\top-hair\img" />
-      <recent name="C:\Users\Kevin\Desktop\d1\pbshop-dev\public\modules" />
-      <recent name="$PROJECT_DIR$/public/modules/d2l" />
+      <recent name="$PROJECT_DIR$/public/modules/openboard/img" />
+      <recent name="$PROJECT_DIR$/public/modules/mean-tutorials/img" />
+      <recent name="$PROJECT_DIR$/public/modules" />
+      <recent name="$PROJECT_DIR$/second backup/partial" />
+      <recent name="$PROJECT_DIR$/public/modules/the-clean/svg" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Kevin\Desktop\d1\pbshop-dev\public\modules\openboard\img" />
-      <recent name="C:\Users\Kevin\Desktop\d1\pbshop-dev\public\modules\d2l-ads\svg" />
-      <recent name="C:\Users\Kevin\Desktop\d1\pbshop-dev\public\modules\d2l-ads\directives\template" />
-      <recent name="C:\Users\Kevin\Desktop\d1\pbshop-dev\pixi" />
+      <recent name="$PROJECT_DIR$/public/modules/d2l-classes/css" />
+      <recent name="$PROJECT_DIR$/second backup/partial" />
+      <recent name="$PROJECT_DIR$/appScript" />
+      <recent name="$PROJECT_DIR$/public/modules/d2l/directives/template" />
       <recent name="$PROJECT_DIR$/public/modules/d2l/svg" />
     </key>
   </component>
@@ -761,163 +991,137 @@
       </list>
     </option>
   </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="Moments ago" ActionInfo="_Update">
-      <UpdatedFiles>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
         <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/bower.json</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/gruntfile.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/package.json</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/dist/application.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/dist/application.min.css</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/dist/application.min.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-classes/config/d2l-classes.client.routes.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/mean-tutorials/template/authentication/signin-dialog.tpl.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/mean-tutorials/template/authentication/signup-dialog.tpl.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/css/openboard-tutorial.css</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/template/authentication/signin-dialog.tpl.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/template/authentication/signup-dialog.tpl.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/template/tutorial/newAssign-dialog.tpl.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/plan/dashboard.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/plan/test.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-classes/css/class-page.css</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-classes/views/class-about.client.view.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-classes/views/class-contact.client.view.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-classes/views/class-home.client.view.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-classes/views/d2l-class-info.client.view.html</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/pixi/aaa.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/pixi/laser01.png</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/pixi/laser02.png</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/pixi/laser03.png</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/pixi/laser04.png</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/pixi/laser05.png</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/pixi/laserBG.jpg</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/pixi/pixi.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/testTS.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/testTS.js.map</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/index.server.view.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/layout.server.view.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/dist/application.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/dist/application.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/dist/application.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-ads/views/ads2.client.view.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/css/openboard-tutorial.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/core/tests/core-head.client.controller.test.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-ads/css/openboardads1.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-ads/directives/openboard-ads1.client.directive.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-ads/directives/template/openboard-ads1.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-ads/svg/hws.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/d2l-ads/svg/papers.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/directives/op-profile.client.directive.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/directives/template/op-profile.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/img/avata1.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/modules/openboard/img/profile.svg</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
+          <option name="myId" value="RESTORED" />
         </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with tree conflicts" />
-          <option name="myStatusName" value="Merged with tree conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with property conflicts" />
-          <option name="myStatusName" value="Will be merged with property conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Switched" />
-          <option name="myStatusName" value="Switched" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SWITCHED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Node.js.server.js">
-    <configuration default="false" name="testTS.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="$USER_HOME$/.nvm/v0.10.32/bin/node" path-to-js-file="testTS.js" working-dir="$PROJECT_DIR$">
-      <RunnerSettings RunnerId="Basic" />
-      <ConfigurationWrapper RunnerId="Basic" />
-      <method />
-    </configuration>
     <configuration default="false" name="tesJwt.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="$USER_HOME$/.nvm/v0.10.32/bin/node" path-to-js-file="tesJwt.js" working-dir="$PROJECT_DIR$">
       <RunnerSettings RunnerId="Basic" />
       <ConfigurationWrapper RunnerId="Basic" />
@@ -935,7 +1139,15 @@
       <ConfigurationWrapper RunnerId="Basic" />
       <method />
     </configuration>
-    <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
+    <configuration default="false" name="aaaa.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="$USER_HOME$/.nvm/v0.10.32/bin/node" path-to-js-file="aaaa.js" working-dir="$PROJECT_DIR$">
+      <RunnerSettings RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="Basic" />
+      <method />
+    </configuration>
+    <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="$USER_HOME$/.nvm/v0.10.32/bin/node" path-to-js-file="server.js" working-dir="$PROJECT_DIR$" pass-parent-envs="false">
+      <envs>
+        <env name="NODE_ENV" value="production" />
+      </envs>
       <RunnerSettings RunnerId="Basic" />
       <RunnerSettings RunnerId="debuggableProgram" />
       <ConfigurationWrapper RunnerId="Basic" />
@@ -948,15 +1160,15 @@
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -969,6 +1181,13 @@
       <option name="cucumberJsArguments" value="" />
       <option name="executablePath" />
       <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
+      <pass-parent-env-vars value="true" />
+      <force value="false" />
+      <verbose value="false" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -998,9 +1217,7 @@
     </configuration>
     <configuration default="false" name="t1.js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="$USER_HOME$/.nvm/v0.10.32/bin/node" path-to-js-file="t1.js" working-dir="$PROJECT_DIR$/lodashPractice">
       <RunnerSettings RunnerId="Basic" />
-      <RunnerSettings RunnerId="debuggableProgram" />
       <ConfigurationWrapper RunnerId="Basic" />
-      <ConfigurationWrapper RunnerId="debuggableProgram" />
       <method />
     </configuration>
     <list size="9">
@@ -1008,19 +1225,19 @@
       <item index="1" class="java.lang.String" itemvalue="Node.js.Unnamed" />
       <item index="2" class="java.lang.String" itemvalue="Node.js.home.client.controller.test.js" />
       <item index="3" class="java.lang.String" itemvalue="Node.js.t1.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.testTS.js" />
-      <item index="5" class="java.lang.String" itemvalue="Node.js.tesJwt.js" />
-      <item index="6" class="java.lang.String" itemvalue="Node.js.testGoogleAPIs.js" />
-      <item index="7" class="java.lang.String" itemvalue="Node.js.growlTest.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.tesJwt.js" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.testGoogleAPIs.js" />
+      <item index="6" class="java.lang.String" itemvalue="Node.js.growlTest.js" />
+      <item index="7" class="java.lang.String" itemvalue="Node.js.aaaa.js" />
       <item index="8" class="java.lang.String" itemvalue="Node.js.server.js" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Node.js.server.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.growlTest.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.testGoogleAPIs.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.tesJwt.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.testTS.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.aaaa.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.growlTest.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.testGoogleAPIs.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.tesJwt.js" />
       </list>
     </recent_temporary>
   </component>
@@ -1036,343 +1253,344 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00076" summary="projects dashboard with API">
-      <created>1422570926613</created>
-      <option name="number" value="00076" />
+    <task id="LOCAL-00140" summary="update mongoose version">
+      <created>1427427033429</created>
+      <option name="number" value="00140" />
       <option name="project" value="LOCAL" />
-      <updated>1422570926613</updated>
+      <updated>1427427033429</updated>
     </task>
-    <task id="LOCAL-00077" summary="projects dashboard with API">
-      <created>1422589031320</created>
-      <option name="number" value="00077" />
+    <task id="LOCAL-00141" summary="tutorial">
+      <created>1427482727758</created>
+      <option name="number" value="00141" />
       <option name="project" value="LOCAL" />
-      <updated>1422589031321</updated>
+      <updated>1427482727758</updated>
     </task>
-    <task id="LOCAL-00078" summary="mean Home">
-      <created>1422596609003</created>
-      <option name="number" value="00078" />
+    <task id="LOCAL-00142" summary="material input issue on IOS">
+      <created>1427484599349</created>
+      <option name="number" value="00142" />
       <option name="project" value="LOCAL" />
-      <updated>1422596609003</updated>
+      <updated>1427484599349</updated>
     </task>
-    <task id="LOCAL-00079" summary="mean Home">
-      <created>1422892433812</created>
-      <option name="number" value="00079" />
+    <task id="LOCAL-00143" summary="update assignment">
+      <created>1427494129235</created>
+      <option name="number" value="00143" />
       <option name="project" value="LOCAL" />
-      <updated>1422892433812</updated>
+      <updated>1427494129235</updated>
     </task>
-    <task id="LOCAL-00080" summary="util size">
-      <created>1422938894106</created>
-      <option name="number" value="00080" />
+    <task id="LOCAL-00144" summary="tutorial">
+      <created>1427578372696</created>
+      <option name="number" value="00144" />
       <option name="project" value="LOCAL" />
-      <updated>1422938894106</updated>
+      <updated>1427578372698</updated>
     </task>
-    <task id="LOCAL-00081" summary="util size">
-      <created>1423149187616</created>
-      <option name="number" value="00081" />
+    <task id="LOCAL-00145" summary="getHTTP">
+      <created>1427582090681</created>
+      <option name="number" value="00145" />
       <option name="project" value="LOCAL" />
-      <updated>1423149187616</updated>
+      <updated>1427582090688</updated>
     </task>
-    <task id="LOCAL-00082" summary="util size">
-      <created>1423447374068</created>
-      <option name="number" value="00082" />
+    <task id="LOCAL-00146" summary="getHTTP interaction">
+      <created>1427589463506</created>
+      <option name="number" value="00146" />
       <option name="project" value="LOCAL" />
-      <updated>1423447374069</updated>
+      <updated>1427589463506</updated>
     </task>
-    <task id="LOCAL-00083" summary="util size">
-      <created>1423447554613</created>
-      <option name="number" value="00083" />
+    <task id="LOCAL-00147" summary="getHTTP interaction2">
+      <created>1427596279935</created>
+      <option name="number" value="00147" />
       <option name="project" value="LOCAL" />
-      <updated>1423447554613</updated>
+      <updated>1427596279935</updated>
     </task>
-    <task id="LOCAL-00084" summary="update info">
-      <created>1423448179823</created>
-      <option name="number" value="00084" />
+    <task id="LOCAL-00148" summary="getHTTP interaction2">
+      <created>1427598898985</created>
+      <option name="number" value="00148" />
       <option name="project" value="LOCAL" />
-      <updated>1423448179823</updated>
+      <updated>1427598898985</updated>
     </task>
-    <task id="LOCAL-00085" summary="regular update">
-      <created>1423626841910</created>
-      <option name="number" value="00085" />
+    <task id="LOCAL-00149" summary="getHTTP interaction2">
+      <created>1427599101604</created>
+      <option name="number" value="00149" />
       <option name="project" value="LOCAL" />
-      <updated>1423626841912</updated>
+      <updated>1427599101604</updated>
     </task>
-    <task id="LOCAL-00086" summary="update 2/11">
-      <created>1423713617119</created>
-      <option name="number" value="00086" />
+    <task id="LOCAL-00150" summary="getHTTP interaction3">
+      <created>1427599628556</created>
+      <option name="number" value="00150" />
       <option name="project" value="LOCAL" />
-      <updated>1423713617119</updated>
+      <updated>1427599628556</updated>
     </task>
-    <task id="LOCAL-00087" summary="update 2/11">
-      <created>1423798397257</created>
-      <option name="number" value="00087" />
+    <task id="LOCAL-00151" summary="getHTTP interaction4">
+      <created>1427600212013</created>
+      <option name="number" value="00151" />
       <option name="project" value="LOCAL" />
-      <updated>1423798397257</updated>
+      <updated>1427600212013</updated>
     </task>
-    <task id="LOCAL-00088" summary="apply material design d2l">
-      <created>1423955755076</created>
-      <option name="number" value="00088" />
+    <task id="LOCAL-00152" summary="getHTTP interaction4">
+      <created>1427601684992</created>
+      <option name="number" value="00152" />
       <option name="project" value="LOCAL" />
-      <updated>1423955755077</updated>
+      <updated>1427601684993</updated>
     </task>
-    <task id="LOCAL-00089" summary="apply material design d2l">
-      <created>1423956252854</created>
-      <option name="number" value="00089" />
+    <task id="LOCAL-00153" summary="getHTTP interaction4">
+      <created>1427602734630</created>
+      <option name="number" value="00153" />
       <option name="project" value="LOCAL" />
-      <updated>1423956252854</updated>
+      <updated>1427602734630</updated>
     </task>
-    <task id="LOCAL-00090" summary="apply material design d2l">
-      <created>1423963706801</created>
-      <option name="number" value="00090" />
+    <task id="LOCAL-00154" summary="getHTTP interaction5&#10;">
+      <created>1427603272506</created>
+      <option name="number" value="00154" />
       <option name="project" value="LOCAL" />
-      <updated>1423963706801</updated>
+      <updated>1427603272507</updated>
     </task>
-    <task id="LOCAL-00091" summary="apply material design d2l">
-      <created>1423963974390</created>
-      <option name="number" value="00091" />
+    <task id="LOCAL-00155" summary="getHTTP interaction6&#10;">
+      <created>1427604155204</created>
+      <option name="number" value="00155" />
       <option name="project" value="LOCAL" />
-      <updated>1423963974390</updated>
+      <updated>1427604155205</updated>
     </task>
-    <task id="LOCAL-00092" summary="d2l query drive api">
-      <created>1424128028075</created>
-      <option name="number" value="00092" />
+    <task id="LOCAL-00156" summary="getHTTP interaction7&#10;">
+      <created>1427604711450</created>
+      <option name="number" value="00156" />
       <option name="project" value="LOCAL" />
-      <updated>1424128028076</updated>
+      <updated>1427604711450</updated>
     </task>
-    <task id="LOCAL-00093" summary="d2l hw crud module added">
-      <created>1424419203477</created>
-      <option name="number" value="00093" />
+    <task id="LOCAL-00157" summary="d2l-grade&#10;">
+      <created>1427664275521</created>
+      <option name="number" value="00157" />
       <option name="project" value="LOCAL" />
-      <updated>1424419203478</updated>
+      <updated>1427664275521</updated>
     </task>
-    <task id="LOCAL-00094" summary="d2l adjust md-maxlength">
-      <created>1424462762877</created>
-      <option name="number" value="00094" />
+    <task id="LOCAL-00158" summary="d2l-grade&#10;">
+      <created>1427664784192</created>
+      <option name="number" value="00158" />
       <option name="project" value="LOCAL" />
-      <updated>1424462762877</updated>
+      <updated>1427664784192</updated>
     </task>
-    <task id="LOCAL-00095" summary="d2l ins and stu view">
-      <created>1424675185229</created>
-      <option name="number" value="00095" />
+    <task id="LOCAL-00159" summary="d2l-grade&#10;">
+      <created>1427665026083</created>
+      <option name="number" value="00159" />
       <option name="project" value="LOCAL" />
-      <updated>1424675185230</updated>
+      <updated>1427665026083</updated>
     </task>
-    <task id="LOCAL-00096" summary="d2l ins and stu view">
-      <created>1425007335494</created>
-      <option name="number" value="00096" />
+    <task id="LOCAL-00160" summary="d2l-grade&#10;">
+      <created>1427665474338</created>
+      <option name="number" value="00160" />
       <option name="project" value="LOCAL" />
-      <updated>1425007335494</updated>
+      <updated>1427665474338</updated>
     </task>
-    <task id="LOCAL-00097" summary="update3">
-      <created>1425008361511</created>
-      <option name="number" value="00097" />
+    <task id="LOCAL-00161" summary="d2l-grade&#10;">
+      <created>1427665813808</created>
+      <option name="number" value="00161" />
       <option name="project" value="LOCAL" />
-      <updated>1425008361511</updated>
+      <updated>1427665813808</updated>
     </task>
-    <task id="LOCAL-00098" summary="ads1 update">
-      <created>1425257313000</created>
-      <option name="number" value="00098" />
+    <task id="LOCAL-00162" summary="d2l-grade&#10;">
+      <created>1427666217593</created>
+      <option name="number" value="00162" />
       <option name="project" value="LOCAL" />
-      <updated>1425257313001</updated>
+      <updated>1427666217593</updated>
     </task>
-    <task id="LOCAL-00099" summary="ads1 update">
-      <created>1425257351276</created>
-      <option name="number" value="00099" />
+    <task id="LOCAL-00163" summary="d2l-grade&#10;">
+      <created>1427666224466</created>
+      <option name="number" value="00163" />
       <option name="project" value="LOCAL" />
-      <updated>1425257351276</updated>
+      <updated>1427666224466</updated>
     </task>
-    <task id="LOCAL-00100" summary="ads1 add progressBar">
-      <created>1425456181529</created>
-      <option name="number" value="00100" />
+    <task id="LOCAL-00164" summary="d2l-grade&#10;">
+      <created>1427666566555</created>
+      <option name="number" value="00164" />
       <option name="project" value="LOCAL" />
-      <updated>1425456181530</updated>
+      <updated>1427666566555</updated>
     </task>
-    <task id="LOCAL-00101" summary="TC Project">
-      <created>1425509039556</created>
-      <option name="number" value="00101" />
+    <task id="LOCAL-00165" summary="d2l-grade&#10;">
+      <created>1427669128391</created>
+      <option name="number" value="00165" />
       <option name="project" value="LOCAL" />
-      <updated>1425509039557</updated>
+      <updated>1427669128391</updated>
     </task>
-    <task id="LOCAL-00102" summary="TC Project">
-      <created>1425512335653</created>
-      <option name="number" value="00102" />
+    <task id="LOCAL-00166" summary="d2l-grade&#10;">
+      <created>1427671049348</created>
+      <option name="number" value="00166" />
       <option name="project" value="LOCAL" />
-      <updated>1425512335653</updated>
+      <updated>1427671049348</updated>
     </task>
-    <task id="LOCAL-00103" summary="TC Project">
-      <created>1425516514030</created>
-      <option name="number" value="00103" />
+    <task id="LOCAL-00167" summary="d2l-grade&#10;">
+      <created>1427673480937</created>
+      <option name="number" value="00167" />
       <option name="project" value="LOCAL" />
-      <updated>1425516514031</updated>
+      <updated>1427673480937</updated>
     </task>
-    <task id="LOCAL-00104" summary="TC Project">
-      <created>1425517720393</created>
-      <option name="number" value="00104" />
+    <task id="LOCAL-00168" summary="meant-home deco&#10;">
+      <created>1427777176766</created>
+      <option name="number" value="00168" />
       <option name="project" value="LOCAL" />
-      <updated>1425517720393</updated>
+      <updated>1427777176767</updated>
     </task>
-    <task id="LOCAL-00105" summary="deco">
-      <created>1425630729842</created>
-      <option name="number" value="00105" />
+    <task id="LOCAL-00169" summary="sign out&#10;">
+      <created>1427812418084</created>
+      <option name="number" value="00169" />
       <option name="project" value="LOCAL" />
-      <updated>1425630729843</updated>
+      <updated>1427812418085</updated>
     </task>
-    <task id="LOCAL-00106" summary="deco">
-      <created>1425927854087</created>
-      <option name="number" value="00106" />
+    <task id="LOCAL-00170" summary="sign out&#10;">
+      <created>1427813057306</created>
+      <option name="number" value="00170" />
       <option name="project" value="LOCAL" />
-      <updated>1425927854088</updated>
+      <updated>1427813057306</updated>
     </task>
-    <task id="LOCAL-00107" summary="Permission">
-      <created>1425988378966</created>
-      <option name="number" value="00107" />
+    <task id="LOCAL-00171" summary="background color Change">
+      <created>1427820761929</created>
+      <option name="number" value="00171" />
       <option name="project" value="LOCAL" />
-      <updated>1425988378967</updated>
+      <updated>1427820761930</updated>
     </task>
-    <task id="LOCAL-00108" summary="Permission &amp; ani">
-      <created>1425990565082</created>
-      <option name="number" value="00108" />
+    <task id="LOCAL-00172" summary="grade">
+      <created>1427832037387</created>
+      <option name="number" value="00172" />
       <option name="project" value="LOCAL" />
-      <updated>1425990565082</updated>
+      <updated>1427832037388</updated>
     </task>
-    <task id="LOCAL-00109" summary="TC deco">
-      <created>1426136362963</created>
-      <option name="number" value="00109" />
+    <task id="LOCAL-00173" summary="grade">
+      <created>1427834468890</created>
+      <option name="number" value="00173" />
       <option name="project" value="LOCAL" />
-      <updated>1426136362964</updated>
+      <updated>1427834468890</updated>
     </task>
-    <task id="LOCAL-00110" summary="th project">
-      <created>1426487169254</created>
-      <option name="number" value="00110" />
+    <task id="LOCAL-00174" summary="openboard">
+      <created>1427863235200</created>
+      <option name="number" value="00174" />
       <option name="project" value="LOCAL" />
-      <updated>1426487169255</updated>
+      <updated>1427863235200</updated>
     </task>
-    <task id="LOCAL-00111" summary="lms hws-submit">
-      <created>1426917478654</created>
-      <option name="number" value="00111" />
+    <task id="LOCAL-00175" summary="openboard">
+      <created>1427938261033</created>
+      <option name="number" value="00175" />
       <option name="project" value="LOCAL" />
-      <updated>1426917478655</updated>
+      <updated>1427938261033</updated>
     </task>
-    <task id="LOCAL-00112" summary="lms hws-submit">
-      <created>1426969735827</created>
-      <option name="number" value="00112" />
+    <task id="LOCAL-00176" summary="openboard">
+      <created>1427943722293</created>
+      <option name="number" value="00176" />
       <option name="project" value="LOCAL" />
-      <updated>1426969735828</updated>
+      <updated>1427943722293</updated>
     </task>
-    <task id="LOCAL-00113" summary="lms hws-hws">
-      <created>1427079347780</created>
-      <option name="number" value="00113" />
+    <task id="LOCAL-00177" summary="openboard">
+      <created>1427955234298</created>
+      <option name="number" value="00177" />
       <option name="project" value="LOCAL" />
-      <updated>1427079347782</updated>
+      <updated>1427955234298</updated>
     </task>
-    <task id="LOCAL-00114" summary="lms d2l-classes">
-      <created>1427086504486</created>
-      <option name="number" value="00114" />
+    <task id="LOCAL-00178" summary="openboard">
+      <created>1427955710434</created>
+      <option name="number" value="00178" />
       <option name="project" value="LOCAL" />
-      <updated>1427086504486</updated>
+      <updated>1427955710434</updated>
     </task>
-    <task id="LOCAL-00115" summary="lms d2l-classes">
-      <created>1427250006351</created>
-      <option name="number" value="00115" />
+    <task id="LOCAL-00179" summary="openboard">
+      <created>1427956028427</created>
+      <option name="number" value="00179" />
       <option name="project" value="LOCAL" />
-      <updated>1427250006351</updated>
+      <updated>1427956028427</updated>
     </task>
-    <task id="LOCAL-00116" summary="lms d2l-classes">
-      <created>1427250075360</created>
-      <option name="number" value="00116" />
+    <task id="LOCAL-00180" summary="openboard">
+      <created>1427956782130</created>
+      <option name="number" value="00180" />
       <option name="project" value="LOCAL" />
-      <updated>1427250075360</updated>
+      <updated>1427956782130</updated>
     </task>
-    <task id="LOCAL-00117" summary="lms d2l-classes">
-      <created>1427250303585</created>
-      <option name="number" value="00117" />
+    <task id="LOCAL-00181" summary="openboard">
+      <created>1427964493252</created>
+      <option name="number" value="00181" />
       <option name="project" value="LOCAL" />
-      <updated>1427250303586</updated>
+      <updated>1427964493252</updated>
     </task>
-    <task id="LOCAL-00118" summary="lms d2l-classes">
-      <created>1427261654916</created>
-      <option name="number" value="00118" />
+    <task id="LOCAL-00182" summary="openboard">
+      <created>1427988979936</created>
+      <option name="number" value="00182" />
       <option name="project" value="LOCAL" />
-      <updated>1427261654916</updated>
+      <updated>1427988979936</updated>
     </task>
-    <task id="LOCAL-00119" summary="draft version 1">
-      <created>1427915256781</created>
-      <option name="number" value="00119" />
+    <task id="LOCAL-00183" summary="minor fix">
+      <created>1427991153976</created>
+      <option name="number" value="00183" />
       <option name="project" value="LOCAL" />
-      <updated>1427915256782</updated>
+      <updated>1427991153977</updated>
     </task>
-    <task id="LOCAL-00120" summary="draft version2">
-      <created>1427918538435</created>
-      <option name="number" value="00120" />
+    <task id="LOCAL-00184" summary="Google Authentication">
+      <created>1427993134389</created>
+      <option name="number" value="00184" />
       <option name="project" value="LOCAL" />
-      <updated>1427918538436</updated>
+      <updated>1427993134389</updated>
     </task>
-    <task id="LOCAL-00121" summary="draft version2">
-      <created>1427919574388</created>
-      <option name="number" value="00121" />
+    <task id="LOCAL-00185" summary="Google Authentication">
+      <created>1427993763174</created>
+      <option name="number" value="00185" />
       <option name="project" value="LOCAL" />
-      <updated>1427919574388</updated>
+      <updated>1427993763174</updated>
     </task>
-    <task id="LOCAL-00122" summary="draft version2">
-      <created>1427922133808</created>
-      <option name="number" value="00122" />
+    <task id="LOCAL-00186" summary="fix date and new Assignment file name issue">
+      <created>1428008712983</created>
+      <option name="number" value="00186" />
       <option name="project" value="LOCAL" />
-      <updated>1427922133808</updated>
+      <updated>1428008712984</updated>
     </task>
-    <task id="LOCAL-00123" summary="ads2">
-      <created>1428047078609</created>
-      <option name="number" value="00123" />
+    <task id="LOCAL-00187" summary="remove beta button">
+      <created>1428009255888</created>
+      <option name="number" value="00187" />
       <option name="project" value="LOCAL" />
-      <updated>1428047078610</updated>
+      <updated>1428009255888</updated>
     </task>
-    <task id="LOCAL-00124" summary="op-profile">
-      <created>1428101266766</created>
-      <option name="number" value="00124" />
+    <task id="LOCAL-00188" summary="class Interface">
+      <created>1428015577143</created>
+      <option name="number" value="00188" />
       <option name="project" value="LOCAL" />
-      <updated>1428101266766</updated>
+      <updated>1428015577144</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="0" width="1208" height="1080" extended-state="0" />
+    <frame x="598" y="23" width="794" height="877" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32133332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18655097" sideWeight="0.85024154" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45336226" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40049443" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19676946" sideWeight="0.16016015" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33114755" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36550975" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27166882" sideWeight="0.375" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42168674" sideWeight="0.8169177" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24931507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21452992" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27406418" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27166882" sideWeight="0.625" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27968338" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5151515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14860977" sideWeight="0.50970876" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3812665" sideWeight="0.18308227" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33069828" sideWeight="0.78066915" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32058048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3751669" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3343419" sideWeight="0.8169177" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5710526" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14516129" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32133332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18763557" sideWeight="0.85024154" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37598944" sideWeight="0.8169177" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45514512" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45444685" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40049443" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45218578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3812665" sideWeight="0.18308227" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19676946" sideWeight="0.16016015" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33127317" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36984816" sideWeight="0.8398398" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33245382" sideWeight="0.78066915" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27176782" sideWeight="0.8169177" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14516129" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5710526" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -1380,11 +1598,11 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32372215" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27406418" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2673435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27236843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1401,400 +1619,403 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
-    <MESSAGE value="util size" />
-    <MESSAGE value="update info" />
-    <MESSAGE value="regular update" />
-    <MESSAGE value="update 2/11" />
-    <MESSAGE value="apply material design d2l" />
-    <MESSAGE value="d2l query drive api" />
-    <MESSAGE value="d2l hw crud module added" />
-    <MESSAGE value="d2l adjust md-maxlength" />
-    <MESSAGE value="d2l ins and stu view" />
-    <MESSAGE value="update3" />
-    <MESSAGE value="ads1 update" />
-    <MESSAGE value="ads1 add progressBar" />
-    <MESSAGE value="TC Project" />
-    <MESSAGE value="deco" />
-    <MESSAGE value="Permission" />
-    <MESSAGE value="Permission &amp; ani" />
-    <MESSAGE value="TC deco" />
-    <MESSAGE value="th project" />
-    <MESSAGE value="lms hws-submit" />
-    <MESSAGE value="lms hws-hws" />
-    <MESSAGE value="lms d2l-classes" />
-    <MESSAGE value="draft version 1" />
-    <MESSAGE value="draft version2" />
-    <MESSAGE value="ads2" />
-    <MESSAGE value="op-profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="op-profile" />
+    <MESSAGE value="d2l-hws/getGDoc API" />
+    <MESSAGE value="d2l home redesign" />
+    <MESSAGE value="update mongoose version" />
+    <MESSAGE value="material input issue on IOS" />
+    <MESSAGE value="update assignment" />
+    <MESSAGE value="tutorial" />
+    <MESSAGE value="getHTTP" />
+    <MESSAGE value="getHTTP interaction" />
+    <MESSAGE value="getHTTP interaction2" />
+    <MESSAGE value="getHTTP interaction3" />
+    <MESSAGE value="getHTTP interaction4" />
+    <MESSAGE value="getHTTP interaction5&#10;" />
+    <MESSAGE value="getHTTP interaction6&#10;" />
+    <MESSAGE value="getHTTP interaction7&#10;" />
+    <MESSAGE value="d2l-grade&#10;" />
+    <MESSAGE value="meant-home deco&#10;" />
+    <MESSAGE value="sign out&#10;" />
+    <MESSAGE value="background color Change" />
+    <MESSAGE value="grade" />
+    <MESSAGE value="openboard" />
+    <MESSAGE value="minor fix" />
+    <MESSAGE value="Google Authentication" />
+    <MESSAGE value="fix date and new Assignment file name issue" />
+    <MESSAGE value="remove beta button" />
+    <MESSAGE value="class Interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="class Interface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="28" />
+      <option name="time" value="43" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/header.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/home.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/link-list.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1425">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/plan.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="538">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/d2l-grades.server.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20652173" vertical-offset="0" max-vertical-offset="644">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-events/config/mean-events.client.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26552796" vertical-offset="0" max-vertical-offset="644">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/articles/config/articles.client.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23602484" vertical-offset="0" max-vertical-offset="644">
-          <caret line="8" column="87" selection-start-line="6" selection-start-column="10" selection-end-line="8" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/articles/articles.client.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2147">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appScript/instructor.html">
+    <entry file="file://$PROJECT_DIR$/plan/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="541" max-vertical-offset="1634">
-          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result.js">
+    <entry file="file://$PROJECT_DIR$/plan/dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="836">
-          <caret line="10" column="23" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.82591873">
+          <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/d2l-grade.server.model.js">
+    <entry file="file://$PROJECT_DIR$/docs/backup.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64772725" vertical-offset="114" max-vertical-offset="1026">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.21341464">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/services/menus.client.service.js">
+    <entry file="file://$PROJECT_DIR$/docs/gskb/gskb setting and query.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6042154" vertical-offset="1539" max-vertical-offset="3268">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js">
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1121">
-          <caret line="2" column="60" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="60" />
+        <state vertical-scroll-proportion="-3.1759655">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/openboard/template/authentication/signup-dialog.tpl.html">
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-grades/services/d2l-grades.client.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69284064" vertical-offset="426" max-vertical-offset="1292">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l/controllers/g-drive-file-picker.client.controller.js">
+    <entry file="file://$PROJECT_DIR$/public/modules/users/views/authentication/signin.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5965318" vertical-offset="73" max-vertical-offset="3762">
-          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.6356275">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="40" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users/users.authentication.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.166667">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/authentication/signup-dialog.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3805668">
+          <caret line="46" column="41" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/template/authentication/signin-dialog.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6983806">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/openboard/template/authentication/signin-dialog.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.035715" vertical-offset="0" max-vertical-offset="836">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="33" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.15064563">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/users/controllers/authentication.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33425796">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/openboard/template/authentication/signup-dialog.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/openboard/config/openboard.client.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24965326">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/users/controllers/settings.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43828017">
+          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l/controllers/g-drive-file-picker.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="106" column="13" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/articles.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="35" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/openboard/template/tutorial/newAssign-dialog.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.714285" vertical-offset="705" max-vertical-offset="1615">
-          <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/openboard/img/doc.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5950783" vertical-offset="0" max-vertical-offset="894">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/development.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1782364" vertical-offset="0" max-vertical-offset="931">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-events/views/list-mean-events.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11287129" vertical-offset="0" max-vertical-offset="505">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/production.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2451">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/openboard/template/tutorial/newClass-dialog.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50666666" vertical-offset="171" max-vertical-offset="874">
-          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/d2l-hws-submits.server.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="3534">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/d2l-hws-submits.server.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-hws-submits/services/d2l-hws-submits.client.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2826087" vertical-offset="0" max-vertical-offset="874">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/css/meanTutorials.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54196304" vertical-offset="284" max-vertical-offset="2641">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="0.3340471">
+          <caret line="56" column="88" selection-start-line="56" selection-start-column="83" selection-end-line="56" selection-end-column="88" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14962962" vertical-offset="3091" max-vertical-offset="4712">
-          <caret line="195" column="46" selection-start-line="195" selection-start-column="46" selection-end-line="195" selection-end-column="46" />
-          <folding>
-            <element signature="n#div#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-160.0">
+          <caret line="256" column="22" selection-start-line="256" selection-start-column="22" selection-end-line="256" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/views/ads1.client.view.html">
+    <entry file="file://$PROJECT_DIR$/generate-ssl-certs.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10671937" vertical-offset="3" max-vertical-offset="1577">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#section#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/svg/papers.svg">
+    <entry file="file://$PROJECT_DIR$/gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6156">
-          <caret line="14" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/svg/hws.svg">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6213">
-          <caret line="10" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/css/ads1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7915905" vertical-offset="1163" max-vertical-offset="1710">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/config/d2l-ads.client.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55575866" vertical-offset="0" max-vertical-offset="547">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/views/ads2.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7732558" vertical-offset="741" max-vertical-offset="1805">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/directives/template/openboard-ads1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.036821704" vertical-offset="0" max-vertical-offset="6840">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/openboard/css/openboard-tutorial.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36363637" vertical-offset="1024" max-vertical-offset="2166">
-          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.041353382">
+          <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/openboard/img/profile.svg">
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48897058" vertical-offset="0" max-vertical-offset="544">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="71" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/css/openboardads1.css">
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/config/d2l-classes.client.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1299" max-vertical-offset="1843">
-          <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
-          <folding>
-            <marker date="1428098835719" expanded="true" signature="1197:1237" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/openboard/directives/openboard-ani1.client.directive.js">
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l/config/d2l.client.routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37589929" vertical-offset="0" max-vertical-offset="893">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-ads/directives/openboard-ads1.client.directive.js">
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41007194" vertical-offset="0" max-vertical-offset="741">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/openboard/directives/op-profile.client.directive.js">
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/config/mean-tutorials.client.routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="722">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.js">
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/projectView.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4369748" vertical-offset="969" max-vertical-offset="1577">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding />
+        <state vertical-scroll-proportion="-7.0588236">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectviewdashboard.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84033614" vertical-offset="227" max-vertical-offset="798">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.41755888">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/projectview-projects-controller.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/env/all.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33193278" vertical-offset="13" max-vertical-offset="2223">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.6809422">
+          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/config/d2l-classes.client.routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.887689" vertical-offset="7360" max-vertical-offset="7923">
-          <caret line="409" column="5" selection-start-line="409" selection-start-column="5" selection-end-line="409" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/class-contact.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/css/class-page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/class-about.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.032894738">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/class-home.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4276316">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/d2l-class-info.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="51" selection-start-line="0" selection-start-column="51" selection-end-line="0" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/home-dialogtmp.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18257956">
+          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21634616">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/core/views/header.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#md-icon#0;n#div#0;n#h2#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layout.server.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.525">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#md-icon#0;n#a#0;n#h1#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58914727" vertical-offset="437" max-vertical-offset="6251">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.745098">
+          <caret line="120" column="31" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="31" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#button#0;n#div#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#1;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#button#1;n#div#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-toolbar#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-icon#0;n#a#0;n#h2#0;n#md-toolbar#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#md-whiteframe#0;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#md-whiteframe#0;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
@@ -1804,55 +2025,32 @@
             <element signature="n#style#0;n#div#1;n#md-whiteframe#4;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#md-whiteframe#5;n#md-content#0;n#md-content#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#section#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-sidenav#0;n#section#0;n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#md-sidenav#0;n#section#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-icon#0;n#a#0;n#h1#0;n#md-toolbar#0;n#md-sidenav#0;n#section#0;n#section#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/views/header.client.view.html">
+    <entry file="file://$PROJECT_DIR$/app/views/index.server.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25110132" vertical-offset="0" max-vertical-offset="1311">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/openboard/directives/template/op-profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27900147" vertical-offset="0" max-vertical-offset="681">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1007" max-vertical-offset="1881">
-          <caret line="89" column="30" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+        <state vertical-scroll-proportion="-16.875">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <marker date="1428167948546" expanded="true" signature="71:3586" placeholder="[...]" />
-            <marker date="1428167948546" expanded="true" signature="100:3584" placeholder="{...}" />
+            <element signature="n#style#0;n#md-sidenav#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layout.server.view.html">
+    <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.2105265" vertical-offset="1451" max-vertical-offset="2432">
-          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.server.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14728682" vertical-offset="0" max-vertical-offset="516">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.6357827">
+          <caret line="132" column="28" selection-start-line="132" selection-start-column="28" selection-end-line="132" selection-end-column="28" />
           <folding>
-            <element signature="n#h2#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-icon#0;n#a#0;n#h2#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1167#1737#0" expanded="false" />
+            <element signature="e#1758#2397#0" expanded="false" />
+            <element signature="e#1934#1969#0" expanded="false" />
+            <element signature="e#1971#2006#0" expanded="false" />
           </folding>
         </state>
       </provider>
