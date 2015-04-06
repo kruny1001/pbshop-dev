@@ -2,8 +2,8 @@
 
 // D2l classes controller
 angular.module('d2l-classes').controller('D2lClassesController',
-	['$scope', '$stateParams', '$location', '$mdDialog', 'Authentication', 'D2lHws','D2lClasses','D2lHwsByClass','D2lHwsSubmitsTrue','D2lGrades','D2lHwsSubmitsTrueByClass','D2lHwsByOriginDocId',
-	function($scope, $stateParams, $location, $mdDialog, Authentication, D2lHws, D2lClasses, D2lHwsByClass, D2lHwsSubmitsTrue, D2lGrades, D2lHwsSubmitsTrueByClass, D2lHwsByOriginDocId) {
+	['$scope', '$stateParams', '$location', '$mdDialog', 'Authentication', 'D2lHws','D2lGradesByClass','D2lClasses','D2lHwsByClass','D2lHwsSubmitsTrue','D2lGrades','D2lHwsSubmitsTrueByClass','D2lHwsByOriginDocId',
+	function($scope, $stateParams, $location, $mdDialog, Authentication, D2lHws,D2lGradesByClass, D2lClasses, D2lHwsByClass, D2lHwsSubmitsTrue, D2lGrades, D2lHwsSubmitsTrueByClass, D2lHwsByOriginDocId) {
 		$scope.authentication = Authentication;
 		$scope.numClasses = 0;
 
@@ -17,7 +17,7 @@ angular.module('d2l-classes').controller('D2lClassesController',
 
 			// Redirect after save
 			d2lClass.$save(function(response) {
-				console.log('ddd');
+				//console.log('ddd');
 				$mdDialog.hide();
 				//$location.path('d2l-classes/' + response._id);
 
@@ -85,23 +85,25 @@ angular.module('d2l-classes').controller('D2lClassesController',
 					})
 
 				});
+
+				$scope.gradeCollection = D2lGradesByClass.get({classId:result._id});
+				$scope.gradeCollection.$promise.then(function (result) {
+					$scope.gradeCollectionCopy = [].concat(result);
+
+					result.forEach(function(value, index){
+						$scope.gradeCollectionCopy[index].hwInfo = D2lHws.get({d2lHwId: result[0].Assignment}, function(result){
+							//console.log(result);
+						});
+					})
+					//D2lHws
+				});
 			});
 
 
 
 
 
-			$scope.gradeCollection = D2lGrades.query();
-			$scope.gradeCollection.$promise.then(function (result) {
-				$scope.gradeCollectionCopy = [].concat(result);
 
-				result.forEach(function(value, index){
-					$scope.gradeCollectionCopy[index].hwInfo = D2lHws.get({d2lHwId: result[0].Assignment}, function(result){
-						console.log(result);
-					});
-				})
-				//D2lHws
-			});
 
 
 		};
@@ -134,7 +136,7 @@ angular.module('d2l-classes').controller('D2lClassesController',
 			function D2lHwDialogCtrl(scope, $timeout, $mdDialog, D2lHws, D2lClassesOwnership, GDriveSelectResult){
 
 				scope.$on('handleEmit', function(event, args) {
-					console.log('broadcast is invoked');
+					//console.log('broadcast is invoked');
 					scope.project.gdocId=args.message;
 					scope.$digest();
 				});
@@ -145,7 +147,7 @@ angular.module('d2l-classes').controller('D2lClassesController',
 					scope.projectForm = '';
 					args.message = '';
 					scope.$digest();
-					console.log('B');;
+					//console.log('B');;
 				};
 				scope.docs = GDriveSelectResult;
 				scope.project = {gdocId : scope.docs.id};
@@ -160,14 +162,14 @@ angular.module('d2l-classes').controller('D2lClassesController',
 				};
 
 				scope.loadClasses = function() {
-					console.log('Load Class is invoked');
+					//console.log('Load Class is invoked');
 					return $timeout(function() {
 						scope.classes = D2lClassesOwnership.query();
 					}, 650);
 				};
 
 				scope.createNewRecord = function() {
-					console.log('Create');
+					//console.log('Create');
 					// Create new D2l hw object
 					scope.project.dDate.setHours(23,59,59,999);
 					var d2lHw = new D2lHws (scope.project);

@@ -137,3 +137,20 @@ exports.hasAuthorization = function(req, res, next) {
 	}
 	next();
 };
+
+
+exports.listByClass= function(req, res) {
+	var populationQuery = [
+		//{path:'class', select:'name prefix'},
+		{path:'student', select:'displayName email username'},
+		{path:'instructor', select:'displayName email username'}];
+	D2lGrade.find({class: req.params.classId}).sort('-created').populate(populationQuery).exec(function(err, d2lGrades) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.jsonp(d2lGrades);
+		}
+	});
+};
