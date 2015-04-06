@@ -4,7 +4,7 @@
 		<b><h2>{{d2lClass.prefix}} {{d2lClass.name}}</h2></b>
 	</div>
 
-	<div class="alert alert-danger md-caption" role="alert">
+	<div class="alert alert-danger md-caption" style="margin-left:10px; margin-right:10px;" role="alert">
 		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
 		<span class="sr-only">Error:</span>
 		Important Date, Class Board and Contents are all identical for every class. You can't change the contents at this time.
@@ -48,7 +48,7 @@
 		</md-whiteframe>
 	</div>
 
-	<md-whiteframe class="md-whiteframe-z2 meanT-home-card ob-underbar-dark"
+	<md-whiteframe class="md-whiteframe-z2 meanT-home-card ob-underbar-yellow"
 				   layout="column" layout-align="space-around start">
 		<h3> Contents </h3>
 
@@ -112,10 +112,14 @@
 
 
 	<!--List HW-->
-	<md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-dark"
+	<md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-red"
 				   layout="column" layout-align="space-around start">
 
 		<div style="position:inherit; margin-bottom: 5px;">
+			<md-button class="md-primary" ng-click="copyHWTemplate('1S1cucFhz96cGRHvXzgGqxuptNR-NgWKpIwI55RB67NU')">
+				<md-icon style="font-size:40px; width:40px; height:40px;" md-svg-src="modules/openboard/img/doc.svg"></md-icon>
+				Copy Assignment Template
+			</md-button>
 			<md-button class="md-primary md-raised" ng-click="showNewAssign()">New Assignment</md-button>
 		</div>
 
@@ -151,7 +155,7 @@
 	</md-whiteframe>
 
 
-	<md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-dark"
+	<md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-green"
 				   layout="column" layout-align="space-around start">
 		<div style="border-top: 5px solid #acff53; padding: 5px;">
 			<div class="tableTitle">Assignment Submission List</div>
@@ -182,7 +186,7 @@
 
 
 	<!-- List Grade -->
-	<md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-dark"
+	<md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-base"
 				   layout="column" layout-align="space-around start">
 		<div style="border-top: 5px solid #61a4ff; padding: 5px;">
 			<div class="tableTitle">Grade Board for Student</div>
