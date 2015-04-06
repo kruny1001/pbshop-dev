@@ -13,6 +13,27 @@
 	<span flex hide-sm></span>
 </h2>
 
+<div hide-gt-md ng-controller="CoreHeadController" layout="row" layout-align="end" style="  z-index: 1111;
+  position: fixed;
+  top: 8px;
+  height: 45px;
+  width: 200px;
+  right: 10px;">
+
+	<!--<button class="docs-menu-icon" style="width:45px; height:45px" aria-label="Toggle Menu"-->
+			<!--ng-click="toggleLeft()">-->
+		<!--<md-icon md-svg-src="modules/openboard/img/profile.svg"-->
+				 <!--class="ng-isolate-scope md-default-theme" aria-hidden="true">-->
+		<!--</md-icon>-->
+	<!--</button>-->
+	<button class="docs-menu-icon" style="width:45px; height:45px" aria-label="Account Menu"
+			ng-click="toggleLeft()">
+		<md-icon md-svg-src="modules/openboard/img/menu.svg"
+				 class="ng-isolate-scope md-default-theme" aria-hidden="true">
+		</md-icon>
+	</button>
+</div>
+
 <!--<div id="navHeader" class="container" data-ng-controller="HeaderController">-->
 	<!--<div class="navbar-header">-->
 		<!--<button class="navbar-toggle" type="button" data-ng-click="toggleCollapsibleMenu()">-->

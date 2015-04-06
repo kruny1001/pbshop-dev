@@ -17,6 +17,9 @@ module.exports = function(app) {
 	app.route('/d2l-hws/getGDoc/:gdocId')
 		.get(d2lHws.getOriginDoc)
 
+	app.route('/d2l-hws/byClass/:classId')
+		.get(d2lHws.listByClass)
+
 	// Finish by binding the D2l hw middleware
 	app.param('d2lHwId', d2lHws.d2lHwByID);
 };

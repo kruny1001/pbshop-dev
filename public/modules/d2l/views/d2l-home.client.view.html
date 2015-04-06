@@ -11,31 +11,24 @@
             <!--&lt;!&ndash;<span ng-if="authentication !== undefined">LogIn required</span>&ndash;&gt;-->
         <!--</h2>-->
     <!--</md-toolbar>-->
-    <div layout="row" layout-align="center center" style="position:fixed; width:100%; top:64px; background-color:#B8B8B8">
-        <div flex>1</div>
-        <div flex>2</div>
-        <div flex>3</div>
-        <div flex>4</div>
-        <div flex><md-button class="md-warn" ng-click="openMenu=!openMenu">Menu</md-button></div>
-    </div>
 
-    <div ng-show="openMenu" class="gridListdemoDynamicTiles">
-        <div ng-controller="gridListDemoCtrl as vm">
-            <md-grid-list
-                    md-cols-sm="3" md-cols-md="6" md-cols-gt-md="12"
-                    md-row-height-gt-md="1:1" md-row-height="4:3"
-                    md-gutter="8px" md-gutter-gt-sm="4px" >
-                <md-grid-tile ng-repeat="tile in vm.tiles"
-                              md-rowspan="{{tile.span.row}}"
-                              md-colspan="{{tile.span.col}}"
-                              ng-class="tile.background"
-                              id="tile.title">
-                    <md-icon md-svg-icon="{{tile.icon}}" ng-click="test($event, tile)"></md-icon>
-                    <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
-                </md-grid-tile>
-            </md-grid-list>
-        </div>
-    </div>
+    <!--<div ng-show="openMenu" class="gridListdemoDynamicTiles">-->
+        <!--<div ng-controller="gridListDemoCtrl as vm">-->
+            <!--<md-grid-list-->
+                    <!--md-cols-sm="3" md-cols-md="6" md-cols-gt-md="12"-->
+                    <!--md-row-height-gt-md="1:1" md-row-height="4:3"-->
+                    <!--md-gutter="8px" md-gutter-gt-sm="4px" >-->
+                <!--<md-grid-tile ng-repeat="tile in vm.tiles"-->
+                              <!--md-rowspan="{{tile.span.row}}"-->
+                              <!--md-colspan="{{tile.span.col}}"-->
+                              <!--ng-class="tile.background"-->
+                              <!--id="tile.title">-->
+                    <!--<md-icon md-svg-icon="{{tile.icon}}" ng-click="test($event, tile)"></md-icon>-->
+                    <!--<md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>-->
+                <!--</md-grid-tile>-->
+            <!--</md-grid-list>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <hr>
     <!-- Important Date Class Board-->
@@ -133,7 +126,7 @@
                 <img ng-src="modules/d2l/img/intro.jpg">
                 <md-card-content>
                     <div style="font-size:12px;">Lecture 7</div>
-                    <p>Introduction</p>
+                    <p>Structure</p>
                 </md-card-content>
             </md-card>
 
@@ -141,7 +134,7 @@
                 <img ng-src="modules/d2l/img/intro.jpg">
                 <md-card-content>
                     <div style="font-size:12px;">Lecture 8</div>
-                    <p style="font-size:12px;">Introduction</p>
+                    <p style="font-size:12px;">Strings</p>
                 </md-card-content>
             </md-card>
 
@@ -149,7 +142,7 @@
                 <img ng-src="modules/d2l/img/intro.jpg">
                 <md-card-content>
                     <div style="font-size:12px;">Lecture 9</div>
-                    <p style="font-size:12px;">Introduction</p>
+                    <p style="font-size:12px;">Object Oriented Programming</p>
                 </md-card-content>
             </md-card>
 
@@ -157,7 +150,7 @@
                 <img ng-src="modules/d2l/img/intro.jpg">
                 <md-card-content>
                     <div style="font-size:12px;">Lecture 10</div>
-                    <p style="font-size:12px;">Introduction</p>
+                    <p style="font-size:12px;">More Classes</p>
                 </md-card-content>
             </md-card>
         </div>

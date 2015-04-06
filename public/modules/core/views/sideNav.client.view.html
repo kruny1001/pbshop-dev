@@ -54,16 +54,14 @@
     </style>
     <md-toolbar>
         <h1 class="md-toolbar-tools">
-            <a ng-href="/#!/" layout="row" flex="" class="docs-logo">
-                <md-icon md-svg-src="modules/openboard/img/pack.svg"
-                         class="svg-logotype ng-isolate-scope md-default-theme"
-                         style="height:40px;
+            <md-icon md-svg-src="modules/openboard/img/pack.svg"
+                     class="svg-logotype ng-isolate-scope md-default-theme"
+                     style="height:40px;
                                  font-size:40px; margin:0px;"
-                         aria-hidden="true">
+                     aria-hidden="true">
 
-                </md-icon>
-                <div class="docs-logotype">Your Account</div>
-            </a>
+            </md-icon>
+            <div class="docs-logotype">Your Account</div>
         </h1>
     </md-toolbar>
     <md-content class="sideNavTiles">
@@ -75,7 +73,8 @@
                           ng-repeat="tile in tiles"
                           md-rowspan="{{tile.span.row}}"
                           md-colspan="{{tile.span.col}}"
-                          ng-class="tile.background" >
+                          ng-class="tile.background"
+                          ng-click="sliderNavEvent(tile.title)">
                 <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
                 <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
             </md-grid-tile>

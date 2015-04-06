@@ -20,4 +20,18 @@ angular.module('d2l-hws-submits').factory('D2lHwsSubmits', ['$resource',
 				}
 			});
 		}
+	])
+	.factory('D2lHwsSubmitsTrueByClass', ['$resource',
+		function($resource) {
+			return $resource('d2l-hws-submits/submitted/byClass/:classId', { classId: '@_id'
+			}, {
+				get: {
+					method: 'GET', isArray: true
+				}
+			});
+		}
 	]);
+
+
+
+//'/d2l-hws-submits/submitted/byClass/:classId'

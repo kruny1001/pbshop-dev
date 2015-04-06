@@ -178,3 +178,16 @@ exports.getSubmitInfoGS = function(req, res){
 		}
 	});
 }
+
+exports.listSubmissionByClass = function(req, res){
+	var populationQuery = [{path:'class', select:'name prefix'}, {path:'user', select:'displayName email username'}, {path:'instructor', select:'displayName email username'}];
+	D2lHwsSubmit.find({submission:true, class:req.params.classId}).populate(populationQuery).sort('-created').exec(function(err, d2lHwsSubmits) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.jsonp(d2lHwsSubmits);
+		}
+	});
+}

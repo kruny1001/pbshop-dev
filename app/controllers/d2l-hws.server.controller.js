@@ -140,3 +140,20 @@ exports.getOriginDoc = function(req, res){
 		}
 	});
 }
+
+exports.listByClass = function(req, res){
+	D2lHw.find({class: req.params.classId}).exec(function(err, result){
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			D2lClass.populate(result, {path:"class", model: 'D2lClass'},function(error, found){
+				User.populate(result, {path:"user", model:"User", select:'displayName email'}, function(error, user){
+					res.jsonp(user);
+				});
+
+			});
+		}
+	});
+}

@@ -1,91 +1,286 @@
 
 <section class="headerEnabled" data-ng-controller="D2lClassesController" data-ng-init="findOne()">
+	<div layout="row" layout-align="center center">
+		<h2>{{d2lClass.prefix}} {{d2lClass.name}}</h2>
+	</div>
 
-	<style>
-		md-backdrop.md-opaque.md-default-theme {
-			background-color: rgba(0,0,0,.3);
-			height:100%;
-		}
+	<!-- Debuging Purpose Start-->
+	<div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>
+	<!-- Debuging Purpose End-->
 
-	</style>
-
-	<button class="docs-menu-icon" style="z-index:1111; position:fixed; right: 15px; top: 8px; width:45px; height:45px" aria-label="Toggle Menu"
-			ng-click="toggleLeftOpen()">
-		<md-icon md-svg-src="modules/openboard/img/menu.svg"
-				 class="ng-isolate-scope md-default-theme" aria-hidden="true">
-		</md-icon>
-	</button>
-
-	<!-- Main Content-->
-	<md-content layout="column" flex>
-
-		<!-- ToolBar -->
-		<md-toolbar id="toolBar">
-			<h2 class="md-toolbar-tools">
-				<a ng-href="/#!/" layout="row" flex="" class="docs-logo">
-					<md-icon md-svg-src="modules/openboard/img/pack.svg"
-							 class="svg-logotype ng-isolate-scope md-default-theme"
-							 style="height:40px;
-                                 font-size:40px; margin:0px;"
-							 aria-hidden="true">
-					</md-icon>
-					<div class="docs-logotype">Open Board</div>
-				</a>
-
-				<span class="docs-title" hide-sm>{{d2lClass.name}}</span>
-				<span flex hide-sm></span>
-				<!--<span><md-button class="md-warn" ng-click="openMenu=!openMenu">Menu</md-button></span>-->
-				<!--<span ng-if="authentication !== undefined">LogIn required</span>-->
-			</h2>
-		</md-toolbar>
-
-		<md-content>
-
-			<a sref="d2lClassInfo" class="btn btn-primary btn-lg">Home</a>
-			<a sref="d2lClassInfo" class="btn btn-danger btn-lg">Contact</a>
-
-			<div ng-controller="gridClassMenu as vm" flex>
-				<md-grid-list
-						md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
-						md-row-height-gt-md="1:1" md-row-height="4:3"
-						md-gutter="8px" md-gutter-gt-sm="4px" >
-					<md-grid-tile ng-repeat="tile in vm.tiles"
-								  md-rowspan="{{tile.span.row}}"
-								  md-colspan="{{tile.span.col}}"
-								  ng-class="tile.background" >
-						<md-icon md-svg-icon="{{tile.icon}}"></md-icon>
-						<md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
-					</md-grid-tile>
-				</md-grid-list>
+	<!-- Important Date Class Board-->
+	<div layout="row" layout-sm="column">
+		<md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-dark"
+					   layout="column" layout-align="space-around start">
+			<h3> Important Date </h3>
+			<div layout="column" layout-fill>
+				<md-whiteframe class="class-board md-whiteframe-z2" layout layout-align="start center">
+					<span class="class-board-desc">1/21: </span>
+				</md-whiteframe>
+				<md-whiteframe class="class-board md-whiteframe-z2" layout layout-align="start center">
+					<span class="class-board-desc">2/1: New Assignment is updated</span>
+				</md-whiteframe>
+				<md-whiteframe class="class-board md-whiteframe-z2" layout layout-align="start center">
+					<span class="class-board-desc">2/6: Exam1</span>
+				</md-whiteframe>
 			</div>
-
-		</md-content>
-
-	</md-content>
-
-	<div class="page-header">
-		<!--<h1 data-ng-bind="d2lClass.name"></h1>-->
-        <h1>{{d2lClass.prefix}} {{d2lClass.name}}</h1>
+		</md-whiteframe>
+		<md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-dark"
+					   layout="column" layout-align="space-around start">
+			<h3> Class Board </h3>
+			<div layout="column" layout-fill>
+				<md-whiteframe class="class-board md-whiteframe-z2" layout layout-align="start center">
+					<span class="class-board-desc">Research Paper and Presentation Schedule (UPDATED)</span>
+				</md-whiteframe>
+				<md-whiteframe class="class-board md-whiteframe-z2" layout layout-align="start center">
+					<span class="class-board-desc">Assignment - Spring 2015 COE Career Fair</span>
+				</md-whiteframe>
+				<md-whiteframe class="class-board md-whiteframe-z2" layout layout-align="start center">
+					<span class="class-board-desc">Exam is coming SOON</span>
+				</md-whiteframe>
+			</div>
+		</md-whiteframe>
 	</div>
 
-	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == d2lClass.user._id))">
-		<a class="btn btn-primary" href="/#!/d2l-classes/{{d2lClass._id}}/edit">
-			<i class="glyphicon glyphicon-edit"></i>
-		</a>
-		<a class="btn btn-primary" data-ng-click="remove();">
-			<i class="glyphicon glyphicon-trash"></i>
-		</a>
-	</div>
+	<md-whiteframe class="md-whiteframe-z2 meanT-home-card ob-underbar-dark"
+				   layout="column" layout-align="space-around start">
+		<h3> Contents </h3>
 
-	<small>
-		<em class="text-muted">
-			Posted on
-			<span data-ng-bind="d2lClass.created | date:'mediumDate'"></span>
-			by
-			<span data-ng-bind="d2lClass.user.displayName"></span>
-		</em>
-	</small>
+		<div layout="row">
+			<md-card style="max-width:150px;">
+				<img ng-src="modules/d2l/img/intro.jpg">
+				<md-card-content>
+					<div style="font-size:12px;">Lecture 1</div>
+					<p style="font-size:12px;">Introduction</p>
+				</md-card-content>
+			</md-card>
 
-	<div>Prefix: {{d2lClass.prefix}}</div>
-    <div>Name: {{d2lClass.name}}</div>
+			<md-card style="max-width:150px;">
+				<img ng-src="modules/d2l/img/intro.jpg">
+				<md-card-content>
+					<div style="font-size:12px;">Lecture 2</div>
+					<p style="font-size:12px;">C++</p>
+				</md-card-content>
+			</md-card>
+
+			<md-card style="max-width:150px;">
+				<img ng-src="modules/d2l/img/intro.jpg">
+				<md-card-content>
+					<div style="font-size:12px;">Lecture 3</div>
+					<p style="font-size:12px;">Input/ Flow Control</p>
+				</md-card-content>
+			</md-card>
+
+			<md-card style="max-width:150px;">
+				<img ng-src="modules/d2l/img/intro.jpg">
+				<md-card-content>
+					<div style="font-size:12px;">Lecture 4</div>
+					<p style="font-size:12px;">Functions</p>
+				</md-card-content>
+			</md-card>
+
+			<md-card style="max-width:150px;">
+				<img ng-src="modules/d2l/img/intro.jpg">
+				<md-card-content>
+					<div style="font-size:12px;">Lecture 5</div>
+					<p style="font-size:12px;">Arrays</p>
+				</md-card-content>
+			</md-card>
+		</div>
+
+		<div layout="row">
+			<md-card style="max-width:150px;">
+				<img ng-src="modules/d2l/img/intro.jpg">
+				<md-card-content>
+					<div style="font-size:12px;">Lecture 6</div>
+					<p>File IO</p>
+				</md-card-content>
+			</md-card>
+
+			<md-card style="max-width:150px;">
+				<img ng-src="modules/d2l/img/intro.jpg">
+				<md-card-content>
+					<div style="font-size:12px;">Lecture 7</div>
+					<p>Structure</p>
+				</md-card-content>
+			</md-card>
+
+			<md-card style="max-width:150px;">
+				<img ng-src="modules/d2l/img/intro.jpg">
+				<md-card-content>
+					<div style="font-size:12px;">Lecture 8</div>
+					<p style="font-size:12px;">Strings</p>
+				</md-card-content>
+			</md-card>
+
+			<md-card style="max-width:150px;">
+				<img ng-src="modules/d2l/img/intro.jpg">
+				<md-card-content>
+					<div style="font-size:12px;">Lecture 9</div>
+					<p style="font-size:12px;">Object Oriented Programming</p>
+				</md-card-content>
+			</md-card>
+
+			<md-card style="max-width:150px;">
+				<img ng-src="modules/d2l/img/intro.jpg">
+				<md-card-content>
+					<div style="font-size:12px;">Lecture 10</div>
+					<p style="font-size:12px;">More Classes</p>
+				</md-card-content>
+			</md-card>
+		</div>
+
+	</md-whiteframe>
+
+
+	<!--List HW-->
+	<md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-dark"
+				   layout="column" layout-align="space-around start">
+
+		<div style="position:inherit; margin-bottom: 5px;">
+			<md-button class="md-primary md-raised" ng-click="showNewAssign()">New Assignment</md-button>
+		</div>
+
+		<div style="border-top: 5px solid #ffeb45; padding: 5px;">
+			<div class="tableTitle">List HW</div>
+			<p hide-sm>Add, Edit, Udpate or Remove Homework</p>
+			<table st-table="hwsCopy" st-safe-src="hws" class="table table-striped">
+				<thead>
+				<tr>
+					<th st-sort="class.prefix">Class</th>
+					<th st-sort="title">Title</th>
+					<th st-sort="dDate">Due Date</th>
+					<th st-sort="totalGrade" hide-sm>Total</th>
+					<th st-sort="percent" hide-sm>Total %</th>
+					<th>Doc Link</th>
+				</tr>
+				<tr>
+					<th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr ng-repeat="HW in hwsCopy">
+					<td>{{HW.class.prefix}}</td>
+					<td>{{HW.title}}</td>
+					<td>{{HW.dDate |  date : format : timezone}}</td>
+					<td>{{HW.totalGrade}}</td>
+					<td hide-sm>{{HW.percent}}</td>
+					<td> <md-button class="md-warn md-raised" style="font-size:0.8em" ng-click="linkHW(HW.gdocId)">Open</md-button></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</md-whiteframe>
+
+
+	<md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-dark"
+				   layout="column" layout-align="space-around start">
+		<div style="border-top: 5px solid #acff53; padding: 5px;">
+			<div class="tableTitle">Assignment Submission List</div>
+			<p hide-sm>These submitted assignment is ready to grade.</p>
+			<table st-table="submittedHWCopy"
+				   st-safe-src="submittedHW"
+				   class="table table-striped">
+				<thead>
+				<tr>
+					<th st-sort="hwInfo[0].title">Title</th>
+					<th st-sort="user.displayName">Student</th>
+
+					<th>Doc Link</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr ng-repeat="subm in submittedHWCopy">
+					<td>{{subm.hwInfo[0].title}}</td>
+					<td>{{subm.user.displayName}}</td>
+
+					<td><md-button class="md-warn md-raised" ng-click="openDoc(subm.docId)">Grade</md-button></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</md-whiteframe>
+
+
+
+	<!-- List Grade -->
+	<md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-dark"
+				   layout="column" layout-align="space-around start">
+		<div style="border-top: 5px solid #61a4ff; padding: 5px;">
+			<div class="tableTitle">Grade Board for Student</div>
+			<p hide-sm>Check your registered classes</p>
+			<table st-table="gradeCollection" class="table table-striped">
+				<thead>
+				<tr>
+					<th></th>
+					<th st-sort="hwInfo.title">Title</th>
+					<th st-sort="student.displayName">Student</th>
+					<th st-sort="student.email">Email</th>
+					<th st-sort="grade">Grade</th>
+					<th st-sort="comment">%</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr ng-repeat="row in gradeCollection">
+					<td cs-select="row"></td>
+					<td>{{row.hwInfo.title}}</td>
+					<td>{{row.student.displayName}}</td>
+					<td>{{row.student.email}}</td>
+					<td>{{row.grade}}</td>
+					<td>{{row.comment}}</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</md-whiteframe>
+
+
+
+
+
+	<!-- Google Experimental Stuff
+    <div ng-controller="GDriveFilePickerController">
+        <h1>Google API List</h1>
+
+        <div class="profile">Profile</div>
+
+        <md-whiteframe class="md-whiteframe-z1 cntBox" layout="column">
+            Before Accessing this API,<br/>
+            you must accept OAuth2 Google API Service
+            <md-button class="md-raised md-warn" style="font-size:11px" ng-click="init()">{{authName}}</md-button>
+        </md-whiteframe>
+        <br/>
+        <md-whiteframe class="md-whiteframe-z1 cntBox" layout="column">
+            Check Google Drive<br/>
+            <md-button class="md-raised md-primary" ng-click="listingFolderInfo()">List Forlder</md-button>
+            <md-button class="md-primary" ng-click="findFolder()">findFolder Result  <div style="display: inline-flex; border-radius: 50%; background-color:#ffff00; width: 20px; color:red; text-align: center;">{{numFolder}}</div></md-button>
+            <md-button class="md-primary" ng-click="hideResult()">Hide Result</md-button>
+            <md-button class="md-primary" ng-click="showResult()">Show Result</md-button>
+            <div class="listFolder" ng-repeat="doc in gDocs">
+                <div ng-if="doc.id!==undefined"><b>ID:</b> {{doc.id}}</div>
+                <div ng-if="doc.title!==undefined"><b>TITLE:</b> {{doc.title}}</div>
+                <div ng-if="doc.webViewLink!==undefined"><b>Web View Link:</b> {{doc.webViewLink}}</div>
+                <div ng-if="doc.webContentLink!==undefined"><b>Web Content Link:</b>
+                    <a href="{{doc.webContentLink}}" target="_blank">Link</a>
+                </div>
+                <div ng-if="doc.thumbnailLink!==undefined"><b>Thumbnail Link:</b>
+                    <a href="{{doc.thumbnailLink}}" target="_blank">Link</a>
+                </div>
+                <img ng-src="{{doc.thumbnailLink}}"/>
+                <hr/>
+            </div>
+        </md-whiteframe>
+        <br/>
+
+        <md-whiteframe class="md-whiteframe-z1 cntBox" layout="column">
+            Check Your Google+ Account<br/>
+            <md-button class="md-raised md-primary" ng-click="plusTest()">Plus Test</md-button>
+            <md-checkbox ng-init="gPlusToggle=true" ng-model="gPlusToggle" aria-label="Checkbox 1">Show Result {{ gPlusToggle}}</md-checkbox>
+            <div ng-if="gPlusToggle" class="" ng-repeat="gp in gPlus">
+                <div>{{$index}}: {{gp.object.content}}</div>
+            </div>
+        </md-whiteframe>
+    </div>
+    -->
+
 </section>

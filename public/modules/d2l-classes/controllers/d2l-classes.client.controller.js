@@ -1,9 +1,11 @@
 'use strict';
 
 // D2l classes controller
-angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$stateParams', '$location', '$mdDialog', 'Authentication', 'D2lClasses',
-	function($scope, $stateParams, $location, $mdDialog, Authentication, D2lClasses) {
+angular.module('d2l-classes').controller('D2lClassesController',
+	['$scope', '$stateParams', '$location', '$mdDialog', 'Authentication', 'D2lHws','D2lClasses','D2lHwsByClass','D2lHwsSubmitsTrue','D2lGrades','D2lHwsSubmitsTrueByClass','D2lHwsByOriginDocId',
+	function($scope, $stateParams, $location, $mdDialog, Authentication, D2lHws, D2lClasses, D2lHwsByClass, D2lHwsSubmitsTrue, D2lGrades, D2lHwsSubmitsTrueByClass, D2lHwsByOriginDocId) {
 		$scope.authentication = Authentication;
+		$scope.numClasses = 0;
 
 		// Create new D2l class
 		$scope.create = function() {
@@ -26,8 +28,6 @@ angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$st
 				$scope.error = errorResponse.data.message;
 			});
 		};
-
-
 
 		// Remove existing D2l class
 		$scope.remove = function(d2lClass) {
@@ -64,55 +64,133 @@ angular.module('d2l-classes').controller('D2lClassesController', ['$scope', '$st
 
 		// Find existing D2l class
 		$scope.findOne = function() {
-			$scope.d2lClass = D2lClasses.get({ 
+			$scope.d2lClass = D2lClasses.get({
 				d2lClassId: $stateParams.d2lClassId
 			});
+
+			$scope.d2lClass.$promise.then(function(result){
+				$scope.numClasses = result.length;
+
+				$scope.hws = D2lHwsByClass.get({classId: result._id},function(result){
+					$scope.hwsCopy = [].concat(result);
+				});
+
+				$scope.submittedHW = D2lHwsSubmitsTrueByClass.get({classId: result._id},function(result){
+					$scope.submittedHWCopy = [].concat(result);
+
+					result.forEach(function(value, index){
+						$scope.submittedHWCopy[index].hwInfo = D2lHwsByOriginDocId.get({gdocId: result[0].originId}, function(result){
+							//$scope.submittedHWCopy.hwInfo = result[0];
+						});
+					})
+
+				});
+			});
+
+
+
+
+
+			$scope.gradeCollection = D2lGrades.query();
+			$scope.gradeCollection.$promise.then(function (result) {
+				$scope.gradeCollectionCopy = [].concat(result);
+
+				result.forEach(function(value, index){
+					$scope.gradeCollectionCopy[index].hwInfo = D2lHws.get({d2lHwId: result[0].Assignment}, function(result){
+						console.log(result);
+					});
+				})
+				//D2lHws
+			});
+
+
+		};
+
+
+
+		$scope.showNewAssign = function(ev){
+			$mdDialog.show({
+				controller: D2lHwDialogCtrl,
+				templateUrl: 'modules/openboard/template/tutorial/newAssign-dialog.tpl.html',
+				targetEvent: ev,
+				clickOutsideToClose: false,
+				preserveScope: false,
+				locals: {project:{gdocId: ''}},
+				bindToController: true,
+				//onComplete: reset
+
+			}).then(
+				function(){
+					//$log.debug('cancel');
+				},
+				function(){
+					//$log.debug('created Assignment');
+					$scope.hws = D2lHwsByClass.get({classId: $scope.d2lClass._id},function(result){
+						$scope.hwsCopy = [].concat(result);
+					});
+				}
+			);
+
+			function D2lHwDialogCtrl(scope, $timeout, $mdDialog, D2lHws, D2lClassesOwnership, GDriveSelectResult){
+
+				scope.$on('handleEmit', function(event, args) {
+					console.log('broadcast is invoked');
+					scope.project.gdocId=args.message;
+					scope.$digest();
+				});
+				scope.cancel = function(){
+					$mdDialog.cancel();
+					scope.docs = "";
+					scope.project = '';
+					scope.projectForm = '';
+					args.message = '';
+					scope.$digest();
+					console.log('B');;
+				};
+				scope.docs = GDriveSelectResult;
+				scope.project = {gdocId : scope.docs.id};
+
+				var dDate = new Date();
+				dDate.setHours(23,59,59,999);
+
+				scope.project = {
+					dDate: dDate
+					//gdocId : scope.docs.id
+					//desc: 'Nuclear Missile Defense System',
+				};
+
+				scope.loadClasses = function() {
+					console.log('Load Class is invoked');
+					return $timeout(function() {
+						scope.classes = D2lClassesOwnership.query();
+					}, 650);
+				};
+
+				scope.createNewRecord = function() {
+					console.log('Create');
+					// Create new D2l hw object
+					scope.project.dDate.setHours(23,59,59,999);
+					var d2lHw = new D2lHws (scope.project);
+					d2lHw.class = d2lHw.class._id;
+
+					// Redirect after save
+					d2lHw.$save(function(response) {
+						//$location.path('d2l-hws/' + response._id);
+						// Clear form fields
+						scope.name = '';
+						scope.project.gdocId = '';
+						scope.projectForm = null;
+						$mdDialog.cancel();
+						scope.project = null;
+
+					}, function(errorResponse) {
+						scope.error = errorResponse.data.message;
+					});
+				};
+			}
 		};
 	}
-]).controller('gridClassMenu', gridClassMenu);
-
-function gridClassMenu($scope){
-	this.tiles = buildGridModel({
-		icon : "avatar:svg-",
-		title: "Svg-",
-		background: ""
-	});
-	function buildGridModel(tileTmpl){
-		var it, results = [ ];
-		for (var j=0; j<11; j++) {
-			it = angular.extend({},tileTmpl);
-			it.icon  = it.icon + (j+1);
-			it.title = it.title + (j+1);
-			it.span  = { row : "1", col : "1" };
-			switch(j+1) {
-				case 1:
-					it.background = "red";
-					it.span.row = it.span.col = 2;
-					break;
-				case 2: it.background = "green";         break;
-				case 3: it.background = "darkBlue";      break;
-				case 4:
-					it.background = "blue";
-					it.span.col = 2;
-					break;
-				case 5:
-					it.background = "yellow";
-					it.span.row = it.span.col = 2;
-					break;
-				case 6: it.background = "pink";          break;
-				case 7: it.background = "darkBlue";      break;
-				case 8: it.background = "purple";        break;
-				case 9: it.background = "deepBlue";      break;
-				case 10: it.background = "lightPurple";  break;
-				case 11: it.background = "yellow";       break;
-			}
-			results.push(it);
-		}
-		return results;
-	}
-}
-
-
+]);
 
 angular.module('d2l-classes')
 	.controller('mainController', function($scope, $state) {

@@ -12,6 +12,10 @@ module.exports = function(app) {
 	app.route('/d2l-hws-submits/submitted')
 		.get(d2lHwsSubmits.listSubmission);
 
+	app.route('/d2l-hws-submits/submitted/byClass/:classId')
+		.get(d2lHwsSubmits.listSubmissionByClass)
+
+
 	app.route('/d2l-hws-submits/:d2lHwsSubmitId')
 		.get(d2lHwsSubmits.read)
 		.put(users.requiresLogin, d2lHwsSubmits.hasAuthorization, d2lHwsSubmits.update)
