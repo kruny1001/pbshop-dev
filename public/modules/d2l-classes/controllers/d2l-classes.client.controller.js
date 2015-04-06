@@ -122,6 +122,7 @@ angular.module('d2l-classes').controller('D2lClassesController',
 
 				$scope.gradeCollection = D2lGradesByClass.get({classId:result._id});
 				$scope.gradeCollection.$promise.then(function (result) {
+					$scope.gradeCollection = result;
 					$scope.gradeCollectionCopy = [].concat(result);
 
 					result.forEach(function(value, index){
