@@ -68,6 +68,23 @@ angular.module('d2l-classes').controller('D2lClassesController',
 			$scope.d2lClasses = D2lClassesOwnership.query();
 		};
 
+		$scope.linkHW = function(hw){
+			var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
+			var param = 'docId='+hw.gdocId+
+				'&userId='+authentication.user.username+
+				'&title='+hw.title+
+				'&dDate='+hw.dDate+
+				'&userIdRef='+Authentication.user._id+
+				'&instructorRef='+hw.class.user+
+				'&classId='+hw.class._id;
+			$window.open(AppScriptAPI+param);
+		};
+
+		$scope.openDoc = function(docId){
+			var url = 'https://docs.google.com/document/d/'+docId+'/edit';
+			$window.open(url);
+		};
+
 		// Find a list of D2l classes
 		$scope.findAll = function() {
 			$scope.d2lClasses = D2lClasses.query();
