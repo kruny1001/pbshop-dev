@@ -92,6 +92,11 @@
 
 .class-board{
     background: #ffda74;
-    margin: 10px;
-    padding: 10px;
+    margin-bottom: 3px;
+    /*padding: 10px;*/
+}
+
+
+.class-board-desc{
+    font-size: 12px;
 }
