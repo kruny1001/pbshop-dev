@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classes.client.view.html" afterPath="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classes.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classesAll.client.view.html" afterPath="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classesAll.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" afterPath="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" afterPath="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -144,16 +147,61 @@
       <file leaf-file-name="openboard.client.view.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45751634">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.37037036">
+              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
               <folding>
-                <element signature="n#md-whiteframe#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#1;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#2;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#3;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#4;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#5;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#6;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#2;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#3;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#4;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#5;n#section#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view-d2l-class.client.view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.2083335">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <folding>
+                <element signature="n#div#2;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-card#0;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-card#1;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#1;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-whiteframe#3;n#section#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -221,15 +269,15 @@
         <option value="$PROJECT_DIR$/app/controllers/d2l-hws-submits.server.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-hws-submits/services/d2l-hws-submits.client.service.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-hws/services/d2l-hws.client.service.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" />
         <option value="$PROJECT_DIR$/app/routes/d2l-grades.server.routes.js" />
         <option value="$PROJECT_DIR$/app/controllers/d2l-grades.server.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-grades/services/d2l-grades.client.service.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classes.client.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classesAll.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/d2l-classes/config/d2l-classes.client.routes.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classes.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classesAll.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" />
       </list>
     </option>
@@ -469,6 +517,134 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="d2l-classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pbshop-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="d2l-classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1004,12 +1180,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00149" summary="getHTTP interaction2">
-      <created>1427599101604</created>
-      <option name="number" value="00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1427599101604</updated>
-    </task>
     <task id="LOCAL-00150" summary="getHTTP interaction3">
       <created>1427599628556</created>
       <option name="number" value="00150" />
@@ -1298,7 +1468,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428311336435</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <task id="LOCAL-00198" summary="sidebarMenu">
+      <created>1428311607076</created>
+      <option name="number" value="00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1428311607077</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1316,8 +1492,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20710573" sideWeight="0.5131086" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2911726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3743501" sideWeight="0.5131086" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2911726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32058048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1515,14 +1691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14124294">
           <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/openboard/css/openboard-tutorial.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33898306">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1744,49 +1912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2418301">
-          <caret line="223" column="53" selection-start-line="223" selection-start-column="38" selection-end-line="223" selection-end-column="53" />
-          <folding>
-            <element signature="n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#1;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#1;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-whiteframe#3;n#section#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l-grades/services/d2l-grades.client.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3529412">
@@ -1835,14 +1960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classes.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12345679">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/services/d2l-classes.client.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3529412">
@@ -1859,14 +1976,6 @@
             <element signature="e#684#1147#0" expanded="false" />
             <element signature="e#1218#1509#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classesAll.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="62" selection-start-line="0" selection-start-column="87" selection-end-line="0" selection-end-column="94" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1890,18 +1999,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/openboard/css/openboard-tutorial.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41262135">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classes.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="50" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classesAll.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="50" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.2083335">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="n#div#2;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card#0;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card#1;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#1;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-whiteframe#3;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45751634">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.37037036">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
           <folding>
-            <element signature="n#md-whiteframe#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-whiteframe#1;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-whiteframe#2;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-whiteframe#3;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-whiteframe#4;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-whiteframe#5;n#md-content#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-whiteframe#6;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#2;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#3;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#4;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#5;n#section#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
