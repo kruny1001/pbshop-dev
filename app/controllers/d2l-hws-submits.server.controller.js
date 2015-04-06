@@ -150,7 +150,7 @@ exports.hasAuthorization = function(req, res, next) {
 
 
 exports.getSubmitInfo = function(req, res){
-	D2lHwsSubmit.find({originId: req.params.docId, userEmail: req.params.userEmail})
+	D2lHwsSubmit.find({originId: req.params.docId, user:{email: req.params.userEmail}})
 		.exec(function(err, d2lHwsSubmit){
 		if (err) {
 			return res.status(400).send({
