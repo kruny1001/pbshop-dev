@@ -1,8 +1,8 @@
-<section class="headerEnabled" data-ng-controller="D2lClassesController" data-ng-init="find()">
+<section class="headerEnabled" data-ng-controller="D2lClassesController" data-ng-init="findAll()">
 
     <md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-dark"
                    layout="column" layout-align="space-around start">
-        <h1>Your classes</h1>
+        <h1>All classes</h1>
     </md-whiteframe>
     <md-whiteframe flex class="md-whiteframe-z2 meanT-home-card ob-underbar-yellow"
                    layout="column" layout-align="space-around start">
@@ -13,10 +13,10 @@
 
             <a data-ng-repeat="d2lClass in d2lClasses" data-ng-href="#!/d2l-classes/{{d2lClass._id}}" class="list-group-item">
                 <!--<small class="list-group-item-text">-->
-                    <!--Posted on-->
-                    <!--<span data-ng-bind="d2lClass.created | date:'medium'"></span>-->
-                    <!--by-->
-                    <!--<span data-ng-bind="d2lClass.user.displayName"></span>-->
+                <!--Posted on-->
+                <!--<span data-ng-bind="d2lClass.created | date:'medium'"></span>-->
+                <!--by-->
+                <!--<span data-ng-bind="d2lClass.user.displayName"></span>-->
                 <!--</small>-->
                 <h4 class="list-group-item-heading"><b>[{{d2lClass.prefix}}]</b> {{d2lClass.name}}</h4>
                 <!--<h4 class="list-group-item-heading" data-ng-bind="d2lClass.name"></h4>-->

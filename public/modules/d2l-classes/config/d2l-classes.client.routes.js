@@ -31,6 +31,10 @@ angular.module('d2l-classes').config(['$stateProvider',
 				url: '/d2l-classes',
 				templateUrl: 'modules/d2l-classes/views/list-d2l-classes.client.view.html'
 			}).
+			state('listD2lClassesAll', {
+				url: '/d2l-classesAll',
+				templateUrl: 'modules/d2l-classes/views/list-d2l-classesAll.client.view.html'
+			}).
 			state('createD2lClass', {
 				url: '/d2l-classes/create',
 				templateUrl: 'modules/d2l-classes/views/create-d2l-class.client.view.html'

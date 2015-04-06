@@ -66,10 +66,10 @@ angular.module('core')
               it.title = "Profile";
               it.span.row = it.span.col = 2;
               break;
-            case 2: it.background = "green";  it.span.col = 2;  it.title = "Class";     break;
-            case 3: it.background = "darkBlue";  it.span.col = 2; it.title = "Tutorial";   break;
+            case 2: it.background = "green";  it.span.col = 2;  it.title = "Your Classes";     break;
+            case 3: it.background = "darkBlue";  it.span.col = 2; it.title = "All Classes";   break;
             case 4:
-              it.title = "Class";
+              it.title = "Tutorial";
               it.background = "blue";
               it.span.col = 2;
               break;
@@ -107,6 +107,7 @@ angular.module('core')
               $scope.title = "Profile";
               $scope.subTitle = "Edit Profile";
             }
+
         });
 
       $scope.sliderNavEvent = function(name){
@@ -117,7 +118,7 @@ angular.module('core')
             //TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
           });
         console.log(name);
-        if(name === 'Class'){
+        if(name === 'Your Classes'){
           $state.go('listD2lClasses');
         }
         else if(name ==='Profile'){
@@ -125,6 +126,9 @@ angular.module('core')
         }
         else if(name ==='Tutorial'){
           $state.go('openboard');
+        }
+        else if(name ==='All Classes'){
+          $state.go('listD2lClassesAll');
         }
       }
 

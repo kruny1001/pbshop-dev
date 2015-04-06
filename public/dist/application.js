@@ -450,10 +450,10 @@ angular.module('core')
               it.title = "Profile";
               it.span.row = it.span.col = 2;
               break;
-            case 2: it.background = "green";  it.span.col = 2;  it.title = "Class";     break;
-            case 3: it.background = "darkBlue";  it.span.col = 2; it.title = "Tutorial";   break;
+            case 2: it.background = "green";  it.span.col = 2;  it.title = "Your Classes";     break;
+            case 3: it.background = "darkBlue";  it.span.col = 2; it.title = "All Classes";   break;
             case 4:
-              it.title = "Class";
+              it.title = "Tutorial";
               it.background = "blue";
               it.span.col = 2;
               break;
@@ -491,6 +491,7 @@ angular.module('core')
               $scope.title = "Profile";
               $scope.subTitle = "Edit Profile";
             }
+
         });
 
       $scope.sliderNavEvent = function(name){
@@ -501,7 +502,7 @@ angular.module('core')
             //TweenMax.to($window, 1.2, {scrollTo:{y:target}, ease:Power4.easeOut});
           });
         console.log(name);
-        if(name === 'Class'){
+        if(name === 'Your Classes'){
           $state.go('listD2lClasses');
         }
         else if(name ==='Profile'){
@@ -509,6 +510,9 @@ angular.module('core')
         }
         else if(name ==='Tutorial'){
           $state.go('openboard');
+        }
+        else if(name ==='All Classes'){
+          $state.go('listD2lClassesAll');
         }
       }
 
@@ -1143,6 +1147,10 @@ angular.module('d2l-classes').config(['$stateProvider',
 				url: '/d2l-classes',
 				templateUrl: 'modules/d2l-classes/views/list-d2l-classes.client.view.html'
 			}).
+			state('listD2lClassesAll', {
+				url: '/d2l-classesAll',
+				templateUrl: 'modules/d2l-classes/views/list-d2l-classesAll.client.view.html'
+			}).
 			state('createD2lClass', {
 				url: '/d2l-classes/create',
 				templateUrl: 'modules/d2l-classes/views/create-d2l-class.client.view.html'
@@ -1161,8 +1169,8 @@ angular.module('d2l-classes').config(['$stateProvider',
 
 // D2l classes controller
 angular.module('d2l-classes').controller('D2lClassesController',
-	['$scope', '$stateParams', '$location', '$mdDialog', 'Authentication', 'D2lHws','D2lGradesByClass','D2lClasses','D2lHwsByClass','D2lHwsSubmitsTrue','D2lGrades','D2lHwsSubmitsTrueByClass','D2lHwsByOriginDocId',
-	function($scope, $stateParams, $location, $mdDialog, Authentication, D2lHws,D2lGradesByClass, D2lClasses, D2lHwsByClass, D2lHwsSubmitsTrue, D2lGrades, D2lHwsSubmitsTrueByClass, D2lHwsByOriginDocId) {
+	['$scope', '$stateParams', '$location', '$mdDialog', 'Authentication', 'D2lHws','D2lGradesByClass','D2lClasses','D2lHwsByClass','D2lHwsSubmitsTrue','D2lGrades','D2lHwsSubmitsTrueByClass','D2lHwsByOriginDocId','D2lClassesOwnership',
+	function($scope, $stateParams, $location, $mdDialog, Authentication, D2lHws,D2lGradesByClass, D2lClasses, D2lHwsByClass, D2lHwsSubmitsTrue, D2lGrades, D2lHwsSubmitsTrueByClass, D2lHwsByOriginDocId, D2lClassesOwnership) {
 		$scope.authentication = Authentication;
 		$scope.numClasses = 0;
 
@@ -1218,7 +1226,13 @@ angular.module('d2l-classes').controller('D2lClassesController',
 
 		// Find a list of D2l classes
 		$scope.find = function() {
+			$scope.d2lClasses = D2lClassesOwnership.query();
+		};
+
+		// Find a list of D2l classes
+		$scope.findAll = function() {
 			$scope.d2lClasses = D2lClasses.query();
+
 		};
 
 		// Find existing D2l class

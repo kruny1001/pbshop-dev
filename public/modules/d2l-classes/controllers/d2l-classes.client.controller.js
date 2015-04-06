@@ -2,8 +2,8 @@
 
 // D2l classes controller
 angular.module('d2l-classes').controller('D2lClassesController',
-	['$scope', '$stateParams', '$location', '$mdDialog', 'Authentication', 'D2lHws','D2lGradesByClass','D2lClasses','D2lHwsByClass','D2lHwsSubmitsTrue','D2lGrades','D2lHwsSubmitsTrueByClass','D2lHwsByOriginDocId',
-	function($scope, $stateParams, $location, $mdDialog, Authentication, D2lHws,D2lGradesByClass, D2lClasses, D2lHwsByClass, D2lHwsSubmitsTrue, D2lGrades, D2lHwsSubmitsTrueByClass, D2lHwsByOriginDocId) {
+	['$scope', '$stateParams', '$location', '$mdDialog', 'Authentication', 'D2lHws','D2lGradesByClass','D2lClasses','D2lHwsByClass','D2lHwsSubmitsTrue','D2lGrades','D2lHwsSubmitsTrueByClass','D2lHwsByOriginDocId','D2lClassesOwnership',
+	function($scope, $stateParams, $location, $mdDialog, Authentication, D2lHws,D2lGradesByClass, D2lClasses, D2lHwsByClass, D2lHwsSubmitsTrue, D2lGrades, D2lHwsSubmitsTrueByClass, D2lHwsByOriginDocId, D2lClassesOwnership) {
 		$scope.authentication = Authentication;
 		$scope.numClasses = 0;
 
@@ -59,7 +59,13 @@ angular.module('d2l-classes').controller('D2lClassesController',
 
 		// Find a list of D2l classes
 		$scope.find = function() {
+			$scope.d2lClasses = D2lClassesOwnership.query();
+		};
+
+		// Find a list of D2l classes
+		$scope.findAll = function() {
 			$scope.d2lClasses = D2lClasses.query();
+
 		};
 
 		// Find existing D2l class
