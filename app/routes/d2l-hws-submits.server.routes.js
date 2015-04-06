@@ -21,7 +21,7 @@ module.exports = function(app) {
 		.put(users.requiresLogin, d2lHwsSubmits.hasAuthorization, d2lHwsSubmits.update)
 		.delete(users.requiresLogin, d2lHwsSubmits.hasAuthorization, d2lHwsSubmits.delete);
 
-	app.route('/d2l-hws-submits/getBydocId/:docId/:userEmail')
+	app.route('/d2l-hws-submits/getBydocId/:docId/:userId')
 		.get(d2lHwsSubmits.getSubmitInfo);
 
 	app.route('/d2l-hws-submits/getBydocIdGS/:docId')
