@@ -1,11 +1,17 @@
 
 <section class="headerEnabled openboard-background" data-ng-controller="D2lClassesController" data-ng-init="findOne()">
 	<div layout="row" layout-align="center center">
-		<h2>{{d2lClass.prefix}} {{d2lClass.name}}</h2>
+		<b><h2>{{d2lClass.prefix}} {{d2lClass.name}}</h2></b>
+	</div>
+
+	<div class="alert alert-danger md-caption" role="alert">
+		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		<span class="sr-only">Error:</span>
+		Important Date, Class Board and Contents are all identical for every class. You can't change the contents at this time.
 	</div>
 
 	<!-- Debuging Purpose Start-->
-	<div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>
+	<!--<div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>-->
 	<!-- Debuging Purpose End-->
 
 	<!-- Important Date Class Board-->
@@ -71,6 +77,10 @@
 				</md-card-content>
 			</md-card>
 
+
+		</div>
+
+		<div layout="row">
 			<md-card style="max-width:150px;">
 				<img ng-src="modules/d2l/img/intro.jpg">
 				<md-card-content>
@@ -86,9 +96,7 @@
 					<p style="font-size:12px;">Arrays</p>
 				</md-card-content>
 			</md-card>
-		</div>
 
-		<div layout="row">
 			<md-card style="max-width:150px;">
 				<img ng-src="modules/d2l/img/intro.jpg">
 				<md-card-content>
@@ -97,37 +105,7 @@
 				</md-card-content>
 			</md-card>
 
-			<md-card style="max-width:150px;">
-				<img ng-src="modules/d2l/img/intro.jpg">
-				<md-card-content>
-					<div style="font-size:12px;">Lecture 7</div>
-					<p>Structure</p>
-				</md-card-content>
-			</md-card>
 
-			<md-card style="max-width:150px;">
-				<img ng-src="modules/d2l/img/intro.jpg">
-				<md-card-content>
-					<div style="font-size:12px;">Lecture 8</div>
-					<p style="font-size:12px;">Strings</p>
-				</md-card-content>
-			</md-card>
-
-			<md-card style="max-width:150px;">
-				<img ng-src="modules/d2l/img/intro.jpg">
-				<md-card-content>
-					<div style="font-size:12px;">Lecture 9</div>
-					<p style="font-size:12px;">Object Oriented Programming</p>
-				</md-card-content>
-			</md-card>
-
-			<md-card style="max-width:150px;">
-				<img ng-src="modules/d2l/img/intro.jpg">
-				<md-card-content>
-					<div style="font-size:12px;">Lecture 10</div>
-					<p style="font-size:12px;">More Classes</p>
-				</md-card-content>
-			</md-card>
 		</div>
 
 	</md-whiteframe>
