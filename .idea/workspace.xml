@@ -144,9 +144,17 @@
       <file leaf-file-name="openboard.client.view.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8039216">
-              <caret line="327" column="30" selection-start-line="327" selection-start-column="30" selection-end-line="327" selection-end-column="30" />
-              <folding />
+            <state vertical-scroll-proportion="0.45751634">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="n#md-whiteframe#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#1;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#2;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#3;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#4;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#5;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#md-whiteframe#6;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -996,12 +1004,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00148" summary="getHTTP interaction2">
-      <created>1427598898985</created>
-      <option name="number" value="00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1427598898985</updated>
-    </task>
     <task id="LOCAL-00149" summary="getHTTP interaction2">
       <created>1427599101604</created>
       <option name="number" value="00149" />
@@ -1290,7 +1292,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428310842227</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="sidebarMenu">
+      <created>1428311336435</created>
+      <option name="number" value="00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1428311336435</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1308,8 +1316,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928944" sideWeight="0.5131086" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2911726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20710573" sideWeight="0.5131086" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2911726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32058048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1848,8 +1856,8 @@
         <state vertical-scroll-proportion="0.64705884">
           <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
           <folding>
+            <element signature="e#684#1147#0" expanded="false" />
             <element signature="e#1218#1509#0" expanded="false" />
-            <element signature="e#1572#1783#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1867,7 +1875,7 @@
         <state vertical-scroll-proportion="0.32352942">
           <caret line="29" column="27" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="27" />
           <folding>
-            <element signature="e#536#673#0" expanded="false" />
+            <element signature="e#352#501#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1884,9 +1892,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8039216">
-          <caret line="327" column="30" selection-start-line="327" selection-start-column="30" selection-end-line="327" selection-end-column="30" />
-          <folding />
+        <state vertical-scroll-proportion="0.45751634">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="n#md-whiteframe#0;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#1;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#2;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#3;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#4;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#5;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#md-whiteframe#6;n#md-content#0;n#section#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
