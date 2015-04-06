@@ -54,54 +54,81 @@
     </style>
     <md-toolbar>
         <h1 class="md-toolbar-tools">
-            <md-icon md-svg-src="modules/openboard/img/pack.svg"
+            <md-icon md-svg-src="modules/openboard/img/account.svg"
                      class="svg-logotype ng-isolate-scope md-default-theme"
-                     style="height:40px;
-                                 font-size:40px; margin:0px;"
+                     style="
+                        height:40px;
+                        font-size:40px;
+                        margin:0px;"
                      aria-hidden="true">
-
             </md-icon>
             <div class="docs-logotype">Your Account</div>
         </h1>
     </md-toolbar>
-    <md-content class="sideNavTiles">
+    <md-content class="sideNavTiles" style="overflow-x: hidden">
         <md-grid-list
                 md-cols-sm="2" md-cols-md="2" md-cols-gt-md="2"
                 md-row-height-gt-md="1:1" md-row-height="4:3"
                  >
             <md-grid-tile
-                          ng-repeat="tile in tiles"
-                          md-rowspan="{{tile.span.row}}"
-                          md-colspan="{{tile.span.col}}"
-                          ng-class="tile.background"
-                          ng-click="sliderNavEvent(tile.title)">
-                <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
-                <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+                    ng-if="authentication.user"
+                          id="profile"
+                          md-rowspan="2"
+                          md-colspan="2"
+                          class="red"
+                          ng-click="sliderNavEvent('Profile', 'profile')">
+                <md-icon md-svg-icon="avatar:svg-1"></md-icon>
+                <md-grid-tile-footer><h3>Profile</h3></md-grid-tile-footer>
+            </md-grid-tile>
+            <md-grid-tile
+                    ng-if="!authentication.user"
+                    id="signIn"
+                    md-rowspan="1"
+                    md-colspan="2"
+                    class="green"
+                    ng-click="sliderNavEvent('Sign In', 'signIn')">
+                <md-icon md-svg-icon="avatar:svg-2"></md-icon>
+                <md-grid-tile-footer><h3>Sign In</h3></md-grid-tile-footer>
+            </md-grid-tile>
+            <md-grid-tile
+                    ng-if="authentication.user"
+                    id="signOut"
+                    md-rowspan="1"
+                    md-colspan="2"
+                    class="darkBlue"
+                    ng-click="sliderNavEvent('Sign Out', 'signOut')">
+                <md-icon md-svg-icon="avatar:svg-3"></md-icon>
+                <md-grid-tile-footer><h3>Sign Out</h3></md-grid-tile-footer>
+            </md-grid-tile>
+            <md-grid-tile
+                    id="tutorial"
+                    md-rowspan="1"
+                    md-colspan="2"
+                    class="blue"
+                    ng-click="sliderNavEvent('Tutorial', 'tutorial')">
+                <md-icon md-svg-icon="avatar:svg-4"></md-icon>
+                <md-grid-tile-footer><h3>Tutorial</h3></md-grid-tile-footer>
+            </md-grid-tile>
+            <md-grid-tile
+                    ng-if="authentication.user"
+                    id="urClass"
+                    md-rowspan="1"
+                    md-colspan="1"
+                    class="yellow"
+                    ng-click="sliderNavEvent('Your Classes', 'urClass')">
+                <md-icon md-svg-icon="avatar:svg-5"></md-icon>
+                <md-grid-tile-footer><h3>Your Classes</h3></md-grid-tile-footer>
+            </md-grid-tile>
+            <md-grid-tile
+                    ng-if="authentication.user"
+                    id="allClass"
+                    md-rowspan="1"
+                    md-colspan="1"
+                    class="red"
+                    ng-click="sliderNavEvent('All Classes', 'allClass')">
+                <md-icon md-svg-icon="avatar:svg-6"></md-icon>
+                <md-grid-tile-footer><h3>All Classes</h3></md-grid-tile-footer>
             </md-grid-tile>
         </md-grid-list>
-        <!-- -->
-        <!--<div layour="column" layout-align="center center">-->
-            <!--<md-button class="md-primary docs-menu"-->
-                       <!--ng-repeat="btn in buttons"-->
-                       <!--ng-click=btn.func>{{btn.name}}</md-button>-->
-        <!--</div>-->
-        <!--<md-button ng-click="scrollTo('step1')" class="md-primary docs-menu" >-->
-            <!--1. Create a New Account-->
-        <!--</md-button>-->
-        <!--<md-button ng-click="scrollTo('step2')" class="md-primary docs-menu" >-->
-            <!--2. Create a New Class-->
-        <!--</md-button>-->
-        <!--<md-button ng-click="scrollTo('step3')" class="md-primary docs-menu" >-->
-            <!--3. Create an New Assignment-->
-        <!--</md-button>-->
-        <!--<md-button ng-click="scrollTo('step4')" class="md-primary docs-menu" >-->
-            <!--4. Access an Assignment-->
-        <!--</md-button>-->
-        <!--<md-button ng-click="scrollTo('step5')" class="md-primary docs-menu" >-->
-            <!--5. Grade an Assignment-->
-        <!--</md-button>-->
-        <!--<md-button ng-click="scrollTo('step6')" class="md-primary docs-menu" >-->
-            <!--6. Grade Analysis-->
-        <!--</md-button>-->
     </md-content>
 </div>

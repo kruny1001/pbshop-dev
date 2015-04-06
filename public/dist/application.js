@@ -388,8 +388,10 @@ angular.module('core')
   .run(["$rootScope", function ($rootScope) {
 
   }])
-  .controller('CoreHeadController', ['$scope','$rootScope','$log','$mdSidenav','$location','$state', '$timeout', 'D2lClassesOwnership',
-    function($scope, $rootScope,$log,$mdSidenav, $location, $state, $timeout, D2lClassesOwnership) {
+  .controller('CoreHeadController',
+  ['$scope','$rootScope','$window','$log','$mdSidenav','$location','$state', '$timeout', 'Authentication','D2lClassesOwnership',
+    function($scope, $rootScope,$window,$log,$mdSidenav, $location, $state, $timeout, Authentication, D2lClassesOwnership) {
+      $scope.authentication = Authentication;
       $scope.title = "Open Board";
       $scope.subTitle = "";
       $scope.link = "";
@@ -446,22 +448,48 @@ angular.module('core')
           it.span  = { row : "1", col : "1" };
           switch(j+1) {
             case 1:
+              it.ifCondition = "Authentication.user";
+              it.id="profile";
               it.background = "red";
               it.title = "Profile";
               it.span.row = it.span.col = 2;
               break;
-            case 2: it.background = "green";  it.span.col = 2;  it.title = "Your Classes";     break;
-            case 3: it.background = "darkBlue";  it.span.col = 2; it.title = "All Classes";   break;
+            case 2:
+              it.ifCondition = "!Authentication.user";
+              it.id="signIn";
+              it.title = "Sign In";
+              it.background = "green";
+              it.span.row = it.span.col = 1;
+              break;
+            case 3:
+              it.ifCondition = "Authentication.user";
+              it.id="signOut";
+              it.title = "Sign Out";
+              it.background = "darkBlue";
+              break;
             case 4:
+              it.ifCondition = true;
+              it.id="tutorial";
               it.title = "Tutorial";
               it.background = "blue";
               it.span.col = 2;
               break;
             case 5:
+              it.ifCondition = "Authentication.user";
+              it.id="urClass";
               it.background = "yellow";
-              it.span.row = it.span.col = 1;
+              it.span.col = 2;
+              it.title = "Your Classes";
               break;
-            case 6: it.background = "pink";          break;
+            case 6:
+              it.ifCondition = "Authentication.user";
+              it.id="allClass";
+              it.background = "red";
+              it.span.col = 2;
+              it.title = "All Classes";
+              break;
+
+
           }
           results.push(it);
         }
@@ -494,7 +522,9 @@ angular.module('core')
 
         });
 
-      $scope.sliderNavEvent = function(name){
+      $scope.sliderNavEvent = function(name, target){
+        var targetEl = $('#'+target+' figure md-grid-tile-footer h3');
+        TweenLite.from(targetEl, 0.8, {scale:1.7});
         $mdSidenav('left').close()
           .then(function(){
             $log.debug("close LEFT is done");
@@ -513,6 +543,13 @@ angular.module('core')
         }
         else if(name ==='All Classes'){
           $state.go('listD2lClassesAll');
+        }
+        else if(name ==='Sign In'){
+          console.log('sign in ');
+          $location.path('/signin');
+        }
+        else if(name ==='Sign Out'){
+          $window.location.href = 'auth/signout';
         }
       }
 
@@ -4579,12 +4616,9 @@ angular.module('openboard').config(['$stateProvider',
 
 
 angular.module('openboard')
-	.config(["$mdThemingProvider", function($mdThemingProvider) {}])
+//	.config(function($mdThemingProvider) {})
 	.controller('OpenboardController', OpenboardController);
 function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http, Authentication, Users, D2lHws, D2lGrades, D2lClassesOwnership, D2lHwsSubmitsTrue, UsersRole) {
-	// Openboard controller logic
-	// ...
-
 	//Init
 	$scope.authentication = Authentication;
 	var authentication = Authentication;

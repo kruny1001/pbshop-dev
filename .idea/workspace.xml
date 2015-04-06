@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classes.client.view.html" afterPath="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classes.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classesAll.client.view.html" afterPath="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classesAll.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" afterPath="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" afterPath="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/openboard/img/account.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/index.server.view.html" afterPath="$PROJECT_DIR$/app/views/index.server.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html" afterPath="$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/users/views/authentication/signin.client.view.html" afterPath="$PROJECT_DIR$/public/modules/users/views/authentication/signin.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -143,71 +147,106 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="openboard.client.view.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37037036">
-              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-              <folding>
-                <element signature="n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#2;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#3;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#4;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#5;n#section#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view-d2l-class.client.view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2083335">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-              <folding>
-                <element signature="n#div#2;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#1;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#1;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-whiteframe#3;n#section#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.602253">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="openboard.client.controller.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-3.3333333">
+                  <caret line="6" column="96" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="96" />
+                  <folding>
+                    <element signature="e#1129#1699#0" expanded="false" />
+                    <element signature="e#1720#2359#0" expanded="false" />
+                    <element signature="e#1896#1931#0" expanded="false" />
+                    <element signature="e#1933#1968#0" expanded="false" />
+                    <element signature="e#4884#5921#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="mean-home.client.view.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-2.1176472">
+                  <caret line="229" column="69" selection-start-line="229" selection-start-column="56" selection-end-line="229" selection-end-column="69" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sideNav.client.view.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.7407407">
+                  <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+                    <element signature="n#style#0;n#md-icon#0;n#h1#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#md-content#0;n#div#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="core-head.client.controller.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-5.851852">
+                  <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="signin.client.view.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/modules/users/views/authentication/signin.client.view.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-13.125">
+                  <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="users.client.routes.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/modules/users/config/users.client.routes.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="24" column="19" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="banners.client.controller.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/backup_module/banners/controllers/banners.client.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="38" column="33" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="33" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="core-head.client.controller.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.7352941">
+                  <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -228,8 +267,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/backup.md" />
-        <option value="$PROJECT_DIR$/plan/test.html" />
         <option value="$PROJECT_DIR$/plan/dashboard.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l/controllers/d2l-home.client.controller.js" />
         <option value="$PROJECT_DIR$/bower.json" />
@@ -248,7 +285,6 @@
         <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/class-about.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/class-home.client.view.html" />
         <option value="$PROJECT_DIR$/app/views/layout.server.view.html" />
-        <option value="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/etc/directives/color-picker.client.directive.js" />
         <option value="$PROJECT_DIR$/public/modules/etc/css/colorPicker.css" />
         <option value="$PROJECT_DIR$/public/modules/etc/directives/template/color-picker.html" />
@@ -257,11 +293,9 @@
         <option value="$PROJECT_DIR$/public/modules/etc/views/etc.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/d2l/css/d2l.css" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js" />
-        <option value="$PROJECT_DIR$/app/views/index.server.view.html" />
         <option value="$PROJECT_DIR$/public/modules/d2l/views/d2l-home.client.view.html" />
         <option value="$PROJECT_DIR$/app/routes/d2l-hws.server.routes.js" />
         <option value="$PROJECT_DIR$/app/controllers/d2l-hws.server.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/users/views/settings/edit-profile.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/core/views/header.client.view.html" />
@@ -274,11 +308,16 @@
         <option value="$PROJECT_DIR$/public/modules/d2l-grades/services/d2l-grades.client.service.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-classes/config/d2l-classes.client.routes.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js" />
         <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classes.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/list-d2l-classesAll.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/users/views/authentication/signin.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/openboard/img/account.svg" />
+        <option value="$PROJECT_DIR$/app/views/index.server.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html" />
       </list>
     </option>
   </component>
@@ -473,7 +512,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="210" />
+    <option name="x" value="262" />
     <option name="y" value="23" />
     <option name="width" value="1175" />
     <option name="height" value="877" />
@@ -520,134 +559,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="d2l-classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="d2l-classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -673,8 +584,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/modules/etc/img" />
       <recent name="$PROJECT_DIR$/public/modules/openboard/img" />
+      <recent name="$PROJECT_DIR$/public/modules/etc/img" />
       <recent name="$PROJECT_DIR$/public/modules/mean-tutorials/img" />
       <recent name="$PROJECT_DIR$/public/modules" />
       <recent name="$PROJECT_DIR$/second backup/partial" />
@@ -1180,12 +1091,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00150" summary="getHTTP interaction3">
-      <created>1427599628556</created>
-      <option name="number" value="00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1427599628556</updated>
-    </task>
     <task id="LOCAL-00151" summary="getHTTP interaction4">
       <created>1427600212013</created>
       <option name="number" value="00151" />
@@ -1474,15 +1379,21 @@
       <option name="project" value="LOCAL" />
       <updated>1428311607077</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="sidebarMenu">
+      <created>1428312154761</created>
+      <option name="number" value="00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1428312154762</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="210" y="23" width="1175" height="877" extended-state="0" />
+    <frame x="262" y="23" width="1175" height="877" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42028984" sideWeight="0.8169177" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37417656" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26482213" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27968338" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3812665" sideWeight="0.18308227" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14860977" sideWeight="0.50970876" order="2" side_tool="true" content_ui="tabs" />
@@ -1492,8 +1403,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3743501" sideWeight="0.5131086" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2911726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3067591" sideWeight="0.5131086" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2911726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32058048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1580,34 +1491,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/class-home.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4276316">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/d2l-class-info.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="51" selection-start-line="0" selection-start-column="51" selection-end-line="0" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/etc/controllers/etc.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.056497175">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/etc/etc.client.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backup_module/spec-view/views/spec-home.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35224587">
@@ -1801,52 +1684,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/users/config/users.client.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28610355">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="51" selection-start-line="0" selection-start-column="51" selection-end-line="0" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layout.server.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6127451">
-          <caret line="98" column="40" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="49" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.server.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="50" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/controllers/mean-home.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6781609">
           <caret line="84" column="4" selection-start-line="70" selection-start-column="2" selection-end-line="84" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025641026">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1880,19 +1721,6 @@
         <state vertical-scroll-proportion="0.08207934">
           <caret line="4" column="18" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8948864">
-          <caret line="320" column="4" selection-start-line="241" selection-start-column="2" selection-end-line="320" selection-end-column="4" />
-          <folding>
-            <element signature="e#1167#1737#0" expanded="false" />
-            <element signature="e#1934#1969#0" expanded="false" />
-            <element signature="e#1971#2006#0" expanded="false" />
-            <element signature="e#4922#5959#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1989,16 +1817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26862746">
-          <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
-          <folding>
-            <element signature="e#1525#1610#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/openboard/css/openboard-tutorial.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41262135">
@@ -2025,59 +1843,156 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2083335">
+        <state vertical-scroll-proportion="0.20781893">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding>
             <element signature="n#div#2;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#1;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#1;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#md-whiteframe#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-whiteframe#3;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#1;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#2;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#3;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#layout-fill#0;n#div#0;n#md-whiteframe#0;n#div#2;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#4;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card#0;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card#1;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#1;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#2;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#3;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#layout-fill#0;n#div#0;n#md-whiteframe#1;n#div#2;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#4;n#div#1;n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/header.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/openboard/views/openboard.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37037036">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="95" column="29" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="29" />
           <folding>
-            <element signature="n#md-whiteframe#0;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
             <element signature="n#md-whiteframe#2;n#section#0;n#!!top" expanded="false" />
             <element signature="n#md-whiteframe#3;n#section#0;n#!!top" expanded="false" />
             <element signature="n#md-whiteframe#4;n#section#0;n#!!top" expanded="false" />
             <element signature="n#md-whiteframe#5;n#section#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3333333">
+          <caret line="6" column="96" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="96" />
+          <folding>
+            <element signature="e#1129#1699#0" expanded="false" />
+            <element signature="e#1720#2359#0" expanded="false" />
+            <element signature="e#1896#1931#0" expanded="false" />
+            <element signature="e#1933#1968#0" expanded="false" />
+            <element signature="e#4884#5921#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup_module/banners/controllers/banners.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/users/config/users.client.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/openboard/img/account.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16981132">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/users/views/authentication/signin.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1176472">
+          <caret line="229" column="69" selection-start-line="229" selection-start-column="56" selection-end-line="229" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/index.server.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125">
+          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#md-sidenav#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layout.server.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5731225">
+          <caret line="95" column="48" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="48" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/core/controllers/core-head.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.851852">
+          <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7407407">
+          <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-icon#0;n#h1#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-content#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
