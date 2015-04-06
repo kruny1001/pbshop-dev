@@ -4,7 +4,11 @@
 angular.module('d2l-classes').controller('D2lClassesController',
 	['$scope', '$stateParams', '$window','$location', '$mdDialog', 'Authentication', 'D2lHws','D2lGradesByClass','D2lClasses','D2lHwsByClass','D2lHwsSubmitsTrue','D2lGrades','D2lHwsSubmitsTrueByClass','D2lHwsByOriginDocId','D2lClassesOwnership',
 	function($scope, $stateParams, $window, $location, $mdDialog, Authentication, D2lHws,D2lGradesByClass, D2lClasses, D2lHwsByClass, D2lHwsSubmitsTrue, D2lGrades, D2lHwsSubmitsTrueByClass, D2lHwsByOriginDocId, D2lClassesOwnership) {
+
 		$scope.authentication = Authentication;
+		var authentication = Authentication;
+		$scope.user = Authentication.user;
+
 		$scope.numClasses = 0;
 
 		$scope.copyHWTemplate = function(gdocId){
@@ -69,6 +73,7 @@ angular.module('d2l-classes').controller('D2lClassesController',
 		};
 
 		$scope.linkHW = function(hw){
+			console.log('dd');
 			var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
 			var param = 'docId='+hw.gdocId+
 				'&userId='+authentication.user.username+
