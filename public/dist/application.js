@@ -1317,7 +1317,7 @@ angular.module('d2l-classes').controller('D2lClassesController',
 					$scope.submittedHWCopy = [].concat(result);
 
 					result.forEach(function(value, index){
-						$scope.submittedHWCopy[index].hwInfo = D2lHwsByOriginDocId.get({gdocId: result[0].originId}, function(result){
+						$scope.submittedHWCopy[index].hwInfo = D2lHwsByOriginDocId.get({gdocId: result[index].originId}, function(result){
 							//$scope.submittedHWCopy.hwInfo = result[0];
 						});
 					})
@@ -1337,17 +1337,7 @@ angular.module('d2l-classes').controller('D2lClassesController',
 					//D2lHws
 				});
 			});
-
-
-
-
-
-
-
-
 		};
-
-
 
 		$scope.showNewAssign = function(ev){
 			$mdDialog.show({
