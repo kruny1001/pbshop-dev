@@ -1323,8 +1323,6 @@ angular.module('d2l-classes').controller('D2lClassesController',
 					})
 				});
 
-
-
 				$scope.gradeCollection = D2lGradesByClass.get({classId:$stateParams.d2lClassId});
 				$scope.gradeCollection.$promise.then(function (result) {
 					$scope.gradeCollection = result;
