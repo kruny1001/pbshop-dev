@@ -206,8 +206,11 @@
 
             <h4>Step 4.1: Click Open Button</h4>
             <div class="md-caption" style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
-                <div class="tableTitle">List HW</div>
-                <p hide-sm>Add, Edit, Udpate or Remove Homework</p>
+                <div class="tableTitle">List HW [Student]</div>
+                <p hide-sm>
+                    Student can access Assignment. By clicking Open Button, a copy of assignment will be stored onto user's Google Drive.
+                    Once students click open button. Open Board will add Google Calendar its due date event to their account. Check your Google Calendar.
+                </p>
                 <md-button ng-click="ownHwUpdate()">Your Class assignments</md-button>
                 <md-button ng-click="allHwUpdate()">All assignments from Open Board</md-button>
                 <table st-table="hwsCopy" st-safe-src="hws" class="table table-striped">
@@ -261,8 +264,11 @@
             <p>You also can access student's file without checking your email account. You can just click open button. Open Board will follow you to student file.</p>
 
             <div class="md-caption" style="border-top: 5px solid #ffda74; padding: 5px; margin-left:auto; margin-right:auto;">
-                <div class="tableTitle">Assignment Submission List</div>
-                <p hide-sm>These submitted assignment is ready to grade.</p>
+                <div class="tableTitle">Assignment Submission List [Instructor]</div>
+                <p hide-sm>
+                    These submitted assignment is ready to grade. Instructor can access student's assignment. It doesn't need to download or ask to send email from student.
+                    By clicking Grade button, Instructor is ready to grade from Google Doc.
+                </p>
                 <table st-table="submittedHWCopy"
                        st-safe-src="submittedHW"
                        class="table table-striped">
@@ -287,7 +293,10 @@
 
             <h4>Step 5.3: Check Grade</h4>
             <div class="md-caption" style="border-top: 5px solid #ee6c0a; padding: 5px; margin-left:auto; margin-right:auto;">
-                <div class="tableTitle">Grade Board</div>
+                <div class="tableTitle">Grade Board [Student]</div>
+                <p hide-sm>When your instructor grades your assignment, Open Board notify you with email and update score here.
+                    You can check your score immediately after grading an assignment from Google Doc.
+                </p>
                 <table st-table="gradeCollectionCopy" st-safe-src="gradeCollection" class="table table-striped">
                     <thead>
                     <tr>
