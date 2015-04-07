@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" afterPath="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="41ba01e8-8bba-46c0-8bd8-0d3c06381e83" name="New changelist" comment="" />
@@ -173,22 +172,30 @@
       <file leaf-file-name="d2l-classes.client.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34334764">
-              <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.35344827">
+              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding>
                 <element signature="e#768#1016#0" expanded="false" />
-                <element signature="e#1074#1537#0" expanded="false" />
                 <element signature="e#1608#1899#0" expanded="false" />
                 <element signature="e#1962#2173#0" expanded="false" />
                 <element signature="e#2235#2292#0" expanded="false" />
                 <element signature="e#2325#2750#0" expanded="false" />
                 <element signature="e#2787#2880#0" expanded="false" />
                 <element signature="e#2945#2994#0" expanded="false" />
-                <element signature="e#4250#6398#0" expanded="false" />
-                <element signature="e#6494#6588#0" expanded="false" />
-                <element signature="e#6647#6742#0" expanded="false" />
-                <element signature="e#6803#6900#0" expanded="false" />
+                <element signature="e#6437#6531#0" expanded="false" />
+                <element signature="e#6590#6685#0" expanded="false" />
+                <element signature="e#6746#6843#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="openboard.client.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.4814816">
+              <caret line="16" column="5" selection-start-line="14" selection-start-column="2" selection-end-line="16" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -459,7 +466,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="550" />
+    <option name="x" value="506" />
     <option name="y" value="23" />
     <option name="width" value="882" />
     <option name="height" value="812" />
@@ -557,7 +564,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="d2l-classes" />
+              <option name="myItemId" value="openboard" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -579,33 +586,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="d2l-classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pbshop-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="d2l-classes" />
+              <option name="myItemId" value="openboard" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1144,12 +1125,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00161" summary="d2l-grade&#10;">
-      <created>1427665813808</created>
-      <option name="number" value="00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1427665813808</updated>
-    </task>
     <task id="LOCAL-00162" summary="d2l-grade&#10;">
       <created>1427666217593</created>
       <option name="number" value="00162" />
@@ -1438,21 +1413,28 @@
       <option name="project" value="LOCAL" />
       <updated>1428388990927</updated>
     </task>
-    <option name="localTasksCounter" value="210" />
+    <task id="LOCAL-00210" summary="grade history">
+      <created>1428413420337</created>
+      <option name="number" value="00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1428413420337</updated>
+    </task>
+    <option name="localTasksCounter" value="211" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="550" y="23" width="882" height="812" extended-state="0" />
+    <frame x="506" y="23" width="882" height="812" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Grunt " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30028737" sideWeight="0.4868914" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29971182" sideWeight="0.4868914" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41918528" sideWeight="0.8169177" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2682927" sideWeight="0.5131086" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27968338" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2902299" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2910663" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14860977" sideWeight="0.50970876" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3812665" sideWeight="0.18308227" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33069828" sideWeight="0.78066915" order="11" side_tool="false" content_ui="tabs" />
@@ -1462,7 +1444,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26482213" sideWeight="0.7589474" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3343419" sideWeight="0.8169177" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5710526" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14516129" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1510,7 +1491,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="getHTTP interaction6&#10;" />
     <MESSAGE value="getHTTP interaction7&#10;" />
     <MESSAGE value="d2l-grade&#10;" />
     <MESSAGE value="meant-home deco&#10;" />
@@ -1535,7 +1515,8 @@
     <MESSAGE value="d2l-submitted/getBydocId/docid/userid" />
     <MESSAGE value="gradeCollection table" />
     <MESSAGE value="Description update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Description update" />
+    <MESSAGE value="grade history" />
+    <option name="LAST_COMMIT_MESSAGE" value="grade history" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1850,13 +1831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-83.44444">
-          <caret line="238" column="37" selection-start-line="238" selection-start-column="37" selection-end-line="238" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/heroku.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1881,7 +1855,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="297" column="100" selection-start-line="297" selection-start-column="100" selection-end-line="297" selection-end-column="100" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-whiteframe#2;n#section#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1918,23 +1892,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/openboard/controllers/openboard.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4814816">
+          <caret line="16" column="5" selection-start-line="14" selection-start-column="2" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34334764">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.35344827">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding>
             <element signature="e#768#1016#0" expanded="false" />
-            <element signature="e#1074#1537#0" expanded="false" />
             <element signature="e#1608#1899#0" expanded="false" />
             <element signature="e#1962#2173#0" expanded="false" />
             <element signature="e#2235#2292#0" expanded="false" />
             <element signature="e#2325#2750#0" expanded="false" />
             <element signature="e#2787#2880#0" expanded="false" />
             <element signature="e#2945#2994#0" expanded="false" />
-            <element signature="e#4250#6398#0" expanded="false" />
-            <element signature="e#6494#6588#0" expanded="false" />
-            <element signature="e#6647#6742#0" expanded="false" />
-            <element signature="e#6803#6900#0" expanded="false" />
+            <element signature="e#6437#6531#0" expanded="false" />
+            <element signature="e#6590#6685#0" expanded="false" />
+            <element signature="e#6746#6843#0" expanded="false" />
           </folding>
         </state>
       </provider>

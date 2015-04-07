@@ -1321,18 +1321,16 @@ angular.module('d2l-classes').controller('D2lClassesController',
 							//$scope.submittedHWCopy.hwInfo = result[0];
 						});
 					})
-
 				});
 
-				$scope.gradeCollection = D2lGradesByClass.get({classId:result._id});
+
+
+				$scope.gradeCollection = D2lGradesByClass.get({classId:$stateParams.d2lClassId});
 				$scope.gradeCollection.$promise.then(function (result) {
 					$scope.gradeCollection = result;
 					$scope.gradeCollectionCopy = [].concat(result);
-
 					result.forEach(function(value, index){
-						$scope.gradeCollectionCopy[index].hwInfo = D2lHws.get({d2lHwId: result[0].Assignment}, function(result){
-							//console.log(result);
-						});
+						$scope.gradeCollectionCopy[index].name = result[index].name.split(":")[0];
 					})
 					//D2lHws
 				});
