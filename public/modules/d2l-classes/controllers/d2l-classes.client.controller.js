@@ -5,6 +5,7 @@ angular.module('d2l-classes').controller('D2lClassesController',
 	['$scope', '$stateParams', '$window','$location', '$mdDialog', 'Authentication', 'D2lHws','D2lGradesByClass','D2lClasses','D2lHwsByClass','D2lHwsSubmitsTrue','D2lGrades','D2lHwsSubmitsTrueByClass','D2lHwsByOriginDocId','D2lClassesOwnership',
 	function($scope, $stateParams, $window, $location, $mdDialog, Authentication, D2lHws,D2lGradesByClass, D2lClasses, D2lHwsByClass, D2lHwsSubmitsTrue, D2lGrades, D2lHwsSubmitsTrueByClass, D2lHwsByOriginDocId, D2lClassesOwnership) {
 
+		$scope.id = $stateParams.d2lClassId;
 		$scope.authentication = Authentication;
 		var authentication = Authentication;
 		$scope.user = Authentication.user;
