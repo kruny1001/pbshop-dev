@@ -1,10 +1,10 @@
 'use strict';
 
 //Setting up route
-angular.module('user-interface').config(['$stateProvider','$disqusProvider',
-	function($stateProvider,$disqusProvider) {
+angular.module('user-interface').config(['$stateProvider',
+	function($stateProvider) {
 		// Seller interface state routing
-		$disqusProvider.setShortname('urimium');
+
 		$stateProvider.
 		state('mcmu', {
 			url: '/mcmu',

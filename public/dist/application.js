@@ -2758,6 +2758,15 @@ angular.module('d2l').factory('D2LOauth', ['configGdrive',
  * Created by Kevin on 2014-11-26.
  */
 
+
+angular.module('disqus').config(['$stateProvider','$disqusProvider',
+    function($stateProvider,$disqusProvider) {
+        // Seller interface state routing
+        $disqusProvider.setShortname('openboardk');
+    }
+]);
+
+
 (function (angular, window) {
     'use strict';
 
@@ -6537,10 +6546,10 @@ angular.module('tinymce').directive('uiTinymce', ['uiTinymceConfig', function(ui
 'use strict';
 
 //Setting up route
-angular.module('user-interface').config(['$stateProvider','$disqusProvider',
-	function($stateProvider,$disqusProvider) {
+angular.module('user-interface').config(['$stateProvider',
+	function($stateProvider) {
 		// Seller interface state routing
-		$disqusProvider.setShortname('urimium');
+
 		$stateProvider.
 		state('mcmu', {
 			url: '/mcmu',

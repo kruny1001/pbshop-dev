@@ -2,6 +2,15 @@
  * Created by Kevin on 2014-11-26.
  */
 
+
+angular.module('disqus').config(['$stateProvider','$disqusProvider',
+    function($stateProvider,$disqusProvider) {
+        // Seller interface state routing
+        $disqusProvider.setShortname('openboardk');
+    }
+]);
+
+
 (function (angular, window) {
     'use strict';
 
