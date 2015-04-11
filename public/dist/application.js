@@ -103,6 +103,10 @@ ApplicationConfiguration.registerModule('disqus');
 
 'use strict';
 
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('etc-products');
+'use strict';
+
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('etc');
 
@@ -3008,6 +3012,110 @@ angular.module('disqus').config(['$stateProvider','$disqusProvider',
 })(angular, this);
 
 
+'use strict';
+
+//Setting up route
+angular.module('etc-products').config(['$stateProvider',
+	function($stateProvider) {
+		// Etc products state routing
+		$stateProvider.
+		state('listEtcProducts', {
+			url: '/etc-products',
+			templateUrl: 'modules/etc-products/views/list-etc-products.client.view.html'
+		}).
+		state('createEtcProduct', {
+			url: '/etc-products/create',
+			templateUrl: 'modules/etc-products/views/create-etc-product.client.view.html'
+		}).
+		state('viewEtcProduct', {
+			url: '/etc-products/:etcProductId',
+			templateUrl: 'modules/etc-products/views/view-etc-product.client.view.html'
+		}).
+		state('editEtcProduct', {
+			url: '/etc-products/:etcProductId/edit',
+			templateUrl: 'modules/etc-products/views/edit-etc-product.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+// Etc products controller
+angular.module('etc-products').controller('EtcProductsController', ['$scope', '$stateParams', '$location', 'Authentication', 'EtcProducts',
+	function($scope, $stateParams, $location, Authentication, EtcProducts) {
+		$scope.authentication = Authentication;
+
+		// Create new Etc product
+		$scope.create = function() {
+			// Create new Etc product object
+			var etcProduct = new EtcProducts ({
+				name: this.name
+			});
+
+			// Redirect after save
+			etcProduct.$save(function(response) {
+				$location.path('etc-products/' + response._id);
+
+				// Clear form fields
+				$scope.name = '';
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Remove existing Etc product
+		$scope.remove = function(etcProduct) {
+			if ( etcProduct ) { 
+				etcProduct.$remove();
+
+				for (var i in $scope.etcProducts) {
+					if ($scope.etcProducts [i] === etcProduct) {
+						$scope.etcProducts.splice(i, 1);
+					}
+				}
+			} else {
+				$scope.etcProduct.$remove(function() {
+					$location.path('etc-products');
+				});
+			}
+		};
+
+		// Update existing Etc product
+		$scope.update = function() {
+			var etcProduct = $scope.etcProduct;
+
+			etcProduct.$update(function() {
+				$location.path('etc-products/' + etcProduct._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Find a list of Etc products
+		$scope.find = function() {
+			$scope.etcProducts = EtcProducts.query();
+		};
+
+		// Find existing Etc product
+		$scope.findOne = function() {
+			$scope.etcProduct = EtcProducts.get({ 
+				etcProductId: $stateParams.etcProductId
+			});
+		};
+	}
+]);
+'use strict';
+
+//Etc products service used to communicate Etc products REST endpoints
+angular.module('etc-products').factory('EtcProducts', ['$resource',
+	function($resource) {
+		return $resource('etc-products/:etcProductId', { etcProductId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);
 'use strict';
 
 //Setting up route
@@ -6548,8 +6656,6 @@ angular.module('tinymce').directive('uiTinymce', ['uiTinymceConfig', function(ui
 //Setting up route
 angular.module('user-interface').config(['$stateProvider',
 	function($stateProvider) {
-		// Seller interface state routing
-
 		$stateProvider.
 		state('mcmu', {
 			url: '/mcmu',

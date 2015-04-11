@@ -1,0 +1,44 @@
+<section data-ng-controller="EtcProductsController" data-ng-init="findOne()">
+
+	<div ng-controller="SizeUtil.sizeOfWidthController" class="size-util-sizeOfWidth">{{width}}px<br/> {{screen}}</div>
+
+	<h4 data-ng-bind="etcProduct.name"></h4>
+	<md-whiteframe class="md-whiteframe-z2 meanT-home-card ob-underbar-base"
+				   layout="column" layout-align="space-around start">
+		<!--<h3>Product Info</h3>-->
+		<product-detail title="etcProduct.name" style="width:100%;"></product-detail>
+	</md-whiteframe>
+
+	<!--<md-whiteframe class="md-whiteframe-z2 meanT-home-card ob-underbar-base"-->
+	<!--layout="column" layout-align="space-around start">-->
+	<!--<h3>Color Picker(Directive)</h3>-->
+	<!--<color-picker style="height:100%; width:100%"></color-picker>-->
+	<!--</md-whiteframe>-->
+
+
+	<md-whiteframe class="md-whiteframe-z2 meanT-home-card ob-underbar-base"
+				   layout="column" layout-align="space-around start">
+		<h3>Image List</h3>
+		<gallery style="width:100%"></gallery>
+	</md-whiteframe>
+
+	<!--<div class="page-header">-->
+		<!--<h1 data-ng-bind="etcProduct.name"></h1>-->
+	<!--</div>-->
+	<!--<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == etcProduct.user._id))">-->
+		<!--<a class="btn btn-primary" href="/#!/etc-products/{{etcProduct._id}}/edit">-->
+			<!--<i class="glyphicon glyphicon-edit"></i>-->
+		<!--</a>-->
+		<!--<a class="btn btn-primary" data-ng-click="remove();">-->
+			<!--<i class="glyphicon glyphicon-trash"></i>-->
+		<!--</a>-->
+	<!--</div>-->
+	<!--<small>-->
+		<!--<em class="text-muted">-->
+			<!--Posted on-->
+			<!--<span data-ng-bind="etcProduct.created | date:'mediumDate'"></span>-->
+			<!--by-->
+			<!--<span data-ng-bind="etcProduct.user.displayName"></span>-->
+		<!--</em>-->
+	<!--</small>-->
+</section>

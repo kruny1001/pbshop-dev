@@ -3,8 +3,6 @@
 //Setting up route
 angular.module('user-interface').config(['$stateProvider',
 	function($stateProvider) {
-		// Seller interface state routing
-
 		$stateProvider.
 		state('mcmu', {
 			url: '/mcmu',
