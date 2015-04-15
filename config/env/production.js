@@ -10,7 +10,10 @@ module.exports = {
 				'public/lib/angular-material/angular-material.min.css',
 				//'public/lib/angular-material/default-theme.css',
 				'public/lib/components-font-awesome/css/font-awesome.min.css',
-                'public/lib/nvd3/nv.d3.min.css'
+                'public/lib/nvd3/nv.d3.min.css',
+				'public/lib/reveal.js/css/reveal.css',
+				'public/lib/reveal.js/css/theme/sky.css'
+
 			],
 			js: [
 				'public/lib/angular/angular.min.js',
@@ -78,8 +81,8 @@ module.exports = {
                 'public/lib/nvd3/nv.d3.min.js',
                 'public/lib/angular-nvd3/dist/angular-nvd3.min.js',
 
-                'public/lib/braintree-angular/dist/braintree-angular.js'
-
+                'public/lib/braintree-angular/dist/braintree-angular.js',
+				'public/lib/reveal.js/js/reveal.js'
 			]
 		},
 		css: 'public/dist/application.min.css',
