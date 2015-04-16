@@ -14,7 +14,7 @@ angular.module('d2l-classes').controller('D2lClassesController',
 		if($scope.user.additionalProvidersData !== undefined)
 			$scope.gUser = $scope.user.additionalProvidersData.google.email.split('@')[0];
 		else if($scope.user.provider==="google"){
-			$scope.gUser = $scope.user.username;
+			$scope.gUser = $scope.user.providerData.email.split('@')[0];
 			alert($scope.gUser);
 		}
 		else{
