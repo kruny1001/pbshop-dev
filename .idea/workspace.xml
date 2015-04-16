@@ -2,1377 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7ea3e3-542e-46e4-97ac-df89e6679f47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/about.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/about.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/accept_database.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/accept_database.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/add_column.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/add_column.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/add_database.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/add_database.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/add_image.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/add_image.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/add_row.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/add_row.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/address_book.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/address_book.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/advance.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/advance.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/advertising.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/advertising.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/alarm_clock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/alarm_clock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/alert-circled.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/alert.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/alphabetical_sorting_az.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/alphabetical_sorting_az.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/alphabetical_sorting_za.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/alphabetical_sorting_za.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-add-circle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-add.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-alarm-clock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-alert.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-apps.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-archive.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-arrow-back.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-arrow-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-arrow-dropdown-circle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-arrow-dropdown.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-arrow-dropleft-circle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-arrow-dropleft.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-arrow-dropright-circle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-arrow-dropright.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-arrow-dropup-circle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-arrow-dropup.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-arrow-forward.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-arrow-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-attach.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-bar.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-bicycle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-boat.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-bookmark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-bulb.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-bus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-calendar.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-call.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-cancel.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-car.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-cart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-chat.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-checkbox-blank.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-checkbox-outline-blank.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-checkbox-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-checkbox.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-checkmark-circle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-clipboard.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-close.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-cloud-circle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-cloud-done.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-cloud-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-cloud.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-color-palette.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-compass.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-contact.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-contacts.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-contract.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-create.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-delete.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-desktop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-document.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-done-all.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-done.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-download.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-drafts.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-exit.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-expand.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-favorite-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-favorite.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-film.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-folder-open.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-folder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-funnel.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-globe.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-hand.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-hangout.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-happy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-home.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-image.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-laptop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-list.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-locate.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-lock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-mail.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-map.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-menu.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-microphone-off.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-microphone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-more-horizontal.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-more-vertical.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-navigate.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-notifications-none.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-notifications-off.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-notifications.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-open.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-options.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-people.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-person-add.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-person.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-phone-landscape.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-phone-portrait.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-pin.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-plane.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-playstore.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-print.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-radio-button-off.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-radio-button-on.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-refresh.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-remove-circle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-remove.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-restaurant.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-sad.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-search.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-send.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-settings.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-share-alt.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-share.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-star-half.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-star-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-star.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-stopwatch.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-subway.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-sunny.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-sync.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-textsms.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-time.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-train.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-unlock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-upload.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-volume-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-volume-mute.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-volume-off.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-volume-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-walk.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-warning.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-watch.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/android-wifi.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/answers.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/answers.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/aperture.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/approval.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/approval.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/approve.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/approve.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/archive.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/area_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/area_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-down-a.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-down-b.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-down-c.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-expand.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-graph-down-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-graph-down-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-graph-up-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-graph-up-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-left-a.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-left-b.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-left-c.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-move.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-resize.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-return-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-return-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-right-a.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-right-b.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-right-c.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-shrink.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-swap.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-up-a.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-up-b.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/arrow-up-c.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/assistant.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/assistant.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/asterisk.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/at.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/audio_file.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/audio_file.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/automatic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/automatic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/automotive.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/automotive.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/backspace-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/backspace.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/bad_decision.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/bad_decision.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/bag.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/bar_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/bar_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/battery-charging.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/battery-empty.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/battery-full.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/battery-half.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/battery-low.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/beaker.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/bearish.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/bearish.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/beer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/binoculars.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/binoculars.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/biohazard.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/biohazard.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/biomass.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/biomass.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/biotech.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/biotech.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/bluetooth.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/bonfire.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/svg/book135.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/bookmark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/bookmark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/bookmark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/svg/books8.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/bowtie.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/briefcase.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/briefcase.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/briefcase.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/broken_link.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/broken_link.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/bug.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/bullish.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/bullish.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/business.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/business.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/business_contact.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/business_contact.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/businessman.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/businessman.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/businesswoman.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/businesswoman.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/butting_in.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/butting_in.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/cable_release.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/cable_release.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/calculator.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/calculator.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/calculator.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/calendar.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/calendar.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/calendar.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/call_transfer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/call_transfer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/callback.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/callback.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/camcorder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/camcorder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/camcorder_pro.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/camcorder_pro.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/camera_addon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/camera_addon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/camera_identification.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/camera_identification.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/cancel.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/cancel.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/candle_sticks.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/candle_sticks.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/capacitor.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/capacitor.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/card.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/cash.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/cell_phone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/cell_phone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/charge_battery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/charge_battery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/chatbox-working.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/chatbox.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/chatboxes.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/chatbubble-working.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/chatbubble.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/chatbubbles.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/checkmark-circled.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/checkmark-round.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/checkmark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/checkmark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/checkmark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/chevron-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/chevron-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/chevron-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/chevron-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/circuit.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/circuit.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/clapperboard.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/clapperboard.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/clear_filters.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/clear_filters.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/clipboard.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/clock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/clock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/clock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/close-circled.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/close-round.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/close.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/close_up_mode.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/close_up_mode.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/closed-captioning.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/cloth.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/cloth.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/cloud.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/code-download.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/code-working.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/code.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/coffee.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/collaboration.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/collaboration.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/collapse.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/collapse.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/collect.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/collect.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/combo_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/combo_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/comments.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/comments.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/compact_camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/compact_camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/compass.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/compose.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/conference_call.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/conference_call.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/connection-bars.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/contacts.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/contacts.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/contrast.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/copyleft.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/copyleft.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/copyright.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/copyright.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/crop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/crystal_oscillator.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/crystal_oscillator.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/cube.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/currency_exchange.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/currency_exchange.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/cursor.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/cursor.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/customer_support.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/customer_support.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/dam.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/dam.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/data_backup.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/data_backup.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/data_configuration.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/data_configuration.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/data_encryption.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/data_encryption.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/data_protection.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/data_protection.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/data_recovery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/data_recovery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/data_sheet.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/data_sheet.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/database.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/database.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/debt.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/debt.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/decision.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/decision.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/delete_column.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/delete_column.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/delete_database.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/delete_database.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/delete_row.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/delete_row.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/department.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/department.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/deployment.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/deployment.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/diploma_1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/diploma_1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/diploma_2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/diploma_2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/disapprove.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/disapprove.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/disc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/disclaimer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/disclaimer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/dislike.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/dislike.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/display.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/display.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/do_not_inhale.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/do_not_inhale.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/do_not_insert.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/do_not_insert.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/do_not_mix.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/do_not_mix.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/document-text.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/document.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/document.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/document.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/donate.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/donate.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/doughnut_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/doughnut_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/down_left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/down_left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/down_right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/down_right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/download.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/download.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/drag.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/earth.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/easel.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/edit.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/edit_image.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/edit_image.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/egg.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/eject.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/electrical_sensor.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/electrical_sensor.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/electrical_threshold.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/electrical_threshold.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/electricity.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/electricity.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/electro_devices.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/electro_devices.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/electronics.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/electronics.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/email-unread.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/email.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/empty_battery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/empty_battery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/empty_filter.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/empty_filter.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/empty_trash.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/empty_trash.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/end_call.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/end_call.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/engineering.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/engineering.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/entering_heaven_alive.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/entering_heaven_alive.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/erlenmeyer-flask-bubbles.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/erlenmeyer-flask.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/expand.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/expand.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/expired.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/expired.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/export.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/export.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/external.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/external.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/eye-disabled.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/eye.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/factory.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/factory.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/factory_breakdown.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/factory_breakdown.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/faq.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/faq.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/feed_in.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/feed_in.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/feedback.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/feedback.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/female.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/file.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/file.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/filing.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/filing_cabinet.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/filing_cabinet.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/filled_filter.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/filled_filter.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/film-marker.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/film.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/film.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/film_reel.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/film_reel.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/fine_print.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/fine_print.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/fireball.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/flag.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/flame.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/flash-off.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/flash.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/flash_auto.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/flash_auto.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/flash_off.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/flash_off.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/flash_on.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/flash_on.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/flow_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/flow_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/folder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/folder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/folder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/fork-repo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/fork.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/forward.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/frame.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/frame.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/full_battery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/full_battery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/full_trash.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/full_trash.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/funnel.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/gallery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/gallery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/gear-a.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/gear-b.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/genealogy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/genealogy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/generic_sorting_asc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/generic_sorting_asc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/generic_sorting_desc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/generic_sorting_desc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/globe.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/globe.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/good_decision.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/good_decision.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/graduation_cap.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/graduation_cap.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/grid.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/grid.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/grid.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/hammer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/happy-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/happy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/headphone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/headset.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/headset.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/heart-broken.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/heart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/heat_map.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/heat_map.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/help-buoy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/help-circled.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/help.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/high_battery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/high_battery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/high_priority.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/high_priority.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/home.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/home.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/home.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/icecream.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/icon-set/icons.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/icons8_cup.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/icons8_cup.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/idea.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/idea.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/image.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/image_file.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/image_file.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/images.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/import.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/import.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/in_transit.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/in_transit.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/info.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/info.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/information-circled.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/information.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/inspection.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/inspection.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/integrated_webcam.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/integrated_webcam.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/internal.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/internal.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/invite.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/invite.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ionic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-alarm-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-alarm.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-albums-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-albums.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-americanfootball-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-americanfootball.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-analytics-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-analytics.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-arrow-back.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-arrow-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-arrow-forward.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-arrow-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-arrow-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-arrow-thin-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-arrow-thin-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-arrow-thin-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-arrow-thin-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-arrow-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-at-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-at.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-barcode-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-barcode.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-baseball-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-baseball.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-basketball-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-basketball.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-bell-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-bell.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-body-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-body.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-bolt-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-bolt.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-book-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-book.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-bookmarks-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-bookmarks.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-box-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-box.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-briefcase-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-briefcase.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-browsers-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-browsers.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-calculator-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-calculator.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-calendar-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-calendar.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-camera-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cart-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-chatboxes-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-chatboxes.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-chatbubble-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-chatbubble.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-checkmark-empty.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-checkmark-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-checkmark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-circle-filled.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-circle-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-clock-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-clock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-close-empty.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-close-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-close.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cloud-download-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cloud-download.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cloud-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cloud-upload-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cloud-upload.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cloud.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cloudy-night-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cloudy-night.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cloudy-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cloudy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cog-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-cog.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-color-filter-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-color-filter.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-color-wand-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-color-wand.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-compose-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-compose.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-contact-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-contact.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-copy-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-copy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-crop-strong.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-crop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-download-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-download.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-drag.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-email-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-email.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-eye-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-eye.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-fastforward-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-fastforward.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-filing-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-filing.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-film-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-film.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-flag-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-flag.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-flame-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-flame.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-flask-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-flask.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-flower-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-flower.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-folder-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-folder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-football-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-football.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-game-controller-a-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-game-controller-a.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-game-controller-b-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-game-controller-b.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-gear-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-gear.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-glasses-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-glasses.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-grid-view-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-grid-view.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-heart-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-heart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-help-empty.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-help-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-help.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-home-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-home.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-infinite-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-infinite.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-information-empty.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-information-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-information.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-ionic-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-keypad-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-keypad.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-lightbulb-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-lightbulb.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-list-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-list.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-location-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-location.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-locked-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-locked.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-loop-strong.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-loop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-medical-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-medical.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-medkit-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-medkit.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-mic-off.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-mic-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-mic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-minus-empty.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-minus-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-minus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-monitor-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-monitor.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-moon-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-moon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-more-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-more.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-musical-note.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-musical-notes.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-navigate-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-navigate.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-nutrition-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-nutrition.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-paper-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-paper.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-paperplane-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-paperplane.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-partlysunny-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-partlysunny.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-pause-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-pause.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-paw-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-paw.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-people-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-people.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-person-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-person.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-personadd-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-personadd.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-photos-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-photos.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-pie-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-pie.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-pint-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-pint.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-play-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-play.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-plus-empty.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-plus-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-plus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-pricetag-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-pricetag.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-pricetags-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-pricetags.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-printer-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-printer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-pulse-strong.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-pulse.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-rainy-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-rainy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-recording-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-recording.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-redo-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-redo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-refresh-empty.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-refresh-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-refresh.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-reload.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-reverse-camera-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-reverse-camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-rewind-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-rewind.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-rose-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-rose.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-search-strong.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-search.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-settings-strong.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-settings.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-shuffle-strong.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-shuffle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-skipbackward-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-skipbackward.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-skipforward-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-skipforward.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-snowy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-speedometer-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-speedometer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-star-half.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-star-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-star.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-stopwatch-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-stopwatch.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-sunny-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-sunny.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-telephone-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-telephone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-tennisball-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-tennisball.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-thunderstorm-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-thunderstorm.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-time-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-time.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-timer-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-timer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-toggle-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-toggle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-trash-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-trash.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-undo-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-undo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-unlocked-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-unlocked.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-upload-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-upload.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-videocam-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-videocam.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-volume-high.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-volume-low.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-wineglass-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-wineglass.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-world-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ios-world.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/ipad.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ipad.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/ipad.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/iphone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/iphone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/iphone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ipod.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/jet.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/key.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/key.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/key.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/kindle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/kindle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/knife.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/landscape.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/landscape.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/laptop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/leaf.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/leave.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/leave.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/left_down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/left_down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/left_down2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/left_down2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/left_up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/left_up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/left_up2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/left_up2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/levels.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/library.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/library.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/light_at_the_end_of_tunnel.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/light_at_the_end_of_tunnel.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/lightbulb.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/like.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/like.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/like_placeholder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/like_placeholder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/line_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/line_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/link.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/link.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/link.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/list.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/list.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/load-a.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/load-b.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/load-c.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/load-d.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/location.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/lock-combination.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/lock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/lock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/lock_landscape.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/lock_landscape.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/lock_portrait.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/lock_portrait.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/locked.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/log-in.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/log-out.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/loop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/low_battery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/low_battery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/low_priority.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/low_priority.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/magnet.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/make_decision.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/make_decision.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/male.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/man.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/manager.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/manager.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/map.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/medium_priority.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/medium_priority.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/medkit.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/menu.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/menu.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/merge.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/mic-a.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/mic-b.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/mic-c.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/middle_battery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/middle_battery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/mind_map.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/mind_map.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/minus-circled.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/minus-round.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/minus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/minus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/minus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/missed_call.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/missed_call.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/mms.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/mms.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/model-s.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/money_transfer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/money_transfer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/monitor.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/more.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/mouse.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/multiple_cameras.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/multiple_cameras.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/multiple_devices.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/multiple_devices.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/multiple_inputs.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/multiple_inputs.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/multiple_smartphones.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/multiple_smartphones.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/music-note.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/music.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/music.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/navicon-round.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/navicon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/navigate.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/negative_dynamic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/negative_dynamic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/network.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/neutral_decision.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/neutral_decision.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/neutral_trading.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/neutral_trading.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/news.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/news.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/next.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/next.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/night_landscape.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/night_landscape.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/night_portrait.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/night_portrait.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/no-smoking.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/no_idea.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/no_idea.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/no_video.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/no_video.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/nook.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/nook.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/nuclear.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/numerical_sorting_12.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/numerical_sorting_12.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/numerical_sorting_21.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/numerical_sorting_21.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/ok.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/ok.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/old_time_camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/old_time_camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/online_support.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/online_support.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/opened_folder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/opened_folder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/org_unit.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/org_unit.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/organization.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/organization.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/outlet.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/overtime.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/overtime.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/package.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/package.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/paid.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/paid.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/paintbrush.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/paintbucket.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/panorama.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/panorama.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/paper-airplane.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/paperclip.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/parallel_tasks.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/parallel_tasks.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/pause.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/person-add.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/person-stalker.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/person.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/phone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/phone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/phone_android.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/phone_android.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/photo_reel.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/photo_reel.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/picture.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/picture.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/pie-graph.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/pie_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/pie_chart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/pin.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/pinpoint.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/pizza.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/plane.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/planet.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/planner.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/planner.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/play.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/playstation.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/plus-circled.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/plus-round.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/plus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/plus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/plus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/podium.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/podium_with_audience.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/podium_with_audience.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/podium_with_speaker.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/podium_with_speaker.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/podium_without_speaker.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/podium_without_speaker.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/portrait_mode.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/portrait_mode.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/positive_dynamic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/positive_dynamic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/pound.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/power.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/previous.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/previous.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/pricetag.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/pricetags.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/print.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/print.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/printer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/privacy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/privacy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/process.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/process.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/pull-request.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/puzzle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/puzzle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/qr-scanner.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/questions.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/questions.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/quote.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/radar_plot.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/radar_plot.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/radio-waves.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/rating.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/rating.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/ratings.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/ratings.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/reading.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/reading.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/reading_ebook.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/reading_ebook.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/record.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/redo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/redo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/refresh.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/refresh.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/refresh.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/registered_trademark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/registered_trademark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/remove_image.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/remove_image.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/reply-all.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/reply.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/reuse.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/reuse.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ribbon-a.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/ribbon-b.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/right_down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/right_down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/right_down2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/right_down2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/right_up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/right_up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/right_up2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/right_up2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/rotate_camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/rotate_camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/rotate_to_landscape.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/rotate_to_landscape.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/rotate_to_portrait.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/rotate_to_portrait.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/ruler.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/ruler.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/rules.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/rules.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/sad-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/sad.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/safe.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/safe.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/sales_performance.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/sales_performance.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/scatter_plot.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/scatter_plot.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/scissors.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/search.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/search.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/search.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/self_service_kiosk.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/self_service_kiosk.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/selfie.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/selfie.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/serial_tasks.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/serial_tasks.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/service_mark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/service_mark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/services.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/services.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/settings.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/settings.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/settings.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/share.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/share.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/share.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/shipped.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/shipped.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/shop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/shop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/shuffle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/signature.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/signature.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/sim_card.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/sim_card.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/sim_card_chip.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/sim_card_chip.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/skip-backward.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/skip-forward.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/slr_back_side.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/slr_back_side.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/smartphone_tablet.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/smartphone_tablet.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/sms.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/sms.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-android-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-android.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-angular-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-angular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-apple-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-apple.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-bitcoin-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-bitcoin.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-buffer-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-buffer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-chrome-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-chrome.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-codepen-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-codepen.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-css3-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-css3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-designernews-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-designernews.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-dribbble-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-dribbble.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-dropbox-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-dropbox.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-euro-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-euro.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-facebook-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-facebook.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-foursquare-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-foursquare.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-freebsd-devil.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-github-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-github.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-google-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-google.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-googleplus-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-googleplus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-hackernews-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-hackernews.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-html5-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-html5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-instagram-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-instagram.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-javascript-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-javascript.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-linkedin-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-linkedin.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-markdown.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-nodejs.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-octocat.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-pinterest-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-pinterest.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-python.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-reddit-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-reddit.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-rss-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-rss.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-sass.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-skype-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-skype.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-snapchat-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-snapchat.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-tumblr-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-tumblr.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-tux.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-twitch-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-twitch.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-twitter-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-twitter.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-usd-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-usd.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-vimeo-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-vimeo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-whatsapp-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-whatsapp.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-windows-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-windows.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-wordpress-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-wordpress.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-yahoo-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-yahoo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-yen-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-yen.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-youtube-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/social-youtube.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/sound_recording_copyright.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/sound_recording_copyright.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/soup-can-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/soup-can.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/speaker.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/speaker.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/speakerphone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/speedometer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/spoon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/sports_mode.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/sports_mode.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/stack_of_photos.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/stack_of_photos.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/star.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/start.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/start.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/statistics.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/statistics.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/stats-bars.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/steam.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/stop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/support.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/support.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/survey.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/survey.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/switch_camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/switch_camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/synchronize.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/synchronize.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/tablet_android.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/tablet_android.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/svg/teacher4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/template.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/template.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/thermometer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/thumbsdown.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/thumbsup.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/timeline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/timeline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/todo_list.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/todo_list.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/toggle-filled.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/toggle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/touchscreen_smartphone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/touchscreen_smartphone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/trademark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/trademark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/transgender.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/trash-a.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/trash-b.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/tree_structure.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/tree_structure.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/trophy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/tshirt-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/tshirt.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/two_smartphones.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/two_smartphones.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/umbrella.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/undo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/undo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/university.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/unlock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/unlock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/unlocked.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/up_left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/up_left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/up_right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/up_right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/upload.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/upload.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/upload.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/usb.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/svg/user43.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/video_call.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/video_call.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/video_file.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/video_file.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/video_projector.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/video_projector.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/videocamera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/view_details.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/view_details.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/vip.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/vip.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/voice_presentation.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/voice_presentation.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/voicemail.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/voicemail.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/volume-high.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/volume-low.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/volume-medium.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/volume-mute.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/wand.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/waterdrop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/webcam.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/webcam.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/wifi.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/wineglass.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/woman.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flat-color-icons-master/svg/workflow.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/d2l/img/flat-svg/workflow.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/wrench.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/modules/core/img/svg/xbox.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.css" afterPath="$PROJECT_DIR$/public/dist/application.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-classes/css/class-page.css" afterPath="$PROJECT_DIR$/public/modules/d2l-classes/css/class-page.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/views/header.client.view.html" afterPath="$PROJECT_DIR$/public/modules/core/views/header.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.js" afterPath="$PROJECT_DIR$/public/dist/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dist/application.min.js" afterPath="$PROJECT_DIR$/public/dist/application.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js" afterPath="$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html" afterPath="$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" afterPath="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -1535,14 +167,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view-d2l-class.client.view.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="view-d2l-class.client.view.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.75">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.39823008">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding>
-                <element signature="n#div#2;n#section#0;n#!!top" expanded="false" />
-                <element signature="n#md-whiteframe#0;n#div#2;n#section#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#md-whiteframe#0;n#div#2;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#iframe#0;n#md-whiteframe#0;n#div#2;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
@@ -1552,32 +182,6 @@
                 <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sideNav.client.view.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3131524">
-              <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#md-icon#0;n#div#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-content#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#md-content#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ok.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flat-color-icons-master/svg/ok.svg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1606,7 +210,7 @@
         <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="24" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="24" />
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -1680,11 +284,11 @@
         <option value="$PROJECT_DIR$/public/modules/mean-tutorials/views/mean-home.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/d2l/css/d2l.css" />
         <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/core/views/header.client.view.html" />
         <option value="$PROJECT_DIR$/public/modules/d2l-classes/css/class-page.css" />
         <option value="$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html" />
       </list>
     </option>
   </component>
@@ -2474,12 +1078,6 @@
       <option name="number" value="Default" />
       <updated>1416897923119</updated>
     </task>
-    <task id="LOCAL-00176" summary="openboard">
-      <created>1427943722293</created>
-      <option name="number" value="00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1427943722293</updated>
-    </task>
     <task id="LOCAL-00177" summary="openboard">
       <created>1427955234298</created>
       <option name="number" value="00177" />
@@ -2768,7 +1366,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429204960543</updated>
     </task>
-    <option name="localTasksCounter" value="225" />
+    <task id="LOCAL-00225" summary="icons">
+      <created>1429215260851</created>
+      <option name="number" value="00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1429215260851</updated>
+    </task>
+    <option name="localTasksCounter" value="226" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2781,7 +1385,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.455335" sideWeight="0.5131086" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26674938" sideWeight="0.5131086" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27968338" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30039525" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14860977" sideWeight="0.50970876" order="2" side_tool="true" content_ui="tabs" />
@@ -2840,7 +1444,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Google Authentication" />
     <MESSAGE value="fix date and new Assignment file name issue" />
     <MESSAGE value="remove beta button" />
     <MESSAGE value="class Interface" />
@@ -2865,7 +1468,8 @@
     <MESSAGE value="bower update" />
     <MESSAGE value="remove hide-sm" />
     <MESSAGE value="calendar" />
-    <option name="LAST_COMMIT_MESSAGE" value="calendar" />
+    <MESSAGE value="icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="icons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3192,26 +1796,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l/config/d2l.client.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/dist/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33263597">
           <caret line="1216" column="41" selection-start-line="1216" selection-start-column="41" selection-end-line="1216" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -3248,14 +1836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flat-color-icons-master/svg/ok.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flat-color-icons-master/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625">
@@ -3275,13 +1855,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l/config/d2l.client.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/controllers/d2l-classes.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flat-color-icons-master/svg/ok.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59498954">
+          <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-icon#0;n#div#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-content#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#md-content#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/d2l-classes/views/view-d2l-class.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.39823008">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
           <folding>
-            <element signature="n#div#2;n#section#0;n#!!top" expanded="false" />
-            <element signature="n#md-whiteframe#0;n#div#2;n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#md-whiteframe#0;n#div#2;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#iframe#0;n#md-whiteframe#0;n#div#2;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
@@ -3290,20 +1906,6 @@
             <element signature="n#style#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#md-card-content#0;n#md-card#0;n#div#0;n#md-whiteframe#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#div#0;n#md-whiteframe#1;n#section#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/modules/core/views/sideNav.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3131524">
-          <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-icon#0;n#div#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-content#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#md-content#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

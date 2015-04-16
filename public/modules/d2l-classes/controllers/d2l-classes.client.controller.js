@@ -9,10 +9,20 @@ angular.module('d2l-classes').controller('D2lClassesController',
 		$scope.authentication = Authentication;
 		var authentication = Authentication;
 		$scope.user = Authentication.user;
+		$scope.calendarAvail = true;
 
-		$scope.gUser = $scope.user.additionalProvidersData.google.email.split('@')[0];
+		if($scope.user.additionalProvidersData !== undefined)
+			$scope.gUser = $scope.user.additionalProvidersData.google.email.split('@')[0];
+		else{
+			$scope.calendarAvail = false;
+		}
+
 		$scope.calendar = function() {
-			var src = "https://www.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=300&wkst=1&bgcolor=%23FFFFFF&src="+$scope.gUser+"%40gmail.com&color=%23691426&ctz=America%2FChicago";
+			var src;
+			if($scope.calendarAvail){
+				src = "https://www.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=300&wkst=1&bgcolor=%23FFFFFF&src="+$scope.gUser+"%40gmail.com&color=%23691426&ctz=America%2FChicago";
+			}
+
 			return $sce.trustAsResourceUrl(src);
 		}
 
