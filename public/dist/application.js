@@ -7673,6 +7673,7 @@ angular.module('users').controller('AuthenticationController',
 				// If successful we assign the response to the global user model
 				$scope.authentication.user = response;
 				$mdDialog.hide();
+				$location.path('/');
 				// And redirect to the index page
 				if(typeof destination == undefined)
 					$location.path('/');
