@@ -1229,6 +1229,9 @@ angular.module('d2l-classes').controller('D2lClassesController',
 
 		if($scope.user.additionalProvidersData !== undefined)
 			$scope.gUser = $scope.user.additionalProvidersData.google.email.split('@')[0];
+		else if($scope.user.provider==="google"){
+			$scope.gUser = $scope.user.username;
+		}
 		else{
 			$scope.calendarAvail = false;
 		}
@@ -1238,10 +1241,8 @@ angular.module('d2l-classes').controller('D2lClassesController',
 			if($scope.calendarAvail){
 				src = "https://www.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=300&wkst=1&bgcolor=%23FFFFFF&src="+$scope.gUser+"%40gmail.com&color=%23691426&ctz=America%2FChicago";
 			}
-
 			return $sce.trustAsResourceUrl(src);
 		}
-
 		$scope.numClasses = 0;
 
 		$scope.classContents = [{topic:"Introduction"},{topic:"C++"},{topic:"Input/Flow Control"},{topic:"Functions"},{topic:"Arrays"},{topic:"File IO"},];
