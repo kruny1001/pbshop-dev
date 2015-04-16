@@ -1,17 +1,16 @@
-<h2 class="md-toolbar-tools" ng-controller="CoreHeadController">
+<div class="md-toolbar-tools" ng-controller="CoreHeadController">
 	<div flex layout="row" class="docs-logo">
 		<md-icon md-svg-src="modules/openboard/img/pack.svg"
 				 class="svg-logotype ng-isolate-scope md-default-theme"
-				 style="height:40px;
-                                 font-size:40px; margin:0px;"
+				 style="height:40px;font-size:40px; margin:0px;"
 				 aria-hidden="true">
 		</md-icon>
-		<div class="docs-logotype" ng-click="goTo('mean-home')">{{title}}</div>
+		<h4 ng-click="goTo('mean-home')">{{title}}</h4>
 	</div>
 
 	<span class="docs-title" hide-sm>{{subTitle}}</span>
 	<span flex hide-sm></span>
-</h2>
+</div>
 
 <div hide-gt-md ng-controller="CoreHeadController" layout="row" layout-align="end" style="  z-index: 1111;
   position: fixed;

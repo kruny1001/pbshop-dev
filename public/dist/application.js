@@ -3045,8 +3045,9 @@ angular.module('etc-products').config(['$stateProvider',
 'use strict';
 
 // Etc products controller
-angular.module('etc-products').controller('EtcProductsController', ['$scope', '$stateParams', '$location', 'Authentication', 'EtcProducts',
-	function($scope, $stateParams, $location, Authentication, EtcProducts) {
+angular.module('etc-products').controller('EtcProductsController',
+	['$scope', '$stateParams', '$location', 'Authentication', 'EtcProducts','$timeout', '$q',
+	function($scope, $stateParams, $location, Authentication, EtcProducts, $timeout, $q) {
 		$scope.authentication = Authentication;
 
 		// Create new Etc product
@@ -3105,9 +3106,44 @@ angular.module('etc-products').controller('EtcProductsController', ['$scope', '$
 			$scope.etcProduct = EtcProducts.get({ 
 				etcProductId: $stateParams.etcProductId
 			});
+		}
+
+
+
+
+		//////
+		//var self = this;
+		$scope.readonly = false;
+		// Lists of fruit names and Vegetable objects
+		$scope.fruitNames = ['Apple', 'Banana', 'Orange'];
+		$scope.roFruitNames = angular.copy(self.fruitNames);
+		$scope.newFruitNames = ['Red', 'Yellow', 'Green'];
+		$scope.vegObjs = [
+			{
+				'name' : 'ModelModel1',
+				'type' : 'Red'
+			},
+			{
+				'name' : 'ModelModel2',
+				'type' : 'Yellow'
+			},
+			{
+				'name' : 'ModelModel3',
+				'type' : 'Green'
+			}
+		];
+		$scope.newVeg = function(chip) {
+			return {
+				name: chip,
+				type: 'unknown'
+			};
 		};
+		/////
+
 	}
 ]);
+
+
 'use strict';
 
 //Etc products service used to communicate Etc products REST endpoints
@@ -3140,6 +3176,45 @@ angular.module('etc').controller('EtcController', ['$scope',
 	function($scope) {
 		// Etc controller logic
 		// ...
+
+		$scope.todos = [
+			{
+				face : '/modules/etc-products/img/icon1.png',
+				what: 'Brunch this weekend?',
+				who: 'Min Li Chan',
+				when: '3:08PM',
+				notes: " I'll be in your neighborhood doing errands"
+			},
+			{
+
+				face : '/modules/etc-products/img/icon1.png',
+				what: 'Brunch this weekend?',
+				who: 'Min Li Chan',
+				when: '3:08PM',
+				notes: " I'll be in your neighborhood doing errands"
+			},
+			{
+				face : '/modules/etc-products/img/icon1.png',
+				what: 'Brunch this weekend?',
+				who: 'Min Li Chan',
+				when: '3:08PM',
+				notes: " I'll be in your neighborhood doing errands"
+			},
+			{
+				face : '/modules/etc-products/img/icon1.png',
+				what: 'Brunch this weekend?',
+				who: 'Min Li Chan',
+				when: '3:08PM',
+				notes: " I'll be in your neighborhood doing errands"
+			},
+			{
+				face : '/modules/etc-products/img/icon1.png',
+				what: 'Brunch this weekend?',
+				who: 'Min Li Chan',
+				when: '3:08PM',
+				notes: " I'll be in your neighborhood doing errands"
+			},
+		];
 	}
 ]);
 'use strict';
@@ -5243,11 +5318,87 @@ angular.module('present').controller('OpenBoardPresentController', ['$scope',
 			'<section> <h2>Open Board</h2> <p>More time to Teach Less time to Grade</p></section> ' +
 			'<section> <h2>Are You Happy with D2L?</h2> <p>Horrible User Interface</p><p>Lots of Mysterious Functionalities you never use </p></section> ' +
 			'<section> <h2>Every where we have Cloud Tech</h2> </section>'+
-			'<section> <h2>Do We Really Need a Brand New App?</h2> </section> </div>';
-		mainBody.append(reveal);
+			'<section> <h2>Do We Really Need a Brand New App?</h2> </section>'+
+			'<section data-markdown>## Markdown Support</section></div>';
+		//mainBody.append(reveal);
 
 		Reveal.initialize({
-			transition: 'linear'
+
+			// Display controls in the bottom right corner
+			controls: true,
+
+			// Display a presentation progress bar
+			progress: true,
+
+			// Display the page number of the current slide
+			slideNumber: true,
+
+			// Push each slide change to the browser history
+			history: false,
+
+			// Enable keyboard shortcuts for navigation
+			keyboard: true,
+
+			// Enable the slide overview mode
+			overview: true,
+
+			// Vertical centering of slides
+			center: true,
+
+			// Enables touch navigation on devices with touch input
+			touch: true,
+
+			// Loop the presentation
+			loop: false,
+
+			// Change the presentation direction to be RTL
+			rtl: false,
+
+			// Turns fragments on and off globally
+			fragments: true,
+
+			// Flags if the presentation is running in an embedded mode,
+			// i.e. contained within a limited portion of the screen
+			embedded: false,
+
+			// Flags if we should show a help overlay when the questionmark
+			// key is pressed
+			help: true,
+
+			// Number of milliseconds between automatically proceeding to the
+			// next slide, disabled when set to 0, this value can be overwritten
+			// by using a data-autoslide attribute on your slides
+			autoSlide: 0,
+
+			// Stop auto-sliding after user input
+			autoSlideStoppable: true,
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: false,
+
+			// Hides the address bar on mobile devices
+			hideAddressBar: true,
+
+			// Opens links in an iframe preview overlay
+			previewLinks: false,
+
+			// Transition style
+			transition: 'zoom', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'slow', // default/fast/slow
+
+			// Transition style for full page slide backgrounds
+			backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+			// Number of slides away from the current that are visible
+			viewDistance: 3,
+
+			// Parallax background image
+			parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+			// Parallax background size
+			parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
 		});
 
 		// Open board present controller logic
@@ -7709,6 +7860,28 @@ angular.module('users')
 	}
 ]);
 
+'use strict';
+
+angular.module('util').directive('keyMenu', [
+	function() {
+		return {
+			restrict: 'A',
+			link: function postLink(scope, element, attrs) {
+				element.bind("keydown keypress", function (event) {
+					if(event.which === 13) {
+						scope.$apply(function (){
+							scope.$eval(attrs.ngEnter);
+						});
+
+						event.preventDefault();
+					}else{
+						console.log(event.which);
+					}
+				});
+			}
+		};
+	}
+]);
 'use strict';
 
 angular.module('util').directive('prism', [

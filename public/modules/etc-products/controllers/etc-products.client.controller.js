@@ -1,8 +1,9 @@
 'use strict';
 
 // Etc products controller
-angular.module('etc-products').controller('EtcProductsController', ['$scope', '$stateParams', '$location', 'Authentication', 'EtcProducts',
-	function($scope, $stateParams, $location, Authentication, EtcProducts) {
+angular.module('etc-products').controller('EtcProductsController',
+	['$scope', '$stateParams', '$location', 'Authentication', 'EtcProducts','$timeout', '$q',
+	function($scope, $stateParams, $location, Authentication, EtcProducts, $timeout, $q) {
 		$scope.authentication = Authentication;
 
 		// Create new Etc product
@@ -61,6 +62,40 @@ angular.module('etc-products').controller('EtcProductsController', ['$scope', '$
 			$scope.etcProduct = EtcProducts.get({ 
 				etcProductId: $stateParams.etcProductId
 			});
+		}
+
+
+
+
+		//////
+		//var self = this;
+		$scope.readonly = false;
+		// Lists of fruit names and Vegetable objects
+		$scope.fruitNames = ['Apple', 'Banana', 'Orange'];
+		$scope.roFruitNames = angular.copy(self.fruitNames);
+		$scope.newFruitNames = ['Red', 'Yellow', 'Green'];
+		$scope.vegObjs = [
+			{
+				'name' : 'ModelModel1',
+				'type' : 'Red'
+			},
+			{
+				'name' : 'ModelModel2',
+				'type' : 'Yellow'
+			},
+			{
+				'name' : 'ModelModel3',
+				'type' : 'Green'
+			}
+		];
+		$scope.newVeg = function(chip) {
+			return {
+				name: chip,
+				type: 'unknown'
+			};
 		};
+		/////
+
 	}
 ]);
+
