@@ -1,8 +1,11 @@
 'use strict';
 
 // Setting up route
-angular.module('core').config(['$stateProvider', '$urlRouterProvider',
-	function($stateProvider, $urlRouterProvider) {
+angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$compileProvider',
+	function($stateProvider, $urlRouterProvider, $compileProvider) {
+		// disable dubug data Information
+		$compileProvider.debugInfoEnabled(true);
+
 		// Redirect to home view when route not found
 		$urlRouterProvider.otherwise('/');
 		// Home state routing

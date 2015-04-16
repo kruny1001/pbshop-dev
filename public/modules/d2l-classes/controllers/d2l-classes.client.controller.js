@@ -2,16 +2,23 @@
 
 // D2l classes controller
 angular.module('d2l-classes').controller('D2lClassesController',
-	['$scope', '$stateParams', '$window','$location', '$mdDialog', 'Authentication', 'D2lHws','D2lGradesByClass','D2lClasses','D2lHwsByClass','D2lHwsSubmitsTrue','D2lGrades','D2lHwsSubmitsTrueByClass','D2lHwsByOriginDocId','D2lClassesOwnership',
-	function($scope, $stateParams, $window, $location, $mdDialog, Authentication, D2lHws,D2lGradesByClass, D2lClasses, D2lHwsByClass, D2lHwsSubmitsTrue, D2lGrades, D2lHwsSubmitsTrueByClass, D2lHwsByOriginDocId, D2lClassesOwnership) {
+	['$scope', '$sce', '$stateParams', '$window','$location', '$mdDialog', 'Authentication', 'D2lHws','D2lGradesByClass','D2lClasses','D2lHwsByClass','D2lHwsSubmitsTrue','D2lGrades','D2lHwsSubmitsTrueByClass','D2lHwsByOriginDocId','D2lClassesOwnership',
+	function($scope, $sce, $stateParams, $window, $location, $mdDialog, Authentication, D2lHws,D2lGradesByClass, D2lClasses, D2lHwsByClass, D2lHwsSubmitsTrue, D2lGrades, D2lHwsSubmitsTrueByClass, D2lHwsByOriginDocId, D2lClassesOwnership) {
 
 		$scope.id = $stateParams.d2lClassId;
 		$scope.authentication = Authentication;
 		var authentication = Authentication;
 		$scope.user = Authentication.user;
 
+		$scope.gUser = $scope.user.additionalProvidersData.google.email.split('@')[0];
+		$scope.calendar = function() {
+			var src = "https://www.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=300&wkst=1&bgcolor=%23FFFFFF&src="+$scope.gUser+"%40gmail.com&color=%23691426&ctz=America%2FChicago";
+			return $sce.trustAsResourceUrl(src);
+		}
+
 		$scope.numClasses = 0;
 
+		$scope.classContents = [{topic:"Introduction"},{topic:"C++"},{topic:"Input/Flow Control"},{topic:"Functions"},{topic:"Arrays"},{topic:"File IO"},];
 		$scope.copyHWTemplate = function(gdocId){
 			var AppScriptAPI = 'https://script.google.com/macros/s/AKfycbzoXxZDgzjLOJdqGUGYCWSpIT7n2sHyvnIo2W7E5jmXI_2sryj3/exec?';
 			var param = 'docId='+gdocId+'&userIdRef='+Authentication.user._id+'&task=copy';
