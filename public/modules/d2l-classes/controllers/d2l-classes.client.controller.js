@@ -15,6 +15,7 @@ angular.module('d2l-classes').controller('D2lClassesController',
 			$scope.gUser = $scope.user.additionalProvidersData.google.email.split('@')[0];
 		else if($scope.user.provider==="google"){
 			$scope.gUser = $scope.user.username;
+			alert($scope.gUser);
 		}
 		else{
 			$scope.calendarAvail = false;
