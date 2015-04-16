@@ -1,3 +1,8 @@
+.class-menu{
+    position: fixed;
+    top: 30px;
+    right: 4px;
+}
 .page        {
     bottom:0;
     padding-top:200px;
