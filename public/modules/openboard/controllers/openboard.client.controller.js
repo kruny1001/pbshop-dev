@@ -297,7 +297,7 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			scope.createNewRecord = function() {
 				console.log('Create');
 				// Create new D2l hw object
-				scope.project.dDate.setHours(23,59,59,999);
+				scope.project.dDate;//.setHours(23,59,59,999);
 				var d2lHw = new D2lHws (scope.project);
 				d2lHw.class = d2lHw.class._id;
 
