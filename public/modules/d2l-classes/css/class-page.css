@@ -1,7 +1,7 @@
 .class-menu{
     position: fixed;
     top: 30px;
-    right: 4px;
+    right: 30px !important;
 }
 .page        {
     bottom:0;

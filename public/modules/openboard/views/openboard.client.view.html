@@ -130,7 +130,7 @@
         <h3 class="md-headline docs-title-card">1. Create a New Account </h3>
         <!--<div class="ob-underbar"></div>-->
 
-        <div data-ng-show="authentication.user">
+        <div class="md-body-1" data-ng-show="authentication.user">
             You Signed in
         </div>
         <div data-ng-show="authentication.user==''">
@@ -156,7 +156,7 @@
         <h3 class="md-headline docs-title-card">2. Create a New Class</h3>
         <p class="md-body-1">You can create your own class. Once you have a class you can assign homework</p>
 
-        <h4>Step 2.1: Create New Class</h4>
+        <h4 class="md-title">Step 2.1: Create New Class</h4>
 
         <md-button class="md-primary md-raised" ng-click="showNewClass($event)">
             <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
@@ -164,8 +164,8 @@
         </md-button>
         <br><br><br>
         <div class="md-caption" style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
-            <div class="tableTitle">Classes</div>
-            <p hide-sm>Check your registered classes</p>
+            <div class="md-title">Classes</div>
+            <p class="md-caption" hide-sm>Check your registered classes</p>
             <table st-table="classesCopy" st-safe-src="classes" class="table table-striped">
                 <thead>
                 <tr>
@@ -188,7 +188,7 @@
             <br>
             <br>
             <br>
-            <h4>Step 2.2: Create Assignment by using a template (Add-On)</h4>
+            <h4 class="md-title">Step 2.2: Create Assignment by using a template (Add-On)</h4>
             <p class="md-body-1">
                 Click below button to download Assignment Template File onto your Google Drive
             </p>
@@ -219,7 +219,7 @@
                    layout="column" layout-align="space-around start">
         <h3 class="md-headline docs-title-card">3. Create a New Assignment</h3>
         <!--<div class="ob-underbar"></div>-->
-        <h4>Step 3.1: Check your assignment is uploaded</h4>
+        <h4 class="md-title">Step 3.1: Check your assignment is uploaded</h4>
         <div data-ng-show="authentication.user">
             <div layout="row">
                 <md-button class="md-primary" ng-click="showNewAssign($event)">
@@ -250,15 +250,15 @@
         <br/>
 
 
-        <h4>Step 4.1: Click Open Button</h4>
+        <h4 class="md-title">Step 4.1: Click Open Button</h4>
         <div class="md-caption" style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
-            <div class="tableTitle">List HW [Student]</div>
-            <p class="md-body-1" hide-sm>
+            <div class="md-title">List HW [Student]</div>
+            <p class="md-caption" hide-sm>
                 Student can access Assignment. By clicking Open Button, a copy of assignment will be stored onto user's Google Drive.
                 Once students click open button. Open Board will add Google Calendar its due date event to their account. Check your Google Calendar.
             </p>
-            <md-button ng-click="ownHwUpdate()">Your Class assignments</md-button>
-            <md-button ng-click="allHwUpdate()">All assignments from Open Board</md-button>
+            <!--<md-button ng-click="ownHwUpdate()">Your Class assignments</md-button>-->
+            <!--<md-button ng-click="allHwUpdate()">All assignments from Open Board</md-button>-->
             <table st-table="hwsCopy" st-safe-src="hws" class="table table-striped">
                 <thead>
                 <tr>
@@ -290,7 +290,7 @@
                 </tbody>
             </table>
         </div>
-        <h4>Step 4.2: Submit Your HW</h4>
+        <h4 class="md-title">Step 4.2: Submit Your HW</h4>
         <div style="margin-left:auto; margin-right:auto">
             <img title="Submit Google Doc" class="img-responsive" ng-src="modules/openboard/img/submitGdoc.gif">
         </div>
@@ -304,14 +304,14 @@
 
         <p class="md-body-1"> Once you submitted an assignment, a notification email will be sent to Instructor's email account. For this tutorial, you are the instructor. Check your email Account.</p>
 
-        <h4>Step 5.1: Check your E-mail Account</h4>
+        <h4 class="md-title">Step 5.1: Check your E-mail Account</h4>
         <br><br>
-        <h4>Step 5.2: Open Submitted Assignment from Link</h4>
-        <p>You also can access student's file without checking your email account. You can just click open button. Open Board will follow you to student file.</p>
+        <h4 class="md-title">Step 5.2: Open Submitted Assignment from Link</h4>
+        <p class="md-body-1">You also can access student's file without checking your email account. You can just click open button. Open Board will follow you to student file.</p>
 
         <div class="md-caption" style="border-top: 5px solid #ffda74; padding: 5px; margin-left:auto; margin-right:auto;">
-            <div class="tableTitle">Assignment Submission List [Instructor]</div>
-            <p class="md-body-1" hide-sm>
+            <div class="md-title" class="tableTitle">Assignment Submission List [Instructor]</div>
+            <p class="md-caption" hide-sm>
                 These submitted assignment is ready to grade. Instructor can access student's assignment. It doesn't need to download or ask to send email from student.
                 By clicking Grade button, Instructor is ready to grade from Google Doc.
             </p>
@@ -337,10 +337,10 @@
             </table>
         </div>
 
-        <h4>Step 5.3: Check Grade</h4>
+        <h4 class="md-title">Step 5.3: Check Grade</h4>
         <div class="md-caption" style="border-top: 5px solid #ee6c0a; padding: 5px; margin-left:auto; margin-right:auto;">
-            <div class="tableTitle">Grade Board [Student]</div>
-            <p class="md-body-1" hide-sm>When your instructor grades your assignment, Open Board notify you with email and update score here.
+            <div class="md-title">Grade Board [Student]</div>
+            <p class="md-caption" hide-sm>When your instructor grades your assignment, Open Board notify you with email and update score here.
                 You can check your score immediately after grading an assignment from Google Doc.
             </p>
             <table st-table="gradeCollectionCopy" st-safe-src="gradeCollection" class="table table-striped">
