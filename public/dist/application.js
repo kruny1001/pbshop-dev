@@ -5033,7 +5033,7 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 		var param = 'docId='+hw.gdocId+
 			'&userId='+authentication.user.username+
 			'&title='+hw.title+
-			'&dDate='+hw.dDate+
+			'&dDate='+new Date(hw.dDate)+
 			'&userIdRef='+Authentication.user._id+
 			'&instructorRef='+hw.class.user+
 			'&classId='+hw.class._id;
