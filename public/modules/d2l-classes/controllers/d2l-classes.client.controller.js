@@ -101,6 +101,7 @@ angular.module('d2l-classes').controller('D2lClassesController',
 				'&userIdRef='+Authentication.user._id+
 				'&instructorRef='+hw.class.user+
 				'&classId='+hw.class._id;
+			console.log(hw.dDate);
 			$window.open(AppScriptAPI+param);
 		};
 
