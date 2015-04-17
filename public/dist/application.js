@@ -5174,7 +5174,7 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 			scope.project = {gdocId : scope.docs.id};
 
 			var dDate = new Date();
-			dDate.setHours(23,59,59,999);
+			//dDate.setHours(23,59,59,999);
 
 			scope.project = {
 				dDate: dDate
