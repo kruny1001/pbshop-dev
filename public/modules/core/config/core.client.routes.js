@@ -3,6 +3,7 @@
 // Setting up route
 angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$compileProvider',
 	function($stateProvider, $urlRouterProvider, $compileProvider) {
+
 		// disable dubug data Information
 		$compileProvider.debugInfoEnabled(true);
 

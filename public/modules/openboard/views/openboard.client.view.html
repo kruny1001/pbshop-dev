@@ -43,292 +43,338 @@
 
     <!-- Main Content-->
 
+    <!--Introduction-->
+    <md-whiteframe id="intro"
+                   class="md-whiteframe-z2 openboard-card-color ob-underbar-base"
+                   layout="column" layout-align="space-around start">
+        <!--Need enable ProgressLinearCtrl from openbardCtrl-->
+        <!--<div class="progress-report" ng-controller="progressLinearCtrl" layout="column" layout-margin style="padding:2px;">-->
+        <!--<md-progress-linear class="md-accent" md-mode="{{mode}}" value="{{determinateValue}}"></md-progress-linear>-->
+        <!--</div>-->
 
-        <!--Introduction-->
-        <md-whiteframe id="intro"
-                       class="md-whiteframe-z2 openboard-card-color ob-underbar-base"
-                       layout="column" layout-align="space-around start">
-            <!--Need enable ProgressLinearCtrl from openbardCtrl-->
-            <!--<div class="progress-report" ng-controller="progressLinearCtrl" layout="column" layout-margin style="padding:2px;">-->
-            <!--<md-progress-linear class="md-accent" md-mode="{{mode}}" value="{{determinateValue}}"></md-progress-linear>-->
-            <!--</div>-->
 
-            <h3 class="docs-title-card">Introduction</h3>
-            <!--<div class="ob-underbar"></div>-->
-            <div layout="column" layout-fill>
-                <center>
-                    <h4>Create amazing assignments</h4>
-                    <p>With <b>Open Board</b>, you can assign, submit, and grade wherever you can do.</p>
-                </center>
-                <hr/>
-                <div layout="row" layout-align="space-around start">
-                    <div>
-                        <h4>Due Date Notification</h4>
-                        <p style="max-width:250px">Once students access their assignment from Open Board, Google Calendar event will be added on their calendar</p>
-                    </div>
+        <h3 class="md-display-2 docs-title-card">Introduction</h3>
+        <!--<div class="ob-underbar"></div>-->
+        <div layout="column" layout-fill>
+            <center>
+                <h4 class="md-title">Create amazing assignments</h4>
+                <p class="md-body-1">With <b>Open Board</b>, you can assign, submit, and grade wherever you can do.</p>
+            </center>
+            <hr/>
+            <div layout="row" layout-margin layout-align="space-around start">
+                <div>
+                    <h4 class="md-title">D-Date Notification</h4>
+                    <p class="md-body-1" style="max-width:250px">Once students get accessed their assignment from Open Board, Google Calendar event will be added on their calendar(mobile and Google Account).</p>
+                </div>
 
-                    <div>
-                        <h4>Easy Access</h4>
-                        <p style="max-width:250px">Students and instructor don't need to organize files from their computer</p>
-                    </div>
-
+                <div>
+                    <h4 class="md-title">Easy Access</h4>
+                    <p class="md-body-1" style="max-width:250px">Students and instructor don't need to organize files from their computer anymore. Open Board takes care of managing your files from Cloud.</p>
                 </div>
             </div>
-        </md-whiteframe>
 
-        <!--Create a New Account-->
-        <md-whiteframe id="step1"
-                       class="md-whiteframe-z2 openboard-card-color ob-underbar-yellow"
-                       layout="column" layout-align="space-around start">
+            <div hide-sm class="iconsList" layout="row" layout-align="center center">
 
-            <h3 class="docs-title-card">1. Create a New Account </h3>
-            <!--<div class="ob-underbar"></div>-->
+                <md-icon id="mdIcon1" class="icons45" md-svg-src="modules/core/img/svg/document-text.svg"></md-icon>
+                <md-icon id="mdIcon2" class="icons45" md-svg-src="modules/core/img/svg/stats-bars.svg"></md-icon>
+                <md-icon id="mdIcon3" class="icons45" md-svg-src="modules/core/img/svg/social-google-outline.svg"></md-icon>
 
-            <div data-ng-show="authentication.user">
-                You Signed in
+                <div layout="column" layout-align="center center">
+                    <md-icon class="icons146" md-svg-src="modules/openboard/img/avata1.svg"></md-icon>
+                    <div class="md-body-1" layout="row" layout-align="center center">Less Grade & More Teach</div>
+                </div>
+                <md-icon id="mdIcon4" class="icons45" md-svg-src="modules/core/img/svg/android-mail.svg"></md-icon>
+                <md-icon id="mdIcon5" class="icons45" md-svg-src="modules/core/img/svg/cloud.svg"></md-icon>
+                <md-icon id="mdIcon6" class="icons45" md-svg-src="modules/core/img/svg/android-calendar.svg"></md-icon>
+
             </div>
-            <div data-ng-show="authentication.user==''">
-                <p>For access to Openboard, you need to create new user account.</p>
+
+            <div hide-gt-sm class="iconsList" layout="column" layout-align="center center">
 
                 <div layout="row">
-                    <md-button class="md-primary" ng-click="showSignInTutorial($event)">
-                        <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
-                        Sign In
-                    </md-button>
-                    <md-button class="md-primary" ng-click="showSignUpTutorial($event)">
-                        <md-icon md-svg-src="/modules/mean-tutorials/img/log-out.svg"></md-icon>
-                        Sign Up
-                    </md-button>
+                <md-icon id="mdIcon1" class="icons45" md-svg-src="modules/core/img/svg/document-text.svg"></md-icon>
+                <md-icon id="mdIcon2" class="icons45" md-svg-src="modules/core/img/svg/stats-bars.svg"></md-icon>
+                <md-icon id="mdIcon3" class="icons45" md-svg-src="modules/core/img/svg/social-google-outline.svg"></md-icon>
+                </div>
+                <div layout="column">
+                <md-icon class="icons146" md-svg-src="modules/openboard/img/avata1.svg"></md-icon>
+                <div class="md-body-1" layout="row" layout-align="center center">Less Grade & More Teach</div>
+                </div>
+                <div layout="row">
+                <md-icon id="mdIcon4" class="icons45" md-svg-src="modules/core/img/svg/android-mail.svg"></md-icon>
+                <md-icon id="mdIcon5" class="icons45" md-svg-src="modules/core/img/svg/cloud.svg"></md-icon>
+                <md-icon id="mdIcon6" class="icons45" md-svg-src="modules/core/img/svg/android-calendar.svg"></md-icon>
                 </div>
             </div>
-        </md-whiteframe>
 
-        <!--Create a New Class-->
-        <md-whiteframe id="step2"
-                       class="md-whiteframe-z2 openboard-card-color ob-underbar-red"
-                       layout="column" layout-align="space-around start">
-            <h3 class="docs-title-card">2. Create a New Class</h3>
-            <p>You can create your own class. Once you have a class you can assign homework</p>
-
-            <h4>Step 2.1: Create New Class</h4>
-
-            <md-button class="md-primary" ng-click="showNewClass($event)">
-                <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
-                Create New Class
-            </md-button>
-            <br><br><br>
-            <div class="md-caption" style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
-                <div class="tableTitle">Classes</div>
-                <p hide-sm>Check your registered classes</p>
-                <table st-table="classesCopy" st-safe-src="classes" class="table table-striped">
-                    <thead>
-                    <tr>
-                        <!--<th></th>-->
-                        <th st-sort="title">Prefix</th>
-                        <th st-sort="class">Class Name</th>
-                        <th st-sort="dDate">Instructor</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="CL in classesCopy">
-                        <!--<td cs-select="HW"></td>-->
-                        <td>{{CL.prefix}}</td>
-                        <td>{{CL.name}}</td>
-                        <td>{{CL.user.displayName}}</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-                <br>
-                <br>
-                <br>
-                <h4>Step 2.2: Create Assignment by using a template (Add-On)</h4>
-                <p>
-                    Click below button to download Assignment Template File onto your Google Drive
-                </p>
-                <div class="alert alert-danger md-caption" role="alert">
-                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Error:</span>
-                    This process would be discarded once Open Board
-                    <a href="https://developers.google.com/apps-script/add-ons/" target="_blank">add-on</a>
-                    is approved by Google. I am still working on matching Google's requirements. You can install Open Board add-on to your Google Doc Soon!</p>
+            <div layout="row" layout-margin layout-align="space-around start">
+                <div>
+                    <h4 class="md-title">Cloud Tech</h4>
+                    <p class="md-body-1" style="max-width:250px">Open Board uses Google Drive, Docs, and Add-Ons. Students and instructors no more need to bring own USB.</p>
                 </div>
 
-                <md-button class="md-primary" ng-click="copyHWTemplate('1S1cucFhz96cGRHvXzgGqxuptNR-NgWKpIwI55RB67NU')">
-                    <md-icon style="font-size:40px; width:40px; height:40px;" md-svg-src="modules/openboard/img/doc.svg"></md-icon>
-                    Copy Assignment Template
+                <div>
+                    <h4 class="md-title">Non-Stop Grading</h4>
+                    <p class="md-body-1" style="max-width:250px">Instructors can directly grade assignments from Google Docs and Open Board immediately updates grades.</p>
+                </div>
+            </div>
+
+        </div>
+    </md-whiteframe>
+
+    <!--Create a New Account-->
+    <md-whiteframe id="step1"
+                   class="md-whiteframe-z2 openboard-card-color ob-underbar-yellow"
+                   layout="column" layout-align="space-around start">
+
+        <h3 class="md-headline docs-title-card">1. Create a New Account </h3>
+        <!--<div class="ob-underbar"></div>-->
+
+        <div data-ng-show="authentication.user">
+            You Signed in
+        </div>
+        <div data-ng-show="authentication.user==''">
+            <p class="md-body-1">For access to Openboard, you need to create new user account.</p>
+
+            <div layout="row">
+                <md-button class="md-primary md-raised" ng-click="showSignInTutorial($event)">
+                    <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
+                    Sign In
                 </md-button>
+                <md-button class="md-primary md-raised" ng-click="showSignUpTutorial($event)">
+                    <md-icon md-svg-src="/modules/mean-tutorials/img/log-out.svg"></md-icon>
+                    Sign Up
+                </md-button>
+            </div>
+        </div>
+    </md-whiteframe>
 
-                <div style="max-width:700px; margin-left:auto; margin-right:auto;">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/Gcaw05viyfo" allowfullscreen></iframe>
-                    </div>
+    <!--Create a New Class-->
+    <md-whiteframe id="step2"
+                   class="md-whiteframe-z2 openboard-card-color ob-underbar-red"
+                   layout="column" layout-align="space-around start">
+        <h3 class="md-headline docs-title-card">2. Create a New Class</h3>
+        <p class="md-body-1">You can create your own class. Once you have a class you can assign homework</p>
+
+        <h4>Step 2.1: Create New Class</h4>
+
+        <md-button class="md-primary md-raised" ng-click="showNewClass($event)">
+            <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
+            Create New Class
+        </md-button>
+        <br><br><br>
+        <div class="md-caption" style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
+            <div class="tableTitle">Classes</div>
+            <p hide-sm>Check your registered classes</p>
+            <table st-table="classesCopy" st-safe-src="classes" class="table table-striped">
+                <thead>
+                <tr>
+                    <!--<th></th>-->
+                    <th st-sort="title">Prefix</th>
+                    <th st-sort="class">Class Name</th>
+                    <th st-sort="dDate">Instructor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="CL in classesCopy">
+                    <!--<td cs-select="HW"></td>-->
+                    <td>{{CL.prefix}}</td>
+                    <td>{{CL.name}}</td>
+                    <td>{{CL.user.displayName}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <br>
+            <br>
+            <h4>Step 2.2: Create Assignment by using a template (Add-On)</h4>
+            <p class="md-body-1">
+                Click below button to download Assignment Template File onto your Google Drive
+            </p>
+            <div class="alert alert-danger md-caption" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                This process would be discarded once Open Board
+                <a href="https://developers.google.com/apps-script/add-ons/" target="_blank">add-on</a>
+                is approved by Google. I am still working on matching Google's requirements. You can install Open Board add-on to your Google Doc Soon!</p>
+            </div>
+
+            <md-button class="md-warn md-raised" ng-click="copyHWTemplate('1S1cucFhz96cGRHvXzgGqxuptNR-NgWKpIwI55RB67NU')">
+                <md-icon style="font-size:40px; width:40px; height:40px;" md-svg-src="modules/openboard/img/doc.svg"></md-icon>
+                Copy Assignment Template
+            </md-button>
+
+            <div style="max-width:700px; margin-left:auto; margin-right:auto;">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Gcaw05viyfo" allowfullscreen></iframe>
                 </div>
             </div>
-        </md-whiteframe>
+        </div>
+    </md-whiteframe>
 
-        <!--Create an New Assignment-->
-        <md-whiteframe id="step3"
-                       class="md-whiteframe-z2 openboard-card-color ob-underbar-green"
-                       layout="column" layout-align="space-around start">
-            <h3 class="docs-title-card">3. Create a New Assignment</h3>
-            <!--<div class="ob-underbar"></div>-->
-            <h4>Step 3.1: Check your assignment is uploaded</h4>
-            <div data-ng-show="authentication.user">
-                <div layout="row">
-                    <md-button class="md-primary" ng-click="showNewAssign($event)">
-                        <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
-                        Create an Assignment
-                    </md-button>
-                </div>
+    <!--Create an New Assignment-->
+    <md-whiteframe id="step3"
+                   class="md-whiteframe-z2 openboard-card-color ob-underbar-green"
+                   layout="column" layout-align="space-around start">
+        <h3 class="md-headline docs-title-card">3. Create a New Assignment</h3>
+        <!--<div class="ob-underbar"></div>-->
+        <h4>Step 3.1: Check your assignment is uploaded</h4>
+        <div data-ng-show="authentication.user">
+            <div layout="row">
+                <md-button class="md-primary" ng-click="showNewAssign($event)">
+                    <md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>
+                    Create an Assignment
+                </md-button>
             </div>
+        </div>
 
-        </md-whiteframe>
+    </md-whiteframe>
 
-        <!--Access an Assignment-->
-        <md-whiteframe id="step4"
-                       class="md-whiteframe-z2 openboard-card-color ob-underbar-dark"
-                       layout="column" layout-align="space-around start">
-            <h3 class="docs-title-card">4. Access an Assignment</h3>
-            <!--<div class="ob-underbar"></div>-->
+    <!--Access an Assignment-->
+    <md-whiteframe id="step4"
+                   class="md-whiteframe-z2 openboard-card-color ob-underbar-dark"
+                   layout="column" layout-align="space-around start">
+        <h3 class="md-headline docs-title-card">4. Access an Assignment</h3>
+        <!--<div class="ob-underbar"></div>-->
 
-            <p>
-                You can make a copy of assignment template by clicking open button.
-                Open Board will upload new file onto your Google Drive</p>
+        <p class="md-body-1">
+            You can make a copy of assignment template by clicking open button.
+            Open Board will upload new file onto your Google Drive</p>
 
-            <!--<md-button class="md-primary" ng-click="showSetRule()">-->
-            <!--<md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>-->
-            <!--Set Role-->
-            <!--</md-button>-->
-            <br/>
-            <br/>
+        <!--<md-button class="md-primary" ng-click="showSetRule()">-->
+        <!--<md-icon md-svg-src="/modules/mean-tutorials/img/log-in.svg"></md-icon>-->
+        <!--Set Role-->
+        <!--</md-button>-->
+        <br/>
+        <br/>
 
 
-            <h4>Step 4.1: Click Open Button</h4>
-            <div class="md-caption" style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
-                <div class="tableTitle">List HW [Student]</div>
-                <p hide-sm>
-                    Student can access Assignment. By clicking Open Button, a copy of assignment will be stored onto user's Google Drive.
-                    Once students click open button. Open Board will add Google Calendar its due date event to their account. Check your Google Calendar.
-                </p>
-                <md-button ng-click="ownHwUpdate()">Your Class assignments</md-button>
-                <md-button ng-click="allHwUpdate()">All assignments from Open Board</md-button>
-                <table st-table="hwsCopy" st-safe-src="hws" class="table table-striped">
-                    <thead>
-                    <tr>
-                        <!--<th></th>-->
-                        <th st-sort="title">Title</th>
-                        <th>Class</th>
-                        <th st-sort="dDate">Due Date</th>
-                        <th st-sort="totalGrade" hide-sm>Total</th>
-                        <th st-sort="percent" hide-sm>Total %</th>
-                        <th>Doc Link</th>
-                    </tr>
-                    <tr>
-                        <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="HW in hwsCopy">
-                        <!--<td cs-select="HW"></td>-->
-                        <td>{{HW.title}}</td>
-                        <td hide-sm>{{HW.class.name}}</td>
-                        <td show-sm hide-gt-sm>{{HW.class.prefix}}</td>
-                        <td>{{HW.dDate |  date : format : timezone}}</td>
-                        <td hide-sm>{{HW.totalGrade}}</td>
-                        <td hide-sm>{{HW.percent}}</td>
-                        <td><md-button class="md-warn md-raised" ng-click="linkHW(HW)">Open</md-button>
-                            <!--<md-button class="md-warn md-raised" style="font-size:0.8em" ng-click="linkHW(HW)">Open</md-button>-->
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <h4>Step 4.2: Submit Your HW</h4>
-            <div style="margin-left:auto; margin-right:auto">
-                <img title="Submit Google Doc" class="img-responsive" ng-src="modules/openboard/img/submitGdoc.gif">
-            </div>
-        </md-whiteframe>
+        <h4>Step 4.1: Click Open Button</h4>
+        <div class="md-caption" style="border-top: 5px solid #ff60ad; padding: 5px; margin-left:auto; margin-right:auto;">
+            <div class="tableTitle">List HW [Student]</div>
+            <p class="md-body-1" hide-sm>
+                Student can access Assignment. By clicking Open Button, a copy of assignment will be stored onto user's Google Drive.
+                Once students click open button. Open Board will add Google Calendar its due date event to their account. Check your Google Calendar.
+            </p>
+            <md-button ng-click="ownHwUpdate()">Your Class assignments</md-button>
+            <md-button ng-click="allHwUpdate()">All assignments from Open Board</md-button>
+            <table st-table="hwsCopy" st-safe-src="hws" class="table table-striped">
+                <thead>
+                <tr>
+                    <!--<th></th>-->
+                    <th st-sort="title">Title</th>
+                    <th>Class</th>
+                    <th st-sort="dDate">Due Date</th>
+                    <th st-sort="totalGrade" hide-sm>Total</th>
+                    <th st-sort="percent" hide-sm>Total %</th>
+                    <th>Doc Link</th>
+                </tr>
+                <tr>
+                    <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="HW in hwsCopy">
+                    <!--<td cs-select="HW"></td>-->
+                    <td>{{HW.title}}</td>
+                    <td hide-sm>{{HW.class.name}}</td>
+                    <td show-sm hide-gt-sm>{{HW.class.prefix}}</td>
+                    <td>{{HW.dDate |  date : format : timezone}}</td>
+                    <td hide-sm>{{HW.totalGrade}}</td>
+                    <td hide-sm>{{HW.percent}}</td>
+                    <td><md-button class="md-warn md-raised" ng-click="linkHW(HW)">Open</md-button>
+                        <!--<md-button class="md-warn md-raised" style="font-size:0.8em" ng-click="linkHW(HW)">Open</md-button>-->
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4>Step 4.2: Submit Your HW</h4>
+        <div style="margin-left:auto; margin-right:auto">
+            <img title="Submit Google Doc" class="img-responsive" ng-src="modules/openboard/img/submitGdoc.gif">
+        </div>
+    </md-whiteframe>
 
-        <!--Grade an Assignment-->
-        <md-whiteframe id="step5"
-                       class="md-whiteframe-z2 openboard-card-color ob-underbar-base"
-                       layout="column" layout-align="space-around start">
-            <h3 class="docs-title-card">5. Grade an Assignment</h3>
+    <!--Grade an Assignment-->
+    <md-whiteframe id="step5"
+                   class="md-whiteframe-z2 openboard-card-color ob-underbar-base"
+                   layout="column" layout-align="space-around start">
+        <h3 class="md-headline docs-title-card">5. Grade an Assignment</h3>
 
-            <p> Once you submitted an assignment, a notification email will be sent to Instructor's email account. For this tutorial, you are the instructor. Check your email Account.</p>
+        <p class="md-body-1"> Once you submitted an assignment, a notification email will be sent to Instructor's email account. For this tutorial, you are the instructor. Check your email Account.</p>
 
-            <h4>Step 5.1: Check your E-mail Account</h4>
-            <br><br>
-            <h4>Step 5.2: Open Submitted Assignment from Link</h4>
-            <p>You also can access student's file without checking your email account. You can just click open button. Open Board will follow you to student file.</p>
+        <h4>Step 5.1: Check your E-mail Account</h4>
+        <br><br>
+        <h4>Step 5.2: Open Submitted Assignment from Link</h4>
+        <p>You also can access student's file without checking your email account. You can just click open button. Open Board will follow you to student file.</p>
 
-            <div class="md-caption" style="border-top: 5px solid #ffda74; padding: 5px; margin-left:auto; margin-right:auto;">
-                <div class="tableTitle">Assignment Submission List [Instructor]</div>
-                <p hide-sm>
-                    These submitted assignment is ready to grade. Instructor can access student's assignment. It doesn't need to download or ask to send email from student.
-                    By clicking Grade button, Instructor is ready to grade from Google Doc.
-                </p>
-                <table st-table="submittedHWCopy"
-                       st-safe-src="submittedHW"
-                       class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th st-sort="class">Prefix</th>
-                        <th st-sort="name">Class name</th>
-                        <th st-sort="user.displayName">Student</th>
-                        <th>Doc Link</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="subm in submittedHWCopy">
-                        <td>{{subm.class.prefix | uppercase}}</td>
-                        <td>{{subm.class.name}}</td>
-                        <td>{{subm.user.displayName}}</td>
-                        <td><md-button class="md-warn md-raised" ng-click="openDoc(subm.docId)">Grade</md-button></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="md-caption" style="border-top: 5px solid #ffda74; padding: 5px; margin-left:auto; margin-right:auto;">
+            <div class="tableTitle">Assignment Submission List [Instructor]</div>
+            <p class="md-body-1" hide-sm>
+                These submitted assignment is ready to grade. Instructor can access student's assignment. It doesn't need to download or ask to send email from student.
+                By clicking Grade button, Instructor is ready to grade from Google Doc.
+            </p>
+            <table st-table="submittedHWCopy"
+                   st-safe-src="submittedHW"
+                   class="table table-striped">
+                <thead>
+                <tr>
+                    <th st-sort="class">Prefix</th>
+                    <th st-sort="name">Class name</th>
+                    <th st-sort="user.displayName">Student</th>
+                    <th>Doc Link</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="subm in submittedHWCopy">
+                    <td>{{subm.class.prefix | uppercase}}</td>
+                    <td>{{subm.class.name}}</td>
+                    <td>{{subm.user.displayName}}</td>
+                    <td><md-button class="md-warn md-raised" ng-click="openDoc(subm.docId)">Grade</md-button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 
-            <h4>Step 5.3: Check Grade</h4>
-            <div class="md-caption" style="border-top: 5px solid #ee6c0a; padding: 5px; margin-left:auto; margin-right:auto;">
-                <div class="tableTitle">Grade Board [Student]</div>
-                <p hide-sm>When your instructor grades your assignment, Open Board notify you with email and update score here.
-                    You can check your score immediately after grading an assignment from Google Doc.
-                </p>
-                <table st-table="gradeCollectionCopy" st-safe-src="gradeCollection" class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th st-sort="prefix">Prefix</th>
-                        <th hide-sm st-sort="name">Class</th>
-                        <th st-sort="grade">Grade</th>
-                        <th st-sort="student.displayName">Student</th>
-                        <th hide-sm st-sort="comment">Document Link</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="r in gradeCollectionCopy">
-                        <td>{{r.class.prefix | uppercase}}</td>
-                        <td hide-sm>{{r.class.name}}</td>
-                        <td>{{r.grade}}</td>
-                        <td>{{r.student.displayName}}</td>
-                        <td hide-sm>{{r.comment}}</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+        <h4>Step 5.3: Check Grade</h4>
+        <div class="md-caption" style="border-top: 5px solid #ee6c0a; padding: 5px; margin-left:auto; margin-right:auto;">
+            <div class="tableTitle">Grade Board [Student]</div>
+            <p class="md-body-1" hide-sm>When your instructor grades your assignment, Open Board notify you with email and update score here.
+                You can check your score immediately after grading an assignment from Google Doc.
+            </p>
+            <table st-table="gradeCollectionCopy" st-safe-src="gradeCollection" class="table table-striped">
+                <thead>
+                <tr>
+                    <th st-sort="prefix">Prefix</th>
+                    <th hide-sm st-sort="name">Class</th>
+                    <th st-sort="grade">Grade</th>
+                    <th st-sort="student.displayName">Student</th>
+                    <th hide-sm st-sort="comment">Document Link</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="r in gradeCollectionCopy">
+                    <td>{{r.class.prefix | uppercase}}</td>
+                    <td hide-sm>{{r.class.name}}</td>
+                    <td>{{r.grade}}</td>
+                    <td>{{r.student.displayName}}</td>
+                    <td hide-sm>{{r.comment}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 
-        </md-whiteframe>
+    </md-whiteframe>
 
-        <!-- List Grade -->
-        <!--Grade Board for Student-->
-        <md-whiteframe id="step6" class="md-whiteframe-z2 openboard-card-color ob-underbar-yellow" layout="column">
-            <h3 class="docs-title-card">6. Grade Analysis</h3>
+    <!-- List Grade -->
+    <!--Grade Board for Student-->
+    <md-whiteframe id="step6" class="md-whiteframe-z2 openboard-card-color ob-underbar-yellow" layout="column">
+        <h3 class="md-headline docs-title-card">6. Grade Analysis</h3>
 
-            <h4>Demo Analysis</h4>
-            <nvd3 options="options" data="data1"></nvd3>
-        </md-whiteframe>
+        <h4>Demo Analysis</h4>
+        <nvd3 options="options" data="data1"></nvd3>
+    </md-whiteframe>
 
 
 

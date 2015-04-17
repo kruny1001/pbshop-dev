@@ -52,7 +52,7 @@
 }
 
 .docs-title-card{
-    font-weight: 700;
+    /*font-weight: 700;*/
     line-height: 42px;
     text-indent: 0px;
     margin-left:auto;
@@ -106,3 +106,26 @@
 .progress-report{
     z-index:1000000; position: relative; width:100%;
 }
+
+
+.iconsList md-icon {
+    margin: 20px;
+    margin-top: 0;
+    width: 24px;
+    height: 24px; }
+
+.iconsList .icons45 {
+    width: 45px;
+    height: 45px;
+     }
+
+.iconsList .icons75 {
+    width: 75px;
+    height: 75px;
+    color: #0f0; }
+.iconsList .icons146 {
+    width: 146px;
+    height: 146px;
+    color: #0f0; }
+
+

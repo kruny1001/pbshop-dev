@@ -294,6 +294,7 @@ angular.module('articles').factory('Articles', ['$resource',
 // Setting up route
 angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$compileProvider',
 	function($stateProvider, $urlRouterProvider, $compileProvider) {
+
 		// disable dubug data Information
 		$compileProvider.debugInfoEnabled(true);
 
@@ -4898,6 +4899,7 @@ angular.module('openboard')
 //	.config(function($mdThemingProvider) {})
 	.controller('OpenboardController', OpenboardController);
 function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http, Authentication, Users, D2lHws, D2lGrades, D2lClassesOwnership, D2lHwsSubmitsTrue, UsersRole) {
+
 	//Init
 	$scope.authentication = Authentication;
 	var authentication = Authentication;
