@@ -117,6 +117,11 @@ ApplicationConfiguration.registerModule('g-drive');
 
 'use strict';
 
+// Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('gsap-editor');
+
+'use strict';
+
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('mean-events');
 
@@ -3187,6 +3192,10 @@ angular.module('etc').config(['$stateProvider',
 	function($stateProvider) {
 		// Etc state routing
 		$stateProvider.
+		state('wigs', {
+			url: '/wigs',
+			templateUrl: 'modules/etc/views/wigs.client.view.html'
+		}).
 		state('etc', {
 			url: '/etc',
 			templateUrl: 'modules/etc/views/etc.client.view.html'
@@ -3242,8 +3251,23 @@ angular.module('etc').controller('EtcController', ['$scope',
 ]);
 'use strict';
 
+angular.module('etc').controller('WigsController', ['$scope',
+	function($scope) {
+        $scope.degree = 0;
+        $scope.flipCard = function(targetId){
+            var target = $('#'+targetId);
+            $scope.degree += 180;
+            TweenMax.to(target, 0.4 , {rotationY: $scope.degree});
+            console.log($scope.degree);
+        }
+		// Wigs controller logic
+		// ...
+	}
+]);
+'use strict';
+
 angular.module('etc').directive('colorPicker', [
-	function() {
+	function() {
 		ColorPickerCtrl.$inject = ["$scope"];
 		return {
 			templateUrl: 'modules/etc/directives/template/color-picker.html',
@@ -3384,7 +3408,7 @@ angular.module('etc').directive('gallery', [
 'use strict';
 
 angular.module('etc').directive('productDetail', [
-	function() {
+	function() {
 		ProductDetailCtrl.$inject = ["$scope"];
 		return {
 			templateUrl: 'modules/etc/directives/template/product-detail.html',
@@ -3660,6 +3684,49 @@ angular.module('g-drive').factory('Googledrive', [
         }
 	}
 ]);
+
+'use strict';
+
+//Setting up route
+angular.module('gsap-editor').config(['$stateProvider',
+	function($stateProvider) {
+		// Gsap editor state routing
+		$stateProvider.
+		state('gsap-editor', {
+			url: '/gsap-editor',
+			templateUrl: 'modules/gsap-editor/views/gsap-editor.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+angular.module('gsap-editor').controller('GsapEditorController',GsapEditorCtrl);
+
+function GsapEditorCtrl($scope, $http, $cacheFactory) {
+    $scope.data = ['dd','dd','dd'];
+    $scope.title1 = 'Button';
+    $scope.title4 = 'Warn';
+    $scope.isDisabled = true;
+    $scope.googleUrl = 'http://google.com';
+
+
+
+    $http.defaults.cache = $cacheFactory('myCache', {capacity: 2});
+
+    $scope.loadPerson = function(num){
+        $http
+            .get('//swapi.co/api/people/'+ num + '/')
+            .then(function (result){
+                console.log(result.data.name);
+            });
+    }
+    //var myCache = $cacheFactory('myCache');
+    //myCache.put('key', 'val');
+    //console.log(myCache.get('key'));
+    //console.log(myCache.info());
+
+}
+GsapEditorCtrl.$inject = ["$scope", "$http", "$cacheFactory"];
 
 'use strict';
 
@@ -4887,10 +4954,53 @@ angular.module('openboard').config(['$stateProvider',
 	function($stateProvider) {
 		// Openboard state routing
 		$stateProvider.
+		state('class-content', {
+			url: '/class-content',
+			templateUrl: 'modules/openboard/views/class-content.client.view.html'
+		}).
+		state('angular-tutorial', {
+			url: '/angular-tutorial',
+			templateUrl: 'modules/openboard/views/angular-tutorial.client.view.html'
+		}).
 		state('openboard', {
 			url: '/openboard',
 			templateUrl: 'modules/openboard/views/openboard.client.view.html'
 		});
+	}
+]);
+'use strict';
+
+angular.module('openboard').controller('AngularCtrl', AngularCtrl);
+
+function AngularCtrl($scope, $state, $http, $mdDialog, $mdSidenav, $log, Authentication){
+    $scope.classContents = [{topic:"Introduction"},{topic:"C++"},{topic:"Input/Flow Control"},{topic:"Functions"},{topic:"Arrays"},{topic:"File IO"},];
+    $scope.homeContents = {
+        mainTitle : "AngularJS",
+        subTitleText: "가장 쉽게 접근 할 수 있는 최신 AngularJS 강좌 입니다.",
+        classTitle:"시작하면서",
+        classSubTitle: "최근 가장 HOT한 MVW framework에 대한 강좌 입니다. 초보자도 쉽게 접근 할 수 있도록 강의가 준비 될 것입니다."
+    };
+    $scope.authentication = Authentication;
+    $scope.notice = "Prototype";
+    $scope.date = {
+        month: moment().format("MMM").toUpperCase(),
+        date: moment().date(),
+        year: moment().year()
+    };
+    $scope.goTo = function(stateName){
+        $state.go(stateName);
+    };
+    $scope.colorBorder = {
+        header: "blue"
+    };
+}
+AngularCtrl.$inject = ["$scope", "$state", "$http", "$mdDialog", "$mdSidenav", "$log", "Authentication"];
+
+'use strict';
+
+angular.module('openboard').controller('ClassContentController', ['$scope',
+	function($scope) {
+
 	}
 ]);
 'use strict';
@@ -6446,7 +6556,7 @@ function GetRequires($parse){
 }
 GetRequires.$inject = ["$parse"];
 
-function SelectProvider($$interimElementProvider) {
+function SelectProvider($$interimElementProvider) {
 	selectDefaultOptions.$inject = ["$tcOrder", "$mdConstant", "$$rAF", "$mdUtil", "$mdTheming", "$timeout"];
 	return $$interimElementProvider('$tcOrder')
 		.setDefaults({
