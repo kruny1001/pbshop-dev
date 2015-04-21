@@ -12,6 +12,9 @@ exports.search = function(req, res){
 		casper: {
 			logLevel: 'debug',
 			verbose: true,
+			options: {
+				clientScripts: ['../public/lib/jquery/dist/jquery.min.js']
+			},
 			pageSettings: {
 				loadImages:  false,         // The WebPage instance used by Casper will
 				loadPlugins: false,         // use these settings
@@ -25,16 +28,21 @@ exports.search = function(req, res){
 			throw e;
 		}
 
-		var url = "http://pbshop.herokuapp.com/#!/signin";
+		var url = 'https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=http%3A%2F%2Fwww.ebay.com%2F';
 		spooky.start(url);
 		spooky.then(function () {
-			this.capture('./capture1.png');
-			this.fill("form", {username: "kruny1001", password: "runy1001"}, true);
+			//this.capture('./capture1.png');
+			this.fill('form#SignInForm', {
+				userid: '',
+				pass:  '!'
+			}, true);
 		});
-		spooky.then(function () {
-			this.emit('hello', 'Hello, from ' + this.evaluate(function () {
-				return document.title;
-			}));
+		spooky.wait(5000,function () {
+			this.capture('./capture1.png');
+			this.click($('a').text('My eBay'));
+		});
+		spooky.wait(3000,function () {
+			this.capture('./capture2.png');
 		});
 		spooky.run();
 	});
@@ -47,7 +55,6 @@ exports.search = function(req, res){
 		}
 	});
 	spooky.on('hello', function (greeting) {
-		links = links.concat(this.evaluate(getLinks));
 		console.log(greeting);
 		res.send(greeting);
 		//res.jsonp({result: greeting});
