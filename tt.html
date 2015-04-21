@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Insert title here</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.js"></script>
+
+    <script>
+
+        $(function(){
+            var data = [
+                    {"name":"강아지","company":"aa 엔터테이먼트"},
+                    {"name":"강아지", "company":"ss 엔터테이먼트"},
+                    {"name":"강아지","company":"ss 엔터테이먼트"},
+                    {"name":"고양이", "company":"cc 엔터테이먼트"},
+                    {"name" : "고양이", "company" : "엔터테이먼트"},
+                    {"name" : "고양이", "company" : "엔터테이먼트1"},
+                    {"name" : "고양이", "company" : "엔터테이먼트3"},
+                    {"name" : "강아지", "company" : "ajjs"},
+                    {"name" : "고양이", "company" : "aaaaaaaaaaa"},
+                    {"name" : "aaaaa", "company" : "cccccccccccc"}
+                ];
+
+            $("#im").autocomplete({
+                source: data,
+                select: function(event, ui) {
+                    $(this).val(ui.item.label);
+                    $(this).closest('tr').find("input[id^='drawing_number']").val(ui.item.dwg);
+                    return false; // find the drawing number input on that row
+                }
+            }).data( "ui-autocomplete" )._renderItemData  = function(ul, item){
+                if(item.company!=null ||  item.company!=''){
+                    return $( "<li></li>" ).data( "item.autocomplete", item ).append( "<a><strong>" + item.name + "</strong> - Rev " + item.company + "</a>" ).appendTo( ul );
+                } else {
+                    return $( "<li></li>" ).data( "item.autocomplete", item ).append( "<a><strong>" + item.name + "</strong></a>" ).appendTo( ul );
+                }
+            };
+        });
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="ui-widget">
+    <label for="im">Tags: </label>
+    <input id="im">
+</div>
+</body>
+</html>

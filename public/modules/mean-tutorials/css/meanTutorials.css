@@ -107,7 +107,8 @@
 
 .meanT-homeSecondRow{
     background-color: whitesmoke !important;
-    /*width:100%;*/
+    width:100%;
+    hegith:100%;
 }
 
 .sidebar-header{
