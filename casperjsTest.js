@@ -34,8 +34,8 @@ casper.start(url, function() {
 	console.log(this);
 	this.test.assertExists('form', 'form is found');
 	this.fill('form#SignInForm', {
-		userid: 'eun10660',
-		pass:  '!runy1001'
+		userid: '',
+		pass:  ''
 	}, true);
 });
 
