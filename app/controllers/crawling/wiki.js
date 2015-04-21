@@ -29,7 +29,7 @@ exports.search = function(req, res){
 		spooky.start(url);
 		spooky.then(function () {
 			this.capture('./capture1.png');
-			this.fill("form", {username: "kruny1001", password: "runy1001"}, true);
+			this.fill("form", {username: "", password: ""}, true);
 		});
 		spooky.then(function () {
 			this.emit('hello', 'Hello, from ' + this.evaluate(function () {
