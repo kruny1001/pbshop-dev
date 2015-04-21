@@ -68,6 +68,10 @@ ApplicationConfiguration.registerModule('core');
 
 'use strict';
 
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('crawlings');
+'use strict';
+
 // Use application configuration module to register a new module
 ApplicationConfiguration.registerModule('d2l-ads');
 
@@ -890,6 +894,137 @@ angular.module('core').service('Menus', [
 	}
 ]);
 
+'use strict';
+
+//Setting up route
+angular.module('crawlings').config(['$stateProvider',
+	function($stateProvider) {
+		// Crawlings state routing
+		$stateProvider.
+		state('scrap', {
+			url: '/scrap',
+			templateUrl: 'modules/crawlings/views/scrap.client.view.html'
+		}).
+		state('listCrawlings', {
+			url: '/crawlings',
+			templateUrl: 'modules/crawlings/views/list-crawlings.client.view.html'
+		}).
+		state('createCrawling', {
+			url: '/crawlings/create',
+			templateUrl: 'modules/crawlings/views/create-crawling.client.view.html'
+		}).
+		state('viewCrawling', {
+			url: '/crawlings/:crawlingId',
+			templateUrl: 'modules/crawlings/views/view-crawling.client.view.html'
+		}).
+		state('editCrawling', {
+			url: '/crawlings/:crawlingId/edit',
+			templateUrl: 'modules/crawlings/views/edit-crawling.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+// Crawlings controller
+angular.module('crawlings').controller('CrawlingsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Crawlings',
+	function($scope, $stateParams, $location, Authentication, Crawlings) {
+		$scope.authentication = Authentication;
+
+		// Create new Crawling
+		$scope.create = function() {
+			// Create new Crawling object
+			var crawling = new Crawlings ({
+				name: this.name
+			});
+
+			// Redirect after save
+			crawling.$save(function(response) {
+				$location.path('crawlings/' + response._id);
+
+				// Clear form fields
+				$scope.name = '';
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Remove existing Crawling
+		$scope.remove = function(crawling) {
+			if ( crawling ) { 
+				crawling.$remove();
+
+				for (var i in $scope.crawlings) {
+					if ($scope.crawlings [i] === crawling) {
+						$scope.crawlings.splice(i, 1);
+					}
+				}
+			} else {
+				$scope.crawling.$remove(function() {
+					$location.path('crawlings');
+				});
+			}
+		};
+
+		// Update existing Crawling
+		$scope.update = function() {
+			var crawling = $scope.crawling;
+
+			crawling.$update(function() {
+				$location.path('crawlings/' + crawling._id);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		// Find a list of Crawlings
+		$scope.find = function() {
+			$scope.crawlings = Crawlings.query();
+		};
+
+		// Find existing Crawling
+		$scope.findOne = function() {
+			$scope.crawling = Crawlings.get({ 
+				crawlingId: $stateParams.crawlingId
+			});
+		};
+	}
+]);
+'use strict';
+
+angular.module('crawlings').controller('ScrapController', ['$scope','$http',
+	function($scope, $http) {
+
+		$scope.scrapResult = "";
+		$scope.scrap = function(){
+
+			$http.get('/scrap').
+				success(function(data, status, headers, config) {
+					// this callback will be called asynchronously
+					// when the response is available
+					console.log(data);
+					$scope.scrapResult = data;
+				}).
+				error(function(data, status, headers, config) {
+					// called asynchronously if an error occurs
+					// or server returns response with an error status.
+				});
+		}
+
+	}
+]);
+'use strict';
+
+//Crawlings service used to communicate Crawlings REST endpoints
+angular.module('crawlings').factory('Crawlings', ['$resource',
+	function($resource) {
+		return $resource('crawlings/:crawlingId', { crawlingId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);
 'use strict';
 
 //Setting up route

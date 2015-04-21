@@ -44,6 +44,7 @@
     "passport-local": "~1.0.0",
     "passport-twitter": "~1.0.2",
     "request": "^2.53.0",
+    "spooky": "^0.2.5",
     "swig": "~1.4.1",
     "yelp": "^0.1.1"
   },
