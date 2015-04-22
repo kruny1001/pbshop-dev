@@ -87,9 +87,9 @@ angular.module('etc').controller('WatchGameController', ['$scope',
 					now.getMinutes() * 60 +
 					now.getSeconds() * 1 +
 					now.getMilliseconds() / 1000
-					rotate(secondElement, time)
-					rotate(minuteElement, time / 60)
-					rotate(hourElement, time / 60 / 12)
+					//rotate(secondElement, time)
+					//rotate(minuteElement, time / 60)
+					//rotate(hourElement, time / 60 / 12)
 					requestAnimationFrame($scope.animate)
 			}
 
@@ -143,5 +143,9 @@ angular.module('etc').controller('WatchGameController', ['$scope',
 				}
 			})
 		}
+
+		Draggable.create("#secC", {type: "rotation", throwProps: true});
+		Draggable.create("#minC", {type: "rotation", throwProps: true});
+		Draggable.create("#hourC", {type: "rotation", throwProps: true});
 	}
 ]);

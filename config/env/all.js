@@ -54,6 +54,7 @@ module.exports = {
 				'public/lib/gsap/src/uncompressed/plugins/ScrollToPlugin.js',
 				'public/lib/gsap/src/uncompressed/plugins/ColorPropsPlugin.js',
 				'public/lib/gsap/src/uncompressed/plugins/CSSPlugin.js',
+				'public/lib/gsap/src/minified/utils/Draggable.min.js',
 				//'public/lib/3rd/SplitText.min.js'
 
 				//'public/lib/threejs/build/three.min.js',
