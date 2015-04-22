@@ -27,7 +27,6 @@ exports.search = function(req, res){
 			e.details = err;
 			throw e;
 		}
-
 		var url = 'https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=http%3A%2F%2Fwww.ebay.com%2F';
 		spooky.start(url);
 		spooky.then(function () {
@@ -37,11 +36,20 @@ exports.search = function(req, res){
 				pass:  '!'
 			}, true);
 		});
-		spooky.wait(5000,function () {
-			this.capture('./capture1.png');
-			this.click($('a').text('My eBay'));
+
+
+
+		spooky.thenOpen("http://www.ebay.com/myb/PurchaseHistory?_trksid=p2060353.m2034.l3391#PurchaseHistoryOrdersContainer?ipp=25&Period=4&cmid=2749&_trksid=p2057872.m2749.l5118", function(){
+			this.capture('./capture.png');
 		});
-		spooky.wait(3000,function () {
+		spooky.wait(5000,function () {
+			var links = $('ul.dropdown-menu.dropdown-menu-sm').attr('aria-label', 'See orders from').attr('role','menu').find('li a');
+			//this.click("a.gh-eb-li-a:contains('My eBay')");
+			console.log($("a:contains('My eBay')"));
+			return links;
+		});
+		spooky.wait(1000,function (links) {
+			console.log(links);
 			this.capture('./capture2.png');
 		});
 		spooky.run();
