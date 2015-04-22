@@ -98,9 +98,9 @@
 
 .watchGameMain .fat-hand {
     box-sizing: border-box;
-    width: 10px;
-    height: 57px;
-    border-radius: 10px;
+    width: 22px;
+    height: 65px;
+    border-radius: 11px/50%;
     background: white;
     transform: translate(-50%,-100%) translateY(-18px);
 }
