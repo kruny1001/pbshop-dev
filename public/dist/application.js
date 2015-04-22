@@ -121,6 +121,11 @@ ApplicationConfiguration.registerModule('g-drive');
 
 'use strict';
 
+// Use application configuration module to register a new module
+ApplicationConfiguration.registerModule('gsap-editor');
+
+'use strict';
+
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('mean-events');
 
@@ -3322,6 +3327,14 @@ angular.module('etc').config(['$stateProvider',
 	function($stateProvider) {
 		// Etc state routing
 		$stateProvider.
+		state('watch-game', {
+			url: '/watch-game',
+			templateUrl: 'modules/etc/views/watch-game.client.view.html'
+		}).
+		state('wigs', {
+			url: '/wigs',
+			templateUrl: 'modules/etc/views/wigs.client.view.html'
+		}).
 		state('etc', {
 			url: '/etc',
 			templateUrl: 'modules/etc/views/etc.client.view.html'
@@ -3373,6 +3386,168 @@ angular.module('etc').controller('EtcController', ['$scope',
 				notes: " I'll be in your neighborhood doing errands"
 			},
 		];
+	}
+]);
+'use strict';
+
+angular.module('etc').controller('WatchGameController', ['$scope',
+	function($scope) {
+		var clock = document.querySelector('#utility-clock')
+		utilityClock(clock)
+		autoResize(clock, 295 + 32)
+
+		choose(clock, [
+			['hour', ['text', 'text-quarters', 'pill']],
+			['hour-text', ['large', 'small']],
+			['hour-display', ['all', 'quarters', 'none']],
+			['minute', ['line', 'dot']],
+			['minute-display', ['fine', 'fine-2', 'coarse', 'major', 'none']],
+			['minute-text', ['inside', 'outside', 'none']],
+			['hand', ['normal', 'hollow']]
+		]);
+
+		function utilityClock(container) {
+
+			var dynamic = container.querySelector('.dynamic')
+			var hourElement = container.querySelector('.hour')
+			var minuteElement = container.querySelector('.minute')
+			var secondElement = container.querySelector('.second')
+
+			var div = function(className, innerHTML) {
+				var element = document.createElement('div')
+				element.className = className
+				element.innerHTML = innerHTML || ''
+				return element
+			}
+
+			var append = function(element) {
+				return {
+					to: function(parent) {
+						parent.appendChild(element)
+						return append(parent)
+					}
+				}
+			}
+
+			var anchor = function(element, rotation) {
+				var anchor = div('anchor')
+				rotate(anchor, rotation)
+				append(element).to(anchor).to(dynamic)
+			}
+
+			var minute = function(n) {
+				var klass = n % 5 == 0 ? 'major' : n % 1 == 0 ? 'whole' : 'part'
+				var line = div('element minute-line ' + klass)
+				anchor(line, n)
+				if (n % 5 == 0) {
+					var text = div('anchor minute-text ' + klass)
+					var content = div('expand content', (n < 10 ? '0' : '') + n)
+					append(content).to(text)
+					rotate(text, -n)
+					anchor(text, n)
+				}
+			}
+
+			var hour = function(n) {
+				var klass = 'hour-item hour-' + n
+				var line = div('element hour-pill ' + klass)
+				anchor(line, n * 5)
+				var text = div('anchor hour-text ' + klass)
+				var content = div('expand content', n)
+				append(content).to(text)
+				rotate(text, -n * 5)
+				anchor(text, n * 5)
+				return
+			}
+
+			var position = function(element, phase, r) {
+				var theta = phase * 2 * Math.PI
+				element.style.top = (-r * Math.cos(theta)).toFixed(1) + 'px'
+				element.style.left = (r * Math.sin(theta)).toFixed(1) + 'px'
+			}
+
+			var rotate = function(element, second) {
+				element.style.transform =
+					element.style.webkitTransform = 'rotate(' + (second * 6) + 'deg)'
+			}
+
+			$scope.animate = function() {
+				var now = new Date()
+				var time = now.getHours() * 3600 +
+					now.getMinutes() * 60 +
+					now.getSeconds() * 1 +
+					now.getMilliseconds() / 1000
+					rotate(secondElement, time)
+					rotate(minuteElement, time / 60)
+					rotate(hourElement, time / 60 / 12)
+					requestAnimationFrame($scope.animate)
+			}
+
+			for (var i = 1 / 4; i <= 60; i += 1 / 4) minute(i)
+			for (var i = 1; i <= 12; i ++) hour(i)
+
+			$scope.animate();
+
+		}
+
+		function autoResize(element, nativeSize) {
+			var update = function() {
+				var parent = element.offsetParent
+				var scale = Math.min(parent.offsetWidth, parent.offsetHeight) / nativeSize
+				element.style.transform = element.style.webkitTransform = 'scale(' + scale.toFixed(3) + ')'
+			}
+			update()
+			window.addEventListener('resize', update)
+		}
+
+		function choose(clock, items) {
+			var chooser = document.querySelector('#chooser')
+			items.forEach(function(item) {
+				var name = item[0]
+				var styles = item[1]
+				var element = document.createElement('div')
+				element.addEventListener('click', click, false)
+				update()
+				chooser.appendChild(element)
+				function update() {
+					element.innerHTML = name + '-style-<b>' + getValue() + '</b>'
+				}
+				function klass(c) {
+					return name + '-style-' + c
+				}
+				function getValue() {
+					for (var i = 0; i < styles.length; i ++) {
+						if (clock.classList.contains(klass(styles[i]))) return styles[i]
+					}
+				}
+				function click(e) {
+					for (var i = 0; i < styles.length; i ++) {
+						if (clock.classList.contains(klass(styles[i]))) {
+							clock.classList.remove(klass(styles[i]))
+							clock.classList.add(klass(styles[(i + 1) % styles.length]))
+							break
+						}
+					}
+					update()
+					e.preventDefault()
+				}
+			})
+		}
+	}
+]);
+'use strict';
+
+angular.module('etc').controller('WigsController', ['$scope',
+	function($scope) {
+        $scope.degree = 0;
+        $scope.flipCard = function(targetId){
+            var target = $('#'+targetId);
+            $scope.degree += 180;
+            TweenMax.to(target, 0.4 , {rotationY: $scope.degree});
+            console.log($scope.degree);
+        }
+		// Wigs controller logic
+		// ...
 	}
 ]);
 'use strict';
@@ -3795,6 +3970,49 @@ angular.module('g-drive').factory('Googledrive', [
         }
 	}
 ]);
+
+'use strict';
+
+//Setting up route
+angular.module('gsap-editor').config(['$stateProvider',
+	function($stateProvider) {
+		// Gsap editor state routing
+		$stateProvider.
+		state('gsap-editor', {
+			url: '/gsap-editor',
+			templateUrl: 'modules/gsap-editor/views/gsap-editor.client.view.html'
+		});
+	}
+]);
+'use strict';
+
+angular.module('gsap-editor').controller('GsapEditorController',GsapEditorCtrl);
+
+function GsapEditorCtrl($scope, $http, $cacheFactory) {
+    $scope.data = ['dd','dd','dd'];
+    $scope.title1 = 'Button';
+    $scope.title4 = 'Warn';
+    $scope.isDisabled = true;
+    $scope.googleUrl = 'http://google.com';
+
+
+
+    $http.defaults.cache = $cacheFactory('myCache', {capacity: 2});
+
+    $scope.loadPerson = function(num){
+        $http
+            .get('//swapi.co/api/people/'+ num + '/')
+            .then(function (result){
+                console.log(result.data.name);
+            });
+    }
+    //var myCache = $cacheFactory('myCache');
+    //myCache.put('key', 'val');
+    //console.log(myCache.get('key'));
+    //console.log(myCache.info());
+
+}
+GsapEditorCtrl.$inject = ["$scope", "$http", "$cacheFactory"];
 
 'use strict';
 
@@ -5022,10 +5240,53 @@ angular.module('openboard').config(['$stateProvider',
 	function($stateProvider) {
 		// Openboard state routing
 		$stateProvider.
+		state('class-content', {
+			url: '/class-content',
+			templateUrl: 'modules/openboard/views/class-content.client.view.html'
+		}).
+		state('angular-tutorial', {
+			url: '/angular-tutorial',
+			templateUrl: 'modules/openboard/views/angular-tutorial.client.view.html'
+		}).
 		state('openboard', {
 			url: '/openboard',
 			templateUrl: 'modules/openboard/views/openboard.client.view.html'
 		});
+	}
+]);
+'use strict';
+
+angular.module('openboard').controller('AngularCtrl', AngularCtrl);
+
+function AngularCtrl($scope, $state, $http, $mdDialog, $mdSidenav, $log, Authentication){
+    $scope.classContents = [{topic:"Introduction"},{topic:"C++"},{topic:"Input/Flow Control"},{topic:"Functions"},{topic:"Arrays"},{topic:"File IO"},];
+    $scope.homeContents = {
+        mainTitle : "AngularJS",
+        subTitleText: "가장 쉽게 접근 할 수 있는 최신 AngularJS 강좌 입니다.",
+        classTitle:"시작하면서",
+        classSubTitle: "최근 가장 HOT한 MVW framework에 대한 강좌 입니다. 초보자도 쉽게 접근 할 수 있도록 강의가 준비 될 것입니다."
+    };
+    $scope.authentication = Authentication;
+    $scope.notice = "Prototype";
+    $scope.date = {
+        month: moment().format("MMM").toUpperCase(),
+        date: moment().date(),
+        year: moment().year()
+    };
+    $scope.goTo = function(stateName){
+        $state.go(stateName);
+    };
+    $scope.colorBorder = {
+        header: "blue"
+    };
+}
+AngularCtrl.$inject = ["$scope", "$state", "$http", "$mdDialog", "$mdSidenav", "$log", "Authentication"];
+
+'use strict';
+
+angular.module('openboard').controller('ClassContentController', ['$scope',
+	function($scope) {
+
 	}
 ]);
 'use strict';
