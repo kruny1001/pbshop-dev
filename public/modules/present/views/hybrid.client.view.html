@@ -1,0 +1,267 @@
+<section data-ng-controller="OpenBoardPresentController">
+
+	<style>
+		.reveal .progress{
+			height:10px;
+		}
+		.reveal h2, .reveal h3 {
+			color: rgb(24, 48, 61);
+			text-shadow: 0px 0px 10px rgba(186, 203, 200, 0.5);
+			font-stretch: expanded;
+			text-transform: none;
+		}
+		.green{
+			color:#117700;
+		}
+		.red{
+			color:#992a1b;
+		}
+		.reveal div .fromStart{
+			margin: 0;
+			text-align: start;
+		}
+
+		.reveal section img{
+			padding: 10px;
+			margin: 15px 0px;
+			background: rgba(0, 0, 0, 0.61);
+			border: 4px solid #bacbc8;
+			border-radius: 10%;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+		}
+		.reveal img .logo{
+			margin-bottom: 50px;
+			border: none;
+			background: none;
+			box-shadow: none;
+		}
+
+	</style>
+
+	<div id="revealSlide" class="reveal" style="position:fixed">
+		<div class="slides">
+
+			<section>
+				<h2><b>Hybrid Mobile Application</b></h2>
+				<p>AngularJS based mobile framework: Ionic Framework</p>
+				<div style="bottom:120px; right:310px; font-size:20px;"> Kevin Son </div>
+			</section>
+
+			<section>
+				<h2><b>Overview</b></h2>
+				<ul>
+					<li>Native V.S. Hybrid Apps</li>
+					<li>Introduction Ionic</li>
+					<li>UI Components</li>
+					<li>Tools</li>
+					<li>DEMO</li>
+				</ul>
+			</section>
+
+			<!-- You still want to have a Native App beause it looks cool! -->
+			<section>
+				<h3><b>"I want a native app!"</b></h3>
+			</section>
+
+			<section>
+				<h2><b>The Downsides of Native</b></h2>
+				<ul>
+					<li>Proficiency in each platform required</li>
+					<li>Entirely separte code bases (Objective-C, Java, C#)</li>
+					<li>Timely & expensive development</li>
+				</ul>
+			</section>
+
+			<section>
+
+				<h3><b>More Platforms. More Problems.</b></h3>
+
+				<p style="margin-top: 60px">
+					<img src="http://ionicframework.com/present-ionic/slides/img/apple.png" class="logo" width="200" height="200" style="margin-right: 10px">
+					<img src="http://ionicframework.com/present-ionic/slides/img/android.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
+					<img src="http://ionicframework.com/present-ionic/slides/img/windows.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
+				</p>
+
+				<p>Why are we still coding for multiple platforms?</p>
+			</section>
+
+			<section>
+				<h3><b>"Is there an alternative?"</b></h3>
+			</section>
+
+			<section>
+				<h2><b>"Zuck has spoken"</b></h2>
+				<div class="fromStart">Facebook's mobile strategy relied too much on HTML5, rather than native applications <br/>- Mark Zuckerberg (Sep 2012)-</div>
+				<a href="http://techcrunch.com/2012/09/11/mark-zuckerberg-our-biggest-mistake-with-mobile-was-betting-too-much-on-html5/"></a>
+			</section>
+
+			<section>
+				<h3><b>Are you Building the Facebook app?</b></h3>
+
+				<ul>
+					<li>Do you have a multi-million dollar budget?</li>
+					<li>Do you have a large team of experienced native developers?</li>
+					<li>Does your billion-dollar revenue depend on this app?</li>
+				</ul>
+
+				<p>If so ... do native</p>
+			</section>
+
+			<section>
+				<h3><b>"Hybrid apps are slow!"</b></h3>
+			</section>
+
+			<!-- Is Hybrid App really Slow let's look -->
+
+			<section>
+				<h3><b>Mobile devices have rapidly improved!</b></h3>
+				<table>
+					<tr>
+						<th>year</th>
+						<th>device</th>
+						<th>Processor</th>
+						<th>RAM</th>
+					</tr>
+					<tr>
+						<td>2007</td>
+						<td>iPhone</td>
+						<td>620 MHz</td>
+						<td>128 MB</td>
+					</tr>
+					<tr>
+						<td>2015</td>
+						<td>iPhone 4</td>
+						<td>1 GHz</td>
+						<td>512 MB</td>
+					</tr>
+					<tr>
+						<td>2015</td>
+						<td>iPhone 6</td>
+						<td>1.4 GHz dual-core</td>
+						<td>1 GB</td>
+					</tr>
+				</table>
+			</section>
+
+
+			<section>
+				<h2><b>Native SDKs Are Great</b></h2>
+				<ul>
+					<li> Common UI</li>
+					<li> Views</li>
+					<li> Navigation and stack history</li>
+					<li> Transitions </li>
+					<li> Gestures </li>
+				</ul>
+			</section>
+
+			<section>
+				<h2><b>There's No Web SDK so far</b></h2>
+				<ul>
+					<li> Bridge the gap between web and native</li>
+					<li> Rich, native-style UI components and interactions</li>
+					<li> UI APIs, not just jQuery widgets</li>
+				</ul>
+			</section>
+
+
+			<!-- There is a ionic-->
+			<section>
+				<h3><b>ionic is New Web SDK for Mobile</b></h3>
+				<img src="http://ionicframework.com/present-ionic/slides/img/ionic-logo.png" class="logo" width="400" height="400" style="padding:20px; margin-right: 10px">
+			</section>
+
+			<section>
+				<h2><b>Web Techs You Already Know and Love</b></h2>
+
+				<p style="margin-top: 60px">
+					<img src="http://ionicframework.com/present-ionic/slides/img/html.png" class="logo" width="200" height="200" style="margin-right: 10px">
+					<img src="http://ionicframework.com/present-ionic/slides/img/css.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
+					<img src="http://ionicframework.com/present-ionic/slides/img/js.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
+				</p>
+			</section>
+
+			<section>
+				<h2><b>Standing on the Shoulders of AngularJS</b></h2>
+
+				<img src="http://ionicframework.com/present-ionic/slides/img/angular-icon.png" class="logo" width="300" height="300" style="padding:20px; margin-right: 10px">
+				<ul>
+					<li>Proven for large-scale webapp development</li>
+					<li>Extends the HTML vocabulary</li>
+					<li>UI Componenets using Directives and Services</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3><b>How does it all come together</b></h3>
+				<p>Your App</p>
+				<p>Ionic</p>
+				<p>AngularJS</p>
+				<p>WebView (Cordova)</p>
+				<p>Native SDK (iOS, Android)</p>
+			</section>
+
+			<section>
+				<h3><b> UI Component Overview</b></h3>
+			</section>
+
+			<section>
+				<div layout="row" layout-align="space-around start">
+					<div style="width:400px;">
+						<iframe width='400px' height='600px' scrolling='no' src='//codepen.io/pbshop1001/embed/EjVLWQ/?height=600&theme-id=0' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/pbshop1001/pen/EjVLWQ/'>List: Nightly</a> by Kevin S (<a href='http://codepen.io/pbshop1001'>@pbshop1001</a>) on <a href='http://codepen.io'>CodePen</a>.
+						</iframe>
+					</div>
+					<div>
+						<h3><b>List (Master Detail)</b></h3>
+						<ul>
+							<li>Delete</li>
+							<li>Reorder</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div layout="row" layout-align="space-around start">
+					<div style="width:350px;">
+						<iframe height='600' scrolling='no' src='//codepen.io/pbshop1001/embed/YXyaNE/?height=600&theme-id=0' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 350px;'>See the Pen <a href='http://codepen.io/pbshop1001/pen/YXyaNE/'>Open Modal with Form</a> by Kevin S (<a href='http://codepen.io/pbshop1001'>@pbshop1001</a>) on <a href='http://codepen.io'>CodePen</a>.
+						</iframe>
+					</div>
+					<div>
+						<h3><b>Stack Nav (Tab) & Form</b></h3>
+						<ul>
+							<li>Navigation</li>
+							<li>Tab</li>
+							<li>Popup Form</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div layout="row" layout-align="space-around start">
+					<div style="width:400px;">
+						<iframe width='400px' height='600px' scrolling='no' src='//codepen.io/ionic/embed/cDbFg/?height=600&theme-id=13068' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/ionic/pen/cDbFg/'>Side Menu Exposed On Large Viewport: Nightly</a> by Ionic (<a href='http://codepen.io/ionic'>@ionic</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+					</div>
+					<div>
+						<h3><b>Side Nav Menu</b></h3>
+						<ul>
+							<li>Menu</li>
+							<li>Toggle</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2><b>Demo</b></h2>
+			</section>
+
+			<section>
+				<h2><b>Conclusion</b></h2>
+				<p>Hybird mobile app development can achieve cost and time efficiency. If a project requires a budgetary limitation, short period of development timeline, and simple data driven app, Ionic frame work is the best choice for the project.</p>
+
+			</section>
+		</div>
+	</div>
+</section>

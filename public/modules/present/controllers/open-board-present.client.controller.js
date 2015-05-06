@@ -77,7 +77,7 @@ angular.module('present').controller('OpenBoardPresentController', ['$scope',
 			previewLinks: false,
 
 			// Transition style
-			transition: 'zoom', // none/fade/slide/convex/concave/zoom
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
 
 			// Transition speed
 			transitionSpeed: 'slow', // default/fast/slow
@@ -97,5 +97,6 @@ angular.module('present').controller('OpenBoardPresentController', ['$scope',
 
 		// Open board present controller logic
 		// ...
+
 	}
 ]);

@@ -407,9 +407,9 @@ angular.module('ui.tinymce', [])
 'use strict';
 
 angular.module('core')
-  .run(["$rootScope", function ($rootScope) {
+  .run(function ($rootScope) {
 
-  }])
+  })
   .controller('CoreHeadController',
   ['$scope','$rootScope','$window','$log','$mdSidenav','$location','$state', '$timeout', 'Authentication','D2lClassesOwnership',
     function($scope, $rootScope,$window,$log,$mdSidenav, $location, $state, $timeout, Authentication, D2lClassesOwnership) {
@@ -1593,24 +1593,24 @@ angular.module('d2l-classes').controller('D2lClassesController',
 ]);
 
 angular.module('d2l-classes')
-	.controller('mainController', ["$scope", "$state", function($scope, $state) {
+	.controller('mainController', function($scope, $state) {
 		$scope.pageClass = 'page-home';
 		$scope.goTo = function(name){
 			$state.go(name);
 		}
-	}])
-	.controller('aboutController', ["$scope", "$state", function($scope, $state) {
+	})
+	.controller('aboutController', function($scope, $state) {
 		$scope.pageClass = 'page-about';
 		$scope.goTo = function(name){
 			$state.go(name);
 		}
-	}])
-	.controller('contactController', ["$scope", "$state", function($scope, $state) {
+	})
+	.controller('contactController', function($scope, $state) {
 		$scope.pageClass = 'page-contact';
 		$scope.goTo = function(name){
 			$state.go(name);
 		}
-	}]);
+	});
 
 
 'use strict';
@@ -2142,7 +2142,6 @@ function D2lHomeController(
 
 
 }
-D2lHomeController.$inject = ["$scope", "$window", "$http", "Authentication", "D2LOauth", "D2lHwsSubmits", "D2lClasses", "D2lHws"];
 
 // Open Grid Menu Controller
 function gridListDemoCtrl($scope, $state){
@@ -2188,7 +2187,6 @@ function gridListDemoCtrl($scope, $state){
 		return results;
 	}
 }
-gridListDemoCtrl.$inject = ["$scope", "$state"];
 
 // Search Box Controller Angular Material
 function DemoCtrl($timeout, $q){
@@ -2245,7 +2243,6 @@ function DemoCtrl($timeout, $q){
 			};
 		}
 	}
-	DemoCtrl.$inject = ["$timeout", "$q"];
 
 'use strict';
 
@@ -2546,7 +2543,6 @@ function GDriveFilePicker($scope, Googledrive, configGdrive, GDriveSelectResult)
 		Googledrive.findFolder(callback);
 	}
 }
-GDriveFilePicker.$inject = ["$scope", "Googledrive", "configGdrive", "GDriveSelectResult"];
 
 'use strict';
 
@@ -2644,11 +2640,11 @@ angular.module('d2l')
 			},{copyDoc: {method:'GET'}});
 		}
 	])
-	.controller('ToastCtrl', ["$scope", "$mdToast", function($scope, $mdToast) {
+	.controller('ToastCtrl', function($scope, $mdToast) {
 		$scope.closeToast = function() {
 			$mdToast.hide();
 		};
-	}]);
+	});
 
 function HwGenerator($mdToast, $location, devConfig, D2lHws) {
 	return {
@@ -2703,7 +2699,6 @@ function HwGenerator($mdToast, $location, devConfig, D2lHws) {
 		}
 	};
 }
-HwGenerator.$inject = ["$mdToast", "$location", "devConfig", "D2lHws"];
 
 function HwPublisher($timeout, $http, D2lHwPermission, D2lHwCopy, D2lHws){
 	return {
@@ -2784,7 +2779,6 @@ function HwPublisher($timeout, $http, D2lHwPermission, D2lHwCopy, D2lHws){
 		}
 	}
 }
-HwPublisher.$inject = ["$timeout", "$http", "D2lHwPermission", "D2lHwCopy", "D2lHws"];
 
 'use strict';
 
@@ -2816,7 +2810,6 @@ function CreateFile($resource) {
         return o;
     }
 }
-CreateFile.$inject = ["$resource"];
 
 'use strict';
 
@@ -3558,7 +3551,6 @@ angular.module('etc').controller('WigsController', ['$scope',
 
 angular.module('etc').directive('colorPicker', [
 	function() {
-		ColorPickerCtrl.$inject = ["$scope"];
 		return {
 			templateUrl: 'modules/etc/directives/template/color-picker.html',
 			restrict: 'E',
@@ -3654,7 +3646,6 @@ angular.module('etc').directive('colorPicker', [
 
 angular.module('etc').directive('gallery', [
 	function() {
-        galleryCtrl.$inject = ["$scope"];
 		return {
 			templateUrl: 'modules/etc/directives/template/gallery.html',
 			restrict: 'E',
@@ -3699,7 +3690,6 @@ angular.module('etc').directive('gallery', [
 
 angular.module('etc').directive('productDetail', [
 	function() {
-		ProductDetailCtrl.$inject = ["$scope"];
 		return {
 			templateUrl: 'modules/etc/directives/template/product-detail.html',
 			restrict: 'E',
@@ -4016,7 +4006,6 @@ function GsapEditorCtrl($scope, $http, $cacheFactory) {
     //console.log(myCache.info());
 
 }
-GsapEditorCtrl.$inject = ["$scope", "$http", "$cacheFactory"];
 
 'use strict';
 
@@ -4235,7 +4224,6 @@ function MeanLoginCtrl($scope, Authentication, $mdDialog){
 
 
 }
-MeanLoginCtrl.$inject = ["$scope", "Authentication", "$mdDialog"];
 
 function MeanHomeController(
 		$scope, $state, $http, $mdDialog,
@@ -4390,7 +4378,6 @@ function MeanHomeController(
 		};
 	}
 }
-MeanHomeController.$inject = ["$scope", "$state", "$http", "$mdDialog", "$mdSidenav", "$log", "Authentication"];
 
 'use strict';
 
@@ -4484,22 +4471,22 @@ angular.module('mean-tutorials')
             }
 
         }
-]).controller('LeftCtrl12', ["$scope", "$timeout", "$mdSidenav", "$log", function($scope, $timeout, $mdSidenav, $log) {
+]).controller('LeftCtrl12', function($scope, $timeout, $mdSidenav, $log) {
         $scope.close = function() {
             $mdSidenav('left').close()
                 .then(function(){
                     $log.debug("close LEFT is done");
                 });
         };
-    }])
-    .controller('RightCtrl11', ["$scope", "$timeout", "$mdSidenav", "$log", function($scope, $timeout, $mdSidenav, $log) {
+    })
+    .controller('RightCtrl11', function($scope, $timeout, $mdSidenav, $log) {
         $scope.close = function() {
             $mdSidenav('right').close()
                 .then(function(){
                     $log.debug("close RIGHT is done");
                 });
         };
-    }]);;
+    });;
 
 'use strict';
 
@@ -4887,7 +4874,7 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
     }
 ])
 
-	.controller('gDriveDashCtrl', ["$scope", "Googledrive", function($scope, Googledrive){
+	.controller('gDriveDashCtrl', function($scope, Googledrive){
 		$scope.googleDrive={info:'gDriveCtrl'};
 
 		$scope.listingFolderInfo = function(){
@@ -4913,9 +4900,9 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
 				}
 			});
 		}
-	}])
+	})
 
-    .controller('BottomSheetListCtrl', ["$scope", "$mdBottomSheet", function($scope, $mdBottomSheet) {
+    .controller('BottomSheetListCtrl', function($scope, $mdBottomSheet) {
         $scope.items = [
             { name: 'Upload New Image (Google Drive)', icon: 'share' },
             { name: 'Select Existing Image (Google Drive)', icon: 'upload' },
@@ -4927,8 +4914,8 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             var clickedItem = $scope.items[$index];
             $mdBottomSheet.hide(clickedItem);
         }
-    }])
-    .controller('BottomSheetGridCtrl', ["$scope", "$mdBottomSheet", function($scope, $mdBottomSheet) {
+    })
+    .controller('BottomSheetGridCtrl', function($scope, $mdBottomSheet) {
         $scope.items = [
             { name: 'Hangout', icon: 'hangout' },
             { name: 'Mail', icon: 'mail' },
@@ -4939,7 +4926,7 @@ angular.module('mean-tutorials').controller('ProjectviewdashboardController', ['
             var clickedItem = $scope.items[$index];
             $mdBottomSheet.hide(clickedItem);
         };
-    }]);
+    });
 
 var CalendarException = function CalendarException(message) {
     this.message = message;
@@ -5284,7 +5271,6 @@ function AngularCtrl($scope, $state, $http, $mdDialog, $mdSidenav, $log, Authent
         header: "blue"
     };
 }
-AngularCtrl.$inject = ["$scope", "$state", "$http", "$mdDialog", "$mdSidenav", "$log", "Authentication"];
 
 'use strict';
 
@@ -5638,7 +5624,6 @@ function OpenboardController($scope, $log, $mdDialog, $mdSidenav, $window, $http
 
 	}
 }
-OpenboardController.$inject = ["$scope", "$log", "$mdDialog", "$mdSidenav", "$window", "$http", "Authentication", "Users", "D2lHws", "D2lGrades", "D2lClassesOwnership", "D2lHwsSubmitsTrue", "UsersRole"];
 
 'use strict';
 
@@ -5722,10 +5707,23 @@ angular.module('present').config(['$stateProvider',
 	function($stateProvider) {
 		// Present state routing
 		$stateProvider.
+		state('hybrid', {
+			url: '/hybrid',
+			templateUrl: 'modules/present/views/hybrid.client.view.html'
+		}).
 		state('open-board-present', {
 			url: '/open-board-present',
 			templateUrl: 'modules/present/views/open-board-present.client.view.html'
 		});
+
+	}
+]);
+'use strict';
+
+angular.module('present').controller('HybridController', ['$scope',
+	function($scope) {
+		// Hybrid controller logic
+		// ...
 	}
 ]);
 'use strict';
@@ -5807,7 +5805,7 @@ angular.module('present').controller('OpenBoardPresentController', ['$scope',
 			previewLinks: false,
 
 			// Transition style
-			transition: 'zoom', // none/fade/slide/convex/concave/zoom
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
 
 			// Transition speed
 			transitionSpeed: 'slow', // default/fast/slow
@@ -5827,6 +5825,7 @@ angular.module('present').controller('OpenBoardPresentController', ['$scope',
 
 		// Open board present controller logic
 		// ...
+
 	}
 ]);
 'use strict';
@@ -6085,7 +6084,6 @@ angular.module('size-util').directive('coverResize', ['$window',
             };
         }
     }
-    yourDirectiveName.$inject = ["$window"];
 
 'use strict';
 
@@ -6713,7 +6711,6 @@ function OrderDirective($tcOrder, $interpolate, $compile, $parse, $mdToast) {
         console.log($scope.authentication);
     }
 }
-OrderDirective.$inject = ["$tcOrder", "$interpolate", "$compile", "$parse", "$mdToast"];
 
 //SlideShow
 function OrderHeader($mdTheming){
@@ -6775,7 +6772,6 @@ function OrderHeader($mdTheming){
 		}
 	};
 }
-OrderHeader.$inject = ["$mdTheming"];
 
 function GetRequires($parse){
 	return{
@@ -6844,10 +6840,8 @@ function GetRequires($parse){
 		}
 	}
 }
-GetRequires.$inject = ["$parse"];
 
 function SelectProvider($$interimElementProvider) {
-	selectDefaultOptions.$inject = ["$tcOrder", "$mdConstant", "$$rAF", "$mdUtil", "$mdTheming", "$timeout"];
 	return $$interimElementProvider('$tcOrder')
 		.setDefaults({
 			methods: ['target'],
@@ -7182,7 +7176,6 @@ function SelectProvider($$interimElementProvider) {
 		} : { left: 0, top: 0, width: 0, height: 0 };
 	}
 }
-SelectProvider.$inject = ["$$interimElementProvider"];
 
 'use strict';
 
