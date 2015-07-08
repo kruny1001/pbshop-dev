@@ -130,6 +130,18 @@ exports.queryIndex = function(req, res, next, id){
 
 }
 
+
+/*
+*
+* */
+exports.queryElement = function(req, res) {
+    "use strict";
+    gskb.find({genesSym: {$all: ["PR1", "ARD3"]}}, '_id', function (err, result) {
+        if (err) return handleError(err)
+        res.jsonp(result);
+    });
+}
+
 /**
  * Product middleware
 

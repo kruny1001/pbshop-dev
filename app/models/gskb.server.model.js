@@ -87,7 +87,7 @@ var GskbSchema = new Schema({
         trim: true
     },
     genesSym: {
-        type: String,
+        type: [String],
         default:'',
         trim: true
     }

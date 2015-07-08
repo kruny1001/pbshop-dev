@@ -8,6 +8,9 @@ module.exports = function(app) {
     //var users = require('../../app/controllers/users.server.controller');
     var gskb = require('../../app/controllers/gskb.server.controller');
 
+    var cors = require('cors');
+
+    app.use(cors());
     // gskbs Routes
     app.route('/gskbs')
         .get(gskb.list);
@@ -21,8 +24,15 @@ module.exports = function(app) {
     app.route('/gskbs/totalIndex')
         .get(gskb.getTotalbyKeyword);
 
-		app.route('/gskbs/query/:index')
+    app.route('/gskbs/query')
+      .post(gskb.queryElement);
+
+    app.route('/gskbs/query/:index')
 			.get(gskb.queryIndex);
+
+
+
+
 
 		//app.param('g', products.gskbByID);
 		//app.get('/gskbs/listdocs',
