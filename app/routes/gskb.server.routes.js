@@ -15,6 +15,9 @@ module.exports = function(app) {
     app.route('/gskbs')
         .get(gskb.list);
 
+    app.route('/gskbs/resetGenesSym')
+      .get(gskb.resetGenesSym);
+
     app.route('/gs')
         .get(gskb.gs);
 

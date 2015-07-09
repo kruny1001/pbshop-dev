@@ -142,6 +142,34 @@ exports.queryElement = function(req, res) {
     });
 }
 
+
+exports.resetGenesSym = function(req, res) {
+    "use strict";
+    var count = 1;
+    var s = gskb.find({/* your query */}).stream();
+    Array.prototype.clean = function(deleteValue) {
+        for (var i = 0; i < this.length; i++) {
+            if (this[i] == deleteValue) {
+                this.splice(i, 1);
+                i--;
+            }
+        }
+        return this;
+    };
+
+    s.on('data', function(doc){
+        var update = doc.genesSym[0].split(',');
+        update = update.clean('');
+        gskb.update({_id: doc._id}, {$set: {genesSym : update}}, function(err, result) {
+            console.log(count + result);
+            count++;
+        })
+    });
+    s.on('end', function(){
+        console.log('done '+ count);
+    })
+}
+
 /**
  * Product middleware
 
