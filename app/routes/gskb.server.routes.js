@@ -28,9 +28,12 @@ module.exports = function(app) {
         .get(gskb.getTotalbyKeyword);
 
     app.route('/gskbs/query')
-      .post(gskb.queryElement);
+      .post(gskb.queryElement)
 
-    app.route('/gskbs/query/:index')
+    app.route('/gskbs/query/:magId')
+    .get(gskb.queryGetElement);
+
+    app.route('/gskbs/queryOne/:id')
 			.get(gskb.queryIndex);
 
 

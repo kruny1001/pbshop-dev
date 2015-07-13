@@ -126,22 +126,42 @@ exports.getTotalbyKeyword = function(req, res){
     function handleError(){console.log("error")}
 }
 
-exports.queryIndex = function(req, res, next, id){
-
-}
-
-
-/*
-*
-* */
-exports.queryElement = function(req, res) {
-    "use strict";
-    gskb.find({genesSym: {$all: ["PR1", "ARD3"]}}, '_id', function (err, result) {
+exports.queryIndex = function(req, res){
+    console.log(req.params);
+    gskb.findOne({_id: req.params.id}, function (err, result) {
         if (err) return handleError(err)
         res.jsonp(result);
     });
 }
 
+
+/*
+
+*/
+exports.queryElement = function(req, res) {
+    "use strict";
+    var query = req.body.query;
+    console.log(query);
+    gskb.find({genesSym: {$all:query }}, '_id label species source nGenes year citation', function (err, result) {
+        if (err) return handleError(err)
+        res.jsonp(result);
+    });
+}
+
+exports.queryGetElement = function(req, res) {
+    "use strict";
+    var query = req.params;
+    //console.log(query);
+    //console.log(query.magId);
+
+    query.magId = query.magId.replace(/\s/g, '');
+    query = query.magId.split(',');
+    console.log(query);
+    gskb.find({genesSym: {$all:query }}, '_id label species source nGenes year citation', function (err, result) {
+        if (err) return handleError(err)
+        res.jsonp(result);
+    });
+}
 
 exports.resetGenesSym = function(req, res) {
     "use strict";
